@@ -1,0 +1,16 @@
+VERIFIED CHANGES
+- AI Setup Generator now uses category names as internal links and tool names as external official-site links.
+- Tool Stack tab rewritten in /assets/js/app.js.
+- Core ranking pages regenerated with 5 ranked tools, free trial links, human/bestie copy, and hover glossary terms.
+- Removed visible internal/dev notes such as 'Affiliate link setup'.
+- Central link file updated: /data/affiliate-links.json.
+
+VERIFY THESE URLS AFTER DEPLOY:
+/tools/ai-solutions-concierge.html
+/tools/email-tools.html
+/tools/reviews-tools.html
+/tools/automation-tools.html
+/tools/crm-tools.html
+
+DEPLOY INSTRUCTIONS:
+Unzip this file. Drag the INNER folder named seller-insider-hub-production-ready into Netlify.

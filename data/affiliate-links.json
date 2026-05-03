@@ -1,0 +1,748 @@
+{
+  "meta": {
+    "purpose": "Central affiliate/tool link properties file. Tool names link to website_url now. Replace affiliate_url after approval. Free trial buttons use free_trial_url.",
+    "updated": "2026-05-02",
+    "measurement_id": "G-164NDV6713"
+  },
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "category": "AI assistant",
+      "website_url": "https://chatgpt.com/",
+      "affiliate_url": "",
+      "rating": 4.8,
+      "best_for": "General AI assistant, planning, analysis, drafting",
+      "pros": [
+        "Flexible and strong general-purpose assistant",
+        "Great for prompts, strategy, copy, research synthesis"
+      ],
+      "cons": [
+        "Output still needs human review",
+        "Can become generic without business context"
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "category": "AI assistant",
+      "website_url": "https://claude.ai/",
+      "affiliate_url": "",
+      "rating": 4.7,
+      "best_for": "Long-form writing, documents, brand voice",
+      "pros": [
+        "Excellent at thoughtful long-form copy",
+        "Strong with long documents"
+      ],
+      "cons": [
+        "Tool ecosystem depends on plan",
+        "Still needs fact checking"
+      ]
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "category": "AI assistant",
+      "website_url": "https://www.perplexity.ai/",
+      "affiliate_url": "",
+      "rating": 4.5,
+      "best_for": "Research and source-backed exploration",
+      "pros": [
+        "Useful for quick research with citations",
+        "Good for competitive scans"
+      ],
+      "cons": [
+        "Not a full workflow system",
+        "Source quality still needs review"
+      ]
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "category": "Design",
+      "website_url": "https://www.canva.com/",
+      "affiliate_url": "",
+      "rating": 4.7,
+      "best_for": "Social graphics, lead magnets, thumbnails, mockups",
+      "pros": [
+        "Fast templates",
+        "Easy for non-designers",
+        "Brand kits help consistency"
+      ],
+      "cons": [
+        "Can look generic if everyone uses the same templates",
+        "Advanced print/design work may need Adobe"
+      ],
+      "logo_text": "Canva",
+      "logo_url": "https://www.google.com/s2/favicons?domain=canva.com&sz=64",
+      "screenshot_alt": "Canva design editor screenshot placeholder",
+      "screenshot_note": "Replace this placeholder with an approved Canva partner screenshot or your own screenshot."
+    },
+    {
+      "id": "adobe-express",
+      "name": "Adobe Express",
+      "category": "Design",
+      "website_url": "https://www.adobe.com/express/",
+      "affiliate_url": "",
+      "rating": 4.3,
+      "best_for": "Quick branded graphics and Adobe users",
+      "pros": [
+        "Good with Adobe ecosystem",
+        "Fast templates"
+      ],
+      "cons": [
+        "Can be less familiar to Canva users"
+      ]
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "category": "Automation",
+      "website_url": "https://zapier.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://zapier.com/sign-up",
+      "rating": 4.6,
+      "best_for": "Beginners who want simple app-to-app automations",
+      "pros": [
+        "Huge app library",
+        "Beginner-friendly templates",
+        "Good for quick wins"
+      ],
+      "cons": [
+        "Can get expensive as tasks grow",
+        "Complex automations can get messy"
+      ],
+      "button_label": "Start free",
+      "pricing_note": "Free plan available; paid plans scale with task volume.",
+      "validation_source": "Official Zapier pages describe no-code automation and integrations across 8,000\u20139,000+ apps.",
+      "logo_text": "Zapier",
+      "logo_url": "https://www.google.com/s2/favicons?domain=zapier.com&sz=64",
+      "screenshot_alt": "Zapier automation builder screenshot placeholder",
+      "screenshot_note": "Replace this placeholder with an approved Zapier partner screenshot or your own screenshot after reviewing brand/affiliate asset rules."
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "category": "Automation",
+      "website_url": "https://www.make.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.make.com/en/register",
+      "rating": 4.5,
+      "best_for": "Visual automation builders who want more control",
+      "pros": [
+        "Flexible visual builder",
+        "Good value for more complex scenarios"
+      ],
+      "cons": [
+        "Slightly steeper learning curve",
+        "Can overwhelm true beginners"
+      ],
+      "button_label": "Get started free",
+      "pricing_note": "Make states its Free plan has no time limit; credits and active scenarios vary by plan.",
+      "validation_source": "Official Make pages describe a visual AI automation platform and a free plan with no time limit.",
+      "logo_text": "Make",
+      "logo_url": "https://www.google.com/s2/favicons?domain=make.com&sz=64",
+      "screenshot_alt": "Make visual automation scenario screenshot placeholder",
+      "screenshot_note": "Replace this placeholder with an approved Make partner screenshot or your own screenshot after reviewing brand/affiliate asset rules."
+    },
+    {
+      "id": "pabbly",
+      "name": "Pabbly Connect",
+      "category": "Automation",
+      "website_url": "https://www.pabbly.com/connect/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.pabbly.com/connect/",
+      "rating": 4.2,
+      "best_for": "Budget-conscious businesses that need common automations",
+      "pros": [
+        "Often lower-cost",
+        "Useful for straightforward connections"
+      ],
+      "cons": [
+        "Smaller ecosystem than Zapier",
+        "Interface may feel less polished"
+      ],
+      "button_label": "Visit site",
+      "pricing_note": "Often considered for budget-conscious automation stacks; verify current plans before recommending.",
+      "validation_source": "Official site should be checked for current plan details before final affiliate copy."
+    },
+    {
+      "id": "mailerlite",
+      "name": "MailerLite",
+      "category": "Email",
+      "website_url": "https://www.mailerlite.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.mailerlite.com/signup",
+      "rating": 4.6,
+      "best_for": "Beginners, Etsy sellers, and local businesses that need simple email follow-up",
+      "pros": [
+        "Easy to understand",
+        "Good value",
+        "Forms, landing pages, and automations in one place"
+      ],
+      "cons": [
+        "Not as deep as advanced enterprise platforms",
+        "Advanced segmentation is limited"
+      ],
+      "logo_text": "MailerLite",
+      "logo_url": "https://www.google.com/s2/favicons?domain=mailerlite.com&sz=64",
+      "screenshot_alt": "MailerLite email automation screenshot placeholder",
+      "screenshot_note": "Replace this placeholder with an approved MailerLite partner screenshot or your own screenshot."
+    },
+    {
+      "id": "convertkit",
+      "name": "Kit",
+      "category": "Email",
+      "website_url": "https://kit.com/",
+      "affiliate_url": "",
+      "rating": 4.5,
+      "best_for": "Creators, coaches, and content-driven businesses",
+      "pros": [
+        "Creator-friendly automations",
+        "Good tagging and sequences"
+      ],
+      "cons": [
+        "May be overkill for very simple needs"
+      ]
+    },
+    {
+      "id": "flodesk",
+      "name": "Flodesk",
+      "category": "Email",
+      "website_url": "https://flodesk.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://flodesk.com/",
+      "rating": 4.2,
+      "best_for": "Visual brands that care about beautiful emails",
+      "pros": [
+        "Beautiful templates",
+        "Simple flat-fee style positioning",
+        "Easy for non-tech users"
+      ],
+      "cons": [
+        "Automations are simpler",
+        "Less data-heavy than advanced tools"
+      ]
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "category": "Planning",
+      "website_url": "https://www.notion.so/",
+      "affiliate_url": "",
+      "rating": 4.6,
+      "best_for": "Dashboards, SOPs, content planning, knowledge bases",
+      "pros": [
+        "Flexible workspace",
+        "Great for templates and operating systems"
+      ],
+      "cons": [
+        "Can become overbuilt",
+        "Needs discipline"
+      ]
+    },
+    {
+      "id": "trello",
+      "name": "Trello",
+      "category": "Planning",
+      "website_url": "https://trello.com/",
+      "affiliate_url": "",
+      "rating": 4.2,
+      "best_for": "Simple visual task boards",
+      "pros": [
+        "Easy kanban board",
+        "Low learning curve"
+      ],
+      "cons": [
+        "Less structured for complex data"
+      ]
+    },
+    {
+      "id": "airtable",
+      "name": "Airtable",
+      "category": "CRM",
+      "website_url": "https://www.airtable.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.airtable.com/signup",
+      "rating": 4.2,
+      "best_for": "Custom lightweight CRM systems and operations tracking",
+      "pros": [
+        "Flexible",
+        "Great for custom workflows",
+        "Visual views"
+      ],
+      "cons": [
+        "Not a plug-and-play CRM",
+        "Needs structure"
+      ]
+    },
+    {
+      "id": "erank",
+      "name": "eRank",
+      "category": "Seller tools",
+      "website_url": "https://erank.com/",
+      "affiliate_url": "",
+      "rating": 4.6,
+      "best_for": "Etsy keyword research and listing planning",
+      "pros": [
+        "Useful Etsy keyword data",
+        "Competitor/listing insights"
+      ],
+      "cons": [
+        "Data still requires judgment",
+        "Does not replace buyer psychology"
+      ]
+    },
+    {
+      "id": "marmalead",
+      "name": "Marmalead",
+      "category": "Seller tools",
+      "website_url": "https://marmalead.com/",
+      "affiliate_url": "",
+      "rating": 4.2,
+      "best_for": "Etsy keyword and trend research",
+      "pros": [
+        "Etsy-focused research",
+        "Helpful listing ideas"
+      ],
+      "cons": [
+        "Should be paired with real shop testing"
+      ]
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "category": "CRM",
+      "website_url": "https://www.hubspot.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.hubspot.com/products/get-started",
+      "rating": 4.7,
+      "best_for": "Businesses that want a free-to-start CRM with room to grow",
+      "pros": [
+        "Free CRM foundation",
+        "Strong ecosystem",
+        "Good for tracking leads"
+      ],
+      "cons": [
+        "Paid tiers can climb fast",
+        "Many features can distract beginners"
+      ],
+      "logo_text": "HubSpot",
+      "logo_url": "https://www.google.com/s2/favicons?domain=hubspot.com&sz=64",
+      "screenshot_alt": "HubSpot CRM pipeline screenshot placeholder",
+      "screenshot_note": "Replace this placeholder with an approved HubSpot partner screenshot or your own screenshot."
+    },
+    {
+      "id": "pipedrive",
+      "name": "Pipedrive",
+      "category": "CRM",
+      "website_url": "https://www.pipedrive.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.pipedrive.com/en/register",
+      "rating": 4.5,
+      "best_for": "Sales-focused businesses that need pipeline clarity",
+      "pros": [
+        "Very clear pipeline view",
+        "Good for follow-up discipline"
+      ],
+      "cons": [
+        "Less all-in-one marketing than HubSpot",
+        "Still needs consistent use"
+      ]
+    },
+    {
+      "id": "semrush",
+      "name": "Semrush",
+      "category": "SEO",
+      "website_url": "https://www.semrush.com/",
+      "affiliate_url": "",
+      "rating": 4.5,
+      "best_for": "SEO research and content strategy",
+      "pros": [
+        "Broad SEO data",
+        "Strong keyword and competitor tools"
+      ],
+      "cons": [
+        "Can be expensive and overkill for beginners"
+      ]
+    },
+    {
+      "id": "ubersuggest",
+      "name": "Ubersuggest",
+      "category": "SEO",
+      "website_url": "https://neilpatel.com/ubersuggest/",
+      "affiliate_url": "",
+      "rating": 4.0,
+      "best_for": "Budget-friendlier SEO exploration",
+      "pros": [
+        "Easier entry point",
+        "Useful topic ideas"
+      ],
+      "cons": [
+        "Less deep than enterprise SEO tools"
+      ]
+    },
+    {
+      "id": "calendly",
+      "name": "Calendly",
+      "category": "Scheduling",
+      "website_url": "https://calendly.com/",
+      "affiliate_url": "",
+      "rating": 4.4,
+      "best_for": "Booking links and appointment scheduling",
+      "pros": [
+        "Fast to set up",
+        "Reduces back-and-forth"
+      ],
+      "cons": [
+        "Needs forms/reminders/follow-up around it"
+      ]
+    },
+    {
+      "id": "acuity",
+      "name": "Acuity Scheduling",
+      "category": "Scheduling",
+      "website_url": "https://acuityscheduling.com/",
+      "affiliate_url": "",
+      "rating": 4.3,
+      "best_for": "Appointment-based businesses",
+      "pros": [
+        "Good for paid appointments and intake",
+        "Works well for service providers"
+      ],
+      "cons": [
+        "Can be more than needed for simple calls"
+      ]
+    },
+    {
+      "id": "tidio",
+      "name": "Tidio",
+      "category": "Customer service",
+      "website_url": "https://www.tidio.com/",
+      "affiliate_url": "",
+      "rating": 4.2,
+      "best_for": "Website chat and faster customer replies",
+      "pros": [
+        "Chat + automation entry point",
+        "Good for small sites"
+      ],
+      "cons": [
+        "Needs good FAQ/training content"
+      ]
+    },
+    {
+      "id": "intercom",
+      "name": "Intercom",
+      "category": "Customer service",
+      "website_url": "https://www.intercom.com/",
+      "affiliate_url": "",
+      "rating": 4.4,
+      "best_for": "More advanced customer support and SaaS-style chat",
+      "pros": [
+        "Powerful support workflows",
+        "Strong product ecosystem"
+      ],
+      "cons": [
+        "Likely too expensive/complex for many tiny businesses"
+      ]
+    },
+    {
+      "id": "birdeye",
+      "name": "Birdeye",
+      "category": "Reviews",
+      "website_url": "https://birdeye.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://birdeye.com/",
+      "rating": 4.5,
+      "best_for": "Local businesses that want an all-in-one review and reputation system",
+      "pros": [
+        "Strong review request flows",
+        "Useful for Google reviews",
+        "Good dashboard"
+      ],
+      "cons": [
+        "Can be pricey for tiny businesses",
+        "More system than some people need"
+      ]
+    },
+    {
+      "id": "nicejob",
+      "name": "NiceJob",
+      "category": "Reviews",
+      "website_url": "https://nicejob.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://nicejob.com/",
+      "rating": 4.4,
+      "best_for": "Service businesses that want simple review generation",
+      "pros": [
+        "Simple campaigns",
+        "Good social proof focus",
+        "Easy to explain"
+      ],
+      "cons": [
+        "Works best when service delivery is already strong",
+        "Less broad than all-in-one suites"
+      ]
+    },
+    {
+      "id": "buffer",
+      "name": "Buffer",
+      "category": "Social media",
+      "website_url": "https://buffer.com/",
+      "affiliate_url": "",
+      "rating": 4.3,
+      "best_for": "Simple social scheduling",
+      "pros": [
+        "Clean and beginner friendly",
+        "Good for consistent posting"
+      ],
+      "cons": [
+        "Not a full content strategy by itself"
+      ]
+    },
+    {
+      "id": "metricool",
+      "name": "Metricool",
+      "category": "Social media",
+      "website_url": "https://metricool.com/",
+      "affiliate_url": "",
+      "rating": 4.4,
+      "best_for": "Social scheduling and analytics",
+      "pros": [
+        "Good analytics and planning",
+        "Useful across channels"
+      ],
+      "cons": [
+        "Still requires a content system"
+      ]
+    },
+    {
+      "id": "smith-ai",
+      "name": "Smith.ai",
+      "category": "Phone systems",
+      "website_url": "https://smith.ai/",
+      "affiliate_url": "",
+      "rating": 4.3,
+      "best_for": "Receptionist-style call handling",
+      "pros": [
+        "Helps with missed calls",
+        "Good for service businesses"
+      ],
+      "cons": [
+        "Not every business needs live/AI reception yet"
+      ]
+    },
+    {
+      "id": "dialpad",
+      "name": "Dialpad",
+      "category": "Phone systems",
+      "website_url": "https://www.dialpad.com/",
+      "affiliate_url": "",
+      "rating": 4.2,
+      "best_for": "Business phone and AI call features",
+      "pros": [
+        "Modern phone system",
+        "AI summaries/features"
+      ],
+      "cons": [
+        "May be heavier than a solo owner needs"
+      ]
+    },
+    {
+      "id": "ifttt",
+      "name": "IFTTT",
+      "category": "Automation",
+      "website_url": "https://ifttt.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://ifttt.com/",
+      "rating": 4.0,
+      "best_for": "Very simple personal/business automations",
+      "pros": [
+        "Simple concept",
+        "Good for basic triggers"
+      ],
+      "cons": [
+        "Limited for serious business workflows",
+        "Less flexible than Zapier/Make"
+      ],
+      "button_label": "Visit site",
+      "pricing_note": "Best for basic triggers and simple personal automations, not complex business systems.",
+      "validation_source": "Official site should be checked for current plan details before final affiliate copy."
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "category": "Automation",
+      "website_url": "https://n8n.io/",
+      "affiliate_url": "",
+      "free_trial_url": "https://n8n.io/",
+      "rating": 4.3,
+      "best_for": "Technical users who want powerful automation control",
+      "pros": [
+        "Very powerful",
+        "Self-hosting option",
+        "Great for advanced teams"
+      ],
+      "cons": [
+        "Not beginner-first",
+        "May need technical help"
+      ],
+      "button_label": "Get started free",
+      "pricing_note": "Cloud and self-hosted options; best fit depends on technical comfort.",
+      "validation_source": "Official n8n pages position it as workflow automation for technical teams with visual building, code depth, and cloud/self-host options."
+    },
+    {
+      "id": "kit",
+      "name": "Kit",
+      "category": "Email",
+      "website_url": "https://kit.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://kit.com/",
+      "rating": 4.5,
+      "best_for": "Creators, coaches, and education-driven businesses",
+      "pros": [
+        "Creator-friendly",
+        "Good tagging and sequences",
+        "Clean subscriber management"
+      ],
+      "cons": [
+        "May be overkill for very simple shops",
+        "Visual design options are not the main strength"
+      ],
+      "logo_text": "Kit",
+      "logo_url": "https://www.google.com/s2/favicons?domain=kit.com&sz=64",
+      "screenshot_alt": "Kit sequence builder screenshot placeholder",
+      "screenshot_note": "Replace this placeholder with an approved Kit partner screenshot or your own screenshot."
+    },
+    {
+      "id": "beehiiv",
+      "name": "Beehiiv",
+      "category": "Email",
+      "website_url": "https://www.beehiiv.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.beehiiv.com/",
+      "rating": 4.4,
+      "best_for": "Newsletter-first brands and content businesses",
+      "pros": [
+        "Strong newsletter growth features",
+        "Good publishing tools"
+      ],
+      "cons": [
+        "Less ideal if you need traditional ecommerce automations",
+        "Can be more newsletter than small-business CRM"
+      ]
+    },
+    {
+      "id": "activecampaign",
+      "name": "ActiveCampaign",
+      "category": "Email",
+      "website_url": "https://www.activecampaign.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.activecampaign.com/free",
+      "rating": 4.5,
+      "best_for": "Businesses ready for advanced email automation and CRM-style follow-up",
+      "pros": [
+        "Very powerful automations",
+        "Strong segmentation",
+        "Good for sales follow-up"
+      ],
+      "cons": [
+        "Can feel too much for beginners",
+        "Takes setup time"
+      ]
+    },
+    {
+      "id": "podium",
+      "name": "Podium",
+      "category": "Reviews",
+      "website_url": "https://www.podium.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.podium.com/",
+      "rating": 4.4,
+      "best_for": "Local service businesses that text with customers often",
+      "pros": [
+        "Strong messaging and reviews",
+        "Good for local teams",
+        "Helps centralize customer conversations"
+      ],
+      "cons": [
+        "Can feel sales-heavy",
+        "May be more than a solo business needs"
+      ]
+    },
+    {
+      "id": "gatherup",
+      "name": "GatherUp",
+      "category": "Reviews",
+      "website_url": "https://gatherup.com/",
+      "affiliate_url": "",
+      "free_trial_url": "https://gatherup.com/",
+      "rating": 4.2,
+      "best_for": "Small businesses wanting affordable review requests and feedback",
+      "pros": [
+        "Focused review management",
+        "Good for feedback loops"
+      ],
+      "cons": [
+        "Less of an all-in-one customer platform",
+        "May require setup discipline"
+      ]
+    },
+    {
+      "id": "gradeus",
+      "name": "Grade.us",
+      "category": "Reviews",
+      "website_url": "https://www.grade.us/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.grade.us/",
+      "rating": 4.1,
+      "best_for": "Agencies or multi-client review management",
+      "pros": [
+        "Useful for agencies",
+        "White-label options",
+        "Review funnel tools"
+      ],
+      "cons": [
+        "Can be too agency-oriented for solo owners",
+        "Interface may feel less modern"
+      ]
+    },
+    {
+      "id": "zoho-crm",
+      "name": "Zoho CRM",
+      "category": "CRM",
+      "website_url": "https://www.zoho.com/crm/",
+      "affiliate_url": "",
+      "free_trial_url": "https://www.zoho.com/crm/signup.html",
+      "rating": 4.3,
+      "best_for": "Budget-conscious businesses that want a broad tool suite",
+      "pros": [
+        "Good value",
+        "Lots of connected apps"
+      ],
+      "cons": [
+        "Can feel less polished",
+        "Setup may take patience"
+      ]
+    },
+    {
+      "id": "monday-crm",
+      "name": "monday CRM",
+      "category": "CRM",
+      "website_url": "https://monday.com/crm",
+      "affiliate_url": "",
+      "free_trial_url": "https://monday.com/crm",
+      "rating": 4.3,
+      "best_for": "Visual teams that want pipeline plus project tracking",
+      "pros": [
+        "Visual and flexible",
+        "Good templates",
+        "Team-friendly"
+      ],
+      "cons": [
+        "Can get busy visually",
+        "Pricing depends on seats"
+      ]
+    }
+  ]
+}
