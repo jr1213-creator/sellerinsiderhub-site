@@ -1,1 +1,185 @@
+<!doctype html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+
+  <title>Community | Seller Insider Hub</title>
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <style>
+
+    .community-wrap{
+      max-width:900px;
+      margin:60px auto;
+      padding:20px;
+    }
+
+    .community-header{
+      margin-bottom:40px;
+    }
+
+    .community-header h1{
+      margin-bottom:12px;
+    }
+
+    .post-card{
+      background:#fff;
+      border:1px solid #e8e8e8;
+      border-radius:20px;
+      padding:28px;
+      margin-bottom:28px;
+      box-shadow:0 4px 18px rgba(0,0,0,.04);
+    }
+
+    .post-card h2{
+      margin-top:0;
+      margin-bottom:14px;
+    }
+
+    .meta{
+      font-size:14px;
+      opacity:.65;
+      margin-bottom:16px;
+    }
+
+    .comment{
+      margin-top:18px;
+      padding-top:18px;
+      border-top:1px solid #ececec;
+      font-size:15px;
+      line-height:1.6;
+    }
+
+    .comment strong{
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .category-tag{
+      display:inline-block;
+      background:#f3f3f3;
+      border-radius:999px;
+      padding:6px 12px;
+      font-size:12px;
+      font-weight:600;
+      margin-right:8px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="top">
+  <div class="container">
+    <span><b>Transparent note:</b> some links may be affiliate-supported.</span>
+    <span>Practical AI guidance for real small businesses.</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+
+    <a href="/" class="brand">
+      <span class="logo">SI</span>
+      <span>Seller Insider Hub</span>
+    </a>
+
+    <div class="navlinks">
+      <a href="/tool-library/">Tool Library</a>
+      <a href="/business-types/">Business Hubs</a>
+      <a href="/implementation/">Implementation</a>
+      <a href="/community/">Community</a>
+      <a class="btn secondary" href="/start-here/">Start Here</a>
+    </div>
+
+  </div>
+</nav>
+
+<div class="community-wrap">
+
+  <div class="community-header">
+
+    <h1>Seller Insider Hub Community</h1>
+
+    <p>
+      Real discussions about AI tools, workflows, automations,
+      implementation struggles, and practical systems for small businesses.
+    </p>
+
+  </div>
+
+  <div id="posts"></div>
+
+</div>
+
+<script>
+
+const SUPABASE_URL = 'PASTE_SUPABASE_URL';
+const SUPABASE_KEY = 'PASTE_SUPABASE_ANON_KEY';
+
+const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+async function loadPosts(){
+
+  const { data: posts, error } = await client
+    .from('posts')
+    .select('*')
+    .order('created_at', { ascending:false });
+
+  console.log(posts);
+
+  const postsContainer = document.getElementById('posts');
+
+  for (const post of posts){
+
+    const { data: comments } = await client
+      .from('comments')
+      .select('*')
+      .eq('post_id', post.id);
+
+    let commentsHtml = '';
+
+    comments.forEach(comment => {
+
+      commentsHtml += `
+        <div class="comment">
+          <strong>${comment.author_name}</strong>
+          ${comment.content}
+        </div>
+      `;
+
+    });
+
+    postsContainer.innerHTML += `
+
+      <div class="post-card">
+
+        <div class="meta">
+          <span class="category-tag">${post.category}</span>
+          Posted by ${post.author_name}
+        </div>
+
+        <h2>${post.title}</h2>
+
+        <p>${post.content}</p>
+
+        ${commentsHtml}
+
+      </div>
+
+    `;
+  }
+}
+
+loadPosts();
+
+</script>
+
+</body>
+</html>
