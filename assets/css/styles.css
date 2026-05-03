@@ -275,3 +275,31 @@ a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}.
 .comparison-table{width:100%;border-collapse:collapse;margin:24px 0}
 .comparison-table td,.comparison-table th{border-bottom:1px solid #eadfd4;padding:14px;text-align:left}
 .quote-box{background:#f8fafc;border-left:4px solid #c96b4b;padding:20px;border-radius:18px;margin:24px 0}
+
+.founder-wrap {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin: 24px 0;
+}
+
+.founder-photo {
+  width: 220px !important;
+  max-width: 220px !important;
+  height: auto !important;
+  border-radius: 20px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 768px) {
+  .founder-wrap {
+    flex-direction: column;
+  }
+
+  .founder-photo {
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+}
