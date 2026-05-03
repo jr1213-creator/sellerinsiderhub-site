@@ -9,8 +9,8 @@
 */
 
 window.SIH_COMMUNITY_CONFIG = {
-  SUPABASE_URL: "https://YOUR-PROJECT-ID.supabase.co",
-  SUPABASE_KEY: "PASTE-YOUR-PUBLISHABLE-ANON-KEY-HERE",
+  SUPABASE_URL: "https://eeumxbvuntplhmwqlfyf.supabase.co",
+  SUPABASE_KEY: "sb_publishable_nlNq13uE0hKeK6D6SBThVQ_tk0NA6Zv",
 
   // Set true after deploying the included Supabase Edge Function.
   USE_AI_MODERATION: false,
