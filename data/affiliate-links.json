@@ -1,6 +1,6 @@
 {
   "meta": {
-    "purpose": "Central affiliate/tool link properties file. Tool names link to website_url now. Replace affiliate_url after approval. Free trial buttons use free_trial_url.",
+    "purpose": "Central affiliate/tool link properties file.",
     "updated": "2026-05-02",
     "measurement_id": "G-164NDV6713"
   },
