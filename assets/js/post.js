@@ -1,90 +1,14 @@
 (() => {
-  const SIH = window.SIH;
-  let client;
-
-  document.addEventListener("DOMContentLoaded", init);
-
-  async function init() {
-    try { client = SIH.getClient(); } catch (err) { showStatus("Missing Supabase config. Check /assets/js/community-config.js"); return; }
-    await loadPost();
-  }
-
-  async function loadPost() {
-    const id = Number(SIH.getQueryParam("id"));
-    if (!id) { showStatus("No discussion ID was provided."); return; }
-
-    const { data: post, error } = await client.from("posts").select("*").eq("id", id).single();
-    if (error || !post) { console.error(error); showStatus("Discussion not found."); return; }
-
-    document.title = `${post.title} | Seller Insider Hub Community`;
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) metaDescription.setAttribute("content", post.seo_description || SIH.generateLocalSummary(post.content));
-
-    const { data: comments } = await client.from("comments").select("*").eq("post_id", post.id).order("created_at", { ascending: true });
-    renderPost(post, comments || []);
-    await renderRelated(post);
-  }
-
-  function renderPost(post, comments) {
-    const el = document.getElementById("postDetail");
-    const summary = post.ai_summary || SIH.generateLocalSummary(post.content);
-    const tools = SIH.extractTools(`${post.content || ""} ${post.current_tools || ""}`);
-
-    el.innerHTML = `<div class="post-meta">
-        <span class="category-tag">${SIH.escapeHtml(post.category || "Community")}</span>
-        ${post.business_outcome ? `<span class="outcome-tag">${SIH.escapeHtml(post.business_outcome)}</span>` : ""}
-        <span>Posted by ${SIH.escapeHtml(post.author_name || "Community Member")}</span><span>•</span><span>${SIH.formatDate(post.created_at)}</span>
-      </div>
-      <h1>${SIH.escapeHtml(post.title)}</h1>
-      <div class="post-content">${SIH.formatText(post.content)}</div>
-      <div class="ai-summary"><strong>AI implementation summary</strong><span>${SIH.escapeHtml(summary)}</span></div>
-      ${tools.length ? `<div class="tool-stack-box"><strong>Tools mentioned</strong><div class="tool-list">${tools.map(tool => `<span class="tool-pill">${SIH.escapeHtml(tool)}</span>`).join("")}</div></div>` : ""}
-      <section class="comment-list">
-        <h2>Replies</h2>
-        ${comments.length ? comments.map(renderComment).join("") : "<p>No replies yet. Be the first to add an implementation idea.</p>"}
-      </section>
-      <form class="comment-form" id="commentForm" data-post-id="${post.id}">
-        <input name="author_name" placeholder="Your name">
-        <textarea name="content" rows="4" required placeholder="Add an implementation suggestion, tool stack, or troubleshooting idea..."></textarea>
-        <button class="btn secondary" type="submit">Reply</button>
-      </form>`;
-
-    document.getElementById("commentForm").addEventListener("submit", handleCreateComment);
-  }
-
-  function renderComment(comment) {
-    return `<div class="comment"><strong>${SIH.escapeHtml(comment.author_name || "Community Member")}</strong><div>${SIH.formatText(comment.content)}</div></div>`;
-  }
-
-  async function renderRelated(post) {
-    const el = document.getElementById("relatedPosts");
-    const { data: related } = await client.from("posts").select("*").eq("status", "published").eq("category", post.category).neq("id", post.id).limit(4);
-
-    if (!related || !related.length) {
-      el.innerHTML = `<div class="empty-state"><p>Related discussions will appear here as this category grows.</p></div>`;
-      return;
-    }
-
-    el.innerHTML = related.map(item => `<a class="related-card" href="/community/post/?id=${item.id}"><h3>${SIH.escapeHtml(item.title)}</h3><p>${SIH.escapeHtml(item.ai_summary || SIH.generateLocalSummary(item.content))}</p></a>`).join("");
-  }
-
-  async function handleCreateComment(e) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const comment = {
-      post_id: Number(form.dataset.postId),
-      content: formData.get("content").trim(),
-      author_name: formData.get("author_name").trim() || "Community Member"
-    };
-    if (!comment.content) return;
-    const { error } = await client.from("comments").insert(comment);
-    if (error) { console.error(error); showStatus("Reply failed. Check permissions."); return; }
-    window.location.reload();
-  }
-
-  function showStatus(message) {
-    const el = document.getElementById("statusMessage");
-    if (el) el.textContent = message || "";
-  }
+const SIH=window.SIH;let client,post;
+document.addEventListener("DOMContentLoaded",init);
+async function init(){try{client=SIH.getClient()}catch(e){status("Missing Supabase config.");return}await load()}
+async function load(){const id=SIH.extractIdFromPathOrQuery();if(!id){status("No discussion ID provided.");return}const{data,error}=await client.from("posts").select("*").eq("id",id).single();if(error||!data){status("Discussion not found.");return}post=data;document.title=`${post.title} | Seller Insider Hub Community`;document.querySelector("meta[name='description']")?.setAttribute("content",post.seo_description||SIH.generateLocalSummary(post.content));document.getElementById("crumbCategory").innerHTML=`<a href="${SIH.makeCategoryUrl(post.category)}">${SIH.escapeHtml(post.category)}</a>`;const{data:comments}=await client.from("comments").select("*").eq("post_id",id).order("accepted_solution",{ascending:false}).order("created_at",{ascending:true});render(comments||[]);related();schema()}
+function render(comments){const tools=SIH.extractTools(`${post.content} ${post.current_tools}`),recs=SIH.recommendTools(post),framework=SIH.implementationFramework(post);document.getElementById("postDetail").innerHTML=`<div class="post-meta"><a class="category-tag" href="${SIH.makeCategoryUrl(post.category)}">${SIH.escapeHtml(post.category)}</a>${post.business_outcome?`<span class="outcome-tag">${SIH.escapeHtml(post.business_outcome)}</span>`:""}<a href="${SIH.makeProfileUrl(post.author_name)}">Posted by ${SIH.escapeHtml(post.author_name||"Community Member")}</a><span>•</span><span>${SIH.formatDate(post.created_at)}</span></div><h1>${SIH.escapeHtml(post.title)}</h1><div class="post-content">${SIH.formatText(post.content)}</div><div class="ai-summary"><strong>AI-generated implementation summary</strong>${SIH.escapeHtml(post.ai_summary||SIH.generateLocalSummary(post.content))}</div><div class="framework-box"><strong>Structured implementation framework</strong><div class="framework-list">${framework.map(x=>`<span class="framework-pill">${SIH.escapeHtml(x.label)}: ${SIH.escapeHtml(x.value)}</span>`).join("")}</div></div>${tools.length?`<div class="tool-stack-box"><strong>Tools mentioned</strong><div class="tool-list">${tools.map(t=>`<span class="tool-pill">${t}</span>`).join("")}</div></div>`:""}<div class="tool-stack-box"><strong>Tool recommendation engine</strong>${recs.map(r=>`<p><b>${SIH.escapeHtml(r.tool)}:</b> ${SIH.escapeHtml(r.reason)}</p>`).join("")}</div><div class="internal-links"><strong>Continue building</strong><p><a href="/community/stack-builder/">Build my AI stack</a> · <a href="${SIH.makeCategoryUrl(post.category)}">More ${SIH.escapeHtml(post.category)} discussions</a> · <a href="/implementation/">Implementation guides</a></p></div><div class="vote-row"><button class="mini-btn" id="votePost">✓ Helpful (${post.upvotes||0})</button></div><section class="comment-list"><h2>Replies</h2>${comments.length?comments.map(c=>`<div class="comment ${c.accepted_solution?'accepted':''}"><strong>${SIH.escapeHtml(c.author_name||"Community Member")} ${c.accepted_solution?'✓ Accepted solution':''}</strong><div>${SIH.formatText(c.content)}</div><div class="vote-row"><button class="mini-btn" data-comment-vote="${c.id}">Helpful (${c.upvotes||0})</button><button class="mini-btn" data-accept="${c.id}">Mark accepted</button></div></div>`).join(""):"<p>No replies yet.</p>"}</section><form class="comment-form" id="commentForm"><input name="author_name" placeholder="Your name"><textarea name="content" rows="4" required placeholder="Add an implementation suggestion..."></textarea><button class="btn secondary">Reply</button></form>`;document.getElementById("commentForm").onsubmit=reply;document.getElementById("votePost").onclick=votePost;document.querySelectorAll("[data-accept]").forEach(b=>b.onclick=()=>accept(Number(b.dataset.accept)));document.querySelectorAll("[data-comment-vote]").forEach(b=>b.onclick=()=>voteComment(Number(b.dataset.commentVote)))}
+async function reply(e){e.preventDefault();const fd=new FormData(e.target);await client.from("comments").insert({post_id:post.id,content:fd.get("content").trim(),author_name:fd.get("author_name").trim()||"Community Member"});location.reload()}
+async function votePost(){await client.from("posts").update({upvotes:(post.upvotes||0)+1}).eq("id",post.id);location.reload()}
+async function voteComment(id){const{data}=await client.from("comments").select("upvotes").eq("id",id).single();await client.from("comments").update({upvotes:(data?.upvotes||0)+1}).eq("id",id);location.reload()}
+async function accept(id){await client.from("comments").update({accepted_solution:true}).eq("id",id);location.reload()}
+async function related(){const{data}=await client.from("posts").select("*").eq("status","published").eq("category",post.category).neq("id",post.id).limit(4);document.getElementById("relatedPosts").innerHTML=(data&&data.length)?data.map(p=>`<a class="related-card" href="${SIH.makePostUrl(p)}"><h3>${SIH.escapeHtml(p.title)}</h3><p>${SIH.escapeHtml(p.ai_summary||SIH.generateLocalSummary(p.content))}</p></a>`).join(""):`<div class="empty-state">Related discussions will appear here as this category grows.</div>`}
+function schema(){SIH.schemaScript({"@context":"https://schema.org","@type":"DiscussionForumPosting","headline":post.title,"articleBody":post.content,"author":{"@type":"Person","name":post.author_name||"Community Member"},"datePublished":post.created_at,"url":location.href})}
+function status(m){document.getElementById("statusMessage").textContent=m||""}
 })();
