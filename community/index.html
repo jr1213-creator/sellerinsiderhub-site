@@ -27,7 +27,6 @@
       <span class="logo">SI</span>
       <span>Seller Insider Hub</span>
     </a>
-
     <div class="navlinks">
       <a href="/tool-library/">Tool Library</a>
       <a href="/business-types/">Business Hubs</a>
@@ -39,7 +38,6 @@
 </nav>
 
 <main class="community-shell">
-
   <section class="community-hero">
     <div>
       <p class="eyebrow">Implementation Community</p>
@@ -57,7 +55,6 @@
   </section>
 
   <section class="community-layout">
-
     <aside class="community-sidebar">
       <div class="side-card">
         <h3>Categories</h3>
@@ -67,7 +64,7 @@
       <div class="side-card">
         <h3>What belongs here?</h3>
         <p>
-          Ask practical implementation questions: what stack to use, how to connect tools,
+          Ask practical implementation questions: what stack to use, what tools connect,
           what broke, what worked, and what saves time in the real world.
         </p>
       </div>
@@ -75,14 +72,12 @@
       <div class="side-card ai-card">
         <h3>AI Moderator</h3>
         <p>
-          New posts are checked for spam signals, low-quality content, and category fit before
-          becoming part of the public implementation library.
+          AI-assisted moderation helps keep discussions practical, useful, and implementation-focused.
         </p>
       </div>
     </aside>
 
     <section class="community-main">
-
       <div class="toolbar">
         <input id="searchInput" type="search" placeholder="Search AI workflows, tools, business types..." />
         <select id="sortSelect">
@@ -93,13 +88,9 @@
       </div>
 
       <div id="statusMessage" class="status-message"></div>
-
       <div id="posts" class="posts-grid"></div>
-
     </section>
-
   </section>
-
 </main>
 
 <div class="modal-backdrop" id="postModal" aria-hidden="true">
@@ -115,15 +106,36 @@
         <input name="title" required maxlength="160" placeholder="Example: What AI stack should a med spa start with?">
       </label>
 
+      <div class="form-grid">
+        <label>
+          Category
+          <select name="category" required>
+            <option value="AI Implementation">AI Implementation</option>
+            <option value="Etsy Seller AI">Etsy Seller AI</option>
+            <option value="AI Automation">AI Automation</option>
+            <option value="AI Marketing">AI Marketing</option>
+            <option value="Small Business Systems">Small Business Systems</option>
+          </select>
+        </label>
+
+        <label>
+          Business outcome
+          <select name="business_outcome">
+            <option value="Save time">Save time</option>
+            <option value="More leads">More leads</option>
+            <option value="Better SEO">Better SEO</option>
+            <option value="Customer support">Customer support</option>
+            <option value="Content creation">Content creation</option>
+            <option value="Automation">Automation</option>
+            <option value="Reduce manual work">Reduce manual work</option>
+            <option value="Build recurring revenue">Build recurring revenue</option>
+          </select>
+        </label>
+      </div>
+
       <label>
-        Category
-        <select name="category" required>
-          <option value="AI Implementation">AI Implementation</option>
-          <option value="Etsy Seller AI">Etsy Seller AI</option>
-          <option value="AI Automation">AI Automation</option>
-          <option value="AI Marketing">AI Marketing</option>
-          <option value="Small Business Systems">Small Business Systems</option>
-        </select>
+        Current tools
+        <input name="current_tools" maxlength="240" placeholder="Example: Etsy, Canva, ChatGPT, Zapier">
       </label>
 
       <label>
@@ -143,6 +155,7 @@
 </div>
 
 <script src="/assets/js/community-config.js"></script>
+<script src="/assets/js/community-utils.js"></script>
 <script src="/assets/js/community.js"></script>
 
 </body>
