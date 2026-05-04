@@ -1,0 +1,3 @@
+import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
+serve(async (req)=>{if(req.method!=="POST")return json({error:"Method not allowed"},405);const post=await req.json();const content=String(post.content||"").replace(/\s+/g," ").trim();return json({summary:content.length>260?`${content.slice(0,260)}...`:content,tools:[],framework:{goal:post.business_outcome||"Save time",first_step:"Map the manual workflow before choosing tools.",success_metric:"Track time saved, leads captured, or response speed."}})});
+function json(body:unknown,status=200){return new Response(JSON.stringify(body),{status,headers:{"Content-Type":"application/json"}})}
