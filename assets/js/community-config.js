@@ -7,12 +7,12 @@
 */
 
 window.SIH_COMMUNITY_CONFIG = {
-  SUPABASE_URL: "https://YOUR-PROJECT-ID.supabase.co",
-  SUPABASE_KEY: "PASTE-YOUR-PUBLISHABLE-ANON-KEY-HERE",
+  SUPABASE_URL: "https://eeumxbvuntplhmwqlfyf.supabase.co",
+  SUPABASE_KEY: "sb_publishable_nlNq13uE0hKeK6D6SBThVQ_tk0NA6Zv",
 
-  USE_AI_MODERATION: false,
-  USE_AI_SUMMARIES: false,
+  USE_AI_MODERATION: true,
+  USE_AI_SUMMARIES: true,
 
-  AI_MODERATION_ENDPOINT: "",
+  AI_MODERATION_ENDPOINT: "https://eeumxbvuntplhmwqlfyf.supabase.co/functions/v1/moderate-post",
   AI_SUMMARY_ENDPOINT: ""
 };
