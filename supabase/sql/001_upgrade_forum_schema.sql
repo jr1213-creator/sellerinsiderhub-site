@@ -1,11 +1,7 @@
 /*
-  Seller Insider Hub Community Upgrade Schema
+  Seller Insider Hub Community v2 Schema Upgrade
 
   Run this in Supabase SQL Editor.
-
-  Safe for your current MVP:
-  - adds columns if missing
-  - creates category/profile/recommendation/moderation tables
 */
 
 alter table posts add column if not exists slug text;
@@ -20,6 +16,8 @@ alter table posts add column if not exists status text default 'published';
 alter table posts add column if not exists seo_title text;
 alter table posts add column if not exists seo_description text;
 alter table posts add column if not exists ai_summary text;
+alter table posts add column if not exists business_outcome text;
+alter table posts add column if not exists current_tools text;
 alter table posts add column if not exists updated_at timestamp with time zone default timezone('utc'::text, now());
 
 alter table comments add column if not exists parent_comment_id bigint references comments(id) on delete cascade;
@@ -76,21 +74,11 @@ values
 ('Small Business Systems', 'small-business-systems', 'Operations, SOPs, tools, and repeatable business systems.', 'layers', '#94664d')
 on conflict (slug) do nothing;
 
-/*
-  Optional sample seeded discussions.
-  You can delete these later.
-*/
-
-insert into posts (title, content, category, author_name, ai_summary, slug, status, featured)
-values
-(
-  'What AI stack are Etsy sellers using right now?',
-  'I am trying to automate customer service, mockups, SEO, and email marketing for my Etsy shop. Curious what tools others are using.',
-  'Etsy Seller AI',
-  'Jennie',
-  'Etsy sellers are looking for practical AI stacks that connect listing creation, mockups, SEO, customer service, and email follow-up without becoming too technical.',
-  'what-ai-stack-are-etsy-sellers-using-right-now',
-  'published',
-  true
-)
-on conflict do nothing;
+update posts
+set 
+  status = coalesce(status, 'published'),
+  slug = coalesce(slug, regexp_replace(lower(title), '[^a-z0-9]+', '-', 'g')),
+  ai_summary = coalesce(ai_summary, left(content, 210)),
+  seo_title = coalesce(seo_title, title || ' | Seller Insider Hub Community'),
+  seo_description = coalesce(seo_description, left(content, 155))
+where title is not null;

@@ -1,26 +1,14 @@
 /*
   Supabase Edge Function: moderate-post
 
-  Deploy later with Supabase CLI.
-
-  What it does:
-  - receives a post
-  - performs lightweight rule checks
-  - optionally calls an AI provider if API key is configured
-  - returns status + summary
-
-  Environment variables you may configure later:
-  - OPENAI_API_KEY
+  Optional AI moderation scaffold.
 */
 
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 
 serve(async (req) => {
   if (req.method !== "POST") {
-    return new Response(JSON.stringify({ error: "Method not allowed" }), {
-      status: 405,
-      headers: { "Content-Type": "application/json" },
-    });
+    return json({ error: "Method not allowed" }, 405);
   }
 
   const post = await req.json();
@@ -32,31 +20,34 @@ serve(async (req) => {
     "crypto pump",
     "guaranteed income",
     "click here now",
-    "wire transfer"
+    "wire transfer",
+    "forex",
+    "loan approval"
   ];
 
   const hit = spamSignals.find(signal => text.includes(signal));
 
   if (hit) {
-    return new Response(JSON.stringify({
+    return json({
       status: "hold",
       reason: `Possible spam signal: ${hit}`,
       summary: "This post needs review before publishing."
-    }), {
-      headers: { "Content-Type": "application/json" },
     });
   }
 
-  const summary = summarizeLocally(post.content || "");
-
-  return new Response(JSON.stringify({
+  return json({
     status: "approved",
     reason: "No obvious spam signals detected.",
-    summary
-  }), {
-    headers: { "Content-Type": "application/json" },
+    summary: summarizeLocally(post.content || "")
   });
 });
+
+function json(body: unknown, status = 200) {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { "Content-Type": "application/json" },
+  });
+}
 
 function summarizeLocally(content: string) {
   const clean = content.replace(/\s+/g, " ").trim();
