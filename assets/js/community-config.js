@@ -1,18 +1,17 @@
 /*
   Seller Insider Hub Community Config
 
-  Replace these values with your actual Supabase values.
+  Replace these with your Supabase values.
 
-  IMPORTANT:
   Use your Publishable / anon key only.
-  Never put secret keys in frontend code.
+  Never put secret/service-role keys in frontend code.
 */
 
 window.SIH_COMMUNITY_CONFIG = {
-  SUPABASE_URL: "https://eeumxbvuntplhmwqlfyf.supabase.co",
-  SUPABASE_KEY: "sb_publishable_nlNq13uE0hKeK6D6SBThVQ_tk0NA6Zv",
+  SUPABASE_URL: "https://YOUR-PROJECT-ID.supabase.co",
+  SUPABASE_KEY: "PASTE-YOUR-PUBLISHABLE-ANON-KEY-HERE",
 
-  // Set true after deploying the included Supabase Edge Function.
+  // Keep false until you deploy the included Supabase Edge Function.
   USE_AI_MODERATION: false,
 
   // Example after Edge Function deploy:

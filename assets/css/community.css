@@ -1,4 +1,4 @@
-/* Seller Insider Hub Community */
+/* Seller Insider Hub Community v2 */
 
 .community-shell {
   max-width: 1240px;
@@ -59,34 +59,24 @@
 
 .side-card,
 .post-card,
+.post-detail-card,
+.related-card,
 .modal-card {
-  background: rgba(255,255,255,.82);
+  background: rgba(255,255,255,.86);
   border: 1px solid rgba(20,20,20,.08);
   border-radius: 28px;
   box-shadow: 0 18px 50px rgba(20,20,20,.06);
 }
 
-.side-card {
-  padding: 24px;
-}
-
-.side-card h3 {
-  margin: 0 0 12px;
-}
-
-.side-card p {
-  margin: 0;
-  line-height: 1.6;
-}
+.side-card { padding: 24px; }
+.side-card h3 { margin: 0 0 12px; }
+.side-card p { margin: 0; line-height: 1.6; }
 
 .ai-card {
-  background: linear-gradient(135deg, rgba(255,255,255,.9), rgba(255,238,225,.7));
+  background: linear-gradient(135deg, rgba(255,255,255,.94), rgba(255,238,225,.72));
 }
 
-.filter-list {
-  display: grid;
-  gap: 8px;
-}
+.filter-list { display: grid; gap: 8px; }
 
 .filter-pill {
   display: flex;
@@ -97,7 +87,7 @@
   background: #fffaf3;
   border-radius: 999px;
   padding: 10px 14px;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
 }
 
@@ -106,9 +96,7 @@
   color: #fff;
 }
 
-.community-main {
-  min-width: 0;
-}
+.community-main { min-width: 0; }
 
 .toolbar {
   display: grid;
@@ -121,19 +109,18 @@
 .toolbar select,
 .form-stack input,
 .form-stack select,
-.form-stack textarea {
+.form-stack textarea,
+.comment-form input,
+.comment-form textarea {
   width: 100%;
   border: 1px solid rgba(20,20,20,.12);
   border-radius: 18px;
   padding: 14px 16px;
   font: inherit;
-  background: rgba(255,255,255,.86);
+  background: rgba(255,255,255,.9);
 }
 
-.posts-grid {
-  display: grid;
-  gap: 24px;
-}
+.posts-grid { display: grid; gap: 24px; }
 
 .post-card {
   padding: 30px;
@@ -145,6 +132,19 @@
   box-shadow: 0 24px 70px rgba(20,20,20,.09);
 }
 
+.post-card h2,
+.post-detail-card h1 {
+  margin: 0 0 14px;
+  font-size: clamp(32px, 4.8vw, 64px);
+  line-height: .95;
+  letter-spacing: -0.055em;
+}
+
+.post-card h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .post-meta {
   display: flex;
   align-items: center;
@@ -152,10 +152,12 @@
   margin-bottom: 16px;
   color: rgba(20,20,20,.62);
   font-size: 14px;
+  flex-wrap: wrap;
 }
 
 .category-tag,
-.ai-tag {
+.ai-tag,
+.outcome-tag {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
@@ -164,29 +166,17 @@
   font-weight: 800;
 }
 
-.category-tag {
-  background: #f1ebe2;
-  color: #5f432f;
-}
-
-.ai-tag {
-  background: rgba(198,111,63,.12);
-  color: #9a512d;
-}
-
-.post-card h2 {
-  margin: 0 0 14px;
-  font-size: clamp(28px, 4vw, 52px);
-  line-height: .95;
-  letter-spacing: -0.055em;
-}
+.category-tag { background: #f1ebe2; color: #5f432f; }
+.ai-tag { background: rgba(198,111,63,.12); color: #9a512d; }
+.outcome-tag { background: #111; color: #fff; }
 
 .post-content {
   font-size: 17px;
   line-height: 1.7;
 }
 
-.ai-summary {
+.ai-summary,
+.tool-stack-box {
   margin: 22px 0;
   padding: 18px;
   border-radius: 20px;
@@ -194,9 +184,26 @@
   border: 1px solid rgba(198,111,63,.18);
 }
 
-.ai-summary strong {
+.ai-summary strong,
+.tool-stack-box strong {
   display: block;
   margin-bottom: 8px;
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tool-pill {
+  display: inline-flex;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(20,20,20,.08);
+  padding: 8px 12px;
+  font-weight: 800;
 }
 
 .comment-list {
@@ -220,21 +227,11 @@
   margin-top: 18px;
 }
 
-.comment-form textarea,
-.comment-form input {
-  border: 1px solid rgba(20,20,20,.12);
-  border-radius: 16px;
-  padding: 12px 14px;
-  font: inherit;
-}
-
-.comment-form button {
-  justify-self: start;
-}
+.comment-form button { justify-self: start; }
 
 .status-message {
   margin-bottom: 16px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .modal-backdrop {
@@ -248,18 +245,21 @@
   z-index: 9999;
 }
 
-.modal-backdrop.open {
-  display: flex;
-}
+.modal-backdrop.open { display: flex; }
 
 .modal-card {
   position: relative;
   width: min(720px, 100%);
   padding: 34px;
+  max-height: 92vh;
+  overflow: auto;
 }
 
 .modal-card h2 {
   margin-top: 0;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: .92;
+  letter-spacing: -0.055em;
 }
 
 .modal-close {
@@ -272,15 +272,18 @@
   cursor: pointer;
 }
 
-.form-stack {
-  display: grid;
-  gap: 18px;
-}
+.form-stack { display: grid; gap: 18px; }
 
 .form-stack label {
   display: grid;
   gap: 8px;
   font-weight: 800;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
 }
 
 .form-note {
@@ -297,6 +300,51 @@
   background: rgba(255,255,255,.5);
 }
 
+.back-link {
+  display: inline-flex;
+  margin-bottom: 24px;
+  font-weight: 800;
+  color: #111;
+  text-decoration: none;
+}
+
+.post-shell {
+  max-width: 1040px;
+}
+
+.post-detail-card {
+  padding: 40px;
+}
+
+.related-section {
+  margin-top: 44px;
+}
+
+.related-section h2 {
+  margin-bottom: 18px;
+}
+
+.related-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.related-card {
+  display: block;
+  padding: 22px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.related-card h3 {
+  margin: 0 0 10px;
+}
+
+.related-card p {
+  margin: 0;
+  color: rgba(20,20,20,.68);
+}
+
 @media (max-width: 900px) {
   .community-hero {
     align-items: flex-start;
@@ -311,7 +359,12 @@
     position: static;
   }
 
-  .toolbar {
+  .toolbar,
+  .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .post-detail-card {
+    padding: 28px;
   }
 }
