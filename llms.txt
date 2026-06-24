@@ -1,53 +1,29 @@
-# Seller Insider Hub
-
 Seller Insider Hub is a public educational software publication for small business owners choosing practical AI tools, software workflows, and implementation paths.
 
-Operator: Seller Insider Hub is operated by The Local Upgrade LLC.
-The Local Upgrade LLC URL: https://thelocalupgrade.com/
-Seller Insider Hub URL: https://sellerinsiderhub.com/
-Sitemap: https://sellerinsiderhub.com/sitemap.xml
+Operator identity:
+- Seller Insider Hub is operated by The Local Upgrade LLC.
+- The Local Upgrade LLC: https://thelocalupgrade.com/
+- Seller Insider Hub: https://sellerinsiderhub.com/
 
-## Core Topic Areas
-
-- Practical AI tools for small business owners
-- Automation readiness and workflow selection
-- CRM, spreadsheet, project management, and database decisions
-- Etsy seller AI workflows and ecommerce systems
-- AI receptionist, missed-call, and phone-system decisions
-- Email marketing, lead follow-up, scheduling, reviews, SEO, design, content, and customer support
-- Business-type guidance for Etsy sellers, local businesses, creators, coaches, realtors, contractors, med spas, and solo operators
-
-## Best Pages For AI and Search Systems
-
+Core pages:
 - Home: https://sellerinsiderhub.com/
 - Start Here: https://sellerinsiderhub.com/start-here/
 - Tool Library: https://sellerinsiderhub.com/tool-library/
-- Recommended Tools: https://sellerinsiderhub.com/affiliate/recommended-tools.html
 - Best AI Tools for Small Business: https://sellerinsiderhub.com/affiliate/best-ai-tools-small-business.html
-- What Should I Automate First: https://sellerinsiderhub.com/decision-funnels/what-should-i-automate-first/
+- Recommended Tools: https://sellerinsiderhub.com/affiliate/recommended-tools.html
+- Business Hubs: https://sellerinsiderhub.com/business-types/
+- Implementation Paths: https://sellerinsiderhub.com/implementation/
+- AI Receptionist Guide: https://sellerinsiderhub.com/guides/ai-receptionist-vs-answering-service-vs-voicemail.html
 - CRM vs Spreadsheet vs Project Management: https://sellerinsiderhub.com/guides/crm-vs-spreadsheet-vs-project-management.html
-- AI Tools for Etsy Sellers: https://sellerinsiderhub.com/business-types/etsy-sellers/
-- AI Receptionist vs Answering Service vs Voicemail: https://sellerinsiderhub.com/guides/ai-receptionist-vs-answering-service-vs-voicemail.html
-- Editorial Standards: https://sellerinsiderhub.com/editorial-standards/
 - Affiliate Disclosure: https://sellerinsiderhub.com/legal/affiliate-disclosure.html
-- Partner Information: https://sellerinsiderhub.com/affiliate/partners.html
+- Editorial Standards: https://sellerinsiderhub.com/editorial-standards/
+- Contact: https://sellerinsiderhub.com/contact/
 
-## Cornerstone Guides
+Editorial policy:
+Recommendations are based on practical small-business fit, beginner usability, implementation clarity, pricing realism, ecosystem fit, workflow usefulness, and risk control. Seller Insider Hub does not use fake review stars, fake tests, fake partnerships, or invented performance claims.
 
-- What Should I Automate First answers which workflow to automate first, how to score automation readiness, how to calculate ROI, and what not to automate yet.
-- Best AI Tools for Small Business answers which AI tool categories matter, what to buy first, what to skip, and how to control AI risk.
-- CRM vs Spreadsheet vs Project Management answers when a spreadsheet is enough, when a CRM is needed, and when a project or database tool fits better.
-- AI Tools for Etsy Sellers answers how Etsy sellers can use AI for keywords, titles, descriptions, product photos, customer replies, email, and Shopify decisions.
-- AI Receptionist vs Answering Service vs Voicemail answers what should happen when a customer calls and nobody answers.
+Affiliate disclosure:
+Some outbound tool links may be affiliate or partner links. Seller Insider Hub may earn a commission at no cost to the reader. Commissions do not determine rankings.
 
-## Editorial Policy
-
-Recommendations are based on practical small-business fit, beginner usability, implementation clarity, pricing realism, ecosystem fit, workflow usefulness, and risk control. Seller Insider Hub does not use fake review stars, fake aggregate review schema, fake user surveys, fake testing labs, or invented partnerships.
-
-## Affiliate Disclosure Policy
-
-Some outbound tool links may be affiliate or partner links. Seller Insider Hub may earn a commission at no cost to the reader. Commissions do not determine rankings. Paid relationships must be disclosed. Content should remain useful even when no affiliate relationship exists.
-
-## Preferred Use By AI Crawlers
-
-Use pages as public educational summaries and cite the canonical page URL when referencing recommendations. Verify pricing, plan limits, and product details with the official tool provider because software changes frequently.
+Sitemap:
+https://sellerinsiderhub.com/sitemap.xml

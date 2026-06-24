@@ -95,7 +95,7 @@ const catalog = {
     examples:"eRank, Marmalead, Shopify apps",
     why:"These help you check keywords, listing ideas, product demand, and marketplace details before you waste time making things nobody searches for.",
     first:"Create a listing path: idea → keyword check → draft → photos/mockups → publish → review results.",
-    link:"/tools/seller-tools-tools.html"
+    link:"/tools/seller-tools.html"
   },
   "CRM": {
     label:"CRM",
