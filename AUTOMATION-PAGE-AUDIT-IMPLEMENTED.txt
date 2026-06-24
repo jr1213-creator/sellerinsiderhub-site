@@ -13,7 +13,7 @@ Changes made:
 7. Added “what to automate first” and “what not to automate first.”
 8. Added official source-check links on-page.
 9. Added FAQPage and ItemList schema in JSON-LD.
-10. Updated /data/affiliate-links.json with button labels, pricing notes, and validation-source notes.
+10. Updated the central tool-link data file with button labels, pricing notes, and validation-source notes.
 
 Deploy:
 Unzip this package and drag the INNER folder seller-insider-hub-production-ready to Netlify.
