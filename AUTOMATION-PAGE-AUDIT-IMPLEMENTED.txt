@@ -1,7 +1,7 @@
 Seller Insider Hub Automation Page Audit — Implemented
 
 Page updated:
-- /tools/automation-tools.html
+- /tools/automation-tools
 
 Changes made:
 1. Added a source-checked credibility note so ratings do not look like fake universal claims.

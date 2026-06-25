@@ -6,11 +6,11 @@ VERIFIED CHANGES
 - Central link file updated: the central tool-link data file.
 
 VERIFY THESE URLS AFTER DEPLOY:
-/tools/ai-solutions-concierge.html
-/tools/email-tools.html
-/tools/reviews-tools.html
-/tools/automation-tools.html
-/tools/crm-tools.html
+/tools/ai-solutions-concierge
+/tools/email-tools
+/tools/reviews-tools
+/tools/automation-tools
+/tools/crm-tools
 
 DEPLOY INSTRUCTIONS:
 Unzip this file. Drag the INNER folder named seller-insider-hub-production-ready into Netlify.

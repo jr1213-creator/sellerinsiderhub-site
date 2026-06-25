@@ -13,4 +13,4 @@ Important files:
 - /problems/ = long-tail problem hubs
 - /decision-funnels/ = high-intent decision pages
 - /implementation/ = setup paths
-- /tools/*-tools.html = tool ranking pages
+- /tools/*-tools = tool ranking pages

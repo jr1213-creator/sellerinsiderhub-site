@@ -9,13 +9,13 @@ Core pages:
 - Home: https://sellerinsiderhub.com/
 - Start Here: https://sellerinsiderhub.com/start-here/
 - Tool Library: https://sellerinsiderhub.com/tool-library/
-- Best AI Tools for Small Business: https://sellerinsiderhub.com/affiliate/best-ai-tools-small-business.html
-- Recommended Tools: https://sellerinsiderhub.com/affiliate/recommended-tools.html
+- Best AI Tools for Small Business: https://sellerinsiderhub.com/affiliate/best-ai-tools-small-business
+- Recommended Tools: https://sellerinsiderhub.com/affiliate/recommended-tools
 - Business Hubs: https://sellerinsiderhub.com/business-types/
 - Implementation Paths: https://sellerinsiderhub.com/implementation/
-- AI Receptionist Guide: https://sellerinsiderhub.com/guides/ai-receptionist-vs-answering-service-vs-voicemail.html
-- CRM vs Spreadsheet vs Project Management: https://sellerinsiderhub.com/guides/crm-vs-spreadsheet-vs-project-management.html
-- Affiliate Disclosure: https://sellerinsiderhub.com/legal/affiliate-disclosure.html
+- AI Receptionist Guide: https://sellerinsiderhub.com/guides/ai-receptionist-vs-answering-service-vs-voicemail
+- CRM vs Spreadsheet vs Project Management: https://sellerinsiderhub.com/guides/crm-vs-spreadsheet-vs-project-management
+- Affiliate Disclosure: https://sellerinsiderhub.com/legal/affiliate-disclosure
 - Editorial Standards: https://sellerinsiderhub.com/editorial-standards/
 - Contact: https://sellerinsiderhub.com/contact/
 
