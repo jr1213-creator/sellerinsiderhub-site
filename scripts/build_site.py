@@ -95,6 +95,7 @@ shutil.rmtree(OUT/'assets/js')
 (OUT/'assets/js').mkdir()
 shutil.copy(ROOT/'site-assets/hub.css',OUT/'assets/css/hub.css')
 shutil.copy(ROOT/'site-assets/hub.js',OUT/'assets/js/hub.js')
+shutil.copy(ROOT/'site-assets/social-guide.js',OUT/'assets/js/social-guide.js')
 (OUT/'assets/img/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><rect width="80" height="80" rx="18" fill="#234d3b"/><text x="14" y="57" font-family="Georgia,serif" font-size="56" fill="#d8ed9f">si.</text></svg>')
 (OUT/'assets/img/social-card.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630"><rect width="1200" height="630" fill="#eaf0e4"/><rect x="65" y="65" width="95" height="95" rx="20" fill="#234d3b"/><text x="82" y="134" font-family="Georgia,serif" font-size="70" fill="#d8ed9f">si.</text><text x="65" y="270" font-family="Georgia,serif" font-size="80" fill="#1d332d">Make your next business</text><text x="65" y="365" font-family="Georgia,serif" font-size="80" fill="#1d332d">move a smarter one.</text><text x="65" y="510" font-family="Arial,sans-serif" font-size="30" fill="#58665e">SELLER INSIDER HUB · TOOLS / COMPARISONS / PLAYBOOKS</text></svg>')
 
@@ -131,6 +132,15 @@ write('/compare/','Your shortlist, side by side','Choose up to three tools and c
 write('/playbooks/','AI and software tutorials for small businesses','Build useful business workflows with exact steps, example inputs, checks, and troubleshooting.',hero('Put AI to work. Build a better system.','Practical tutorials for the work behind your business. Start with the inputs, follow the setup, and check the result.','The tutorial collection')+'<section class="section"><div class="wrap"><div class="grid three editorial-grid">'+''.join(playcard(p,i) for i,p in enumerate(PLAYS))+'</div></div></section>','Tutorials',section='playbooks')
 for p in PLAYS:
     reviewed=p.get('lastReviewed',DATE)
+    if p.get('bodyFile'):
+        article_html=(ROOT/p['bodyFile']).read_text(encoding='utf-8')
+        read_time=max(1,round(len(plain(article_html).split())/210))
+        toc=''.join(f'<a href="#{e(item["id"])}">{e(item["label"])}</a>' for item in p['contents'])
+        byline=f'<div class="article-byline"><span class="author-mark">si.</span><span>By <a href="/editorial-standards/">Seller Insider Hub</a></span><span>Sources reviewed {e(reviewed)}</span><span>{read_time} min read · No coding required</span></div>'
+        sidebar=f'<aside class="detail-sidebar"><div class="card"><span class="eyebrow">Your field guide</span><h3>Build it, step by step</h3><nav class="toc" aria-label="On this page">{toc}</nav><button class="button light" data-save-guide="/playbooks/{e(p["id"])}/" data-title="{e(p["title"])}" aria-pressed="false">Save to reading list</button><button class="button light" data-print>Print or save PDF</button></div><div class="card"><h3>Keep the working kit</h3><p>Prompts, campaign planner, reply rules, and launch tests.</p><a class="button light" href="#downloads">Get the free templates ↓</a></div></aside>'
+        body=hero(p['title'],p['summary'],p['category'],('Tutorials','/playbooks/'))+f'<div class="wrap detail-layout social-guide-layout"><article class="article-body social-guide">{byline}{article_html}</article>{sidebar}</div>'
+        write('/playbooks/'+p['id']+'/',p['title'],p['summary'],body,'Playbook',section='playbooks',extrahead='<script defer src="/assets/js/social-guide.js"></script>',article={'published':p.get('publishedAt',DATE),'modified':p.get('modifiedAt',reviewed),'sources':p['sourceUrls']})
+        continue
     word_count=len(' '.join([p['intro']]+[step['body'] for step in p['steps']]+p['pitfalls']+p['success']).split())
     read_time=max(4,round(word_count/190)+2)
     steps=''.join(f'<section class="step" id="step-{i+1}"><div class="step-head"><span class="step-number">{i+1:02d}</span><h2>{e(st["title"])}</h2></div><p>{e(st["body"])}</p><div class="step-check"><strong>Check your work:</strong> {e(st["check"])}</div></section>' for i,st in enumerate(p['steps']))
@@ -164,6 +174,8 @@ write('/search/','Find your next useful answer','Search the complete collection 
 
 # Downloads contain usable material, not empty lead-magnet placeholders.
 downloads=OUT/'downloads';downloads.mkdir()
+for download_source in (ROOT/'downloads-source').glob('*'):
+    if download_source.is_file(): shutil.copy(download_source,downloads/download_source.name)
 resources=[('software-decision-scorecard.csv','Software decision scorecard','Compare tools against the job, total cost, data portability, and effort involved.'),('workflow-audit.csv','Workflow audit worksheet','Map a repeated task, its failure points, and the checks a reliable automation needs.'),('product-facts-prompt.txt','Product-facts writing template','Keep AI-assisted product copy grounded in the facts you supply.'),('launch-checklist.txt','Workflow launch checklist','Check a new workflow from permissions and sample data through rollback and maintenance.')]
 csv_rows={resources[0][0]:[['Tool','Job to be done','Must-have feature','Price source URL','Monthly cost','Setup effort','Data export','Limitation','Test evidence','Decision'],['Example: replace with your option','','','','','','','','','']],resources[1][0]:[['Workflow','Trigger','Input source','Owner','Frequency/week','Minutes/run','Failure cost','Approval step','Success check','Manual fallback','Last reviewed'],['Example: new inquiry follow-up','','','','','','','','','','']]}
 for filename,rows in csv_rows.items():

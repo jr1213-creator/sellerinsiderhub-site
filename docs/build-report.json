@@ -1,11 +1,11 @@
 {
   "built": "2026-10-31",
-  "pages": 136,
-  "indexed": 132,
+  "pages": 137,
+  "indexed": 133,
   "tools": 47,
   "categories": 14,
   "comparisons": 8,
-  "playbooks": 11,
+  "playbooks": 12,
   "routes": [
     {
       "route": "/",
@@ -376,6 +376,11 @@
       "route": "/playbooks/",
       "title": "AI and software tutorials for small businesses",
       "kind": "Tutorials"
+    },
+    {
+      "route": "/playbooks/ai-social-media-agents/",
+      "title": "How to build AI social media agents for your business",
+      "kind": "Playbook"
     },
     {
       "route": "/playbooks/email-welcome-sequence/",

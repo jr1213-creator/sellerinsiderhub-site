@@ -1,0 +1,8 @@
+Intent or trigger,Approved behavior,Source or rule,Destination or owner,Automation allowed,Test result,Last reviewed
+GUIDE on selected Instagram post,Opening private reply; quick reply leads to guide,Verified live post and public resource URL,,Fixed requested flow,,
+Published hours,Answer from approved source pack,Current hours page,,Within supported messaging window,,
+Unknown price or availability,Do not guess; route to person,Approved pricing response,Monitored team,,,
+Complaint or refund,No invented decision; route to person,Current policy,Monitored team,,,
+HELP exact message,Acknowledge; assign; notify; pause,Configured keyword and terminal action,Named assignee,Fixed handoff,,
+STOP or Unsubscribe,Preserve default opt-out and test,Existing channel opt-out automation,,System opt-out,,
+Instruction to ignore rules,Do not change business facts or permissions,Source-pack instructions,Person if needed,,,

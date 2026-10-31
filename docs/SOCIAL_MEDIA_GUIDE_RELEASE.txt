@@ -1,0 +1,54 @@
+SOCIAL MEDIA AGENTS TUTORIAL
+Publication date: October 31, 2026
+Canonical route: /playbooks/ai-social-media-agents/
+
+Purpose
+Give nontechnical business owners a complete, source-grounded path from
+campaign preparation to connected publishing, supported Instagram replies,
+human handoff, opt-out, and measured outcomes.
+
+Implementation
+- Original long-form HTML source: content/ai-social-media-agents.html.
+- Metadata and table of contents: data/editorial.json.
+- Integrated into the homepage, tutorial index, search index, sitemap, and
+  article schema through the existing standard-library build.
+- Progressive enhancement: site-assets/social-guide.js. No AI API call,
+  account connection, paid dependency, or remote data storage.
+- Four static downloads in downloads-source; copied to the public build.
+- Browser-local checklist stores only completion booleans.
+
+Research method
+Official OpenAI, Buffer, Manychat, Metricool, and platform documentation
+reviewed October 31, 2026. Inline links identify the supporting sources.
+Original sample messages, campaign, prompts, and tests are instructional.
+No product account testing, live social campaign, recipient messaging,
+affiliate approval, revenue, or performance result is claimed.
+
+Material source conflicts handled
+- Current OpenAI custom-MCP Plugins UI versus older vendor/Help menu and
+  plan descriptions. Capability-gated setup; read check then draft check.
+- Manychat current, legacy, and regional pricing differences. The reader
+  checks their actual subscription; no universal paid AI price promised.
+- Metricool Flows temporary inclusion. Not represented as permanent/free.
+- Detailed native Meta lessons behind sign-in. No invented click path.
+
+Review findings addressed
+- Distinguish user interaction permission from the configured Quick Reply
+  branch that actually delivers the guide.
+- HELP exact-match trigger is documented and visible in sample messages.
+- Preserve default STOP/Unsubscribe opt-out rather than competing rules.
+- AI knowledge instructions are not represented as enforced permissions.
+- Buffer MCP publishing, Community replies, and DMs are separate.
+- No private screenshot, person, or third-party business is referenced.
+
+Verification
+Static validator passed after integration: 138 HTML files, 20 editorial
+guides, 6,639 local references, and 133 sitemap URLs. JS syntax passed.
+Desktop browser layout checked. Route selector passed; checklist restored
+2/15 after reload and reset to 0/15. The HTTP preview blocks clipboard
+access, so its documented text-download fallback was observed.
+375-pixel iframe mobile check: body clientWidth and scrollWidth both 360
+(scrollbar space excluded); no document horizontal overflow. Mobile route
+selection passed. Full native mobile-device testing was not performed.
+Production URL and HTTPS clipboard check are release checks performed
+after the authorized main-branch publication.

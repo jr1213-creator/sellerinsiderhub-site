@@ -4,6 +4,8 @@ from html import escape
 def h(value): return escape(str(value), quote=True)
 
 def cover(slug, variant=0):
+    if slug == 'ai-social-media-agents':
+        return '''<div class="story-art art-social" aria-hidden="true"><span class="art-caption">YOUR SOCIAL MEDIA, WORKING TOGETHER</span><div class="social-cover"><span class="social-cover-pill">THE PRACTICAL FIELD GUIDE</span><strong>Plan it.<br>Publish it.<br>Keep the conversation going.</strong><div><span>AI + your expertise</span><span>Connected tools ↗</span></div></div></div>'''
     if any(word in slug for word in ('email','welcome')):
         return '''<div class="story-art art-email" aria-hidden="true"><span class="art-caption">THE WELCOME SEQUENCE</span><div class="mail-sheet"><span class="mail-topline">YOUR BUSINESS · A BETTER FIRST IMPRESSION</span><div class="mail-subject">You’re in.<br>Here’s what comes next.</div><div class="mail-rule"></div><span class="mail-line"></span><span class="mail-line short"></span><span class="mail-cta">One useful next step →</span></div><span class="art-stamp">Write. Build. Check.</span></div>'''
     if any(word in slug for word in ('automation','lead')):
@@ -18,8 +20,8 @@ def story_card(p, i=0):
 
 def render_home(plays, comparisons, comparecard, newsletter):
     by_id={p['id']:p for p in plays}
-    lead=by_id.get('email-welcome-sequence',plays[0])
-    side=[by_id[id] for id in ['first-reliable-automation','etsy-listing-workflow'] if id in by_id]
+    lead=by_id.get('ai-social-media-agents',by_id.get('email-welcome-sequence',plays[0]))
+    side=[by_id[id] for id in ['email-welcome-sequence','etsy-listing-workflow'] if id in by_id]
     tutorials=[by_id[id] for id in ['product-launch-content-system','customer-support-knowledge-base','service-lead-follow-up'] if id in by_id]
     paths=[('✳','Use AI well','Prompts, product facts, research, and reliable outputs.','/comparisons/chatgpt-vs-claude/'),('✉','Build your audience','Email systems that start with a useful promise.','/playbooks/email-welcome-sequence/'),('↗','Automate the repeat work','Connect your tools and catch the failures.','/playbooks/first-reliable-automation/'),('▦','Run a better business','Keep leads, information, and decisions organized.','/playbooks/business-operations-hub/')]
     return f'''<section class="publication-intro"><div class="wrap"><div><span class="eyebrow">Practical intelligence for independent businesses</span><h1>Make AI work for<br><em>your small business.</em></h1></div><div class="intro-aside"><p>Learn what’s useful. Understand the tradeoffs.<br>Build something that makes your work better.</p><a class="text-button" href="/playbooks/">Explore the tutorials ↗</a></div></div></section>

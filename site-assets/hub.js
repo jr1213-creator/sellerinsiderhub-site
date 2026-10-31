@@ -46,7 +46,7 @@
   const monogram = t => `<span class="tool-monogram" style="background:${/^#[0-9a-f]{3,8}$/i.test(t.color) ? t.color : '#eaf0e4'}">${esc(t.icon || t.name.slice(0,2))}</span>`;
   function toast(message) {const el = $('#toast'); if (!el) return; el.textContent = message; el.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => el.hidden = true, 4300);}
   function download(name, body, type = 'text/plain') {const url = URL.createObjectURL(new Blob([body], {type})); const a = document.createElement('a'); a.href = url; a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(url), 2000);}
-  async function copy(text) {try {await navigator.clipboard.writeText(text); toast('Copied to clipboard.');} catch {download('seller-insider-hub-link.txt', text); toast('Your browser blocked the clipboard. The link has been downloaded.');}}
+  async function copy(text) {try {await navigator.clipboard.writeText(text); toast('Copied to clipboard.');} catch {download('seller-insider-hub-copy.txt', text); toast('Your browser blocked the clipboard. The text has been downloaded.');}}
   function enableAnalytics() {
     window['ga-disable-G-164NDV6713'] = false;
     if (analyticsLoaded) return;

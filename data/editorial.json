@@ -2,6 +2,145 @@
   "updated": "2026-10-31",
   "playbooks": [
     {
+      "id": "ai-social-media-agents",
+      "title": "How to build AI social media agents for your business",
+      "summary": "Plan useful campaigns in ChatGPT, schedule approved posts with Buffer, and build tested Instagram replies with Manychat or Metricool. Clear steps, copyable prompts, and a complete working kit.",
+      "category": "Social media & AI",
+      "audience": "Nontechnical business owners, service businesses, creators, and small teams",
+      "effort": "Plan half a day for setup, then complete live workflow tests; account approvals may take longer.",
+      "toolIds": [
+        "chatgpt",
+        "buffer",
+        "metricool"
+      ],
+      "intro": "A complete no-code guide to social campaign planning, connected publishing, requested replies, human handoff, and measured outcomes.",
+      "steps": [],
+      "pitfalls": [],
+      "success": [],
+      "sourceUrls": [
+        "https://developers.buffer.com/guides/integrations/chatgpt.html",
+        "https://help.manychat.com/hc/en-us/articles/14281316989724-Instagram-Post-and-Reel-Comments-trigger",
+        "https://support.buffer.com/en-us/articles/connecting-your-channels-to-buffer-HvWLgAJvL9",
+        "https://support.buffer.com/en-us/articles/scheduling-posts-4Qdld7giAZ",
+        "https://support.buffer.com/en-us/articles/using-buffers-ai-assistant-qbBulfw9sn",
+        "https://developers.openai.com/api/docs/guides/custom-mcp-server",
+        "https://support.buffer.com/en-us/articles/what-is-buffers-api-GtIYIQilz5",
+        "https://developers.buffer.com/guides/integrations/mcp",
+        "https://support.buffer.com/en-us/articles/using-notification-publishing-gvZQiMxVa2",
+        "https://support.buffer.com/en-us/articles/requesting-approval-and-approving-draft-posts-57li7M8tDA",
+        "https://support.buffer.com/en-us/articles/using-community-in-buffer-jvTv4uQacA",
+        "https://help.manychat.com/hc/en-us/articles/14281290924444-How-to-connect-Instagram-to-Manychat",
+        "https://help.manychat.com/hc/en-us/articles/23358636027932-Understanding-messaging-windows",
+        "https://help.manychat.com/hc/en-us/articles/23018283889180-Manychat-AI-Replies",
+        "https://help.manychat.com/hc/en-us/articles/14281227789468-Power-up-your-chat-marketing-with-Manychat-AI",
+        "https://help.manychat.com/hc/en-us/articles/23096278263836-Manychat-AI-Comments",
+        "https://help.manychat.com/hc/en-us/articles/19957883687708-How-to-pause-all-automations",
+        "https://help.manychat.com/hc/en-us/articles/14281211785884-How-to-use-Keywords-Trigger-in-Manychat",
+        "https://help.manychat.com/hc/en-us/articles/14281186964252-Default-opt-in-and-opt-out-automations",
+        "https://help.manychat.com/hc/en-us/articles/14281436380956-Manychat-is-sending-wrong-messages",
+        "https://help.metricool.com/inbox-manager-how-to-manage-messages-and-comments-from-metricool-s9zze",
+        "https://help.metricool.com/what-are-flows-nfody",
+        "https://help.metricool.com/flows-on-instagram-v4nx3",
+        "https://help.metricool.com/flows-limits-restrictions-and-permissions-ebmsi",
+        "https://news.linkedin.com/2026/authentic-content-and-conversations",
+        "https://help.x.com/en/rules-and-policies/x-automation",
+        "https://help.manychat.com/hc/en-us/articles/17928990909084-How-to-connect-TikTok-to-Manychat",
+        "https://ads.tiktok.com/resources/help/article/how-to-set-up-auto-messages-for-business-accounts?lang=en",
+        "https://help.manychat.com/hc/en-us/articles/14281086119068-How-to-connect-Facebook-to-Manychat",
+        "https://formedia.facebookblueprint.com/student/path/253041-meta-business-suite-customer-connection",
+        "https://www.hootsuite.com/plans",
+        "https://sproutsocial.com/pricing/",
+        "https://buffer.com/pricing",
+        "https://metricool.com/pricing/",
+        "https://help.manychat.com/hc/en-us/articles/25800197498652-Free-plan",
+        "https://help.manychat.com/hc/en-us/articles/25800228332572-Pro-plan",
+        "https://learn.chatgpt.com/docs/automations",
+        "https://buffer.com/integrations/claude"
+      ],
+      "lastReviewed": "2026-10-31",
+      "publishedAt": "2026-10-31",
+      "modifiedAt": "2026-10-31",
+      "bodyFile": "content/ai-social-media-agents.html",
+      "contents": [
+        {
+          "id": "quick-answer",
+          "label": "The practical answer"
+        },
+        {
+          "id": "choose-your-route",
+          "label": "1. Choose your setup"
+        },
+        {
+          "id": "before-you-start",
+          "label": "2. Prepare your business facts"
+        },
+        {
+          "id": "campaign",
+          "label": "3. Build a campaign"
+        },
+        {
+          "id": "buffer-setup",
+          "label": "4. Set up Buffer"
+        },
+        {
+          "id": "connect-chatgpt",
+          "label": "5. Connect ChatGPT"
+        },
+        {
+          "id": "schedule",
+          "label": "6. Schedule and verify"
+        },
+        {
+          "id": "instagram-replies",
+          "label": "7. Instagram reply workflow"
+        },
+        {
+          "id": "ai-replies",
+          "label": "8. Add AI FAQ replies"
+        },
+        {
+          "id": "handoff",
+          "label": "9. Handoff and opt-out"
+        },
+        {
+          "id": "metricool",
+          "label": "10. Metricool alternative"
+        },
+        {
+          "id": "channels",
+          "label": "11. Channel differences"
+        },
+        {
+          "id": "costs",
+          "label": "12. Costs and plans"
+        },
+        {
+          "id": "recurring-work",
+          "label": "13. Recurring work and results"
+        },
+        {
+          "id": "launch-tests",
+          "label": "14. Launch checklist"
+        },
+        {
+          "id": "troubleshooting",
+          "label": "Troubleshooting"
+        },
+        {
+          "id": "downloads",
+          "label": "Download the working kit"
+        },
+        {
+          "id": "questions",
+          "label": "Common questions"
+        },
+        {
+          "id": "research-notes",
+          "label": "Research notes"
+        }
+      ]
+    },
+    {
       "id": "email-welcome-sequence",
       "title": "How to build an AI-assisted welcome email sequence in MailerLite",
       "summary": "Create an embedded signup form, connect its group to a three-email workflow, and test delivery, delays, and unsubscribe behavior.",
