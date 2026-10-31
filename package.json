@@ -1,0 +1,10 @@
+{
+  "name": "seller-insider-hub",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Research-led small business AI and software publication",
+  "scripts": {
+    "build": "python3 scripts/build_site.py",
+    "check": "python3 scripts/validate_site.py && node scripts/test_calculators.cjs"
+  }
+}

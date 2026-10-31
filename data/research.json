@@ -1,0 +1,489 @@
+{
+  "updated": "2026-10-31",
+  "title": "Seller Insider Hub editorial demand research",
+  "methodology": {
+    "approach": "Combine primary market research, current official product documentation, and qualitative public search-result observations. Editorial priorities are reasoned hypotheses that should be checked against reader behavior after publication.",
+    "searchScope": "The query strings below were used or closely represented in public web research and are suitable for further Google searches. Observations describe the retrieved result set; they are not an audited Google ranking report.",
+    "unavailableData": "No verified Google Trends export, Google Ads Keyword Planner volume, keyword-difficulty dataset, or site-specific Search Console demand data was available for this research. No search-volume or traffic forecast is asserted.",
+    "sourcePolicy": "Use each vendor's own documentation for its functionality. Vendor-written competitor comparisons are treated as competitive positioning, not authoritative descriptions of the other product.",
+    "priorityPolicy": "Prioritize a specific reader job, a concrete decision or error, evidence that the workflow exists, and a useful deliverable. A commercial intent label describes the query, not a guaranteed purchase.",
+    "reviewDate": "2026-10-31"
+  },
+  "marketEvidence": [
+    {
+      "id": "smb-ai-adoption",
+      "title": "Small-business technology use is substantial, with uneven adoption",
+      "fact": "The U.S. Chamber's October 2026 report says 66% of surveyed small businesses use AI and 41% use at least six technology platforms.",
+      "sourceUrl": "https://www.uschamber.com/technology/2026-empowering-small-business-report",
+      "sourceDate": "2026-10-02",
+      "limitation": "The underlying online survey covered 3,732 businesses with fewer than 250 employees. Its population and definition differ from Census; adoption is not proof of willingness to buy a particular product."
+    },
+    {
+      "id": "census-adoption",
+      "title": "Adoption estimates depend on the survey and population",
+      "fact": "Census reported overall business AI use of roughly 17–20% across December 2025–May 2026, with retail around 14% at the end of the period.",
+      "sourceUrl": "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html",
+      "sourceDate": "2026-05-26",
+      "limitation": "This is an earlier period and a different survey. Do not average it with the Chamber finding or present their difference as a measured decline."
+    },
+    {
+      "id": "solo-seller-workload",
+      "title": "Solo sellers have a substantial administrative workload",
+      "fact": "Etsy's 2025 filing reports its 2024 Seller Census: 89% of sellers are businesses of one, 51% sell on multiple channels, and an average 52% of business time is spent making or designing.",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1370637/000137063726000019/etsy-20251231.htm",
+      "sourceDate": "2026 filing; 2024 survey",
+      "limitation": "These are Etsy-reported survey findings, not a 2026 survey of every seller. They support workflow relevance, not an earnings estimate."
+    },
+    {
+      "id": "etsy-market-scale",
+      "title": "The seller audience is large",
+      "fact": "Etsy's third-quarter 2026 shareholder letter reports 5.8 million active sellers.",
+      "sourceUrl": "https://investors.etsy.com/_assets/_9bb344225cb404039577b245ea686f33/etsy/db/938/10106/shareholder_letter/Final_Q32026_Shareholder_Letter_.pdf",
+      "sourceDate": "2026-10-28",
+      "limitation": "Marketplace scale is not a reachable audience or a measure of software-buying demand for this publication."
+    },
+    {
+      "id": "search-click-behavior",
+      "title": "Generic informational search faces a distribution challenge",
+      "fact": "In Pew's March 2025 browsing sample, users clicked traditional Google results on 8% of visits with AI summaries and 15% without them.",
+      "sourceUrl": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+      "sourceDate": "2025-07-22",
+      "limitation": "An observational study of 900 U.S. adults in a specific period. It does not predict this site's traffic or establish a causal loss for every query."
+    },
+    {
+      "id": "platform-policy-change",
+      "title": "Current implementation guidance needs active maintenance",
+      "fact": "Etsy updated its listing-image requirements on October 22, 2026, including accurate representation and an unedited actual-item photo for most product types, with exceptions.",
+      "sourceUrl": "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+      "sourceDate": "2026-10-22",
+      "limitation": "Requirements vary by product type and can change. Practical guides should link to the live policy and avoid blanket assurances."
+    }
+  ],
+  "topics": [
+    {
+      "id": "mailerlite-welcome",
+      "title": "How to build an AI-assisted welcome email sequence in MailerLite",
+      "priority": 1,
+      "readerJob": "Deliver a promised resource and useful follow-up without manually emailing each new subscriber.",
+      "intent": "How-to with software-evaluation intent",
+      "googleQueries": [
+        "MailerLite welcome email automation setup",
+        "email marketing for Etsy sellers MailerLite Kit"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.mailerlite.com/help/how-to-create-an-automation-workflow",
+          "fact": "MailerLite documents a group-triggered workflow with email and delay steps."
+        },
+        {
+          "sourceUrl": "https://www.mailerlite.com/help/how-to-create-an-embedded-form",
+          "fact": "Embedded forms assign subscribers to selected groups."
+        }
+      ],
+      "searchObservation": "Retrieved results include broad Etsy email-tool lists and official MailerLite setup instructions.",
+      "competitionGap": "A useful editorial contribution is a complete form-to-email example with exact field values, copyable draft instructions, unsubscribe tests, and failure diagnosis. This is an opportunity hypothesis, not a claim that no competing tutorial exists.",
+      "businessRelevance": "Connects a recurring business task with an informed email-platform decision.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "Documentation proves the feature exists; no verified query volume or site conversion data is available.",
+      "contentDeliverable": "A specific MailerLite tutorial with a three-message example, configuration table, and test checklist.",
+      "relatedPlaybookIds": [
+        "email-welcome-sequence"
+      ],
+      "relatedComparisonIds": [
+        "mailerlite-vs-kit"
+      ]
+    },
+    {
+      "id": "ecommerce-email-events",
+      "title": "MailerLite vs Omnisend for Shopify cart and checkout follow-up",
+      "priority": 2,
+      "readerJob": "Choose an email platform based on actual store events and customer identification.",
+      "intent": "Commercial investigation and integration troubleshooting",
+      "googleQueries": [
+        "MailerLite vs Omnisend ecommerce abandoned cart",
+        "MailerLite Shopify abandoned cart trigger"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.mailerlite.com/help/e-commerce-automation-triggers",
+          "fact": "MailerLite documents recognized-subscriber requirements for Shopify cart workflows and additional checkout restrictions."
+        },
+        {
+          "sourceUrl": "https://support.omnisend.com/en/articles/6659889-abandoned-cart-and-abandoned-checkout-automations",
+          "fact": "Omnisend documents identified-contact requirements and warns about duplicate native-store reminders."
+        }
+      ],
+      "searchObservation": "Results include Omnisend's own competitor comparison and MailerLite's current trigger documentation, which differ on Shopify cart support.",
+      "competitionGap": "Reconcile capabilities from each product's own docs and show supported events, identity prerequisites, and exit tests instead of repeating vendor comparison claims.",
+      "businessRelevance": "Helps active stores choose the tool that can actually run their customer journey.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "Integration behavior changes; a documentation comparison is not an end-to-end account test.",
+      "contentDeliverable": "An event-by-event comparison and a test matrix for signup, cart, checkout, purchase, and unsubscribe.",
+      "relatedPlaybookIds": [
+        "email-welcome-sequence"
+      ],
+      "relatedComparisonIds": [
+        "mailerlite-vs-omnisend"
+      ]
+    },
+    {
+      "id": "make-lead-intake",
+      "title": "How to capture and deduplicate website leads in Make",
+      "priority": 3,
+      "readerJob": "Turn form submissions into a visible internal review queue without repeated entries.",
+      "intent": "Implementation and troubleshooting",
+      "googleQueries": [
+        "Make custom webhook lead automation duplicate records",
+        "Zapier vs Make small business automation cost"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://apps.make.com/gateway",
+          "fact": "Make documents custom webhooks, API-key headers, and explicit data-structure validation."
+        },
+        {
+          "sourceUrl": "https://help.make.com/l6du-data-stores",
+          "fact": "Data stores support unique keys and rejecting an existing key when overwrite is disabled."
+        }
+      ],
+      "searchObservation": "Retrieved automation comparisons emphasize platform positioning and billing; official docs explain webhook and record modules separately.",
+      "competitionGap": "Connect those documented modules into one bounded lead-intake recipe with sample JSON, mapping, duplicate tests, and a visible recovery process.",
+      "businessRelevance": "Solves recurring administration and gives a concrete basis for evaluating an automation subscription.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "The proposed workflow is an editorial design. Readers must test it with their form provider and plan.",
+      "contentDeliverable": "A Make-specific guide with a protected webhook, stable submission ID, internal queue, and invalid/duplicate test cases.",
+      "relatedPlaybookIds": [
+        "first-reliable-automation"
+      ],
+      "relatedComparisonIds": [
+        "zapier-vs-make"
+      ]
+    },
+    {
+      "id": "automation-cost",
+      "title": "Zapier tasks vs Make credits: price the workflow you will run",
+      "priority": 4,
+      "readerJob": "Estimate usage costs from realistic events, branching, retries, and AI calls.",
+      "intent": "Commercial investigation",
+      "googleQueries": [
+        "Zapier vs Make pricing tasks credits",
+        "Make automation credits high usage polling"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier",
+          "fact": "Zapier distinguishes billable successful actions from excluded steps and specialized product rates."
+        },
+        {
+          "sourceUrl": "https://help.make.com/credits",
+          "fact": "Make uses fixed and dynamic credits, with AI usage depending on connection type."
+        }
+      ],
+      "searchObservation": "A vendor-authored Zapier comparison appears among the retrieved results and argues for its own cost model.",
+      "competitionGap": "Use the same example process and current official billing definitions for both tools; disclose assumptions and avoid a universal cheapest-tool verdict.",
+      "businessRelevance": "Supports a purchase decision while helping readers prevent avoidable subscription and usage surprises.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "No account-specific quote or benchmark was obtained; actual usage and plan terms control the bill.",
+      "contentDeliverable": "A worked workflow-cost table with normal, duplicate, failed, and high-volume scenarios.",
+      "relatedPlaybookIds": [
+        "first-reliable-automation"
+      ],
+      "relatedComparisonIds": [
+        "zapier-vs-make"
+      ]
+    },
+    {
+      "id": "channel-economics",
+      "title": "Etsy vs Shopify: compare contribution after shipping and acquisition",
+      "priority": 5,
+      "readerJob": "Decide whether another selling channel improves the business after all meaningful costs.",
+      "intent": "Commercial investigation and calculator intent",
+      "googleQueries": [
+        "Etsy Shopify cost comparison shipping profit calculator",
+        "Etsy vs Shopify fees customer acquisition cost"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+          "fact": "Etsy lists multiple fee categories with different conditions and calculation bases."
+        },
+        {
+          "sourceUrl": "https://help.shopify.com/en/manual/promoting-marketing",
+          "fact": "Shopify provides marketing tools and guidance for attracting and retaining customers."
+        }
+      ],
+      "searchObservation": "Retrieved results already include an independent fee calculator that discusses acquisition costs.",
+      "competitionGap": "The opportunity is execution quality: transparent editable assumptions, shipping-inclusive variants, actual-order reconciliation, and plain explanations of excluded costs. It is not an unserved category.",
+      "businessRelevance": "Helps sellers assess a store-platform purchase and avoid confusing lower visible fees with higher profit.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "A calculator cannot predict demand; country, payment method, advertising, and account settings affect fees.",
+      "contentDeliverable": "A configurable contribution model plus a channel-selection guide that preserves actual cost assumptions.",
+      "relatedPlaybookIds": [
+        "product-profit-check"
+      ],
+      "relatedComparisonIds": [
+        "shopify-vs-etsy"
+      ]
+    },
+    {
+      "id": "etsy-ai-listing",
+      "title": "How to draft an Etsy listing with ChatGPT or Claude without inventing product facts",
+      "priority": 6,
+      "readerJob": "Turn a verified product record into clear listing copy and a reliable final review.",
+      "intent": "How-to and current-policy troubleshooting",
+      "googleQueries": [
+        "Etsy AI listing images rules October 2026",
+        "ChatGPT Etsy listing accurate product description prompt"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.etsy.com/seller-handbook/article/1402347260856",
+          "fact": "Etsy describes optional native tools for attributes, titles, and buyer-message drafts."
+        },
+        {
+          "sourceUrl": "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+          "fact": "The current image policy requires accurate representations and describes product-type exceptions."
+        }
+      ],
+      "searchObservation": "Retrieved results include official October 2026 policy updates and existing native AI-tool guidance.",
+      "competitionGap": "Provide a copyable product truth-sheet prompt, a claim-by-claim review, and a checkout audit; explain when native tools are sufficient.",
+      "businessRelevance": "Addresses quality and fulfillment mistakes while supporting informed use of AI and design tools.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "Policy evidence does not validate search demand or guarantee marketplace acceptance of a specific listing.",
+      "contentDeliverable": "A factual input template, sample draft, unknowns list, and shipping/variation verification checklist.",
+      "relatedPlaybookIds": [
+        "etsy-listing-workflow"
+      ],
+      "relatedComparisonIds": [
+        "chatgpt-vs-claude",
+        "canva-vs-adobe-express"
+      ]
+    },
+    {
+      "id": "content-campaign",
+      "title": "Canva vs Adobe Express for a repeatable product-launch campaign",
+      "priority": 7,
+      "readerJob": "Create and publish several accurate campaign assets from one source pack.",
+      "intent": "Commercial investigation and how-to",
+      "googleQueries": [
+        "Canva Adobe Express product launch content scheduler comparison",
+        "repurpose product launch email social content workflow"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.canva.com/en_gb/help/content-planner/",
+          "fact": "Canva documents scheduling controls and format/account restrictions."
+        },
+        {
+          "sourceUrl": "https://helpx.adobe.com/express/web/publish-and-share/schedule-manage-posts/content-scheduler-overview.html",
+          "fact": "Adobe Express documents planning, previewing, scheduling, and publishing through Content Scheduler."
+        }
+      ],
+      "searchObservation": "Results include Adobe's own comparison and broader content-tool guides.",
+      "competitionGap": "Compare the same real-world deliverables and the maintenance work after scheduling, rather than relying on template counts or a vendor's feature grid.",
+      "businessRelevance": "Supports a design-tool decision and a recurring marketing workflow.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "No comparative editing benchmark was performed; account permissions and supported channels can change.",
+      "contentDeliverable": "A source-pack template, five-asset campaign example, and export/publishing acceptance checks.",
+      "relatedPlaybookIds": [
+        "product-launch-content-system"
+      ],
+      "relatedComparisonIds": [
+        "canva-vs-adobe-express"
+      ]
+    },
+    {
+      "id": "lead-follow-up",
+      "title": "HubSpot vs Pipedrive for inquiry follow-up that stops correctly",
+      "priority": 8,
+      "readerJob": "Keep inquiries accountable while avoiding stale follow-up after a reply or booking.",
+      "intent": "Commercial investigation and implementation",
+      "googleQueries": [
+        "HubSpot Pipedrive small business lead follow up comparison",
+        "CRM sequence stop when customer replies"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://knowledge.hubspot.com/sequences/create-and-edit-sequences",
+          "fact": "HubSpot documents timed emails and tasks with reply- or meeting-based unenrollment."
+        },
+        {
+          "sourceUrl": "https://support.pipedrive.com/en/article/sequences-automatic-enrollment-using-automations",
+          "fact": "Pipedrive documents automation-based sequence enrollment with plan requirements."
+        }
+      ],
+      "searchObservation": "Retrieved results include a broad Zapier comparison and both vendors' follow-up documentation.",
+      "competitionGap": "Show a single inquiry moving through each process, including a duplicate, reply, closed opportunity, and opt-out. Treat similarly named features separately.",
+      "businessRelevance": "Helps service businesses choose a CRM around an actual revenue process.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "Feature names and plan gates change; no live account migration or conversion study was conducted.",
+      "contentDeliverable": "A pipeline template, response rules, and a scenario-based CRM evaluation table.",
+      "relatedPlaybookIds": [
+        "service-lead-follow-up"
+      ],
+      "relatedComparisonIds": [
+        "hubspot-vs-pipedrive"
+      ]
+    },
+    {
+      "id": "scheduling-errors",
+      "title": "Calendly buffers, time zones, and missing availability explained",
+      "priority": 9,
+      "readerJob": "Let suitable customers book while protecting the actual workday.",
+      "intent": "Troubleshooting and setup",
+      "googleQueries": [
+        "Calendly double booking buffers time zone troubleshooting",
+        "Calendly buffer outside working hours"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://calendly.com/help/how-to-use-buffers",
+          "fact": "Calendly states buffers can extend outside availability and that existing bookings retain earlier buffer settings."
+        },
+        {
+          "sourceUrl": "https://calendly.com/help/time-zones-overview",
+          "fact": "Calendly documents event time zones and locking an in-person event to a location time zone."
+        }
+      ],
+      "searchObservation": "Official troubleshooting pages dominate the retrieved result set for these questions.",
+      "competitionGap": "Offer an original working-day example and diagnosis order that connects separate help topics, with direct official references.",
+      "businessRelevance": "Solves an immediate operational problem and supports a scheduling-tool decision when current tools are insufficient.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "This is a utility topic, not proven high-volume or high-conversion traffic.",
+      "contentDeliverable": "A latest-slot calculation, connected-calendar checklist, and booking/rescheduling test.",
+      "relatedPlaybookIds": [
+        "self-service-booking"
+      ],
+      "relatedComparisonIds": []
+    },
+    {
+      "id": "operations-permissions",
+      "title": "Notion vs Airtable for a business hub with trustworthy permissions",
+      "priority": 10,
+      "readerJob": "Share useful operational records without accidentally exposing internal information.",
+      "intent": "Commercial investigation and troubleshooting",
+      "googleQueries": [
+        "Notion Airtable operations database permissions comparison",
+        "Notion restricted property Airtable interface permissions"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.notion.com/help/database-property-access",
+          "fact": "Notion documents plan-dependent property access and the effect of broader permissions."
+        },
+        {
+          "sourceUrl": "https://support.airtable.com/articles/3994336578-airtable-permissions-overview",
+          "fact": "Airtable documents how workspace and base permission levels interact."
+        }
+      ],
+      "searchObservation": "Retrieved primary sources emphasize permission layers that a broad feature comparison can obscure.",
+      "competitionGap": "Make the comparison concrete through a content or order workflow and a restricted-user acceptance test.",
+      "businessRelevance": "Supports a software decision and reduces costly migration or access mistakes.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "Permission behavior is plan-specific and should be tested with the actual roles used.",
+      "contentDeliverable": "A small data model, role matrix, and migration/export checks.",
+      "relatedPlaybookIds": [
+        "business-operations-hub"
+      ],
+      "relatedComparisonIds": [
+        "notion-vs-airtable"
+      ]
+    },
+    {
+      "id": "support-grounding",
+      "title": "Build an AI support knowledge base with a working human handoff",
+      "priority": 11,
+      "readerJob": "Answer repeated questions accurately and route unsupported cases to someone who can resolve them.",
+      "intent": "Implementation and software evaluation",
+      "googleQueries": [
+        "AI customer support knowledge base human handoff small business",
+        "Tidio Lyro wrong answer knowledge source handoff"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.tidio.com/faq/",
+          "fact": "Tidio describes configurable handoff and the need to maintain correct source information."
+        },
+        {
+          "sourceUrl": "https://developers.tidio.com/reference/get_lyro-data-sources",
+          "fact": "Tidio documents data-source objects used by its AI assistant."
+        }
+      ],
+      "searchObservation": "The result set already includes detailed small-business support and handoff guides.",
+      "competitionGap": "Differentiate through specific source records, a repeatable question set, and diagnosis of stale answers and failed escalation. Avoid claiming the subject is uncovered.",
+      "businessRelevance": "Helps businesses assess a support subscription and reduce repeated service work.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "Vendor capability statements do not prove answer accuracy or a specific labor saving.",
+      "contentDeliverable": "A source-answer format, shipping-question example, and normal/ambiguous/adversarial test set.",
+      "relatedPlaybookIds": [
+        "customer-support-knowledge-base"
+      ],
+      "relatedComparisonIds": []
+    },
+    {
+      "id": "review-requests",
+      "title": "Automate honest Google review requests without selective routing",
+      "priority": 12,
+      "readerJob": "Ask eligible customers for genuine feedback after completed work.",
+      "intent": "Implementation and policy troubleshooting",
+      "googleQueries": [
+        "Google review request automation no incentives review gating",
+        "Google business review request link completed job"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://support.google.com/contributionpolicy/answer/7400114",
+          "fact": "Google prohibits incentives and selectively soliciting positive reviews."
+        },
+        {
+          "sourceUrl": "https://support.google.com/business/answer/3474122",
+          "fact": "Google permits asking customers for reviews using a review link or QR code."
+        }
+      ],
+      "searchObservation": "The retrieved evidence includes Google's direct review policy and business guidance.",
+      "competitionGap": "Translate the rules into an operational trigger, neutral message, duplicate-prevention check, and honest reporting template.",
+      "businessRelevance": "Addresses a recurring local-business process and provides criteria for choosing a review tool.",
+      "confidence": "Medium: problem and product capabilities are documented; organic demand and acquisition economics are unquantified.",
+      "evidenceLimitations": "A compliant request does not guarantee publication, more reviews, or a higher rating.",
+      "contentDeliverable": "A neutral request template and completed-job-to-request workflow with no satisfaction-based gate.",
+      "relatedPlaybookIds": [
+        "honest-review-request-system"
+      ],
+      "relatedComparisonIds": []
+    },
+    {
+      "id": "business-ai-brief",
+      "title": "How to set up a reusable business brief in ChatGPT Projects",
+      "priority": "High editorial utility",
+      "readerJob": "Give an AI assistant reusable approved context and check its output against sources.",
+      "intent": "Implementation and troubleshooting",
+      "googleQueries": [
+        "ChatGPT Projects small business instructions",
+        "how to use ChatGPT Projects business knowledge",
+        "ChatGPT project only memory settings"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+          "fact": "Official documentation describes project files, instructions, and project memory controls."
+        },
+        {
+          "sourceUrl": "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt",
+          "fact": "Personal-account data controls affect model-improvement settings."
+        }
+      ],
+      "searchObservation": "Official product help was retrieved and checked for current interface behavior; no Google position or demand-volume measurement was obtained.",
+      "competitionGap": "Editorial inference: combine the feature documentation with a complete business fact sheet, reusable instructions, expected output, and an unsupported-claim test.",
+      "businessRelevance": "Creates a reusable starting point for common writing and information tasks without implying an upgrade is required.",
+      "confidence": "High for documented functionality; unmeasured for query volume.",
+      "evidenceLimitations": "Documentation review does not prove a live-account test, search traffic, or willingness to pay.",
+      "contentDeliverable": "A complete tutorial with five copyable templates, a fictional photography-business example, checks, and troubleshooting.",
+      "relatedPlaybookIds": [
+        "chatgpt-project-business-brief"
+      ],
+      "relatedComparisonIds": [
+        "chatgpt-vs-claude"
+      ]
+    }
+  ]
+}

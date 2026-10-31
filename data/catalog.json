@@ -1,0 +1,2299 @@
+{
+  "updated": "2026-10-31",
+  "categories": [
+    {
+      "id": "ai-assistants",
+      "label": "AI assistants",
+      "description": "Draft, research, and analyze files with clear instructions and checked sources."
+    },
+    {
+      "id": "automation",
+      "label": "Automation",
+      "description": "Connect applications and remove repetitive handoffs with monitored workflows."
+    },
+    {
+      "id": "email",
+      "label": "Email marketing",
+      "description": "Build an opted-in audience and send useful campaigns and follow-ups."
+    },
+    {
+      "id": "ecommerce",
+      "label": "Stores & marketplaces",
+      "description": "Compare selling channels and their full operating requirements."
+    },
+    {
+      "id": "seo",
+      "label": "Search & seller research",
+      "description": "Research search language, listing opportunities, and website visibility."
+    },
+    {
+      "id": "crm",
+      "label": "CRM & customer records",
+      "description": "Organize contacts, opportunities, and the next action for each relationship."
+    },
+    {
+      "id": "design",
+      "label": "Design & content",
+      "description": "Create reusable visual materials for products, campaigns, and publishing."
+    },
+    {
+      "id": "productivity",
+      "label": "Planning & productivity",
+      "description": "Keep tasks, procedures, and reference information organized."
+    },
+    {
+      "id": "scheduling",
+      "label": "Scheduling",
+      "description": "Coordinate booking, availability, and appointment preparation."
+    },
+    {
+      "id": "customer-service",
+      "label": "Customer support",
+      "description": "Answer recurring questions and route exceptions to the right person."
+    },
+    {
+      "id": "reviews",
+      "label": "Reviews & reputation",
+      "description": "Request honest feedback and manage reputation work across locations."
+    },
+    {
+      "id": "social-media",
+      "label": "Social publishing",
+      "description": "Plan a publishing schedule and examine meaningful channel results."
+    },
+    {
+      "id": "phone-systems",
+      "label": "Business calls",
+      "description": "Manage incoming calls, routing, scheduling, and conversation records."
+    },
+    {
+      "id": "video-audio",
+      "label": "Video & audio",
+      "description": "Create and edit explainers, screen tutorials, and authorized narration."
+    }
+  ],
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "category": "ai-assistants",
+      "tagline": "Draft, research, and analyze business files.",
+      "description": "ChatGPT combines conversational writing, web research, and file analysis. Its value is breadth: the same workspace can help inspect a sales export, develop a product brief, or revise customer-facing copy. Start with actual business inputs and specify the required output. A reusable prompt is useful when it produces a checkable result, rather than simply more text. Verify calculations, sources, and product specifications before using the answer in a decision or publishing it.",
+      "bestFor": [
+        "Owners needing one flexible assistant",
+        "Working from supplied spreadsheets and documents"
+      ],
+      "notFor": [
+        "Publishing unchecked product claims",
+        "Treating a generated answer as original market evidence"
+      ],
+      "features": [
+        "Drafting and revision",
+        "File and data analysis",
+        "Web research and projects"
+      ],
+      "limitations": [
+        "Tool access and usage allowances depend on subscription and settings.",
+        "A citation makes a claim easier to check; it does not guarantee the claim is correct."
+      ],
+      "website": "https://chatgpt.com/",
+      "pricingUrl": "https://openai.com/chatgpt/pricing/",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview",
+        "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+        "https://openai.com/chatgpt/pricing/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "AI",
+      "color": "#2D6A57",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports everyday drafting, brainstorming, and questions. Web search, file analysis, image tools, and other features have their own availability and usage limits; reaching a limit can require waiting for a reset."
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "category": "ai-assistants",
+      "tagline": "Work through documents, writing, and requirements.",
+      "description": "Claude is a general assistant for drafting, analyzing documents, and developing code or specifications. Project instructions and reference files can keep repeated work connected to a business brief. Consider it for revising an operating procedure, reviewing a long document, or turning an idea into implementation requirements. Check the result against the original material: polished prose does not establish that every condition, exception, or factual detail has survived a rewrite.",
+      "bestFor": [
+        "Document-heavy writing and revision",
+        "Developing a requirements brief"
+      ],
+      "notFor": [
+        "Assuming every account has identical integrations",
+        "Publishing an unverified factual summary"
+      ],
+      "features": [
+        "Document-based conversations",
+        "Project instructions and reference material",
+        "Writing and coding assistance"
+      ],
+      "limitations": [
+        "Account capabilities and usage allowances vary by plan.",
+        "Generated code and factual statements require independent verification."
+      ],
+      "website": "https://claude.ai/",
+      "pricingUrl": "https://claude.com/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://claude.com/product/overview",
+        "https://support.anthropic.com/en/articles/9517075-what-are-projects",
+        "https://claude.com/pricing",
+        "https://claude.com/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "CL",
+      "color": "#A96849",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports chat, writing, web search, and creating files or artifacts. Usage is limited and depends on the model, conversation length, and files; heavy work can reach a limit and require waiting."
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "category": "ai-assistants",
+      "tagline": "Find a research starting point with linked sources.",
+      "description": "Perplexity combines web research with conversational answers and citations. Use it to locate official documentation, explore unfamiliar terminology, or assemble an initial source list for a comparison. Open the original pages before using their claims, especially when prices or policies may have changed. Record the date and distinguish the vendor’s own statements from independent evidence. A cited answer is a research aid, not proof that every source or summary is reliable.",
+      "bestFor": [
+        "Finding primary sources for further review",
+        "Exploring an unfamiliar topic"
+      ],
+      "notFor": [
+        "Treating search summaries as original research",
+        "Skipping the linked policy or pricing page"
+      ],
+      "features": [
+        "Web answers with citations",
+        "Follow-up research questions",
+        "Research and file tools by plan"
+      ],
+      "limitations": [
+        "Sources can differ in quality and relevance to the question.",
+        "Advanced capabilities and usage allowances depend on subscription."
+      ],
+      "website": "https://www.perplexity.ai/",
+      "pricingUrl": "https://www.perplexity.ai/",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.perplexity.ai/hub"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "PX",
+      "color": "#5379B9",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "category": "design",
+      "tagline": "Build consistent graphics from reusable layouts.",
+      "description": "Canva provides a visual editor, templates, and media assets for everyday design. A seller can create listing graphics, product inserts, social posts, and downloadable guides without rebuilding every layout. Start with original product photographs and deliberate brand choices so the work remains distinctive. Save layouts that can be updated accurately later. Before printing or selling a design, check dimensions, image quality, export settings, and the permitted use of every included asset.",
+      "bestFor": [
+        "Product graphics and campaign assets",
+        "Reusable branded layouts"
+      ],
+      "notFor": [
+        "Assuming templates establish a unique brand",
+        "Ignoring licensing when reselling a design"
+      ],
+      "features": [
+        "Visual design editor",
+        "Templates and media library",
+        "Plan-dependent brand tools"
+      ],
+      "limitations": [
+        "Premium assets and advanced editing functions vary by plan.",
+        "Asset licensing and final print specifications need separate checks."
+      ],
+      "website": "https://www.canva.com/",
+      "pricingUrl": "https://www.canva.com/pricing/",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.canva.com/pricing/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "CA",
+      "color": "#387C80",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports creating and exporting everyday designs with the editor, free templates, and free media. Premium assets and advanced editing tools require payment; AI features have a limited allowance."
+    },
+    {
+      "id": "adobe-express",
+      "name": "Adobe Express",
+      "category": "design",
+      "tagline": "Create graphics, short videos, and branded content.",
+      "description": "Adobe Express combines templates with photo, video, and document editing. It is a candidate for a business already using Adobe assets or wanting a manageable editor for recurring marketing work. Test the exact production task, including export, before moving a full content process. Compare the free tools with the advanced editing and scheduling functions required. A stock library or AI feature still needs a final check for accuracy, suitability, and permitted commercial use.",
+      "bestFor": [
+        "Branded social and promotional materials",
+        "Businesses familiar with Adobe tools"
+      ],
+      "notFor": [
+        "Assuming every stock asset is included",
+        "Replacing specialist design work without checking output requirements"
+      ],
+      "features": [
+        "Static and video templates",
+        "Photo and video editing",
+        "Content scheduling by plan"
+      ],
+      "limitations": [
+        "Premium assets, storage, and editing capabilities vary by subscription.",
+        "Adobe notes that some stock assets can move from free to paid."
+      ],
+      "website": "https://www.adobe.com/express/",
+      "pricingUrl": "https://www.adobe.com/express/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://helpx.adobe.com/express/web/adobe-express-subscription/free.html"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "AE",
+      "color": "#75579D",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "category": "automation",
+      "tagline": "Connect common apps with clear triggers and actions.",
+      "description": "Zapier connects business applications through automated workflows. A form submission might create a CRM record and a follow-up task. Start with one handoff that currently needs copying and pasting, then verify fields, timing, and ownership. Test duplicate events and failed connections before enabling live execution. Compare the full workflow and likely task volume rather than choosing solely by the number of integrations advertised. Each connected action should have a clear business purpose.",
+      "bestFor": [
+        "Common app-to-app handoffs",
+        "Owners starting with a defined repeatable process"
+      ],
+      "notFor": [
+        "Automating an unclear process",
+        "Customer-facing actions without monitoring"
+      ],
+      "features": [
+        "Application integrations",
+        "Trigger-and-action workflows",
+        "Forms and structured tables"
+      ],
+      "limitations": [
+        "Free workflows have task and feature limits; advanced routing can need a paid plan.",
+        "Retries and frequent events can increase task consumption."
+      ],
+      "website": "https://zapier.com/",
+      "pricingUrl": "https://zapier.com/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://zapier.com/pricing",
+        "https://help.zapier.com/hc/en-us/articles/16051471305357-How-to-select-your-Zapier-plan"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "ZA",
+      "color": "#2D6A57",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports two-step automations: one trigger and one action, with 100 tasks per month. Multi-step workflows, premium apps, and webhooks require paid access. Connected services may charge separately."
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "category": "automation",
+      "tagline": "See branching workflows on a visual canvas.",
+      "description": "Make connects applications and transforms data between steps on a visual canvas. Filters and branches can make a process with multiple destinations easier to inspect. A seller might use it to organize content inputs, route order information, or maintain operational records. Test examples with missing fields, duplicate events, and disconnected accounts. The workflow needs an explicit response to imperfect inputs and an owner who can inspect a failed run.",
+      "bestFor": [
+        "Branching workflows and data transformation",
+        "Owners comfortable inspecting individual steps"
+      ],
+      "notFor": [
+        "Expecting complex automations to configure themselves",
+        "Important workflows without failure alerts"
+      ],
+      "features": [
+        "Visual workflow builder",
+        "Routers and filters",
+        "Execution monitoring"
+      ],
+      "limitations": [
+        "Credits, scheduling intervals, and active scenarios vary by plan.",
+        "Connected applications have their own permissions, rate limits, and costs."
+      ],
+      "website": "https://www.make.com/",
+      "pricingUrl": "https://www.make.com/en/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.make.com/en/pricing"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "MK",
+      "color": "#A96849",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports visual automations with routers and filters, up to 1,000 credits per month, and a 15-minute minimum scheduled interval. Each workflow can consume multiple credits; connected apps may have separate charges."
+    },
+    {
+      "id": "pabbly",
+      "name": "Pabbly Connect",
+      "category": "automation",
+      "tagline": "Build handoffs with scheduling, filters, and routing.",
+      "description": "Pabbly Connect offers a workflow builder with integrations, scheduling, delays, routing, and API modules. Compare it for a known process whose required actions are supported. Sketch the complete route and test custom fields or attachments rather than assuming every listed integration covers every use case. Review current task definitions against expected usage. A promotional price matters less than whether the actual workflow can run reliably and be repaired when an input changes.",
+      "bestFor": [
+        "Workflows across supported applications",
+        "Comparing costs for a defined automation"
+      ],
+      "notFor": [
+        "Buying only from a promotional headline",
+        "Assuming an integration exposes every app feature"
+      ],
+      "features": [
+        "Multistep workflows",
+        "Scheduling, delays, and routers",
+        "API and data-processing modules"
+      ],
+      "limitations": [
+        "Verify the precise trigger and action available for each application.",
+        "Plan offers and task accounting need a current review before purchase."
+      ],
+      "website": "https://www.pabbly.com/connect/",
+      "pricingUrl": "https://www.pabbly.com/connect/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.pabbly.com/connect/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "PC",
+      "color": "#5379B9",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "mailerlite",
+      "name": "MailerLite",
+      "category": "email",
+      "tagline": "Build an opted-in list and practical follow-up.",
+      "description": "MailerLite combines campaigns, forms, landing pages, and automation. Its Shopify integration supports customer and product data, but the precise trigger matters. A first-time abandoned checkout is different from a repeat-customer follow-up. Map the journey before choosing the platform and test which contacts qualify. Compare current integration requirements and actual subscriber costs rather than treating every ecommerce workflow as interchangeable. The simplest useful setup may be a welcome sequence and a consistent newsletter.",
+      "bestFor": [
+        "Newsletters and straightforward follow-up",
+        "Small stores combining forms with campaigns"
+      ],
+      "notFor": [
+        "Importing buyers without marketing permission",
+        "Assuming every checkout qualifies for automation"
+      ],
+      "features": [
+        "Email campaigns and landing pages",
+        "Signup forms and automation",
+        "Shopify customer and product data"
+      ],
+      "limitations": [
+        "Current Shopify documentation limits abandoned-checkout workflows to returning customers.",
+        "Ecommerce automations require eligible contacts and marketing consent."
+      ],
+      "website": "https://www.mailerlite.com/",
+      "pricingUrl": "https://www.mailerlite.com/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.mailerlite.com/help/how-to-set-up-the-mailerlite-integration-for-shopify",
+        "https://www.mailerlite.com/help/how-to-create-an-abandoned-cart-email-automation",
+        "https://www.mailerlite.com/pricing",
+        "https://www.mailerlite.com/free-plan",
+        "https://www.mailerlite.com/help/plan-and-billing"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "ML",
+      "color": "#387C80",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free includes email campaigns, signup forms, and limited automations for up to 250 active subscribers and 2,500 emails per month. Sending stops when the free subscriber limit is exceeded. Paid-feature trials are separate."
+    },
+    {
+      "id": "flodesk",
+      "name": "Flodesk",
+      "category": "email",
+      "tagline": "Create visual emails and subscriber experiences.",
+      "description": "Flodesk combines design-oriented email tools with forms, landing pages, and workflows. It can suit a brand that wants consistent presentation without a separate design process for every send. Compare current plans using actual active-subscriber counts and needed automations. Older universal flat-rate descriptions are no longer a reliable buying guide. Free list-building tools and paid email capabilities serve different purposes, so distinguish collecting subscribers from regularly sending campaigns.",
+      "bestFor": [
+        "Visual brands publishing email campaigns",
+        "Creators building signup experiences"
+      ],
+      "notFor": [
+        "Assuming legacy flat-rate pricing applies",
+        "Expecting free forms to include ongoing email sending"
+      ],
+      "features": [
+        "Email templates and segmentation",
+        "Forms and landing pages",
+        "Workflow options by plan"
+      ],
+      "limitations": [
+        "Current paid pricing scales with active subscriber count.",
+        "Ongoing email sending and advanced workflows need the appropriate subscription."
+      ],
+      "website": "https://flodesk.com/",
+      "pricingUrl": "https://flodesk.com/pricing",
+      "pricingSummary": "See current plans; free list-building tools do not include ongoing email sending.",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://flodesk.com/pricing",
+        "https://flodesk.com/ai-information"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "FL",
+      "color": "#75579D",
+      "freeWorkflowEligible": false,
+      "freePlanNote": "Free is for list building only: forms, landing pages, and link-in-bio pages. Ongoing email sending and workflow automations require a paid plan. A temporary trial of paid features does not make it a free email workflow."
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "category": "productivity",
+      "tagline": "Keep procedures, plans, and reference material together.",
+      "description": "Notion provides a flexible workspace for documents, wikis, and project information. A business can organize operating procedures, product notes, content plans, and shared references. Establish a clear home for each information type before adding elaborate templates. The best system can be updated during ordinary work. Assign owners and review important pages regularly. A polished dashboard has little value when its instructions, links, and tasks are no longer accurate.",
+      "bestFor": [
+        "Business procedures and shared references",
+        "Planning content and projects"
+      ],
+      "notFor": [
+        "Dashboards without a maintenance routine",
+        "Replacing a specialized system without checking requirements"
+      ],
+      "features": [
+        "Documents and wiki pages",
+        "Project organization",
+        "Shared workspace collaboration"
+      ],
+      "limitations": [
+        "Flexible structures need consistent naming and ownership.",
+        "Permissions, history, and advanced capabilities vary by subscription."
+      ],
+      "website": "https://www.notion.com/",
+      "pricingUrl": "https://www.notion.com/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.notion.com/product/docs",
+        "https://www.notion.com/pricing",
+        "https://www.notion.com/help/understanding-block-usage"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "NO",
+      "color": "#2D6A57",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports personal notes, task databases, and unlimited pages and blocks in a one-member workspace. Two or more members introduce a block limit; uploads are limited to 5 MB per file. Notion AI access is a trial."
+    },
+    {
+      "id": "trello",
+      "name": "Trello",
+      "category": "productivity",
+      "tagline": "Make tasks visible with boards, lists, and cards.",
+      "description": "Trello organizes work into boards, lists, and cards. It can track launches, recurring content, or custom-order progress without designing a detailed database. Tie lists to meaningful stages and use checklists for repeatable tasks. Add automation after the board is understandable. Review and archive older work so it does not look like an active commitment. Clear owners and due dates help when someone else depends on a card moving forward.",
+      "bestFor": [
+        "Visual task and content boards",
+        "Simple repeatable team workflows"
+      ],
+      "notFor": [
+        "Complex relational reporting requirements",
+        "Boards with no agreed meaning for each stage"
+      ],
+      "features": [
+        "Boards, lists, and cards",
+        "Checklists and due dates",
+        "Rule-based board automation"
+      ],
+      "limitations": [
+        "Views and automation allowances vary by plan.",
+        "Large boards need archiving and consistent card ownership."
+      ],
+      "website": "https://trello.com/",
+      "pricingUrl": "https://trello.com/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://trello.com/guide/trello-101",
+        "https://trello.com/en/pricing"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "TR",
+      "color": "#A96849",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports visual task boards with unlimited cards, up to 10 boards and 10 collaborators per workspace, and 250 automation command runs per month. Advanced views and larger file attachments require paid plans."
+    },
+    {
+      "id": "airtable",
+      "name": "Airtable",
+      "category": "crm",
+      "tagline": "Structure records around the business process.",
+      "description": "Airtable combines relational records with interfaces and automation. It can support a tailored CRM, product tracker, or content operation when the business can clearly describe its information. Start with consistent fields and relationships before adding automated actions. Flexibility creates responsibility: someone must manage permissions, record quality, and changes to the process. Choose it when a custom structure is worth that ongoing work rather than simply because a spreadsheet has become crowded.",
+      "bestFor": [
+        "Custom operational records",
+        "Lightweight CRM and related project information"
+      ],
+      "notFor": [
+        "Expecting a fully configured sales process immediately",
+        "Unstructured records without field definitions"
+      ],
+      "features": [
+        "Relational tables and views",
+        "Custom interfaces and app building",
+        "Connected workflow automation"
+      ],
+      "limitations": [
+        "Plan limits affect records, permissions, and automations.",
+        "Custom systems need clear data conventions and maintenance."
+      ],
+      "website": "https://www.airtable.com/",
+      "pricingUrl": "https://airtable.com/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Advanced",
+      "audiences": [
+        "services",
+        "local",
+        "ecommerce",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.airtable.com/platform",
+        "https://airtable.com/pricing",
+        "https://support.airtable.com/articles/2277136852-airtable-plans-overview"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "AT",
+      "color": "#5379B9",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports a small contact or project database with 1,000 records per base, 1 GB of attachments per base, and up to five editors or creators. Automation and API quotas apply; the initial Team trial includes extra features."
+    },
+    {
+      "id": "erank",
+      "name": "eRank",
+      "category": "seo",
+      "tagline": "Explore Etsy keywords, listings, and trends.",
+      "description": "eRank provides Etsy-focused keyword research, listing insights, competitor observations, and trend tools. Use it to turn a broad idea into search language worth investigating. Compare suggestions with actual shop results and the words buyers use. Estimated competitor sales are not audited records, and keyword figures do not guarantee demand. Change a manageable group of listings and record outcomes so research produces learning rather than constant unmeasured rewriting.",
+      "bestFor": [
+        "Etsy keyword and listing research",
+        "Seasonal product-language planning"
+      ],
+      "notFor": [
+        "Treating estimates as verified competitor sales",
+        "Copying another shop instead of defining an original offer"
+      ],
+      "features": [
+        "Keyword and listing research",
+        "Trend and competitor tools",
+        "Shop health and seller calculators"
+      ],
+      "limitations": [
+        "Estimated data and keyword signals need interpretation.",
+        "Better keywords cannot guarantee ranking, conversion, or product demand."
+      ],
+      "website": "https://erank.com/",
+      "pricingUrl": "https://erank.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "etsy",
+        "ecommerce"
+      ],
+      "sourceUrls": [
+        "https://help.erank.com/features/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "ER",
+      "color": "#387C80",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "marmalead",
+      "name": "Marmalead",
+      "category": "seo",
+      "tagline": "Investigate Etsy search language and listing changes.",
+      "description": "Marmalead focuses on Etsy keyword research and listing analysis, including AI-assisted suggestions. It can give structure to a comparison of search language and possible listing improvements. Treat listing grades as prompts for investigation, not the final business goal. What matters is whether relevant shoppers understand the product and whether changes improve useful shop outcomes. Keep a record of adjustments and avoid rewriting every listing at once without a comparison period.",
+      "bestFor": [
+        "Refining Etsy titles and tags",
+        "Investigating product-specific search language"
+      ],
+      "notFor": [
+        "Optimizing solely for a third-party grade",
+        "Assuming suggested keywords prove demand"
+      ],
+      "features": [
+        "Etsy keyword research",
+        "Listing analysis and grades",
+        "AI-assisted title and tag ideas"
+      ],
+      "limitations": [
+        "Tool scores do not guarantee Etsy placement or sales.",
+        "Generated suggestions must remain accurate for the product and marketplace requirements."
+      ],
+      "website": "https://marmalead.com/",
+      "pricingUrl": "https://marmalead.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Easy",
+      "audiences": [
+        "etsy",
+        "ecommerce"
+      ],
+      "sourceUrls": [
+        "https://blog.marmalead.com/marmalead-feature-updates/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "MA",
+      "color": "#75579D",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "category": "crm",
+      "tagline": "Keep customer records and follow-up connected.",
+      "description": "HubSpot combines a CRM foundation with marketing, sales, and service tools. Contact records, deals, and tasks can preserve context around an inquiry. Define the stages and fields a team actually needs, then test them on a small record set. Compare the free foundation with specific paid requirements instead of activating every module. A broader suite helps only when records are accurate, permissions are appropriate, and each next action has clear ownership.",
+      "bestFor": [
+        "Organizing contacts and opportunities",
+        "Connecting marketing with sales follow-up"
+      ],
+      "notFor": [
+        "Adopting every available module at once",
+        "Customer records with no responsible owner"
+      ],
+      "features": [
+        "Contacts and deal records",
+        "Pipeline and task tracking",
+        "Reporting and connected business tools"
+      ],
+      "limitations": [
+        "Premium capabilities, seats, and limits vary by product and plan.",
+        "A reliable pipeline requires regular updates and defined stages."
+      ],
+      "website": "https://www.hubspot.com/",
+      "pricingUrl": "https://www.hubspot.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Moderate",
+      "audiences": [
+        "services",
+        "local",
+        "ecommerce",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.hubspot.com/products/crm"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "HU",
+      "color": "#2D6A57",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "pipedrive",
+      "name": "Pipedrive",
+      "category": "crm",
+      "tagline": "Make the next action on each opportunity visible.",
+      "description": "Pipedrive centers on a visual sales pipeline, customer activity, and follow-up. It can suit services businesses managing quotes and opportunities. Build stages around real decision points, link every open opportunity to a next action, and review stale records regularly. Evaluate email, automation, reports, and add-ons together. A clear pipeline that the team maintains is more useful than a larger system with impressive forecasts based on outdated information.",
+      "bestFor": [
+        "Quotes and customer follow-up",
+        "Teams wanting a visible sales process"
+      ],
+      "notFor": [
+        "Businesses needing only a mailing list",
+        "Treating forecasts as confirmed cash"
+      ],
+      "features": [
+        "Customizable sales pipelines",
+        "Contact and activity records",
+        "Reporting and automation by plan"
+      ],
+      "limitations": [
+        "Advanced functions and add-ons differ by subscription.",
+        "Forecasts depend on realistic assumptions and maintained records."
+      ],
+      "website": "https://www.pipedrive.com/",
+      "pricingUrl": "https://www.pipedrive.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "services",
+        "local",
+        "ecommerce",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.pipedrive.com/en/features/pipeline-management",
+        "https://support.pipedrive.com/en/article/what-features-do-the-pipedrive-plans-have"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "PD",
+      "color": "#A96849",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "semrush",
+      "name": "Semrush",
+      "category": "seo",
+      "tagline": "Investigate search demand and website issues.",
+      "description": "Semrush offers research and monitoring for search, competitors, technical website issues, and related marketing work. It helps when the business has a clear question and someone can act on the findings. Begin with a narrow keyword or crawlability task rather than every toolkit. Treat traffic and keyword metrics as research estimates. Validate changes against actual analytics and customer behavior instead of treating a movement in rankings as proof of business value.",
+      "bestFor": [
+        "Search-led content strategies",
+        "Teams acting on technical SEO findings"
+      ],
+      "notFor": [
+        "Large subscriptions without implementation capacity",
+        "Treating estimates as verified website analytics"
+      ],
+      "features": [
+        "Keyword and competitor research",
+        "Technical site audits",
+        "Rank and backlink monitoring"
+      ],
+      "limitations": [
+        "Toolkits and reporting allowances differ by subscription.",
+        "Research metrics and rankings alone do not establish revenue potential."
+      ],
+      "website": "https://www.semrush.com/",
+      "pricingUrl": "https://www.semrush.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Advanced",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.semrush.com/kb/806-seo-toolkit",
+        "https://www.semrush.com/kb/244-semrush-reports-tools"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "SE",
+      "color": "#5379B9",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "ubersuggest",
+      "name": "Ubersuggest",
+      "category": "seo",
+      "tagline": "Explore keywords and practical website improvements.",
+      "description": "Ubersuggest provides keyword ideas, competitor observations, rank tracking, and website audits. Start with an important customer question or a page that needs improvement. Use the research to form a testable content or technical change, then examine the outcome with actual site data. Compare usage limits with the number of projects and queries required. Estimated opportunity should guide investigation rather than become a promise of future traffic or income.",
+      "bestFor": [
+        "Learning a repeatable SEO process",
+        "Investigating topics and site issues"
+      ],
+      "notFor": [
+        "Treating traffic predictions as assured income",
+        "Publishing only from automated keyword suggestions"
+      ],
+      "features": [
+        "Keyword and content-gap research",
+        "Competitor and backlink exploration",
+        "Audits and rank tracking"
+      ],
+      "limitations": [
+        "Query, project, and reporting allowances depend on plan.",
+        "Metrics need context and do not replace actual conversion results."
+      ],
+      "website": "https://neilpatel.com/ubersuggest/",
+      "pricingUrl": "https://neilpatel.com/ubersuggest/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://neilpatel.com/ubersuggest/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "UB",
+      "color": "#387C80",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "calendly",
+      "name": "Calendly",
+      "category": "scheduling",
+      "tagline": "Offer appointments within your actual availability.",
+      "description": "Calendly uses booking links and calendar connections to simplify appointment selection. Define availability, buffers, location, and intake questions before sharing a page. Test from the invitee’s perspective and verify conflict handling. Several meeting types, paid appointments, and team routing can require different subscriptions. Compare the complete booking journey rather than assuming the free option covers every step, and make cancellation or rescheduling instructions easy for clients to find.",
+      "bestFor": [
+        "One-to-one booking links",
+        "Reducing repetitive appointment coordination"
+      ],
+      "notFor": [
+        "Businesses with no appointment offering",
+        "Expecting advanced workflows in a free account"
+      ],
+      "features": [
+        "Booking pages and calendar connections",
+        "Availability and meeting-type settings",
+        "Reminders and payment integrations by plan"
+      ],
+      "limitations": [
+        "The free tier limits event types and calendar connections.",
+        "Team routing, payments, and additional automation depend on plan."
+      ],
+      "website": "https://calendly.com/",
+      "pricingUrl": "https://calendly.com/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "services",
+        "local",
+        "creators",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://calendly.com/pricing",
+        "https://calendly.com/help/choose-the-right-calendly-plan-for-your-team"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "CD",
+      "color": "#75579D",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports unlimited one-to-one bookings for one event type connected to one calendar, with a booking page and confirmation emails. Multiple event types and more advanced scheduling workflows require paid plans."
+    },
+    {
+      "id": "acuity",
+      "name": "Acuity Scheduling",
+      "category": "scheduling",
+      "tagline": "Manage appointments, intake, and payment steps.",
+      "description": "Acuity Scheduling provides online booking and appointment-management tools for services. Consider it when booking includes intake questions, paid sessions, classes, or several calendars. Map the experience before and after booking, including cancellation and rescheduling. Test the full route with a sample appointment. Payment processing is a separate part of setup, so confirm supported processors, relevant fees, and what happens when a payment fails before offering paid booking.",
+      "bestFor": [
+        "Appointment-based services",
+        "Booking with intake and payment requirements"
+      ],
+      "notFor": [
+        "Only needing an occasional basic meeting link",
+        "Assuming scheduling replaces all client-management tasks"
+      ],
+      "features": [
+        "Online booking and availability controls",
+        "Client and class scheduling",
+        "Payment-processor connections"
+      ],
+      "limitations": [
+        "Calendar allowances and features vary by plan.",
+        "Payment processing requires third-party setup and its own terms."
+      ],
+      "website": "https://acuityscheduling.com/",
+      "pricingUrl": "https://acuityscheduling.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "services",
+        "local",
+        "creators",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://acuityscheduling.com/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "AQ",
+      "color": "#2D6A57",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "tidio",
+      "name": "Tidio",
+      "category": "customer-service",
+      "tagline": "Answer repeat questions and route support exceptions.",
+      "description": "Tidio combines live chat, a support inbox, scripted Flows, and the Lyro AI assistant. Evaluate it around a bounded set of documented questions, such as shipping policies. Prepare reliable help content and specify what happens when an answer is missing. Distinguish a scripted path from an AI reply during testing. Automated support still needs monitoring and a practical route for situations it cannot resolve rather than repeating an unhelpful answer.",
+      "bestFor": [
+        "Stores with repeat website questions",
+        "Small teams organizing chat and email"
+      ],
+      "notFor": [
+        "Businesses without reliable help content",
+        "Automated promises beyond documented policies"
+      ],
+      "features": [
+        "Live website chat",
+        "Rule-based messaging Flows",
+        "AI assistance and shared inbox"
+      ],
+      "limitations": [
+        "AI answer quality depends on supplied knowledge and configuration.",
+        "Conversation allowances differ by product and plan."
+      ],
+      "website": "https://www.tidio.com/",
+      "pricingUrl": "https://www.tidio.com/pricing/",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.tidio.com/faq/",
+        "https://www.tidio.com/pricing/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "TI",
+      "color": "#A96849",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports basic human-operated live chat with 50 billable conversations per month. The 50 free Lyro AI conversations are a one-time allowance, not a monthly renewal; ongoing AI support requires a paid allowance."
+    },
+    {
+      "id": "intercom",
+      "name": "Intercom",
+      "category": "customer-service",
+      "tagline": "Coordinate support automation and human follow-through.",
+      "description": "Intercom combines support tools with Fin AI Agent and a team inbox. Consider it when support volume and a maintained knowledge base justify a structured system. Define the topics automation may handle, escalation rules, and responsibility for unresolved conversations. Examine resolution labels in context rather than assuming they prove customer satisfaction. Evaluate the complete workflow and pricing model with realistic conversation volumes, including the cases that require human follow-up.",
+      "bestFor": [
+        "Established support teams and workloads",
+        "Businesses maintaining structured help information"
+      ],
+      "notFor": [
+        "A large support stack for occasional questions",
+        "Equating an automated resolution label with satisfaction"
+      ],
+      "features": [
+        "AI-assisted customer conversations",
+        "Shared support inbox",
+        "Pending, resolved, and handoff views"
+      ],
+      "limitations": [
+        "Escalation rules and help content need active management.",
+        "Product, seat, and usage charges should be evaluated together."
+      ],
+      "website": "https://www.intercom.com/",
+      "pricingUrl": "https://www.intercom.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Advanced",
+      "audiences": [
+        "ecommerce",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.intercom.com/help/en/articles/7860256-view-fin-ai-agent-s-conversations-from-the-inbox"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "IN",
+      "color": "#5379B9",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "birdeye",
+      "name": "Birdeye",
+      "category": "reviews",
+      "tagline": "Coordinate review activity across local locations.",
+      "description": "Birdeye offers tools for collecting, organizing, and responding to reviews across business locations. Consider it when staff need a shared feedback view instead of checking each platform separately. Connect requests to a consistent service process and assign ownership for sensitive replies. Automated drafts can help routine work, but the business still owns the facts and tone. Compare location coverage, permissions, and reporting with actual operational needs before selecting a package.",
+      "bestFor": [
+        "Local teams managing several review channels",
+        "Coordinating reputation work across locations"
+      ],
+      "notFor": [
+        "Expecting software to repair poor service",
+        "Selective requests designed to hide negative experiences"
+      ],
+      "features": [
+        "Central review feed and filters",
+        "Request and response tools",
+        "Location and reputation reporting"
+      ],
+      "limitations": [
+        "Platform coverage and responding capabilities differ by review source.",
+        "Location counts and additional products influence the appropriate plan."
+      ],
+      "website": "https://birdeye.com/",
+      "pricingUrl": "https://birdeye.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "local",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://support.birdeye.com/en/articles/12654750-all-about-birdeye-reviews"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "BI",
+      "color": "#387C80",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "nicejob",
+      "name": "NiceJob",
+      "category": "reviews",
+      "tagline": "Request feedback after real work is completed.",
+      "description": "NiceJob focuses on review requests, referrals, and related reputation campaigns. It can suit local services wanting consistent follow-up after completed work. The useful integration identifies the right customer and completion event accurately. Set reasonable timing and frequency, and give staff a way to handle exceptions. Review quality begins with genuine service experiences. Check which campaign types the plan includes before building a broader customer follow-up process.",
+      "bestFor": [
+        "Local services requesting feedback after jobs",
+        "Businesses coordinating review and referral campaigns"
+      ],
+      "notFor": [
+        "Buying review volume instead of improving service",
+        "Requests without a clear completion trigger"
+      ],
+      "features": [
+        "Automated review-request campaigns",
+        "Referral and repeat-business options by plan",
+        "Supported business-app connections"
+      ],
+      "limitations": [
+        "Campaign availability depends on subscription.",
+        "Data quality and trigger configuration determine who receives each request."
+      ],
+      "website": "https://nicejob.com/",
+      "pricingUrl": "https://nicejob.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Easy",
+      "audiences": [
+        "local",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://help.nicejob.com/en/articles/3133773-what-is-a-nicejob-campaign"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "NJ",
+      "color": "#75579D",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "buffer",
+      "name": "Buffer",
+      "category": "social-media",
+      "tagline": "Organize publishing without constant app switching.",
+      "description": "Buffer helps plan and schedule posts, organize ideas, and review social results. It can help an owner batch original content and maintain a consistent rhythm. Begin with a few channels where the audience is relevant. Check the final format for each network before scheduling. A queue reduces repetitive publishing work but does not determine what customers find useful. Review results and adjust the next content batch rather than simply filling every available slot.",
+      "bestFor": [
+        "Solo owners batching social content",
+        "Small teams maintaining publishing calendars"
+      ],
+      "notFor": [
+        "Posting identical assets everywhere without format checks",
+        "Expecting scheduling software to create demand"
+      ],
+      "features": [
+        "Post planning and publishing queues",
+        "Idea organization and drafting tools",
+        "Channel insights and analytics by plan"
+      ],
+      "limitations": [
+        "Free and paid subscriptions have different channel and queue allowances.",
+        "Network rules and supported post types can limit automatic publishing."
+      ],
+      "website": "https://buffer.com/",
+      "pricingUrl": "https://buffer.com/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://buffer.com/pricing"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "BU",
+      "color": "#2D6A57",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports scheduling for up to three channels, with 10 queued posts per channel at one time. Refill the queue as posts publish; this is not a 10-post monthly cap. Publishing options depend on the social network."
+    },
+    {
+      "id": "metricool",
+      "name": "Metricool",
+      "category": "social-media",
+      "tagline": "Plan content and inspect channel performance.",
+      "description": "Metricool combines a publishing planner with analytics and account management. Consider it when a business wants activity and results together or manages several brands. Decide which metrics will influence a decision before building reports. Compare supported networks, retained history, integrations, and export requirements against the selected plan. Reporting earns its place when it changes the next campaign rather than merely providing more charts to review.",
+      "bestFor": [
+        "Scheduling with channel analytics",
+        "Teams managing multiple brands or accounts"
+      ],
+      "notFor": [
+        "Assuming every integration is on the free plan",
+        "Reporting activity without a business question"
+      ],
+      "features": [
+        "Social content planner",
+        "Channel and competitor analytics",
+        "Reports and integrations by plan"
+      ],
+      "limitations": [
+        "The free tier limits brands, monthly posts, and analytics history.",
+        "Report exports and several integrations require paid plans."
+      ],
+      "website": "https://metricool.com/",
+      "pricingUrl": "https://metricool.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://help.metricool.com/main-differences-between-free-and-paid-plans-bl0v9"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "ME",
+      "color": "#A96849",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "smith-ai",
+      "name": "Smith.ai",
+      "category": "phone-systems",
+      "tagline": "Handle calls with defined qualification and routing.",
+      "description": "Smith.ai offers AI receptionist services for answering calls, qualifying inquiries, scheduling, and routing. Consider it for a service business missing useful calls when nobody can answer. Document the questions the system may ask and commitments it may make. Test common and ambiguous calls against those instructions. Confirm call allowances, overages, and escalation coverage. Automated reception should leave a clear record and a dependable route for situations needing human judgment.",
+      "bestFor": [
+        "Local services with missed inbound inquiries",
+        "Defined booking and qualification processes"
+      ],
+      "notFor": [
+        "Undefined pricing or service rules",
+        "Assuming every caller fits an automated script"
+      ],
+      "features": [
+        "Inbound answering and call summaries",
+        "Qualification and routing",
+        "Appointment-scheduling integrations"
+      ],
+      "limitations": [
+        "Call allowances and paid overages need volume planning.",
+        "Complex situations require explicit escalation rules and supported coverage."
+      ],
+      "website": "https://smith.ai/",
+      "pricingUrl": "https://smith.ai/pricing/ai-receptionist",
+      "pricingSummary": "See current plans; a free call allowance is listed with paid overages.",
+      "freePlan": true,
+      "setup": "Moderate",
+      "audiences": [
+        "local",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://smith.ai/pricing/ai-receptionist"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "SM",
+      "color": "#5379B9",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "dialpad",
+      "name": "Dialpad",
+      "category": "phone-systems",
+      "tagline": "Connect business calling with conversation records.",
+      "description": "Dialpad provides business voice, messaging, and meetings, including transcription and summary functions. Consider it when a team needs a shared phone system and conversation context. Map numbers, routing, staff access, and integrations before comparing plans. AI notes can help with recall, but important details need checking. Decide how records will be retained and connected to the customer process so the information stays useful after the call ends.",
+      "bestFor": [
+        "Shared business calling for teams",
+        "Connecting call activity with customer systems"
+      ],
+      "notFor": [
+        "Occasional personal calls only",
+        "Treating automated transcripts as error-free records"
+      ],
+      "features": [
+        "Business voice and messaging",
+        "Call transcription and AI summaries",
+        "Routing and business integrations"
+      ],
+      "limitations": [
+        "Product bundles, integrations, and regional calling capabilities vary.",
+        "Recording, retention, and access settings need deliberate configuration."
+      ],
+      "website": "https://www.dialpad.com/",
+      "pricingUrl": "https://www.dialpad.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "local",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.dialpad.com/business-communications/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "DI",
+      "color": "#387C80",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "ifttt",
+      "name": "IFTTT",
+      "category": "automation",
+      "tagline": "Connect everyday services through reusable Applets.",
+      "description": "IFTTT connects triggers and actions using Applets. It can support notifications and modest workflows involving online services or supported devices. Define how quickly an event must be handled before choosing it. A task that can wait for a periodic check differs from an immediate order update. Review the available actions and expected credit use against that requirement, and keep independent monitoring where a missed event would affect a customer.",
+      "bestFor": [
+        "Simple service and device connections",
+        "Personal productivity notifications"
+      ],
+      "notFor": [
+        "Assuming every trigger runs instantly",
+        "Critical workflows without independent monitoring"
+      ],
+      "features": [
+        "Trigger-and-action Applets",
+        "Service and device connections",
+        "Plan-based credits and execution speeds"
+      ],
+      "limitations": [
+        "Polling speed varies by subscription and service.",
+        "Applets can pause when monthly credits are exhausted."
+      ],
+      "website": "https://ifttt.com/",
+      "pricingUrl": "https://ifttt.com/plans",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://help.ifttt.com/hc/en-us/articles/360053706813-IFTTT-Plans-at-a-glance"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "IF",
+      "color": "#75579D",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "category": "automation",
+      "tagline": "Combine visual workflows with code and hosting control.",
+      "description": "n8n supports visual workflows, API connections, custom code, and AI-related steps. Managed cloud and self-hosted options make it a candidate when technical control matters. Someone must understand credentials, data handling, retries, and workflow changes. Choose it for a defined need and available technical capacity. Self-hosting changes how the system is operated; it does not remove infrastructure, updates, backups, or the work of investigating a failed execution.",
+      "bestFor": [
+        "Technical teams connecting APIs and systems",
+        "Workflows requiring deployment control"
+      ],
+      "notFor": [
+        "Expecting maintenance-free self-hosting",
+        "Processes with no technical owner"
+      ],
+      "features": [
+        "Visual workflows and code steps",
+        "Cloud and self-hosted options",
+        "Execution inspection and approval steps"
+      ],
+      "limitations": [
+        "Self-hosted deployments require security, backups, and updates.",
+        "Some collaboration and governance features depend on edition or plan."
+      ],
+      "website": "https://n8n.io/",
+      "pricingUrl": "https://n8n.io/pricing/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Advanced",
+      "audiences": [
+        "ecommerce",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://n8n.io/features/",
+        "https://n8n.io/pricing/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "N8",
+      "color": "#2D6A57",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "kit",
+      "name": "Kit",
+      "category": "email",
+      "tagline": "Connect creator publishing with subscriber journeys.",
+      "description": "Kit focuses on creators and audience-driven businesses, with forms, sequences, tagging, and digital-product tools. It also supports Shopify-related automation, so product sellers should test their specific journey rather than assume it cannot serve a shop. Consider it when educational content or a newsletter is central to the business. Compare publishing workflow, subscriber management, automation requirements, and list-size costs together. Popularity with another creator is not enough to establish fit for your own operating model.",
+      "bestFor": [
+        "Creator newsletters and digital products",
+        "Educational subscriber sequences"
+      ],
+      "notFor": [
+        "Choosing solely because another creator recommends it",
+        "Assuming all automations are in the entry plan"
+      ],
+      "features": [
+        "Forms and subscriber management",
+        "Email sequences and visual automation",
+        "Shopify checkout-related workflows"
+      ],
+      "limitations": [
+        "Capabilities and allowances depend on subscription.",
+        "Test purchase exits and timing before enabling customer recovery sequences."
+      ],
+      "website": "https://kit.com/",
+      "pricingUrl": "https://kit.com/pricing",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://help.kit.com/en/articles/2502562-kit-shopify",
+        "https://kit.com/",
+        "https://kit.com/pricing"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "KI",
+      "color": "#A96849",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports forms, landing pages, and unlimited email broadcasts for up to 10,000 subscribers. Kit branding remains; advanced sequences, automations, and integrations require a paid plan. Suitable for a basic newsletter."
+    },
+    {
+      "id": "beehiiv",
+      "name": "Beehiiv",
+      "category": "email",
+      "tagline": "Publish a newsletter-centered business.",
+      "description": "beehiiv combines newsletter publishing, a website presence, audience tools, and monetization options. Consider it when the publication is a core product rather than simply a marketing channel for a shop. Decide what readers will receive consistently and why they will return. Evaluate the publishing and subscriber experience before relying on advertising or subscriptions as income. Access to a monetization feature does not create a willing audience or establish predictable revenue.",
+      "bestFor": [
+        "Newsletter-first publications",
+        "Creators publishing email and web content together"
+      ],
+      "notFor": [
+        "Expecting software to supply readers or sponsors",
+        "Choosing without testing a required store workflow"
+      ],
+      "features": [
+        "Newsletter editor and publishing",
+        "Website and audience tools",
+        "Monetization options by plan"
+      ],
+      "limitations": [
+        "Revenue depends on audience demand and execution.",
+        "Subscriber allowances and advanced features differ by subscription."
+      ],
+      "website": "https://www.beehiiv.com/",
+      "pricingUrl": "https://www.beehiiv.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Easy",
+      "audiences": [
+        "creators",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.beehiiv.com/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "BE",
+      "color": "#5379B9",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "activecampaign",
+      "name": "ActiveCampaign",
+      "category": "email",
+      "tagline": "Coordinate detailed customer marketing journeys.",
+      "description": "ActiveCampaign combines email, segmentation, and automation with customer and commerce integrations. Consider it when a business can define meaningful customer groups and relevant next actions. Begin with clean data and a few measurable journeys instead of a large branching diagram. Value comes from timely messages with a documented purpose. Review the selected plan and integration behavior before migrating contacts, and assign someone to maintain segments when the business process changes.",
+      "bestFor": [
+        "Established segmentation needs",
+        "Teams managing several customer journeys"
+      ],
+      "notFor": [
+        "No capacity to maintain complex workflows",
+        "Using inconsistent records to drive customer messages"
+      ],
+      "features": [
+        "Email marketing automation",
+        "Behavior-based segmentation",
+        "CRM and ecommerce connections"
+      ],
+      "limitations": [
+        "Detailed journeys create additional testing and maintenance work.",
+        "Capabilities and integration behavior must match the selected plan."
+      ],
+      "website": "https://www.activecampaign.com/",
+      "pricingUrl": "https://www.activecampaign.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Advanced",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.activecampaign.com/platform"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "AC",
+      "color": "#387C80",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "podium",
+      "name": "Podium",
+      "category": "reviews",
+      "tagline": "Connect local conversations with review activity.",
+      "description": "Podium combines customer communication, lead handling, and review management for local businesses. Review tools include requests, reminders, and centralized feedback. Evaluate it when those tasks need connection to the customer journey rather than isolated software. Test a real inquiry and completed-service scenario. Make sure automated replies reflect actual services, availability, and policies. Assign a person to handle exceptions so customers are not left in an unhelpful loop.",
+      "bestFor": [
+        "Local inquiries and customer follow-up",
+        "Teams centralizing conversations and reviews"
+      ],
+      "notFor": [
+        "Only needing occasional review requests",
+        "AI responses without clear business boundaries"
+      ],
+      "features": [
+        "Customer conversation management",
+        "Review requests and reminders",
+        "AI-assisted responses and lead handling"
+      ],
+      "limitations": [
+        "Confirm the exact communication and AI features in the proposed plan.",
+        "Automation needs accurate service information and an exception process."
+      ],
+      "website": "https://www.podium.com/",
+      "pricingUrl": "https://www.podium.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "local",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.podium.com/product/reviews"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "PO",
+      "color": "#75579D",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "gatherup",
+      "name": "GatherUp",
+      "category": "reviews",
+      "tagline": "Connect honest feedback with reputation monitoring.",
+      "description": "GatherUp provides feedback requests, review monitoring, reporting, and response tools. It can help a local business understand recurring service issues as well as request public reviews. Decide how feedback reaches someone who can act on it, and keep requests consistent across customers. Compare messaging allowances and locations with expected volume. A reliable feedback loop is more useful than increasing a dashboard count, particularly when the same service problem appears repeatedly.",
+      "bestFor": [
+        "Local feedback and public-review management",
+        "Finding recurring service patterns"
+      ],
+      "notFor": [
+        "Collecting feedback without follow-up ownership",
+        "Suppressing honest reviews based on sentiment"
+      ],
+      "features": [
+        "Email and SMS feedback requests",
+        "Review monitoring and response tools",
+        "Surveys and reporting"
+      ],
+      "limitations": [
+        "Messaging allowances and location needs affect plan selection.",
+        "Monitoring does not replace resolving the underlying customer issue."
+      ],
+      "website": "https://gatherup.com/",
+      "pricingUrl": "https://gatherup.com/pricing/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "local",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://gatherup.com/pricing/",
+        "https://gatherup.com/review-sources/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "GU",
+      "color": "#2D6A57",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "gradeus",
+      "name": "Grade.us",
+      "category": "reviews",
+      "tagline": "Manage review programs across client locations.",
+      "description": "Grade.us offers reputation tools with agency-oriented reporting and white-label options. Consider it for several client locations rather than occasional requests for one shop. Clarify which branding, dashboard, and reporting capabilities are needed before choosing a plan. Keep requests transparent and based on real customer experiences. A branded interface changes presentation, but the operator remains responsible for permissions, customer data, campaign quality, and helping clients act on the feedback.",
+      "bestFor": [
+        "Agencies coordinating several locations",
+        "Teams needing branded reputation reports"
+      ],
+      "notFor": [
+        "Solo owners wanting the smallest setup",
+        "Branding used as a substitute for useful service"
+      ],
+      "features": [
+        "Multi-location review management",
+        "Review requests and reporting",
+        "White-label options by plan"
+      ],
+      "limitations": [
+        "Dashboard branding differs from basic white-label functions.",
+        "Evaluate location counts, branding requirements, and current plans together."
+      ],
+      "website": "https://www.grade.us/",
+      "pricingUrl": "https://www.grade.us/home/plans/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Advanced",
+      "audiences": [
+        "local",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.grade.us/home/review-management-software/",
+        "https://www.grade.us/home/plans/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "GD",
+      "color": "#A96849",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "zoho-crm",
+      "name": "Zoho CRM",
+      "category": "crm",
+      "tagline": "Track contacts, activities, and follow-up.",
+      "description": "Zoho CRM provides contact management, workflows, activity tracking, and sales reports within a wider software ecosystem. Compare the exact edition against user counts, records, and automation requirements. Begin with a consistent intake and follow-up process before introducing more modules. Additional Zoho applications are separate operating choices, so evaluate their configuration and cost independently. A useful CRM keeps the next action visible and makes it clear who owns the relationship.",
+      "bestFor": [
+        "Small teams organizing leads and follow-up",
+        "Businesses evaluating connected Zoho tools"
+      ],
+      "notFor": [
+        "Assuming every Zoho application is included",
+        "Complex rollout without record ownership"
+      ],
+      "features": [
+        "Contact and activity management",
+        "Reminders and workflows",
+        "Reports and mobile tools"
+      ],
+      "limitations": [
+        "Free and paid editions have different limits and capabilities.",
+        "Additional products can require separate subscriptions and configuration."
+      ],
+      "website": "https://www.zoho.com/crm/",
+      "pricingUrl": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Moderate",
+      "audiences": [
+        "services",
+        "local",
+        "ecommerce",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.zoho.com/en-us/crm/zohocrm-pricing.html"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "ZO",
+      "color": "#5379B9",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "monday-crm",
+      "name": "monday CRM",
+      "category": "crm",
+      "tagline": "Coordinate visual sales work and customer activity.",
+      "description": "monday CRM offers configurable contact, deal, communication, and reporting workflows. Consider it for a team that wants a visual view of sales responsibilities and related work. Define the steps that move an inquiry toward a decision and assign ownership. Review email synchronization, permissions, and reporting before migration. A flexible workspace still needs consistent fields and a process the team can maintain; extra columns are not a substitute for a clear next action.",
+      "bestFor": [
+        "Configurable team sales workflows",
+        "Customer communication connected with tasks"
+      ],
+      "notFor": [
+        "Owners needing only a contact list",
+        "Purchasing before checking user and plan requirements"
+      ],
+      "features": [
+        "Lead and deal tracking",
+        "Email and activity records",
+        "Dashboards and sales reporting"
+      ],
+      "limitations": [
+        "Capabilities and user requirements vary by subscription.",
+        "Customization creates complexity without agreed stages and field definitions."
+      ],
+      "website": "https://monday.com/crm",
+      "pricingUrl": "https://monday.com/crm",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "services",
+        "local",
+        "ecommerce",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://monday.com/crm/product-features"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "MO",
+      "color": "#387C80",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "category": "ai-assistants",
+      "tagline": "Research and create with Google’s AI assistant.",
+      "description": "Gemini supports multimodal conversations, research, and content creation. It is worth evaluating when a business already works in Google tools and wants help interpreting information or assembling a first draft. Start with a task that uses real source material, and check which connected services are available in the account. Verify conclusions about prices, policies, and products against original sources. Account type, region, and subscription can change the available experience.",
+      "bestFor": [
+        "Google-centered business workflows",
+        "Research and drafting from supplied context"
+      ],
+      "notFor": [
+        "Assuming generated facts are verified",
+        "Sharing sensitive information without reviewing account controls"
+      ],
+      "features": [
+        "Multimodal conversations",
+        "Research and creative tools",
+        "Document summarization and explanation"
+      ],
+      "limitations": [
+        "Features depend on account type, region, plan, and availability.",
+        "Generated answers can be inaccurate or omit relevant perspectives."
+      ],
+      "website": "https://gemini.google.com/",
+      "pricingUrl": "https://gemini.google/us/subscriptions/",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Easy",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://gemini.google/overview/",
+        "https://gemini.google/us/subscriptions/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "GE",
+      "color": "#75579D",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free with a Google Account supports everyday questions, drafting, and tools such as Canvas and image generation. Model access and tool allowances are lower than paid plans; feature availability varies."
+    },
+    {
+      "id": "omnisend",
+      "name": "Omnisend",
+      "category": "email",
+      "tagline": "Build store-focused email and SMS journeys.",
+      "description": "Omnisend focuses on ecommerce messaging and shopping-behavior automation. Its Shopify connection syncs customers, orders, and products. Evaluate one real journey, such as checkout recovery, and test who qualifies for each step. Review existing store messages before activating overlapping workflows. More automation is useful only when messages are accurate, appropriately timed, and sent to eligible contacts. Compare email and SMS requirements separately because they do not always have the same available customer data.",
+      "bestFor": [
+        "Ecommerce lifecycle marketing",
+        "Stores coordinating email and SMS around purchases"
+      ],
+      "notFor": [
+        "Expecting to identify anonymous visitors automatically",
+        "Enabling duplicate recovery messages"
+      ],
+      "features": [
+        "Shopify customer, product, and order sync",
+        "Cart and checkout workflows",
+        "Email and SMS campaigns"
+      ],
+      "limitations": [
+        "Recovery workflows require identifiable contacts; SMS has additional contact-data constraints.",
+        "Native store reminders need review to prevent duplicate messages."
+      ],
+      "website": "https://www.omnisend.com/",
+      "pricingUrl": "https://www.omnisend.com/pricing/",
+      "pricingSummary": "See current plans",
+      "freePlan": true,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://support.omnisend.com/en/articles/6659889-abandoned-cart-and-abandoned-checkout-automations",
+        "https://support.omnisend.com/en/articles/3175406-connect-your-shopify-store-to-omnisend",
+        "https://www.omnisend.com/pricing/",
+        "https://support.omnisend.com/en/articles/3533018-omnisend-pricing-plans-2026",
+        "https://www.omnisend.com/pricing-comparison/"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "OM",
+      "color": "#2D6A57",
+      "freeWorkflowEligible": true,
+      "freePlanNote": "Free supports basic email campaigns for up to 250 contacts and 500 emails per month. This is a small sending allowance, not 500 campaigns. SMS and some advanced automation features require paid plans."
+    },
+    {
+      "id": "getresponse",
+      "name": "GetResponse",
+      "category": "email",
+      "tagline": "Bring campaigns, landing pages, and automation together.",
+      "description": "GetResponse offers email, landing pages, autoresponders, and marketing automation in a broader campaign platform. Outline the route from signup to the next useful action before selecting features. For ecommerce, verify the precise store triggers and product data. For publishing businesses, distinguish content monetization needs from ordinary promotional email. A broad bundle earns its place when those parts work together for a defined process, rather than simply replacing several app icons.",
+      "bestFor": [
+        "Landing pages with email follow-up",
+        "Broader marketing automation workflows"
+      ],
+      "notFor": [
+        "Buying a large bundle without a defined process",
+        "Publishing unverified generated product claims"
+      ],
+      "features": [
+        "Email campaigns and autoresponders",
+        "Landing pages and forms",
+        "Behavioral automation"
+      ],
+      "limitations": [
+        "Features depend on product and subscription.",
+        "Consent, integration behavior, and generated campaign copy require review."
+      ],
+      "website": "https://www.getresponse.com/",
+      "pricingUrl": "https://www.getresponse.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators",
+        "services",
+        "local",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.getresponse.com/features"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "GE",
+      "color": "#A96849",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "category": "ecommerce",
+      "tagline": "Run a storefront on your own domain.",
+      "description": "Shopify provides a hosted store, checkout, product management, and connections to other business applications. Consider it when a seller wants a standalone storefront and has a plan to attract visitors. Adding a store alongside Etsy creates another channel and introduces additional work. Compare the complete stack: subscription, payments, apps, shipping processes, and upkeep. A working checkout does not create demand, and an extra application should solve a specific operating problem.",
+      "bestFor": [
+        "Independent storefronts",
+        "Sellers adding a channel alongside a marketplace"
+      ],
+      "notFor": [
+        "Expecting automatic marketplace-style discovery",
+        "Adding apps without reviewing combined costs"
+      ],
+      "features": [
+        "Hosted storefront and themes",
+        "Checkout and order management",
+        "Custom domains and app connections"
+      ],
+      "limitations": [
+        "Publishing a full online store requires an eligible paid subscription.",
+        "Payments, optional apps, and third-party services can add costs."
+      ],
+      "website": "https://www.shopify.com/",
+      "pricingUrl": "https://www.shopify.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": false,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators"
+      ],
+      "sourceUrls": [
+        "https://help.shopify.com/en/manual/online-store",
+        "https://help.shopify.com/en/manual/checkout-settings"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "SH",
+      "color": "#5379B9",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "etsy",
+      "name": "Etsy",
+      "category": "ecommerce",
+      "tagline": "Sell eligible products in a creative marketplace.",
+      "description": "Etsy offers marketplace shops, listing tools, and payments for eligible creative products. It can be a useful channel for a seller who understands its policies and customer expectations. Calculate margin after production, packaging, shipping, and marketplace charges. Participation means working within Etsy’s rules and presentation rather than controlling a standalone storefront. Some businesses use both. Each channel still requires accurate listings, relevant products, dependable fulfillment, and a way to evaluate profitability.",
+      "bestFor": [
+        "Eligible creative products and craft supplies",
+        "Sellers assessing marketplace and independent channels"
+      ],
+      "notFor": [
+        "Products outside marketplace eligibility",
+        "Assuming a listing guarantees profitable sales"
+      ],
+      "features": [
+        "Marketplace listings and shop pages",
+        "Order and payment tools",
+        "Seller resources and shop information"
+      ],
+      "limitations": [
+        "Listing, transaction, processing, and applicable advertising charges affect margins.",
+        "A setup charge may apply; product and communication policies matter."
+      ],
+      "website": "https://www.etsy.com/sell",
+      "pricingUrl": "https://www.etsy.com/legal/fees/",
+      "pricingSummary": "Fee-based marketplace; review current setup, listing, transaction, payment, and advertising charges.",
+      "freePlan": false,
+      "setup": "Moderate",
+      "audiences": [
+        "ecommerce",
+        "etsy",
+        "creators"
+      ],
+      "sourceUrls": [
+        "https://www.etsy.com/sell",
+        "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "ET",
+      "color": "#387C80",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "category": "video-audio",
+      "tagline": "Turn a checked script into presenter-led video.",
+      "description": "HeyGen provides AI presenter and video-translation tools. Consider it for a tutorial introduction, repeatable explanation, or localized version of material the business has rights to use. Start with a checked script, then review pronunciation, captions, timing, and visual delivery. Keep product demonstrations grounded in real screens or products. A generated presenter must not invent a testimonial or imply customer experience, testing, or endorsement that did not happen.",
+      "bestFor": [
+        "Scripted explainers and tutorial introductions",
+        "Authorized translated video"
+      ],
+      "notFor": [
+        "Invented testimonials or endorsements",
+        "Unconsented use of another person’s likeness"
+      ],
+      "features": [
+        "AI presenter videos",
+        "Script-led editing",
+        "Video translation and lip-sync tools"
+      ],
+      "limitations": [
+        "Language output, pronunciation, and visual details require review.",
+        "Check plan allowances and rights for the intended commercial use."
+      ],
+      "website": "https://www.heygen.com/",
+      "pricingUrl": "https://www.heygen.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "creators",
+        "ecommerce",
+        "etsy",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.heygen.com/translate",
+        "https://www.heygen.com/en-gb"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "HG",
+      "color": "#75579D",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "descript",
+      "name": "Descript",
+      "category": "video-audio",
+      "tagline": "Edit spoken video and audio through the transcript.",
+      "description": "Descript combines recording, transcription, and text-based editing for video and audio. It can fit screen tutorials, narrated demonstrations, and repurposing longer recordings. Begin with a clear recording and use transcript edits to assemble the story, then watch the complete result. Removing words can change meaning or create awkward cuts. Check sound, picture, captions, and product details before publishing a shortened clip or using it in a tutorial.",
+      "bestFor": [
+        "Recorded tutorials and narrated demonstrations",
+        "Repurposing longer recordings"
+      ],
+      "notFor": [
+        "Assuming transcript edits preserve every nuance",
+        "Publishing clips without watching the final cut"
+      ],
+      "features": [
+        "Recording and transcription",
+        "Text-based video and audio editing",
+        "Captions and clip creation"
+      ],
+      "limitations": [
+        "Transcription and automated edits can make mistakes.",
+        "Media allowances, export options, and AI features vary by subscription."
+      ],
+      "website": "https://www.descript.com/",
+      "pricingUrl": "https://www.descript.com/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "creators",
+        "ecommerce",
+        "etsy",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://www.descript.com/features"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "DE",
+      "color": "#2D6A57",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "category": "video-audio",
+      "tagline": "Create narration from scripts you have checked.",
+      "description": "ElevenLabs provides text-to-speech and audio-production tools. Consider it for voiceovers on original tutorials or audio versions of written material. Review the script first, then listen for pronunciation, emphasis, and unintended changes in meaning. Use authorized voices and verify commercial-use terms for the chosen plan. Synthetic narration must not misrepresent a real person’s endorsement or create the impression that a fictional customer experience actually happened.",
+      "bestFor": [
+        "Narration for original tutorials",
+        "Audio versions of business content"
+      ],
+      "notFor": [
+        "Unconsented voice imitation",
+        "Fabricated spoken testimonials"
+      ],
+      "features": [
+        "Text-to-speech generation",
+        "Voice and delivery controls",
+        "Audio-project editing and export"
+      ],
+      "limitations": [
+        "Voice access, generation allowances, and commercial terms depend on plan.",
+        "Pronunciation and spoken factual claims require a listening review."
+      ],
+      "website": "https://elevenlabs.io/",
+      "pricingUrl": "https://elevenlabs.io/",
+      "pricingSummary": "See current plans",
+      "freePlan": null,
+      "setup": "Moderate",
+      "audiences": [
+        "creators",
+        "ecommerce",
+        "etsy",
+        "services",
+        "teams"
+      ],
+      "sourceUrls": [
+        "https://elevenlabs.io/docs/overview/capabilities/text-to-speech",
+        "https://elevenlabs.io/docs/eleven-creative/audio-tools/voiceover-studio"
+      ],
+      "checkedAt": "2026-10-31",
+      "evidence": "Documentation reviewed",
+      "affiliateUrl": null,
+      "affiliateStatus": "unverified",
+      "icon": "EL",
+      "color": "#A96849",
+      "freeWorkflowEligible": null,
+      "freePlanNote": ""
+    }
+  ]
+}
