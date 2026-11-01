@@ -1,0 +1,775 @@
+{
+  "checkedAt": "2026-11-01",
+  "status": "All eight comparisons complete; schema/source/arithmetic validation passed; independent two-comparison peer review completed",
+  "method": "Official product, pricing, and billing sources; calculations are illustrative and independently checked. No hands-on tests.",
+  "comparisons": [
+    {
+      "id": "zapier-vs-make",
+      "sources": [
+        {
+          "title": "Zapier plans and feature gates",
+          "url": "https://zapier.com/pricing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free includes 100 tasks and two-step Zaps.",
+            "Professional includes multi-step Zaps, premium apps, and webhooks."
+          ]
+        },
+        {
+          "title": "Zapier pricing explanation",
+          "url": "https://zapier.com/blog/zapier-pricing/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Professional starts at 750 tasks/month for US$19.99/month billed annually."
+          ]
+        },
+        {
+          "title": "How Zapier measures task usage",
+          "url": "https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Successful actions count; triggers and polling do not.",
+            "Full replays can repeat billable actions.",
+            "AI, Agents, and MCP do not all share a one-task-per-action model."
+          ]
+        },
+        {
+          "title": "Make plans and included credits",
+          "url": "https://www.make.com/en/pricing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free includes 1,000 credits and a 15-minute scheduled interval.",
+            "The monthly pricing representation shows Core at US$12 for 10,000 credits."
+          ]
+        },
+        {
+          "title": "Make credit accounting",
+          "url": "https://help.make.com/credits",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Standard non-AI operations use one credit.",
+            "AI consumption depends on feature and connection type."
+          ]
+        },
+        {
+          "title": "Make operations and bundles",
+          "url": "https://help.make.com/operations",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Trigger checks use operations.",
+            "Downstream modules process each incoming bundle separately."
+          ]
+        },
+        {
+          "title": "Zapier pay-per-task billing",
+          "url": "https://help.zapier.com/hc/en-us/articles/15279018245901-How-pay-per-task-billing-works-in-Zapier",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Default overage behavior depends on account creation date and can be changed."
+          ]
+        },
+        {
+          "title": "Make extra-credit pricing",
+          "url": "https://help.make.com/extra-credits",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Additional credits have a 25% price premium."
+          ]
+        }
+      ],
+      "mathChecks": [
+        {
+          "expression": "200*3",
+          "result": 600
+        },
+        {
+          "expression": "200*(1+3)",
+          "result": 800
+        },
+        {
+          "expression": "30*24*4+200*3",
+          "result": 3480
+        },
+        {
+          "expression": "19.99*12",
+          "result": 239.88
+        }
+      ],
+      "uncertainties": [
+        "Make pricing cards were returned by the official-page search representation; the direct open parser omitted the dynamic cards. Its Free allowance and accounting were independently present in opened official documentation. No annual Core price is asserted."
+      ],
+      "reviewedAgainst": [
+        "Rechecked official task-accounting rules, including the October 28, 2026 update, and the current Free and Professional allowances.",
+        "Rechecked Make credit definitions, trigger operations, the monthly Core pricing representation, and extra-credit terms.",
+        "Calculated the 200-event and 30-day polling examples from stated assumptions; no execution-time or ease-of-use benchmark is claimed."
+      ]
+    },
+    {
+      "id": "mailerlite-vs-kit",
+      "sources": [
+        {
+          "title": "MailerLite current plans",
+          "url": "https://www.mailerlite.com/pricing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Comfort starts at $12/month and Power at $25/month."
+          ]
+        },
+        {
+          "title": "MailerLite billing and sending rules",
+          "url": "https://www.mailerlite.com/help/plan-and-billing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Annual plans receive a 10% discount.",
+            "Comfort sends are 10 times the subscriber-tier ceiling; up to 50 active automations.",
+            "Active subscribers are counted cumulatively within the billing cycle."
+          ]
+        },
+        {
+          "title": "MailerLite Free-plan update",
+          "url": "https://www.mailerlite.com/help/free-plan-update-faq",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free includes 250 active subscribers, 2,500 monthly emails, and three active automations."
+          ]
+        },
+        {
+          "title": "Kit Free-plan feature list",
+          "url": "https://help.kit.com/en/articles/16627071-the-kit-free-plan",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free includes 10,000 subscribers, unlimited broadcasts, tagging, forms, and landing pages.",
+            "Free excludes sequences and visual automations."
+          ]
+        },
+        {
+          "title": "Kit Creator and Pro plan comparison",
+          "url": "https://help.kit.com/en/articles/4494683-creator-vs-pro-choose-the-right-plan",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Creator starts at $39/month for 1,000 subscribers and includes sequences and visual automations."
+          ]
+        },
+        {
+          "title": "Kit annual pricing",
+          "url": "https://kit.com/pricing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Creator at the entry tier is $390 billed annually; the page rounds the monthly equivalent."
+          ]
+        }
+      ],
+      "mathChecks": [
+        {
+          "expression": "4*500+100*3",
+          "result": 2300
+        },
+        {
+          "expression": "12*12*0.9",
+          "result": 129.6
+        },
+        {
+          "expression": "39*12",
+          "result": 468
+        },
+        {
+          "expression": "390-129.6",
+          "result": 260.4
+        }
+      ],
+      "uncertainties": [],
+      "reviewedAgainst": [
+        "Kit’s current Free-plan help page excludes all sequences and visual automations. Older comparisons describing one free sequence no longer support this decision.",
+        "MailerLite now uses Comfort and Power tier names. Older Growing Business and Advanced pricing should not be used with the present limits.",
+        "Annual totals use the actual charge or documented discount: $390 for Kit and 10% off 12 × $12 for MailerLite. A rounded monthly badge is not an invoice."
+      ]
+    },
+    {
+      "id": "mailerlite-vs-omnisend",
+      "sources": [
+        {
+          "title": "MailerLite pricing",
+          "url": "https://www.mailerlite.com/pricing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Comfort starts at $12/month; Power starts at $25/month."
+          ]
+        },
+        {
+          "title": "MailerLite billing rules",
+          "url": "https://www.mailerlite.com/help/plan-and-billing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Comfort has 10 times the tier ceiling in monthly sends.",
+            "Active contacts count cumulatively; annual plans receive a 10% discount."
+          ]
+        },
+        {
+          "title": "MailerLite Free limits",
+          "url": "https://www.mailerlite.com/help/free-plan-update-faq",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "250 active subscribers and 2,500 sends per month."
+          ]
+        },
+        {
+          "title": "MailerLite ecommerce triggers",
+          "url": "https://www.mailerlite.com/help/e-commerce-automation-triggers",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Shopify cart recovery requires recognized subscribed shoppers.",
+            "Shopify checkout trigger is limited to returning customers with a previous order.",
+            "Avoid overlapping native reminders."
+          ]
+        },
+        {
+          "title": "Omnisend pricing and contact tiers",
+          "url": "https://www.omnisend.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free: 250 contacts and 500 monthly emails.",
+            "Standard entry: 500 contacts and 6,000 emails. Pro entry: 2,500 contacts.",
+            "Billable contacts can include non-subscribers receiving automated messages."
+          ]
+        },
+        {
+          "title": "Omnisend plan and promotion rules",
+          "url": "https://support.omnisend.com/en/articles/3533018-omnisend-pricing-plans-2026",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Standard is $16/month; Pro is $59/month.",
+            "The initial 30% discount requires three months upfront and then reverts to standard pricing."
+          ]
+        },
+        {
+          "title": "Omnisend SMS eligibility",
+          "url": "https://support.omnisend.com/en/articles/2747083-get-started-with-sms-channel",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "New paid accounts require Pro and separate SMS credits; legacy exceptions are account-specific."
+          ]
+        },
+        {
+          "title": "Omnisend cart and checkout automations",
+          "url": "https://support.omnisend.com/en/articles/6659889-abandoned-cart-and-abandoned-checkout-automations",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Store events and contact identification determine eligibility; workflows do not backfill past abandonments."
+          ]
+        }
+      ],
+      "mathChecks": [
+        {
+          "expression": "4*500+100*3+100*2",
+          "result": 2500
+        },
+        {
+          "expression": "16*12-12*12",
+          "result": 48
+        }
+      ],
+      "uncertainties": [
+        "Omnisend official billing language is not perfectly consistent about non-subscribers; current pricing specifies those receiving automated messages. The numerical scenario contains only subscribed contacts."
+      ],
+      "reviewedAgainst": [
+        "MailerLite’s own current trigger documentation is more specific than competitor comparisons: it supports recognized-subscriber Shopify carts and states a returning-customer restriction for checkouts.",
+        "Omnisend’s pricing page describes billable non-subscribers who receive automated messages; its broader billing help also uses the shorthand subscribers plus non-subscribers. The scenario uses only subscribed contacts to avoid disguising this population difference.",
+        "SMS rules changed for new paid subscriptions on May 4, 2026. Some existing accounts retain legacy access; that does not make SMS available to a new Standard account."
+      ]
+    },
+    {
+      "id": "notion-vs-airtable",
+      "sources": [
+        {
+          "title": "Notion plans and pricing",
+          "url": "https://www.notion.com/pricing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Plus is $10/member/month with annual billing; file limits are 5MB Free and 5GB paid."
+          ]
+        },
+        {
+          "title": "Notion block accounting",
+          "url": "https://www.notion.com/help/understanding-block-usage",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free individual workspaces have included blocks; two or more owners have a 1,000-block limit.",
+            "Deleting blocks does not restore that trial allowance."
+          ]
+        },
+        {
+          "title": "Notion database automation rules",
+          "url": "https://www.notion.com/help/database-automations",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Paid plans provide custom database automations; automation-to-automation triggering is restricted."
+          ]
+        },
+        {
+          "title": "Notion plan and AI availability",
+          "url": "https://www.notion.com/help/upgrade-or-downgrade-your-plan",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free and Plus AI is trial access; Plus availability can vary by workspace."
+          ]
+        },
+        {
+          "title": "Airtable collaborator billing",
+          "url": "https://support.airtable.com/articles/8704138241-adding-removing-and-managing-billable-collaborators-in-airtable",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Team costs $20/editor/month annually or $24 monthly.",
+            "The current article lists Owner, Creator, and Editor as billable roles."
+          ]
+        },
+        {
+          "title": "Airtable plan capacities",
+          "url": "https://support.airtable.com/articles/2277136852-airtable-plans-overview",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free: 1,000 records/base, 1GB attachments, five editing collaborators.",
+            "Team: 50,000 records/base and 20GB attachments.",
+            "The overview still describes Commenters as billable on Team."
+          ]
+        },
+        {
+          "title": "Airtable automation accounting",
+          "url": "https://support.airtable.com/articles/3669392397-Getting-started-with-Airtable-automations",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free has 100 and Team has 25,000 monthly runs/workspace.",
+            "Failed as well as successful trigger attempts count."
+          ]
+        }
+      ],
+      "mathChecks": [
+        {
+          "expression": "5*10*12",
+          "result": 600
+        },
+        {
+          "expression": "5*20*12",
+          "result": 1200
+        },
+        {
+          "expression": "1200-600",
+          "result": 600
+        }
+      ],
+      "uncertainties": [
+        "Airtable official documents disagree about Team commenter billing; scenario uses only editors.",
+        "Notion Plus may not be offered in every workspace."
+      ],
+      "reviewedAgainst": [
+        "Airtable’s October 30 billing article names Owner, Creator, and Editor as billable on Team, while its plan overview still says Commenter and above. This article does not promise free commenters; the five-editor model is valid under both descriptions.",
+        "Notion’s billing help warns that Plus may not be available for every workspace. The $600 example applies where that plan can be selected.",
+        "Airtable automation runs and unique automations are different limits. The 25,000 Team allowance is monthly runs per workspace, not 25,000 separate workflows."
+      ]
+    },
+    {
+      "id": "hubspot-vs-pipedrive",
+      "sources": [
+        {
+          "title": "HubSpot Sales Hub plans",
+          "url": "https://www.hubspot.com/pricing/sales",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free includes up to two users.",
+            "Professional is $90/seat/month annually plus mandatory $1,500 onboarding.",
+            "Starter has restricted workflows; sequences start on Professional; workflow sequence enrollment is a higher-tier feature."
+          ]
+        },
+        {
+          "title": "HubSpot product and services catalog",
+          "url": "https://legal.hubspot.com/hubspot-product-and-services-catalog/products",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Sales Starter standard price is $20 per Core Seat per month.",
+            "Other hubs and seats are separate products and entitlements."
+          ]
+        },
+        {
+          "title": "Pipedrive current pricing",
+          "url": "https://www.pipedrive.com/en/pricing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Lite is $14 and Growth $39 per seat/month annually.",
+            "Growth is $49 on monthly billing; the product offers a 14-day trial."
+          ]
+        },
+        {
+          "title": "Pipedrive current plan features",
+          "url": "https://support.pipedrive.com/en/article/what-features-do-the-pipedrive-plans-have",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Growth adds email sync, automations, and sequences.",
+            "LeadBooster, Projects, and Smart Docs are add-ons on Lite and Growth."
+          ]
+        }
+      ],
+      "mathChecks": [
+        {
+          "expression": "3*90*12+1500",
+          "result": 4740
+        },
+        {
+          "expression": "3*39*12",
+          "result": 1404
+        },
+        {
+          "expression": "4740-1404",
+          "result": 3336
+        },
+        {
+          "expression": "3*90*12-1404",
+          "result": 1836
+        }
+      ],
+      "uncertainties": [
+        "Pipedrive pricing cards are dynamically rendered; the official pricing-page search representation and official plan comparison agree on the cited annual rates."
+      ],
+      "reviewedAgainst": [
+        "The comparison uses Pipedrive’s current Lite/Growth/Premium/Ultimate tiers; old Essential/Advanced articles have different entitlements.",
+        "HubSpot’s $7 Starter offer is not used as its standard price. Professional onboarding remains a material first-year cost.",
+        "HubSpot Professional sequences and workflow-triggered sequence enrollment are different entitlements; the latter is not assumed in the cost model."
+      ]
+    },
+    {
+      "id": "canva-vs-adobe-express",
+      "sources": [
+        {
+          "title": "Canva current individual and business plans",
+          "url": "https://www.canva.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Pro is US$144/year for one person; Business is US$250/person/year.",
+            "Pro has five Brand Kits and social scheduling.",
+            "AI allowance depends on plan and tool; add-ons are extra."
+          ]
+        },
+        {
+          "title": "Adobe Express US pricing and feature table",
+          "url": "https://www.adobe.com/express/pricing?rd=1",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Individual Premium is US$9.99/month with no annual commitment.",
+            "Free schedules one account/network; Premium schedules three and includes 250 monthly generative credits.",
+            "The page conflicts internally on Premium storage: card 100GB, matrix 10GB."
+          ]
+        },
+        {
+          "title": "Adobe Express Premium entitlement",
+          "url": "https://helpx.adobe.com/express/web/adobe-express-subscription/premium.html",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Premium is included in Creative Cloud Standard/Pro, most Single App plans with named exclusions, and Acrobat Studio.",
+            "Users can inspect the current plan through their profile and Manage your plan."
+          ]
+        }
+      ],
+      "mathChecks": [
+        {
+          "expression": "9.99*12",
+          "result": 119.88
+        },
+        {
+          "expression": "144-119.88",
+          "result": 24.12
+        },
+        {
+          "expression": "24.12/30*60",
+          "result": 48.24
+        }
+      ],
+      "uncertainties": [
+        "Adobe Express Premium storage conflicts within the current pricing page; no exact Premium storage claim is used in the decision.",
+        "Canva yearly billing and Adobe monthly billing are deliberately labeled rather than represented as equal contract terms."
+      ],
+      "reviewedAgainst": [
+        "Adobe’s US plan card lists Premium storage as 100GB while the same page’s feature matrix says 10GB. Storage is deliberately not used to choose a winner.",
+        "Canva’s verified page displayed a yearly US price; this article does not convert a remembered monthly price into a current claim.",
+        "The Adobe help page explicitly identifies eligible Creative Cloud and Acrobat Studio subscriptions; “all Adobe plans include Premium” would be too broad."
+      ]
+    },
+    {
+      "id": "shopify-vs-etsy",
+      "sources": [
+        {
+          "title": "Shopify US plan and payment-rate table",
+          "url": "https://www.shopify.com/pricing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Basic is $39 monthly or $29/month billed annually.",
+            "Domestic standard cards: 2.9% + $0.30; premium: 3.5% + $0.30; international surcharge and third-party fees differ."
+          ]
+        },
+        {
+          "title": "Shopify own US plan and fee comparison",
+          "url": "https://www.shopify.com/compare/shopify-vs-wix",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Corroborates Shopify Basic $29/month annually and US 2.9% + $0.30 starting rate.",
+            "Full store plans do not charge per-product listing fees."
+          ]
+        },
+        {
+          "title": "Shopify monthly plan costs",
+          "url": "https://www.shopify.com/blog/pos-system-cost",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Basic costs $39/month on monthly billing."
+          ]
+        },
+        {
+          "title": "Shopify plan billing and payment rules",
+          "url": "https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/pricing-overview",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Annual billing charges the year upfront; payment and third-party-provider fees are separate concepts."
+          ]
+        },
+        {
+          "title": "Etsy fees and payments policy",
+          "url": "https://www.etsy.com/legal/fees/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Listing fee $0.20; transaction fee 6.5%; renewal rules.",
+            "Offsite Ads attributed-order fee 15% or 12%, with threshold and participation rules."
+          ]
+        },
+        {
+          "title": "Etsy fee and setup explanation",
+          "url": "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Setup fee varies by location; additional listing and advertising fees can apply."
+          ]
+        },
+        {
+          "title": "Etsy Payments country rate table",
+          "url": "https://help.etsy.com/hc/en-us/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "US processing is 3% + $0.25 per order.",
+            "Processing base includes shipping and applicable sales tax."
+          ]
+        },
+        {
+          "title": "Etsy Creativity Standards",
+          "url": "https://www.etsy.com/legal/creativity/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Etsy item eligibility is limited by its creativity standards."
+          ]
+        }
+      ],
+      "mathChecks": [
+        {
+          "expression": "100*40",
+          "result": 4000
+        },
+        {
+          "expression": "4000*0.029+100*0.30",
+          "result": 146
+        },
+        {
+          "expression": "100*0.20+4000*0.065+4000*0.03+100*0.25",
+          "result": 425
+        },
+        {
+          "expression": "39+146",
+          "result": 185
+        },
+        {
+          "expression": "(425-185)/100",
+          "result": 2.4
+        },
+        {
+          "expression": "29*12",
+          "result": 348
+        }
+      ],
+      "uncertainties": [
+        "US pricing shown in Shopify official search representation; direct canonical page localization returned another market. US amounts independently corroborated in opened official Shopify pages."
+      ],
+      "reviewedAgainst": [
+        "Shopify’s pricing page localizes by region. US pricing was corroborated with its own US comparison and current plan-cost article; this guide does not mix Indian or other regional plan prices into a US example.",
+        "Shopify’s current table distinguishes standard and premium cards. The 2.9% rate is not presented as a universal rate for all payments.",
+        "Etsy’s setup fee is shown during onboarding and varies by location; a fixed remembered setup price is not used."
+      ]
+    },
+    {
+      "id": "chatgpt-vs-claude",
+      "sources": [
+        {
+          "title": "OpenAI ChatGPT Plus plan details",
+          "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Plus costs $20/month and has no annual billing.",
+            "Includes expanded voice, image, file-analysis, and research access subject to availability and limits.",
+            "OpenAI API usage is billed separately from Plus."
+          ]
+        },
+        {
+          "title": "ChatGPT plan overview",
+          "url": "https://chatgpt.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "A Free individual plan is available alongside paid plans."
+          ]
+        },
+        {
+          "title": "ChatGPT data controls",
+          "url": "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Model improvement, memory, and chat deletion are separate controls.",
+            "Feedback can have a separate data-use consequence."
+          ]
+        },
+        {
+          "title": "Claude current individual plans",
+          "url": "https://claude.com/pricing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Pro is $20/month or $200/year upfront.",
+            "Free includes limited web/file/code/Artifact capabilities; Pro adds usage and Projects.",
+            "Usage depends on the model and workload."
+          ]
+        },
+        {
+          "title": "Claude model-improvement setting",
+          "url": "https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Consumer users can change model improvement in Settings → Privacy."
+          ]
+        },
+        {
+          "title": "Claude consumer training and feedback rules",
+          "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Training and feedback treatment depend on the consumer settings and stated exceptions.",
+            "Consumer terms differ from commercial product terms."
+          ]
+        }
+      ],
+      "mathChecks": [
+        {
+          "expression": "20/30*60",
+          "result": 40
+        },
+        {
+          "expression": "20*12",
+          "result": 240
+        },
+        {
+          "expression": "240-200",
+          "result": 40
+        },
+        {
+          "expression": "40/30*60",
+          "result": 80
+        }
+      ],
+      "uncertainties": [
+        "No comparative model-quality benchmark was performed; recommendations concern documented workflow categories and a proposed user evaluation.",
+        "Local repository contained no official OpenAI product documentation; current official OpenAI pages were used."
+      ],
+      "reviewedAgainst": [
+        "Prices are for individual Plus and Pro, not OpenAI API usage, ChatGPT business seats, Claude commercial plans, or higher usage tiers.",
+        "No fixed message-count promise or model leaderboard is used because availability and limits change.",
+        "OpenAI and Anthropic document distinct consumer model-improvement controls and feedback exceptions. Neither individual subscription is described here as equivalent to a commercial data agreement."
+      ]
+    }
+  ],
+  "roundtable": {
+    "format": "Internal AI-assisted editorial review; these are analytical roles, not claims that outside human experts were consulted.",
+    "domainRecommendation": "Make the buying decision from the actual job, feature gate, and billable unit. A concrete example should change the recommendation when a requirement changes: a Kit welcome sequence, a Make polling interval, an extra editor, or a different customer acquisition cost.",
+    "substantiveFindings": [
+      {
+        "topic": "Email automation",
+        "decision": "Kit Free is the free broadcast recommendation; MailerLite wins the stated small-list automated welcome budget.",
+        "reason": "Current Kit Free documentation excludes every sequence and visual automation. Legacy one-free-sequence comparisons would recommend an unavailable workflow."
+      },
+      {
+        "topic": "Ecommerce email",
+        "decision": "Do not deny MailerLite cart recovery; compare identity and checkout coverage.",
+        "reason": "MailerLite now documents recognized-subscriber Shopify carts and a returning-customer checkout restriction. A competitor comparison is less authoritative about this current feature."
+      },
+      {
+        "topic": "Automation economics",
+        "decision": "Present event-driven and polling counts separately.",
+        "reason": "Make counts checks and per-bundle downstream work; Zapier trigger checks are not ordinary action tasks. A task and a credit are not equivalent units."
+      },
+      {
+        "topic": "Workspace and CRM buying",
+        "decision": "Use full editor seats and the tier that enables the actual follow-up.",
+        "reason": "Airtable commenter billing is inconsistent across official pages; full-editor math avoids the conflict. HubSpot Professional sequences are distinct from workflow enrollment and mandatory onboarding changes first-year cost."
+      },
+      {
+        "topic": "Creative subscriptions",
+        "decision": "Check existing Adobe entitlement before adding a paid design tool.",
+        "reason": "The $24.12 modeled annual cost gap is too small to justify an unmeasured migration. Adobe storage conflict is disclosed rather than converted into a recommendation."
+      },
+      {
+        "topic": "Store fees",
+        "decision": "Show acquisition sensitivity beside platform fees.",
+        "reason": "At 100 $40 orders, the $240 fee gap is only $2.40/order; advertising or other costs can erase it. US standard-card assumptions are explicit."
+      },
+      {
+        "topic": "AI subscriptions",
+        "decision": "Recommend one measured month before a second subscription or annual commitment.",
+        "reason": "A $20 fee needs 40 net minutes at the illustrative $30 hourly value. This is a break-even threshold, not a promised productivity result."
+      }
+    ],
+    "objections": [
+      "A simple scenario can underestimate retries, exceptions, list growth, or variable payment mixes; those exclusions must remain visible next to the arithmetic.",
+      "Comparing cheapest eligible plans does not establish feature parity. The CRM and workspace articles say what their cost example does and does not measure.",
+      "A verified public price can still localize or differ for an existing account. Regional and entitlement-specific uncertainty should be specific, not used to avoid the decision.",
+      "Repeated methodology disclaimers would obscure the answer. Keep a concise research basis and reserve review notes for material changes or source conflicts."
+    ],
+    "challengeForOtherReviewer": [
+      "Email reviewer: can the exact modeled welcome/cart journey run on the named plan, and do the contact populations satisfy its trigger rules?",
+      "Catalog reviewer: do Canva/Adobe commitment terms and Notion/Airtable role/availability caveats match the shared vendor facts?",
+      "Root integration reviewer: remove duplicate legacy chooseFirst/chooseSecond lists when the enhanced recommendations section is shown; keep sources beside price rows."
+    ],
+    "peerReviewStatus": "Completed: catalog reviewer cross-checked Canva/Adobe and Notion/Airtable; tutorial reviewer cross-checked both email comparisons. No unresolved blocking defect. Two email clarity improvements applied.",
+    "peerResponses": [
+      {
+        "reviewer": "Catalog research agent",
+        "scope": [
+          "canva-vs-adobe-express",
+          "notion-vs-airtable"
+        ],
+        "result": "No material factual or arithmetic error found. Independently reopened current Canva, US Adobe pricing, and Notion block documentation. Confirmed the stated annual/monthly prices, Adobe storage conflict treatment, exact Notion two-owner rule, and $600/$1,200 five-editor model.",
+        "checkedAt": "2026-11-01"
+      },
+      {
+        "reviewer": "Tutorial research agent",
+        "scope": [
+          "mailerlite-vs-kit",
+          "mailerlite-vs-omnisend"
+        ],
+        "checkedAt": "2026-11-01",
+        "result": "No blocking feature-gate or arithmetic error. Independently reopened current Kit Free, MailerLite billing, and ecommerce-trigger docs. Suggested making the cart cohort explicitly part of the same 500 contacts and including a cookie-cleared/cross-device recognition check; both edits applied to the comparison upgrade."
+      }
+    ]
+  },
+  "validation": {
+    "checkedAt": "2026-11-01",
+    "articleCount": 8,
+    "arithmeticChecks": 30,
+    "checks": [
+      "All legacy comparison IDs and fields retained; tool order unchanged.",
+      "Original publication date preserved as 2026-10-31; substantive review and modification dated 2026-11-01.",
+      "Every adjacent price/scenario source URL belongs to that article’s named source list.",
+      "All 30 recorded arithmetic expressions recalculated independently.",
+      "All prices identify billing units and commitments; temporary offers excluded from standard cost models.",
+      "Consumer AI workflow recommendations separated from unperformed model-quality benchmarks.",
+      "No fabricated product testing, ratings, search volumes, conversion rates, or business results."
+    ]
+  }
+}

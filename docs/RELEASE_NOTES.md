@@ -1,42 +1,42 @@
-# Complete publication build — October 31, 2026
+# Complete publication release — November 1, 2026
 
-## Delivered
+## Delivered publication
 
-The site is rebuilt around substantive small-business AI education, with an editorial homepage, complete tutorials, independent comparisons, business-specific guides, and useful reference tools.
+The release contains 120 published pages plus a custom 404, with 116 indexable URLs. Its substantive coverage includes 47 researched tool guides, 12 implementation tutorials, eight worked comparisons, seven business guides, and seven complete buying or workflow guides. Seventeen thin legacy entry pages now redirect to the corresponding complete resource; existing links remain usable.
 
-- 136 generated pages, plus the custom 404 page; 132 indexable URLs.
-- 11 substantial tutorials with prerequisites, original examples, expected outcomes, documented instructions, validation, and troubleshooting.
-- Copyable templates and field-by-field configuration tables in the flagship tutorials.
-- 8 researched software comparisons and 47 tool profiles across 14 categories.
-- 13 evidence-based topic briefs and six primary market findings in the source research record.
-- Responsive navigation, full-publication search, tool filters, three-tool comparisons, and shareable comparison links.
-- A guided toolkit selector that considers business fit, setup effort, and verified free-workflow availability.
-- Browser-local saved tools, reading lists, and stacks with JSON export/import.
-- Three calculators and four usable downloadable worksheets/templates.
-- Article, organization, website, and breadcrumb structured data; canonical URLs, sitemap, redirect preservation, consent-controlled analytics, and a simple machine-readable publication index.
-- 90 complete requirements, revised Claude/Gemini prompts, and editorial/operational procedures.
+Every tool profile includes plan economics, billing units and important limitations, an original illustrative business workflow, alternatives, named sources, and a real review date. Each comparison includes current plan details, an explicit scenario, checked arithmetic, decision criteria, and source links adjacent to changing price claims. None represents documentation research as a live product benchmark.
 
-The original source remains available in Git. Twenty-five older implementation/use-case routes redirect to substantive tutorials or business guides. Generic setup placeholders and old client-only scoring/analytics widgets are not published. The legacy community prototype is not presented as a supported account system; its remote data has not been altered.
+The eleven structured tutorials include 37 copyable templates and 84 reader acceptance checks. The longer social-media tutorial retains its complete working kit and fifteen launch checks, with clearer capability boundaries and a new incident-recovery record. A source review performed October 31 is not relabeled November 1 merely because the article was edited.
 
-## Verification
+The seven business guides and seven additional features connect the tools to a complete customer journey. They include finished examples, cost assumptions, and clear next steps. The public article notes describe the evidence and limitations; internal audit-change history stays in the repository.
 
-The static validator passed for 137 HTML files, 47 catalog records, 19 new editorial guides, 6,557 local references, three static form instances, and 132 sitemap URLs. All 14 calculator tests passed, including annual seat billing, invalid inputs, zero or negative contribution, and floating-point order-rounding boundaries.
+## Reader experience
 
-Browser checks verified the editorial homepage, 375-pixel mobile layout with no horizontal overflow, mobile navigation, site search, filtering, saved tools/reading lists, comparison selection and shared URL state, template copying, troubleshooting expansion, toolkit generation and saving, and calculator output. The retained Etsy business guide was visually checked for the shared publication styling.
+- Distinct artwork for each of the twelve tutorial topics, revised homepage hierarchy, and shared publication typography.
+- Desktop article contents and collapsible mobile navigation, readable source lists, keyboard-focusable horizontal tables, copyable examples, and print layouts.
+- Full-site search, category/audience/free-option filters, and an interactive three-tool comparison.
+- A rules-based stack builder using researched audience fit, setup effort, and free-workflow eligibility.
+- Browser-local saved tools, reading lists, and stacks with import/export. A failed save restores the previous state; denied-read recovery preserves older saved items. Reading-list removal has a clear Remove label.
+- Three calculators with explicit assumptions, true zero-cost handling, annual-versus-monthly seat billing, and usable exports.
+- Eight downloadable working resources, plus inline original templates throughout the tutorials.
+- Article, organization, website, and breadcrumb data; canonicals; sitemap; robots policy; preserved redirects; and a machine-readable publication index.
 
-A selection defect found during review was corrected: a free list-building tier does not qualify as a free email-sending workflow. Current verified free-plan scopes are recorded separately from the existence of a free plan.
+## Verification performed
 
-## Account-dependent launch work
+The final static validation passes with 121 HTML files, 47 catalog entries, 20 tutorial/comparison records, 6,797 internal references, three static form instances, and 116 sitemap URLs. The temporary responsive-QA page is excluded from the release.
 
-These are activation dependencies, not claims of completed external account actions:
+All 14 calculator tests and 11 workspace regression tests pass. Workspace tests execute the actual production script and cover blocked additions/removals/imports/clears, state rollback, retries, invalid backups, unsafe links, escaped titles, and initially unread saved data. The denied-read defects were reproduced before correction.
 
-1. Deploy through the existing Netlify project and verify the live custom domain. The source build and static output are prepared.
-2. Verify Netlify form detection and actual form processing on that hosting account. Automated newsletter delivery needs an authorized email provider; HTML form capture alone is not email delivery.
-3. Add approved affiliate URLs only after the program accepts the publisher and supplies the actual tracking destination. No affiliate approval, sale, payout, or traffic result is asserted.
-4. Verify the actual Search Console property, sitemap receipt, indexing, and available search performance reports. Technical eligibility does not establish indexing or rankings.
+Browser checks cover homepage presentation; desktop and mobile navigation; a searched tutorial; library filtering; saved reading across navigation; saved tools; comparison selection and the resulting shared URL; copying an example; and the cost planner's $40/month, $480/year, $110 remaining, $240 annual-commitment sample. Eight representative page types were checked in 375-pixel and 768-pixel frames with no page-level horizontal overflow. Runtime inspection found no site-script errors in the exercised flows; browser-extension messages are outside the publication.
 
-No advertising spend, new paid AI service, new paid subscription, affiliate application, marketing email, or message to a vendor was initiated as part of this build.
+## Actual editorial cross-review
 
-## Efficient maintenance
+Separate AI research reviewers challenged plan entitlements, audience fit, cost scenarios, tutorial instructions, and account-dependent claims. The records are in the three roundtable notes and the four research ledgers. Material corrections include Kit sequence access, MailerLite Free limits and group creation, Pabbly Free workflow limits, Calendly buffer edges, Tidio handoff behavior, and current Etsy fee/image rules. Conflicts in official sources remain explicit where the comparison does not depend on resolving them.
 
-Normal builds make no AI or external API calls. Update the structured content once, run the build and checks, and deploy. Research records distinguish official product facts, observed search results, editorial judgment, and missing data. The current research does not contain a verified Google Trends export or Search Console/Keyword Planner volume dataset. Those gaps remain explicit instead of being filled with invented statistics.
+Research includes six primary market evidence sources, twelve observed query sets, and seventeen topic briefs. Search observations are qualitative. No search-volume dataset, Google Trends measurement, revenue result, testimonial, or hands-on vendor test is fabricated.
+
+## Runtime and account boundaries
+
+Normal builds require no paid API, AI call, framework download, or new service. The existing GitHub main branch remains the source for the existing Netlify project. Deployment now runs the complete build/check gate. Public browser data is reduced to the fields used by interactive tools; versioned data requests and revalidation prevent returning readers from relying on a stale price catalog after an update.
+
+Netlify handles native form capture. The source checks prove form markup and user-facing controls, not an email-provider sending integration. Newsletter collection does not claim an automatic welcome email or a publishing schedule. Approved affiliate URLs remain gated by the actual catalog status; this release does not invent approvals, conversions, traffic, payouts, or a funding decision. No recurring work was scheduled.

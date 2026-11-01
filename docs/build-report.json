@@ -1,7 +1,7 @@
 {
-  "built": "2026-10-31",
-  "pages": 137,
-  "indexed": 133,
+  "built": "2026-11-01",
+  "pages": 120,
+  "indexed": 116,
   "tools": 47,
   "categories": 14,
   "comparisons": 8,
@@ -89,237 +89,237 @@
     },
     {
       "route": "/tool/chatgpt/",
-      "title": "ChatGPT guide",
+      "title": "ChatGPT guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/claude/",
-      "title": "Claude guide",
+      "title": "Claude guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/perplexity/",
-      "title": "Perplexity guide",
+      "title": "Perplexity guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/canva/",
-      "title": "Canva guide",
+      "title": "Canva guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/adobe-express/",
-      "title": "Adobe Express guide",
+      "title": "Adobe Express guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/zapier/",
-      "title": "Zapier guide",
+      "title": "Zapier guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/make/",
-      "title": "Make guide",
+      "title": "Make guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/pabbly/",
-      "title": "Pabbly Connect guide",
+      "title": "Pabbly Connect guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/mailerlite/",
-      "title": "MailerLite guide",
+      "title": "MailerLite guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/flodesk/",
-      "title": "Flodesk guide",
+      "title": "Flodesk guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/notion/",
-      "title": "Notion guide",
+      "title": "Notion guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/trello/",
-      "title": "Trello guide",
+      "title": "Trello guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/airtable/",
-      "title": "Airtable guide",
+      "title": "Airtable guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/erank/",
-      "title": "eRank guide",
+      "title": "eRank guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/marmalead/",
-      "title": "Marmalead guide",
+      "title": "Marmalead guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/hubspot/",
-      "title": "HubSpot guide",
+      "title": "HubSpot guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/pipedrive/",
-      "title": "Pipedrive guide",
+      "title": "Pipedrive guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/semrush/",
-      "title": "Semrush guide",
+      "title": "Semrush guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/ubersuggest/",
-      "title": "Ubersuggest guide",
+      "title": "Ubersuggest guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/calendly/",
-      "title": "Calendly guide",
+      "title": "Calendly guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/acuity/",
-      "title": "Acuity Scheduling guide",
+      "title": "Acuity Scheduling guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/tidio/",
-      "title": "Tidio guide",
+      "title": "Tidio guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/intercom/",
-      "title": "Intercom guide",
+      "title": "Intercom guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/birdeye/",
-      "title": "Birdeye guide",
+      "title": "Birdeye guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/nicejob/",
-      "title": "NiceJob guide",
+      "title": "NiceJob guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/buffer/",
-      "title": "Buffer guide",
+      "title": "Buffer guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/metricool/",
-      "title": "Metricool guide",
+      "title": "Metricool guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/smith-ai/",
-      "title": "Smith.ai guide",
+      "title": "Smith.ai guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/dialpad/",
-      "title": "Dialpad guide",
+      "title": "Dialpad guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/ifttt/",
-      "title": "IFTTT guide",
+      "title": "IFTTT guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/n8n/",
-      "title": "n8n guide",
+      "title": "n8n guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/kit/",
-      "title": "Kit guide",
+      "title": "Kit guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/beehiiv/",
-      "title": "Beehiiv guide",
+      "title": "Beehiiv guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/activecampaign/",
-      "title": "ActiveCampaign guide",
+      "title": "ActiveCampaign guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/podium/",
-      "title": "Podium guide",
+      "title": "Podium guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/gatherup/",
-      "title": "GatherUp guide",
+      "title": "GatherUp guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/gradeus/",
-      "title": "Grade.us guide",
+      "title": "Grade.us guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/zoho-crm/",
-      "title": "Zoho CRM guide",
+      "title": "Zoho CRM guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/monday-crm/",
-      "title": "monday CRM guide",
+      "title": "monday CRM guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/gemini/",
-      "title": "Gemini guide",
+      "title": "Gemini guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/omnisend/",
-      "title": "Omnisend guide",
+      "title": "Omnisend guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/getresponse/",
-      "title": "GetResponse guide",
+      "title": "GetResponse guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/shopify/",
-      "title": "Shopify guide",
+      "title": "Shopify guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/etsy/",
-      "title": "Etsy guide",
+      "title": "Etsy guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/heygen/",
-      "title": "HeyGen guide",
+      "title": "HeyGen guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/descript/",
-      "title": "Descript guide",
+      "title": "Descript guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
       "route": "/tool/elevenlabs/",
-      "title": "ElevenLabs guide",
+      "title": "ElevenLabs guide: fit, costs, and a worked example",
       "kind": "Tool"
     },
     {
@@ -329,42 +329,42 @@
     },
     {
       "route": "/comparisons/mailerlite-vs-kit/",
-      "title": "MailerLite vs Kit: choose around the way your audience buys",
+      "title": "MailerLite vs Kit: the free newsletter and the paid welcome sequence",
       "kind": "Comparison"
     },
     {
       "route": "/comparisons/mailerlite-vs-omnisend/",
-      "title": "MailerLite vs Omnisend: a newsletter or a store-driven customer journey?",
+      "title": "MailerLite vs Omnisend: the $4 decision for a small Shopify shop",
       "kind": "Comparison"
     },
     {
       "route": "/comparisons/zapier-vs-make/",
-      "title": "Zapier vs Make: compare the actual workflow, including failures",
+      "title": "Zapier vs Make: count the work before choosing a plan",
       "kind": "Comparison"
     },
     {
       "route": "/comparisons/notion-vs-airtable/",
-      "title": "Notion vs Airtable: choose the home for your business information",
+      "title": "Notion vs Airtable: write the operating manual or run the records",
       "kind": "Comparison"
     },
     {
       "route": "/comparisons/hubspot-vs-pipedrive/",
-      "title": "HubSpot vs Pipedrive: a connected customer platform or a sales-focused workflow?",
+      "title": "HubSpot vs Pipedrive: price the follow-up workflow, not the starting badge",
       "kind": "Comparison"
     },
     {
       "route": "/comparisons/canva-vs-adobe-express/",
-      "title": "Canva vs Adobe Express: pick a repeatable content workflow",
+      "title": "Canva vs Adobe Express: check the subscription you already own",
       "kind": "Comparison"
     },
     {
       "route": "/comparisons/shopify-vs-etsy/",
-      "title": "Shopify vs Etsy: compare the whole selling system",
+      "title": "Shopify vs Etsy: what a $4,000 sales month really costs",
       "kind": "Comparison"
     },
     {
       "route": "/comparisons/chatgpt-vs-claude/",
-      "title": "ChatGPT vs Claude: choose with your own business tasks",
+      "title": "ChatGPT vs Claude: buy one month for the work you repeat",
       "kind": "Comparison"
     },
     {
@@ -384,58 +384,133 @@
     },
     {
       "route": "/playbooks/email-welcome-sequence/",
-      "title": "How to build an AI-assisted welcome email sequence in MailerLite",
+      "title": "Build a three-email welcome sequence in MailerLite",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/etsy-listing-workflow/",
-      "title": "How to draft an Etsy product listing with ChatGPT or Claude",
+      "title": "Draft an accurate Etsy listing with ChatGPT or Claude",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/product-launch-content-system/",
-      "title": "Turn one launch into a coordinated email and social campaign",
+      "title": "Build a coordinated product launch in Adobe Express and Kit",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/service-lead-follow-up/",
-      "title": "Build a lead follow-up system that keeps every inquiry accountable",
+      "title": "Track service inquiries and follow-up in HubSpot",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/self-service-booking/",
-      "title": "Set up self-service booking without overloading your calendar",
+      "title": "Set up Calendly booking that protects your working hours",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/honest-review-request-system/",
-      "title": "Build a review request process that welcomes honest feedback",
+      "title": "Create a fair, repeatable Google review request process",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/first-reliable-automation/",
-      "title": "How to build a lead-review queue in Make and check duplicate submissions",
+      "title": "Build a protected lead-review queue in Make",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/customer-support-knowledge-base/",
-      "title": "Create a support knowledge base before adding an AI assistant",
+      "title": "Build a useful support knowledge base for Tidio Lyro",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/business-operations-hub/",
-      "title": "Build a business operations hub you will actually keep current",
+      "title": "Build a practical business operations hub in Notion",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/product-profit-check/",
-      "title": "Check a product's contribution before expanding the catalog",
+      "title": "Calculate what an Etsy order contributes after fees and labor",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/chatgpt-project-business-brief/",
-      "title": "How to set up a reusable business brief in ChatGPT Projects",
+      "title": "Create a ChatGPT Project that stays grounded in your business facts",
       "kind": "Playbook"
+    },
+    {
+      "route": "/business-types/etsy-sellers/",
+      "title": "AI tools for Etsy sellers: a practical system for listings, questions, and profit",
+      "kind": "Business guide"
+    },
+    {
+      "route": "/business-types/contractors/",
+      "title": "AI tools for contractors: capture the inquiry, prepare the estimate, follow through",
+      "kind": "Business guide"
+    },
+    {
+      "route": "/business-types/creators/",
+      "title": "AI tools for creators: turn expertise into a useful publishing system",
+      "kind": "Business guide"
+    },
+    {
+      "route": "/business-types/coaches/",
+      "title": "AI tools for coaches: organize inquiries, bookings, and client preparation",
+      "kind": "Business guide"
+    },
+    {
+      "route": "/business-types/local-businesses/",
+      "title": "AI tools for local businesses: help customers reach, book, and understand you",
+      "kind": "Business guide"
+    },
+    {
+      "route": "/business-types/realtors/",
+      "title": "AI tools for real estate professionals: accurate property content and organized follow-up",
+      "kind": "Business guide"
+    },
+    {
+      "route": "/business-types/med-spas/",
+      "title": "AI tools for med spas: clear public information and dependable booking handoffs",
+      "kind": "Business guide"
+    },
+    {
+      "route": "/business-types/",
+      "title": "AI tools and workflows by business type",
+      "kind": "Business guides"
+    },
+    {
+      "route": "/guides/crm-vs-spreadsheet-vs-project-management/",
+      "title": "CRM, spreadsheet, or project tool: choose the right place for your work",
+      "kind": "Guide"
+    },
+    {
+      "route": "/guides/ai-receptionist-vs-answering-service-vs-voicemail/",
+      "title": "AI receptionist, answering service, or voicemail: what fits your calls?",
+      "kind": "Guide"
+    },
+    {
+      "route": "/guides/how-i-made-this-ai-avatar-video-with-heygen/",
+      "title": "How to make a useful business introduction video in HeyGen",
+      "kind": "Guide"
+    },
+    {
+      "route": "/guides/getting-started-with-ai/",
+      "title": "Getting started with AI for a small business: a complete first workflow",
+      "kind": "Guide"
+    },
+    {
+      "route": "/decision-funnels/what-should-i-automate-first/",
+      "title": "What should you automate first? Choose with time, cost, and failure risk",
+      "kind": "Guide"
+    },
+    {
+      "route": "/affiliate/best-ai-tools-small-business/",
+      "title": "The best AI tools for small business depend on the job",
+      "kind": "Guide"
+    },
+    {
+      "route": "/business-systems-map/",
+      "title": "Map your business from first inquiry to repeat customer",
+      "kind": "Guide"
     },
     {
       "route": "/stack-builder/",
@@ -481,166 +556,6 @@
       "route": "/problems/",
       "title": "Small business problems: practical AI and workflow solutions",
       "kind": "Topics"
-    },
-    {
-      "route": "/affiliate/best-ai-tools-small-business/",
-      "title": "Best AI tools for small business: choose by job, not hype.",
-      "kind": "Guide"
-    },
-    {
-      "route": "/business-systems-map/",
-      "title": "Here is where your business is leaking money.",
-      "kind": "Guide"
-    },
-    {
-      "route": "/business-types/coaches/",
-      "title": "Best AI tools for coaches: keep the message human and the workflow simple.",
-      "kind": "Business guide"
-    },
-    {
-      "route": "/business-types/contractors/",
-      "title": "Best AI tools for contractors: answer the phone, follow up faster, and keep jobs moving.",
-      "kind": "Business guide"
-    },
-    {
-      "route": "/business-types/creators/",
-      "title": "Best AI tools for creators: make more without sounding manufactured.",
-      "kind": "Business guide"
-    },
-    {
-      "route": "/business-types/etsy-sellers/",
-      "title": "Best AI tools for Etsy sellers: use AI without losing product accuracy.",
-      "kind": "Business guide"
-    },
-    {
-      "route": "/business-types/",
-      "title": "AI advice by actual business type.",
-      "kind": "Business guide"
-    },
-    {
-      "route": "/business-types/local-businesses/",
-      "title": "Best AI tools for local businesses: answer faster, book cleaner, and keep reviews flowing.",
-      "kind": "Business guide"
-    },
-    {
-      "route": "/business-types/med-spas/",
-      "title": "Best AI tools for med spas: speed up booking and follow-up without losing trust.",
-      "kind": "Business guide"
-    },
-    {
-      "route": "/business-types/realtors/",
-      "title": "Best AI tools for Realtors: speed matters, but accuracy matters more.",
-      "kind": "Business guide"
-    },
-    {
-      "route": "/decision-funnels/best-ai-scheduler-for-solo-business/",
-      "title": "Best AI scheduler for solo business",
-      "kind": "Guide"
-    },
-    {
-      "route": "/decision-funnels/",
-      "title": "Pages for people ready to choose.",
-      "kind": "Guide"
-    },
-    {
-      "route": "/decision-funnels/what-ai-stack-fits-my-budget/",
-      "title": "What AI stack fits my budget?",
-      "kind": "Guide"
-    },
-    {
-      "route": "/decision-funnels/what-ai-tools-does-an-etsy-seller-need/",
-      "title": "What AI tools does an Etsy seller actually need?",
-      "kind": "Guide"
-    },
-    {
-      "route": "/decision-funnels/what-should-i-automate-first/",
-      "title": "What should I automate first?",
-      "kind": "Guide"
-    },
-    {
-      "route": "/decision-funnels/which-ai-tool-for-each-business-type/",
-      "title": "Which AI tool should I use for each business type?",
-      "kind": "Guide"
-    },
-    {
-      "route": "/decision-funnels/which-crm-should-i-use/",
-      "title": "Which CRM should I use?",
-      "kind": "Guide"
-    },
-    {
-      "route": "/guides/ai-receptionist-vs-answering-service-vs-voicemail/",
-      "title": "AI receptionist vs answering service vs voicemail: what should happen when nobody answers?",
-      "kind": "Guide"
-    },
-    {
-      "route": "/guides/crm-vs-spreadsheet-vs-project-management/",
-      "title": "CRM vs spreadsheet vs project management tool: which one do you actually need?",
-      "kind": "Guide"
-    },
-    {
-      "route": "/guides/getting-started-with-ai/",
-      "title": "Getting Started with AI for Small Business",
-      "kind": "Guide"
-    },
-    {
-      "route": "/guides/how-i-made-this-ai-avatar-video-with-heygen/",
-      "title": "How I Made This AI Avatar Video with HeyGen",
-      "kind": "Guide"
-    },
-    {
-      "route": "/problems/ai-phone-systems/",
-      "title": "AI Phone Systems for Small Business",
-      "kind": "Guide"
-    },
-    {
-      "route": "/problems/answer-customers-faster/",
-      "title": "Answer Customers Faster",
-      "kind": "Guide"
-    },
-    {
-      "route": "/problems/automate-scheduling/",
-      "title": "Automate Scheduling",
-      "kind": "Guide"
-    },
-    {
-      "route": "/problems/create-content-faster/",
-      "title": "Create Content Faster",
-      "kind": "Guide"
-    },
-    {
-      "route": "/problems/crm-systems/",
-      "title": "CRM Systems",
-      "kind": "Guide"
-    },
-    {
-      "route": "/problems/email-automation/",
-      "title": "Email Automation",
-      "kind": "Guide"
-    },
-    {
-      "route": "/problems/get-more-leads/",
-      "title": "Get More Leads",
-      "kind": "Guide"
-    },
-    {
-      "route": "/problems/manage-reviews/",
-      "title": "Manage Reviews",
-      "kind": "Guide"
-    },
-    {
-      "route": "/problems/social-media-systems/",
-      "title": "Social Media Systems",
-      "kind": "Guide"
-    },
-    {
-      "route": "/problems/stop-missing-calls/",
-      "title": "Stop Missing Calls",
-      "kind": "Guide"
-    },
-    {
-      "route": "/reports/sample-report/",
-      "title": "Sample AI readiness report",
-      "kind": "Guide"
     },
     {
       "route": "/tools/ai-assistant/",

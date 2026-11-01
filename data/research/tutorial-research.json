@@ -1,0 +1,944 @@
+{
+  "reviewedAt": "2026-11-01",
+  "scope": "All twelve published tutorials; eleven complete structured rewrites plus preservation and targeted improvement of the long-form social guide.",
+  "method": "Primary vendor documentation and current policy/pricing pages were retrieved and read. Search excerpts were checked against the relevant article bodies for material UI and plan claims. Fictional examples are original editorial compositions. No live customer workflow, delivery, booking, social post, or account-specific permission test was performed.",
+  "sourceSnapshotFormat": "Dated claim snapshots and URLs, not archived full-page copies. Social sources not reopened on November 1 retain the October 31 check date.",
+  "arithmeticChecks": {
+    "method": "Python Decimal arithmetic with ROUND_HALF_UP for modeled per-fee cent rounding; source fee ledger remains authoritative.",
+    "etsyUSExample": {
+      "revenue": 37,
+      "buyerTax": 2.4,
+      "transactionFee": 2.41,
+      "processingFee": 1.43,
+      "directCosts": 24.44,
+      "contribution": 12.56,
+      "marginPercent": 33.95,
+      "illustrativeAdFee": 5.55,
+      "afterAdContribution": 7.01,
+      "afterAdMarginPercent": 18.95,
+      "fortyMinuteLaborBeforeAd": 4.56,
+      "fortyMinuteLaborAfterAd": -0.99,
+      "ordersFor300Fixed": 24,
+      "ordersFor300FixedAfterAd": 43
+    },
+    "bookingExample": "45-minute appointment starting 11:00 ends 11:45; 15-minute after-buffer ends at 12:00. An 11:45 appointment-availability end prevents the buffer overrunning the noon work limit.",
+    "welcomeSequence": "Two days after email 1, then three days after email 2: approximately five days from entry to final message, subject to actual configured timing."
+  },
+  "topics": [
+    {
+      "id": "ai-social-media-agents",
+      "title": "How to build AI social media agents for your business",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "A documented campaign, verified publishing queue, bounded resource-delivery flow, configured handoff and opt-out, and an evidence log for the fifteen account-level checks in the guide.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Removed the unsupported summary wording “tested Instagram replies”; the fifteen checks remain proposed tests for the reader’s account.",
+        "Rechecked OpenAI custom-plugin capability and supported scheduled-task events, Buffer’s OAuth endpoint, and Manychat’s comment-trigger and messaging-window documentation on November 1. Other source dates are retained individually.",
+        "Preserved the full original guide, ten templates and downloadable working kit. Added a concrete incident-recovery log to the existing stopping procedure.",
+        "No universal ChatGPT plan entitlement, social-message listener, live campaign execution, or successful vendor account test is claimed."
+      ],
+      "sources": [
+        {
+          "title": "Buffer: ChatGPT integration",
+          "url": "https://developers.buffer.com/guides/integrations/chatgpt.html",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "OAuth endpoint and vendor connection instructions."
+          ]
+        },
+        {
+          "title": "Manychat: Instagram comment trigger",
+          "url": "https://help.manychat.com/hc/en-us/articles/14281316989724-Instagram-Post-and-Reel-Comments-trigger",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Specific-post trigger, private reply, qualifying interaction and retest behavior."
+          ]
+        },
+        {
+          "title": "Buffer: connect social channels",
+          "url": "https://support.buffer.com/en-us/articles/connecting-your-channels-to-buffer-HvWLgAJvL9",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Channel permissions and connection setup."
+          ]
+        },
+        {
+          "title": "Buffer: schedule posts",
+          "url": "https://support.buffer.com/en-us/articles/scheduling-posts-4Qdld7giAZ",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Draft, queue and scheduling controls."
+          ]
+        },
+        {
+          "title": "Buffer: AI Assistant",
+          "url": "https://support.buffer.com/en-us/articles/using-buffers-ai-assistant-qbBulfw9sn",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Drafting assistance within Buffer."
+          ]
+        },
+        {
+          "title": "OpenAI: custom MCP server",
+          "url": "https://developers.openai.com/api/docs/guides/custom-mcp-server",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Current custom-plugin setup and read/write capability subject to permissions."
+          ]
+        },
+        {
+          "title": "Buffer: API overview",
+          "url": "https://support.buffer.com/en-us/articles/what-is-buffers-api-GtIYIQilz5",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "API publishing scope and reachable-media requirements."
+          ]
+        },
+        {
+          "title": "Buffer: MCP integration",
+          "url": "https://developers.buffer.com/guides/integrations/mcp",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Available connected-tool interface."
+          ]
+        },
+        {
+          "title": "Buffer: notification publishing",
+          "url": "https://support.buffer.com/en-us/articles/using-notification-publishing-gvZQiMxVa2",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Formats requiring a manual notification-based finish."
+          ]
+        },
+        {
+          "title": "Buffer: draft approvals",
+          "url": "https://support.buffer.com/en-us/articles/requesting-approval-and-approving-draft-posts-57li7M8tDA",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Team approval workflow and plan considerations."
+          ]
+        },
+        {
+          "title": "Buffer: Community",
+          "url": "https://support.buffer.com/en-us/articles/using-community-in-buffer-jvTv4uQacA",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Human-reviewed comment replies rather than universal unattended messaging."
+          ]
+        },
+        {
+          "title": "Manychat: connect Instagram",
+          "url": "https://help.manychat.com/hc/en-us/articles/14281290924444-How-to-connect-Instagram-to-Manychat",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Instagram account and connection requirements."
+          ]
+        },
+        {
+          "title": "Manychat: messaging windows",
+          "url": "https://help.manychat.com/hc/en-us/articles/23358636027932-Understanding-messaging-windows",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Qualifying interactions and limits on automated messages."
+          ]
+        },
+        {
+          "title": "Manychat: AI Replies",
+          "url": "https://help.manychat.com/hc/en-us/articles/23018283889180-Manychat-AI-Replies",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Approved knowledge, AI reply configuration and handoff."
+          ]
+        },
+        {
+          "title": "Manychat: AI features",
+          "url": "https://help.manychat.com/hc/en-us/articles/14281227789468-Power-up-your-chat-marketing-with-Manychat-AI",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Scope and availability of AI features."
+          ]
+        },
+        {
+          "title": "Manychat: AI Comments",
+          "url": "https://help.manychat.com/hc/en-us/articles/23096278263836-Manychat-AI-Comments",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Specific scope of the AI Comments feature."
+          ]
+        },
+        {
+          "title": "Manychat: pause automations",
+          "url": "https://help.manychat.com/hc/en-us/articles/19957883687708-How-to-pause-all-automations",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Pause behavior, terminal action and in-progress work."
+          ]
+        },
+        {
+          "title": "Manychat: keyword trigger",
+          "url": "https://help.manychat.com/hc/en-us/articles/14281211785884-How-to-use-Keywords-Trigger-in-Manychat",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Explicit HELP keyword route."
+          ]
+        },
+        {
+          "title": "Manychat: default opt-out automations",
+          "url": "https://help.manychat.com/hc/en-us/articles/14281186964252-Default-opt-in-and-opt-out-automations",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Stop and Unsubscribe behavior."
+          ]
+        },
+        {
+          "title": "Manychat: unexpected messages",
+          "url": "https://help.manychat.com/hc/en-us/articles/14281436380956-Manychat-is-sending-wrong-messages",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Overlapping automation and duplicate-reply investigation."
+          ]
+        },
+        {
+          "title": "Metricool: Inbox Manager",
+          "url": "https://help.metricool.com/inbox-manager-how-to-manage-messages-and-comments-from-metricool-s9zze",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Network-specific supported inbox actions."
+          ]
+        },
+        {
+          "title": "Metricool: Flows overview",
+          "url": "https://help.metricool.com/what-are-flows-nfody",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Flow scope and temporary plan eligibility."
+          ]
+        },
+        {
+          "title": "Metricool: Instagram Flows",
+          "url": "https://help.metricool.com/flows-on-instagram-v4nx3",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Instagram flow configuration."
+          ]
+        },
+        {
+          "title": "Metricool: Flows limits and permissions",
+          "url": "https://help.metricool.com/flows-limits-restrictions-and-permissions-ebmsi",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Messaging and permission restrictions."
+          ]
+        },
+        {
+          "title": "LinkedIn: authentic content and conversations",
+          "url": "https://news.linkedin.com/2026/authentic-content-and-conversations",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Platform stance on automated inauthentic engagement."
+          ]
+        },
+        {
+          "title": "X: automation rules",
+          "url": "https://help.x.com/en/rules-and-policies/x-automation",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Approval and policy requirements for AI reply bots."
+          ]
+        },
+        {
+          "title": "Manychat: connect TikTok",
+          "url": "https://help.manychat.com/hc/en-us/articles/17928990909084-How-to-connect-TikTok-to-Manychat",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "TikTok integration and eligibility."
+          ]
+        },
+        {
+          "title": "TikTok: business automatic messages",
+          "url": "https://ads.tiktok.com/resources/help/article/how-to-set-up-auto-messages-for-business-accounts?lang=en",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Native business-message options."
+          ]
+        },
+        {
+          "title": "Manychat: connect Facebook",
+          "url": "https://help.manychat.com/hc/en-us/articles/14281086119068-How-to-connect-Facebook-to-Manychat",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Facebook account connection requirements."
+          ]
+        },
+        {
+          "title": "Meta Blueprint: customer connection",
+          "url": "https://formedia.facebookblueprint.com/student/path/253041-meta-business-suite-customer-connection",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Public overview only; detailed signed-in lesson controls not independently inspected."
+          ]
+        },
+        {
+          "title": "Hootsuite: plans",
+          "url": "https://www.hootsuite.com/plans",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Dated plan and pricing reference."
+          ]
+        },
+        {
+          "title": "Sprout Social: pricing",
+          "url": "https://sproutsocial.com/pricing/",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Dated plan and pricing reference."
+          ]
+        },
+        {
+          "title": "Buffer: pricing",
+          "url": "https://buffer.com/pricing",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Dated queue, channel and paid-plan reference."
+          ]
+        },
+        {
+          "title": "Metricool: pricing",
+          "url": "https://metricool.com/pricing/",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Dated account and plan reference."
+          ]
+        },
+        {
+          "title": "Manychat: Free plan",
+          "url": "https://help.manychat.com/hc/en-us/articles/25800197498652-Free-plan",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Current Free plan reference; actual account eligibility can differ."
+          ]
+        },
+        {
+          "title": "Manychat: Pro plan",
+          "url": "https://help.manychat.com/hc/en-us/articles/25800228332572-Pro-plan",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Current Pro plan reference; regional and legacy terms can differ."
+          ]
+        },
+        {
+          "title": "OpenAI: scheduled tasks",
+          "url": "https://learn.chatgpt.com/docs/automations",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Time-based work and supported Gmail, Slack and GitHub events on eligible accounts."
+          ]
+        },
+        {
+          "title": "Buffer: Claude integration",
+          "url": "https://buffer.com/integrations/claude",
+          "checkedAt": "2026-10-31",
+          "claims": [
+            "Alternative official assistant integration route."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Recheck platform permissions, connection actions, pricing and messaging windows before enabling or materially changing a live campaign."
+    },
+    {
+      "id": "email-welcome-sequence",
+      "title": "Build a three-email welcome sequence in MailerLite",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "One confirmed signup group, one live form, and one three-email workflow with a working download, visible sender details, a functioning unsubscribe link, and a written record of delivery checks.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Replaced an outcome description with complete form copy and three original finished emails.",
+        "Updated obsolete Free-plan assumptions using the vendor’s June 2026 change notice.",
+        "Sequence timing and suppression are acceptance checks for the reader, not claims of a completed live send."
+      ],
+      "sources": [
+        {
+          "title": "MailerLite: create an embedded form",
+          "url": "https://www.mailerlite.com/help/how-to-create-an-embedded-form",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Form creation, group selection, settings and success-message controls."
+          ]
+        },
+        {
+          "title": "MailerLite: create an automation workflow",
+          "url": "https://www.mailerlite.com/help/how-to-create-an-automation-workflow",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Group trigger, email and delay actions, activation enrollment choices."
+          ]
+        },
+        {
+          "title": "MailerLite: double opt-in",
+          "url": "https://www.mailerlite.com/help/how-to-use-double-opt-in-when-collecting-subscribers",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Confirmation behavior and paid-only editing of the confirmation email."
+          ]
+        },
+        {
+          "title": "MailerLite: add a form to a website",
+          "url": "https://www.mailerlite.com/help/how-to-add-a-form-to-your-website",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Universal script plus form placement snippet."
+          ]
+        },
+        {
+          "title": "MailerLite: June 2026 Free plan update",
+          "url": "https://www.mailerlite.com/help/free-plan-update-faq",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "250 active subscribers; 2,500 monthly sends; three active automations and forms."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Recheck plan limits, form controls, consent wording, every destination URL, and the live automation whenever the offer or sending setup changes."
+    },
+    {
+      "id": "etsy-listing-workflow",
+      "title": "Draft an accurate Etsy listing with ChatGPT or Claude",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "A saved Etsy listing draft with an accurate title, finished description, real product-photo plan, proposed tags, and a completed record of the facts still requiring seller verification.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Supplied a complete original title and description rather than a description of what AI should output.",
+        "Applied the current October 2026 image policy; did not reuse an older blanket rule about the first image.",
+        "Tag ideas are explicitly unmeasured; no search-volume claim or product-testing claim is made."
+      ],
+      "sources": [
+        {
+          "title": "Etsy: create a listing",
+          "url": "https://help.etsy.com/hc/en-us/articles/115015628707-How-to-Create-a-Listing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Listing tabs, draft option, title limit, processing and shipping controls."
+          ]
+        },
+        {
+          "title": "Etsy: listing image requirements",
+          "url": "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "October 22, 2026 rules for accurate images and real-item photographs, with product-specific exceptions."
+          ]
+        },
+        {
+          "title": "Etsy: optional AI tools for sellers",
+          "url": "https://www.etsy.com/seller-handbook/article/1402347260856",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Etsy describes optional AI assistance; it does not verify this fictional product or its performance."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Review whenever the item, image policy, processing time, carrier rates, product options, or seller policies change."
+    },
+    {
+      "id": "product-launch-content-system",
+      "title": "Build a coordinated product launch in Adobe Express and Kit",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "Three scheduled social posts, one scheduled launch email, and one updated product FAQ, all tied to the same verified offer and a recorded release check.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Replaced a channel-agnostic framework with an Adobe Express and Kit implementation.",
+        "All five example assets contain finished original copy or a concrete visual brief.",
+        "The editorial schedule is illustrative; no assertion is made about an optimal posting time or conversion rate."
+      ],
+      "sources": [
+        {
+          "title": "Adobe Express: connect social accounts",
+          "url": "https://helpx.adobe.com/in/express/web/publish-and-share/share-to-social-media/connect-scheduler.html",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Connections path, provider authorization, and LinkedIn company-page administration requirement."
+          ]
+        },
+        {
+          "title": "Adobe Express: schedule a social post",
+          "url": "https://helpx.adobe.com/express/web/publish-and-share/share-to-social-media/schedule-publish-social-posts.html",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Share, channel, caption, time, media and alt-text controls."
+          ]
+        },
+        {
+          "title": "Adobe Express: Content Scheduler overview",
+          "url": "https://helpx.adobe.com/express/web/publish-and-share/schedule-manage-posts/content-scheduler-overview.html",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Free and Premium connected-account limits."
+          ]
+        },
+        {
+          "title": "Kit: create, send and publish Broadcasts",
+          "url": "https://help.kit.com/en/articles/2934648-creating-sending-and-publishing-broadcasts",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Broadcast creation, previews, recipient selection, scheduling and default audience behavior."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Recheck social permissions, email plan gates, product facts, recipient filters, and scheduled times before every launch."
+    },
+    {
+      "id": "service-lead-follow-up",
+      "title": "Track service inquiries and follow-up in HubSpot",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "A working contact-and-task process for new inquiries, with a controlled example, a first response, one respectful follow-up, reminders to the owner, and a daily overdue review.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Selected one concrete CRM implementation instead of implying that three products share the same controls.",
+        "Distinguished a reminder to staff from an automatic email to a customer.",
+        "Reconciled the two current contact-create interfaces and supplied a complete fictional record and reply pair."
+      ],
+      "sources": [
+        {
+          "title": "HubSpot: create contacts",
+          "url": "https://knowledge.hubspot.com/records/create-contacts",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Email-based contact creation, older interface, data-privacy and marketing-contact distinction."
+          ]
+        },
+        {
+          "title": "HubSpot: create records in the updated interface",
+          "url": "https://knowledge.hubspot.com/records/create-records-on-the-updated-index-page",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Current Add contact and Create new flow for newer accounts."
+          ]
+        },
+        {
+          "title": "HubSpot: create tasks",
+          "url": "https://knowledge.hubspot.com/tasks/create-tasks",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Task fields, associations, owners and paid requirements for workflow-based task creation."
+          ]
+        },
+        {
+          "title": "HubSpot: reminders and daily digest",
+          "url": "https://knowledge.hubspot.com/tasks/task-reminders-and-daily-digest",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Reminder options and internal reminder delivery."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Review when staffing, business hours, contact-creation screens, data-retention rules, or any email automation changes."
+    },
+    {
+      "id": "self-service-booking",
+      "title": "Set up Calendly booking that protects your working hours",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "One public booking link whose duration, location, intake questions, calendar conflicts, and finish time have been checked using a controlled booking, reschedule, and cancellation.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Worked through the actual 45-plus-15-minute edge case instead of assuming buffers constrain the working day.",
+        "Used a no-payment appointment and distinguished confirmation from paid automated reminders.",
+        "The date and time checks are instructions for the reader; no live booking is claimed."
+      ],
+      "sources": [
+        {
+          "title": "Calendly: connect Google Calendar",
+          "url": "https://calendly.com/help/how-to-connect-your-google-calendar",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Conflict calendars, booking destination and optional sync behavior."
+          ]
+        },
+        {
+          "title": "Calendly: event settings",
+          "url": "https://calendly.com/help/how-to-customize-your-event-types",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Duration, location, availability, intake and additional controls."
+          ]
+        },
+        {
+          "title": "Calendly: buffers",
+          "url": "https://calendly.com/help/how-to-use-buffers",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Buffer setup, availability-edge behavior and treatment of existing bookings."
+          ]
+        },
+        {
+          "title": "Calendly: choose a plan",
+          "url": "https://calendly.com/help/choose-the-right-calendly-plan-for-your-team",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Current Free and Standard feature boundaries."
+          ]
+        },
+        {
+          "title": "Calendly: troubleshoot unavailable times",
+          "url": "https://calendly.com/help/how-to-troubleshoot-unavailable-times-that-should-be-available",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Preview and reason-based troubleshooting."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Recheck availability, time zones, connected calendars, existing appointments, and notifications whenever the work schedule or plan changes."
+    },
+    {
+      "id": "honest-review-request-system",
+      "title": "Create a fair, repeatable Google review request process",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "A verified direct review link, one neutral request template, a completion-based eligibility rule, and a log that prevents duplicate requests without suppressing critical feedback.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Removed unnecessary paid-vendor framing from a workflow that can use the direct Google link.",
+        "The process is explicitly manual and avoids review gating.",
+        "No review has been submitted, and the templates do not invent a customer experience."
+      ],
+      "sources": [
+        {
+          "title": "Google: create a review link or QR code",
+          "url": "https://support.google.com/business/answer/16816815",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Read reviews and Get more reviews path; desktop QR option."
+          ]
+        },
+        {
+          "title": "Google: tips for obtaining reviews",
+          "url": "https://support.google.com/business/answer/3474122",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Honest requests, Google Account requirement and public-reply considerations."
+          ]
+        },
+        {
+          "title": "Google Maps: prohibited and restricted content",
+          "url": "https://support.google.com/contributionpolicy/answer/7400114",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "No incentives, selective positive solicitation, prescribed review content or pressured on-premises reviews."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Recheck the profile location, current review policy, contact preferences, and completion trigger whenever the business or request system changes."
+    },
+    {
+      "id": "first-reliable-automation",
+      "title": "Build a protected lead-review queue in Make",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "An authenticated webhook, explicit input schema, a filtered Make scenario, and a data store with one record per accepted event ID, plus a written procedure for duplicates and missing records.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Preserved the intentionally limited internal-queue action and made its manual recovery requirement prominent.",
+        "Added concrete stored output, duplicate-conflict cases, a source-to-destination reconciliation routine and private-header boundary.",
+        "No claim of live webhook execution or automatic exactly-once delivery is made."
+      ],
+      "sources": [
+        {
+          "title": "Make: Custom webhooks",
+          "url": "https://apps.make.com/gateway",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "API-key header, explicit data-structure validation and sample-detection distinction."
+          ]
+        },
+        {
+          "title": "Make: data stores",
+          "url": "https://help.make.com/l6du-data-stores",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Storage allocation, record keys and overwrite-disabled duplicate errors."
+          ]
+        },
+        {
+          "title": "Make: filtering",
+          "url": "https://help.make.com/filtering",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Connection filters and termination when conditions do not pass."
+          ]
+        },
+        {
+          "title": "Make: webhook execution",
+          "url": "https://help.make.com/webhooks",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Instant and scheduled processing, queuing and execution behavior."
+          ]
+        },
+        {
+          "title": "Make: credits",
+          "url": "https://help.make.com/credits",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Operation-based credit model and AI-related differences."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Recheck whenever the sender, payload, API key, data structure, storage allowance, retry policy, or downstream action changes."
+    },
+    {
+      "id": "customer-support-knowledge-base",
+      "title": "Build a useful support knowledge base for Tidio Lyro",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "A small, maintained public knowledge base, a Lyro configuration with a real escalation route, and a test record covering correct answers, missing facts, personal-data requests, and online/offline behavior.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Added a complete six-answer knowledge pack with specific customer-facing output.",
+        "Distinguished public policy information from authenticated order data and actions.",
+        "Used the detailed support documentation for actual online/offline routing and rejected vendor marketing claims of error-free answers.",
+        "Independent catalog review confirmed the one-time allowance and handoff boundary; added the documented Guidance, Behavior/ Messages tabs and ticket destination."
+      ],
+      "sources": [
+        {
+          "title": "Tidio: build a website chatbot",
+          "url": "https://www.tidio.com/blog/how-to-create-a-chatbot-for-a-website/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Knowledge sources, Playground, installation and activation workflow."
+          ]
+        },
+        {
+          "title": "Tidio: Lyro configuration and handoff",
+          "url": "https://help.tidio.com/hc/en-us/articles/9003475527196-Lyro-the-conversational-AI-agent",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Behavior settings and separate online/offline transfer or ticket behavior."
+          ]
+        },
+        {
+          "title": "Tidio: product FAQ",
+          "url": "https://www.tidio.com/faq/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Supported source types and handoff capabilities, without adopting accuracy marketing claims."
+          ]
+        },
+        {
+          "title": "Tidio: current pricing",
+          "url": "https://www.tidio.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "One-time free Lyro allowance and separate support counters."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Recheck whenever policies, product details, knowledge sources, staffing hours, account allowances, or connected actions change."
+    },
+    {
+      "id": "business-operations-hub",
+      "title": "Build a practical business operations hub in Notion",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "A private operations page with a structured task database, an action view, a waiting-work view, a status board, one complete procedure, and a readable export.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Replaced a generic workspace recommendation with a task schema, three finished records, views, and a complete procedure.",
+        "Separated visual filtering from actual permissions and described export limits honestly.",
+        "No automatic reminders or AI actions are implied by a manual board."
+      ],
+      "sources": [
+        {
+          "title": "Notion: create a database",
+          "url": "https://www.notion.com/help/create-a-database",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Database creation and table structure."
+          ]
+        },
+        {
+          "title": "Notion: property types",
+          "url": "https://www.notion.com/help/database-properties",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Title, Person, Date, Status, Select and URL properties."
+          ]
+        },
+        {
+          "title": "Notion: views, filters and sorts",
+          "url": "https://www.notion.com/help/views-filters-and-sorts",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Per-view configuration and view creation."
+          ]
+        },
+        {
+          "title": "Notion: sharing and permissions",
+          "url": "https://www.notion.com/help/sharing-and-permissions",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Page and database sharing controls."
+          ]
+        },
+        {
+          "title": "Notion: database property access",
+          "url": "https://www.notion.com/help/database-property-access",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Plan-specific advanced controls and access limitations."
+          ]
+        },
+        {
+          "title": "Notion: export content",
+          "url": "https://www.notion.com/help/export-your-content",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Markdown and CSV export workflow."
+          ]
+        },
+        {
+          "title": "Notion: database automations",
+          "url": "https://www.notion.com/help/database-automations",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Paid automation access and the limited Free exception."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Review roles, procedures, filters, permissions, exports, and any automation whenever the underlying business process changes."
+    },
+    {
+      "id": "product-profit-check",
+      "title": "Calculate what an Etsy order contributes after fees and labor",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "A complete order-level worksheet showing contribution before and after a hypothetical attributed ad fee, the effect of underestimated labor, and how many similar orders would cover a stated fixed cost.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Recomputed all stated scenario results using decimal arithmetic, with per-fee cent rounding.",
+        "Separated economic contribution, owner-labor allowance, fixed overhead and bank cash.",
+        "Avoided the overbroad claim that every Shopify profit report excludes shipping; the comparison is specifically to Gross profit by product."
+      ],
+      "sources": [
+        {
+          "title": "Etsy: fees and payments policy",
+          "url": "https://www.etsy.com/legal/fees/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Listing allocation, transaction-fee base, advertising and other fee categories."
+          ]
+        },
+        {
+          "title": "Etsy Payments: country-specific processing fees",
+          "url": "https://www.etsy.com/legal/etsy-payments",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "US 3% plus $0.25 processing rate and applicable fee base."
+          ]
+        },
+        {
+          "title": "Etsy: seller fees and taxes",
+          "url": "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Fee categories and seller payment-account records."
+          ]
+        },
+        {
+          "title": "Shopify: cost per item",
+          "url": "https://help.shopify.com/en/manual/products/details/product-pricing/cost-per-item",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Variant cost entry and historical-order behavior."
+          ]
+        },
+        {
+          "title": "Shopify: profit reports",
+          "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Gross profit by product formula, missing-cost limitation and report-selection controls."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Recalculate when prices, fees, fulfillment time, materials, shipping, ad attribution, discounts, or returns change."
+    },
+    {
+      "id": "chatgpt-project-business-brief",
+      "title": "Create a ChatGPT Project that stays grounded in your business facts",
+      "publishedAt": "2026-10-31",
+      "lastReviewed": "2026-11-01",
+      "readerJob": "One ChatGPT Project with a small approved source pack, reusable instructions, a source-linked FAQ, a customer-inquiry draft, and a repeatable check for unsupported or outdated claims.",
+      "evidenceBasis": "Documentation review and original illustrative example; account-level checks are proposed, not observed.",
+      "reviewDecisions": [
+        "Preserved and expanded the original fact-ID approach with two finished outputs and a controlled policy-update exercise.",
+        "Removed unverified legacy memory-setting click paths and universal plan assumptions.",
+        "The examples deliberately distinguish uploaded business facts from external actions and from model confidence."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: Projects and chats",
+          "url": "https://learn.chatgpt.com/docs/projects",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Shared project sources and instructions, separate chats, and explicit file access."
+          ]
+        },
+        {
+          "title": "OpenAI: use ChatGPT",
+          "url": "https://learn.chatgpt.com/docs/use-chatgpt",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Distinction between conversation, context and available actions."
+          ]
+        }
+      ],
+      "maintenanceTrigger": "Update the approved source and affected published outputs whenever prices, inclusions, delivery times, booking processes, or policies change."
+    }
+  ],
+  "knownLimits": [
+    "No site traffic, conversion, earnings, or search-volume evidence is inferred from product documentation.",
+    "Product availability and account-specific UI can differ by plan, permission, region, rollout or legacy account. Material boundaries are stated in each article.",
+    "Custom ChatGPT MCP write entitlement remains account-gated; successful read access is not proof of a working draft action.",
+    "The Make tutorial requires a trusted source capable of keeping its request authentication secret server-side and includes manual reconciliation.",
+    "Financial examples model a hypothetical US order; they are not personalized tax, legal or accounting advice."
+  ],
+  "peerReviews": [
+    {
+      "reviewerRole": "Independent catalog and positioning agent",
+      "checkedAt": "2026-11-01",
+      "topics": [
+        "self-service-booking",
+        "customer-support-knowledge-base"
+      ],
+      "result": "Plan boundaries and noon-finish arithmetic confirmed against current documentation; exact Tidio Guidance, Handoff tabs and Tickets inbox destination added. No live account testing."
+    },
+    {
+      "reviewerRole": "Independent comparison and economics agent",
+      "checkedAt": "2026-11-01",
+      "topics": [
+        "email-welcome-sequence",
+        "product-profit-check"
+      ],
+      "result": "No blocking issue. Reopened MailerLite double-opt-in documentation and Etsy fee policy. Confirmed paid-only confirmation-email editing, Free group-trigger workflow, two-plus-three-day timing, US tax exclusion from transaction/Offsite Ads bases and inclusion in processing base. Independently recalculated all scenario values and worksheet references; no live account tests."
+    }
+  ],
+  "integrationNotes": [
+    {
+      "topic": "email-welcome-sequence",
+      "instruction": "Create the group first through Subscribers → Groups → Create group → enter name → Create, then select it in the form. Root notified to apply after staging freeze.",
+      "source": {
+        "title": "MailerLite: create and use groups",
+        "url": "https://www.mailerlite.com/help/how-to-create-and-use-groups",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Documented group-creation path before form selection."
+        ]
+      }
+    }
+  ]
+}

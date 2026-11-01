@@ -1,0 +1,40 @@
+TUTORIAL EDITORIAL REVIEW — 2026-11-01
+
+Scope completed
+All twelve tutorial records received current review notes and named sources. Eleven structured tutorials now contain concrete business records, finished original example outputs, copyable material, prerequisite checks, failure handling and action-specific acceptance tests. The existing long-form social guide is preserved, its unsupported tested-summary language is removed, and its recovery section now includes a usable incident log. No investor document, live vendor test, or customer campaign was created.
+
+Implementation perspective
+The manual or automatic boundary must be stated beside the action. HubSpot tasks remind an owner; they do not send the supplied customer email. A Notion board does not assign or notify automatically. A Kit Broadcast is a scheduled one-off email, not a Sequence. A queued social post is not proof of publication. Make webhook acknowledgment is not proof that a record persisted.
+
+Reader perspective
+Each core tutorial chooses a concrete implementation rather than listing interchangeable vendors. The material contains actual email bodies, a listing, campaign assets, CRM records, appointment settings, support answers, tasks, a procedure and a calculation worksheet. Illustrative details are marked and placeholders are visible; publication checks require their replacement. The Google-review process needs no paid reputation software. AI is omitted from calculation and data movement where it adds no necessary capability.
+
+Evidence perspective
+Fresh primary documentation materially changed MailerLite Free limits, Etsy image guidance, newer HubSpot contact creation, Calendly buffer edges, Tidio AI allowance and Notion automation expectations. Source claims and check dates are retained in data/research/tutorial-research.json. The social guide keeps individual October 31 sources rather than pretending all 38 pages were reread November 1. No invented search-volume metrics, customer results, screenshots, credentials, or first-person experience were added.
+
+Economic perspective
+MailerLite Free supports the demonstrated basic workflow within current limits. Kit is used for a Broadcast, avoiding an unsupported Free Sequence claim. Tidio's initial 50 Lyro conversations are one-time, distinct from monthly human/flow counters. The US Etsy example uses different transaction and processing bases, includes a labor allowance, and shows negative contribution under the slower-work-plus-ad scenario. Arithmetic was checked locally; actual statements remain authoritative.
+
+Objections resolved
+1. A description of a good output is not a worked example: replaced with finished, inspectable outputs.
+2. Hidden columns are not permissions: Notion access instructions now require underlying access checks.
+3. A policy does not prove order status: the support bot expressly lacks order access and routes private decisions.
+4. A connected chat app does not create a social listener or universal write entitlement: the social capability gate remains.
+5. A repeated Make event is not silently overwritten or automatically recovered: the exception and reconciliation process are explicit.
+6. Booking availability alone does not constrain after-buffers: the noon-finish example calculates the actual final start.
+7. A platform profit report is not automatically the same as order contribution: Shopify wording identifies the specific Gross profit by product report.
+
+Remaining evidence boundaries
+Live provider workflows, delivery, opt-outs, account permissions, ticket routing, and calendar behavior must be observed in the implementing reader's account. The tutorials give precise checks without claiming we performed those account-level actions. Social pricing remains dated October 31 unless an individual source is marked otherwise. Genuine demand and earnings cannot be inferred from these documents.
+
+Peer-review requests
+Challenge the current MailerLite/Kit plan boundary, the one-time Tidio allowance, Make's overwrite-disabled duplicate handling, the exact US Etsy fee bases and arithmetic, and the distinction between a ChatGPT project and an authorized external action. Correct factual objections without shrinking the publication's coverage.
+
+Peer review completed — catalog perspective
+Calendly and Tidio were independently checked against current vendor documentation. The booking arithmetic, Free/Standard boundaries, one-time Lyro allowance and lack of order access were confirmed. The reviewer identified a useful precision improvement: Behavior → Guidance, Handoff behavior tabs, and the Tickets inbox destination; these were added. This was a documentation review, not a live support or booking test.
+
+Peer review completed — economics perspective
+The independent comparison/economics reviewer reopened MailerLite double-opt-in guidance and Etsy fees policy. No blocking issue was found: confirmation-email editing is paid-only, the basic Free group-trigger sequence is feasible, and two plus three days reaches approximately day five. US buyer sales tax is excluded from transaction and Offsite Ads bases but included in payment processing, matching the example. The reviewer independently checked all decimal results and worksheet cell references. This confirms documented assumptions and arithmetic, not live account performance.
+
+Integration detail after staging freeze
+The production editor was notified to make the MailerLite group-creation path explicit before the form: Subscribers → Groups → Create group → name → Create. Official source checked November 1: https://www.mailerlite.com/help/how-to-create-and-use-groups . The playbooks staging array was left frozen as requested.

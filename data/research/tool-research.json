@@ -1,0 +1,4531 @@
+{
+  "updated": "2026-11-01",
+  "title": "Tool profile evidence ledger",
+  "scope": "47 public profiles; internal implementation record",
+  "methodology": {
+    "facts": "Current primary vendor documentation is the authority for that vendor. Prices retain currency, billing term, unit, quota, and material add-ons.",
+    "editorial": "Fit, alternatives, and hypothetical scenarios are editorial judgments from the documented capabilities; they are not vendor endorsements or product tests.",
+    "conflicts": "Conflicting official statements are disclosed; no unverified price or result fills a gap.",
+    "monetization": "Existing affiliate metadata is preserved. Product selection does not assert affiliate approval, earnings, or a measured conversion rate."
+  },
+  "tools": [
+    {
+      "toolId": "chatgpt",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "OpenAI Help — ChatGPT Plus",
+          "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "$20 monthly; no annual billing; API billed separately"
+          ]
+        },
+        {
+          "title": "OpenAI Help — Projects in ChatGPT",
+          "url": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Project instructions, files and shared context"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Everyday assistance with feature and usage limits"
+            ],
+            "sourceUrl": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
+          },
+          {
+            "name": "Plus",
+            "amount": 20,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Higher access and paid consumer features"
+            ],
+            "sourceUrl": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
+          }
+        ],
+        "costDrivers": [
+          "Twelve monthly Plus payments total $240 before tax; there is no annual-discount plan to assume.",
+          "An automation calling the OpenAI API can incur charges even when its owner pays for ChatGPT Plus. Business account requirements are a separate choice."
+        ],
+        "verificationNote": "Official subscription and Projects documentation reviewed. Plus is a consumer subscription; this review does not equate it with a business data agreement or API credit balance."
+      },
+      "sourceConflictOrLimit": "Official subscription and Projects documentation reviewed. Plus is a consumer subscription; this review does not equate it with a business data agreement or API credit balance.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A seller drafting from a verified product specification",
+          "An owner comparing or summarizing files they are allowed to upload",
+          "Repeated tasks that can share a small, maintained business brief"
+        ],
+        "notFor": [
+          "Unattended publication of product, shipping, or refund promises",
+          "Sensitive customer records without an appropriate account and data controls"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "claude",
+            "reason": "Compare for sustained editing of a long source document."
+          },
+          {
+            "toolId": "perplexity",
+            "reason": "Compare when the immediate job is locating and checking public sources."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "claude",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Anthropic — Claude pricing",
+          "url": "https://claude.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free and Pro options; $20 monthly and $200 annual"
+          ]
+        },
+        {
+          "title": "Anthropic Support — Projects",
+          "url": "https://support.anthropic.com/en/articles/9517075-what-are-projects",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Project instructions and reference context"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Limited assistant access"
+            ],
+            "sourceUrl": "https://claude.com/pricing"
+          },
+          {
+            "name": "Pro monthly",
+            "amount": 20,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Higher individual usage and Pro features"
+            ],
+            "sourceUrl": "https://claude.com/pricing"
+          },
+          {
+            "name": "Pro annual",
+            "amount": 200,
+            "period": "year",
+            "billingBasis": "Billed annually",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Same annual subscription tier"
+            ],
+            "sourceUrl": "https://claude.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Annual Pro saves $40 against twelve $20 monthly payments; its exact monthly equivalent is about $16.67.",
+          "Usage limits still apply. An API workflow has separate billing and should not be budgeted as part of the chat subscription."
+        ],
+        "verificationNote": "Official Pro pricing reviewed. Annual total is reported directly so a rounded $17 label does not become an incorrect $204 annual budget."
+      },
+      "sourceConflictOrLimit": "Official Pro pricing reviewed. Annual total is reported directly so a rounded $17 label does not become an incorrect $204 annual budget.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Revising long operating procedures while preserving exceptions",
+          "Producing structured briefs from supplied notes",
+          "Document-heavy solo businesses with a defined review step"
+        ],
+        "notFor": [
+          "Treating a rewrite as approval of a policy",
+          "Replacing source documents with an unverified summary"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "chatgpt",
+            "reason": "Compare when the work spans analysis, research, and several kinds of files."
+          },
+          {
+            "toolId": "notion",
+            "reason": "Choose a maintained documentation home when the main problem is finding approved instructions."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "perplexity",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Perplexity — product and pricing FAQ",
+          "url": "https://www.perplexity.ai/hub",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free core search; Pro $20 monthly or $200 annually"
+          ]
+        },
+        {
+          "title": "Perplexity Help — Max",
+          "url": "https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Max $200 monthly or $2,000 annually"
+          ]
+        },
+        {
+          "title": "Perplexity Help — subscription choices",
+          "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Plan differences and usage restrictions"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Standard",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Core search with account limits"
+            ],
+            "sourceUrl": "https://www.perplexity.ai/hub"
+          },
+          {
+            "name": "Pro",
+            "amount": 20,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Advanced research and file tools; higher usage limits"
+            ],
+            "sourceUrl": "https://www.perplexity.ai/hub"
+          },
+          {
+            "name": "Max",
+            "amount": 200,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Highest individual access tier"
+            ],
+            "sourceUrl": "https://www.perplexity.ai/hub"
+          }
+        ],
+        "costDrivers": [
+          "Annual Pro costs $200 upfront, compared with $240 across twelve monthly payments.",
+          "Model access, file allowances, and premium tools can differ by tier; buying a research plan does not buy independent fact checking."
+        ],
+        "verificationNote": "Official pricing and subscription guidance reviewed. The Max tier is not our default recommendation for an owner doing occasional supplier or market research."
+      },
+      "sourceConflictOrLimit": "Official pricing and subscription guidance reviewed. The Max tier is not our default recommendation for an owner doing occasional supplier or market research.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Finding official documentation before choosing software",
+          "Researching terminology and public market context",
+          "Compiling a source trail for a comparison"
+        ],
+        "notFor": [
+          "Assuming every linked source supports the adjoining sentence",
+          "Publishing a price from a search summary without opening the offer"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "chatgpt",
+            "reason": "Compare for research that must continue into file analysis or a reusable operating brief."
+          },
+          {
+            "toolId": "gemini",
+            "reason": "Compare if the source material already lives in an eligible Google workspace."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "canva",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Canva — US pricing",
+          "url": "https://www.canva.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Pro $144/year; Business $250/person/year; plan differences"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Core design editor with asset and feature restrictions"
+            ],
+            "sourceUrl": "https://www.canva.com/pricing/"
+          },
+          {
+            "name": "Pro",
+            "amount": 144,
+            "period": "year",
+            "billingBasis": "Billed annually",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Brand tools",
+              "Premium design capabilities"
+            ],
+            "sourceUrl": "https://www.canva.com/pricing/"
+          },
+          {
+            "name": "Business",
+            "amount": 250,
+            "period": "year",
+            "billingBasis": "Billed annually",
+            "unit": "per person",
+            "currency": "USD",
+            "included": [
+              "Business collaboration and brand features"
+            ],
+            "sourceUrl": "https://www.canva.com/pricing/"
+          }
+        ],
+        "costDrivers": [
+          "Use the verified $144 annual total when budgeting Pro; this review does not invent a separate monthly-plan price.",
+          "Additional collaborators, plan-specific AI capacity, and paid assets or licensing requirements should be checked for the actual workflow."
+        ],
+        "verificationNote": "The verified US offer is $144 per year for Pro. We report the annual charge directly rather than imply that its monthly equivalent is a separately purchasable monthly plan."
+      },
+      "sourceConflictOrLimit": "US annual offers reviewed by the comparison researcher. We did not verify a universal monthly Pro price and do not infer one from the annual charge.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A shop making consistent product-care cards and social graphics",
+          "Creators updating a recurring guide or announcement",
+          "Small teams that need shared visual templates"
+        ],
+        "notFor": [
+          "Inventing a product appearance that differs from what ships",
+          "Assuming stock or AI assets may be resold without checking their license"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "adobe-express",
+            "reason": "Compare if Adobe assets or its editing workflow already fit your business."
+          },
+          {
+            "toolId": "descript",
+            "reason": "Use for transcript-based video editing rather than a static-design job."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "adobe-express",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Adobe Express — US pricing view",
+          "url": "https://www.adobe.com/express/pricing?rd=1",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "US monthly price; generative credits; scheduling allowance"
+          ]
+        },
+        {
+          "title": "Adobe Help — Premium entitlement",
+          "url": "https://helpx.adobe.com/express/web/adobe-express-subscription/premium.html",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Inclusion with eligible Creative Cloud and Acrobat Studio subscriptions"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Core creation tools with limits"
+            ],
+            "sourceUrl": "https://www.adobe.com/express/pricing?rd=1"
+          },
+          {
+            "name": "Premium",
+            "amount": 9.99,
+            "period": "month",
+            "billingBasis": "Monthly; no annual commitment",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "250 generative credits/month",
+              "Up to 3 accounts per social network"
+            ],
+            "sourceUrl": "https://www.adobe.com/express/pricing?rd=1"
+          }
+        ],
+        "costDrivers": [
+          "Check an existing Creative Cloud or Acrobat Studio subscription before buying Express separately; Premium may already be included.",
+          "A year of twelve monthly payments is $119.88 before tax. Generative allowances and asset rights still need checking for the proposed output."
+        ],
+        "verificationNote": "The US page’s card and feature matrix disagree on Premium storage (100GB versus 10GB). Storage is not used as a deciding claim here; confirm account entitlement if it matters."
+      },
+      "sourceConflictOrLimit": "The US page’s card and feature matrix disagree on Premium storage (100GB versus 10GB). Storage is not used as a deciding claim here; confirm account entitlement if it matters.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Businesses already using Adobe assets and brand files",
+          "Producing repeatable campaign graphics and short media",
+          "Owners who need practical edits without a full professional editing suite"
+        ],
+        "notFor": [
+          "Buying a bundle solely for one occasional resize",
+          "Treating generative credits or stock access as unrestricted rights"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "canva",
+            "reason": "Compare for a template-first business design workflow."
+          },
+          {
+            "toolId": "heygen",
+            "reason": "Use when a permitted avatar-led video is the output, rather than a graphic."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "zapier",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Zapier — pricing",
+          "url": "https://zapier.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free limits; Professional annual entry tier"
+          ]
+        },
+        {
+          "title": "Zapier — pricing explanation",
+          "url": "https://zapier.com/blog/zapier-pricing/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Billable task accounting and plan behavior"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "100 tasks/month",
+              "Trigger plus one action"
+            ],
+            "sourceUrl": "https://zapier.com/pricing"
+          },
+          {
+            "name": "Professional — 750 tasks",
+            "amount": 19.99,
+            "period": "month",
+            "billingBasis": "Billed annually: $239.88",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Multi-step Zaps",
+              "Premium apps and webhooks"
+            ],
+            "sourceUrl": "https://zapier.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "A workflow with 200 events and three billable external actions uses 600 tasks before retries or extra activity; two-step Free cannot run that route.",
+          "Successful external actions normally count as tasks; triggers and polls do not. AI usage, MCP calls, and Agents follow additional accounting rules."
+        ],
+        "verificationNote": "Current pricing and late-October task accounting reviewed. We do not compare a Zapier task with a Make credit as if they represented identical work."
+      },
+      "sourceConflictOrLimit": "Current pricing and late-October task accounting reviewed. We do not compare a Zapier task with a Make credit as if they represented identical work.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A form-to-CRM handoff using supported actions",
+          "An owner who needs a straightforward managed integration",
+          "Low-complexity internal notifications with a clear owner"
+        ],
+        "notFor": [
+          "Assuming a listed app supports every action or custom field",
+          "Unmonitored customer messaging or irreversible record changes"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "make",
+            "reason": "Compare for branching, transformations, or workflows with more visible intermediate data."
+          },
+          {
+            "toolId": "pabbly",
+            "reason": "Compare a supported route when external-action volume makes task economics important."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "make",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Make — current pricing",
+          "url": "https://www.make.com/en/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free credits; schedule limit; Core monthly card"
+          ]
+        },
+        {
+          "title": "Make Help — credits",
+          "url": "https://help.make.com/credits",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Credits and operation/AI usage accounting"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1,000 credits/month",
+              "15-minute scheduled interval"
+            ],
+            "sourceUrl": "https://www.make.com/en/pricing"
+          },
+          {
+            "name": "Core — 10,000 credits",
+            "amount": 12,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Higher capacity and paid scheduling features"
+            ],
+            "sourceUrl": "https://www.make.com/en/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Count the modules that actually execute and the number of bundles they process; a branch or repeated item can increase usage.",
+          "Polling, advanced AI features, and external model/API charges can change the total. The entry credit package is not a promise of a fixed number of finished business jobs."
+        ],
+        "verificationNote": "The $12 Core figure is the monthly 10,000-credit offer checked on the review date. Billing term, currency, and module usage matter when comparing total cost."
+      },
+      "sourceConflictOrLimit": "The current official search representation exposes a $12 monthly Core card while the opened text extractor omits the numeric cards. The value was verified independently for the comparison; confirm the final selected term and currency.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Branching internal workflows with explicit field mapping",
+          "A lead queue or operations log that someone reviews",
+          "Owners comfortable inspecting run history and data bundles"
+        ],
+        "notFor": [
+          "A production process without an assigned failure owner",
+          "Treating a simple duplicate check as a complete recovery system"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "zapier",
+            "reason": "Compare for a short route where the supported connector saves setup effort."
+          },
+          {
+            "toolId": "n8n",
+            "reason": "Compare when code, hosting control, or complex integrations justify a technical operator."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "pabbly",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Pabbly Connect — plans and task FAQ",
+          "url": "https://www.pabbly.com/connect/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free 100 tasks, up to two workflows with two steps each; Standard 10,000 tasks; external action accounting; regional and term-dependent offers"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "100 tasks per month",
+              "Up to two workflows with up to two steps each",
+              "Internal operations do not consume billable tasks"
+            ],
+            "sourceUrl": "https://www.pabbly.com/connect/"
+          },
+          {
+            "name": "Standard",
+            "amount": null,
+            "period": "month",
+            "billingBasis": "Localized monthly, annual, multi-year, and promotional offers",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "10,000 tasks per month"
+            ],
+            "sourceUrl": "https://www.pabbly.com/connect/",
+            "price": "Regional and term-dependent offer"
+          }
+        ],
+        "costDrivers": [
+          "Two external actions for each of 200 events require 400 tasks before retries or extra actions. Triggers and internal filters, routers, and formatters are excluded.",
+          "Confirm the currency, total upfront payment, renewal term, task quota, and team access for the exact offer. A lifetime headline does not establish unlimited capacity."
+        ],
+        "verificationNote": "Offers vary by currency and commitment. The vendor’s page contains conflicting legacy quota descriptions, so compare the current Standard allowance and final renewal terms before purchasing."
+      },
+      "sourceConflictOrLimit": "The canonical page returned localized offers and inconsistent legacy quota text; an older USD search extract redirected to an unrelated tutorial. We therefore report the verified quota and billing unit without presenting an unverified universal USD price. Final canonical-card review confirmed the Free limit of two workflows with up to two steps each. An older cached multi-step Free description was rejected; the worked example flags the paid-plan gate for a separate filtering step.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A proven route with many internal filters or formatters",
+          "Repeat external actions whose task count can be estimated",
+          "Owners willing to inspect connector coverage before buying"
+        ],
+        "notFor": [
+          "Buying a lifetime offer before testing the required integration",
+          "Assuming all regional offers include the same team access or quota"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "make",
+            "reason": "Compare when visual branches and data transformations are central."
+          },
+          {
+            "toolId": "zapier",
+            "reason": "Compare whether its connector supports the exact action more directly."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "mailerlite",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "MailerLite — pricing",
+          "url": "https://www.mailerlite.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Comfort and Power starting rates and allowances"
+          ]
+        },
+        {
+          "title": "MailerLite Help — Free plan update",
+          "url": "https://www.mailerlite.com/help/free-plan-update-faq",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "250 active subscribers; 2,500 sends; three active automations"
+          ]
+        },
+        {
+          "title": "MailerLite Help — plans and billing",
+          "url": "https://www.mailerlite.com/help/plan-and-billing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Annual charges and subscription management"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "250 active subscribers",
+              "2,500 emails/month",
+              "3 active automations"
+            ],
+            "sourceUrl": "https://www.mailerlite.com/pricing"
+          },
+          {
+            "name": "Comfort — 500 subscribers",
+            "amount": 12,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "5,000 emails/month",
+              "3 seats",
+              "50 automations"
+            ],
+            "sourceUrl": "https://www.mailerlite.com/pricing"
+          },
+          {
+            "name": "Power — 500 subscribers",
+            "amount": 25,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Unlimited email sends",
+              "Unlimited seats and automations"
+            ],
+            "sourceUrl": "https://www.mailerlite.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Comfort annual billing is $129.60 ($10.80/month equivalent); Power is $270/year ($22.50 equivalent). Larger subscriber tiers cost more.",
+          "A list of 250 receiving four campaigns and a three-email welcome sequence uses up to 1,750 sends if everyone receives all seven; growth and other sends must fit the remaining quota."
+        ],
+        "verificationNote": "Current Comfort/Power names and the June 2026 Free-plan change reviewed. Older 500-subscriber Free and Growing Business/Advanced descriptions should not be used for a new account."
+      },
+      "sourceConflictOrLimit": "Current Comfort/Power names and the June 2026 Free-plan change reviewed. Older 500-subscriber Free and Growing Business/Advanced descriptions should not be used for a new account.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A small permission-based list with one clear welcome journey",
+          "Creators or services businesses combining forms and newsletters",
+          "A shop willing to test the exact ecommerce trigger it needs"
+        ],
+        "notFor": [
+          "Treating every visitor or checkout email as permission to market",
+          "Assuming an old 500-subscriber or unlimited-send allowance still applies"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "kit",
+            "reason": "Compare if creator segmentation, paid content, or creator commerce drives the business."
+          },
+          {
+            "toolId": "omnisend",
+            "reason": "Compare when shopping events and ecommerce recovery dominate the email workload."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "flodesk",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Flodesk — pricing and plan FAQ",
+          "url": "https://flodesk.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Starting prices; sending and automation gates; subscriber-based pricing"
+          ]
+        },
+        {
+          "title": "Flodesk Help — subscriber pricing and upgrades",
+          "url": "https://help.flodesk.com/en/articles/8923841",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Active-subscriber billing and automatic tier upgrades"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Forms and landing pages; no email sending"
+            ],
+            "sourceUrl": "https://flodesk.com/pricing"
+          },
+          {
+            "name": "Lite — 1,000 subscribers",
+            "amount": 25,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Unlimited email sends",
+              "One workflow under the current offer"
+            ],
+            "sourceUrl": "https://flodesk.com/pricing"
+          },
+          {
+            "name": "Pro — 1,000 subscribers",
+            "amount": 28,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Unlimited workflows",
+              "One integrated checkout"
+            ],
+            "sourceUrl": "https://flodesk.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Prices increase with active subscribers. Exceeding a tier can trigger an automatic upgrade at the next billing date.",
+          "Everything adds multiple checkouts and selling features; Stripe processing remains separate. Annual Lite is displayed at $19/month equivalent and Pro at $25/month equivalent."
+        ],
+        "verificationNote": "Current subscriber-based plans reviewed. The former unlimited flat-rate offer is a legacy entitlement, not the plan a new customer should budget for."
+      },
+      "sourceConflictOrLimit": "Current subscriber-based plans reviewed. The former unlimited flat-rate offer is a legacy entitlement, not the plan a new customer should budget for.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Visual brands sending polished, recurring newsletters",
+          "Creators who want a controlled set of email templates",
+          "A small paid list where design workflow matters"
+        ],
+        "notFor": [
+          "A free ongoing email program",
+          "Choosing on the basis of a legacy unlimited-subscriber price"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "mailerlite",
+            "reason": "Compare when automation capacity and a lower-entry workflow matter more than a design-first editor."
+          },
+          {
+            "toolId": "kit",
+            "reason": "Compare for creator sequences, interest tags, and an audience-centered product business."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "notion",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Notion — pricing",
+          "url": "https://www.notion.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Annual Plus/Business prices; Free limits"
+          ]
+        },
+        {
+          "title": "Notion Help — upgrade or downgrade",
+          "url": "https://www.notion.com/help/upgrade-or-downgrade-your-plan",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Plus availability caveat and AI trial"
+          ]
+        },
+        {
+          "title": "Notion Help — block accounting",
+          "url": "https://www.notion.com/help/understanding-block-usage",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free additions join as owners; two owners trigger the block cap; deleting content does not restore the allowance"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Unlimited blocks with one workspace owner",
+              "1,000 blocks with two or more owners; Free workspace additions join as owners",
+              "5MB per file"
+            ],
+            "sourceUrl": "https://www.notion.com/pricing"
+          },
+          {
+            "name": "Plus",
+            "amount": 10,
+            "period": "month",
+            "billingBasis": "Billed annually; availability may vary",
+            "unit": "per member",
+            "currency": "USD",
+            "included": [
+              "Expanded workspace capacity"
+            ],
+            "sourceUrl": "https://www.notion.com/pricing"
+          },
+          {
+            "name": "Business",
+            "amount": 20,
+            "period": "month",
+            "billingBasis": "Billed annually",
+            "unit": "per member",
+            "currency": "USD",
+            "included": [
+              "Business collaboration and AI entitlement"
+            ],
+            "sourceUrl": "https://www.notion.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Three Plus members total $360/year at the listed annual rate; guests and members serve different roles, so configure access deliberately.",
+          "Plus AI access is a trial rather than a blanket unlimited entitlement. Check the workspace’s available plans before designing an AI-dependent process."
+        ],
+        "verificationNote": "Current plan availability and Free workspace limits reviewed. The comparison uses a listed plan, not a promise that every existing workspace can select it."
+      },
+      "sourceConflictOrLimit": "Current plan availability and Free workspace limits reviewed. The comparison uses a listed plan, not a promise that every existing workspace can select it.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A maintained business handbook or content brief library",
+          "Solo operators organizing related notes and project pages",
+          "Small teams with clear page ownership"
+        ],
+        "notFor": [
+          "Complex record-level access rules without a permissions design",
+          "Treating every viewer as a paid workspace member by default"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "trello",
+            "reason": "Choose when the main job is moving tasks through a few visible stages."
+          },
+          {
+            "toolId": "airtable",
+            "reason": "Compare for linked records, structured fields, and operational interfaces."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "trello",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Trello — plan pricing",
+          "url": "https://trello.com/en/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Monthly and annual seat rates; board and automation limits"
+          ]
+        },
+        {
+          "title": "Atlassian Support — choose a Trello plan",
+          "url": "https://support.atlassian.com/trello/docs/which-trello-plan-is-best-for-me/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free collaborator limit; everyone is an admin in a Free Workspace; Standard and Premium differences"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "10 collaborators",
+              "10 boards",
+              "250 automation command runs/month"
+            ],
+            "sourceUrl": "https://trello.com/en/pricing"
+          },
+          {
+            "name": "Standard",
+            "amount": 6,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per user",
+            "currency": "USD",
+            "included": [
+              "Unlimited boards",
+              "Custom fields",
+              "1,000 automation command runs/month"
+            ],
+            "sourceUrl": "https://trello.com/en/pricing"
+          },
+          {
+            "name": "Premium",
+            "amount": 12.5,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per user",
+            "currency": "USD",
+            "included": [
+              "Additional views and admin controls",
+              "Unlimited command runs"
+            ],
+            "sourceUrl": "https://trello.com/en/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Five Standard users cost $30 on monthly billing or $300 for a year at the annual rate, before tax.",
+          "Workspace membership and guests can affect billing. Power-Ups can have separate charges even though adding them is allowed."
+        ],
+        "verificationNote": "Official pricing and plan guide reviewed. Free Workspace permissions are a material tradeoff when a board is shared with clients."
+      },
+      "sourceConflictOrLimit": "Official pricing and plan guide reviewed. Free Workspace permissions are a material tradeoff when a board is shared with clients.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A custom-order or content board with clear stages",
+          "Small teams that need visible ownership and deadlines",
+          "Recurring checklists without a complex data model"
+        ],
+        "notFor": [
+          "Sensitive client collaboration in a broadly editable Free Workspace",
+          "Relational inventory or financial records needing stronger structure"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "notion",
+            "reason": "Compare for written procedures and context around a task."
+          },
+          {
+            "toolId": "airtable",
+            "reason": "Compare when orders need linked products, structured reporting, or custom interfaces."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "airtable",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Airtable — pricing",
+          "url": "https://www.airtable.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Team monthly and annual rates; record capacity"
+          ]
+        },
+        {
+          "title": "Airtable Support — billable collaborators",
+          "url": "https://support.airtable.com/articles/8704138241-adding-removing-and-managing-billable-collaborators-in-airtable",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Current billable-role guidance"
+          ]
+        },
+        {
+          "title": "Airtable Support — automation allowances",
+          "url": "https://support.airtable.com/articles/3669392397-Getting-started-with-Airtable-automations",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free and Team monthly automation runs"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1,000 records/base",
+              "100 automation runs/workspace/month"
+            ],
+            "sourceUrl": "https://www.airtable.com/pricing"
+          },
+          {
+            "name": "Team",
+            "amount": 24,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per billable collaborator",
+            "currency": "USD",
+            "included": [
+              "50,000 records/base",
+              "25,000 automation runs/month"
+            ],
+            "sourceUrl": "https://www.airtable.com/pricing"
+          },
+          {
+            "name": "Team annual",
+            "amount": 20,
+            "period": "month",
+            "billingBasis": "Billed annually",
+            "unit": "per billable collaborator",
+            "currency": "USD",
+            "included": [
+              "Same Team capacity"
+            ],
+            "sourceUrl": "https://www.airtable.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Five Team editors cost $120/month, or $1,200/year at the annual rate. Count all billable roles before inviting collaborators.",
+          "An automation trigger can consume a run even when the workflow fails; capacity should allow for testing and repair."
+        ],
+        "verificationNote": "The October 30 billing article lists Owner/Creator/Editor as billable, while another overview still includes Commenter. We use editor-based examples and advise checking the invoice preview for actual roles."
+      },
+      "sourceConflictOrLimit": "The October 30 billing article lists Owner/Creator/Editor as billable, while another overview still includes Commenter. We use editor-based examples and advise checking the invoice preview for actual roles.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Linked product, content, or operations records",
+          "A custom internal queue with consistent fields",
+          "Teams with someone responsible for schema and permissions"
+        ],
+        "notFor": [
+          "Using a public view as a substitute for tested access controls",
+          "Building a custom CRM when a standard sales process would suffice"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "notion",
+            "reason": "Compare when the primary output is readable documentation rather than relational data."
+          },
+          {
+            "toolId": "hubspot",
+            "reason": "Compare for a standard contact/deal/task process that avoids maintaining a custom CRM."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "erank",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "eRank — plans and pricing",
+          "url": "https://erank.com/plans",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free and paid limits; monthly and annual amounts"
+          ]
+        },
+        {
+          "title": "eRank Help — FAQ",
+          "url": "https://help.erank.com/faq/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Connected-shop allowances by plan"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "5 keyword lookups/day",
+              "1 shop; 50 listings"
+            ],
+            "sourceUrl": "https://erank.com/plans"
+          },
+          {
+            "name": "Basic",
+            "amount": 5.99,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "100 keyword lookups/day",
+              "5 monitored competitors",
+              "200 connected listings"
+            ],
+            "sourceUrl": "https://erank.com/plans"
+          },
+          {
+            "name": "Pro",
+            "amount": 9.99,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "200 keyword lookups/day",
+              "50 monitored competitors",
+              "4,000 connected listings"
+            ],
+            "sourceUrl": "https://erank.com/plans"
+          }
+        ],
+        "costDrivers": [
+          "Basic is sufficient for a focused research batch if five monitored competitors and 200 connected listings cover the shop.",
+          "Annual Basic is $65.99 and Pro $94.99 upfront. Pay for additional monitoring or listing capacity only when those limits obstruct a real job."
+        ],
+        "verificationNote": "Pricing and shop limits reviewed. Keyword and competitor estimates are research inputs; this review does not claim eRank caused a sales increase."
+      },
+      "sourceConflictOrLimit": "Pricing and shop limits reviewed. Keyword and competitor estimates are research inputs; this review does not claim eRank caused a sales increase.",
+      "editorialJudgment": {
+        "bestFor": [
+          "An Etsy seller researching a small batch of listings",
+          "Comparing several relevant keyword phrases before editing",
+          "Shops that can record changes and examine their own results"
+        ],
+        "notFor": [
+          "Choosing a product solely because a keyword appears popular",
+          "Rewriting every listing at once without a comparison record"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "marmalead",
+            "reason": "Compare its research presentation and AI suggestions on the same five listings."
+          },
+          {
+            "toolId": "ubersuggest",
+            "reason": "Use for an owned website’s search questions rather than treating web and Etsy search as identical."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "marmalead",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Marmalead — Chrome extension and current pricing",
+          "url": "https://blog.marmalead.com/marmalead-chrome-extension/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Monthly, annual and lifetime prices; subscription required for full extension features"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Monthly",
+            "amount": 19,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Keyword research",
+              "Marma AI",
+              "Chrome extension access"
+            ],
+            "sourceUrl": "https://blog.marmalead.com/marmalead-chrome-extension/"
+          },
+          {
+            "name": "Annual",
+            "amount": 16,
+            "period": "month",
+            "billingBasis": "Billed annually: $192",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Same published core tool set"
+            ],
+            "sourceUrl": "https://blog.marmalead.com/marmalead-chrome-extension/"
+          },
+          {
+            "name": "Lifetime offer",
+            "amount": 300,
+            "period": "one-time",
+            "billingBasis": "Displayed one-time offer",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Published lifetime offer; confirm terms at checkout"
+            ],
+            "sourceUrl": "https://blog.marmalead.com/marmalead-chrome-extension/"
+          }
+        ],
+        "costDrivers": [
+          "The $300 lifetime offer equals about 15.8 payments at $19, but that comparison assumes continued use and unchanged access.",
+          "A listing grade alone is not a reason to buy; decide whether the keyword workflow improves decisions you can measure in Etsy."
+        ],
+        "verificationNote": "Marmalead publishes these rates in its official extension guide. Lifetime access is an offer to evaluate, not a prediction of future product support."
+      },
+      "sourceConflictOrLimit": "Marmalead publishes these rates in its official extension guide. Lifetime access is an offer to evaluate, not a prediction of future product support.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Etsy sellers who want structured keyword and listing feedback",
+          "A seller comparing research tools on an actual editing task",
+          "Shops with a repeatable process for recording listing changes"
+        ],
+        "notFor": [
+          "Buying lifetime access before using the workflow",
+          "Treating an AI suggestion or grade as evidence of future sales"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "erank",
+            "reason": "Compare a lower-cost entry plan and explicit lookup/monitoring allowances."
+          },
+          {
+            "toolId": "chatgpt",
+            "reason": "Use for drafting from verified facts after keyword research, not for inventing search-volume data."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "hubspot",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "HubSpot — Sales Hub pricing",
+          "url": "https://www.hubspot.com/pricing/sales",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Standard Starter rate; Professional annual rate; onboarding and commitment"
+          ]
+        },
+        {
+          "title": "HubSpot — CRM product",
+          "url": "https://www.hubspot.com/products/crm",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Core contact, deal and task workflow"
+          ]
+        },
+        {
+          "title": "HubSpot Knowledge Base — create contacts",
+          "url": "https://knowledge.hubspot.com/records/create-contacts",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Core contact creation; email-based duplicate handling; account-specific index UI"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free CRM",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Core contact, deal, and task tools within Free limits"
+            ],
+            "sourceUrl": "https://www.hubspot.com/pricing/sales"
+          },
+          {
+            "name": "Sales Starter",
+            "amount": 20,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per seat",
+            "currency": "USD",
+            "included": [
+              "Entry paid sales tools"
+            ],
+            "sourceUrl": "https://www.hubspot.com/pricing/sales"
+          },
+          {
+            "name": "Sales Professional",
+            "amount": 90,
+            "period": "month",
+            "billingBasis": "Annual commitment; $1,500 onboarding additional",
+            "unit": "per seat",
+            "currency": "USD",
+            "included": [
+              "Sequences",
+              "Custom sales workflows"
+            ],
+            "sourceUrl": "https://www.hubspot.com/pricing/sales"
+          }
+        ],
+        "costDrivers": [
+          "Five Professional seats at the annual rate plus onboarding cost $6,900 in year one before tax and other products.",
+          "Professional can also show $100/month payment with an annual commitment. Payment frequency is not permission to cancel the contract monthly."
+        ],
+        "verificationNote": "Standard pricing is used instead of the introductory Starter promotion. Sequences are not presented as a Free or Starter feature."
+      },
+      "sourceConflictOrLimit": "Standard pricing is used instead of the introductory Starter promotion. Sequences are not presented as a Free or Starter feature.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A service team organizing inquiries, deals, and follow-up tasks",
+          "Businesses likely to use a connected marketing or support suite",
+          "Owners who want standard CRM objects instead of a custom database"
+        ],
+        "notFor": [
+          "Buying Sales Professional for a workflow that a manual task already covers",
+          "Assuming an introductory promotional seat rate is the ongoing cost"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "pipedrive",
+            "reason": "Compare for a focused visual sales pipeline with paid email automation."
+          },
+          {
+            "toolId": "zoho-crm",
+            "reason": "Compare for a lower-cost edition-based CRM with three Free users."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "pipedrive",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Pipedrive — pricing",
+          "url": "https://www.pipedrive.com/en/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Lite/Growth monthly and annual seat rates"
+          ]
+        },
+        {
+          "title": "Pipedrive Support — plan features",
+          "url": "https://support.pipedrive.com/en/article/what-features-do-the-pipedrive-plans-have",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Growth email, automation, and sequence gates"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Lite",
+            "amount": 24,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per seat",
+            "currency": "USD",
+            "included": [
+              "Core pipeline and activities"
+            ],
+            "sourceUrl": "https://www.pipedrive.com/en/pricing"
+          },
+          {
+            "name": "Growth",
+            "amount": 49,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per seat",
+            "currency": "USD",
+            "included": [
+              "Email synchronization",
+              "Automations",
+              "Sequences"
+            ],
+            "sourceUrl": "https://www.pipedrive.com/en/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Three Growth users cost $147 on monthly billing or $1,404/year at the annual rate.",
+          "Price required lead intake, email, reports, and add-ons together. A trial is not a permanent free plan."
+        ],
+        "verificationNote": "Current Lite/Growth plans reviewed. Older Essential/Advanced pricing should not be mixed into this plan comparison."
+      },
+      "sourceConflictOrLimit": "Current Lite/Growth plans reviewed. Older Essential/Advanced pricing should not be mixed into this plan comparison.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Quote-led services with a repeatable sales process",
+          "Teams that need a visible activity queue",
+          "Businesses willing to pay for integrated email and automations"
+        ],
+        "notFor": [
+          "A permanent free CRM requirement",
+          "Assuming Lite includes the same email and sequence tools as Growth"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "hubspot",
+            "reason": "Compare when contacts and sales must connect to a broader support or marketing suite."
+          },
+          {
+            "toolId": "zoho-crm",
+            "reason": "Compare for edition-based CRM features and a small Free team."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "semrush",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Semrush — SEO and AI Search pricing",
+          "url": "https://www.semrush.com/pricing/seo-ai-search/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Current displayed SEO and Starter prices and capacity"
+          ]
+        },
+        {
+          "title": "Semrush — subscription questions",
+          "url": "https://www.semrush.com/semrush-questions/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Separate toolkit structure; legacy SEO Classic naming"
+          ]
+        },
+        {
+          "title": "Semrush — Free account limits",
+          "url": "https://www.semrush.com/blog/what-can-i-do-with-a-free-account-from-semrush/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Limited permanent free account; query and tracking capacity"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free account",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "10 domain queries/day",
+              "10 tracked keywords"
+            ],
+            "sourceUrl": "https://www.semrush.com/blog/what-can-i-do-with-a-free-account-from-semrush/"
+          },
+          {
+            "name": "SEO",
+            "amount": 139,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "5 monitored websites",
+              "500 daily tracked keywords",
+              "Site audit and keyword research"
+            ],
+            "sourceUrl": "https://www.semrush.com/pricing/seo-ai-search/"
+          },
+          {
+            "name": "SEO + AI Search Starter",
+            "amount": 199,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "5 websites; 500 keywords",
+              "50 tracked AI prompts",
+              "1 domain for AI brand performance"
+            ],
+            "sourceUrl": "https://www.semrush.com/pricing/seo-ai-search/"
+          }
+        ],
+        "costDrivers": [
+          "The base toolkit is only part of the potential bill: separate content, local, social, traffic, and other toolkits can increase the subscription.",
+          "A $139 monthly subscription needs a recurring research or audit job. A small site publishing infrequently may not use enough capacity to justify it."
+        ],
+        "verificationNote": "The current pricing page supersedes a separate FAQ still listing SEO Classic at $139.95 and Semrush One at $199.95. We use the live offer rather than blend the two naming systems."
+      },
+      "sourceConflictOrLimit": "The current pricing page supersedes a separate FAQ still listing SEO Classic at $139.95 and Semrush One at $199.95. We use the live offer rather than blend the two naming systems.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A maintained website with recurring SEO work",
+          "Teams able to act on technical audits and content research",
+          "Several sites that can use the paid monitoring capacity"
+        ],
+        "notFor": [
+          "Buying a large toolkit before there is a publishing or repair process",
+          "Treating estimated competitor traffic as actual analytics"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "ubersuggest",
+            "reason": "Compare for one smaller website and a more limited research budget."
+          },
+          {
+            "toolId": "erank",
+            "reason": "Use for Etsy marketplace-specific listing research rather than general website SEO."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "ubersuggest",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Ubersuggest — current pricing and limits",
+          "url": "https://ubersuggest.com/en/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Project, reporting, tracking and crawl limits"
+          ]
+        },
+        {
+          "title": "Ubersuggest — annual plan display",
+          "url": "https://app.neilpatel.com/en/pricing?iframe=yes",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Individual $192 annual charge and $29 monthly reference"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Individual",
+            "amount": 29,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1 project",
+              "150 reports/day",
+              "125 tracked keywords"
+            ],
+            "sourceUrl": "https://ubersuggest.com/en/pricing"
+          },
+          {
+            "name": "Individual annual",
+            "amount": 16,
+            "period": "month",
+            "billingBasis": "Billed annually: $192",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1 project"
+            ],
+            "sourceUrl": "https://ubersuggest.com/en/pricing"
+          },
+          {
+            "name": "Business",
+            "amount": 49,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "7 projects",
+              "300 reports/day"
+            ],
+            "sourceUrl": "https://ubersuggest.com/en/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Count sites, tracked keywords, and audit pages before comparing subscriptions. The Individual audit allowance shown is 1,000 pages per project.",
+          "Lifetime offers require an upfront payment and can differ from recurring-plan entitlements. Compare the exact checkout inclusions, not a discount percentage."
+        ],
+        "verificationNote": "Official recurring-plan prices and limits reviewed. The pricing page uses a dynamic offer selector; we do not assume every promotional lifetime bundle has identical AI allowances."
+      },
+      "sourceConflictOrLimit": "Official recurring-plan prices and limits reviewed. The pricing page uses a dynamic offer selector; we do not assume every promotional lifetime bundle has identical AI allowances.",
+      "editorialJudgment": {
+        "bestFor": [
+          "One-site owners with a small recurring SEO task",
+          "A bounded technical audit or content-refresh project",
+          "Businesses comparing recurring and upfront software costs carefully"
+        ],
+        "notFor": [
+          "Using a keyword estimate as a traffic or revenue guarantee",
+          "Choosing a lifetime offer without checking its exact entitlements"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "semrush",
+            "reason": "Compare for a larger recurring research workload or broader toolkit needs."
+          },
+          {
+            "toolId": "perplexity",
+            "reason": "Use for locating source material, while keeping keyword estimates and source research distinct."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "calendly",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Calendly — pricing",
+          "url": "https://calendly.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Annual seat rates; Free, Standard and Teams gates"
+          ]
+        },
+        {
+          "title": "Calendly Help — plan selection",
+          "url": "https://calendly.com/help/choose-the-right-calendly-plan-for-your-team",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "One calendar Free; six conflict calendars Standard"
+          ]
+        },
+        {
+          "title": "Calendly Help — buffers",
+          "url": "https://calendly.com/help/how-to-use-buffers",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "All-plan buffers; edge-of-hours and existing-booking behavior"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "One event type",
+              "One calendar connection",
+              "Unlimited one-to-one meetings"
+            ],
+            "sourceUrl": "https://calendly.com/pricing"
+          },
+          {
+            "name": "Standard",
+            "amount": 10,
+            "period": "month",
+            "billingBasis": "Billed annually",
+            "unit": "per seat",
+            "currency": "USD",
+            "included": [
+              "Unlimited event types",
+              "Up to six conflict-check calendars",
+              "Automated reminders"
+            ],
+            "sourceUrl": "https://calendly.com/pricing"
+          },
+          {
+            "name": "Teams",
+            "amount": 16,
+            "period": "month",
+            "billingBasis": "Billed annually",
+            "unit": "per seat",
+            "currency": "USD",
+            "included": [
+              "Team scheduling and lead routing"
+            ],
+            "sourceUrl": "https://calendly.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "One Standard host costs $120/year at the displayed annual rate. Invitees do not require a paid seat.",
+          "AI meeting products and team routing are separate buying decisions. Payment-processor charges are not included in the scheduling seat price."
+        ],
+        "verificationNote": "Plan guidance and buffer behavior reviewed. Standard is useful when a second meeting type or calendar is required; buffers alone do not require an upgrade."
+      },
+      "sourceConflictOrLimit": "Plan guidance and buffer behavior reviewed. Standard is useful when a second meeting type or calendar is required; buffers alone do not require an upgrade.",
+      "editorialJudgment": {
+        "bestFor": [
+          "One-to-one consultations with clear availability",
+          "Owners who need a booking link and conflict checking",
+          "Teams evaluating routing only after proving basic scheduling"
+        ],
+        "notFor": [
+          "Assuming buffers keep preparation or travel inside opening hours",
+          "A package or membership business that needs richer appointment commerce"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "acuity",
+            "reason": "Compare for deposits, intake, packages, memberships, or several service calendars."
+          },
+          {
+            "toolId": "hubspot",
+            "reason": "Compare the booking capability already available in an existing CRM before adding a separate product."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "acuity",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Acuity Scheduling — pricing",
+          "url": "https://www.acuityscheduling.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Monthly and annual prices; calendar counts; paid feature gates"
+          ]
+        },
+        {
+          "title": "Acuity — scheduling comparison",
+          "url": "https://www.acuityscheduling.com/compare/acuity-vs-calendly",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Appointment, class and service-business orientation"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Starter",
+            "amount": 20,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1 calendar",
+              "Intake forms",
+              "Email reminders",
+              "Payment integrations"
+            ],
+            "sourceUrl": "https://www.acuityscheduling.com/pricing/"
+          },
+          {
+            "name": "Standard",
+            "amount": 34,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Up to 6 calendars",
+              "Text reminders",
+              "Packages and memberships"
+            ],
+            "sourceUrl": "https://www.acuityscheduling.com/pricing/"
+          },
+          {
+            "name": "Premium",
+            "amount": 61,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Up to 36 calendars"
+            ],
+            "sourceUrl": "https://www.acuityscheduling.com/pricing/"
+          }
+        ],
+        "costDrivers": [
+          "Annual Starter totals $192; annual Standard totals $324. Compare calendars required, rather than multiplying a meeting-seat price.",
+          "Payment processing remains separate. Packages, memberships, and text reminders are reasons to inspect Standard rather than assume Starter includes them."
+        ],
+        "verificationNote": "Current official plans reviewed. Acuity offers a seven-day trial; that is different from a permanent free scheduling plan."
+      },
+      "sourceConflictOrLimit": "Current official plans reviewed. Acuity offers a seven-day trial; that is different from a permanent free scheduling plan.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Paid appointments with intake and reminders",
+          "Services selling packages or memberships on a suitable plan",
+          "Businesses scheduling several staff or locations"
+        ],
+        "notFor": [
+          "A permanent free booking requirement",
+          "Assuming a booking subscription includes payment-processing fees"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "calendly",
+            "reason": "Choose when a meeting link and conflict checking are the primary job."
+          },
+          {
+            "toolId": "shopify",
+            "reason": "Compare an existing commerce checkout for product-like bookings before duplicating payment administration."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "tidio",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Tidio — current pricing",
+          "url": "https://www.tidio.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Separate usage meters; Free allowance; annual entry rates"
+          ]
+        },
+        {
+          "title": "Tidio — website chatbot setup guide",
+          "url": "https://www.tidio.com/blog/how-to-create-a-chatbot-for-a-website/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Knowledge sources; testing; human handoff setup"
+          ]
+        },
+        {
+          "title": "Tidio Help — Flow limits",
+          "url": "https://help.tidio.com/hc/en-us/articles/5454293485596-The-monthly-flow-limit",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Flows count unique visitors reached and stop at quota"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "50 billable conversations",
+              "50 Lyro conversations once",
+              "Flows: 100 visitors reached"
+            ],
+            "sourceUrl": "https://www.tidio.com/pricing/"
+          },
+          {
+            "name": "Starter",
+            "amount": 24.17,
+            "period": "month",
+            "billingBasis": "Monthly equivalent, billed annually",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "100 billable conversations"
+            ],
+            "sourceUrl": "https://www.tidio.com/pricing/"
+          },
+          {
+            "name": "Lyro AI Agent",
+            "amount": 32.5,
+            "period": "month",
+            "billingBasis": "Monthly equivalent, billed annually; standalone or add-on",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "From 50 AI conversations"
+            ],
+            "sourceUrl": "https://www.tidio.com/pricing/"
+          }
+        ],
+        "costDrivers": [
+          "Human-support conversations, Lyro conversations, and Flow visitors have separate meters. A paid inbox does not automatically replenish the one-time free Lyro allowance.",
+          "Buying annual Starter and entry Lyro together is approximately $56.67/month equivalent before tax; select actual volume before committing."
+        ],
+        "verificationNote": "Pricing and implementation documentation reviewed. Vendor resolution-rate marketing is not a forecast for a new shop; a maintained knowledge base and tested handoff remain necessary."
+      },
+      "sourceConflictOrLimit": "Pricing and implementation documentation reviewed. Vendor resolution-rate marketing is not a forecast for a new shop; a maintained knowledge base and tested handoff remain necessary.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A small shop with repeated, documented policy questions",
+          "Businesses combining live support with a carefully bounded AI pilot",
+          "Teams able to review unanswered and incorrect responses"
+        ],
+        "notFor": [
+          "A business with no reliable help content or escalation owner",
+          "Assuming live-chat payment makes AI conversations unlimited"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "intercom",
+            "reason": "Compare for a larger support operation needing team routing and outcome-priced AI."
+          },
+          {
+            "toolId": "notion",
+            "reason": "Use to maintain internal approved answers, while keeping the public support channel separate."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "intercom",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Intercom — plans and Fin pricing",
+          "url": "https://www.intercom.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Current seat offer; Fin outcome rate; separate channel usage"
+          ]
+        },
+        {
+          "title": "Intercom Help — inspect Fin conversations",
+          "url": "https://www.intercom.com/help/en/articles/7860256-view-fin-ai-agent-s-conversations-from-the-inbox",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Review AI conversations in the inbox"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Essential — displayed offer",
+            "amount": 19,
+            "period": "month",
+            "billingBasis": "Annual billing; page shows $29 struck through",
+            "unit": "per seat",
+            "currency": "USD",
+            "included": [
+              "Shared inbox",
+              "Public help center"
+            ],
+            "sourceUrl": "https://www.intercom.com/pricing"
+          },
+          {
+            "name": "Advanced",
+            "amount": 85,
+            "period": "month",
+            "billingBasis": "Billed annually",
+            "unit": "per seat",
+            "currency": "USD",
+            "included": [
+              "Workflow builder",
+              "Multiple team inboxes"
+            ],
+            "sourceUrl": "https://www.intercom.com/pricing"
+          },
+          {
+            "name": "Fin AI usage",
+            "amount": 0.99,
+            "period": "outcome",
+            "billingBasis": "Usage-based, from this rate",
+            "unit": "per Fin outcome",
+            "currency": "USD",
+            "included": [
+              "Additional to platform seats"
+            ],
+            "sourceUrl": "https://www.intercom.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "At the displayed entry offer, one seat plus 100 billable Fin outcomes is $118/month equivalent before other usage and taxes. This is arithmetic, not a support-volume forecast.",
+          "Outbound campaigns, SMS, WhatsApp, phone usage, seats, and automation requirements can raise the total. Ask what counts as an outcome for the intended workflow."
+        ],
+        "verificationNote": "The pricing page advertises a discounted Essential rate without a universal renewal guarantee. We label the offer and keep Fin usage separate from the seat subscription."
+      },
+      "sourceConflictOrLimit": "The pricing page advertises a discounted Essential rate without a universal renewal guarantee. We label the offer and keep Fin usage separate from the seat subscription.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A growing support team with maintained help content",
+          "Businesses needing structured routing and inbox responsibilities",
+          "Teams that can review AI outcomes and usage together"
+        ],
+        "notFor": [
+          "A tiny support workload with no content-maintenance owner",
+          "Budgeting only the advertised seat price"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "tidio",
+            "reason": "Compare for a smaller shop evaluating a support inbox plus a bounded AI allowance."
+          },
+          {
+            "toolId": "hubspot",
+            "reason": "Compare the support product in an existing customer platform before adding a second record system."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "birdeye",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Birdeye — pricing",
+          "url": "https://birdeye.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Location-based configured platform offer"
+          ]
+        },
+        {
+          "title": "Birdeye — how pricing works in 2026",
+          "url": "https://birdeye.com/blog/what-does-birdeye-cost/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Products, locations and contract structure determine price"
+          ]
+        },
+        {
+          "title": "Google Business Profile Help — request honest reviews",
+          "url": "https://support.google.com/business/answer/3474122",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Genuine reviews; no incentives; review link and QR code"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Configured platform",
+            "amount": null,
+            "period": "month",
+            "billingBasis": "Written quote and contract",
+            "unit": "per location and selected products",
+            "currency": "USD",
+            "included": [
+              "Selected review, listings, messaging and other products"
+            ],
+            "sourceUrl": "https://birdeye.com/pricing/"
+          }
+        ],
+        "costDrivers": [
+          "Request a quote for the exact location count, products, onboarding, messaging allowance, and renewal term; compare the annual commitment.",
+          "For reviews at one location, compare a focused review tool and a manual Google review link before paying for a wider local-marketing suite."
+        ],
+        "verificationNote": "Official quote-only pricing reviewed. Third-party lists of $299 or other starting prices were not accepted as a current quote."
+      },
+      "sourceConflictOrLimit": "Official quote-only pricing reviewed. Third-party lists of $299 or other starting prices were not accepted as a current quote.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Multi-location teams needing consistent review operations",
+          "Businesses combining reviews with other local-marketing products",
+          "Operators with an owner for sensitive replies and recurring issues"
+        ],
+        "notFor": [
+          "A low-volume single-location request that a native link already handles",
+          "Budgeting from an unverified third-party starting price"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "nicejob",
+            "reason": "Compare for focused completed-job review requests at a smaller operation."
+          },
+          {
+            "toolId": "gatherup",
+            "reason": "Compare location-based feedback and reputation workflows with explicit annual terms."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "nicejob",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "NiceJob — current pricing",
+          "url": "https://get.nicejob.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Starter and Pro rates; Sites setup and ongoing fee"
+          ]
+        },
+        {
+          "title": "NiceJob Help — campaigns",
+          "url": "https://help.nicejob.com/en/articles/3133773-what-is-a-nicejob-campaign",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Campaign-based review follow-up"
+          ]
+        },
+        {
+          "title": "Google Business Profile Help — request honest reviews",
+          "url": "https://support.google.com/business/answer/3474122",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Genuine reviews; no incentives; review link and QR code"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Starter",
+            "amount": 75,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "SMS/email review requests",
+              "Website review widgets",
+              "Social sharing"
+            ],
+            "sourceUrl": "https://get.nicejob.com/pricing"
+          },
+          {
+            "name": "Pro",
+            "amount": 125,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Referral and repeat-customer campaigns",
+              "AI review replies"
+            ],
+            "sourceUrl": "https://get.nicejob.com/pricing"
+          },
+          {
+            "name": "Sites add-on",
+            "amount": 99,
+            "period": "month",
+            "billingBasis": "Monthly plus $199 setup",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Managed website"
+            ],
+            "sourceUrl": "https://get.nicejob.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "A year of Starter is $900 before tax. Buy it to remove a repeated completed-job follow-up task, not just to obtain a review link.",
+          "Check whether an existing field-service or booking product already sends review requests, so customers do not receive two sequences."
+        ],
+        "verificationNote": "Current Starter/Pro plans reviewed. Gift and referral features are not a reason to incentivize public reviews; request honest feedback consistently."
+      },
+      "sourceConflictOrLimit": "Current Starter/Pro plans reviewed. Gift and referral features are not a reason to incentivize public reviews; request honest feedback consistently.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Local services with a clear job-completed event",
+          "A regular review-request process currently done by hand",
+          "Owners who need a narrower product than a large local-marketing suite"
+        ],
+        "notFor": [
+          "Sending requests only to customers expected to be positive",
+          "Paying for a second sequence already included in another system"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "gatherup",
+            "reason": "Compare for a broader feedback and multi-location reporting workflow."
+          },
+          {
+            "toolId": "birdeye",
+            "reason": "Compare when several locations need a wider suite and centralized management."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "buffer",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Buffer — pricing",
+          "url": "https://buffer.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Queue limits; annual prices; paid channels; fair-use terms"
+          ]
+        },
+        {
+          "title": "Buffer Help — plan features and rates",
+          "url": "https://support.buffer.com/article/595-features-available-on-each-buffer-plan",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Monthly per-channel prices and tiered channel discounts"
+          ]
+        },
+        {
+          "title": "Buffer — MCP server",
+          "url": "https://buffer.com/mcp",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Supported AI-connected publishing workflow"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "3 channels",
+              "10 queued posts per channel",
+              "1 user"
+            ],
+            "sourceUrl": "https://buffer.com/pricing"
+          },
+          {
+            "name": "Essentials",
+            "amount": 6,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per channel; first 10 channels",
+            "currency": "USD",
+            "included": [
+              "Paid publishing and analytics features",
+              "1 user"
+            ],
+            "sourceUrl": "https://buffer.com/pricing"
+          },
+          {
+            "name": "Team",
+            "amount": 12,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per channel; first 10 channels",
+            "currency": "USD",
+            "included": [
+              "Multiple users and approvals"
+            ],
+            "sourceUrl": "https://buffer.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Three Essentials channels cost $18/month or $180/year. Upgrading charges for all connected channels, including channels that were free.",
+          "Free limits the queue at one time, not ten posts over the entire month. Paid unlimited scheduling has a published fair-use ceiling."
+        ],
+        "verificationNote": "Pricing and AI connection documentation reviewed. Publishing access does not establish permission or capability to answer every network’s comments and private messages."
+      },
+      "sourceConflictOrLimit": "Pricing and AI connection documentation reviewed. Publishing access does not establish permission or capability to answer every network’s comments and private messages.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A solo owner batching a few channels of original content",
+          "A predictable weekly publishing queue",
+          "Teams needing approvals on the appropriate plan"
+        ],
+        "notFor": [
+          "Assuming paid channels include three additional free channels",
+          "Unsupervised cross-platform replies without channel-specific support"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "metricool",
+            "reason": "Compare for brand-based pricing and reporting across several businesses."
+          },
+          {
+            "toolId": "canva",
+            "reason": "Use for the original visual assets before scheduling them."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "metricool",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Metricool — pricing",
+          "url": "https://metricool.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "USD monthly and annual rates; brand tiers"
+          ]
+        },
+        {
+          "title": "Metricool Help — Free versus paid",
+          "url": "https://help.metricool.com/main-differences-between-free-and-paid-plans-bl0v9",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free 20-post limit; excluded networks and integrations"
+          ]
+        },
+        {
+          "title": "Metricool Help — add-ons and API",
+          "url": "https://help.metricool.com/plans-add-ons-and-api-access-explained-xux1u",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "MCP versus API access; add-on structure"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1 brand",
+              "20 posts/month",
+              "30 days of analytics history"
+            ],
+            "sourceUrl": "https://metricool.com/pricing/"
+          },
+          {
+            "name": "Starter — 5 brands",
+            "amount": 25,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "LinkedIn connection",
+              "Reporting",
+              "Longer analytics history"
+            ],
+            "sourceUrl": "https://metricool.com/pricing/"
+          },
+          {
+            "name": "Advanced — 15 brands",
+            "amount": 67,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Approval roles",
+              "Metricool API",
+              "Client and team management"
+            ],
+            "sourceUrl": "https://metricool.com/pricing/"
+          }
+        ],
+        "costDrivers": [
+          "Annual Starter at $20/month equivalent costs $240/year. One brand holds one profile per network; two Instagram accounts require two brands.",
+          "X access and advanced analytics can be add-ons. API access requires Advanced or Custom even though Metricool MCP is listed on Free."
+        ],
+        "verificationNote": "October 2026 plan documentation reviewed. Older references to fifty Free posts or assuming MCP and the API share a plan gate should not guide a purchase."
+      },
+      "sourceConflictOrLimit": "October 2026 plan documentation reviewed. Older references to fifty Free posts or assuming MCP and the API share a plan gate should not guide a purchase.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Several brands or locations with distinct profiles",
+          "Owners who use analytics to choose the next content batch",
+          "Teams needing role-based approvals on a suitable plan"
+        ],
+        "notFor": [
+          "A Free plan requirement that includes LinkedIn",
+          "Assuming an MCP connection implies unrestricted API access"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "buffer",
+            "reason": "Compare for a simpler single-owner publishing queue priced by channel."
+          },
+          {
+            "toolId": "semrush",
+            "reason": "Compare a broader research suite only if the business also needs its other paid toolkits."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "smith-ai",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Smith.ai — AI Receptionist pricing",
+          "url": "https://smith.ai/pricing/ai-receptionist",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free 25 calls; $3 overage; Pro 75 for $150"
+          ]
+        },
+        {
+          "title": "Smith.ai — human receptionist pricing",
+          "url": "https://smith.ai/pricing/receptionists",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Separate human service and pricing"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "AI Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Then $3 per additional call",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "25 calls/month",
+              "AI answering and routing"
+            ],
+            "sourceUrl": "https://smith.ai/pricing/ai-receptionist"
+          },
+          {
+            "name": "AI Pro",
+            "amount": 150,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "75 calls/month",
+              "Dedicated setup and support"
+            ],
+            "sourceUrl": "https://smith.ai/pricing/ai-receptionist"
+          },
+          {
+            "name": "AI Enterprise entry",
+            "amount": 500,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "300 calls/month",
+              "Custom setup"
+            ],
+            "sourceUrl": "https://smith.ai/pricing/ai-receptionist"
+          }
+        ],
+        "costDrivers": [
+          "At 60 calls, the published Free overage arithmetic is 35 × $3 = $105. At 75 calls it reaches $150; Pro also changes support, so compare both capacity and service.",
+          "Ask which calls are billable, how overages work, which destinations can receive transfers, and whether a human escalation service is included in the chosen contract.",
+          "The current Pro offer lists additional calls at $2.50 each; its $150/75 = $2 included-call average is not the overage rate."
+        ],
+        "verificationNote": "The AI and human receptionist products are priced separately. A no-base-fee AI account can still incur overage charges; it is not an unlimited free phone service."
+      },
+      "sourceConflictOrLimit": "The AI and human receptionist products are priced separately. A no-base-fee AI account can still incur overage charges; it is not an unlimited free phone service.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A service business missing calls during appointments or field work",
+          "A bounded administrative intake and routing task",
+          "Owners able to maintain hours, service areas, and escalation rules"
+        ],
+        "notFor": [
+          "Promising emergency, clinical, legal, or specialist advice through a generic script",
+          "Treating the Free tier as a zero-risk unlimited call plan"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "dialpad",
+            "reason": "Compare when staff can answer and need a business phone system with transcripts."
+          },
+          {
+            "toolId": "calendly",
+            "reason": "Use a booking link alone when customers can self-schedule and call handling is unnecessary."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "dialpad",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Dialpad — current plans",
+          "url": "https://www.dialpad.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Connect seat rates; AI recaps; regional variation"
+          ]
+        },
+        {
+          "title": "Dialpad — Connect plan eligibility",
+          "url": "https://signup.dialpad.com/quora/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Pro three-user minimum; Standard and Pro seat structure"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Connect Standard",
+            "amount": 15,
+            "period": "month",
+            "billingBasis": "Annual pricing view; region-dependent",
+            "unit": "per user",
+            "currency": "USD",
+            "included": [
+              "Business calling",
+              "Messaging",
+              "Transcripts and AI recaps"
+            ],
+            "sourceUrl": "https://www.dialpad.com/pricing/"
+          },
+          {
+            "name": "Connect Pro",
+            "amount": 25,
+            "period": "month",
+            "billingBasis": "Annual pricing view; minimum 3 users",
+            "unit": "per user",
+            "currency": "USD",
+            "included": [
+              "CRM integrations",
+              "Expanded support"
+            ],
+            "sourceUrl": "https://www.dialpad.com/pricing/"
+          }
+        ],
+        "costDrivers": [
+          "At three seats, the displayed Pro rate is $75/month equivalent before telephony extras and taxes. A solo buyer should not budget only $25.",
+          "International calling, additional numbers, messaging usage, and other Dialpad products may cost extra. Confirm number-porting and regional service support."
+        ],
+        "verificationNote": "Official Connect rates and seat minimum reviewed. Dialpad Support and other contact-center products are separate from this basic business-phone comparison."
+      },
+      "sourceConflictOrLimit": "Official Connect rates and seat minimum reviewed. Dialpad Support and other contact-center products are separate from this basic business-phone comparison.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A small team sharing business phone responsibilities",
+          "Staff who need call history and recap context",
+          "Businesses evaluating CRM integration on the appropriate tier"
+        ],
+        "notFor": [
+          "Expecting the basic phone plan to replace a staffed reception process",
+          "A solo buyer budgeting Pro as a one-seat purchase"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "smith-ai",
+            "reason": "Compare when the primary need is answering calls while staff are unavailable."
+          },
+          {
+            "toolId": "pipedrive",
+            "reason": "Use a CRM activity queue to keep sales follow-up separate from the phone transcript."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "ifttt",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "IFTTT — current pricing",
+          "url": "https://ifttt.com/plans",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Credit pools; monthly and annual rates; polling cadence"
+          ]
+        },
+        {
+          "title": "IFTTT Help — plans at a glance",
+          "url": "https://help.ifttt.com/hc/en-us/articles/360053706813-IFTTT-Plans-at-a-glance",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "All-plan features; usage accounting; no rollover; exhaustion pause"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1,000 credits/month",
+              "Unlimited Applets",
+              "Hourly polling"
+            ],
+            "sourceUrl": "https://ifttt.com/plans"
+          },
+          {
+            "name": "Starter",
+            "amount": 2.99,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "5,000 credits/month",
+              "15-minute polling"
+            ],
+            "sourceUrl": "https://ifttt.com/plans"
+          },
+          {
+            "name": "Pro",
+            "amount": 7.99,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "20,000 credits/month",
+              "5-minute polling"
+            ],
+            "sourceUrl": "https://ifttt.com/plans"
+          }
+        ],
+        "costDrivers": [
+          "The builder displays each step’s credit cost; triggers, actions, MCP, and AI features can consume the same monthly pool.",
+          "Unused credits do not roll over. Applets pause when credits run out. Annual Starter costs $25.08, Pro $65.88, and Pro+ $167.88."
+        ],
+        "verificationNote": "Late-October 2026 credit-based plans reviewed. Old comparisons based on a small maximum number of Free Applets no longer describe the current offer."
+      },
+      "sourceConflictOrLimit": "Late-October 2026 credit-based plans reviewed. Old comparisons based on a small maximum number of Free Applets no longer describe the current offer.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Low-risk notifications between supported services",
+          "An owner’s personal reminders or content-monitoring tasks",
+          "Work that can tolerate the selected polling interval"
+        ],
+        "notFor": [
+          "Time-critical order or appointment guarantees",
+          "A customer workflow that cannot pause when credits run out"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "zapier",
+            "reason": "Compare for structured business-app tasks and detailed run history."
+          },
+          {
+            "toolId": "make",
+            "reason": "Compare for data transformations, branching, and explicit exception routes."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "n8n",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "n8n — pricing",
+          "url": "https://n8n.io/pricing/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Cloud euro rates; execution capacity; unlimited steps"
+          ]
+        },
+        {
+          "title": "n8n Help — license use cases",
+          "url": "https://support.n8n.io/article/can-i-use-your-license-for-my-use-case",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Community use and commercial-license boundaries"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "EUR",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Cloud Starter",
+            "amount": 20,
+            "period": "month",
+            "billingBasis": "Billed annually",
+            "unit": "per account",
+            "currency": "EUR",
+            "included": [
+              "2,500 executions/month",
+              "Unlimited steps",
+              "1 shared project"
+            ],
+            "sourceUrl": "https://n8n.io/pricing/"
+          },
+          {
+            "name": "Cloud Pro",
+            "amount": 50,
+            "period": "month",
+            "billingBasis": "Billed annually",
+            "unit": "per account",
+            "currency": "EUR",
+            "included": [
+              "10,000 executions/month",
+              "3 shared projects"
+            ],
+            "sourceUrl": "https://n8n.io/pricing/"
+          },
+          {
+            "name": "Community self-hosted",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Infrastructure and operation not included",
+            "unit": "per account",
+            "currency": "EUR",
+            "included": [
+              "Self-managed installation under the Sustainable Use License"
+            ],
+            "sourceUrl": "https://n8n.io/pricing/"
+          }
+        ],
+        "costDrivers": [
+          "A Cloud execution is the workflow run, so a ten-step route is not priced as ten separate action tasks. External model/API use can still add another bill.",
+          "Self-hosting requires hosting, updates, backups, credentials, and an operator. Licensing restricts offering customers the ability to configure workflows."
+        ],
+        "verificationNote": "Cloud prices are reported in the currency shown, without an invented USD conversion. Free self-hosted software is not a zero-cost managed service."
+      },
+      "sourceConflictOrLimit": "Cloud prices are reported in the currency shown, without an invented USD conversion. Free self-hosted software is not a zero-cost managed service.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A technically maintained workflow with custom APIs or code",
+          "Longer routes where execution-based billing is useful",
+          "Businesses with a defined hosting and data-handling requirement"
+        ],
+        "notFor": [
+          "Self-hosting without an update, backup, and recovery owner",
+          "Reselling workflow configuration access without checking the license"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "make",
+            "reason": "Compare for a managed visual route requiring less infrastructure work."
+          },
+          {
+            "toolId": "zapier",
+            "reason": "Compare for a short supported integration where custom code is unnecessary."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "kit",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Kit — pricing",
+          "url": "https://kit.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Creator prices and subscriber tiers"
+          ]
+        },
+        {
+          "title": "Kit Help — Free plan",
+          "url": "https://help.kit.com/en/articles/16627071-the-kit-free-plan",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free broadcast allowance; no sequences/visual automations/MCP"
+          ]
+        },
+        {
+          "title": "Kit Help — Creator versus Creator Pro",
+          "url": "https://help.kit.com/en/articles/4494683-creator-plan-vs-creator-pro-plan",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Paid plan capabilities"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Broadcasts up to 10,000 subscribers",
+              "No sequences or visual automations"
+            ],
+            "sourceUrl": "https://kit.com/pricing"
+          },
+          {
+            "name": "Creator — 1,000 subscribers",
+            "amount": 39,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Sequences",
+              "Visual automations"
+            ],
+            "sourceUrl": "https://kit.com/pricing"
+          },
+          {
+            "name": "Creator annual — 1,000",
+            "amount": 390,
+            "period": "year",
+            "billingBasis": "Billed annually",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Same Creator tier"
+            ],
+            "sourceUrl": "https://kit.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "The exact annual equivalent is $32.50/month; the pricing page rounds its display to $33.",
+          "A welcome-course workflow needs a paid plan even if the list fits the much larger Free broadcast allowance. Larger paid subscriber tiers cost more."
+        ],
+        "verificationNote": "Current Free exclusions reviewed. Earlier descriptions of one Free sequence or basic automation are not used for new planning."
+      },
+      "sourceConflictOrLimit": "Current Free exclusions reviewed. Earlier descriptions of one Free sequence or basic automation are not used for new planning.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A creator publishing regularly to a permission-based audience",
+          "A course or digital-product business with defined subscriber interests",
+          "A paid sequence workflow that justifies Creator"
+        ],
+        "notFor": [
+          "Choosing Free for an automated email course",
+          "Buying creator features when the main need is detailed shopping-event recovery"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "mailerlite",
+            "reason": "Compare for a smaller general-business list with a simple welcome workflow."
+          },
+          {
+            "toolId": "beehiiv",
+            "reason": "Compare when the newsletter publication itself, rather than a course funnel, is the product."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "beehiiv",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "beehiiv — live pricing",
+          "url": "https://www.beehiiv.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Current Free/Lite/Pro names and annual entry rates"
+          ]
+        },
+        {
+          "title": "beehiiv — October 2026 plan changes",
+          "url": "https://www.beehiiv.com/blog/beehiiv-pricing-2026",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Launch→Free; Scale→Lite; Max→Pro; migration dates"
+          ]
+        },
+        {
+          "title": "beehiiv Help — plan tiers",
+          "url": "https://www.beehiiv.com/support/article/23874462928663-plan-types-and-subscriber-plan-tier-pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Account-wide active subscriber billing"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Up to 2,500 subscribers",
+              "Unlimited email sends"
+            ],
+            "sourceUrl": "https://www.beehiiv.com/pricing"
+          },
+          {
+            "name": "Lite — 1,000 subscribers",
+            "amount": 49,
+            "period": "month",
+            "billingBasis": "Billed yearly",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Paid subscriptions",
+              "Automations"
+            ],
+            "sourceUrl": "https://www.beehiiv.com/pricing"
+          },
+          {
+            "name": "Pro — 1,000 subscribers",
+            "amount": 95,
+            "period": "month",
+            "billingBasis": "Billed yearly",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Remove branding",
+              "Advanced analytics and dynamic content"
+            ],
+            "sourceUrl": "https://www.beehiiv.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "The displayed annual starting costs are $588 for Lite and $1,140 for Pro. Subscriber totals combine publications within the account.",
+          "Platform monetization tools do not guarantee sponsorship offers or paid subscribers. Payment processing remains separate from the platform’s zero revenue share."
+        ],
+        "verificationNote": "The October 2026 Free/Lite/Pro plans replace Launch/Scale/Max for new customers. Existing-account renewal terms can differ during migration, so older comparisons should not determine a new purchase."
+      },
+      "sourceConflictOrLimit": "Live pricing opened November 1 supersedes search extracts still showing Launch/Scale/Max and $43/$96. Existing-account renewal terms may differ during migration.",
+      "editorialJudgment": {
+        "bestFor": [
+          "An independent newsletter with a consistent publishing promise",
+          "Creators developing a publication and archive",
+          "Publishers who can evaluate paid tools against a real audience"
+        ],
+        "notFor": [
+          "Expecting subscribers alone to create predictable advertising income",
+          "Buying publication tools for an infrequent transactional email need"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "kit",
+            "reason": "Compare if the newsletter primarily supports courses, digital products, or segmented creator offers."
+          },
+          {
+            "toolId": "mailerlite",
+            "reason": "Compare for a straightforward business newsletter and welcome sequence."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "activecampaign",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "ActiveCampaign — official pricing FAQ",
+          "url": "https://www.activecampaign.com/about/faq",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Advertised $15 starting figure; fourteen-day trial"
+          ]
+        },
+        {
+          "title": "ActiveCampaign — current plan matrix",
+          "url": "https://www.activecampaign.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Seat counts; send multiples; five-action Starter gate; add-ons"
+          ]
+        },
+        {
+          "title": "ActiveCampaign Help — plans",
+          "url": "https://help.activecampaign.com/hc/en-us/articles/14251311251356-Overview-of-ActiveCampaign-plans",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Starter eligibility and feature limitations"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Starter — advertised entry",
+            "amount": 15,
+            "period": "month",
+            "billingBasis": "Starting figure from FAQ; confirm term in live selector",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1 user",
+              "10× contact-limit email allowance",
+              "5 actions per automation"
+            ],
+            "sourceUrl": "https://www.activecampaign.com/about/faq"
+          },
+          {
+            "name": "Plus",
+            "amount": null,
+            "period": "month",
+            "billingBasis": "Configured by contact count and term",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Longer automation routes",
+              "Landing pages",
+              "Cross-channel options"
+            ],
+            "sourceUrl": "https://www.activecampaign.com/about/faq"
+          }
+        ],
+        "costDrivers": [
+          "Count welcome emails and campaigns together: 1,000 contacts receiving eight campaigns and three welcome emails can exceed a 10,000-send allowance if all receive all messages.",
+          "Advanced CRM functions, SMS, and other channels can be add-ons. Paying for a larger contact tier does not remove a plan’s feature restrictions."
+        ],
+        "verificationNote": "The $15 starting figure comes from ActiveCampaign’s official FAQ. Its live selector varies by contacts and billing term; confirm the selected configuration and renewal total before subscribing."
+      },
+      "sourceConflictOrLimit": "The live price selector did not expose a stable numeric charge for every tier in accessible text. The $15 figure is attributed to the official FAQ; final contact tier and billing term must be confirmed.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A business with clean customer data and several distinct journeys",
+          "Marketing teams that can maintain segmentation rules",
+          "Commerce or services with meaningful event-based follow-up"
+        ],
+        "notFor": [
+          "A simple newsletter where nobody will maintain branching rules",
+          "Assuming every CRM or SMS feature is included in the email price"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "mailerlite",
+            "reason": "Compare for a simpler sending program with fewer branching requirements."
+          },
+          {
+            "toolId": "omnisend",
+            "reason": "Compare when store shopping events are the main source of segmentation."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "podium",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Podium — current pricing",
+          "url": "https://www.podium.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Sales-led configured pricing; AI Employee add-on"
+          ]
+        },
+        {
+          "title": "Podium — reviews product",
+          "url": "https://www.podium.com/product/reviews",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Review request and management workflow"
+          ]
+        },
+        {
+          "title": "Google Business Profile Help — request honest reviews",
+          "url": "https://support.google.com/business/answer/3474122",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Genuine reviews; no incentives; review link and QR code"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Configured Podium platform",
+            "amount": null,
+            "period": "month",
+            "billingBasis": "Written quote",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Selected customer communication and review features"
+            ],
+            "sourceUrl": "https://www.podium.com/pricing"
+          },
+          {
+            "name": "AI Employee",
+            "amount": null,
+            "period": "month",
+            "billingBasis": "Add-on quote",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Optional AI communication and scheduling capabilities"
+            ],
+            "sourceUrl": "https://www.podium.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Request an itemized total for locations, phone numbers, messaging, AI usage, payment processing, onboarding, and contract renewal.",
+          "A business that only needs occasional review requests may get the job done with an existing booking system or a focused tool at a lower operational burden."
+        ],
+        "verificationNote": "Official pricing is quote-only. Customer revenue anecdotes on the sales page were excluded because they do not establish typical results for a new buyer."
+      },
+      "sourceConflictOrLimit": "Official pricing is quote-only. Customer revenue anecdotes on the sales page were excluded because they do not establish typical results for a new buyer.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Local businesses with frequent inquiries across several channels",
+          "Teams that want communication and review workflows connected",
+          "Operations able to maintain approved service and scheduling rules"
+        ],
+        "notFor": [
+          "A low-volume review-only need",
+          "Assuming an AI add-on can promise availability or price without reliable source data"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "nicejob",
+            "reason": "Choose a focused review product when customer communication is already handled elsewhere."
+          },
+          {
+            "toolId": "birdeye",
+            "reason": "Compare a multi-location reputation and local-marketing suite against the same written requirements."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "gatherup",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "GatherUp — pricing",
+          "url": "https://gatherup.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Annual rates; payment versus commitment; separate products"
+          ]
+        },
+        {
+          "title": "GatherUp — supported review sources",
+          "url": "https://gatherup.com/review-sources/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Platform coverage for review monitoring"
+          ]
+        },
+        {
+          "title": "Google Business Profile Help — request honest reviews",
+          "url": "https://support.google.com/business/answer/3474122",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Genuine reviews; no incentives; review link and QR code"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Local Business",
+            "amount": 99,
+            "period": "month",
+            "billingBasis": "Annual commitment; upfront or monthly payment",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1 location",
+              "Review and feedback workflow"
+            ],
+            "sourceUrl": "https://gatherup.com/pricing/"
+          },
+          {
+            "name": "Multiple Locations",
+            "amount": 60,
+            "period": "month",
+            "billingBasis": "Annual starting rate; volume-dependent",
+            "unit": "per location",
+            "currency": "USD",
+            "included": [
+              "Configured location count"
+            ],
+            "sourceUrl": "https://gatherup.com/pricing/"
+          }
+        ],
+        "costDrivers": [
+          "One location costs $1,188/year before tax at the displayed annual rate. Paying an annual plan monthly does not make it a month-to-month contract.",
+          "Listings Management and Review Defense are separate products. Check SMS/email allowances and location tiers before comparing headline rates."
+        ],
+        "verificationNote": "Current pricing distinguishes annual commitment from payment frequency. We do not multiply the lowest volume rate across an unspecified number of locations."
+      },
+      "sourceConflictOrLimit": "Current pricing distinguishes annual commitment from payment frequency. We do not multiply the lowest volume rate across an unspecified number of locations.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Local businesses using feedback to identify service problems",
+          "Several locations needing a common reporting routine",
+          "Teams that can assign and review unresolved feedback"
+        ],
+        "notFor": [
+          "Treating annual monthly payments as a cancellable monthly contract",
+          "Selective review requests based on expected sentiment"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "nicejob",
+            "reason": "Compare for a narrower completed-job review-request workflow."
+          },
+          {
+            "toolId": "birdeye",
+            "reason": "Compare when additional local-marketing products and more locations justify a configured suite."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "gradeus",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Grade.us — current plans",
+          "url": "https://www.grade.us/home/plans/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Displayed location rates; GatherUp trial links; agency quote"
+          ]
+        },
+        {
+          "title": "Grade.us — review-management product",
+          "url": "https://www.grade.us/home/review-management-software/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Review management and agency orientation"
+          ]
+        },
+        {
+          "title": "Google Business Profile Help — request honest reviews",
+          "url": "https://support.google.com/business/answer/3474122",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Genuine reviews; no incentives; review link and QR code"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Small Business",
+            "amount": 99,
+            "period": "month",
+            "billingBasis": "Displayed rate; confirm monthly/annual selector",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1 location"
+            ],
+            "sourceUrl": "https://www.grade.us/home/plans/"
+          },
+          {
+            "name": "Multi Location — 2–10",
+            "amount": 60,
+            "period": "month",
+            "billingBasis": "Displayed per-location rate; confirm term",
+            "unit": "per location",
+            "currency": "USD",
+            "included": [
+              "Multiple locations"
+            ],
+            "sourceUrl": "https://www.grade.us/home/plans/"
+          },
+          {
+            "name": "Agency",
+            "amount": null,
+            "period": "month",
+            "billingBasis": "Written quote",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "White-label offering"
+            ],
+            "sourceUrl": "https://www.grade.us/home/plans/"
+          }
+        ],
+        "costDrivers": [
+          "The pricing page now directs trial and agency links to GatherUp. Confirm the product, migration path, dashboard branding, and contract that a new account receives.",
+          "SMS, dashboard white labeling, location counts, and add-on services can change the bill. A legacy review-site price is not a binding offer."
+        ],
+        "verificationNote": "The official page mixes newer location pricing with legacy plan names in its FAQ. Rates are labeled as displayed; buyers should obtain the exact product and term in writing."
+      },
+      "sourceConflictOrLimit": "The official page mixes newer location pricing with legacy plan names in its FAQ. Rates are labeled as displayed; buyers should obtain the exact product and term in writing.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Agencies comparing a branded review-management service",
+          "Operators with several client locations and distinct permissions",
+          "Existing users assessing the current account or migration terms"
+        ],
+        "notFor": [
+          "A solo shop buying for an occasional review request",
+          "Assuming older Solo/Professional plan reviews describe the current purchase"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "gatherup",
+            "reason": "Compare the directly offered product and contract the current Grade.us links lead to."
+          },
+          {
+            "toolId": "birdeye",
+            "reason": "Compare for a wider multi-location service suite rather than only branded review reports."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "zoho-crm",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Zoho CRM — US pricing",
+          "url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free three-user plan; paid editions"
+          ]
+        },
+        {
+          "title": "Zoho CRM — complete feature and price table",
+          "url": "https://www.zoho.com/crm/complete-feature-list.html",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Monthly and annual USD rates; edition differences"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Up to 3 users",
+              "Core contacts and follow-up"
+            ],
+            "sourceUrl": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html"
+          },
+          {
+            "name": "Standard",
+            "amount": 20,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per user",
+            "currency": "USD",
+            "included": [
+              "Multiple pipelines",
+              "Email integration"
+            ],
+            "sourceUrl": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html"
+          },
+          {
+            "name": "Professional",
+            "amount": 35,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per user",
+            "currency": "USD",
+            "included": [
+              "Process and inventory capabilities"
+            ],
+            "sourceUrl": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html"
+          }
+        ],
+        "costDrivers": [
+          "Three Standard users cost $60 on monthly billing or $504/year at the annual rate. Quote the edition as well as the number of users.",
+          "Zoho CRM, Zoho One, and other Zoho applications are different purchases. Integration and AI limits need checking for the exact edition."
+        ],
+        "verificationNote": "US pricing and edition matrix reviewed. This is a CRM comparison, not a claim that every Zoho application is bundled into the listed seat price."
+      },
+      "sourceConflictOrLimit": "US pricing and edition matrix reviewed. This is a CRM comparison, not a claim that every Zoho application is bundled into the listed seat price.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A team of up to three proving a basic CRM process",
+          "Cost-conscious services with a defined pipeline",
+          "Businesses that already understand the Zoho ecosystem"
+        ],
+        "notFor": [
+          "Assuming all Zoho apps are included with a CRM seat",
+          "Buying advanced customization before standardizing the data"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "hubspot",
+            "reason": "Compare for a broader connected CRM foundation and ecosystem."
+          },
+          {
+            "toolId": "pipedrive",
+            "reason": "Compare for a focused activity-driven sales pipeline."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "monday-crm",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "monday CRM — pricing",
+          "url": "https://monday.com/crm/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Seat rates; contact caps; automation and sequence gates"
+          ]
+        },
+        {
+          "title": "monday.com — product pricing selector",
+          "url": "https://monday.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Three-seat CRM entry configuration"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Basic",
+            "amount": 18,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per seat; minimum 3",
+            "currency": "USD",
+            "included": [
+              "1,000 active contacts and deals",
+              "1 workspace"
+            ],
+            "sourceUrl": "https://monday.com/crm/pricing"
+          },
+          {
+            "name": "Standard",
+            "amount": 25,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per seat; minimum 3",
+            "currency": "USD",
+            "included": [
+              "250 custom automations/month",
+              "Communication hub"
+            ],
+            "sourceUrl": "https://monday.com/crm/pricing"
+          },
+          {
+            "name": "Pro",
+            "amount": 41,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per seat; minimum 3",
+            "currency": "USD",
+            "included": [
+              "25,000 custom automations/month",
+              "Email sequences"
+            ],
+            "sourceUrl": "https://monday.com/crm/pricing"
+          }
+        ],
+        "costDrivers": [
+          "The annual Basic minimum is 3 × $12 × 12 = $432 before tax. A solo owner should compare that minimum with a true one-seat CRM.",
+          "Contact/deal counts, automations, AI usage, and required communications features can force an upgrade before the team grows."
+        ],
+        "verificationNote": "CRM-specific prices reviewed. The free monday work-management offering does not establish a permanent free monday CRM plan."
+      },
+      "sourceConflictOrLimit": "CRM-specific prices reviewed. The free monday work-management offering does not establish a permanent free monday CRM plan.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A small sales team already comfortable with monday boards",
+          "Teams connecting sales responsibilities to related delivery work",
+          "A process that benefits from configured columns and views"
+        ],
+        "notFor": [
+          "A one-person buyer budgeting only one advertised seat",
+          "Assuming monday work-management Free is a free CRM plan"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "pipedrive",
+            "reason": "Compare for a sales-focused process with less custom board design."
+          },
+          {
+            "toolId": "airtable",
+            "reason": "Compare for a more general relational operations system."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "gemini",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Google — Gemini subscriptions",
+          "url": "https://gemini.google/subscriptions/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "US Pro and Ultra prices; feature availability"
+          ]
+        },
+        {
+          "title": "Google One — US plans",
+          "url": "https://one.google.com/about/plans?hl=en_US",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "AI Pro monthly price and included storage"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Gemini app with lower access limits"
+            ],
+            "sourceUrl": "https://gemini.google/subscriptions/"
+          },
+          {
+            "name": "Google AI Pro",
+            "amount": 19.99,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Higher Gemini limits",
+              "Google app features subject to account eligibility"
+            ],
+            "sourceUrl": "https://gemini.google/subscriptions/"
+          },
+          {
+            "name": "Google AI Ultra entry",
+            "amount": 99.99,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Higher access tier"
+            ],
+            "sourceUrl": "https://gemini.google/subscriptions/"
+          }
+        ],
+        "costDrivers": [
+          "An owner already paying for a Google bundle should compare included storage and AI benefits before buying a second subscription.",
+          "Personal Google AI subscriptions and Workspace business data controls are different arrangements. Region, age, account type, and app availability affect access."
+        ],
+        "verificationNote": "Current US subscription pages reviewed. Model names and bundle contents change frequently; the recommendation rests on workflow fit, not a promise of a permanent model entitlement."
+      },
+      "sourceConflictOrLimit": "Current US subscription pages reviewed. Model names and bundle contents change frequently; the recommendation rests on workflow fit, not a promise of a permanent model entitlement.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Owners working from Google documents and approved reference material",
+          "Drafting several campaign formats from one business brief",
+          "Comparing a Google AI bundle with existing storage subscriptions"
+        ],
+        "notFor": [
+          "Assuming a personal subscription has business Workspace controls",
+          "Unreviewed access to every connected file or mailbox"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "chatgpt",
+            "reason": "Compare when your work relies on mixed files and tools outside Google."
+          },
+          {
+            "toolId": "claude",
+            "reason": "Compare for a long-form editorial or procedure-review workload."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "omnisend",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Omnisend — pricing",
+          "url": "https://www.omnisend.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Standard recurring rates; contact/send allowances; promotional terms"
+          ]
+        },
+        {
+          "title": "Omnisend Help — 2026 pricing plans",
+          "url": "https://support.omnisend.com/en/articles/3533018-omnisend-pricing-plans-2026",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Current plans and billing rules"
+          ]
+        },
+        {
+          "title": "Omnisend Help — SMS setup",
+          "url": "https://support.omnisend.com/en/articles/2747083-get-started-with-sms-channel",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "New Pro SMS subscription and legacy exceptions"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "250 contacts",
+              "500 emails/month"
+            ],
+            "sourceUrl": "https://www.omnisend.com/pricing/"
+          },
+          {
+            "name": "Standard — 500 contacts",
+            "amount": 16,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "6,000 emails/month"
+            ],
+            "sourceUrl": "https://www.omnisend.com/pricing/"
+          },
+          {
+            "name": "Pro — 2,500 contacts",
+            "amount": 59,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Unlimited email sends",
+              "Eligible for a separate SMS credit subscription"
+            ],
+            "sourceUrl": "https://www.omnisend.com/pricing/"
+          }
+        ],
+        "costDrivers": [
+          "The advertised $11.20 and $41.30 offers are first-three-month discounts paid upfront, not the standard recurring rates.",
+          "For new SMS setups, budget Pro plus a separate SMS credit subscription. Older Free/Standard SMS accounts can have legacy rules."
+        ],
+        "verificationNote": "Standard recurring prices and May 2026 SMS eligibility reviewed. Email and SMS are kept separate in the recommendation."
+      },
+      "sourceConflictOrLimit": "Standard recurring prices and May 2026 SMS eligibility reviewed. Email and SMS are kept separate in the recommendation.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Shopify or other supported shops with specific lifecycle messages",
+          "Stores that need separate cart and checkout recovery routes",
+          "Teams prepared to maintain consent, product data, and exit conditions"
+        ],
+        "notFor": [
+          "A basic newsletter with no commerce-event requirement",
+          "Assuming an anonymous cart can always receive an email or text"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "mailerlite",
+            "reason": "Compare for a business whose main need is welcome emails and newsletters, then test any required shop events."
+          },
+          {
+            "toolId": "activecampaign",
+            "reason": "Compare when broader segmentation and cross-channel workflows justify more configuration."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "getresponse",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "GetResponse — pricing",
+          "url": "https://www.getresponse.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Monthly and annual starting rates; automation and Creator gates"
+          ]
+        },
+        {
+          "title": "GetResponse — product features",
+          "url": "https://www.getresponse.com/features",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Email, automation and content-product capabilities"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Starter",
+            "amount": 19,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Unlimited email sends",
+              "1 custom automation workflow",
+              "Welcome series"
+            ],
+            "sourceUrl": "https://www.getresponse.com/pricing"
+          },
+          {
+            "name": "Marketer",
+            "amount": 59,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Unlimited automation workflows",
+              "Abandoned-cart and ecommerce tools"
+            ],
+            "sourceUrl": "https://www.getresponse.com/pricing"
+          },
+          {
+            "name": "Creator",
+            "amount": 69,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Webinars and course features",
+              "Up to 500 students at entry"
+            ],
+            "sourceUrl": "https://www.getresponse.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "The selected contact tier changes the price. Compare a whole welcome route and campaign plan, not only the lowest card on the page.",
+          "Marketer is the relevant upgrade when multiple custom workflows or ecommerce recovery are required; Creator adds teaching and monetization features."
+        ],
+        "verificationNote": "Official entry rates and workflow limits reviewed. Trial and post-trial free access do not establish that every paid workflow can continue without a subscription."
+      },
+      "sourceConflictOrLimit": "Official entry rates and workflow limits reviewed. Trial and post-trial free access do not establish that every paid workflow can continue without a subscription.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A business combining email with one or more of its publishing tools",
+          "A course or workshop creator evaluating a combined platform",
+          "Owners who can define whether Starter’s single workflow is enough"
+        ],
+        "notFor": [
+          "Buying a broad bundle for one unused feature",
+          "Assuming a trial’s automation capability persists on free access"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "mailerlite",
+            "reason": "Compare when forms, a welcome route, and newsletters are the entire job."
+          },
+          {
+            "toolId": "kit",
+            "reason": "Compare for a creator business organized around interests and email sequences."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "shopify",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Shopify — US pricing",
+          "url": "https://www.shopify.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "US Basic monthly/annual offer and differentiated card rates"
+          ]
+        },
+        {
+          "title": "Shopify — its own US plan and fee comparison",
+          "url": "https://www.shopify.com/compare/shopify-vs-wix",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Shopify Basic annual amount and standard card rate"
+          ]
+        },
+        {
+          "title": "Shopify — POS cost guide",
+          "url": "https://www.shopify.com/blog/pos-system-cost",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Basic monthly US price"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Basic monthly",
+            "amount": 39,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Owned online store; US offer"
+            ],
+            "sourceUrl": "https://www.shopify.com/pricing"
+          },
+          {
+            "name": "Basic annual",
+            "amount": 29,
+            "period": "month",
+            "billingBasis": "Billed annually: $348",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Same Basic plan"
+            ],
+            "sourceUrl": "https://www.shopify.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Standard cards, premium cards, international cards, and third-party providers can have different rates. Basic’s third-party-provider platform fee is listed at 2% in addition to the provider’s costs.",
+          "Budget domain, paid apps, shipping, returns, and acquisition separately. An annual subscription does not include a supply of customers."
+        ],
+        "verificationNote": "US figures were corroborated across official Shopify pages because the canonical page localized differently during retrieval. The 2.9% + $0.30 rate is not described as universal."
+      },
+      "sourceConflictOrLimit": "US figures were corroborated across official Shopify pages because the canonical page localized differently during retrieval. The 2.9% + $0.30 rate is not described as universal.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A business with a way to attract buyers to an owned store",
+          "Sellers needing control over storefront and commerce integrations",
+          "A multichannel brand with clear inventory and fulfillment ownership"
+        ],
+        "notFor": [
+          "Expecting a subscription alone to create shoppers",
+          "Comparing only platform fees while excluding acquisition and app costs"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "etsy",
+            "reason": "Compare for marketplace discovery with a different fee structure and channel rules."
+          },
+          {
+            "toolId": "omnisend",
+            "reason": "Consider a separate commerce email system only after the store events and consent process are working."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "etsy",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Etsy — fees policy",
+          "url": "https://www.etsy.com/legal/fees/",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Listing, transaction, Offsite Ads and other applicable fees"
+          ]
+        },
+        {
+          "title": "Etsy Help — payment processing by country",
+          "url": "https://help.etsy.com/hc/en-us/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "US 3% + $0.25; processing base"
+          ]
+        },
+        {
+          "title": "Etsy — listing image requirements",
+          "url": "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Current product-image accuracy and AI-related rules"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Listing",
+            "amount": 0.2,
+            "period": "listing",
+            "billingBasis": "Listing/renewal; normally four months",
+            "unit": "per listing event",
+            "currency": "USD",
+            "included": [],
+            "sourceUrl": "https://www.etsy.com/legal/fees/"
+          },
+          {
+            "name": "Transaction fee",
+            "amount": null,
+            "period": "",
+            "billingBasis": "Applicable order amount including shipping",
+            "unit": "of the applicable fee base",
+            "currency": "USD",
+            "included": [],
+            "sourceUrl": "https://www.etsy.com/legal/fees/",
+            "price": "6.5%"
+          },
+          {
+            "name": "US payment processing",
+            "amount": null,
+            "period": "",
+            "billingBasis": "Plus $0.25 per payment; base includes applicable tax and shipping",
+            "unit": "of the applicable fee base",
+            "currency": "USD",
+            "included": [],
+            "sourceUrl": "https://www.etsy.com/legal/fees/",
+            "price": "3% + USD 0.25"
+          }
+        ],
+        "costDrivers": [
+          "Offsite Ads can add 15% or 12% to attributed orders depending on the seller’s sales threshold, subject to the published cap and terms.",
+          "Use the actual country’s processing schedule. Listing renewals, setup charges, tax on fees, regulatory fees, and currency conversion can change contribution."
+        ],
+        "verificationNote": "US fee example verified separately from the platform’s country-dependent charges. The worked calculation excludes ads and tax explicitly, so it is not a quote for every order."
+      },
+      "sourceConflictOrLimit": "US fee example verified separately from the platform’s country-dependent charges. The worked calculation excludes ads and tax explicitly, so it is not a quote for every order.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Eligible creative products with clear photos and differentiation",
+          "Sellers prepared to work within marketplace rules",
+          "A multichannel business comparing actual order contribution"
+        ],
+        "notFor": [
+          "A guaranteed source of discovery or sales",
+          "Using AI to misrepresent the physical product or required disclosures"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "shopify",
+            "reason": "Compare for an owned storefront when there is a credible acquisition plan."
+          },
+          {
+            "toolId": "erank",
+            "reason": "Use for a bounded keyword research task while judging results with actual shop data."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "heygen",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "HeyGen — pricing",
+          "url": "https://www.heygen.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free limits; monthly Creator/Pro rates; credits and export resolution"
+          ]
+        },
+        {
+          "title": "HeyGen — product and billing FAQ",
+          "url": "https://www.heygen.com/faq",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Annual Creator rate and tier differences"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "3 videos/month",
+              "1 minute per video",
+              "Watermark"
+            ],
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "name": "Creator",
+            "amount": 29,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "600 credits/month",
+              "1080p exports",
+              "Remove HeyGen branding"
+            ],
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "name": "Pro",
+            "amount": 49,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "1,000 credits/month",
+              "4K export"
+            ],
+            "sourceUrl": "https://www.heygen.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Credits, avatar engine, translation mode, and repeat generations determine practical output. Do not translate a credit total directly into a fixed number of finished videos.",
+          "Creator annual pricing totals $288 upfront. A paid account does not grant rights to another person’s face, voice, or source footage."
+        ],
+        "verificationNote": "Current credit-based plans reviewed. The worked example below is a proposed production task, not a generated-video quality test."
+      },
+      "sourceConflictOrLimit": "Current credit-based plans reviewed. The worked example below is a proposed production task, not a generated-video quality test.",
+      "editorialJudgment": {
+        "bestFor": [
+          "A permitted avatar-led product or process explainer",
+          "Localization of approved marketing or help content",
+          "Creators with a repeatable script-review process"
+        ],
+        "notFor": [
+          "Fabricated testimonials or unauthorized face/voice cloning",
+          "An output that must prove how a physical product really looks or behaves"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "descript",
+            "reason": "Compare for editing a real recorded demonstration or tutorial."
+          },
+          {
+            "toolId": "elevenlabs",
+            "reason": "Compare when only a permitted voiceover is needed, without avatar video."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "descript",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "Descript — current pricing",
+          "url": "https://www.descript.com/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Seat rates; hours; AI credits; export resolution"
+          ]
+        },
+        {
+          "title": "Descript — editing features",
+          "url": "https://www.descript.com/features",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Transcript-based audio/video editing and creation capabilities"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "Limited editing and generation; inspect current free allowance"
+            ],
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "name": "Hobbyist",
+            "amount": 24,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per person",
+            "currency": "USD",
+            "included": [
+              "10 media hours/month",
+              "400 AI credits",
+              "1080p watermark-free export"
+            ],
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "name": "Creator",
+            "amount": 35,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per person",
+            "currency": "USD",
+            "included": [
+              "30 media hours/month",
+              "800 AI credits",
+              "4K export"
+            ],
+            "sourceUrl": "https://www.descript.com/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Hobbyist annual pricing is $192 per person; Creator annual pricing is $288. Additional editors are billed separately.",
+          "Media hours and AI credits are separate limits. Long source recordings and repeated AI generations can exhaust different parts of the plan."
+        ],
+        "verificationNote": "Official paid-plan rates and quotas reviewed. “One person included” is a seat allocation, not a team-wide subscription."
+      },
+      "sourceConflictOrLimit": "Official paid-plan rates and quotas reviewed. “One person included” is a seat allocation, not a team-wide subscription.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Editing recorded tutorials, interviews, or demonstrations",
+          "Creating shorter clips from source material you own",
+          "Creators who want to work from a transcript"
+        ],
+        "notFor": [
+          "Unreviewed cleanup of nuanced statements",
+          "Assuming AI credits and media-hour capacity are interchangeable"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "heygen",
+            "reason": "Compare for an approved scripted avatar video when no source recording exists."
+          },
+          {
+            "toolId": "adobe-express",
+            "reason": "Compare for lighter visual and short-media work within an existing Adobe workflow."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    },
+    {
+      "toolId": "elevenlabs",
+      "reviewedAt": "2026-11-01",
+      "evidenceBasis": "Official product, billing, help or policy pages; no original hands-on performance testing",
+      "sources": [
+        {
+          "title": "ElevenLabs — pricing",
+          "url": "https://elevenlabs.io/pricing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Recurring prices; credit pools; promotion distinction"
+          ]
+        },
+        {
+          "title": "ElevenLabs Docs — billing",
+          "url": "https://elevenlabs.io/docs/overview/administration/billing",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Commercial rights on paid generations; noncommercial Free use; usage accounting"
+          ]
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "checkedAt": "2026-11-01",
+        "plans": [
+          {
+            "name": "Free",
+            "amount": 0,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "10,000 credits",
+              "Noncommercial use with attribution"
+            ],
+            "sourceUrl": "https://elevenlabs.io/pricing"
+          },
+          {
+            "name": "Starter",
+            "amount": 6,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "30,000 credits",
+              "Commercial license",
+              "Instant voice cloning"
+            ],
+            "sourceUrl": "https://elevenlabs.io/pricing"
+          },
+          {
+            "name": "Creator",
+            "amount": 22,
+            "period": "month",
+            "billingBasis": "Monthly billing",
+            "unit": "per account",
+            "currency": "USD",
+            "included": [
+              "121,000 credits",
+              "Professional voice cloning"
+            ],
+            "sourceUrl": "https://elevenlabs.io/pricing"
+          }
+        ],
+        "costDrivers": [
+          "Budget for generations, not only final downloads. Text-to-speech, dubbing, music, and other features draw from a shared pool at different rates.",
+          "The $1 Starter and $11 Creator headlines can be first-month promotions; the recurring figures above are $6 and $22. Paid-plan rights do not substitute for permission to clone a voice."
+        ],
+        "verificationNote": "Recurring prices and licensing distinction reviewed. Buying a paid plan later should not be assumed to retroactively license an earlier free-tier generation."
+      },
+      "sourceConflictOrLimit": "Recurring prices and licensing distinction reviewed. Buying a paid plan later should not be assumed to retroactively license an earlier free-tier generation.",
+      "editorialJudgment": {
+        "bestFor": [
+          "Commercial voiceovers generated under an appropriate paid license",
+          "Accessible audio versions of approved written material",
+          "Creators with explicit rights to the script and selected voice"
+        ],
+        "notFor": [
+          "Using free-tier audio in a commercial campaign without the required rights",
+          "Imitating a person or making an endorsement without consent"
+        ],
+        "scenarioStatus": "Original hypothetical business task. No observed performance or revenue result is asserted.",
+        "alternatives": [
+          {
+            "toolId": "descript",
+            "reason": "Compare when the main task is editing a real recording and its transcript."
+          },
+          {
+            "toolId": "heygen",
+            "reason": "Compare if the deliverable needs an authorized presenter video as well as voice."
+          }
+        ]
+      },
+      "maintenanceTrigger": "Recheck when the vendor changes prices, plan names, quotas, licensing, or the workflow capability used in the recommendation."
+    }
+  ]
+}

@@ -10,9 +10,10 @@ The production build uses the Python standard library. No framework installation
 python3 scripts/build_site.py
 python3 scripts/validate_site.py
 node scripts/test_calculators.cjs
+node scripts/test_workspace.cjs
 ```
 
-Netlify runs the build command from `netlify.toml` and publishes `dist/`. The original source pages remain in the repository; selected older routes redirect to the substantially improved tutorials. The build deliberately excludes source code, internal research records, legacy account/community prototypes, and unsubstantiated old scoring data.
+Netlify runs `npm run build && npm run check` from `netlify.toml` and publishes `dist/` only when static validation and the calculator/workspace regressions pass. The original source pages remain in the repository; selected older routes redirect to the substantially improved tutorials. The build deliberately excludes source code, internal research records, legacy account/community prototypes, and unsubstantiated old scoring data.
 
 ## Editorial source of truth
 
@@ -20,8 +21,10 @@ Netlify runs the build command from `netlify.toml` and publishes `dist/`. The or
 | --- | --- |
 | `data/editorial.json` | Complete tutorials, examples, configuration tables, copyable templates, troubleshooting, comparisons, and source records |
 | `data/catalog.json` | Tool capabilities, suitability, limitations, official sources, and verified link state |
-| `data/research.json` | Market evidence, search observations, reader questions, topic priorities, and evidence limitations; not copied into the public build |
-| `scripts/editorial_components.py` | Editorial layouts, worked examples, and publication front page |
+| `data/business-guides.json` and `data/feature-guides.json` | Complete business and buying guides with examples and source records |
+| `data/research/` | Current tool, tutorial, comparison, and market evidence ledgers; not copied into the public build |
+| `data/page-dates.json` | Substantive revision dates for collection and utility pages |
+| `scripts/editorial_components.py` and `scripts/publication_components.py` | Editorial layouts, original examples, plan tables, sources, and publication front page |
 | `site-assets/hub.css` | Responsive visual system |
 | `site-assets/hub.js` | Search, filters, comparisons, local reading lists, stack builder, calculators, and consent-controlled measurement |
 
@@ -32,7 +35,7 @@ New tutorials must answer a concrete reader question, cite current primary sourc
 - [Complete requirements and acceptance criteria](docs/COMPLETE_REQUIREMENTS.md)
 - [Claude and Gemini research prompts](docs/AI_RESEARCH_PROMPTS.md)
 - [Editorial and business operations](docs/OPERATIONS.md)
-- [Verification record and launch dependencies](docs/RELEASE_NOTES.md)
+- [Current release and verification record](docs/RELEASE_NOTES.md)
 
 ## Connected services
 

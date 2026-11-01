@@ -5,6 +5,6 @@
   "description": "Research-led small business AI and software publication",
   "scripts": {
     "build": "python3 scripts/build_site.py",
-    "check": "python3 scripts/validate_site.py && node scripts/test_calculators.cjs"
+    "check": "python3 scripts/validate_site.py && node scripts/test_calculators.cjs && node scripts/test_workspace.cjs"
   }
 }

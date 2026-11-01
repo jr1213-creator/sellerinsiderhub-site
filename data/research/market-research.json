@@ -1,0 +1,1184 @@
+{
+  "updated": "2026-11-01",
+  "title": "Market and topic research used to improve Seller Insider Hub",
+  "purpose": "Internal implementation evidence for the complete public publication; not investor material.",
+  "methodology": {
+    "researchWindow": "Official pages and public search results checked October 31–November 1, 2026; older datasets retain their own observation dates.",
+    "searchMethod": "Exact queries listed below were run through available public web search. They are suitable strings for further Google research, not evidence of Google positions or Google Trends indexes.",
+    "unavailableData": [
+      "No verified Google Trends export",
+      "No Keyword Planner volume or keyword-difficulty data",
+      "No site-specific Search Console query/click dataset used",
+      "No measured affiliate conversion, revenue, or payout dataset used"
+    ],
+    "sourceHierarchy": "Primary research for market statistics; each vendor’s own documentation for capabilities and prices; competitor publications only as evidence of visible coverage and positioning.",
+    "inferencePolicy": "Topic priority, audience fit, and monetization relevance are editorial judgments. Documented adoption, existing search coverage, and product capabilities do not prove willingness to pay.",
+    "scopePolicy": "Priorities determine placement and depth within the complete site, not removal of broader audience coverage."
+  },
+  "marketEvidence": [
+    {
+      "id": "chamber-ai-2026",
+      "title": "2026 Empowering Small Business report",
+      "publisher": "U.S. Chamber of Commerce",
+      "published": "2026-10-02",
+      "checkedAt": "2026-11-01",
+      "url": "https://www.uschamber.com/technology/2026-empowering-small-business-report",
+      "facts": [
+        "66% of surveyed small businesses reported using AI.",
+        "41% reported using six or more technology platforms."
+      ],
+      "supports": "There is a substantial population of small businesses already using several tools, so implementation and cost-coordination questions are relevant.",
+      "limits": "Survey adoption is not proof of search volume, paid-software demand, causal business growth, or the audience reachable by this site. Do not combine this percentage with Census results as one measure."
+    },
+    {
+      "id": "census-ai-2026",
+      "title": "Large firms with at least 20 employees biggest AI users",
+      "publisher": "U.S. Census Bureau",
+      "published": "2026-05-26",
+      "checkedAt": "2026-11-01",
+      "url": "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html",
+      "facts": [
+        "BTOS business AI use was about 17–20% during December 2025 to May 2026.",
+        "Retail Trade reported roughly 14% current AI use; fewer than 20% of firms with four or fewer employees reported use.",
+        "The survey asks about use in the past two weeks; its question wording changed in November 2025."
+      ],
+      "supports": "Beginner implementation remains relevant, especially for very small operators; do not assume every reader already has an AI stack.",
+      "limits": "This is a different sample, definition, and observation window from the Chamber survey. It is not a November 2026 adoption estimate for all solo sellers."
+    },
+    {
+      "id": "etsy-seller-census",
+      "title": "Etsy 2025 Form 10-K: Seller Census highlights",
+      "publisher": "Etsy / SEC filing",
+      "published": "2026",
+      "checkedAt": "2026-11-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/1370637/000137063726000019/etsy-20251231.htm",
+      "facts": [
+        "Etsy reports that 89% of surveyed sellers are businesses of one.",
+        "51% are multi-channel sellers."
+      ],
+      "supports": "Solo workflows and channel economics are plausible editorial jobs for the seller audience.",
+      "limits": "The annual filing reports a historical Seller Census, not a fresh 2026 survey of every seller. These percentages cannot establish demand for a particular affiliate offer."
+    },
+    {
+      "id": "etsy-q3-2026",
+      "title": "Etsy Q3 2026 Form 10-Q",
+      "publisher": "Etsy",
+      "published": "2026-10-28",
+      "checkedAt": "2026-11-01",
+      "url": "https://investors.etsy.com/sec-filings/all-sec-filings/content/0001370637-26-000092/etsy-20260930.htm",
+      "facts": [
+        "Etsy reported 5.836 million active sellers and 87.506 million active buyers for the period shown in its Q3 metrics."
+      ],
+      "supports": "Etsy represents a substantial operating marketplace, with product-listing and channel-management questions relevant to many businesses.",
+      "limits": "Active sellers are a platform operating metric, not an addressable subscriber list, reachable traffic estimate, or pool of high-ticket software buyers."
+    },
+    {
+      "id": "pew-search-clicks",
+      "title": "Google users are less likely to click when an AI summary appears",
+      "publisher": "Pew Research Center",
+      "published": "2025-07-22",
+      "checkedAt": "2026-11-01",
+      "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+      "facts": [
+        "Pew analyzed browsing observations from 900 U.S. adults during March 2025.",
+        "The analysis found lower result-link clicking when an AI summary appeared."
+      ],
+      "supports": "A publication should give readers a reason to use the page beyond obtaining a short factual answer: examples, calculators, downloads, and troubleshooting can provide that reason.",
+      "limits": "Historical observational evidence. It does not predict this site’s traffic or establish that every how-to query loses clicks today."
+    },
+    {
+      "id": "etsy-ai-policy-2026",
+      "title": "Listing Image Requirements and AI use update",
+      "publisher": "Etsy",
+      "published": "2026-10-22",
+      "checkedAt": "2026-11-01",
+      "url": "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+      "facts": [
+        "Etsy updated its listing-image requirements on October 22, 2026.",
+        "The policy addresses accurate product representation and includes rules and exceptions relevant to AI-edited or generated imagery."
+      ],
+      "supports": "A policy-aware listing tutorial has a timely practical job and should distinguish product facts, photos, and copy drafting.",
+      "limits": "Policy explains what is permitted; it does not measure keyword demand or prove that a particular listing will rank."
+    }
+  ],
+  "searchObservations": [
+    {
+      "id": "welcome",
+      "query": "MailerLite welcome email automation free plan tutorial",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "Simple welcome email template",
+          "url": "https://www.mailerlite.com/automation-templates/simple-welcome-email",
+          "role": "official documentation"
+        },
+        {
+          "title": "Welcome series example",
+          "url": "https://www.mailerlite.com/automation-examples/welcome-new-subscribers-or-customers",
+          "role": "official documentation"
+        },
+        {
+          "title": "Free plan update",
+          "url": "https://www.mailerlite.com/help/free-plan-update-faq",
+          "role": "official billing guidance"
+        }
+      ],
+      "observed": "Retrieved results include the vendor’s template, example workflow, and current Free-plan change. Basic setup is already well covered.",
+      "editorialOpportunity": "Add a complete original three-email example, a current send-budget calculation, fresh-address testing, and unsubscribe verification. Do not claim the template itself is a unique discovery."
+    },
+    {
+      "id": "cart",
+      "query": "MailerLite vs Omnisend abandoned checkout Shopify",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "Omnisend versus MailerLite",
+          "url": "https://www.omnisend.com/blog/omnisend-vs-mailerlite/",
+          "role": "vendor competitor comparison"
+        },
+        {
+          "title": "Connect Shopify to MailerLite",
+          "url": "https://www.mailerlite.com/help/how-to-set-up-the-mailerlite-integration-for-shopify",
+          "role": "official documentation"
+        },
+        {
+          "title": "Abandoned cart workflow",
+          "url": "https://www.mailerlite.com/help/how-to-create-an-abandoned-cart-email-automation",
+          "role": "official documentation"
+        },
+        {
+          "title": "Omnisend cart and checkout workflows",
+          "url": "https://support.omnisend.com/en/articles/6659889-abandoned-cart-and-abandoned-checkout-automations",
+          "role": "official documentation"
+        }
+      ],
+      "observed": "The result set includes a vendor comparison saying MailerLite lacks a Shopify cart trigger, while current MailerLite documentation describes a recognized-shopper cart route. This is a concrete source conflict.",
+      "editorialOpportunity": "Use each vendor’s own current event and identity rules, then show a test matrix for cart, checkout, purchase, and unsubscribe. A comparison should explain the conflict rather than repeat competitor claims."
+    },
+    {
+      "id": "automation-cost",
+      "query": "Make vs Zapier credits tasks pricing automation cost",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "Make comparison",
+          "url": "https://www.make.com/compare/make-vs-zapier",
+          "role": "vendor competitor comparison"
+        },
+        {
+          "title": "Zapier comparison",
+          "url": "https://zapier.com/compare/zapier-vs-make",
+          "role": "vendor competitor comparison"
+        },
+        {
+          "title": "Pricing workloads comparison",
+          "url": "https://stackonsale.com/guides/make-vs-zapier",
+          "role": "commercial publication"
+        },
+        {
+          "title": "Current Make pricing",
+          "url": "https://www.make.com/en/pricing",
+          "role": "official pricing"
+        }
+      ],
+      "observed": "Both vendors publish comparisons, and independent-looking commercial sites already offer workload calculations. The category is crowded; a numeric example alone is not a novel format.",
+      "editorialOpportunity": "Document one complete workload with polling, successful actions, bundle expansion, retries, and external model costs. Give a worksheet readers can adapt and explain when simpler setup is worth a higher unit price."
+    },
+    {
+      "id": "social-agent",
+      "query": "Buffer Metricool AI social media agents post comments",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "Buffer MCP server",
+          "url": "https://buffer.com/mcp",
+          "role": "official product documentation"
+        },
+        {
+          "title": "Metricool Inbox Manager",
+          "url": "https://help.metricool.com/inbox-manager-how-to-manage-messages-and-comments-from-metricool-s9zze",
+          "role": "official documentation"
+        }
+      ],
+      "observed": "Retrieved official results separate AI-connected publishing from inbox and comment capabilities. A broad “social agent” phrase can conceal several different jobs.",
+      "editorialOpportunity": "Publish a concrete path with approved drafts, account permissions, queued posts, final publication checks, and separate channel-specific reply controls. Avoid implying one connector can autonomously post and answer everything."
+    },
+    {
+      "id": "scheduling",
+      "query": "Calendly vs Acuity scheduling deposits packages small business",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "Calendly versus Acuity",
+          "url": "https://zapier.com/blog/calendly-vs-acuity/",
+          "role": "publisher comparison"
+        },
+        {
+          "title": "Acuity comparison",
+          "url": "https://www.acuityscheduling.com/compare/acuity-vs-calendly",
+          "role": "vendor competitor comparison"
+        },
+        {
+          "title": "Calendly buffers",
+          "url": "https://calendly.com/help/how-to-use-buffers",
+          "role": "official documentation"
+        }
+      ],
+      "observed": "Search results already explain meeting scheduling versus appointment commerce. The official buffer guide supplies a concrete edge-of-working-hours behavior.",
+      "editorialOpportunity": "Use actual appointment requirements and an end-of-day example, then test conflicting calendars, time zones, deposits, cancellation, and reminders. Show the plan needed for the selected route."
+    },
+    {
+      "id": "etsy-research",
+      "query": "eRank vs Marmalead Etsy keyword research accuracy",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "ShopStack comparison",
+          "url": "https://getshopstack.com/guides/erank-vs-marmalead/",
+          "role": "commercial publication"
+        },
+        {
+          "title": "Seller Gear comparison",
+          "url": "https://www.listing-forge.com/blog/erank-vs-marmalead",
+          "role": "commercial publication"
+        },
+        {
+          "title": "eRank plans",
+          "url": "https://erank.com/plans",
+          "role": "official pricing"
+        }
+      ],
+      "observed": "Multiple recent comparisons discuss price, Free plans, and AI features. Search results do not establish that either vendor’s keyword or sales estimates are audited ground truth.",
+      "editorialOpportunity": "Provide a five-listing experiment worksheet and explain why relevance, material accuracy, baseline records, and seasonality matter more than a listing score."
+    },
+    {
+      "id": "support-cost",
+      "query": "Tidio vs Intercom AI support pricing conversations outcomes",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "Tidio comparison",
+          "url": "https://www.tidio.com/vs/intercom/",
+          "role": "vendor competitor comparison"
+        },
+        {
+          "title": "Deacon comparison",
+          "url": "https://heydeacon.com/resources/tidio-vs-intercom",
+          "role": "vendor competitor comparison"
+        },
+        {
+          "title": "Intercom pricing",
+          "url": "https://www.intercom.com/pricing",
+          "role": "official pricing"
+        },
+        {
+          "title": "Tidio pricing",
+          "url": "https://www.tidio.com/pricing/",
+          "role": "official pricing"
+        }
+      ],
+      "observed": "Results frame the decision around cost and AI capabilities, including competitor-written comparisons. The products bill different units and can have multiple meters.",
+      "editorialOpportunity": "Show a support-volume worksheet that keeps human seats, billable conversations, AI conversations, and outcomes separate. Pair it with an answer-quality and handoff test rather than adopting vendor resolution-rate claims."
+    },
+    {
+      "id": "reviews",
+      "query": "NiceJob Birdeye Google reviews small business alternatives",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "Small-service comparison",
+          "url": "https://stackspacesolutions.com/blog/birdeye-alternatives",
+          "role": "commercial provider comparison"
+        },
+        {
+          "title": "Review-focused alternatives",
+          "url": "https://www.feedback-guru.com/blog/birdeye-alternatives",
+          "role": "commercial provider comparison"
+        },
+        {
+          "title": "Birdeye pricing",
+          "url": "https://birdeye.com/pricing/",
+          "role": "official pricing"
+        },
+        {
+          "title": "NiceJob pricing",
+          "url": "https://get.nicejob.com/pricing",
+          "role": "official pricing"
+        }
+      ],
+      "observed": "There are many alternatives pages, including providers comparing their own tools with larger suites. Public starting-price claims conflict with Birdeye’s configured quote model.",
+      "editorialOpportunity": "Start with the free native review link and the business’s existing software, then explain when repeated completed-job requests or multi-location oversight justify a paid tool. Never select customers by expected rating."
+    },
+    {
+      "id": "business-brief",
+      "query": "ChatGPT Projects small business instructions reusable business brief",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "Projects in ChatGPT",
+          "url": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+          "role": "official documentation"
+        },
+        {
+          "title": "Small-business workshop resource hub",
+          "url": "https://academy.openai.com/public/resources/openai-academy-small-business-resource-hub-2026-06-03",
+          "role": "official educational resource"
+        }
+      ],
+      "observed": "OpenAI already publishes both project instructions and small-business reusable-workflow material. General prompting advice competes with strong free primary resources.",
+      "editorialOpportunity": "Supply a concise business fact sheet with forbidden claims, missing-fact handling, version ownership, and an example showing a draft failing a factual check. Connect it to actual seller tasks."
+    },
+    {
+      "id": "etsy-ai",
+      "query": "Etsy AI product descriptions listing images policy 2026",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "Listing image requirements",
+          "url": "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+          "role": "official policy"
+        },
+        {
+          "title": "AI use update",
+          "url": "https://www.etsy.com/uk/seller-handbook/article/1522733284810",
+          "role": "official seller guidance"
+        },
+        {
+          "title": "Listing image application guide",
+          "url": "https://help.etsy.com/hc/en-us/articles/44297885802647-How-Do-Etsy-s-Listing-Image-Requirements-Apply-to-My-Listings",
+          "role": "official help"
+        }
+      ],
+      "observed": "The October 22 policy update appears prominently in the retrieved official guidance. Copy drafting and image creation have different accuracy and disclosure questions.",
+      "editorialOpportunity": "Show a verified product fact sheet, a complete draft, a deliberately rejected unsupported claim, and a photo/disclosure check. Keep policy interpretation tied to the source and relevant exceptions."
+    },
+    {
+      "id": "newsletter-prices",
+      "query": "Flodesk Kit beehiiv pricing newsletter automations 2026",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "beehiiv pricing",
+          "url": "https://www.beehiiv.com/pricing",
+          "role": "official pricing"
+        },
+        {
+          "title": "Flodesk subscriber-pricing change",
+          "url": "https://help.flodesk.com/en/articles/8923841",
+          "role": "official billing guidance"
+        },
+        {
+          "title": "Newsletter pricing tracker",
+          "url": "https://nikolaos-newsletter-6279d4.beehiiv.com/p/newsletter-platform-costs-october-2026-beehiiv-kit-changes-cheapest-picks",
+          "role": "publisher pricing comparison"
+        }
+      ],
+      "observed": "Retrieved coverage already tracks recent pricing changes; old Free, flat-rate, and plan-name descriptions are a recurring risk. Price freshness requires ongoing work.",
+      "editorialOpportunity": "Compare a broadcast-only publication with an automated course or sales sequence, then price the exact subscriber tier and commitment. Include a check for existing account entitlements."
+    },
+    {
+      "id": "phone-cost",
+      "query": "Smith ai receptionist pricing self service $ per call free 50 calls 95",
+      "checkedAt": "2026-11-01",
+      "method": "Public web search retrieval; not an audited Google rank or search-volume report",
+      "results": [
+        {
+          "title": "Smith.ai AI Receptionist",
+          "url": "https://smith.ai/pricing/ai-receptionist",
+          "role": "official pricing"
+        },
+        {
+          "title": "Smith.ai human receptionists",
+          "url": "https://smith.ai/pricing/receptionists",
+          "role": "official pricing"
+        }
+      ],
+      "observed": "The query intentionally included earlier remembered allowances. Current official results instead show 25 Free AI calls and distinguish AI from the human service.",
+      "editorialOpportunity": "Explain included-call averages versus overage rates, actual expected call volume, and escalation. A free-base plan can still produce a bill."
+    }
+  ],
+  "topicBriefs": [
+    {
+      "id": "welcome",
+      "title": "A welcome sequence that fits the actual Free plan",
+      "readerJob": "Deliver the promised download and introduce the business without losing consent or exhausting sending capacity.",
+      "audience": [
+        "creators",
+        "services",
+        "ecommerce"
+      ],
+      "intent": "implementation and plan selection",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "welcome"
+      ],
+      "googleQueryStrings": [
+        "MailerLite welcome email automation free plan tutorial"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.mailerlite.com/help/free-plan-update-faq",
+          "supportedFact": "Free has 250 active subscribers, 2,500 monthly sends and three active automations."
+        },
+        {
+          "sourceUrl": "https://help.kit.com/en/articles/16627071-the-kit-free-plan",
+          "supportedFact": "Current Kit Free excludes email sequences and visual automations."
+        }
+      ],
+      "requiredReaderArtifact": "Three complete emails, a send-budget example, and a fresh-address/unsubscribe test.",
+      "relatedToolIds": [
+        "mailerlite",
+        "kit"
+      ],
+      "existingRoutes": [
+        "/playbooks/email-welcome-sequence/",
+        "/comparisons/mailerlite-vs-kit/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "A tutorial result set proves coverage, not the number of people seeking this exact workflow."
+    },
+    {
+      "id": "cart",
+      "title": "Choose an email tool by the shopping event it can actually handle",
+      "readerJob": "Recover an eligible cart or checkout without duplicate or post-purchase reminders.",
+      "audience": [
+        "ecommerce"
+      ],
+      "intent": "comparison and implementation",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "cart"
+      ],
+      "googleQueryStrings": [
+        "MailerLite vs Omnisend abandoned checkout Shopify"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.mailerlite.com/help/how-to-create-an-abandoned-cart-email-automation",
+          "supportedFact": "MailerLite documents cart triggers for recognized Shopify shoppers."
+        },
+        {
+          "sourceUrl": "https://support.omnisend.com/en/articles/6659889-abandoned-cart-and-abandoned-checkout-automations",
+          "supportedFact": "Omnisend documents separate abandoned-cart and abandoned-checkout automations."
+        }
+      ],
+      "requiredReaderArtifact": "Event/identity matrix, purchase-exit test, and standard recurring plan cost.",
+      "relatedToolIds": [
+        "mailerlite",
+        "omnisend",
+        "shopify"
+      ],
+      "existingRoutes": [
+        "/comparisons/mailerlite-vs-omnisend/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "Vendor comparisons can misstate competitors; use each vendor’s own integration docs."
+    },
+    {
+      "id": "lead-queue",
+      "title": "Capture website inquiries in a reviewable Make queue",
+      "readerJob": "Stop copying submissions by hand while preserving duplicate and failure visibility.",
+      "audience": [
+        "services",
+        "local"
+      ],
+      "intent": "implementation",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "automation-cost"
+      ],
+      "googleQueryStrings": [
+        "Make vs Zapier credits tasks pricing automation cost"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.make.com/en/pricing",
+          "supportedFact": "Free has 1,000 monthly credits and a 15-minute scheduled interval."
+        },
+        {
+          "sourceUrl": "https://help.make.com/l6du-data-stores",
+          "supportedFact": "Data stores provide record storage and key-based operations."
+        }
+      ],
+      "requiredReaderArtifact": "Exact payload, unique event ID, valid/duplicate/missing-field fixtures, and a manual exception procedure.",
+      "relatedToolIds": [
+        "make"
+      ],
+      "existingRoutes": [
+        "/playbooks/first-reliable-automation/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "A small internal queue is not a validated unattended customer-facing recovery system."
+    },
+    {
+      "id": "automation-cost",
+      "title": "Price an automation by the workload rather than the logo",
+      "readerJob": "Choose the tool and plan that supports the route at a realistic usage cost.",
+      "audience": [
+        "ecommerce",
+        "services",
+        "teams"
+      ],
+      "intent": "purchase comparison",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "automation-cost"
+      ],
+      "googleQueryStrings": [
+        "Make vs Zapier credits tasks pricing automation cost"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://zapier.com/pricing",
+          "supportedFact": "Zapier Free has 100 tasks and two-step Zaps."
+        },
+        {
+          "sourceUrl": "https://www.make.com/en/pricing",
+          "supportedFact": "Make uses credits; AI features can consume different amounts."
+        },
+        {
+          "sourceUrl": "https://n8n.io/pricing/",
+          "supportedFact": "n8n Cloud prices workflow executions with unlimited steps."
+        }
+      ],
+      "requiredReaderArtifact": "Transparent workload calculation including polling, branching, retries and external API bills.",
+      "relatedToolIds": [
+        "zapier",
+        "make",
+        "pabbly",
+        "n8n"
+      ],
+      "existingRoutes": [
+        "/comparisons/zapier-vs-make/",
+        "/calculators/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "The units are not equivalent. A modeled bill is not an observed reliability or productivity benchmark."
+    },
+    {
+      "id": "social-agent",
+      "title": "Connect an AI assistant to a controlled social publishing workflow",
+      "readerJob": "Draft and schedule posts, then route eligible replies within channel rules.",
+      "audience": [
+        "creators",
+        "ecommerce",
+        "local"
+      ],
+      "intent": "implementation and tool selection",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "social-agent"
+      ],
+      "googleQueryStrings": [
+        "Buffer Metricool AI social media agents post comments"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://buffer.com/mcp",
+          "supportedFact": "Buffer documents an AI-connected publishing server."
+        },
+        {
+          "sourceUrl": "https://help.metricool.com/plans-add-ons-and-api-access-explained-xux1u",
+          "supportedFact": "Metricool distinguishes MCP availability from API access by plan."
+        }
+      ],
+      "requiredReaderArtifact": "Copyable content brief, OAuth connection steps, queue verification, human handoff and channel-boundary table.",
+      "relatedToolIds": [
+        "buffer",
+        "metricool"
+      ],
+      "existingRoutes": [
+        "/content/ai-social-media-agents.html",
+        "/playbooks/ai-social-media-agents/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "A broad agent label does not establish autonomous replies, permission to message, or support for all networks."
+    },
+    {
+      "id": "etsy-listings",
+      "title": "Draft product copy without inventing facts",
+      "readerJob": "Produce a useful listing while preserving product truth and current image rules.",
+      "audience": [
+        "etsy",
+        "ecommerce"
+      ],
+      "intent": "implementation and policy-aware operation",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "etsy-ai",
+        "etsy-research"
+      ],
+      "googleQueryStrings": [
+        "eRank vs Marmalead Etsy keyword research accuracy",
+        "Etsy AI product descriptions listing images policy 2026"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+          "supportedFact": "October 2026 rules address accurate listing imagery and relevant exceptions."
+        }
+      ],
+      "requiredReaderArtifact": "Original product fact sheet, complete title/description/tags draft, rejected-claim example and review checklist.",
+      "relatedToolIds": [
+        "chatgpt",
+        "claude",
+        "erank",
+        "marmalead"
+      ],
+      "existingRoutes": [
+        "/playbooks/etsy-listing-workflow/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "Policy relevance and a large seller population do not establish ranking opportunity or demand for expensive SaaS."
+    },
+    {
+      "id": "margin",
+      "title": "Compare Etsy and an owned store using contribution",
+      "readerJob": "Understand what remains after direct order costs and identify acquisition costs still missing.",
+      "audience": [
+        "etsy",
+        "ecommerce"
+      ],
+      "intent": "commercial decision and calculator",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "etsy-ai"
+      ],
+      "googleQueryStrings": [
+        "Etsy AI product descriptions listing images policy 2026"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.etsy.com/legal/fees/",
+          "supportedFact": "Etsy charges listing, transaction and potentially advertising or other fees."
+        },
+        {
+          "sourceUrl": "https://www.shopify.com/pricing",
+          "supportedFact": "Shopify has recurring store plans and differentiated payment fees."
+        }
+      ],
+      "requiredReaderArtifact": "A transparent order example and editable cost calculator with shipping, ads, returns, and fixed costs separated.",
+      "relatedToolIds": [
+        "etsy",
+        "shopify"
+      ],
+      "existingRoutes": [
+        "/comparisons/shopify-vs-etsy/",
+        "/playbooks/product-profit-check/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "This brief is a reasoned adjacent job, not a separately measured Google query cluster; seller revenue is not site affiliate revenue."
+    },
+    {
+      "id": "crm",
+      "title": "Keep quote follow-up visible before buying sequences",
+      "readerJob": "Capture an inquiry, assign an owner, and stop follow-up after a response or decision.",
+      "audience": [
+        "services",
+        "local"
+      ],
+      "intent": "implementation and CRM comparison",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "automation-cost"
+      ],
+      "googleQueryStrings": [
+        "Make vs Zapier credits tasks pricing automation cost"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.hubspot.com/pricing/sales",
+          "supportedFact": "HubSpot sequences require a paid sales tier with material commitment and onboarding costs."
+        },
+        {
+          "sourceUrl": "https://support.pipedrive.com/en/article/what-features-do-the-pipedrive-plans-have",
+          "supportedFact": "Pipedrive Growth adds email sync, automation and sequences."
+        }
+      ],
+      "requiredReaderArtifact": "Manual task-first recipe, reply/decline stop cases, and a cost example for a stated team size.",
+      "relatedToolIds": [
+        "hubspot",
+        "pipedrive",
+        "zoho-crm",
+        "monday-crm"
+      ],
+      "existingRoutes": [
+        "/playbooks/service-lead-follow-up/",
+        "/comparisons/hubspot-vs-pipedrive/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "Adjacent purchase job inferred from operating needs and current gates; no search-volume or conversion estimate."
+    },
+    {
+      "id": "booking",
+      "title": "Make the public booking page match real capacity",
+      "readerJob": "Prevent conflicts and make appointment, payment, and cancellation expectations clear.",
+      "audience": [
+        "services",
+        "local"
+      ],
+      "intent": "implementation and purchase comparison",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "scheduling"
+      ],
+      "googleQueryStrings": [
+        "Calendly vs Acuity scheduling deposits packages small business"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://calendly.com/help/how-to-use-buffers",
+          "supportedFact": "Buffers can extend outside stated working hours and existing bookings keep old settings."
+        },
+        {
+          "sourceUrl": "https://www.acuityscheduling.com/pricing/",
+          "supportedFact": "Calendar counts and packages/memberships are plan-dependent."
+        }
+      ],
+      "requiredReaderArtifact": "End-of-day example, conflicting-calendar fixture, second-time-zone test and reschedule/cancel checks.",
+      "relatedToolIds": [
+        "calendly",
+        "acuity"
+      ],
+      "existingRoutes": [
+        "/playbooks/self-service-booking/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "Scheduling comparisons already exist. Distinction must come from the complete test procedure and service-specific examples."
+    },
+    {
+      "id": "support",
+      "title": "Prepare trustworthy answers and a working human handoff",
+      "readerJob": "Reduce repetitive support without leaving an exception trapped in automation.",
+      "audience": [
+        "ecommerce",
+        "services"
+      ],
+      "intent": "implementation and usage-cost comparison",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "support-cost"
+      ],
+      "googleQueryStrings": [
+        "Tidio vs Intercom AI support pricing conversations outcomes"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.tidio.com/pricing/",
+          "supportedFact": "Tidio separates billable human conversations, Lyro conversations and Flow visitors."
+        },
+        {
+          "sourceUrl": "https://www.intercom.com/pricing",
+          "supportedFact": "Intercom combines seats with Fin outcome charges."
+        }
+      ],
+      "requiredReaderArtifact": "Approved FAQ pack, ordinary/missing/ambiguous questions, online/offline handoff tests and a usage worksheet.",
+      "relatedToolIds": [
+        "tidio",
+        "intercom",
+        "notion"
+      ],
+      "existingRoutes": [
+        "/playbooks/customer-support-knowledge-base/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "Vendor resolution rates are not independently validated outcomes for a new site or shop."
+    },
+    {
+      "id": "reviews",
+      "title": "Request honest reviews without duplicating existing software",
+      "readerJob": "Create consistent follow-up after completed work and route recurring feedback to an owner.",
+      "audience": [
+        "local",
+        "services"
+      ],
+      "intent": "implementation and tool selection",
+      "editorialPriority": "Lead coverage",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "reviews"
+      ],
+      "googleQueryStrings": [
+        "NiceJob Birdeye Google reviews small business alternatives"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://support.google.com/business/answer/3474122",
+          "supportedFact": "Google supports review links and prohibits incentives for reviews."
+        },
+        {
+          "sourceUrl": "https://get.nicejob.com/pricing",
+          "supportedFact": "NiceJob publishes a focused $75/month Starter offer."
+        },
+        {
+          "sourceUrl": "https://birdeye.com/pricing/",
+          "supportedFact": "Birdeye offers configured, location-based pricing by quote."
+        }
+      ],
+      "requiredReaderArtifact": "Neutral request template, eligibility rule, duplicate-request check and free-versus-paid decision path.",
+      "relatedToolIds": [
+        "nicejob",
+        "gatherup",
+        "birdeye",
+        "podium",
+        "gradeus"
+      ],
+      "existingRoutes": [
+        "/playbooks/honest-review-request-system/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "The category is crowded with provider-written alternatives pages. Avoid unverified starting prices and unsupported review-growth promises."
+    },
+    {
+      "id": "ai-brief",
+      "title": "Give a business assistant a small source of truth",
+      "readerJob": "Reuse business facts and rules without re-explaining them or granting broad account access.",
+      "audience": [
+        "ecommerce",
+        "creators",
+        "services"
+      ],
+      "intent": "implementation",
+      "editorialPriority": "Supporting depth",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "business-brief"
+      ],
+      "googleQueryStrings": [
+        "ChatGPT Projects small business instructions reusable business brief"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+          "supportedFact": "Projects can use instructions, files and chat context."
+        }
+      ],
+      "requiredReaderArtifact": "Copyable fact sheet, instruction block, version owner, missing-fact rule and a deliberately wrong-output test.",
+      "relatedToolIds": [
+        "chatgpt",
+        "claude",
+        "gemini"
+      ],
+      "existingRoutes": [
+        "/playbooks/chatgpt-project-business-brief/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "Official free education is a strong competitor; a generic prompt collection is weak differentiation."
+    },
+    {
+      "id": "design-campaign",
+      "title": "Publish one coordinated launch from approved facts",
+      "readerJob": "Create social and email assets whose dates, prices, visuals and links agree.",
+      "audience": [
+        "creators",
+        "ecommerce"
+      ],
+      "intent": "implementation and software comparison",
+      "editorialPriority": "Supporting depth",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "newsletter-prices",
+        "social-agent"
+      ],
+      "googleQueryStrings": [
+        "Buffer Metricool AI social media agents post comments",
+        "Flodesk Kit beehiiv pricing newsletter automations 2026"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.adobe.com/express/pricing?rd=1",
+          "supportedFact": "Express Free and Premium differ in scheduling account limits; Premium is $9.99/month."
+        },
+        {
+          "sourceUrl": "https://help.kit.com/en/articles/16627071-the-kit-free-plan",
+          "supportedFact": "Kit Free supports broadcasts but not sequences."
+        }
+      ],
+      "requiredReaderArtifact": "Complete fictional campaign with design brief, captions, email, publication log and correction routine.",
+      "relatedToolIds": [
+        "adobe-express",
+        "canva",
+        "kit"
+      ],
+      "existingRoutes": [
+        "/playbooks/product-launch-content-system/",
+        "/comparisons/canva-vs-adobe-express/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "A template library alone is not original evidence. The reader value is the complete coherent campaign and checks."
+    },
+    {
+      "id": "operations",
+      "title": "Choose a page system or a record system deliberately",
+      "readerJob": "Keep procedures current and structured work visible with appropriate access.",
+      "audience": [
+        "services",
+        "creators",
+        "teams"
+      ],
+      "intent": "purchase comparison and implementation",
+      "editorialPriority": "Supporting depth",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "business-brief"
+      ],
+      "googleQueryStrings": [
+        "ChatGPT Projects small business instructions reusable business brief"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.notion.com/help/understanding-block-usage",
+          "supportedFact": "Free multi-owner workspaces have a block allowance."
+        },
+        {
+          "sourceUrl": "https://support.airtable.com/articles/3669392397-Getting-started-with-Airtable-automations",
+          "supportedFact": "Airtable has plan-specific automation-run limits."
+        }
+      ],
+      "requiredReaderArtifact": "Five-editor cost model, page-versus-record example, owner/review-date system and collaborator permission test.",
+      "relatedToolIds": [
+        "notion",
+        "airtable",
+        "trello"
+      ],
+      "existingRoutes": [
+        "/comparisons/notion-vs-airtable/",
+        "/playbooks/business-operations-hub/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "An adjacent operating job inferred from documentation and tool-sprawl evidence, not a measured search-demand claim."
+    },
+    {
+      "id": "newsletter-model",
+      "title": "Choose a newsletter platform for the business model",
+      "readerJob": "Separate broadcast publishing, an automated course, and ecommerce messaging before comparing prices.",
+      "audience": [
+        "creators",
+        "ecommerce"
+      ],
+      "intent": "purchase comparison",
+      "editorialPriority": "Supporting depth",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "newsletter-prices"
+      ],
+      "googleQueryStrings": [
+        "Flodesk Kit beehiiv pricing newsletter automations 2026"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.beehiiv.com/blog/beehiiv-pricing-2026",
+          "supportedFact": "beehiiv changed plan names and offers in October 2026."
+        },
+        {
+          "sourceUrl": "https://help.flodesk.com/en/articles/8923841",
+          "supportedFact": "New Flodesk pricing is based on active subscribers."
+        }
+      ],
+      "requiredReaderArtifact": "A current-plan decision table with subscriber tiers, sending, sequences, annual commitment and existing-entitlement checks.",
+      "relatedToolIds": [
+        "beehiiv",
+        "kit",
+        "flodesk",
+        "mailerlite",
+        "getresponse"
+      ],
+      "existingRoutes": [
+        "/tool/beehiiv/",
+        "/tool/flodesk/",
+        "/tool/getresponse/",
+        "/comparisons/mailerlite-vs-kit/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "Monetization features do not create an audience, sponsors, or willingness to pay."
+    },
+    {
+      "id": "phone",
+      "title": "Price missed-call handling using the actual call pattern",
+      "readerJob": "Decide between an AI receptionist, staffed service, or a phone system the team answers.",
+      "audience": [
+        "local",
+        "services"
+      ],
+      "intent": "purchase comparison and implementation",
+      "editorialPriority": "Supporting depth",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "phone-cost"
+      ],
+      "googleQueryStrings": [
+        "Smith ai receptionist pricing self service $ per call free 50 calls 95"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://smith.ai/pricing/ai-receptionist",
+          "supportedFact": "Free AI has 25 included calls, with overages; Pro has a separate included allowance."
+        },
+        {
+          "sourceUrl": "https://www.dialpad.com/pricing/",
+          "supportedFact": "Dialpad Connect is a per-user business communications product."
+        }
+      ],
+      "requiredReaderArtifact": "Call-volume arithmetic, included-versus-overage distinction, routine/ambiguous/out-of-area tests and escalation check.",
+      "relatedToolIds": [
+        "smith-ai",
+        "dialpad"
+      ],
+      "existingRoutes": [
+        "/tool/smith-ai/",
+        "/tool/dialpad/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "The query contained outdated remembered prices; official current offers control. No claim of saved revenue per missed call is made."
+    },
+    {
+      "id": "video",
+      "title": "Choose the correct media task before buying AI video",
+      "readerJob": "Decide whether the job is editing a recording, generating an authorized presenter, or producing a licensed voiceover.",
+      "audience": [
+        "creators",
+        "ecommerce"
+      ],
+      "intent": "purchase comparison and implementation",
+      "editorialPriority": "Supporting depth",
+      "priorityIsInference": true,
+      "observedSearchIds": [
+        "social-agent"
+      ],
+      "googleQueryStrings": [
+        "Buffer Metricool AI social media agents post comments"
+      ],
+      "evidence": [
+        {
+          "sourceUrl": "https://www.descript.com/pricing",
+          "supportedFact": "Descript separates media hours, AI credits, editor seats and export features."
+        },
+        {
+          "sourceUrl": "https://elevenlabs.io/docs/overview/administration/billing",
+          "supportedFact": "Paid generations have commercial-use rights; Free use is noncommercial with attribution."
+        }
+      ],
+      "requiredReaderArtifact": "One script and output checklist across the three jobs, with rights, pronunciation and factual checks.",
+      "relatedToolIds": [
+        "descript",
+        "heygen",
+        "elevenlabs"
+      ],
+      "existingRoutes": [
+        "/tool/descript/",
+        "/tool/heygen/",
+        "/tool/elevenlabs/"
+      ],
+      "businessRelevance": "The reader is solving a concrete operating or purchase decision. Relevant tool links follow the decision; commission size is not a ranking factor.",
+      "confidence": "High confidence in the documented problem and plan constraints; moderate confidence in editorial usefulness; unmeasured search volume and acquisition potential.",
+      "evidenceLimitations": "Adjacent production need; no independently measured demand or comparative media-quality test was conducted."
+    }
+  ],
+  "audienceJobs": [
+    {
+      "audience": "Product and marketplace sellers",
+      "jobs": [
+        "Accurate listings and product media",
+        "Contribution after fees, shipping and acquisition",
+        "Permission-based email and support"
+      ],
+      "evidenceIds": [
+        "etsy-seller-census",
+        "etsy-q3-2026",
+        "etsy-ai-policy-2026"
+      ],
+      "implication": "Use concrete product facts and order examples. Do not assume solo Etsy sellers are natural buyers of costly enterprise subscriptions."
+    },
+    {
+      "audience": "Creators and solo knowledge businesses",
+      "jobs": [
+        "A consistent publication or course",
+        "Coordinated campaign content",
+        "A maintained business brief and reusable production process"
+      ],
+      "evidenceIds": [
+        "chamber-ai-2026"
+      ],
+      "implication": "Separate newsletter publishing, automated teaching, and digital-product selling. Their plan requirements and economics differ."
+    },
+    {
+      "audience": "Local and service operators",
+      "jobs": [
+        "Inquiry ownership and quote follow-up",
+        "Booking and missed-call handling",
+        "Honest reviews and support exceptions"
+      ],
+      "evidenceIds": [
+        "chamber-ai-2026",
+        "census-ai-2026"
+      ],
+      "implication": "Higher-priced tools can be relevant to a costly repeated job, but only when volume, capability, and maintenance burden justify them."
+    }
+  ],
+  "priorityCriteria": [
+    "A reader can name the job and recognize a completed result.",
+    "Official evidence supports a specific workflow or buying constraint.",
+    "The article supplies an original usable artifact, calculation, or test procedure.",
+    "A meaningful tool decision follows naturally from the job.",
+    "Maintenance burden is visible and manageable; prices and policies have review triggers.",
+    "The content remains useful if no affiliate program approves the site."
+  ],
+  "opportunityAssessment": {
+    "recommendation": "Build the publication around documented workflows, honest total-cost comparisons, and reusable artifacts across all supported business groups. Tool profiles support those jobs rather than serving as the entire editorial product.",
+    "competitiveReality": "Broad AI-tool directories, best-tool lists, and many comparison formats are already heavily represented in the observed results. Several competitors already publish numeric scenarios. The defensible work is accurate implementation detail, internally coherent original examples, source reconciliation, and sustained maintenance.",
+    "distributionImplication": "Search should lead to a task-specific page with enough practical value to justify a visit. Related examples, downloadable worksheets, and an owned newsletter can give readers a reason to return; none establishes traffic on its own.",
+    "monetizationImplication": "The highest commission is not necessarily the best match for the existing seller audience. Connect a recurring business problem to a justified paid decision. Product recommendations must remain valid when no affiliate commission is available.",
+    "limits": "No reliable forecast of rapid income, search growth, affiliate approval, or site valuation follows from this research. Publication quality is necessary work, not proof of future receipts."
+  },
+  "implementationDecisions": [
+    "All47 profiles now include a documented cost model, specific fit exclusions, an original illustrative business task, and reasoned alternatives.",
+    "Comparisons use recurring versus promotional rates and explicit currency, commitment and workload assumptions.",
+    "Tutorials specify one workable route with a usable example and a verification step.",
+    "Keep factual source conflicts visible and maintain a private evidence ledger rather than substituting remembered prices.",
+    "Avoid a generic high-ticket label in reader-facing navigation; lead with the reader’s task."
+  ],
+  "evidenceLimitations": [
+    "Search coverage is qualitative and result sets can vary by query, location, time, and search engine.",
+    "Retrieved competitor content was observed, not independently validated or exhaustively audited.",
+    "No hands-on product benchmarks or measured savings are represented.",
+    "Market surveys differ in population and wording; their adoption percentages should not be averaged.",
+    "Examples show arithmetic or expected artifacts under stated assumptions, not actual business results."
+  ]
+}

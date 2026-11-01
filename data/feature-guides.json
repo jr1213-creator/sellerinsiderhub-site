@@ -1,0 +1,1253 @@
+[
+  {
+    "route": "/guides/crm-vs-spreadsheet-vs-project-management/",
+    "title": "CRM, spreadsheet, or project tool: choose the right place for your work",
+    "summary": "Use a concrete customer-to-project example to choose a spreadsheet, CRM, project board, or linked database—and migrate without losing the next action.",
+    "label": "Business systems",
+    "intro": "When a business feels disorganized, buying a more powerful app is tempting. The useful first question is smaller: what information do you keep losing? A customer’s next follow-up, a project’s next task, and a product’s next stock count are different problems. They need different records, even when one app can hold all three.",
+    "answer": "Use a spreadsheet for a straightforward list or calculation; a CRM for customer relationships and sales follow-up; a project tool for delivering work; and a linked database when the same customers, products, or assets belong to many connected records. Choose the system whose ordinary screen answers your ordinary question.",
+    "sections": [
+      {
+        "id": "choose",
+        "title": "The four choices, with a clear decision test",
+        "paragraphs": [
+          "Features overlap. A spreadsheet can have reminders, a CRM can have project features, and Notion can hold a sales pipeline. The distinction is the amount of structure you must build and maintain yourself. Start with the question you need answered every morning."
+        ],
+        "table": {
+          "headers": [
+            "System",
+            "The question it should answer",
+            "Good first use",
+            "The reason to move on"
+          ],
+          "rows": [
+            [
+              "Spreadsheet",
+              "What is on my list, and what do the numbers say?",
+              "A product facts sheet, simple budget, or one-owner quote list.",
+              "You repeatedly lose relationship history, duplicate records, or next actions."
+            ],
+            [
+              "CRM",
+              "Who needs attention, what happened, and what comes next?",
+              "Inquiry → qualified → proposal → won/lost.",
+              "Delivery tasks become more detailed than the sales conversation."
+            ],
+            [
+              "Project tool",
+              "Who owns the next piece of work, and when is it due?",
+              "A website launch, client delivery, or publishing calendar.",
+              "The board is being used to recreate a complex customer database."
+            ],
+            [
+              "Linked database",
+              "How do customers, jobs, products, and assets relate?",
+              "One customer with several jobs; one product used in several campaigns.",
+              "Maintaining the custom system costs more effort than a purpose-built tool."
+            ]
+          ]
+        }
+      },
+      {
+        "id": "one-business",
+        "title": "Follow one inquiry through the right records",
+        "paragraphs": [
+          "Consider a fictional design business. A prospective client asks for a brochure, receives a proposal, accepts it, and then sends revisions. During the sale, the important object is the opportunity: what is being bought, by whom, and what the next conversation should accomplish. After acceptance, the important objects are deliverables and tasks.",
+          "Keep one contact record for the person and a separate opportunity for this purchase. If the same person returns for another brochure, create another opportunity attached to the existing contact. Once a proposal is accepted, create a delivery project and link back to the sale. A project marked complete does not mean the customer relationship disappears."
+        ],
+        "example": {
+          "title": "A small, usable record structure",
+          "content": "CONTACT\nContact ID: C-104\nName: Alex Morgan (fictional)\nEmail: alex@example.com\nCompany: Sample Studio\n\nOPPORTUNITY\nOpportunity ID: O-208\nContact: C-104\nWork: 8-page brochure\nStage: Proposal sent\nNext action: Ask whether the draft scope meets the brief\nDue: 3 business days after the proposal\nOwner: Business owner\n\nDELIVERY PROJECT — create only when the work is accepted\nProject ID: P-051\nOpportunity: O-208\nTasks: Receive approved copy; first design; client review; final export\nOwner and due date: Set for every task"
+        }
+      },
+      {
+        "id": "minimum-fields",
+        "title": "Build only the fields you will use",
+        "paragraphs": [
+          "A useful starting contact record contains a stable ID, name, contact method, source, and relationship status. A useful opportunity adds the requested service, stage, owner, and next action date. A useful project adds a deliverable, task owner, due date, and completion definition. Avoid storing private information simply because an empty field is available.",
+          "Write down what each stage means. “Qualified” might mean the requested service is offered, the location is covered, and the customer wants a proposal. “Won” should mean the acceptance condition you actually use—such as a signed agreement—not that the last conversation sounded promising. Clear definitions make reports more useful than additional fields.",
+          "Airtable’s linked records connect information across tables. In this example, linking the contact to opportunities avoids copying the same email address into every new job. The design is useful when relationships repeat; it adds unnecessary complexity to a one-off shopping list."
+        ],
+        "sourceUrls": [
+          "https://www.airtable.com/guides/build/connect-data-with-linked-records"
+        ]
+      },
+      {
+        "id": "choose-products",
+        "title": "Choose a product after choosing the structure",
+        "paragraphs": [
+          "If follow-up is the problem, compare HubSpot and Pipedrive against the exact next action you need: a task, a personal email, a sales sequence, or enrollment by an automated workflow. Those are separate capabilities and can require different paid plans. A broad claim that a CRM “has automation” is not enough.",
+          "If instructions and projects belong together, compare Notion with Airtable. Favor the workspace that lets the person doing the work find the current answer without navigating a custom maze. A beautiful dashboard is only useful if someone can change a due date, find the source document, and recover a deleted or incorrect record.",
+          "You can also stay with your current spreadsheet. Add a unique ID, a consistent status column, an owner, and a next-action date before evaluating a migration. If those changes solve the actual problem, you have learned that structure mattered more than a new subscription."
+        ],
+        "links": [
+          {
+            "title": "HubSpot vs Pipedrive: fit and the real cost of sales automation",
+            "url": "/comparisons/hubspot-vs-pipedrive/",
+            "label": "Compare CRM options"
+          },
+          {
+            "title": "Notion vs Airtable: documents, records, and working costs",
+            "url": "/comparisons/notion-vs-airtable/",
+            "label": "Compare workspaces"
+          }
+        ]
+      },
+      {
+        "id": "migrate",
+        "title": "Move the records without breaking the business",
+        "paragraphs": [],
+        "steps": [
+          "Export the old system and keep an untouched backup. Confirm which fields and attachments are included; a CSV is not automatically a backup of comments, history, or files.",
+          "Decide which system owns each field. For example, the CRM owns the customer’s current contact details; the project tool owns delivery tasks. Avoid two editable copies that silently disagree.",
+          "Clean duplicates and normalize statuses before importing. Review possible matches; two people sharing a business email address are not necessarily one person.",
+          "Import a small representative set: an active opportunity, a won customer, a closed lead, and a record with missing optional data. Check relationships, dates, time zones, and special characters.",
+          "Recreate views around daily work: follow-ups due, overdue tasks, proposals awaiting a response, and active delivery. A successful import count is not proof those views are useful.",
+          "Run through a complete sample journey. Create an inquiry, add a note, schedule a task, change the stage, and create the delivery project. Verify the correct owner can see it and an unauthorized user cannot.",
+          "Switch the live entry point only after those checks pass. Keep the old system read-only during the transition, and tell everyone where new information belongs."
+        ]
+      },
+      {
+        "id": "check",
+        "title": "Know whether the change worked",
+        "paragraphs": [
+          "Count overdue follow-ups, records without an owner, duplicate contacts, and minutes spent finding a customer’s last conversation. Compare the same kinds of work before and after the change. More records in a new app are not evidence of a better process.",
+          "The first useful automation is often a reminder on a complete record. Creating that reminder is safer than automatically sending a sales message before you trust the stage, permission, and contact information. The lead follow-up tutorial shows the complete path."
+        ],
+        "links": [
+          {
+            "title": "Build a reliable service lead follow-up workflow",
+            "url": "/playbooks/service-lead-follow-up/",
+            "label": "Continue with the tutorial"
+          },
+          {
+            "title": "Create an operations hub people can actually use",
+            "url": "/playbooks/business-operations-hub/",
+            "label": "Continue with the tutorial"
+          }
+        ]
+      }
+    ],
+    "toolIds": [
+      "hubspot",
+      "pipedrive",
+      "notion",
+      "airtable"
+    ],
+    "namedSources": [
+      {
+        "title": "Airtable: connect data with linked records",
+        "url": "https://www.airtable.com/guides/build/connect-data-with-linked-records",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "How linked records connect related information across tables. Product-specific plan details are sourced in the linked tool guides."
+        ]
+      }
+    ],
+    "publishedAt": "2026-10-31",
+    "lastReviewed": "2026-11-01",
+    "reviewNotes": [
+      "This guide combines official product documentation with original workflow analysis. The sample business records and calculations are illustrative; they are not customer results or a hands-on product benchmark."
+    ]
+  },
+  {
+    "route": "/guides/ai-receptionist-vs-answering-service-vs-voicemail/",
+    "title": "AI receptionist, answering service, or voicemail: what fits your calls?",
+    "summary": "Compare call handling by urgency, intake quality, billing units, and a worked cost example. Includes a ready-to-adapt script and a complete test plan.",
+    "label": "Phone systems",
+    "intro": "A missed call can be a new customer, an existing customer asking for an update, or someone who needs an immediate human response. Treating every call as a sales lead produces bad routing. Choosing a receptionist begins with deciding what should happen to each type of call—and who owns the next action.",
+    "answer": "Voicemail works when a message and a reliable callback are enough. An AI receptionist fits repeatable questions and structured intake. A live answering service is a stronger option when callers need a human conversation. A hybrid only works when the handoff reaches an available person or creates an explicitly owned callback.",
+    "sections": [
+      {
+        "id": "choose",
+        "title": "Compare the job each option can do",
+        "paragraphs": [],
+        "table": {
+          "headers": [
+            "Option",
+            "Strongest fit",
+            "What you still need to provide"
+          ],
+          "rows": [
+            [
+              "Voicemail",
+              "Low-volume, non-urgent calls where callers can wait.",
+              "A clear greeting, return-call expectation, and someone who checks messages."
+            ],
+            [
+              "AI receptionist",
+              "A defined intake script, approved FAQs, routing, or supported booking actions.",
+              "Accurate business facts, limits on promises, an exception path, and tested integrations."
+            ],
+            [
+              "Live answering service",
+              "Callers who benefit from human clarification and a flexible conversation.",
+              "An accurate script and escalation instructions; a receptionist is not automatically your technical specialist."
+            ],
+            [
+              "Hybrid",
+              "Routine intake plus a staffed route for exceptions.",
+              "A contract and test proving when the handoff happens, who answers, and what is charged."
+            ]
+          ]
+        }
+      },
+      {
+        "id": "cost",
+        "title": "Compare equivalent usage, not the smallest headline price",
+        "paragraphs": [
+          "Billing units matter. Smith.ai’s AI-first Free option currently includes 25 real calls per month and lists additional calls at $3 each. Ruby’s live receptionist pricing lists $250 per month for 50 receptionist minutes and $395 for 100 minutes. Calls and minutes are different units; the amount of conversation changes the comparison.",
+          "For an illustrative month with 40 billable calls averaging two receptionist minutes each, Smith.ai Free would be 15 additional calls × $3 = $45. Ruby’s 100-minute tier would cover the assumed 80 minutes at $395. This compares the listed allowance math, not equivalent service quality. It excludes taxes, excluded call types, other charges, and the operational value of a human answering.",
+          "Before choosing, ask how spam, wrong numbers, transferred calls, holding time, rounding, and test calls are counted. Confirm whether the advertised handoff is included in your chosen package. Use a month of your own call log; a hypothetical saving is not a forecast for your business."
+        ],
+        "sourceUrls": [
+          "https://smith.ai/pricing/ai-receptionist",
+          "https://www.ruby.com/plans-and-pricing/"
+        ]
+      },
+      {
+        "id": "route",
+        "title": "Write the routing rules before the greeting",
+        "paragraphs": [
+          "Divide calls into a short list: new inquiry, existing customer, change to an appointment, billing question, complaint, and urgent exception. For each type, define allowed questions and the exact destination. “Escalate to a human” is incomplete unless the destination is staffed or the callback has an owner and a deadline.",
+          "Keep automated answers within approved business information. An intake system can collect a service address, but it should not invent travel coverage. It can offer supported calendar availability, but it should not promise that a technician has been dispatched. For urgent safety or clinical matters, use an approved emergency or professional route; an ordinary business callback queue is not an emergency service.",
+          "Review recording notices, retention settings, access, and any industry-specific requirements before collecting live customer information. The right configuration depends on your business and location. This operational guide does not establish legal compliance."
+        ],
+        "example": {
+          "title": "An intake brief for a fictional repair business",
+          "content": "BUSINESS FACTS\nBusiness: Sample Repair Co.\nServices: Non-emergency faucet and fixture replacement\nCoverage: Only the postal codes in our approved service list\nPricing: A quote is required; do not estimate a price\n\nOPENING\n“You’ve reached Sample Repair Co.’s virtual receptionist. I can take the details for a service request or help route an existing inquiry.”\n\nNEW REQUEST\nAsk for name, callback number, service postal code, and a brief description. Read the number back. Do not request payment-card details.\n\nNEXT ACTION\nCreate one callback task for the office owner. State the approved callback window only when it is staffed and current.\n\nEXCEPTIONS\nDo not diagnose, promise emergency attendance, decide refunds, or confirm unavailable appointments. Follow the business’s approved urgent-call instructions.\n\nCLOSING\n“Your request is recorded. The office will review it and contact you using the number you confirmed.”"
+        }
+      },
+      {
+        "id": "connect",
+        "title": "Connect one real next action",
+        "paragraphs": [
+          "Choose where the intake record belongs. If you already use a CRM, check whether the integration creates a contact, a lead, a deal, a task, or several of those. They are not interchangeable. Include the call time, requested service, source, and callback owner. If a caller already exists, preserve the conversation history instead of creating a fresh unrelated contact.",
+          "For booking, connect the actual service calendar and confirm duration, buffers, lead time, cancellation rules, and time zone. “Calendar connected” does not prove that an appointment is appropriate for the service area or type. For an estimate requiring human qualification, create a callback task instead of offering an appointment the business cannot honor.",
+          "Keep the manual path obvious. Someone should be able to open the daily call list, find an unresolved request, and call back without relying on the automation that failed. Test what happens if the CRM connection is unavailable and whether failed handoffs generate a visible alert."
+        ],
+        "links": [
+          {
+            "title": "Organize lead records and follow-up",
+            "url": "/playbooks/service-lead-follow-up/",
+            "label": "Continue with the tutorial"
+          },
+          {
+            "title": "Configure booking rules and check the full appointment journey",
+            "url": "/playbooks/self-service-booking/",
+            "label": "Continue with the tutorial"
+          }
+        ]
+      },
+      {
+        "id": "test",
+        "title": "A call test that exposes useful failures",
+        "paragraphs": [],
+        "table": {
+          "headers": [
+            "Place this sample call",
+            "A passing result"
+          ],
+          "rows": [
+            [
+              "A normal new inquiry",
+              "Correct callback details, service, location, and one assigned next action."
+            ],
+            [
+              "A caller corrects their phone number",
+              "The final record contains the corrected number, not both versions."
+            ],
+            [
+              "A caller is outside your service area",
+              "No false promise of coverage; the approved alternative response is used."
+            ],
+            [
+              "An existing customer calls twice",
+              "History remains connected and duplicate tasks are controlled."
+            ],
+            [
+              "The caller asks for a guaranteed price or refund",
+              "No unsupported commitment; the question reaches the right person."
+            ],
+            [
+              "The human transfer is unavailable",
+              "The caller hears the truthful fallback, and a callback task is visible."
+            ],
+            [
+              "A calendar has no suitable availability",
+              "No invented booking; a valid next step is offered."
+            ],
+            [
+              "A required integration fails",
+              "The request is retained or failure is visible, and the manual recovery works."
+            ]
+          ]
+        }
+      },
+      {
+        "id": "measure",
+        "title": "Measure recovered work, not theoretical missed revenue",
+        "paragraphs": [
+          "Use qualified inquiries, completed callbacks, booking accuracy, duplicate records, and unresolved escalations as operating measures. Compare them with the subscription and the time spent reviewing calls. A high answering rate is not enough if the records are wrong.",
+          "For a financial estimate, use contribution from genuinely additional completed jobs. Suppose, purely as an example, call handling leads to two additional jobs with $80 contribution each after delivery costs. That is $160 before receptionist expense. A $45 service would leave $115; a $395 service would leave −$235 for that assumed month. Change the job contribution and recovered-job count to your own numbers. Do not count all answered calls as new revenue.",
+          "Choose the option that produces a dependable next step at an acceptable total cost. Keep human judgment where the business needs it, and keep automated intake narrow enough that you can verify the result."
+        ],
+        "links": [
+          {
+            "title": "Model workflow costs with your own assumptions",
+            "url": "/calculators/roi/",
+            "label": "Use the calculator"
+          }
+        ]
+      }
+    ],
+    "toolIds": [
+      "smith-ai"
+    ],
+    "namedSources": [
+      {
+        "title": "Smith.ai: AI receptionist plans",
+        "url": "https://smith.ai/pricing/ai-receptionist",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Free includes 25 real calls per month with $3 additional calls; features and packages differ."
+        ]
+      },
+      {
+        "title": "Ruby: virtual receptionist plans and pricing",
+        "url": "https://www.ruby.com/plans-and-pricing/",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Listed live receptionist tiers are priced by included receptionist minutes."
+        ]
+      }
+    ],
+    "publishedAt": "2026-10-31",
+    "lastReviewed": "2026-11-01",
+    "reviewNotes": [
+      "This guide combines official product documentation with original workflow analysis. The sample business records and calculations are illustrative; they are not customer results or a hands-on product benchmark."
+    ]
+  },
+  {
+    "route": "/guides/how-i-made-this-ai-avatar-video-with-heygen/",
+    "title": "How to make a useful business introduction video in HeyGen",
+    "summary": "Write a clear script, create an avatar video in HeyGen AI Studio, fix delivery and captions, and publish it with context and a transcript.",
+    "label": "Video tutorial",
+    "intro": "A short introduction video should answer a real question: what does this business help with, and what should the viewer do next? An avatar can reduce filming effort, but it cannot supply the facts or credibility. This guide takes a short script through HeyGen’s documented AI Studio workflow and explains how to judge the finished result.",
+    "answer": "Prepare an accurate script and a simple page before generating the video. Use an avatar you are authorized to use, preview the voice, check captions and claims, then publish with a written version and a clear next action. The existing introduction on our About page is an example of where this format can fit; the steps below are a documentation-based tutorial, not a reconstruction of that production session.",
+    "sections": [
+      {
+        "id": "brief",
+        "title": "Define the viewer’s question in one sentence",
+        "paragraphs": [
+          "Write a one-sentence brief: “After this video, a first-time visitor should understand what we offer and know where to start.” Then choose one viewer and one next action. A homepage introduction, a product explanation, and a customer onboarding video have different jobs.",
+          "Gather the business name, the exact service, the audience, the scope, and the destination link. Remove anything you cannot support: customer counts, years in business, credentials, results, awards, or promises that were added only because they sound impressive. Decide whether a real person on camera, screen recording, or written guide would answer the question more naturally.",
+          "Keep the page useful when the video is not played. The title, service description, and link should be visible as text. A visitor in a quiet office, a slow connection, or an assistive-technology workflow should not need to watch an avatar to understand your offer."
+        ]
+      },
+      {
+        "id": "script",
+        "title": "Write a script that sounds like a person explaining the work",
+        "paragraphs": [
+          "A good short script has three parts: a specific opening, a useful explanation, and one next step. Read it aloud before opening the editor. Replace language you would never say to a customer. Short sentences make pronunciation and pacing easier to review.",
+          "The example below is original sample copy for a fictional bicycle business. Use it as a structure, not as a statement about your own services. It describes a process without inventing prices, availability, or results."
+        ],
+        "example": {
+          "title": "A complete short introduction script",
+          "content": "Welcome to Sample Cycle Workshop. We help everyday riders keep their bikes ready for the trips they make most.\n\nIf you are not sure which service you need, start with the service guide below. It explains what each appointment covers and what to bring with your bike.\n\nFor a repair we need to inspect first, use the inquiry form. Tell us the bike type and what you have noticed. We will review the details before confirming the next step.\n\nChoose “See our services” below to get started."
+        }
+      },
+      {
+        "id": "studio",
+        "title": "Create the project in AI Studio",
+        "paragraphs": [
+          "HeyGen’s current help documentation describes the Create menu leading to Create a Video, a landscape or portrait choice, and Create in AI Studio. Choose the format for the destination. A landscape video often fits a desktop page; a portrait video may suit a mobile feed. Make the decision before arranging text and captions.",
+          "Choose an avatar and a layout that support the message. If you are using a custom person or voice, use the required consent and authorization workflow; do not substitute a recognizable person’s likeness without permission. A business introduction should not imply a personal endorsement that never occurred.",
+          "Use a restrained layout: one clear speaker, readable text, and a background that does not compete with the explanation. Put the approved script in the scene and use separate scenes only when the message or supporting visual changes. More cuts are not automatically more professional."
+        ],
+        "sourceUrls": [
+          "https://help.heygen.com/en/articles/11049655-overview-our-new-ai-studio"
+        ],
+        "steps": [
+          "Create the video project and choose the destination aspect ratio.",
+          "Select the authorized avatar and a clean scene layout.",
+          "Enter the approved script, then remove any placeholder text in the template.",
+          "Check that every scene uses the intended avatar, framing, and background."
+        ]
+      },
+      {
+        "id": "voice",
+        "title": "Fix the delivery before spending more generation credits",
+        "paragraphs": [
+          "In the documented AI Studio workflow, voice selection is managed at the avatar level. Open the avatar controls in the right panel, review the voice, and use the available preview. Check all scenes; do not assume that changing one scene updates the entire project. The documentation includes an Apply to all scenes option where appropriate.",
+          "Listen for your business name, place names, numbers, acronyms, and product terms. If a phrase sounds unnatural, first rewrite it in ordinary spoken language. “Twenty-five minutes” may be clearer than a compact label intended for a form. Make one change at a time so you know what improved the result.",
+          "Preview is a quality check, not a guarantee that every final movement or export will be identical. Generation and editing charges depend on the feature and plan. Review the current allowance before repeated full renders; a finished video and the cost of producing it are separate decisions."
+        ],
+        "sourceUrls": [
+          "https://help.heygen.com/en/articles/11049837-create-your-first-video-in-our-studio"
+        ],
+        "links": [
+          {
+            "title": "HeyGen: plans, limitations, and a worked business example",
+            "url": "/tool/heygen/",
+            "label": "Review the tool guide"
+          }
+        ]
+      },
+      {
+        "id": "captions",
+        "title": "Add captions and verify them against the spoken audio",
+        "paragraphs": [
+          "HeyGen’s AI Studio includes a Captions control for styling captions. Add them, then inspect the actual words, line breaks, contrast, and position. A caption layer that overlaps the speaker’s face or a button can make the video harder to use.",
+          "Correct names and numbers manually. Watch once with sound and once without it. Captions should preserve the meaning of the audio; a separate readable transcript also gives visitors a convenient way to scan the explanation. If you use an exported subtitle file, confirm that the final video player actually loads it.",
+          "Avoid placing essential instructions only inside an image or animation. If the viewer needs a URL, use a real link next to the player rather than asking them to copy a tiny address from the video."
+        ],
+        "sourceUrls": [
+          "https://help.heygen.com/en/articles/8305536-how-to-use-captions",
+          "https://help.heygen.com/en/articles/9834825-how-to-download-or-export-a-video"
+        ]
+      },
+      {
+        "id": "export",
+        "title": "Export, publish, and check the real page",
+        "paragraphs": [
+          "The HeyGen export documentation describes downloading from Projects or the video page and includes audio and SRT options where available. Resolution and export options depend on the plan and the source material. Choose a sensible resolution for the actual player size; larger files can slow a page without helping the viewer.",
+          "Upload the finished file to your website or an appropriate video host. Add a descriptive poster image, visible playback controls, and a written summary or transcript. Avoid autoplay with sound. Keep the next-step button outside the video so it stays available throughout playback.",
+          "Test the published page, not only the file on your computer. Check a narrow mobile screen, playback, captions, the poster, loading time, and the destination link. Confirm that the video does not obscure navigation and that a visitor can understand the offer without starting it."
+        ],
+        "sourceUrls": [
+          "https://help.heygen.com/en/articles/9834825-how-to-download-or-export-a-video"
+        ],
+        "table": {
+          "headers": [
+            "Final check",
+            "Pass condition"
+          ],
+          "rows": [
+            [
+              "Facts",
+              "Every name, service, qualification, and promise matches the approved brief."
+            ],
+            [
+              "Voice",
+              "Names, numbers, pacing, and sentence endings sound clear."
+            ],
+            [
+              "Visuals",
+              "The authorized avatar, text, and captions remain legible on mobile."
+            ],
+            [
+              "Accessibility",
+              "Controls work, the written explanation is available, and captions match the audio."
+            ],
+            [
+              "Next step",
+              "The visible button goes to the intended service, guide, or booking page."
+            ],
+            [
+              "Context",
+              "An avatar introduction is not presented as a customer testimonial or independent endorsement."
+            ]
+          ]
+        }
+      },
+      {
+        "id": "improve",
+        "title": "Judge whether the video earns its place",
+        "paragraphs": [
+          "Ask a new reader to explain the offer after viewing the page. If the answer is vague, improve the script or surrounding text. Watch for people using the intended next link and for repeated questions the introduction was meant to answer. Views alone do not prove that it helped.",
+          "For many businesses, a clear 45-second explanation with an accurate written version will do more work than a long, heavily animated pitch. Stop adding effects when the reader already understands the next step."
+        ],
+        "links": [
+          {
+            "title": "See the founder introduction in its page context",
+            "url": "/about/",
+            "label": "Published example"
+          },
+          {
+            "title": "Turn one accurate product brief into a launch content system",
+            "url": "/playbooks/product-launch-content-system/",
+            "label": "Continue with the tutorial"
+          }
+        ]
+      }
+    ],
+    "toolIds": [
+      "heygen"
+    ],
+    "namedSources": [
+      {
+        "title": "HeyGen: overview of AI Studio",
+        "url": "https://help.heygen.com/en/articles/11049655-overview-our-new-ai-studio",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Project entry and landscape or portrait creation workflow."
+        ]
+      },
+      {
+        "title": "HeyGen: create a first video in AI Studio",
+        "url": "https://help.heygen.com/en/articles/11049837-create-your-first-video-in-our-studio",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Avatar-level voice controls, preview, and applying settings across scenes."
+        ]
+      },
+      {
+        "title": "HeyGen: captions",
+        "url": "https://help.heygen.com/en/articles/8305536-how-to-use-captions",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Caption controls within AI Studio."
+        ]
+      },
+      {
+        "title": "HeyGen: download or export a video",
+        "url": "https://help.heygen.com/en/articles/9834825-how-to-download-or-export-a-video",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Video export and subtitle options, subject to plan and source limits."
+        ]
+      }
+    ],
+    "publishedAt": "2026-10-31",
+    "lastReviewed": "2026-11-01",
+    "reviewNotes": [
+      "This guide combines official product documentation with original workflow analysis. The sample business records and calculations are illustrative; they are not customer results or a hands-on product benchmark."
+    ]
+  },
+  {
+    "route": "/guides/getting-started-with-ai/",
+    "title": "Getting started with AI for a small business: a complete first workflow",
+    "summary": "Choose a useful first task, prepare accurate inputs, write a reusable instruction, check the output, and decide whether a paid plan will actually help.",
+    "label": "Start here",
+    "intro": "You do not need to understand model architecture to use AI well. You need a task you can describe, facts you can verify, and a way to decide whether the result is useful. This guide builds those three things around a common business job: turning a confirmed service description into a clear customer email.",
+    "answer": "Start with work you already understand and can review before it reaches a customer. Use one assistant, give it a complete factual brief, ask for a finished draft, and verify the claims. Connect publishing or business accounts only when the workflow is dependable and you understand the permission being granted.",
+    "sections": [
+      {
+        "id": "task",
+        "title": "Choose a first task with a clear finish line",
+        "paragraphs": [
+          "Good first tasks include rewriting a service explanation, organizing rough meeting notes, drafting product copy from a facts sheet, and turning a real policy into customer FAQs. You can compare the answer with information you already trust. Work that requires the assistant to guess prices, make a clinical judgment, or authorize a refund is a poor starting point.",
+          "Define “done” in ordinary language. For this example: “A customer can understand what the appointment includes, what to bring, and how to ask a question.” Avoid a goal such as “use AI to improve marketing”; it is too broad to check.",
+          "Choose the deliverable format as well. An email needs a subject and body. A checklist needs actions in order. A social caption needs a destination and a platform-appropriate length. Asking for the final format reduces the editing you must do afterward."
+        ]
+      },
+      {
+        "id": "facts",
+        "title": "Make a facts sheet before writing the prompt",
+        "paragraphs": [
+          "Put approved facts in a short document. Include the audience, the offer, the process, exclusions, tone, and next action. If a fact is undecided, label it unknown. Never let a fluent sentence turn an unknown into a promise.",
+          "For a first exercise, use fictional or public information. Do not upload customer records simply to make the prompt feel realistic. If a later task requires business data, inspect the product’s current data controls and your obligations before using it. A paid subscription does not automatically make every data use appropriate."
+        ],
+        "example": {
+          "title": "A complete sample facts sheet",
+          "content": "BUSINESS: Sample Cycle Workshop (fictional)\nTASK: Write a confirmation email for a booked bicycle assessment.\nAUDIENCE: Everyday riders, including first-time customers.\nCONFIRMED FACTS:\n- The appointment is an assessment, not a completed repair.\n- Bring the bike and the key for any fitted lock.\n- Describe the issue you have noticed.\n- The team will explain the proposed work before it begins.\n- Date and time are supplied by the booking system; do not invent them.\nNEXT ACTION: Reply if the customer needs to change the booking.\nVOICE: Friendly, clear, and concise.\nUNKNOWN: Cost and completion time. Do not state either."
+        }
+      },
+      {
+        "id": "instruction",
+        "title": "Ask for a useful draft and an accuracy check",
+        "paragraphs": [
+          "Paste the sample facts into your chosen assistant and add the instruction below. The structure works across assistants because it defines the work rather than relying on a special phrase. Model choice matters less at this stage than the quality of the brief and your ability to review the answer.",
+          "Ask the assistant to separate missing facts from customer copy. That makes uncertainty visible while keeping the finished draft readable. The assistant’s own check is helpful, but it does not replace your review."
+        ],
+        "example": {
+          "title": "A reusable instruction",
+          "content": "Using only the approved facts above, write one customer confirmation email.\n\nReturn:\n1. A subject line.\n2. A body of no more than 140 words.\n3. A separate list called “Facts I still need,” containing anything necessary but missing.\n4. A claim check that maps every factual promise in the email to the facts sheet.\n\nDo not invent dates, prices, turnaround times, benefits, credentials, or guarantees. Keep the booking date and time as clearly marked fields. Do not include the claim check in the customer-facing email."
+        }
+      },
+      {
+        "id": "result",
+        "title": "Compare the draft with a finished example",
+        "paragraphs": [
+          "This is an illustrative editorial example, not a recorded output from a specific model. It shows the level of specificity to aim for. Notice that it does not pretend the assessment includes a repair or promise when work will be finished."
+        ],
+        "example": {
+          "title": "An email that stays within the facts",
+          "content": "Subject: Your bicycle assessment at Sample Cycle Workshop\n\nHi [first name],\n\nYour bicycle assessment is booked for [date] at [time and time zone]. Please bring your bike and the key for any fitted lock.\n\nWe will look at the issue you have noticed and explain the proposed work before it begins. This appointment is an assessment; it does not confirm that a repair will be completed during the visit.\n\nIf you need to change your booking, reply to this email.\n\nThanks,\nSample Cycle Workshop"
+        }
+      },
+      {
+        "id": "check",
+        "title": "Review the parts that can cause a real problem",
+        "paragraphs": [],
+        "steps": [
+          "Check every number, name, date, address, price, and link against the source. Treat plausible detail as unverified until you find it.",
+          "Look for added promises. “Same-day,” “guaranteed,” “free,” and “fully included” can change the meaning of an offer.",
+          "Read the draft as a customer. Can you tell what happens next? Does it answer the actual question without unnecessary background?",
+          "Replace all bracketed fields before sending. If a field is filled automatically, test the final delivered message, including an empty-value case.",
+          "Read it aloud and remove stock phrases. Use the words your business actually uses; polish should make the message clearer, not grander."
+        ]
+      },
+      {
+        "id": "repeat",
+        "title": "Turn a good result into a repeatable workflow",
+        "paragraphs": [
+          "Save the approved brief, reusable instruction, and one successful example together. Record which parts can change each time and which facts need an owner. If the service changes, update the brief before creating another batch of content.",
+          "An assistant can draft the next email in a conversation. That is different from a running automation that receives a booking, fills in fields, sends a message, and handles errors. For the latter, you need the booking or email system and the appropriate connection. Permissions and a conversational request alone do not guarantee continuous operation.",
+          "Use the full tutorials to build that next layer: a project brief for repeated drafting, a welcome-email sequence for opted-in subscribers, or a scheduling workflow for real appointments."
+        ],
+        "links": [
+          {
+            "title": "Set up a reusable business brief in ChatGPT Projects",
+            "url": "/playbooks/chatgpt-project-business-brief/",
+            "label": "Continue with the tutorial"
+          },
+          {
+            "title": "Build an email welcome sequence with complete example copy",
+            "url": "/playbooks/email-welcome-sequence/",
+            "label": "Continue with the tutorial"
+          },
+          {
+            "title": "Make booking, availability, and reminders work together",
+            "url": "/playbooks/self-service-booking/",
+            "label": "Continue with the tutorial"
+          }
+        ]
+      },
+      {
+        "id": "pay",
+        "title": "Know when a paid plan is justified",
+        "paragraphs": [
+          "Write down the specific limitation you hit: file access, collaboration, a usage limit, a required feature, or an integration. Check the current plan that removes that limitation. “More powerful” is not a sufficient buying reason if you cannot identify the job it improves.",
+          "For an illustrative $20 monthly subscription and a $25-per-hour value of your time, the simple time-value break-even is 0.8 hours, or 48 net minutes per month. Count checking and correction time. This is a planning value, not money deposited in your account; the financial effect depends on what you do with the recovered time.",
+          "Compare assistants with the same business task and the same facts. Keep the response that requires the least correction while meeting the brief. The comparison below gives a repeatable test and separates subscription access from API usage."
+        ],
+        "links": [
+          {
+            "title": "ChatGPT vs Claude: decide with your own work",
+            "url": "/comparisons/chatgpt-vs-claude/",
+            "label": "Compare assistants"
+          }
+        ]
+      }
+    ],
+    "toolIds": [
+      "chatgpt",
+      "claude"
+    ],
+    "namedSources": [
+      {
+        "title": "ChatGPT official plans",
+        "url": "https://openai.com/chatgpt/pricing/",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      },
+      {
+        "title": "Claude official plans",
+        "url": "https://claude.com/pricing",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      }
+    ],
+    "publishedAt": "2026-10-31",
+    "lastReviewed": "2026-11-01",
+    "reviewNotes": [
+      "The recommendations are editorial judgments based on the workflow described. Examples and calculations are original illustrations, not measured customer outcomes. Current product details are documented in the linked comparisons and tool profiles."
+    ]
+  },
+  {
+    "route": "/decision-funnels/what-should-i-automate-first/",
+    "title": "What should you automate first? Choose with time, cost, and failure risk",
+    "summary": "Score real workflows, calculate net time value, and build a reliable first automation with a manual fallback and clear pass conditions.",
+    "label": "Automation decisions",
+    "intro": "Your best first automation is usually a repeated piece of work with clear inputs, a predictable result, and a mistake you can catch. The choice should come from your own workload. A popular tool cannot tell you whether the problem is a slow process, a missing decision, or simply work that no longer needs to happen.",
+    "answer": "Pick a frequent, rules-based handoff you can verify—such as creating a follow-up task from a complete inquiry. Remove unnecessary steps first, standardize the remaining fields, then automate. Leave ambiguous decisions and customer commitments with a person until the process is well defined.",
+    "sections": [
+      {
+        "id": "inventory",
+        "title": "List the repeated work before choosing an app",
+        "paragraphs": [
+          "For each task, record how often it happens, minutes per run, where the input comes from, what a correct result looks like, and what happens when it goes wrong. Use observed work where possible; memory tends to miss interruptions and checking time.",
+          "Include the cleanup around the task. Copying a lead into a CRM may take two minutes, but repairing duplicate contacts can take longer than the original entry. A workflow is only a saving if it reduces the total work."
+        ],
+        "table": {
+          "headers": [
+            "Candidate",
+            "Why it may be suitable",
+            "What must be clear first"
+          ],
+          "rows": [
+            [
+              "Form inquiry → follow-up task",
+              "A visible handoff with required fields and an owner.",
+              "Duplicate handling, missing fields, and the due-date rule."
+            ],
+            [
+              "Booking → preparation email",
+              "The trigger and message are repeatable.",
+              "Confirmation status, time zone, cancellation, and permission to send."
+            ],
+            [
+              "Approved post → scheduled publishing",
+              "The content and destination can be checked.",
+              "Account permissions, media format, approval status, and failure alerts."
+            ],
+            [
+              "Complaint → automatic refund",
+              "A consequential decision with many exceptions.",
+              "Usually begin with collection and human review rather than automatic payment action."
+            ],
+            [
+              "Raw AI draft → public post",
+              "Errors become public immediately.",
+              "Add factual and editorial approval before automatic publishing."
+            ]
+          ]
+        }
+      },
+      {
+        "id": "score",
+        "title": "Score three candidates in a way you can explain",
+        "paragraphs": [
+          "Use a simple 1–3 score for frequency, consistency, and ease of checking. A score of 3 means the task happens often, follows stable rules, or has an obvious pass condition. Separately record the consequence of a failure as low, medium, or high. Do not bury a high-consequence failure inside a flattering total.",
+          "The following scores are examples, not research findings. Replace them with your own evidence. Use the table to make a decision visible, not to manufacture mathematical certainty."
+        ],
+        "table": {
+          "headers": [
+            "Sample workflow",
+            "Frequency",
+            "Consistency",
+            "Easy to check",
+            "Failure consequence",
+            "Decision"
+          ],
+          "rows": [
+            [
+              "New inquiry → internal task",
+              "3",
+              "3",
+              "3",
+              "Low to medium",
+              "Strong first candidate after duplicate tests."
+            ],
+            [
+              "Appointment → preparation message",
+              "3",
+              "3",
+              "2",
+              "Medium",
+              "Suitable after cancellation and time-zone tests."
+            ],
+            [
+              "Free-form complaint → refund",
+              "1",
+              "1",
+              "1",
+              "High",
+              "Automate intake and routing; retain a decision step."
+            ]
+          ]
+        }
+      },
+      {
+        "id": "math",
+        "title": "Calculate the value after checking and maintenance",
+        "paragraphs": [
+          "Assume a fictional business handles 120 inquiries a month. Manual entry takes four minutes each: 480 minutes, or eight hours. After automation, reviewing exceptions and maintaining the workflow takes two hours. The net time recovered is six hours.",
+          "At an assumed time value of $25 per hour, that is $150 of monthly time value. If software costs $30 per month and a $120 setup effort is spread over 12 months, the monthly-equivalent cost is $40. The illustrative net time value is $110. It is not cash profit unless the recovered time or reduced expense creates an actual financial effect.",
+          "Now test a lower-volume month. At 30 inquiries, manual entry takes two hours. If monitoring still takes two hours, the automation recovers no time and still costs money. Volume and maintenance can reverse a seemingly obvious decision."
+        ],
+        "example": {
+          "title": "A decision note you can keep",
+          "content": "WORKFLOW: Inquiry form → CRM task\nMONTHLY VOLUME: 120 (replace with observed volume)\nMANUAL TIME: 120 × 4 minutes = 8 hours\nAUTOMATED REVIEW + MAINTENANCE: 2 hours\nNET TIME RECOVERED: 6 hours\nASSUMED TIME VALUE: $25/hour\nSOFTWARE: $30/month\nSETUP: $120 spread over 12 months = $10/month\nILLUSTRATIVE NET TIME VALUE: (6 × $25) − $30 − $10 = $110/month\n\nPASS CONDITION: Every valid inquiry produces exactly one assigned task; invalid or duplicate submissions are visible and recoverable.\nFALLBACK: Review the original form inbox and create tasks manually if the workflow fails."
+        },
+        "links": [
+          {
+            "title": "Change the assumptions in the automation value calculator",
+            "url": "/calculators/roi/",
+            "label": "Calculate your own case"
+          }
+        ]
+      },
+      {
+        "id": "design",
+        "title": "Define the workflow before connecting accounts",
+        "paragraphs": [],
+        "steps": [
+          "Name the trigger precisely: a new complete inquiry, not every edit to any customer record.",
+          "List required fields and decide how missing or malformed values are handled. Preserve the original input for recovery.",
+          "Choose a stable identifier to prevent duplicate processing. A repeat submission should not create repeated messages or tasks without a reason.",
+          "Define the allowed action, the destination, and the owner. Start with an internal task when you are still validating the data.",
+          "Add a visible error path. A failed run should be discoverable by the person responsible for follow-up.",
+          "Write the manual fallback before launch. Someone should be able to recover a missed item without guessing what the automation did."
+        ]
+      },
+      {
+        "id": "choose-tool",
+        "title": "Choose Zapier, Make, or the feature already in your app",
+        "paragraphs": [
+          "First check whether the source or destination app already supports the workflow. A built-in booking reminder may be simpler than a separate automation platform. Add an integration service when it solves a real gap between systems.",
+          "Compare the exact actions, trigger behavior, run frequency, and billing meter. Zapier tasks and Make credits are not interchangeable counts. Polling, searches, bundles, and repeated runs can change the bill. The detailed comparison models the same inquiry job and shows how polling changes the economics.",
+          "Use the interface you can maintain. A less expensive subscription can be a more expensive system if nobody understands the failure log or knows how to update a connection."
+        ],
+        "links": [
+          {
+            "title": "Zapier vs Make: calculate the same workflow on both platforms",
+            "url": "/comparisons/zapier-vs-make/",
+            "label": "Compare automation costs"
+          },
+          {
+            "title": "Build and test your first reliable automation",
+            "url": "/playbooks/first-reliable-automation/",
+            "label": "Continue with the tutorial"
+          }
+        ]
+      },
+      {
+        "id": "launch",
+        "title": "Launch only when the failure cases are understandable",
+        "paragraphs": [
+          "Test a normal input, a missing required field, a duplicate, a corrected record, and an unavailable destination. Verify both the system’s visible history and the resulting record. A green “success” badge can still accompany the wrong customer, date, or message.",
+          "Once the workflow passes, review the first real results against the original source. Track exceptions, duplicate records, processing time, and the amount of review still required. Expand the workflow only when those observations justify another action. The purpose is a dependable business process, not the longest automation diagram."
+        ]
+      }
+    ],
+    "toolIds": [
+      "zapier",
+      "make"
+    ],
+    "namedSources": [
+      {
+        "title": "Zapier official plans",
+        "url": "https://zapier.com/pricing",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      },
+      {
+        "title": "Make official plans",
+        "url": "https://www.make.com/en/pricing",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      }
+    ],
+    "publishedAt": "2026-10-31",
+    "lastReviewed": "2026-11-01",
+    "reviewNotes": [
+      "The recommendations are editorial judgments based on the workflow described. Examples and calculations are original illustrations, not measured customer outcomes. Current product details are documented in the linked comparisons and tool profiles."
+    ]
+  },
+  {
+    "route": "/affiliate/best-ai-tools-small-business/",
+    "title": "The best AI tools for small business depend on the job",
+    "summary": "Choose a practical tool for writing, email, social publishing, sales, scheduling, design, or automation—with clear alternatives and full implementation guides.",
+    "label": "Buying guide",
+    "intro": "A useful software shortlist begins with the work, not a collection of logos. A shop improving product listings needs a different setup from a contractor organizing callbacks. This guide connects common business jobs to a small set of sensible choices, the reason to consider an alternative, and the tutorial that puts the decision into practice.",
+    "answer": "Buy the missing capability in a real workflow. Start with an assistant for reviewed drafting, a purpose-built system for records or delivery, and a connection only when those systems need to exchange information. Keep tools you already use when they can do the job reliably.",
+    "sections": [
+      {
+        "id": "shortlist",
+        "title": "Choose by the work that needs to improve",
+        "paragraphs": [],
+        "table": {
+          "headers": [
+            "Your job",
+            "A practical starting shortlist",
+            "The deciding question"
+          ],
+          "rows": [
+            [
+              "Draft from approved business facts",
+              "ChatGPT or Claude",
+              "Which produces the usable result with less factual correction on your own task?"
+            ],
+            [
+              "Welcome an opted-in email audience",
+              "MailerLite or Kit",
+              "Does the plan include the sequence you need, and how does cost change with your list?"
+            ],
+            [
+              "Email around an ecommerce purchase",
+              "Omnisend or MailerLite",
+              "Does the integration recognize the right customer and trigger the right journey?"
+            ],
+            [
+              "Publish approved social content",
+              "Buffer or Metricool; Manychat for supported messaging workflows",
+              "Which networks and reply actions are actually supported by your account and plan?"
+            ],
+            [
+              "Connect two business apps",
+              "Zapier or Make",
+              "What actions, events, polling, and usage units does the complete workflow consume?"
+            ],
+            [
+              "Track customers and next actions",
+              "HubSpot or Pipedrive",
+              "Do you need tasks, sequences, or full workflow automation—and what plan includes them?"
+            ],
+            [
+              "Keep instructions and connected records",
+              "Notion or Airtable",
+              "Are you organizing documents, repeated data relationships, or both?"
+            ],
+            [
+              "Create layouts from real assets",
+              "Canva or Adobe Express",
+              "Which formats, brand controls, licenses, and collaboration rules do you need?"
+            ],
+            [
+              "Let customers book a suitable appointment",
+              "Calendly or Acuity",
+              "Does the event type reflect duration, buffers, intake, payment, and cancellation rules?"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "assistant",
+        "title": "Use an assistant where you can check the answer",
+        "paragraphs": [
+          "For product copy, service explanations, customer emails, and document organization, the starting point is a trusted brief. Give the assistant facts and an output format. Review its promises before putting the answer in front of a customer. A model that sounds confident is not automatically accurate.",
+          "ChatGPT and Claude both merit consideration for this work. Our comparison proposes a repeatable evaluation you can run on your own business tasks and shows a net-time calculation; it does not report a completed model benchmark. Choose based on the finished output, the features you actually use, and the plan limits you encounter.",
+          "If your problem is publishing on a schedule or answering messages within platform rules, a drafting assistant is only part of the solution. The social-media guide separates content creation, scheduling, and supported reply automation so the whole workflow has an owner."
+        ],
+        "links": [
+          {
+            "title": "Compare ChatGPT and Claude on a practical business task",
+            "url": "/comparisons/chatgpt-vs-claude/",
+            "label": "Assistant comparison"
+          },
+          {
+            "title": "Build a complete social-media workflow with approvals and replies",
+            "url": "/playbooks/ai-social-media-agents/",
+            "label": "Continue with the tutorial"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Choose the system that owns the customer journey",
+        "paragraphs": [
+          "An email subscriber, a sales lead, and a confirmed booking are different states. Decide which system owns each one. An email tool holds consent and subscription status. A CRM holds the relationship and next action. A booking system holds availability and appointment changes.",
+          "For a newsletter or welcome series, compare MailerLite with Kit. For purchase-related ecommerce messages, compare MailerLite with Omnisend and inspect the supported events. For service sales, compare HubSpot with Pipedrive. Do not buy all three categories just because they can be connected; add each when it solves an actual part of the journey.",
+          "Check what happens when someone unsubscribes, changes a booking, replies to a message, or already exists in the system. A professional setup remembers those changes instead of continuing the original sequence blindly."
+        ],
+        "links": [
+          {
+            "title": "MailerLite vs Kit: list costs and automation access",
+            "url": "/comparisons/mailerlite-vs-kit/",
+            "label": "Email comparison"
+          },
+          {
+            "title": "MailerLite vs Omnisend: the ecommerce decision",
+            "url": "/comparisons/mailerlite-vs-omnisend/",
+            "label": "Ecommerce email comparison"
+          },
+          {
+            "title": "HubSpot vs Pipedrive: CRM fit and total cost",
+            "url": "/comparisons/hubspot-vs-pipedrive/",
+            "label": "CRM comparison"
+          }
+        ]
+      },
+      {
+        "id": "operations",
+        "title": "Avoid buying a new app for a missing process",
+        "paragraphs": [
+          "If nobody knows which version of a product description is approved, another writing tool will create more versions. If customer requests lack an owner, a sophisticated dashboard can still leave them unanswered. First define the record, the responsible person, and the completion condition.",
+          "Notion and Airtable help with different combinations of documents and structured records. Canva and Adobe Express help turn approved content into usable assets. Zapier and Make move information between systems. The strongest choice is the one you can keep accurate and understandable as the business changes."
+        ],
+        "links": [
+          {
+            "title": "Notion vs Airtable",
+            "url": "/comparisons/notion-vs-airtable/",
+            "label": "Workspace comparison"
+          },
+          {
+            "title": "Canva vs Adobe Express",
+            "url": "/comparisons/canva-vs-adobe-express/",
+            "label": "Design comparison"
+          },
+          {
+            "title": "Zapier vs Make",
+            "url": "/comparisons/zapier-vs-make/",
+            "label": "Automation comparison"
+          }
+        ]
+      },
+      {
+        "id": "budget",
+        "title": "Build the budget from billing units",
+        "paragraphs": [
+          "Write the unit next to every price: per user, per workspace, per channel, per contact tier, per call, or per usage credit. Then add the actual volume. Check whether the displayed monthly number requires an annual payment and whether required onboarding or add-ons are separate.",
+          "Free is a plan with conditions. A free trial is temporary. A one-time AI allowance is not a recurring monthly allocation. A free personal plan may have different commercial-use terms from a paid plan. Each tool profile now explains the cost drivers relevant to the product.",
+          "For an illustrative stack of $20 for an assistant, $15 for email, and $10 for design, the base monthly equivalent is $45, or $540 per year. Three additional $15 seats would add $45 per month and double that base. Those are sample prices, not a recommended bundle or a quote. Use the planner with your real plan selections."
+        ],
+        "links": [
+          {
+            "title": "Calculate subscriptions, seats, and annual commitments",
+            "url": "/calculators/stack-cost/",
+            "label": "Software cost planner"
+          }
+        ]
+      },
+      {
+        "id": "test",
+        "title": "Use one acceptance test before you commit",
+        "paragraphs": [
+          "Choose one representative job and take it through the entire workflow. For email, submit the form and read the delivered message. For a CRM, create the contact and complete the next task. For a scheduler, make, change, and cancel a sample booking. For an automation, test a duplicate and a failed destination as well as a normal run.",
+          "Record the result, the plan, and what needed correction. Keep the tool if it meets the business requirement at an acceptable total cost. Change the tool or process if the difficult part remains unresolved. A successful signup is the beginning of evaluation, not its conclusion."
+        ],
+        "links": [
+          {
+            "title": "Find a tailored starting shortlist",
+            "url": "/stack-builder/",
+            "label": "Interactive stack builder"
+          },
+          {
+            "title": "Browse all researched tool guides",
+            "url": "/tool-library/",
+            "label": "The full library"
+          },
+          {
+            "title": "Choose the workflow for your business",
+            "url": "/business-types/",
+            "label": "Business guides"
+          }
+        ]
+      }
+    ],
+    "toolIds": [
+      "chatgpt",
+      "mailerlite",
+      "buffer",
+      "zapier",
+      "hubspot",
+      "notion",
+      "canva",
+      "calendly"
+    ],
+    "namedSources": [
+      {
+        "title": "ChatGPT official plans",
+        "url": "https://openai.com/chatgpt/pricing/",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      },
+      {
+        "title": "MailerLite official plans",
+        "url": "https://www.mailerlite.com/pricing",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      },
+      {
+        "title": "Buffer official plans",
+        "url": "https://buffer.com/pricing",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      },
+      {
+        "title": "Zapier official plans",
+        "url": "https://zapier.com/pricing",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      },
+      {
+        "title": "HubSpot official plans",
+        "url": "https://www.hubspot.com/pricing/sales",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      },
+      {
+        "title": "Notion official plans",
+        "url": "https://www.notion.com/pricing",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      },
+      {
+        "title": "Canva official plans",
+        "url": "https://www.canva.com/pricing/",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      },
+      {
+        "title": "Calendly official plans",
+        "url": "https://calendly.com/pricing",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Current product-specific buying details are explained in the linked profile."
+        ]
+      }
+    ],
+    "publishedAt": "2026-10-31",
+    "lastReviewed": "2026-11-01",
+    "reviewNotes": [
+      "The recommendations are editorial judgments based on the workflow described. Examples and calculations are original illustrations, not measured customer outcomes. Current product details are documented in the linked comparisons and tool profiles."
+    ]
+  },
+  {
+    "route": "/business-systems-map/",
+    "title": "Map your business from first inquiry to repeat customer",
+    "summary": "See what each business system should own, how information moves between them, and how to find the handoff that needs fixing.",
+    "label": "Workflow map",
+    "intro": "A business system is the combination of a clear process, the information needed to run it, and someone responsible for the next action. Software supports that system. This map helps you find where work stops moving, then sends you to the guide that fixes that particular handoff.",
+    "answer": "Map one customer journey end to end. At every stage, identify the input, the record that holds the current truth, the next action, and its owner. Improve the first broken handoff before adding another tool.",
+    "sections": [
+      {
+        "id": "map",
+        "title": "The customer journey and the record behind it",
+        "paragraphs": [],
+        "table": {
+          "headers": [
+            "Stage",
+            "What the customer needs",
+            "What your system must record",
+            "A useful check"
+          ],
+          "rows": [
+            [
+              "Discover",
+              "A clear answer about the product or service.",
+              "Approved product facts, content, and destination links.",
+              "Does the page answer the question that brought them here?"
+            ],
+            [
+              "Inquire or subscribe",
+              "A working form and a truthful expectation.",
+              "Contact details, source, request, and relevant consent.",
+              "Can you find the submission and its next owner?"
+            ],
+            [
+              "Decide or book",
+              "A specific offer and a suitable next step.",
+              "Proposal stage or appointment, with the current status.",
+              "Do price, scope, availability, and follow-up agree?"
+            ],
+            [
+              "Receive the work",
+              "What was promised, with useful updates.",
+              "Order or project status, deliverables, and exceptions.",
+              "Can someone identify the next task without asking around?"
+            ],
+            [
+              "Get help",
+              "An accurate answer or an effective handoff.",
+              "The request, relevant policy, response, and resolution.",
+              "Does the customer get an answer to the actual question?"
+            ],
+            [
+              "Return or review",
+              "A relevant invitation that respects their choice.",
+              "Communication preferences and completed service status.",
+              "Is the invitation appropriate and easy to decline?"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "example",
+        "title": "A complete example: an appointment business",
+        "paragraphs": [
+          "Imagine a fictional repair workshop. A customer reads the service page, submits an assessment request, receives a qualified booking link, attends the appointment, approves the work, and receives a completion message. The website explains the service; the CRM tracks the inquiry; the calendar owns the appointment; the job system owns the repair status.",
+          "If a booking changes, the calendar is the authority for the new time. If the approved work changes, the job record is the authority for the scope. The follow-up message should read those current facts instead of copying an old email. That division prevents competing versions of the truth.",
+          "The first automation might create a task from a new inquiry. A later connection might create a delivery job after acceptance. Each connection should have a specific purpose, a clear identifier, and an error path. The map does not require every step to be automated."
+        ]
+      },
+      {
+        "id": "audit",
+        "title": "Find the first broken handoff",
+        "paragraphs": [],
+        "steps": [
+          "Trace one recent inquiry from the original source to the final result. Use a redacted or fictional record when sharing the exercise.",
+          "Write down every place the information was copied, retyped, or remembered. These are places to investigate, not automatic candidates for a new app.",
+          "At each handoff, ask what the next person needs, what starts the next task, and how they know it is complete.",
+          "Look for a missing owner, unclear status, incorrect contact detail, outdated policy, or absent permission. Fix the cause before connecting more systems.",
+          "Choose one measurable improvement: fewer unassigned inquiries, less retyping, fewer booking errors, or faster retrieval of an approved answer.",
+          "Use the relevant tutorial below and check a complete sample journey after the change."
+        ]
+      },
+      {
+        "id": "build",
+        "title": "Go directly to the workflow you need",
+        "paragraphs": [],
+        "links": [
+          {
+            "title": "Accurate product facts and listings",
+            "url": "/playbooks/etsy-listing-workflow/",
+            "label": "Discover"
+          },
+          {
+            "title": "A welcome sequence for opted-in subscribers",
+            "url": "/playbooks/email-welcome-sequence/",
+            "label": "Subscribe"
+          },
+          {
+            "title": "Customer inquiries and reliable follow-up",
+            "url": "/playbooks/service-lead-follow-up/",
+            "label": "Inquire"
+          },
+          {
+            "title": "A complete self-service booking setup",
+            "url": "/playbooks/self-service-booking/",
+            "label": "Book"
+          },
+          {
+            "title": "A business operations hub with clear ownership",
+            "url": "/playbooks/business-operations-hub/",
+            "label": "Deliver"
+          },
+          {
+            "title": "A useful customer support knowledge base",
+            "url": "/playbooks/customer-support-knowledge-base/",
+            "label": "Support"
+          },
+          {
+            "title": "An honest review request process",
+            "url": "/playbooks/honest-review-request-system/",
+            "label": "Return and review"
+          }
+        ]
+      },
+      {
+        "id": "ownership",
+        "title": "Keep the system understandable",
+        "paragraphs": [
+          "Write a brief operating note for each workflow: purpose, owner, source of truth, required fields, success check, and manual fallback. Save that note where the person doing the work can find it. A workflow that only its original builder understands is difficult to maintain.",
+          "When a product or service changes, update the source record first, then the dependent forms, messages, and automations. Check the customer journey again. That simple discipline is what makes the tools behave like one business."
+        ],
+        "links": [
+          {
+            "title": "Download the workflow audit worksheet",
+            "url": "/downloads/workflow-audit.csv",
+            "label": "Working template"
+          },
+          {
+            "title": "Choose the right system for customer and project records",
+            "url": "/guides/crm-vs-spreadsheet-vs-project-management/",
+            "label": "Buying guide"
+          }
+        ]
+      }
+    ],
+    "toolIds": [],
+    "namedSources": [],
+    "publishedAt": "2026-10-31",
+    "lastReviewed": "2026-11-01",
+    "reviewNotes": [
+      "The recommendations are editorial judgments based on the workflow described. Examples and calculations are original illustrations, not measured customer outcomes. Current product details are documented in the linked comparisons and tool profiles."
+    ]
+  }
+]

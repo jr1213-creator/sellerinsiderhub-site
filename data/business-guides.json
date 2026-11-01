@@ -1,0 +1,793 @@
+[
+  {
+    "id": "etsy-sellers",
+    "label": "Etsy & handmade",
+    "title": "AI tools for Etsy sellers: a practical system for listings, questions, and profit",
+    "summary": "Build accurate listings, reuse verified product information, and choose paid tools around the work your shop actually needs.",
+    "intro": "For a small shop, the expensive mistake is often a listing that looks good but promises the wrong thing. A generated description cannot see your material stock, production queue, shipping profile, or personalization limits. Give those facts one reliable home, then use AI to turn them into useful copy. This guide connects that product record to listing research, customer answers, and a cost check.",
+    "recommendation": "Use your existing AI assistant with a product truth sheet first. Add eRank for a specific search-research task; add Canva when you need a repeatable design workflow. Treat Shopify as a separate storefront decision with its own acquisition and operating costs. You do not need to buy every tool to improve one Etsy listing.",
+    "jobs": [
+      [
+        "Draft a truthful listing",
+        [
+          "chatgpt",
+          "claude"
+        ],
+        "Both can organize supplied facts into drafts. Choose the assistant you can review comfortably; a second subscription is useful only if it solves a demonstrated gap.",
+        "etsy-listing-workflow"
+      ],
+      [
+        "Research how buyers describe an item",
+        [
+          "erank"
+        ],
+        "Use keyword research to discover relevant wording and compare candidate phrases. Third-party search estimates are not confirmed orders or a promise of demand.",
+        "etsy-listing-workflow"
+      ],
+      [
+        "Coordinate a product launch",
+        [
+          "canva",
+          "buffer"
+        ],
+        "Create owned assets, adapt the caption to each channel, and record the approved version before scheduling.",
+        "product-launch-content-system"
+      ]
+    ],
+    "journey": [
+      "Product record",
+      "Reviewed listing",
+      "Order and fulfillment",
+      "Useful follow-up"
+    ],
+    "sections": [
+      {
+        "title": "Make one product record do several jobs",
+        "paragraphs": [
+          "Give each product a stable ID and record the material, dimensions, color options, production method, processing time, care information, photo location, and what the buyer receives. Add the shipping rule separately from the processing estimate. A price that includes domestic shipping must not acquire another domestic shipping charge during an automated update.",
+          "Use that same record when drafting the listing, answering a question, making a care card, or preparing a social post. When a supplier changes a material or a processing time changes, correct the record before generating more copy. This prevents a polished new post from repeating an old promise."
+        ]
+      },
+      {
+        "title": "Do useful search research without chasing unrelated keywords",
+        "paragraphs": [
+          "Write down the item, the buyer, and the occasion before opening a keyword tool. For a personalized travel pouch, “bridesmaid pouch” and “travel organizer” describe different buying situations. Inspect whether the item really serves each one, then examine the competing listings and what their images and titles clarify.",
+          "Keep a short evidence note: phrase, observed relevance, source, and the change it suggests. Add the phrase only when it describes the actual product. An item should still be understandable when its title is read aloud without the photos. Search tools can help organize this decision; they cannot establish that an untested product will sell."
+        ]
+      },
+      {
+        "title": "Treat photographs and checkout settings as part of the tutorial",
+        "paragraphs": [
+          "Etsy’s current image rules distinguish product types and require an unedited actual-item photograph for most physical items, with specified exceptions. Its October update also addresses AI-generated functional guides and unattended bot-generated listings. Read the exact category rule before replacing product images with mockups.",
+          "For a personalized item, preview the shortest and longest allowed personalization, every price-changing variation, the domestic delivery selection, and an international selection if you offer it. Read the customer-facing total. An accurate paragraph beside an incorrect variation price is still an inaccurate listing."
+        ]
+      },
+      {
+        "title": "Check contribution before paying to expand",
+        "paragraphs": [
+          "Separate revenue from the money left to cover your time and fixed costs. Include the item, packaging, fulfillment, payment and marketplace fees, shipping subsidy, expected remakes, and advertising where applicable. Use your own statements and invoices for inputs.",
+          "For illustration, a $30 sale with $9 of product and packaging cost, $5 of shipping subsidy, and $4 of other variable costs leaves $12 before labor, fixed costs, and tax. That is arithmetic for a fictional order, not an Etsy fee estimate. If a software subscription costs $24 a month, two additional orders at that same contribution cover the subscription alone. They do not establish whether the software caused those orders."
+        ]
+      }
+    ],
+    "example": {
+      "title": "A complete illustrative customer answer",
+      "input": "Fictional product record: one natural canvas zip pouch, 8 × 6 inches; one initial in black; processing 3–5 business days; US shipping included in the listed price. No gift wrapping offered.",
+      "output": "Yes—you can add one initial in black to the front of this pouch. It measures 8 × 6 inches and includes one pouch. Enter the initial in the personalization field before checkout. Our processing time is 3–5 business days, and US shipping is included in the listed price. Gift wrapping is not available.",
+      "checks": [
+        "Every statement appears in the supplied record.",
+        "Processing time is not presented as the delivery date.",
+        "The answer does not invent waterproofing, care instructions, or a guaranteed arrival date."
+      ]
+    },
+    "metrics": [
+      "Listing corrections and preventable customer questions per order.",
+      "Contribution per order after the costs you actually incur.",
+      "Time to prepare an accurate draft, followed by the time required to review it."
+    ],
+    "related": [
+      "etsy-listing-workflow",
+      "product-profit-check",
+      "product-launch-content-system"
+    ],
+    "extraSources": [
+      {
+        "title": "Etsy: important updates to AI use",
+        "url": "https://www.etsy.com/seller-handbook/article/1522733284810",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "AI listing and image expectations reviewed for the seller workflow."
+        ]
+      },
+      {
+        "title": "Etsy listing image requirements",
+        "url": "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Actual-item photographs and product-type exceptions."
+        ]
+      }
+    ],
+    "lastReviewed": "2026-11-01",
+    "publishedAt": "2026-10-31",
+    "reviewNotes": [
+      "Product fit and plan information use the linked official sources. The workflow, sample messages, and business figures are original illustrative examples; they are not a reported customer test."
+    ],
+    "relatedComparisons": [
+      {
+        "id": "shopify-vs-etsy",
+        "title": "Shopify vs Etsy: platform fees and acquisition costs"
+      }
+    ]
+  },
+  {
+    "id": "contractors",
+    "label": "Contractors & trades",
+    "title": "AI tools for contractors: capture the inquiry, prepare the estimate, follow through",
+    "summary": "A practical workflow for service inquiries, callback ownership, job details, and estimates that still need your judgment.",
+    "intro": "A contractor’s lead rarely arrives with everything needed for a quote. It may be a voicemail, a photograph, a vague description, or a request sent while the crew is on a job. The useful system keeps those fragments together, identifies the next action, and prevents a prospect from receiving a confident answer about a price or date that nobody has checked.",
+    "recommendation": "Start with an intake form and a clear lead pipeline. Choose HubSpot or Pipedrive when callbacks and estimates involve several active conversations. Evaluate Smith.ai only when missed-call coverage is a measured problem. Add an automation after the intake fields, owner, and exception route work manually.",
+    "jobs": [
+      [
+        "Keep callbacks accountable",
+        [
+          "hubspot",
+          "pipedrive"
+        ],
+        "Use a record with an owner, status, next action, and due date. A task attached to an inquiry is more useful than a second unstructured inbox.",
+        "service-lead-follow-up"
+      ],
+      [
+        "Cover calls when the crew is busy",
+        [
+          "smith-ai",
+          "dialpad"
+        ],
+        "Choose between AI intake, a business phone system, and staffed answering according to the calls you need handled. Compare the exact answering, transfer, escalation, and billing model; a phone-system subscription alone does not provide a receptionist.",
+        "customer-support-knowledge-base"
+      ],
+      [
+        "Connect a form to the next step",
+        [
+          "make",
+          "zapier"
+        ],
+        "Move a valid inquiry once, then confirm the destination record and notify its owner. Keep incomplete or duplicate submissions out of the normal flow.",
+        "first-reliable-automation"
+      ]
+    ],
+    "journey": [
+      "Request received",
+      "Details checked",
+      "Estimate or visit",
+      "Accepted job"
+    ],
+    "sections": [
+      {
+        "title": "Capture enough information to route the job",
+        "paragraphs": [
+          "For a routine estimate request, collect the customer’s preferred contact route, the service location, the type of work, a short description, and permission for the intended follow-up. Request photos only where they help; do not make a customer upload identity or financial documents into a general inquiry form.",
+          "Define what makes a request in scope: your service area, trade, project type, and availability rules. A form can flag missing details for a person. It should not invent a diagnosis from an image or promise a same-day visit because the customer asked for one."
+        ]
+      },
+      {
+        "title": "Use a pipeline with an observable next action",
+        "paragraphs": [
+          "A practical pipeline is New inquiry → Needs details → Visit or estimate arranged → Estimate sent → Accepted / Declined. These are proposed business stages, not a requirement to purchase a particular CRM tier. Every active record needs one owner and a next-action date.",
+          "For example, “Needs details” might require the office to confirm the address and access arrangements. “Estimate sent” needs the estimate version and the planned follow-up date. When a customer replies, stop the generic follow-up and assign the conversation. When they decline or opt out, close the appropriate sequence instead of letting it continue."
+        ]
+      },
+      {
+        "title": "Let AI prepare an estimate narrative, not set the commercial terms",
+        "paragraphs": [
+          "Supply the actual scope, exclusions, quantities, price schedule, site conditions, payment milestones, and warranty language approved for that job. AI can organize those details into a readable description and flag missing information. The qualified estimator remains responsible for the work, price, code requirements, and commitment.",
+          "Keep scope revisions explicit. If the customer adds another room or a different fixture, create a revised version rather than quietly changing the old quote. The same record should identify which version was accepted."
+        ]
+      },
+      {
+        "title": "Test the call and form routes before relying on them",
+        "paragraphs": [
+          "Use representative test requests: a normal in-area inquiry, an incomplete address, an out-of-area request, a duplicate form, a complaint, and an urgent situation requiring your established human procedure. Confirm where each lands and who is notified.",
+          "For an answering tool, listen to the recording or inspect the transcript when available, compare it with the actual test call, and verify that any promised callback becomes a task. A successful conversation alone does not prove that the CRM record or transfer succeeded. Price the service using your expected calls, minutes, transfers, overages, and staffed coverage."
+        ]
+      }
+    ],
+    "example": {
+      "title": "An intake note the office can act on",
+      "input": "Fictional request: customer asks for a bathroom faucet replacement, provides the service address and two photos, prefers email, and asks whether Friday is possible. No estimate or visit has been approved.",
+      "output": "Request: replace one bathroom faucet.\nInformation received: service address and two photos.\nPreferred contact: email.\nRequested timing: Friday; availability not confirmed.\nNext action: office to confirm service-area fit and ask whether the customer supplies the fixture.\nStatus: Needs details.\nCustomer reply: “Thanks for the details. We have your request and will check the scope and available appointment options. Is the replacement faucet already purchased?”",
+      "checks": [
+        "The requested day is recorded without becoming a promised appointment.",
+        "The contact preference is preserved.",
+        "One person owns the next action; the note is saved with the inquiry."
+      ]
+    },
+    "metrics": [
+      "Inquiries without an assigned next action.",
+      "Elapsed time from inquiry to a useful response.",
+      "Estimate acceptance and contribution by job type, measured from actual records."
+    ],
+    "related": [
+      "service-lead-follow-up",
+      "first-reliable-automation",
+      "self-service-booking"
+    ],
+    "extraSources": [],
+    "lastReviewed": "2026-11-01",
+    "publishedAt": "2026-10-31",
+    "reviewNotes": [
+      "Product fit and plan information use the linked official sources. The workflow, sample messages, and business figures are original illustrative examples; they are not a reported customer test."
+    ]
+  },
+  {
+    "id": "creators",
+    "label": "Creators & independent brands",
+    "title": "AI tools for creators: turn expertise into a useful publishing system",
+    "summary": "Choose a newsletter platform, make channel-specific content, and publish a coherent campaign without losing the substance of your work.",
+    "intro": "The difficult part of a creator business is rarely producing another paragraph. It is deciding what is worth teaching, making the work recognizable, and helping the right reader take a useful next step. AI can help organize and adapt your material, but the source ideas, examples, and judgment still need to be visible in the finished work.",
+    "recommendation": "Use Kit Free for a broadcast newsletter and creator-led audience; choose a paid Kit plan when you need its automated subscriber journeys. Use MailerLite when a small list needs an inexpensive welcome sequence. Consider beehiiv when the newsletter itself is the product and its publishing model fits the business. Add Buffer only when a recurring, reviewed distribution schedule earns its place.",
+    "jobs": [
+      [
+        "Build a permission-based email audience",
+        [
+          "kit",
+          "beehiiv",
+          "mailerlite"
+        ],
+        "Compare the form, welcome journey, subscriber organization, publishing model, and actual plan cost at your audience size.",
+        "email-welcome-sequence"
+      ],
+      [
+        "Create several useful versions of one idea",
+        [
+          "chatgpt",
+          "claude"
+        ],
+        "Supply your source notes, concrete example, and target audience. Ask for adaptations with different jobs, not a pile of nearly identical captions.",
+        "product-launch-content-system"
+      ],
+      [
+        "Publish visual and video material",
+        [
+          "canva",
+          "descript",
+          "buffer"
+        ],
+        "Use owned assets, review captions and edits, then schedule the right format for each destination.",
+        "ai-social-media-agents"
+      ]
+    ],
+    "journey": [
+      "Original idea",
+      "Useful example",
+      "Published series",
+      "Subscriber next step"
+    ],
+    "sections": [
+      {
+        "title": "Start with an explanation somebody can use",
+        "paragraphs": [
+          "Choose one question you can answer from experience or a well-supported source. Add an example with enough detail to make the idea concrete: the input, the choice you made, the result you can actually show, and the limitation. That source note should exist before you ask for a thread, carousel, or email.",
+          "A useful source pack might contain an outline, a demonstration you have permission to publish, a short glossary, and the single destination link for the campaign. Mark the material that is illustrative. Do not turn a hypothetical example into a testimonial when adapting it for social media."
+        ]
+      },
+      {
+        "title": "Give each channel a different role",
+        "paragraphs": [
+          "Use the newsletter to develop the explanation, a short post to answer one narrow question, and a visual to make a sequence or comparison easier to understand. The call to action should follow the content: a worksheet for someone implementing the lesson, a related article for someone learning, or a product page when the offer is directly relevant.",
+          "Keep an asset table with the source idea, final copy, destination, image or video version, approval, scheduled time, and live URL. A reused idea can remain valuable when each format contributes something. Repeating the same introduction everywhere makes the campaign feel mechanical."
+        ]
+      },
+      {
+        "title": "Choose the email platform before building a complex sequence",
+        "paragraphs": [
+          "Map the subscriber journey on paper: form → confirmation where used → promised resource → useful follow-up → relevant offer. Identify how subscribers are grouped, what stops the sequence, and whether an existing buyer should receive a different message.",
+          "The current free-plan distinction changes the choice: Kit supports up to 10,000 subscribers and unlimited broadcasts, but no email sequences or visual automations. MailerLite Free supports 250 active subscribers, 2,500 monthly emails, and three active automations. At 500 subscribers, a timed welcome journey fits MailerLite Comfort at $12/month; Kit requires Creator at $39/month, whose entry tier holds up to 1,000 subscribers. These are standard monthly US-dollar prices reviewed November 1, 2026. A broadcast-only creator can therefore make a different choice from one who needs a sequence.",
+          "Compare beehiiv against that same journey and its current paid feature gates when newsletter publishing is the business. Count campaigns plus every automated message, identify what stops a sequence, and include any separate product-payment or messaging charges in the budget. The tool profiles below and the MailerLite-versus-Kit comparison detail the current plan economics."
+        ]
+      },
+      {
+        "title": "Review the final asset in its actual format",
+        "paragraphs": [
+          "Read an email on a phone, watch the video without sound, and open the link from a signed-out browser. Check that subtitles match what was said and that a cropped cover still communicates the point. If the platform requires a phone reminder to finish publication, assign that task; a reminder is not a published post.",
+          "Keep analytics attached to the campaign ID. Separate subscriber acquisition, useful replies, offer clicks, purchases, and revenue received. A viral post can be interesting without being a repeatable business channel. Use the observed path to choose the next experiment."
+        ]
+      }
+    ],
+    "example": {
+      "title": "Three assets with three distinct jobs",
+      "input": "Illustrative lesson: show a solo business owner how to prepare a one-page project brief. The resource is a blank brief template; no performance result is claimed.",
+      "output": "Newsletter opening: “Before you ask anyone—or any AI—to draft the project, write down the audience, the decision, and the facts the draft must preserve. Here is a filled example and a blank version you can reuse.”\nShort post: “A useful brief answers three questions: Who is this for? What should they do next? Which facts must stay unchanged? If the answer is missing, mark it instead of letting the draft invent it.”\nCarousel outline: audience → goal → approved facts → worked brief → link to the blank template.",
+      "checks": [
+        "Each asset teaches something before asking for a click.",
+        "The promised template exists and is usable.",
+        "The examples do not imply a customer result or quote that never happened."
+      ]
+    },
+    "metrics": [
+      "Subscribers who receive and use the promised resource.",
+      "Qualified offer interest and purchases by campaign, with the sample size recorded.",
+      "Production and review time for each useful finished asset."
+    ],
+    "related": [
+      "product-launch-content-system",
+      "email-welcome-sequence",
+      "ai-social-media-agents"
+    ],
+    "extraSources": [
+      {
+        "title": "Kit: Free-plan feature list",
+        "url": "https://help.kit.com/en/articles/16627071-the-kit-free-plan",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "10,000 subscribers and unlimited broadcasts; no sequences or visual automations."
+        ]
+      },
+      {
+        "title": "MailerLite: Free-plan update",
+        "url": "https://www.mailerlite.com/help/free-plan-update-faq",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "250 active subscribers, 2,500 monthly emails, and three active automations."
+        ]
+      },
+      {
+        "title": "MailerLite current plans",
+        "url": "https://www.mailerlite.com/pricing",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Comfort starts at $12/month for 500 subscribers."
+        ]
+      },
+      {
+        "title": "Kit: paid Creator plan",
+        "url": "https://help.kit.com/en/articles/4494683-creator-vs-pro-choose-the-right-plan",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Creator starts at $39/month for 1,000 subscribers and includes sequences."
+        ]
+      }
+    ],
+    "lastReviewed": "2026-11-01",
+    "publishedAt": "2026-10-31",
+    "reviewNotes": [
+      "Product fit and plan information use the linked official sources. The workflow, sample messages, and business figures are original illustrative examples; they are not a reported customer test."
+    ],
+    "relatedComparisons": [
+      {
+        "id": "mailerlite-vs-kit",
+        "title": "MailerLite vs Kit: the paid welcome-sequence decision"
+      },
+      {
+        "id": "canva-vs-adobe-express",
+        "title": "Canva vs Adobe Express: plans and existing entitlements"
+      }
+    ]
+  },
+  {
+    "id": "coaches",
+    "label": "Coaches & consultants",
+    "title": "AI tools for coaches: organize inquiries, bookings, and client preparation",
+    "summary": "A clear operational system for a solo practice, with useful preparation materials and boundaries around private client information.",
+    "intro": "A coaching or consulting practice needs a clear path from “I am interested” to a suitable conversation. That path often becomes complicated by separate forms, emails, calendars, notes, and payment links. Start by defining the appointment and the next step; use AI to prepare public explanations and reusable materials around it.",
+    "recommendation": "Use Calendly for a simple booking route and compare Acuity when appointment administration is central to the practice. Keep a lightweight lead record in your existing system until multiple open conversations require a CRM. Choose an email platform only when you have a clear subscriber promise and permission to follow up.",
+    "jobs": [
+      [
+        "Let people book the right conversation",
+        [
+          "calendly",
+          "acuity"
+        ],
+        "Define the event, duration, availability, buffers, notice, and rescheduling route before publishing the link.",
+        "self-service-booking"
+      ],
+      [
+        "Prepare a reusable business and offer brief",
+        [
+          "chatgpt",
+          "claude",
+          "notion"
+        ],
+        "Keep your public offer, audience, exclusions, tone, and approved examples together so drafts stay consistent.",
+        "chatgpt-project-business-brief"
+      ],
+      [
+        "Follow up on an inquiry deliberately",
+        [
+          "hubspot",
+          "mailerlite"
+        ],
+        "Separate a personal inquiry from a marketing subscription. Track the requested next action and stop when the person replies or opts out.",
+        "service-lead-follow-up"
+      ]
+    ],
+    "journey": [
+      "Clear offer",
+      "Suitable inquiry",
+      "Booked conversation",
+      "Agreed next action"
+    ],
+    "sections": [
+      {
+        "title": "Make the first appointment specific",
+        "paragraphs": [
+          "Name the purpose of the appointment in ordinary language. “Project fit call” tells a prospect more than “Connect.” Explain who it is for, how long it lasts, what they should prepare, and what happens afterward. Do not describe a sales conversation as a free coaching session if it is not one.",
+          "Use only the intake questions necessary for that conversation. A public scheduling form is usually the wrong place for detailed personal histories, confidential business records, or sensitive health information. Collect any necessary private material through the process you have selected for that purpose."
+        ]
+      },
+      {
+        "title": "Make the calendar behave like your real working day",
+        "paragraphs": [
+          "Connect the correct calendar, choose the availability schedule, and set a time zone. Add enough notice to prepare and a buffer that reflects the work around the call. Test the earliest and latest available times rather than assuming a visual availability block proves the whole rule.",
+          "Book a test appointment, then reschedule and cancel it. Inspect the invitation, meeting link, reminder, and calendar conflict behavior. If there are paid appointments, verify the actual payment and cancellation process separately before describing the booking as complete."
+        ]
+      },
+      {
+        "title": "Use AI for preparation that can be reviewed",
+        "paragraphs": [
+          "Give the assistant your approved offer description, a sample agenda, and a short explanation of your communication style. Ask it to draft a preparation email and a checklist. Keep the output specific: what the client should bring, which decision the meeting will support, and how to contact you if circumstances change.",
+          "Client-session notes require a separate privacy and permission decision. Do not paste identifying records into a general chatbot simply because it can summarize them. For public educational content, use fictional or properly authorized examples and retain the distinction between coaching information and professional advice outside your scope."
+        ]
+      },
+      {
+        "title": "Keep promises aligned with your capacity",
+        "paragraphs": [
+          "Write a response expectation that you can meet. If you check inquiries on weekdays, say so. If the next step requires you to review a project, do not let an automated reply promise acceptance, a price, or a start date.",
+          "At the end of each active conversation, record the agreed next action. This can be a proposal, a second call, a referral, or no further follow-up. A well-kept small system is more useful than an elaborate sequence that continues after the client has already answered."
+        ]
+      }
+    ],
+    "example": {
+      "title": "A preparation email with a clear purpose",
+      "input": "Fictional appointment: a 25-minute project-fit call for an independent consultant. Goal: decide whether a separate proposal is appropriate. No advice session or project acceptance is promised.",
+      "output": "Subject: What to bring to our project-fit call\n\nWe will use our 25 minutes to understand the outcome you need, the main constraint, and whether a proposal is the right next step. Please bring a short description of the project, your target date, and one example of what is not working today. You do not need to send confidential records in advance.\n\nYour calendar invitation contains the meeting link and the options to reschedule or cancel. After the call, we will confirm the next step we agreed.",
+      "checks": [
+        "The email matches the booked event and duration.",
+        "It does not promise a proposal, outcome, or delivery date before review.",
+        "The rescheduling link is present in the actual invitation."
+      ]
+    },
+    "metrics": [
+      "Suitable inquiries that become attended appointments.",
+      "No-shows and rescheduling issues by event type.",
+      "Open conversations without an agreed next action."
+    ],
+    "related": [
+      "self-service-booking",
+      "service-lead-follow-up",
+      "chatgpt-project-business-brief"
+    ],
+    "extraSources": [],
+    "lastReviewed": "2026-11-01",
+    "publishedAt": "2026-10-31",
+    "reviewNotes": [
+      "Product fit and plan information use the linked official sources. The workflow, sample messages, and business figures are original illustrative examples; they are not a reported customer test."
+    ],
+    "relatedComparisons": [
+      {
+        "id": "hubspot-vs-pipedrive",
+        "title": "HubSpot vs Pipedrive: price the actual follow-up workflow"
+      },
+      {
+        "id": "chatgpt-vs-claude",
+        "title": "ChatGPT vs Claude: choose with your own recurring work"
+      }
+    ]
+  },
+  {
+    "id": "local-businesses",
+    "label": "Local & service businesses",
+    "title": "AI tools for local businesses: help customers reach, book, and understand you",
+    "summary": "Connect your public business facts, inquiry handling, appointment process, and review requests into a dependable customer journey.",
+    "intro": "For a local business, useful information is often very ordinary: where to park, which locations you serve, whether an appointment is required, and how to change it. Customers should not have to decode inconsistent answers across your website, social accounts, booking page, and phone message. Use that practical problem to choose the software.",
+    "recommendation": "Correct your public business information and booking journey first. Use an AI assistant to draft from those approved facts. Add a scheduling tool if appointments create repeated back-and-forth, an answering service if calls are going unanswered, and a review platform only when the native review-link process is no longer sufficient.",
+    "jobs": [
+      [
+        "Answer routine public questions",
+        [
+          "chatgpt",
+          "tidio"
+        ],
+        "Prepare a knowledge base of hours, locations, services, and the right support route before enabling automated answers.",
+        "customer-support-knowledge-base"
+      ],
+      [
+        "Reduce booking back-and-forth",
+        [
+          "calendly",
+          "acuity"
+        ],
+        "Choose according to the appointment types, staffing, intake, and payment requirements you actually use.",
+        "self-service-booking"
+      ],
+      [
+        "Request honest customer feedback",
+        [
+          "nicejob",
+          "gatherup"
+        ],
+        "Compare dedicated review software with a direct Google review link. Keep the invitation neutral and use a consistent eligibility rule.",
+        "honest-review-request-system"
+      ]
+    ],
+    "journey": [
+      "Find accurate information",
+      "Ask or book",
+      "Receive the service",
+      "Leave honest feedback"
+    ],
+    "sections": [
+      {
+        "title": "Create a public-information record",
+        "paragraphs": [
+          "Record the exact business name, phone number, address or service area, opening hours, holiday exceptions, booking URL, access instructions, and public policies. Assign someone to update the record when a detail changes. Use it to review your website, Business Profile, social bio, voicemail, and confirmation messages.",
+          "Separate a published rule from a real-time fact. An assistant may repeat your usual hours, but it should not invent today’s appointment availability or say a specific staff member is present unless it can access a reliable current system."
+        ]
+      },
+      {
+        "title": "Choose the first workflow from actual friction",
+        "paragraphs": [
+          "Look at the recent inquiries you are allowed to review. Count how many concern the same public question, how many need a booking change, and how many require a person. A collection of repeated “Where do I park?” questions suggests better directions and a preparation message before it suggests a complex chatbot.",
+          "If missed calls are the problem, compare voicemail with a reliable callback procedure, a live answering service, and an AI answering product. Test the transfer and escalation route as well as the greeting. If double bookings are the problem, fix calendar connections and booking rules first."
+        ]
+      },
+      {
+        "title": "Make review requests easy and neutral",
+        "paragraphs": [
+          "Google provides a review link or QR code through Business Profile: Read Reviews, then Get more reviews. You can put that link in a thank-you message or on a receipt. Google prohibits incentives in exchange for reviews.",
+          "Use a consistent rule such as inviting customers after the completed service. Do not first ask whether they are happy and show the public review link only to positive respondents. Keep service recovery available to everyone. When replying publicly, acknowledge the issue without disclosing private customer details."
+        ]
+      },
+      {
+        "title": "Review the complete journey from a customer’s phone",
+        "paragraphs": [
+          "Open the business page, find the appointment or contact route, submit a controlled test, and inspect the confirmation. Check the map or directions, phone tap target, time zone, and cancellation instructions. A desktop layout can conceal a form that is uncomfortable to complete on a phone.",
+          "Record where the customer stops. If visitors reach the booking page but cannot find a suitable event, publishing more social posts will not repair that step. Improve the missing information or event definition, then measure the same journey again."
+        ]
+      }
+    ],
+    "example": {
+      "title": "A useful appointment preparation message",
+      "input": "Fictional service: a 60-minute bicycle tune-up appointment at a neighborhood shop. Public rule: bring the bicycle and lock key; rear entrance has a bike ramp; the booking link includes rescheduling.",
+      "output": "Your bicycle tune-up appointment is booked. Please bring the bicycle and its lock key. The rear entrance has a ramp if that is easier for you. We have reserved 60 minutes for the appointment; any additional work will be discussed before approval. Use the reschedule link in your confirmation if the time no longer works.",
+      "checks": [
+        "The message uses the actual appointment record before saying booked.",
+        "It does not promise repairs outside the agreed service.",
+        "Directions and rescheduling work on a phone."
+      ]
+    },
+    "metrics": [
+      "Missed inquiries and time to a useful response.",
+      "Booking completion and attendance, separated by service.",
+      "Repeated questions that could be answered earlier in the journey."
+    ],
+    "related": [
+      "self-service-booking",
+      "customer-support-knowledge-base",
+      "honest-review-request-system"
+    ],
+    "extraSources": [
+      {
+        "title": "Google: create a review link or QR code",
+        "url": "https://support.google.com/business/answer/16816815?hl=en",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Review-link workflow and restrictions on incentives."
+        ]
+      }
+    ],
+    "lastReviewed": "2026-11-01",
+    "publishedAt": "2026-10-31",
+    "reviewNotes": [
+      "Product fit and plan information use the linked official sources. The workflow, sample messages, and business figures are original illustrative examples; they are not a reported customer test."
+    ]
+  },
+  {
+    "id": "realtors",
+    "label": "Real estate professionals",
+    "title": "AI tools for real estate professionals: accurate property content and organized follow-up",
+    "summary": "Build a property fact record, prepare useful marketing, and keep inquiries moving without inventing listing details or commitments.",
+    "intro": "Real estate content needs more than persuasive language. A listing description must match the property, an inquiry must reach the right professional, and a follow-up must reflect what the person actually requested. AI is most useful when it works from verified property information and leaves negotiation, disclosures, eligibility, and professional advice with the responsible people.",
+    "recommendation": "Use an approved property brief with your existing AI assistant and design tool. Choose a CRM when active inquiries, owners, appointments, and next actions are difficult to track in the current system. Introduce social scheduling after the brokerage’s content review process is clear. A generic AI tool is not a substitute for brokerage systems or professional review.",
+    "jobs": [
+      [
+        "Draft property content from facts",
+        [
+          "chatgpt",
+          "claude",
+          "canva"
+        ],
+        "Keep listing facts and approved images together. Use AI to improve clarity without adding property features or buyer assumptions.",
+        "product-launch-content-system"
+      ],
+      [
+        "Track inquiries and next actions",
+        [
+          "hubspot",
+          "pipedrive"
+        ],
+        "Record the requested property or service, assigned professional, contact preference, and next step.",
+        "service-lead-follow-up"
+      ],
+      [
+        "Publish a reviewed content series",
+        [
+          "buffer",
+          "metricool"
+        ],
+        "Use a campaign record with approved assets, destination, schedule, and live links.",
+        "ai-social-media-agents"
+      ]
+    ],
+    "journey": [
+      "Verified property brief",
+      "Approved content",
+      "Assigned inquiry",
+      "Confirmed next step"
+    ],
+    "sections": [
+      {
+        "title": "Keep the property brief separate from the marketing draft",
+        "paragraphs": [
+          "Record the address or approved public identifier, listing status, price, dimensions with their source, rooms, features, restrictions on claims, approved photos, and the person who can verify changes. Use the authoritative listing and transaction systems for facts that change.",
+          "Ask the assistant to flag missing details instead of inferring them from a photo. A visible desk does not establish a permitted bedroom. A sunny photograph does not prove a direction of exposure. Avoid inserting a school assignment, condition statement, renovation date, or availability claim that has not been verified."
+        ]
+      },
+      {
+        "title": "Write for the property and the inquiry",
+        "paragraphs": [
+          "Describe the property’s factual attributes and practical uses. Keep audience targeting and housing-advertising decisions inside the brokerage’s current review process. Do not ask an assistant to infer protected characteristics or decide who should see a housing opportunity.",
+          "A social post can focus on one documented feature, while a longer description explains the layout and next step. Use accurate image labels and follow the rules that apply to edited or virtually staged imagery in your publishing channels. Preserve original files and approval records."
+        ]
+      },
+      {
+        "title": "Give each inquiry a real owner",
+        "paragraphs": [
+          "A CRM record should state the requested property or service, contact route, assigned professional, consent for the intended communication, status, and next action. Distinguish a request for information from an agreement to recurring marketing.",
+          "When someone responds, update the conversation instead of sending another generic reminder. If a property’s status changes, review queued content and affected inquiries. Disconnecting an AI assistant does not automatically remove posts already queued in a separate scheduler."
+        ]
+      },
+      {
+        "title": "Review commitments and measurement separately",
+        "paragraphs": [
+          "AI can prepare a draft summary for a professional to review. It should not negotiate, establish financing eligibility, provide a valuation as a guaranteed outcome, or promise an appointment that is not in the calendar. Keep document and transaction access in approved systems.",
+          "Track useful response time, inquiries with an assigned next action, attended appointments, and verified business outcomes. Count a booked appointment separately from a completed transaction. If you compare campaigns, record the date range and sample size so one unusual inquiry does not become a broad conclusion."
+        ]
+      }
+    ],
+    "example": {
+      "title": "An illustrative listing-description edit",
+      "input": "Fictional approved facts: two-bedroom condominium; separate dining area; covered balcony; one assigned parking space; showing inquiries handled through the brokerage contact form. No area, renovation, school, view, or financing facts supplied.",
+      "output": "This two-bedroom condominium includes a separate dining area, a covered balcony, and one assigned parking space. To request further details or discuss a showing, use the brokerage contact form.\n\nEditor’s questions before publication: confirm current listing status and price; add verified dimensions if required; check all image and brokerage-disclosure requirements.",
+      "checks": [
+        "No room, view, condition, or financial claim was inferred.",
+        "The contact route is the approved one.",
+        "A licensed professional reviews the complete listing before release."
+      ]
+    },
+    "metrics": [
+      "Inquiries with a named owner and current next action.",
+      "Corrections needed after publication.",
+      "Attended appointments and completed outcomes from the actual CRM record."
+    ],
+    "related": [
+      "product-launch-content-system",
+      "service-lead-follow-up",
+      "ai-social-media-agents"
+    ],
+    "extraSources": [],
+    "lastReviewed": "2026-11-01",
+    "publishedAt": "2026-10-31",
+    "reviewNotes": [
+      "Product fit and plan information use the linked official sources. The workflow, sample messages, and business figures are original illustrative examples; they are not a reported customer test."
+    ]
+  },
+  {
+    "id": "med-spas",
+    "label": "Med spas & appointment practices",
+    "title": "AI tools for med spas: clear public information and dependable booking handoffs",
+    "summary": "Improve public FAQs, appointment preparation, and administrative routing while keeping clinical decisions and private records in the right systems.",
+    "intro": "An appointment practice has two different information jobs. Public information helps someone understand the location, booking process, published service descriptions, and how to reach the team. Individual suitability, health history, treatment advice, and patient records belong in the practice’s approved clinical process. Keep that distinction visible when selecting software.",
+    "recommendation": "Start with reviewed public FAQs and a booking route into your existing practice system. Use AI to draft public explanations for staff review. Choose any tool that will process patient information only after your practice has checked its contractual, privacy, access, and security requirements. A familiar consumer brand or a paid subscription alone does not establish suitability.",
+    "jobs": [
+      [
+        "Prepare public service and location information",
+        [
+          "chatgpt",
+          "canva"
+        ],
+        "Create clear public copy from approved facts. Staff should review medical statements, imagery, and any result or suitability language.",
+        "chatgpt-project-business-brief"
+      ],
+      [
+        "Route an administrative question",
+        [
+          "tidio",
+          "intercom"
+        ],
+        "For public FAQs only unless the exact product, plan, agreement, and data flow have been approved for patient information. Define the transfer route before enabling replies.",
+        "customer-support-knowledge-base"
+      ],
+      [
+        "Improve appointment preparation",
+        [
+          "acuity",
+          "calendly"
+        ],
+        "Use only an account and data flow approved for your practice. Check privacy requirements, clinical intake boundaries, and calendar conflicts before replacing or adding to the practice-management system.",
+        "self-service-booking"
+      ]
+    ],
+    "journey": [
+      "Public question",
+      "Appropriate booking route",
+      "Staff review",
+      "Approved practice process"
+    ],
+    "sections": [
+      {
+        "title": "Define what a public assistant may answer",
+        "paragraphs": [
+          "Prepare approved answers for opening hours, parking, accessibility information, how to request an appointment, cancellation contact details, and where to find published service descriptions. Date each answer and name the staff member responsible for maintaining it.",
+          "Do not let the assistant infer whether a treatment is suitable, interpret a photograph, recommend a treatment plan, or tell someone how to manage symptoms. Route those questions to the clinical process. A public FAQ should not ask a visitor to paste a health history into an ordinary chat field."
+        ]
+      },
+      {
+        "title": "Evaluate the data path before connecting a tool",
+        "paragraphs": [
+          "Map what the form or chat collects, where it goes, who can access it, which subcontractors process it, how it is retained, and how the practice can export or delete it. Use the tool’s actual plan terms and signed arrangements where required, not a marketing badge.",
+          "For organizations subject to HIPAA, HHS explains that a cloud provider handling electronic protected health information on their behalf can be a business associate, including when it cannot decrypt the information. Applicable business-associate agreements and other obligations need to be addressed. HHS does not certify particular cloud products. The practice should determine its own obligations with qualified support."
+        ]
+      },
+      {
+        "title": "Make the booking handoff operational",
+        "paragraphs": [
+          "A public page can explain the appointment types and link to the approved scheduling system. The authoritative system should decide which appointment exists, which provider or room it uses, and whether any payment or preparation step is complete.",
+          "Use a controlled test to inspect confirmation, rescheduling, cancellation, staff notification, and calendar conflicts. Check what happens when a visitor asks a clinical question during an administrative conversation. A reassuring sentence is not a handoff unless the right team actually receives the request."
+        ]
+      },
+      {
+        "title": "Review marketing claims with the same care as the workflow",
+        "paragraphs": [
+          "Use authorized images and keep any editing from creating a false impression of a result. Do not generate testimonials, before-and-after results, qualifications, or performance statistics. If a factual claim belongs in public copy, keep its supporting source and approval record.",
+          "Measure administrative outcomes such as whether questions reached the correct team, whether appointment details were accurate, and whether staff had to correct information. Do not infer clinical effectiveness from marketing engagement or appointment volume."
+        ]
+      }
+    ],
+    "example": {
+      "title": "A public reply that gives the right next step",
+      "input": "Illustrative question: “Can you tell me which treatment is right for me?” Approved public route: a consultation request reviewed by the practice team. No individual clinical assessment is available in chat.",
+      "output": "The practice team needs to review your individual circumstances before discussing suitability. Please use our consultation-request page or call the practice through the contact details on this website. You do not need to send medical history or photographs in this public chat.",
+      "checks": [
+        "The reply does not recommend a treatment or interpret symptoms.",
+        "The booking/contact destination is the practice’s approved route.",
+        "A separate staff workflow handles any information submitted through the clinical process."
+      ]
+    },
+    "metrics": [
+      "Administrative questions routed to the correct team.",
+      "Booking errors, duplicate appointments, and failed staff notifications.",
+      "Public answers requiring correction or clarification."
+    ],
+    "related": [
+      "customer-support-knowledge-base",
+      "self-service-booking",
+      "chatgpt-project-business-brief"
+    ],
+    "extraSources": [
+      {
+        "title": "HHS: HIPAA and cloud computing",
+        "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Cloud-provider business-associate responsibilities and HHS limits on product endorsement."
+        ]
+      }
+    ],
+    "lastReviewed": "2026-11-01",
+    "publishedAt": "2026-10-31",
+    "reviewNotes": [
+      "Product fit and plan information use the linked official sources. The workflow, sample messages, and business figures are original illustrative examples; they are not a reported customer test."
+    ]
+  }
+]

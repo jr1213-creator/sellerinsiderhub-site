@@ -1,0 +1,28 @@
+MARKET / MONETIZATION REVIEW — INTERNAL IMPLEMENTATION RECORD
+Reviewed 2026-11-01. No investor material.
+
+Recommendation
+Keep the complete site broad enough for product sellers, creators, and service operators, but make each article answer one identifiable job. The strongest page sequence is a usable tutorial, a scenario-based comparison, and a tool profile whose plan and limits match that tutorial. The reader should leave with a draft, queue, booking test, cost worksheet, or decision they can inspect.
+
+Evidence
+The Chamber reports 66% AI use and 41% use of six or more technology platforms in its 2026 small-business survey. Census BTOS reports a much lower 17–20% usage range in a different population and time window. These support implementation relevance, not a paid-software market-size claim. Etsy’s filing reports a predominantly solo seller base and substantial multichannel activity. Public search returned dense comparison coverage, official tutorials, and vendor-written alternatives pages. The detailed URLs and dates are in data/research/market-research.json.
+
+Objection: high-ticket products will make the site profitable quickly.
+Response: commission size cannot compensate for poor reader fit, insufficient qualified visitors, missing program approval, or conversion and payout delays. A solo seller may need a free review link or a $6 research tool; a multi-location operator may justify a quoted suite. Recommend the cheapest workable scope for the actual job. No revenue forecast is supported by the current evidence.
+
+Objection: a larger AI-generated content inventory is differentiation.
+Response: observed results already contain many tool directories and scenario-based comparisons. Original coherent examples, current source reconciliation, copyable artifacts, and tested acceptance criteria are stronger editorial choices. Do not invent hands-on testing, authorship, screenshots, or measured savings to appear established.
+
+Objection: market research requires shrinking the site to one niche.
+Response: no scope reduction is needed. Use complete business hubs with different jobs and specific cross-links. Prioritization controls homepage prominence and depth, while the full coverage remains available. A broad navigation structure must not make every tool appear suitable for every business.
+
+Alternatives considered
+1. Directory-first publication: easy to expand, but observed competition and low practical distinction make it a weak lead experience.
+2. High-ticket-first rankings: potentially attractive commission headlines, but poor fit for many solo sellers and weak editorial trust.
+3. Workflow-led publication with documented buying guidance: chosen because the reader receives a concrete artifact and the software decision follows naturally.
+
+Decisions applied
+47 tool profiles now have specific audience fit, practical exclusions, documented economics and limits, a unique illustrative business task, a verification check, and two reasoned alternatives. Prices distinguish monthly payment from annual commitment. Free-trial allowances are separated from continuing free capacity. Source conflicts are disclosed. Existing unverified affiliate metadata was preserved rather than fabricated.
+
+Measurement after release
+Use observed page visits, completed tool interactions, voluntary subscriptions, relevant outbound clicks, approved referrals, reversals, and actual payouts to evaluate the model. Keep each stage separate. Do not equate a signup or click with revenue, and do not use a hypothetical conversion rate as an operating result. Revisit topic priority using real reader behavior when it exists.

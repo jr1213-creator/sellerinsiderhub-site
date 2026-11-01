@@ -294,6 +294,23 @@ If you cannot assign the conversation, give the working support
 route without claiming that someone has already received it.</pre></div>
 <p>Check for overlapping responders. Manychat’s troubleshooting guide identifies Meta Business Suite’s <strong>Inbox → Automations → Your automations → Instant Reply</strong> toggle as one possible source of duplicate messages. Turn off an overlapping rule only after identifying it; other unrelated business workflows may still be needed. <a href="https://help.manychat.com/hc/en-us/articles/14281436380956-Manychat-is-sending-wrong-messages" target="_blank" rel="noopener">Diagnose unexpected replies.</a></p>
 <p>Keep a short recovery note: where to pause the scheduler, which reply scenario to disable, who receives exceptions, and how to resume after a repair. Disconnecting an AI plugin does not necessarily delete posts that were already queued in a separate scheduler; inspect the destination queue when stopping a campaign.</p>
+<h3>Record a repair before you resume</h3>
+<p>Suppose an approved price changes after the next week of posts is queued. Pause the affected scheduled posts and reply paths in their own tools, identify which versions were already published or sent, and correct the authoritative business brief. Update every remaining asset that uses the price. Then repeat the draft, queue, source-answer, and handoff checks affected by the change. A correction is complete when the destinations agree with the revised facts, not merely when the prompt has been edited.</p>
+<div class="worked-example"><div class="example-label"><h3>Copy: a campaign repair record</h3><button class="button light small" data-copy-target="social-incident-log">Copy repair record</button></div><pre id="social-incident-log">Issue and discovery time:
+Affected business fact / source version:
+Scheduled posts paused in the publishing tool:
+Reply scenario paused in the messaging tool:
+Already-published post IDs or URLs:
+Affected conversations reviewed privately:
+Authoritative fact corrected:
+Queued drafts and reply sources updated:
+Customer correction needed and approved wording:
+Acceptance checks repeated with observed results:
+Person responsible for resuming / time:
+
+Keep personal customer details in the approved private support system,
+not in a public campaign sheet. Do not mark a repair complete until
+the actual queue, reply source, and public destination are checked.</pre></div>
 </section>
 
 <section id="metricool">
@@ -428,7 +445,7 @@ Confirm the saved schedule and how I can pause it.</pre></div>
 
 <section id="research-notes" class="guide-research">
 <h2>Research notes and maintenance</h2>
-<p><strong>Documentation reviewed October 31, 2026.</strong> This guide is based on official OpenAI, Buffer, Manychat, Metricool, and social-platform documentation. The source pack, prompts, sample campaign, decision route, and test plans are original editorial work. Product instructions were checked against documentation; we did not run a live social campaign or test the vendors inside a reader’s account.</p>
+<p><strong>Initial documentation review: October 31, 2026. Capability review updated: November 1, 2026.</strong> The update rechecked OpenAI’s custom connections and supported scheduled-task events, Buffer’s OAuth setup, and Manychat’s Instagram trigger and messaging windows. Other sources and the dated price examples retain their stated review dates. The source pack, prompts, sample campaign, decision route, repair log, and test plans are original editorial work. Instructions were checked against documentation; we did not run a live social campaign or test the vendors inside a reader’s account.</p>
 <p>We identified two material documentation conflicts: ChatGPT’s newer custom-plugin interface versus older menu and eligibility descriptions, and Manychat’s differing current/legacy/regional pricing presentations. The instructions use an account-capability check for the former and the reader’s actual Subscription screen for the latter. Detailed Meta lesson access was limited by sign-in; we have not invented a click path behind that wall.</p>
 <p>Recheck this guide when a provider changes its connection interface, messaging policy, AI entitlement, plan limits, or trigger behavior. A source-review date does not imply continuous monitoring. For a correction, <a href="/contact/">send the page URL, the specific instruction, and an official source</a>.</p>
 <div class="guide-note"><h3>Your finished system should be easy to explain.</h3><p>You know where the facts come from, where drafts are reviewed, what schedules the posts, what starts each reply, which questions need a person, and how to stop the workflow. That clarity is what makes the automation useful when the first real customer arrives.</p></div>

@@ -31,8 +31,15 @@
   const get = (key, fallback) => {try {return JSON.parse(localStorage.getItem(key)) ?? fallback;} catch {return fallback;}};
   const set = (key, value) => {try {localStorage.setItem(key, JSON.stringify(value)); return true;} catch {toast('Your browser could not save this. Export a backup before leaving.'); return false;}};
   const WS = 'sih.workspace.v1', CMP = 'sih.compare.v1', CONSENT = 'sih.analytics.v1';
-  let workspace = get(WS, {version:1, tools:[], guides:[], stacks:[]});
-  if (!workspace || !Array.isArray(workspace.tools) || !Array.isArray(workspace.guides) || !Array.isArray(workspace.stacks)) workspace = {version:1, tools:[], guides:[], stacks:[]};
+  const emptyWorkspace = () => ({version:1, tools:[], guides:[], stacks:[]});
+  function readWorkspace() {
+    const raw = localStorage.getItem(WS);
+    let value; try {value = JSON.parse(raw);} catch {return emptyWorkspace();}
+    return value && Array.isArray(value.tools) && Array.isArray(value.guides) && Array.isArray(value.stacks) ? value : emptyWorkspace();
+  }
+  let workspace, workspaceStorageRead = false;
+  try {workspace = readWorkspace(); workspaceStorageRead = true;} catch {workspace = emptyWorkspace();}
+  let persistedWorkspace = JSON.stringify(workspace);
   let compare = get(CMP, []); if (!Array.isArray(compare)) compare = [];
   let catalog, searchIndex, currentStack, calculationExport, toastTimer, analyticsLoaded = false;
   const catalogPromise = fetch('/data/catalog.json').then(r => {if (!r.ok) throw new Error('Tool library unavailable'); return r.json();}).then(d => {catalog = d; return d;});
@@ -64,12 +71,33 @@
   }
   function updateButtons() {
     $$('[data-save-tool]').forEach(b => {const saved = workspace.tools.includes(b.dataset.saveTool); b.setAttribute('aria-pressed', saved); if (!b.classList.contains('icon-button')) b.textContent = saved ? '✓ Saved' : 'Save this tool'; else b.setAttribute('aria-label', `${saved ? 'Unsave' : 'Save'} ${tool(b.dataset.saveTool)?.name || 'tool'}`);});
-    $$('[data-save-guide]').forEach(b => {const saved = workspace.guides.some(g => g.url === b.dataset.saveGuide); b.setAttribute('aria-pressed', saved); b.textContent = saved ? '✓ Saved to reading list' : 'Save to reading list';});
+    $$('[data-save-guide]').forEach(b => {const saved = workspace.guides.some(g => g.url === b.dataset.saveGuide); b.setAttribute('aria-pressed', saved); b.textContent = b.closest('#workspace-guides') ? 'Remove' : saved ? '✓ Saved to reading list' : 'Save to reading list';});
     $$('[data-compare-tool]').forEach(b => {const added = compare.includes(b.dataset.compareTool); b.setAttribute('aria-pressed', added); b.textContent = added ? '✓ Added to comparison' : '⇄ Compare';});
     const tray = $('#compare-tray');
     if (tray) {tray.hidden = !compare.length || location.pathname === '/compare/'; $('#compare-summary').textContent = compare.map(id => tool(id)?.name || id).join(' + '); $('#compare-link').href = '/compare/?tools=' + encodeURIComponent(compare.join(','));}
   }
-  function saveWorkspace() {set(WS, workspace); updateButtons(); renderWorkspace();}
+  function saveWorkspace(change) {
+    if (!workspaceStorageRead) {
+      try {
+        workspace = readWorkspace();
+        persistedWorkspace = JSON.stringify(workspace);
+        workspaceStorageRead = true;
+      } catch {
+        toast('This change was not saved. Allow browser storage, then try again. Your previous saved items are unchanged.');
+        return false;
+      }
+    }
+    change();
+    if (!set(WS, workspace)) {
+      workspace = JSON.parse(persistedWorkspace);
+      updateButtons(); renderWorkspace();
+      toast('This change was not saved. Allow browser storage, then try again. Your previous saved items are unchanged.');
+      return false;
+    }
+    persistedWorkspace = JSON.stringify(workspace);
+    updateButtons(); renderWorkspace();
+    return true;
+  }
   function saveCompare() {set(CMP, compare); updateButtons();}
   document.addEventListener('click', async event => {
     const el = event.target.closest('button, a'); if (!el) return;
@@ -78,16 +106,16 @@
     if (el.matches('[data-print]')) window.print();
     if (el.matches('[data-cookie-settings]')) $('#cookie-panel').hidden = false;
     if (el.matches('[data-consent]')) {const choice = el.dataset.consent; set(CONSENT, choice); $('#cookie-panel').hidden = true; if (choice === 'yes') enableAnalytics(); else {window['ga-disable-G-164NDV6713'] = true; document.cookie.split(';').forEach(pair => {const name = pair.trim().split('=')[0]; if (name.startsWith('_ga')) {for (const domain of ['', location.hostname, '.sellerinsiderhub.com']) document.cookie = `${name}=; Max-Age=0; path=/;${domain ? ' domain=' + domain + ';' : ''} SameSite=Lax`;}});}}
-    if (el.matches('[data-save-tool]')) {await catalogPromise; const id = el.dataset.saveTool; if (!tool(id)) return; const saved = workspace.tools.includes(id); workspace.tools = saved ? workspace.tools.filter(x => x !== id) : [...workspace.tools, id]; saveWorkspace(); toast(saved ? 'Removed from your saved tools.' : 'Saved in this browser.');}
-    if (el.matches('[data-save-guide]')) {const url = el.dataset.saveGuide; const saved = workspace.guides.some(g => g.url === url); workspace.guides = saved ? workspace.guides.filter(g => g.url !== url) : [...workspace.guides, {url, title:el.dataset.title || document.title}]; saveWorkspace(); toast(saved ? 'Removed from your reading list.' : 'Added to your reading list.');}
+    if (el.matches('[data-save-tool]')) {await catalogPromise; const id = el.dataset.saveTool; if (!tool(id)) return; const saved = workspace.tools.includes(id); if (saveWorkspace(() => {workspace.tools = saved ? workspace.tools.filter(x => x !== id) : [...new Set([...workspace.tools, id])];})) toast(saved ? 'Removed from your saved tools.' : 'Saved in this browser.');}
+    if (el.matches('[data-save-guide]')) {const url = el.dataset.saveGuide; const saved = workspace.guides.some(g => g.url === url); if (saveWorkspace(() => {if (saved) workspace.guides = workspace.guides.filter(g => g.url !== url); else if (!workspace.guides.some(g => g.url === url)) workspace.guides.push({url, title:el.dataset.title || document.title});})) toast(saved ? 'Removed from your reading list.' : 'Added to your reading list.');}
     if (el.matches('[data-compare-tool]')) {await catalogPromise; const id = el.dataset.compareTool; if (compare.includes(id)) compare = compare.filter(x => x !== id); else if (compare.length < 3) {compare.push(id); track('compare_select', {tool_id:id});} else {toast('Your comparison has three tools. Remove one to add another.'); return;} saveCompare();}
     if (el.id === 'clear-compare') {compare = []; saveCompare();}
     if (el.matches('[data-outbound]')) track('outbound_tool_click', {tool_id:el.dataset.outbound});
     if (el.matches('a[download]')) track('resource_download', {resource:el.getAttribute('download') || el.pathname.split('/').pop()});
     if (el.matches('[data-copy-target]')) {const target = document.getElementById(el.dataset.copyTarget); if (target) copy(target.textContent);}
-    if (el.id === 'save-stack' && currentStack) {workspace.stacks.unshift({...currentStack, id:Date.now().toString(36), created:new Date().toISOString()}); workspace.stacks = workspace.stacks.slice(0,50); saveWorkspace(); toast('Your stack is saved in this browser.');}
+    if (el.id === 'save-stack' && currentStack) {if (saveWorkspace(() => {workspace.stacks.unshift({...currentStack, id:Date.now().toString(36), created:new Date().toISOString()}); workspace.stacks = workspace.stacks.slice(0,50);})) toast('Your stack is saved in this browser.');}
     if (el.id === 'export-stack' && currentStack) download('my-business-tool-stack.txt', stackText(currentStack));
-    if (el.matches('[data-remove-stack]')) {workspace.stacks = workspace.stacks.filter(s => s.id !== el.dataset.removeStack); saveWorkspace();}
+    if (el.matches('[data-remove-stack]')) saveWorkspace(() => {workspace.stacks = workspace.stacks.filter(s => s.id !== el.dataset.removeStack);});
     if (el.id === 'export-calculation' && calculationExport) download('seller-insider-hub-calculation.csv', calculationExport, 'text/csv');
     if (el.matches('[data-remove-cost]')) el.closest('.cost-row').remove();
   });
@@ -156,7 +184,7 @@
         return {role:category(role), tool:selected?.id || null, reason:selected ? `${selected.audiences.includes(audience)?'Its documented use cases fit your business type. ':''}${selected.setup} setup${selected.freeWorkflowEligible ? ' and a free entry plan for this type of work' : ''}. ${selected.bestFor[0]}` : 'No verified option matches this combination of spending and setup preferences. Start with your existing tools, or adjust the preferences to compare other options.', alternatives:ranked.slice(1,3).map(r=>r.t.id)};
       });
       currentStack = {name:$('#stack-audience').selectedOptions[0].text + ' · ' + $('#stack-budget').selectedOptions[0].text, recommendations, tools:recommendations.map(r=>r.tool).filter(Boolean), audience, budget, comfort};
-      $('#stack-output').innerHTML = `<span class="eyebrow">A starting point for your work</span><h2>Your business toolkit</h2><p>${esc(currentStack.name)}</p><div class="stack-results">${recommendations.map(r=>{const t=tool(r.tool); return `<article class="card" style="margin-top:18px"><span class="eyebrow">${esc(r.role)}</span>${t?`<div class="tool-card-head">${monogram(t)}<h3><a href="/tool/${esc(t.id)}/">${esc(t.name)} ↗</a></h3></div>`:'<h3>Start with a manual workflow</h3>'}<p style="margin-top:14px">${esc(r.reason)}</p>${t?`<p class="small" style="margin-top:12px"><strong>Check before adopting:</strong> ${esc(t.limitations[0])}</p>${t.freePlanNote?`<p class="small"><strong>Free-plan scope:</strong> ${esc(t.freePlanNote)}</p>`:''}<p class="small"><a class="link" href="${esc(t.pricingUrl)}" target="_blank" rel="noopener">Verify current plan limits ↗</a></p>`:''}${r.alternatives.length?`<p class="small" style="margin-top:12px">Also compare: ${r.alternatives.map(id=>`<a class="link" href="/tool/${esc(id)}/">${esc(tool(id).name)}</a>`).join(' · ')}</p>`:''}</article>`;}).join('')}</div><p class="output-note">Selection uses category, business fit, free-plan preference, and setup effort. Check current pricing, limits, and integrations with each provider.</p><div class="actions"><button class="button" id="save-stack">Save my stack</button><button class="button light" id="export-stack">Export plan</button><button class="button light" data-print>Print</button></div>`;
+      $('#stack-output').innerHTML = `<span class="eyebrow">A starting point for your work</span><h2>Your business toolkit</h2><p>${esc(currentStack.name)}</p><div class="stack-results">${recommendations.map(r=>{const t=tool(r.tool); return `<article class="card" style="margin-top:18px"><span class="eyebrow">${esc(r.role)}</span>${t?`<div class="tool-card-head">${monogram(t)}<h3><a href="/tool/${esc(t.id)}/">${esc(t.name)} ↗</a></h3></div>`:'<h3>Start with a manual workflow</h3>'}<p style="margin-top:14px">${esc(r.reason)}</p>${t?`<p class="small" style="margin-top:12px"><strong>Check before adopting:</strong> ${esc(t.limitations[0])}</p>${t.freePlanNote?`<p class="small"><strong>Free-plan scope:</strong> ${esc(t.freePlanNote)}</p>`:''}<p class="small"><strong>Plan economics:</strong> ${esc(t.pricingSummary)}</p><p class="small"><a class="link" href="${esc(t.pricingUrl)}" target="_blank" rel="noopener">Verify current plan limits ↗</a></p>`:''}${r.alternatives.length?`<p class="small" style="margin-top:12px">Also compare: ${r.alternatives.map(id=>`<a class="link" href="/tool/${esc(id)}/">${esc(tool(id).name)}</a>`).join(' · ')}</p>`:''}</article>`;}).join('')}</div><p class="output-note">Selection uses category, business fit, free-plan preference, and setup effort. Check current pricing, limits, and integrations with each provider.</p><div class="actions"><button class="button" id="save-stack">Save my stack</button><button class="button light" id="export-stack">Export plan</button><button class="button light" data-print>Print</button></div>`;
       track('stack_created', {roles:needs.length});
     });
   }
@@ -188,7 +216,7 @@
     updateButtons();
   }
   $('#export-workspace')?.addEventListener('click',()=>download('seller-insider-hub-workspace.json',JSON.stringify(workspace,null,2),'application/json'));
-  $('#clear-workspace')?.addEventListener('click',()=>{if(confirm('Clear the tools, reading list, and stacks saved in this browser? Export a backup first if you want to keep them.')){workspace={version:1,tools:[],guides:[],stacks:[]};saveWorkspace();toast('Your saved workspace has been cleared.');}});
+  $('#clear-workspace')?.addEventListener('click',()=>{if(confirm('Clear the tools, reading list, and stacks saved in this browser? Export a backup first if you want to keep them.')){if(saveWorkspace(() => {workspace=emptyWorkspace();}))toast('Your saved workspace has been cleared.');}});
   $('#import-workspace')?.addEventListener('change',async event=>{
     const file=event.target.files[0];if(!file)return;
     try {
@@ -197,7 +225,7 @@
       if(data.version!==1||!Array.isArray(data.tools)||!Array.isArray(data.guides)||!Array.isArray(data.stacks))throw new Error('This does not look like a Seller Insider Hub workspace backup.');
       const safePath=value=>typeof value==='string'&&/^\/(?!\/)[a-z0-9/_-]+\/$/i.test(value);
       const imported={version:1,tools:[...new Set(data.tools.filter(id=>typeof id==='string'&&tool(id)))].slice(0,500),guides:data.guides.filter(g=>g&&safePath(g.url)&&typeof g.title==='string').slice(0,500).map(g=>({url:g.url,title:g.title.slice(0,200)})),stacks:data.stacks.filter(s=>s&&typeof s.name==='string'&&Array.isArray(s.tools)).slice(0,50).map((s,i)=>({id:'import-'+Date.now()+'-'+i,name:s.name.slice(0,200),created:typeof s.created==='string'?s.created.slice(0,30):'',tools:s.tools.filter(id=>typeof id==='string'&&tool(id)).slice(0,30),recommendations:[]}))};
-      workspace={version:1,tools:[...new Set([...workspace.tools,...imported.tools])],guides:[...workspace.guides,...imported.guides].filter((g,i,a)=>a.findIndex(x=>x.url===g.url)===i),stacks:[...workspace.stacks,...imported.stacks].slice(0,50)};saveWorkspace();toast('Backup imported and merged with your saved items.');
+      if(saveWorkspace(() => {workspace={version:1,tools:[...new Set([...workspace.tools,...imported.tools])],guides:[...workspace.guides,...imported.guides].filter((g,i,a)=>a.findIndex(x=>x.url===g.url)===i),stacks:[...workspace.stacks,...imported.stacks].slice(0,50)};}))toast('Backup imported and merged with your saved items.');
     }catch(error){toast(error.message||'The backup could not be read.');}event.target.value='';
   });
   catalogPromise.then(()=>{
@@ -205,4 +233,20 @@
     $$('a[data-tool-id]').forEach(a=>{const t=tool(a.dataset.toolId);if(t){a.href=official(t);a.rel=rel(t);a.target='_blank';a.dataset.outbound=t.id;}});
   }).catch(()=>{});
   calculators();
+  const progressBar=$('.reading-progress span');
+  const readingArticle=$('article.article-body');
+  if(progressBar&&readingArticle){
+    let progressQueued=false;
+    const updateReadingProgress=()=>{
+      const rect=readingArticle.getBoundingClientRect();
+      const span=Math.max(1,rect.height-innerHeight+120);
+      const fraction=Math.max(0,Math.min(1,(120-rect.top)/span));
+      progressBar.style.width=(fraction*100).toFixed(1)+'%';
+      progressQueued=false;
+    };
+    const queueReadingProgress=()=>{if(!progressQueued){progressQueued=true;requestAnimationFrame(updateReadingProgress);}};
+    addEventListener('scroll',queueReadingProgress,{passive:true});
+    addEventListener('resize',queueReadingProgress);
+    updateReadingProgress();
+  }
 })();

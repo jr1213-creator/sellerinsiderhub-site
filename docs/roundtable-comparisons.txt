@@ -1,0 +1,56 @@
+Seller Insider Hub — actual comparison and cross-article review
+Reviewed: 2026-11-01
+Reviewer role: comparison economics and buyer-fit reviewer (AI-assisted internal review)
+
+FILES AND SCOPE
+- data/editorial.json (comparisons): all eight enhanced comparisons complete.
+- data/research/comparison-research.json: 30 independently recalculated expressions, dated official-source ledger, known source conflicts, and seven substantive editorial decisions.
+- data/business-guides.json: all seven business hubs read for tool fit, assumptions, and buyer-cost claims.
+- data/feature-guides.json: the three present articles reviewed: system-of-record choice, receptionist comparison, and HeyGen workflow. Root is appending more articles, so this file was not modified.
+
+DECISIONS APPLIED
+1. Creator hub: changed the broad Kit recommendation into a broadcast-versus-sequence decision. Current Kit Free does not include any email sequence or visual automation. Added the 500-subscriber paid workflow breakpoint: MailerLite Comfort $12/month versus Kit Creator $39/month, with source links and tier capacities. This prevents a creator from choosing the large free Kit list for a workflow it cannot run.
+2. Contractor hub: clarified that AI intake, a business phone system, and staffed answering have different capabilities. A Dialpad-style phone subscription should not be read as a promise of a receptionist. No vendor-specific feature claim was added.
+3. Comparison renderer: reported duplicate legacy chooseFirst/chooseSecond lists plus the new recommendation cards. Root confirmed it suppressed the legacy duplicates and added comparison navigation.
+
+INDEPENDENT CHECKS
+- Etsy contribution illustration: $30 - $9 - $5 - $4 = $12; $24 subscription / $12 contribution = two additional orders. Correct, and clearly marked as fictional rather than an Etsy fee estimate.
+- Receptionist current official prices reopened: Smith.ai Free 25 real calls/month, $3 for each additional call; Ruby $250 for 50 receptionist minutes and $395 for 100. The 40-call, 80-billable-minute model is $45 versus $395. These are different service types and billing units; the article says so.
+- Receptionist contribution illustration: 2 x $80 = $160; $160 - $45 = $115; $160 - $395 = -$235. Correct, with additional jobs assumed rather than claimed.
+- Etsy policy source reopened: October 22, 2026 update and the listing-image policy support an unedited actual-item photo for most products, named exceptions, restrictions on AI-generated functional guides, and human involvement in listings. The business hub accurately scopes those statements.
+- Medical-spa hub keeps the recommendation to public information and existing approved practice systems, and does not assert a consumer product is HIPAA suitable. No blanket calendar or chatbot compliance claim found.
+- Realtor hub keeps facts in authoritative listing/transaction systems and does not treat a generic CRM as a replacement for brokerage controls.
+
+SOURCES REOPENED FOR CROSS-REVIEW
+https://smith.ai/pricing/ai-receptionist
+https://www.ruby.com/plans-and-pricing/
+https://www.etsy.com/seller-handbook/article/1522733284810
+https://www.etsy.com/legal/policy/listing-image-requirements/253962679005
+
+OBJECTIONS FOR ROOT TO CONSIDER
+- The med-spa tool cards name Calendly/Acuity and Tidio/Intercom. The surrounding article appropriately limits them, but cards shown in isolation must retain the public-information/approved-plan boundary. A purchase link should not imply patient-data suitability.
+- The coach and creator hubs should link directly to the comparison when the paid feature gate changes the choice, rather than leaving every reader to infer it from catalog cards.
+- The receptionist model proves allowance math, not equivalent human handoff. Keep that distinction beside the example; do not put “same coverage for $350 less” in a card or headline.
+
+No investor materials created. No deployment or publishing action performed by this reviewer.
+
+PEER RESPONSE — CATALOG REVIEWER
+The catalog research agent independently reopened the current Canva pricing, US Adobe pricing, and Notion block rules. No material factual or arithmetic error found in Canva/Adobe or Notion/Airtable. Confirmed annual/monthly commitments, exact two-owner Free block rule, Adobe storage conflict handling, and the five-editor $600/$1,200 model. Reviewed 2026-11-01.
+
+FINAL FEATURE-GUIDE REVIEW
+Read the remaining four complete guides: getting started with AI, first automation decision, small-business buying guide, and business systems map. Arithmetic checked: $20/$25 x60 =48 net minutes; 120x4min =8h, less2h =6h, x$25 =$150, less$30software and$120/12setup =$110/month; a $45 sample stack is$540/year and three extra$15 seats add$45/month. No blocking numerical or workflow claim error. Tightened the buying guide so its ChatGPT/Claude evaluation is explicitly proposed for the reader, not a reported benchmark; changed the email shortlist question so it does not imply every welcome sequence requires paid automation; corrected its HubSpot official-plans source from the homepage to /pricing/sales.
+
+PEER RESPONSE — TUTORIAL REVIEWER
+Independently reopened Kit Free, MailerLite billing, and ecommerce triggers. No blocking feature-gate or math error. Applied two useful precision edits to the email comparison upgrade: cart cohort is explicitly within the same500 contacts; the selection check includes cookie-cleared/cross-device identity reset. No competitor claims substituted for MailerLite's own documentation.
+
+TUTORIAL CROSS-REVIEW
+Reviewed email-welcome-sequence and product-profit-check without modifying the frozen tutorial staging file. MailerLite DOI docs confirm paid-only confirmation-email editing and recommend a group-based trigger; the Free workflow fits the current250-contact/2,500-send limits and the2+3-day delays. US Etsy policy excludes buyer sales tax from transaction and Offsite Ads bases and includes it in payment processing, matching the tutorial. Decimal arithmetic and spreadsheet cell references independently checked:2.41 transaction,1.43 processing,24.44 directcosts,12.56 contribution,33.95% margin,7.01 afterad,18.95% afteradmargin,−0.99 with doublelabor plusad; fixed-cost thresholds24/43orders. No blocking issue.
+
+WORKSPACE REGRESSION AND REPAIRS
+Added scripts/test_workspace.cjs, which executes the actual site-assets/hub.js in a Node VM with a small DOM/storage boundary. It performs no network calls, browser actions, dependency installs, or production-data writes.
+- Reproduced two failing tests for denied reads at startup: when storage resumed, the previous implementation overwrote unread prior guides/stacks/tools with its empty fallback.
+- Fixed this by reading the prior stored workspace before applying a deferred mutation. A visible Save intent stays an idempotent addition after recovery; it cannot become an accidental removal or duplicate.
+- Retained transaction rollback after blocked writes, with truthful failure messages and retry.
+- Fixed workspace reading-list buttons being relabeled as Saved: buttons inside #workspace-guides now retain Remove while aria-pressed still reflects state.
+- Eleven tests pass: blocked add/remove/clear, real stack form and save/removal, import merge rollback/retry, executable/external/malformed/control-character URL rejection, escaped titles, malformed/oversize backup handling, denied startup recovery with prior data, and Remove labeling.
+- Added test command to npm check. Node syntax check passed. The first full npm check attempt was blocked solely by root's temporary qa-responsive.html lacking canonical/publisher metadata; this temporary file was left untouched and reported.
