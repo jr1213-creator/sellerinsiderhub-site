@@ -385,13 +385,16 @@ class Validator:
     def check_exposure(self):
         forbidden_names = {"community-config.js", "affiliate-links.json", "research.json", "editorial.json", "app.js"}
         forbidden_dirs = {"docs", "research", "scripts", "supabase", ".git", ".codex", ".agents", "__pycache__"}
+        # This reviewed, stdlib-only teaching download recomputes the supplied
+        # fictional CSV. Site build scripts and every other source file stay blocked.
+        public_teaching_code = {"assets/learning/sales-analysis/verify_sales_analysis.py"}
         for path in self.dist.rglob("*"):
             if not path.is_file():
                 continue
             relative = path.relative_to(self.dist)
             if set(relative.parts[:-1]) & forbidden_dirs or path.name in forbidden_names:
                 self.error("internal-file-exposed", relative.as_posix(), "Internal/legacy file is in public output.")
-            if path.name.startswith(".env") or path.suffix in {".py", ".pyc", ".sql", ".cjs"}:
+            if path.name.startswith(".env") or (path.suffix in {".py", ".pyc", ".sql", ".cjs"} and relative.as_posix() not in public_teaching_code):
                 self.error("source-file-exposed", relative.as_posix(), "Source/configuration file is in public output.")
 
     def expected_articles(self):

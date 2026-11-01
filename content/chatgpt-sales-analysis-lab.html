@@ -1,0 +1,219 @@
+<p class="guide-deck">Use ChatGPT to turn a messy sales export into a report you can check. You will preserve legitimate refunds, remove duplicate events, resolve a missing cost, verify the calculations in Excel or Google Sheets, and write a short business memo. The downloadable exercise contains original fictional data and a complete answer key.</p>
+<div class="guide-facts"><span><b>For</b> Owners and small teams working with sales exports</span><span><b>Level</b> Beginner with basic spreadsheet skills</span><span><b>Allow</b> 60–90 minutes for the exercise</span><span><b>Make</b> A clean file, checked summary, chart and memo</span></div>
+<p class="small muted">Documentation checked November 1, 2026. Sample data and worked answers are original teaching material. Calculations and workbook formulas were verified locally. Instructions for ChatGPT, Excel and Sheets follow vendor documentation; this is not a claim of a live account test or an accredited qualification.</p>
+<nav class="guide-jumps" aria-label="Lab sections"><a href="#lab-outcomes">Your assignment</a><a href="#access">Access and cost</a><a href="#data-dictionary">Understand the file</a><a href="#inspect-data">Inspect</a><a href="#clean-data">Clean</a><a href="#verify-spreadsheet">Verify</a><a href="#answer-key">Answer key</a><a href="#chart-and-memo">Chart and memo</a><a href="#assessment">Assess your work</a></nav>
+
+<section class="guide-answer" id="lab-outcomes"><span class="eyebrow">Start here</span><h2>Your assignment: explain what September sales actually contributed.</h2>
+<p>A fictional business sells desk pads and canvas pouches through its website and a marketplace. The owner wants to know which channel and product combinations deserve investigation. The export has duplicate records, cancelled orders, inconsistent channel labels, refunds and one missing item cost.</p>
+<p><strong>Your deliverable is a checked account of this sample month.</strong> It must show net sales and the amount remaining after item costs, transaction fees and seller-paid shipping. We call that amount <em>operational contribution</em> throughout the exercise. It excludes advertising, overhead, owner labor and taxes, so it does not establish the business’s final profit.</p>
+<p>By the end, you should be able to explain why an order can legitimately appear twice, why an unknown cost cannot become zero, and why a higher contribution rate does not prove that moving sales to another channel will improve the business.</p>
+<ol class="guide-steps"><li>Save the original file and define what each row represents.</li><li>Produce a cleaning log with the IDs and reasons for every exclusion or correction.</li><li>Reconcile the cleaned rows and monetary totals against the answer key.</li><li>Build one chart from the checked summary.</li><li>Write a memo that separates observed amounts, possible explanations and the next information needed.</li></ol>
+<p><a class="button" href="/assets/learning/sales-analysis/sales-events-dirty.csv" download>Download the starter CSV</a> <a class="button light" href="#downloads">See all exercise files</a></p>
+</section>
+
+<section id="access"><span class="chapter-label">01 / Choose your working route</span><h2>Start with file upload. A paid AI plan is not a prerequisite.</h2>
+<p>You need a ChatGPT account with file upload and data-analysis access, plus Excel or Google Sheets for the independent check. You should be able to open a CSV, enter a formula and select a range. No Python knowledge is required; the optional verification script is provided for readers who want a reproducible calculation.</p>
+<p>OpenAI’s current Free FAQ includes file uploads and data analysis, each subject to separate limits. If your account reaches a limit, use the spreadsheet exercise while waiting for the reset shown in the product. Do not buy a subscription simply because an older tutorial says Advanced Data Analysis always requires Plus.</p>
+<div class="table-scroll"><table class="data-table"><caption>Access boundaries for this exercise</caption><thead><tr><th>Route</th><th>What you need</th><th>Cost boundary</th></tr></thead><tbody>
+<tr><th>Upload CSV to ChatGPT</th><td>An account with the available file and analysis tools.</td><td>The exercise can use the Free allowance. Higher limits may require a paid plan.</td></tr>
+<tr><th>Verify in a spreadsheet</th><td>Your existing Excel access or a Google Sheets account.</td><td>No AI add-in is needed for the supplied formulas. Any existing software or organizational licensing still applies.</td></tr>
+<tr><th>Optional official add-in</th><td>ChatGPT for Excel or Google Sheets, enabled for your account.</td><td>Usage follows your ChatGPT plan’s current limits or credit terms. Installation does not imply unlimited analysis.</td></tr>
+</tbody></table></div>
+<p class="source-note">Sources: <a href="https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq" target="_blank" rel="noopener">OpenAI Free Tier FAQ</a> and <a href="https://help.openai.com/en/articles/20001063-chatgpt-for-excel-and-google-sheets" target="_blank" rel="noopener">official Excel and Google Sheets add-ins</a>. Plan access can change.</p>
+<h3>If you prefer working inside the spreadsheet</h3>
+<p>For Excel, OpenAI documents <strong>Home → Add-ins</strong>, search for ChatGPT, then add it and sign in. For Google Sheets, install OpenAI’s ChatGPT listing from the Google Workspace Marketplace, open it from <strong>Extensions</strong>, and sign in. An organization may require an administrator to enable access. These are optional alternatives to the upload workflow below; neither requires you to build an API integration.</p>
+<p>Duplicate the workbook before asking an add-in to edit it. Tell it to preserve the original data and put changes in a new working sheet. OpenAI says spreadsheet conversations are separate from the main ChatGPT chat history, so supply the exercise rules again if you switch surfaces.</p>
+<h3>Use the fictional file before your own export</h3>
+<p>The starter file contains no customer names, addresses, emails or payment details. For a real project, use the workspace approved for your business data and remove unnecessary customer fields. In personal ChatGPT settings, review <strong>Data controls → Improve the model for everyone</strong>. Changing a training preference does not establish permission to upload information your business is required to protect.</p>
+<p class="source-note">Source: <a href="https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt" target="_blank" rel="noopener">OpenAI data controls</a>. This lab does not require customer-level personal information.</p>
+</section>
+
+<section id="data-dictionary"><span class="chapter-label">02 / Read the data contract</span><h2>One row is an event, not necessarily a new order.</h2>
+<p>The CSV contains September 2026 events in USD. Dates use <code>YYYY-MM-DD</code>. Amounts are event totals, not per-unit amounts. A sale and a later refund can share an order ID but must have different event IDs. There is one sale event per completed order in this small sample; a real multi-item export may contain several sale lines per order.</p>
+<div class="table-scroll"><table class="data-table"><caption>Starter file dictionary, in its original column order</caption><thead><tr><th>Column</th><th>Meaning</th><th>Rule for this lab</th></tr></thead><tbody>
+<tr><th>A · event_id</th><td>Identifier of a sale or refund event.</td><td>Deduplicate only after all fields for a repeated ID match.</td></tr>
+<tr><th>B · order_id</th><td>Order associated with the event.</td><td>A repeated order ID is not automatically a duplicate.</td></tr>
+<tr><th>C · event_date</th><td>Date the event occurred.</td><td>Use the event month, including refund dates.</td></tr>
+<tr><th>D · event_type</th><td><code>sale</code> or <code>refund</code>.</td><td>Preserve both event types.</td></tr>
+<tr><th>E · order_status</th><td><code>completed</code> or <code>cancelled</code>.</td><td>Cancelled rows are uncompleted drafts in this exercise.</td></tr>
+<tr><th>F · product_sku</th><td><code>PAD</code> or <code>POUCH</code>.</td><td>Use this stable key for product grouping.</td></tr>
+<tr><th>G · product_name</th><td>Desk pad or canvas pouch.</td><td>A display label; it does not change the key.</td></tr>
+<tr><th>H · channel</th><td>Website or marketplace.</td><td>Trim surrounding spaces and convert to lowercase.</td></tr>
+<tr><th>I · quantity</th><td>Units in a sale event.</td><td>Refund rows have zero. This is units sold before returns.</td></tr>
+<tr><th>J · gross_sales_usd</th><td>Item sales before discounts or refunds.</td><td>Positive for a sale; zero for a refund.</td></tr>
+<tr><th>K · discounts_usd</th><td>Discount amount.</td><td>A positive amount to subtract once.</td></tr>
+<tr><th>L · refunds_usd</th><td>Money refunded.</td><td>A positive amount to subtract once.</td></tr>
+<tr><th>M · cogs_usd</th><td>Item cost assigned to the event.</td><td>A blank is unknown. A numeric zero is known zero.</td></tr>
+<tr><th>N · payment_fees_usd</th><td>Recorded transaction fees.</td><td>Use supplied amounts; do not invent a fee rate.</td></tr>
+<tr><th>O · shipping_cost_usd</th><td>Seller-paid shipping cost.</td><td>Use supplied amounts; customer shipping revenue is absent.</td></tr>
+</tbody></table></div>
+<p><strong>Refund policy for this fictional scenario:</strong> none of the refunded goods creates a restock credit, fee reversal or recovered shipping cost. The zeros on refund-event cost fields mean there is no additional cost or reversal on those events. Costs from the original sale remain. A refund is not evidence that inventory became sellable again.</p>
+<p>Before adapting this to your store, establish your export’s actual sign conventions, tax treatment, shipping revenue, line-item structure, refund timing and inventory adjustments. The supplied metric definitions apply to this exercise, not automatically to every seller platform.</p>
+</section>
+
+<section id="inspect-data"><span class="chapter-label">03 / Inspect before changing</span><h2>Ask for a profile and an exception list.</h2>
+<p>Open a new ChatGPT conversation and attach <code>sales-events-dirty.csv</code>. OpenAI recommends clear headers and one record per row; it supports spreadsheet uploads and can run Python calculations for data-analysis tasks. Use the CSV itself rather than a screenshot of the numbers.</p>
+<p class="source-note">Source: <a href="https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt" target="_blank" rel="noopener">OpenAI data-analysis guidance</a>.</p>
+<div class="worked-example"><div class="example-label"><h3>Prompt 1: inspect the source</h3><button class="button light small" data-copy-target="sales-inspect-prompt">Copy prompt</button></div><pre id="sales-inspect-prompt">Inspect the attached sales-events-dirty.csv without modifying it.
+
+This is fictional September 2026 event-level sales data in USD. A row is a sale or refund event. event_id is the event key; order_id may legitimately repeat. Amounts are totals for each event, not unit prices. Refund amounts are positive deductions. Refund events do not reverse item costs, fees or shipping in this exercise.
+
+Report:
+1. Filename, number of data rows, columns and date range.
+2. Counts by event_type and order_status.
+3. Repeated event IDs, including whether every field matches.
+4. Missing costs and channel labels before normalization.
+5. Questions that must be resolved before calculating contribution.
+
+Do not fill blanks, delete records or recommend business changes yet. Show the relevant event IDs and source row numbers. If code execution is unavailable, say so rather than claiming the calculations ran.</pre></div>
+<p class="step-check"><strong>Checkpoint:</strong> the source has 27 data rows and 15 columns. The repeated event IDs are <code>S003</code> and <code>R002</code>. Cost is missing on <code>S015</code>. Check the actual rows when the response describes them; a fluent exception list can still omit a problem.</p>
+<figure class="guide-screenshot"><img src="/assets/learning/sales-analysis/openai-data-table.webp" alt="Official OpenAI example showing a ChatGPT data table with weekday and weekend revenue and table download and expand controls." width="1156" height="1076" loading="lazy" decoding="async"><figcaption>Official OpenAI Help Center example of an analysis table. The displayed lemonade-stand figures belong to the vendor illustration, not this exercise. Source: <a href="https://help.openai.com/en/articles/9213685-extracting-insights-with-chatgpt-data-analysis" target="_blank" rel="noopener">Extracting Insights with ChatGPT Data Analysis</a>, retrieved November 1, 2026. Your interface may differ.</figcaption></figure>
+</section>
+
+<section id="clean-data"><span class="chapter-label">04 / Make the cleaning decisions explicit</span><h2>Remove duplicate events. Keep the refund history.</h2>
+<p>Save the original file unchanged. Work on a copy. Here, both repeated event IDs are exact copies, so keeping their first occurrence is justified. If a repeated ID had different amounts or dates, the correct next step would be to resolve the conflict, not arbitrarily keep the newest row.</p>
+<div class="worked-example"><div class="example-label"><h3>Prompt 2: apply the approved rules</h3><button class="button light small" data-copy-target="sales-clean-prompt">Copy prompt</button></div><pre id="sales-clean-prompt">Create a separate working dataset and a cleaning log. Apply these rules in order:
+
+1. Remove only later exact duplicates of event_id, after confirming all fields match. Stop and report any conflicting duplicate.
+2. Exclude cancelled orders. In this exercise they are uncompleted drafts, with no actual costs.
+3. Trim channel whitespace and lowercase the supplied labels. Valid results are website and marketplace. Report any other value.
+4. Retain every legitimate sale and refund event. Never deduplicate by order_id.
+5. Keep the missing cogs_usd value unknown. Do not infer it from another sale or fill it with zero.
+6. Compute net_sales_usd = gross_sales_usd - discounts_usd - refunds_usd.
+7. Contribution requires known item cost, fees and shipping. Mark affected contribution results unavailable until the missing cost is confirmed. Do not sum partial contributions and label them complete.
+
+Return row counts at each stage, the excluded event IDs, changes to channel labels, remaining missing values and net sales. Export a cleaning log and the working file. Show the calculation method or code.</pre></div>
+<p>Expect <strong>27 raw rows → 25 unique events → 23 retained events</strong>. Remove the later copies of S003 and R002, and exclude cancelled events S021 and S022. Keep refund events R001, R002 and R003. Channel spelling changes affect S005, S008 and S017.</p>
+<p>You can report net sales before resolving the missing item cost because net sales does not use that field. You cannot report a complete contribution total. Counting the blank as zero would overstate final contribution by $12 once the confirmation below is applied.</p>
+<h3>Resolve the unknown using a supplied record</h3>
+<p>Download <a href="/assets/learning/sales-analysis/owner-confirmation.csv" download>owner-confirmation.csv</a> and attach it to the same conversation. It is a fictional owner’s confirmation tied to S015, dated October 1, 2026. It documents an item cost of $12.00 for that event and the exercise’s no-reversal refund rule.</p>
+<div class="worked-example"><div class="example-label"><h3>Prompt 3: apply a traceable correction</h3><button class="button light small" data-copy-target="sales-confirm-prompt">Copy prompt</button></div><pre id="sales-confirm-prompt">Use owner-confirmation.csv to resolve the missing cost by event_id and field_name. Confirm that the key matches exactly one retained event. Record the old blank, the confirmed value, confirmation date and source in the cleaning log. Do not change any other cost.
+
+Now calculate contribution_usd = net_sales_usd - cogs_usd - payment_fees_usd - shipping_cost_usd. Return totals by channel and by channel plus product_sku, with net sales and contribution. Calculate each contribution rate as grouped contribution divided by grouped net sales; do not average row percentages.
+
+Count distinct completed sale order IDs separately from retained event rows. State the refund policy and the omitted costs. Export the cleaned CSV, summary table and calculation code.</pre></div>
+<p class="step-check"><strong>Checkpoint:</strong> the corrected file still has 23 rows. A lookup must not multiply rows. In this sample, there are 20 completed orders and 33 units sold before returns. Refund-event quantity is zero, so this dataset cannot tell you net units kept by customers.</p>
+</section>
+
+<section id="verify-spreadsheet"><span class="chapter-label">05 / Check the arithmetic yourself</span><h2>Rebuild the totals in Excel or Google Sheets.</h2>
+<p>Download your cleaned result before closing the conversation. OpenAI’s table documentation shows a download control for CSV output. If the answer does not include a usable file, ask for the CSV explicitly and check its contents after saving.</p>
+<figure class="guide-screenshot"><img src="/assets/learning/sales-analysis/openai-download-table.webp" alt="Official OpenAI screenshot of the Download table control." width="286" height="178" loading="lazy" decoding="async"><figcaption>The vendor’s example of the table download control. Source: <a href="https://help.openai.com/en/articles/9213685-extracting-insights-with-chatgpt-data-analysis" target="_blank" rel="noopener">OpenAI Help Center</a>. This control exports a table, not proof that its values are correct.</figcaption></figure>
+<p>In desktop Excel, use <strong>Data → From Text/CSV</strong> and review the comma-separated preview. In Google Sheets, use <strong>File → Import → Upload</strong>, select the file and import into a new spreadsheet or new sheet. Call the working sheet <code>Clean</code>. Preserve IDs as text and confirm monetary columns contain numeric values. A format that displays two decimals does not convert text into a number.</p>
+<p class="source-note">Import instructions: <a href="https://support.microsoft.com/en-us/excel/get-started/import-or-export-text-txt-or-csv-files" target="_blank" rel="noopener">Microsoft CSV import</a> and <a href="https://support.google.com/docs/answer/40608?hl=en" target="_blank" rel="noopener">Google Sheets file import</a>.</p>
+<p>Keep columns A–O in the original order. Put <code>net_sales_usd</code> in P1, <code>contribution_usd</code> in Q1 and <code>cost_status</code> in R1. Enter these formulas in row 2 and fill through row 24, the last of the 23 retained events. These English-language formulas use commas; regional settings may require semicolons.</p>
+<div class="worked-example"><div class="example-label"><h3>Spreadsheet formulas for this exercise</h3><button class="button light small" data-copy-target="sales-formulas">Copy formulas</button></div><pre id="sales-formulas">Clean!P2 — net sales
+=J2-K2-L2
+
+Clean!Q2 — contribution, preserving an unknown cost
+=IF(ISNUMBER(M2),P2-M2-N2-O2,"")
+
+Clean!R2 — cost status
+=IF(ISNUMBER(M2),"Complete","Cost missing")
+
+Summary: net sales
+=SUM(Clean!P2:P24)
+
+Summary: complete contribution only
+=IF(COUNT(Clean!M2:M24)&lt;ROWS(Clean!M2:M24),"Cost missing",SUM(Clean!Q2:Q24))
+
+Website net sales
+=SUMIFS(Clean!P2:P24,Clean!H2:H24,"website")
+
+Website desk-pad contribution, after all costs are confirmed
+=SUMIFS(Clean!Q2:Q24,Clean!H2:H24,"website",Clean!F2:F24,"PAD")
+
+Raw event-ID occurrence counter: put in a spare column, fill rows 2–28
+=COUNTIFS($A$2:A2,A2)</pre></div>
+<p>The last formula marks a later occurrence with 2, but you still need to compare its full row before deleting it. The contribution guard checks the one known missing-input risk in this exercise. For a real export, validate every required monetary field rather than assuming fees and shipping are complete.</p>
+<p>For a visual cross-check, create a pivot table from the corrected <code>Clean!A1:R24</code> range. Put channel and product_sku in Rows. Put net_sales_usd and contribution_usd in Values, summarized by <strong>SUM</strong>, not COUNT. Confirm that every group and the grand total agree with the formula summary. Calculate rates from grouped totals outside the pivot.</p>
+<p class="source-note">Function references: <a href="https://support.microsoft.com/en-us/excel/functions/sumifs-function" target="_blank" rel="noopener">Microsoft SUMIFS</a>, <a href="https://support.google.com/docs/answer/3238496?hl=en" target="_blank" rel="noopener">Google SUMIFS</a> and <a href="https://support.google.com/docs/answer/1272900?hl=en" target="_blank" rel="noopener">Google pivot tables</a>.</p>
+<p><strong>Test the guard:</strong> in a disposable copy of the supplied workbook, clear Clean!M16, the S015 cost. Review must show “Cost missing” for total contribution. Enter a numeric zero and the total becomes $252.90. Enter 24 and it becomes $228.90. Restore the confirmed 12 to recover $240.90. This demonstrates that unknown, zero and changed values behave differently.</p>
+</section>
+
+<section id="answer-key"><span class="chapter-label">06 / Reconcile the result</span><h2>The checked answer is $702 in net sales and $240.90 in contribution.</h2>
+<p>Try the exercise before comparing your results here. These are independently calculated answers from the supplied fictional records. The downloadable Python verifier uses decimal arithmetic and fixed control totals; it does not ask an AI model whether its own answer looks right.</p>
+<div class="table-scroll"><table class="data-table"><caption>September control totals, after the documented correction</caption><thead><tr><th>Control</th><th>Expected result</th><th>What it checks</th></tr></thead><tbody>
+<tr><th>Source / unique / retained rows</th><td>27 / 25 / 23</td><td>Two duplicate rows and two cancelled drafts removed.</td></tr>
+<tr><th>Sales / refunds / completed orders</th><td>20 / 3 / 20</td><td>Refunds remain events; they are not new orders.</td></tr>
+<tr><th>Gross item sales</th><td>$804.00</td><td>Eligible sale-event amounts.</td></tr>
+<tr><th>Discounts / refunds</th><td>$34.00 / $68.00</td><td>Each deduction appears once.</td></tr>
+<tr><th>Net sales</th><td>$702.00</td><td>$804 − $34 − $68.</td></tr>
+<tr><th>Item costs / fees / shipping</th><td>$306.00 / $63.10 / $92.00</td><td>Includes the confirmed $12 cost.</td></tr>
+<tr><th>Operational contribution</th><td>$240.90</td><td>$702 − $306 − $63.10 − $92.</td></tr>
+<tr><th>Contribution / net sales</th><td>34.3%</td><td>$240.90 ÷ $702, rounded for display.</td></tr>
+</tbody></table></div>
+<div class="table-scroll"><table class="data-table"><caption>Group-level answer key</caption><thead><tr><th>Channel and product</th><th>Net sales</th><th>Contribution</th><th>Contribution rate</th></tr></thead><tbody>
+<tr><th>Website · desk pad</th><td>$242.00</td><td>$114.24</td><td>47.2%</td></tr>
+<tr><th>Website · canvas pouch</th><td>$140.00</td><td>$49.76</td><td>35.5%</td></tr>
+<tr><th>Marketplace · desk pad</th><td>$184.00</td><td>$47.42</td><td>25.8%</td></tr>
+<tr><th>Marketplace · canvas pouch</th><td>$136.00</td><td>$29.48</td><td>21.7%</td></tr>
+<tr><th>Total</th><td>$702.00</td><td>$240.90</td><td>34.3%</td></tr>
+</tbody></table></div>
+<p>Inspect order O1003 as a row-level check. Its sale is $32, with $12 item cost, $4.16 fees and $4.50 shipping. Its separate refund is $32. Net sales across the two events are zero, but contribution is <strong>−$20.66</strong> because the costs were not reversed. Deleting the refund or reversing costs without evidence would tell a different story.</p>
+<p><a class="button light" href="/assets/learning/sales-analysis/sales-analysis-checks.xlsx" download>Download the formula workbook</a> <a class="button light" href="/assets/learning/sales-analysis/sales-analysis-answer-key.json" download>Download the machine-readable answer key</a></p>
+</section>
+
+<section id="chart-and-memo"><span class="chapter-label">07 / Turn checked figures into an appropriate decision</span><h2>Build one useful chart, then write a memo that respects the evidence.</h2>
+<p>A horizontal bar chart makes four contribution amounts easy to compare. Start its value axis at zero, show USD and label each bar. Do not combine percentages and dollars on one unlabeled scale or use a decorative chart that hides the group names.</p>
+<div class="worked-example"><div class="example-label"><h3>Prompt 4: chart and decision memo</h3><button class="button light small" data-copy-target="sales-memo-prompt">Copy prompt</button></div><pre id="sales-memo-prompt">Use the reconciled channel-and-product summary only.
+
+Create a horizontal bar chart of operational contribution in USD for all four groups. Start the value axis at zero and label each amount. Title it September contribution by channel and product. Mark the data as fictional and list the costs excluded from the metric. Export the chart and its underlying table.
+
+Write a 150–200-word owner memo with:
+- Two observations tied to exact checked figures.
+- One plausible explanation clearly labeled as a hypothesis.
+- One specific next investigation, including the missing data needed.
+- A decision we should not make from this sample alone.
+
+Do not claim causation, forecast growth, calculate conversion without visitor data, or describe contribution as final business profit. There is only one small synthetic month and no advertising, overhead, labor or tax data.</pre></div>
+<figure class="guide-screenshot"><img src="/assets/learning/sales-analysis/sales-contribution-chart.png" alt="Synthetic September contribution: website desk pad 114 dollars 24 cents, website canvas pouch 49 dollars 76 cents, marketplace desk pad 47 dollars 42 cents, marketplace canvas pouch 29 dollars 48 cents." width="1320" height="648" loading="lazy" decoding="async"><figcaption>Original chart calculated from the exercise answer key. All bars use the same zero-based USD scale. <a href="/assets/learning/sales-analysis/sales-contribution-chart.svg" download>Download the vector chart</a>.</figcaption></figure>
+<div class="worked-example"><h3>Worked memo</h3><p>September’s fictional sales produced $702 in net sales and $240.90 in operational contribution after item costs, transaction fees and seller-paid shipping. The website contributed $164 on $382 in net sales. The marketplace contributed $76.90 on $320. Website desk pads were the largest contribution group at $114.24; marketplace pouches were the smallest at $29.48.</p>
+<p>A possible explanation for the channel difference is the mix of recorded fees and refunds. Marketplace fees total $48.10 compared with $15 on the website, and marketplace refunds total $50 compared with $18. These are observations from this sample, not proof that channel choice caused the difference.</p>
+<p>Next, reconcile the three refunds to their documented reasons and collect channel-specific advertising costs and comparable prior months. That would help distinguish an unusual refund month from a recurring cost problem. I would not close the marketplace or move advertising budget based on this file alone. The sample contains only 20 completed orders and excludes overhead, advertising, owner labor and taxes. It also lacks visitor data, so it cannot establish which channel converts better.</p></div>
+</section>
+
+<section id="troubleshooting"><h2>If your result differs, trace the difference to a rule.</h2>
+<div class="table-scroll"><table class="data-table"><caption>Failure diagnosis</caption><thead><tr><th>Symptom</th><th>Check first</th><th>Repair</th></tr></thead><tbody>
+<tr><th>Refunds disappear</th><td>Was order_id used as the duplicate key?</td><td>Restart from the original. Deduplicate exact event IDs and retain refund events.</td></tr>
+<tr><th>Contribution is $252.90</th><td>Was S015’s missing cost treated as zero?</td><td>Apply its documented $12 confirmation and retain the missing-cost guard.</td></tr>
+<tr><th>Too many channel groups</th><td>Are spaces and capitalization still present?</td><td>Normalize the three identified channel labels and regroup.</td></tr>
+<tr><th>Summary shows counts instead of dollars</th><td>Are amounts imported as text? Is the pivot using COUNT?</td><td>Correct numeric types, then select SUM.</td></tr>
+<tr><th>A refund appears twice</th><td>Did both R002 copies survive?</td><td>Compare the exact duplicate rows and remove the later copy.</td></tr>
+<tr><th>Total contribution looks complete despite a blank</th><td>Did SUM silently skip an unavailable row?</td><td>Check required cost coverage before presenting the total.</td></tr>
+<tr><th>SUMIFS returns an error</th><td>Do its sum and criteria ranges cover identical rows?</td><td>Use aligned ranges through row 24 and confirm your locale’s separators.</td></tr>
+<tr><th>ChatGPT cannot analyze the file</th><td>Tool limit, attachment failure or wrong file?</td><td>Verify the filename and row count. Use the supplied spreadsheet route; do not accept a claimed run without an output.</td></tr>
+</tbody></table></div>
+<p>If a difference remains, ask for the event-level amounts behind that specific total. “Show the rows contributing to marketplace refunds” is easier to audit than “check everything again.” Preserve the problematic output and corrected version so the next run has a visible explanation.</p>
+</section>
+
+<section id="assessment"><h2>Assess the finished work against observable requirements.</h2>
+<p>Submit the original file, cleaned CSV, cleaning log, checked summary, chart and memo. This is a practice rubric, not a certification. A passing exercise needs all five requirements below; a polished memo cannot compensate for lost refunds or an invented cost.</p>
+<div class="table-scroll"><table class="data-table"><caption>Completion rubric</caption><thead><tr><th>Skill</th><th>Required evidence</th><th>Pass condition</th></tr></thead><tbody>
+<tr><th>Data definition</th><td>Written event/order distinction and field meanings.</td><td>Correct units, date window and refund sign convention.</td></tr>
+<tr><th>Cleaning judgment</th><td>ID-level log and unchanged original.</td><td>27 → 25 → 23 rows; three refunds preserved; no invented cost.</td></tr>
+<tr><th>Numerical verification</th><td>Spreadsheet formulas or executed verifier.</td><td>All control totals match to the cent; missing, zero and changed costs behave correctly.</td></tr>
+<tr><th>Communication</th><td>Chart and 150–200-word memo.</td><td>Chart matches the table; every numeric claim is traceable; hypotheses are labeled.</td></tr>
+<tr><th>Business judgment</th><td>Next investigation and limits.</td><td>No causal claim, unsupported forecast, conversion claim or final-profit claim.</td></tr>
+</tbody></table></div>
+<p><strong>Transfer exercise:</strong> repeat the workflow on a permission-approved, limited export from your business. Write its dictionary first. Document differences in taxes, order lines, refunds, shipping income and cost reversals. A successful transfer means adapting the definitions and controls to that source, not forcing a different export into these exact answers.</p>
+</section>
+
+<section id="downloads"><h2>Download the full working set.</h2>
+<p><a class="button" href="/assets/learning/sales-analysis/sales-analysis-exercise.zip" download>Download the complete exercise ZIP</a></p>
+<ul><li><a href="/assets/learning/sales-analysis/sales-events-dirty.csv" download>Starter sales-events-dirty.csv</a> — the untouched exercise.</li><li><a href="/assets/learning/sales-analysis/owner-confirmation.csv" download>Owner confirmation</a> — the missing-cost resolution.</li><li><a href="/assets/learning/sales-analysis/sales-analysis-prompts.txt" download>Prompts and formulas</a> — copyable instructions from this lesson.</li><li><a href="/assets/learning/sales-analysis/sales-events-clean.csv" download>Corrected event file</a> and <a href="/assets/learning/sales-analysis/cleaning-log.csv" download>cleaning log</a> — compare after your attempt.</li><li><a href="/assets/learning/sales-analysis/sales-analysis-checks.xlsx" download>Formula workbook</a> — Review, Clean and original Raw sheets.</li><li><a href="/assets/learning/sales-analysis/sales-analysis-answer-key.json" download>Answer key</a> and <a href="/assets/learning/sales-analysis/verify_sales_analysis.py" download>Python verifier</a> — reproducible controls using the neighboring CSV files.</li></ul>
+<p>The CSVs are portable to Excel and Sheets. Keep all CSVs and the Python script in the same folder if you use the verifier, then run <code>python verify_sales_analysis.py</code>. The supplied workbook was recalculated and checked in its authoring engine; opening it in your own Excel or Sheets environment is still part of the exercise.</p>
+</section>
+
+<section id="common-questions"><h2>Common ChatGPT and Excel questions</h2>
+<h3>Can AI analyze my Excel spreadsheet?</h3><p>ChatGPT supports common spreadsheet formats, including XLSX and CSV, when the available account tools permit. Give it the file, a field dictionary and the decision you need to support. Confirm which rows and sheets it actually used. This lab starts with CSV because the row structure and calculation inputs are easy to inspect.</p>
+<h3>Which ChatGPT model is best for Excel?</h3><p>There is no comparative model test in this lesson. Start with a model or mode that can access the required analysis tools on your account. Assess its output against the same control totals, refund case and missing-cost test. A model name or higher-priced plan does not verify an answer.</p>
+<h3>What are good ChatGPT prompts for Excel data analysis?</h3><p>Use the four staged prompts above: inspect, apply approved cleaning rules, resolve the documented correction, then communicate checked results. For your own file, replace the field definitions, period, valid categories and exclusions. Those details carry more information than asking ChatGPT to “act like an expert.”</p>
+<h3>Do I need an API key or a third-party Excel extension?</h3><p>No for this upload-and-verify workflow. The optional official OpenAI add-in is a separate route with its own installation and plan usage terms. Older guides may describe third-party products or an earlier interface; follow the current vendor instructions linked above.</p>
+<h3>Can this predict next month’s sales?</h3><p>This exercise does not support that claim. It contains one small fictional month and no traffic, promotion or inventory history. It teaches you to establish reliable descriptive numbers first and identify the additional evidence a forecasting project would require.</p>
+</section>
+
+<section id="evidence-notes"><h2>Evidence and teaching scope</h2>
+<p>I built this lesson around an issue that a generic “analyze my spreadsheet” prompt leaves unresolved: who decides what a duplicate, refund or unknown cost means? The rules, sample data, calculation checks, chart and memo are original teaching material. They can be inspected and reproduced. The screenshots are clearly credited vendor examples.</p>
+<p>The lesson’s product instructions use current OpenAI, Microsoft and Google documentation. Its arithmetic was calculated with Python decimal values and checked against an XLSX formula model, including missing-cost and zero-cost cases. It does not report customer results, vendor-account execution, course accreditation or a measured improvement in learner performance.</p>
+<p>Continue with the <a href="/playbooks/product-profit-check/">product profit check</a> when you need to define additional business costs, or use the <a href="/playbooks/chatgpt-project-business-brief/">business brief workflow</a> to preserve approved definitions for a recurring task. For access and plan comparisons, see <a href="/tools/ai-assistant/">AI assistants for small business</a>.</p>
+</section>

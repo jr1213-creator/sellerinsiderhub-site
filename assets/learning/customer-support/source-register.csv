@@ -1,0 +1,8 @@
+source_id,title,version,effective_date,owner_role,approved_scope,faq_ids,production_url,approval_evidence,last_live_retest
+P01,Product facts,v1,2026-11-01,Shop owner,"Desk-pad contents, dimensions and paper; no unsupported certifications",Q01–Q02,,,
+P02,Shipping and closures,v2,2026-11-01,Shop owner,Two business days preparation; separate transit; service area; checkout rates,Q03–Q04,,,
+P03,Physical returns and damaged items,v1,2026-11-01,Shop owner,30-day contact window for unused change-of-mind requests; human decisions,Q05–Q06,,,
+P04,Digital delivery and exceptions,v1,2026-11-01,Shop owner,Delivery and troubleshooting steps; digital exceptions go to a person,Q07–Q08,,,
+P05,Assistant scope and private orders,v1,2026-11-01,Shop owner,"No order integrations, transactional actions or private-record lookups","Q09, Q12",,,
+P06,"Price, inventory and promotions",v1,2026-11-01,Shop owner,Current store pages; no live connection or approved chatbot discount,Q10,,,
+P07,Support coverage and contact,v1,2026-11-01,Support owner,"Hours, closures, ticket route and two-business-day response target",Q11,,,

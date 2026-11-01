@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "id": "customer-support-knowledge-base",
+  "route": "/playbooks/customer-support-knowledge-base/",
+  "bodyFile": "content/customer-support-lab.html",
+  "title": "Train an AI support chatbot: a complete Tidio Lyro implementation lab",
+  "summary": "Build a support knowledge base from 12 complete policy answers, configure real human handoffs, and run 20 tests with an answer key. Includes import files, vendor screenshots, a stale-source exercise, launch criteria and rollback.",
+  "category": "Customer service",
+  "audience": "Small-business owners and teams implementing a bounded public support assistant",
+  "effort": "Allow 3–5 focused hours for the practice configuration, plus time for inbox and email delivery checks. Editorial estimate; account access and fixes may take longer.",
+  "toolIds": [
+    "tidio"
+  ],
+  "workflowTools": [
+    "Tidio Lyro",
+    "Approved business help content",
+    "Monitored support inbox"
+  ],
+  "intro": "A professional practice lab for a small-business AI support assistant: approve its source packet, configure bounded answers and handoffs, test actual behavior, and document whether it is ready for a limited launch.",
+  "expectedOutcome": "An approved source register, 12-answer knowledge set, bounded Lyro configuration, observed 20-case test log, real online/offline routing evidence, and a launch-or-hold decision.",
+  "contents": [
+    {
+      "id": "support-outcomes",
+      "label": "Outcomes and exercise files"
+    },
+    {
+      "id": "support-ready",
+      "label": "Account and support prerequisites"
+    },
+    {
+      "id": "support-policies",
+      "label": "Complete fictional policy packet"
+    },
+    {
+      "id": "support-import",
+      "label": "Knowledge import and inspection"
+    },
+    {
+      "id": "support-rules",
+      "label": "Response rules and capability limits"
+    },
+    {
+      "id": "support-handoff",
+      "label": "Online and offline human handoff"
+    },
+    {
+      "id": "support-tests",
+      "label": "Twenty tests and the answer key"
+    },
+    {
+      "id": "support-conflict",
+      "label": "Conflicting-source exercise"
+    },
+    {
+      "id": "support-launch",
+      "label": "Launch rubric and installation"
+    },
+    {
+      "id": "support-maintenance",
+      "label": "Monitoring and rollback"
+    },
+    {
+      "id": "support-method",
+      "label": "Research and verification scope"
+    }
+  ],
+  "sourceUrls": [
+    "https://help.tidio.com/hc/en-us/articles/14543666652316-Data-sources-Lyro-s-knowledge-base",
+    "https://help.tidio.com/hc/en-us/articles/20810956911004-Lyro-Guidance",
+    "https://help.tidio.com/hc/en-us/articles/9003475527196-Lyro-the-conversational-AI-agent",
+    "https://help.tidio.com/hc/en-us/articles/13924459295900-The-Lyro-AI-agent-limit",
+    "https://www.tidio.com/pricing/",
+    "https://help.tidio.com/hc/en-us/articles/15607494952604-Lyro-a-quick-setup",
+    "https://help.tidio.com/hc/en-us/articles/10624642054556-How-to-create-a-good-FAQ-for-Lyro",
+    "https://www.tidio.com/blog/how-to-create-a-chatbot-for-a-website/"
+  ],
+  "releaseChecks": [
+    "All 20 mandatory cases and five high-risk paraphrases pass with zero critical failures.",
+    "Online transfer and offline ticket creation are proven by an actual receiving inbox and reply.",
+    "Every active public fact is approved, current and free of unresolved conflicting sources.",
+    "The assessed channel can be disabled while a working human contact route remains available."
+  ],
+  "updateNote": "Rebuilt as an implementation lab with a complete fictional policy pack, import CSV, 20-case expected-behavior suite, blank run log, handoff verification, stale-source exercise, launch gate and recovery drill. Vendor documentation reviewed November 1, 2026; live account execution remains a reader requirement.",
+  "lastReviewed": "2026-11-01",
+  "instructionBasis": "Documentation-based teaching lab. No authenticated Tidio account execution or live customer performance test was performed.",
+  "maintenanceTrigger": "Recheck after policy, support-hours, plan, integration, vendor UI, knowledge source or receiving-inbox changes.",
+  "exercises": [
+    {
+      "id": "approved-source-packet",
+      "files": [
+        "paper-meadow-policy-packet.txt",
+        "paper-meadow-approved-faq.csv",
+        "source-register.csv"
+      ],
+      "outcome": "Approve and import 12 coherent public Q&As without private records or unsupported capabilities."
+    },
+    {
+      "id": "test-and-score",
+      "files": [
+        "support-test-cases.csv",
+        "support-run-log.csv",
+        "support-lab-answer-key.txt"
+      ],
+      "outcome": "Execute 20 mandatory cases and five paraphrases, preserve actual outputs and apply critical-failure criteria."
+    },
+    {
+      "id": "conflicting-source",
+      "files": [
+        "paper-meadow-stale-shipping-exercise.txt",
+        "support-lab-answer-key.txt"
+      ],
+      "outcome": "Identify all stale copies, establish source authority, refresh knowledge and retest without a fabricated source-priority prompt."
+    },
+    {
+      "id": "handoff-and-rollback",
+      "files": [
+        "support-guidance-and-messages.txt",
+        "support-lab-answer-key.txt"
+      ],
+      "outcome": "Prove receiving queue, ticket reply and fallback; document launch or hold."
+    }
+  ],
+  "downloadBase": "/assets/learning/customer-support/",
+  "kitPath": "/assets/learning/customer-support/customer-support-lab-kit.zip",
+  "competitorAudit": [
+    {
+      "title": "How to build your first AI chatbot",
+      "publisher": "ChatBot.com / Text",
+      "url": "https://www.chatbot.com/help/build-your-chatbot/how-to-build-your-chatbot/",
+      "pageUpdated": "2026-08-19",
+      "reviewedOn": "2026-11-01",
+      "observedCoverage": [
+        "Current Text setup and legacy ChatBot.com paths",
+        "Knowledge scan scope, preview, skills and widget deployment",
+        "Legacy debug tools, draft publication and unmatched-query review"
+      ],
+      "observedGap": "The reviewed guide does not supply one complete small-shop policy packet with a case-by-case safety answer key and an evidence-based online/offline release record.",
+      "implementedResponse": "Add 12 consistent policy answers, 20 expected-behavior cases, a blank observed-result log and human-delivery gates.",
+      "scopeCaveat": "Observation applies to this guide, not a claim about every resource offered by the vendor."
+    },
+    {
+      "title": "How to Train a Chatbot on Your Website (Step-by-Step Guide)",
+      "publisher": "ChatPress",
+      "url": "https://chatpress.heapvue.com/learn/how-to-train-chatbot-on-website",
+      "pageUpdated": "2026-05-09",
+      "reviewedOn": "2026-11-01",
+      "observedCoverage": [
+        "Seven-step generic crawl/upload/scope/widget/test/embed/review sequence",
+        "Suggests 10–15 real questions and retaining a regression set",
+        "Troubleshooting and weekly unanswered-question review"
+      ],
+      "observedGap": "Testing guidance names criteria but does not provide a complete expected-answer suite, private-order trap cases, actual ticket-delivery procedure or a critical-failure launch rubric.",
+      "implementedResponse": "Supply exact questions, required and forbidden answer elements, severity, route evidence and hold criteria.",
+      "scopeCaveat": "No claim about vendor model performance or search rank."
+    },
+    {
+      "title": "How to turn your website into an AI chatbot in minutes",
+      "publisher": "Newten",
+      "url": "https://newten.ai/blog/turn-website-into-ai-chatbot",
+      "pageUpdated": "2026-09-19",
+      "reviewedOn": "2026-11-01",
+      "observedCoverage": [
+        "Focused crawl scope and sync controls",
+        "Preview direct, paraphrased and out-of-scope questions",
+        "Pre-launch checklist, stale-source removal and conversation monitoring",
+        "Explains that containment does not prove resolution"
+      ],
+      "observedGap": "Strong operational overview; the reviewed page does not supply a coherent fictional shop exercise, scored per-question answer key or worked conflicting-source diagnosis with a retained run record.",
+      "implementedResponse": "Build the exercise and evidence artifacts rather than claim that source hygiene or preview testing is a novel idea.",
+      "scopeCaveat": "Observation is content comparison, not a judgment of the product."
+    },
+    {
+      "title": "How to create an AI chatbot for your website in 6 steps",
+      "publisher": "Tidio",
+      "url": "https://www.tidio.com/blog/how-to-create-a-chatbot-for-a-website/",
+      "pageUpdated": "2026-10-05",
+      "reviewedOn": "2026-11-01",
+      "observedCoverage": [
+        "Official exact menu steps, screenshots, source import, installation and handoff",
+        "Private-document boundaries and source review",
+        "Real-question testing and next-step actions"
+      ],
+      "observedGap": "Does not provide a complete learner data packet and expected answer sheet; some Configure paths differ from the October 8 help-center layout.",
+      "implementedResponse": "Use latest detailed help layout with variation note, original 12-answer packet and 20-case release test.",
+      "scopeCaveat": "Official product details are sourced from dedicated help docs; no original live testing claimed."
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "assets/learning/customer-support/tidio-csv-import.png",
+      "sourceImageUrl": "https://help.tidio.com/hc/article_attachments/30747804299804",
+      "sourcePageUrl": "https://help.tidio.com/hc/en-us/articles/14543666652316-Data-sources-Lyro-s-knowledge-base",
+      "retrievedOn": "2026-11-01",
+      "publisher": "Tidio",
+      "description": "CSV import, duplicate handling, Lyro and Copilot use switches",
+      "alterations": "None; original downloaded PNG bytes",
+      "sha256": "a6b628bf70ed866eacc3c41ceec24209feb293df2108fb7ef17ee272378b52c4",
+      "status": "Visually inspected vendor documentation screenshot; not an operated account"
+    },
+    {
+      "file": "assets/learning/customer-support/tidio-handoff-settings.png",
+      "sourceImageUrl": "https://help.tidio.com/hc/article_attachments/30751753491356",
+      "sourcePageUrl": "https://help.tidio.com/hc/en-us/articles/9003475527196-Lyro-the-conversational-AI-agent",
+      "retrievedOn": "2026-11-01",
+      "publisher": "Tidio",
+      "description": "Handoff default behavior, online transfer and offline ticket",
+      "alterations": "None; original downloaded PNG bytes",
+      "sha256": "38abbe8167802fe9547906e0aa5615099d7c4ed61bbbf0b658d673ab2d89b477",
+      "status": "Visually inspected vendor documentation screenshot; not an operated account"
+    }
+  ],
+  "searchEvidence": {
+    "queries": [
+      "how to train AI chatbot on your website tutorial",
+      "site:help.tidio.com Lyro data sources handoff playground testing knowledge"
+    ],
+    "method": "Public web search discovery followed by opened competitor and official pages. Direct Google result observations and demand measurement are owned by the parent research task.",
+    "volumeClaim": "None. Presence of instructional results is not measured query volume.",
+    "observedOn": "2026-11-01"
+  },
+  "importantBoundaries": [
+    "Guidance cannot choose data sources, call Actions or change settings.",
+    "Knowledge imports do not install private-order access or transactional capabilities.",
+    "The free 50-conversation Lyro allowance does not renew.",
+    "Current detailed help uses Channels for activation and Behavior for Handoff; some shorter vendor guides retain older Configure paths.",
+    "Re-sync of URL sources replaces generated Q&As, including their manual edits.",
+    "The two screenshots show vendor documentation examples, not first-hand product testing."
+  ],
+  "actualValidation": [
+    "Public official documentation opened and reviewed.",
+    "Three external competing guides and Tidio's own guide opened and compared.",
+    "Two official screenshots downloaded without alteration and visually inspected.",
+    "Local validation passed: unique section and copy IDs, existing asset links, all 12 Q&As in the manuscript, 20 case/log IDs, empty observed-result fields, complete source register, exact ZIP contents and image dimensions/hashes. Citation substitutions in ordinary prose corrected and checked."
+  ],
+  "notPerformed": [
+    "Authenticated Tidio execution",
+    "Live CSV import and header acceptance",
+    "Real human-routing or email-delivery test",
+    "Production bot deployment",
+    "Response accuracy or savings measurement"
+  ],
+  "localValidation": {
+    "article_words": 4810,
+    "section_ids": 16,
+    "copy_blocks": 5,
+    "faq_entries": 12,
+    "test_cases": 20,
+    "critical_cases": 12,
+    "initial_observed_outputs": 0,
+    "source_records": 7,
+    "vendor_images": 2,
+    "kit_files": 9,
+    "checks": "passed"
+  }
+}

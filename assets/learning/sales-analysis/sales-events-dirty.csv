@@ -1,0 +1,28 @@
+event_id,order_id,event_date,event_type,order_status,product_sku,product_name,channel,quantity,gross_sales_usd,discounts_usd,refunds_usd,cogs_usd,payment_fees_usd,shipping_cost_usd
+S001,O1001,2026-09-01,sale,completed,PAD,Desk pad,website,1,32.00,0.00,0.00,12.00,1.26,4.00
+S002,O1002,2026-09-02,sale,completed,POUCH,Canvas pouch,website,2,36.00,4.00,0.00,14.00,1.26,4.00
+S003,O1003,2026-09-03,sale,completed,PAD,Desk pad,marketplace,1,32.00,0.00,0.00,12.00,4.16,4.50
+S004,O1004,2026-09-04,sale,completed,POUCH,Canvas pouch,marketplace,1,18.00,0.00,0.00,7.00,2.34,4.50
+S005,O1005,2026-09-05,sale,completed,PAD,Desk pad,Website ,2,64.00,8.00,0.00,24.00,1.98,5.00
+S006,O1006,2026-09-07,sale,completed,POUCH,Canvas pouch,website,1,18.00,0.00,0.00,7.00,0.84,4.00
+S007,O1007,2026-09-08,sale,completed,PAD,Desk pad,marketplace,2,64.00,0.00,0.00,24.00,8.32,5.50
+S008,O1008,2026-09-10,sale,completed,POUCH,Canvas pouch,MARKETPLACE,3,54.00,6.00,0.00,21.00,6.24,5.50
+S009,O1009,2026-09-11,sale,completed,PAD,Desk pad,website,1,32.00,0.00,0.00,12.00,1.26,4.00
+S010,O1010,2026-09-12,sale,completed,POUCH,Canvas pouch,website,3,54.00,0.00,0.00,21.00,1.92,5.00
+S011,O1011,2026-09-14,sale,completed,PAD,Desk pad,marketplace,1,32.00,4.00,0.00,12.00,3.64,4.50
+S012,O1012,2026-09-15,sale,completed,POUCH,Canvas pouch,marketplace,2,36.00,0.00,0.00,14.00,4.68,4.50
+S013,O1013,2026-09-17,sale,completed,PAD,Desk pad,website,3,96.00,6.00,0.00,36.00,3.00,6.00
+S014,O1014,2026-09-18,sale,completed,POUCH,Canvas pouch,website,2,36.00,0.00,0.00,14.00,1.38,4.00
+S015,O1015,2026-09-20,sale,completed,PAD,Desk pad,marketplace,1,32.00,0.00,0.00,,4.16,4.50
+S016,O1016,2026-09-21,sale,completed,POUCH,Canvas pouch,marketplace,1,18.00,2.00,0.00,7.00,2.08,4.50
+S017,O1017,2026-09-23,sale,completed,PAD,Desk pad, website,1,32.00,0.00,0.00,12.00,1.26,4.00
+S018,O1018,2026-09-25,sale,completed,POUCH,Canvas pouch,website,1,18.00,0.00,0.00,7.00,0.84,4.00
+S019,O1019,2026-09-27,sale,completed,PAD,Desk pad,marketplace,2,64.00,4.00,0.00,24.00,7.80,5.50
+S020,O1020,2026-09-29,sale,completed,POUCH,Canvas pouch,marketplace,2,36.00,0.00,0.00,14.00,4.68,4.50
+S021,O1021,2026-09-28,sale,cancelled,PAD,Desk pad,website,2,64.00,0.00,0.00,0.00,0.00,0.00
+S022,O1022,2026-09-28,sale,cancelled,POUCH,Canvas pouch,marketplace,1,18.00,0.00,0.00,0.00,0.00,0.00
+R001,O1003,2026-09-09,refund,completed,PAD,Desk pad,marketplace,0,0.00,0.00,32.00,0.00,0.00,0.00
+R002,O1008,2026-09-16,refund,completed,POUCH,Canvas pouch,marketplace,0,0.00,0.00,18.00,0.00,0.00,0.00
+R003,O1010,2026-09-30,refund,completed,POUCH,Canvas pouch,website,0,0.00,0.00,18.00,0.00,0.00,0.00
+S003,O1003,2026-09-03,sale,completed,PAD,Desk pad,marketplace,1,32.00,0.00,0.00,12.00,4.16,4.50
+R002,O1008,2026-09-16,refund,completed,POUCH,Canvas pouch,marketplace,0,0.00,0.00,18.00,0.00,0.00,0.00

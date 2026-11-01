@@ -1,0 +1,9 @@
+csv_row,event_id,action,reason
+6,S005,normalize,Trim channel whitespace and lowercase the supplied label.
+9,S008,normalize,Trim channel whitespace and lowercase the supplied label.
+16,S015,resolve,"Apply 12.00 from owner-confirmation.csv, synthetic cost log C015. Do not infer."
+18,S017,normalize,Trim channel whitespace and lowercase the supplied label.
+22,S021,exclude,Cancelled draft; no completed sale or actual costs.
+23,S022,exclude,Cancelled draft; no completed sale or actual costs.
+27,S003,exclude,Exact duplicate event ID; all source fields match first occurrence.
+28,R002,exclude,Exact duplicate event ID; all source fields match first occurrence.

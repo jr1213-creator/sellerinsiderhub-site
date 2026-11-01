@@ -1,0 +1,2 @@
+event_id,field_name,confirmed_value,confirmation_date,source,note
+S015,cogs_usd,12.00,2026-10-01,Synthetic owner cost log C015,Cost for this sale event only. No cost reversals or restock credits apply to the refund events in this exercise.

@@ -1,0 +1,43 @@
+PAPER MEADOW — FICTIONAL PUBLIC KNOWLEDGE PACK
+Prepared for the Seller Insider Hub customer-support implementation lab.
+Version 1.0 | Exercise date: November 1, 2026
+
+This is a synthetic shop, not a real merchant or a statement of Seller Insider Hub's store policies. The .example email is deliberately non-operational. Use this only in an isolated practice project. Replace every fictional policy, contact, date and product fact with owner-approved business material before any public launch. Do not import the source register, answer key, test log or stale-source exercise as public knowledge.
+
+The following 12 approved answers are the complete allowed public source packet for the exercise. Source IDs map to source-register.csv. They do not authorize private order access or transactions.
+
+Q01 [P01] What comes with the Paper Meadow undated desk pad?
+A. One desk pad with 50 undated sheets. Pens, clips and other photo props are not included. The pad is a physical product; it does not include a digital download.
+
+Q02 [P01] What size is the desk pad and what paper does it use?
+A. The desk pad measures 210 by 297 mm and uses 100 gsm uncoated paper. Paper Meadow has not supplied a waterproof, fountain-pen, archival or medical-use certification for this practice product. Ask the support team about any unlisted requirement before buying.
+
+Q03 [P02] When will my desk pad arrive?
+A. In-stock physical orders are prepared within two business days after payment is accepted. Business days are Monday to Friday, excluding the published shop closures on November 26 and 27, 2026. Preparation is separate from carrier transit. Checkout shows the carrier estimate for the selected destination and service. A particular arrival date is not guaranteed. This assistant cannot see your order or tracking events.
+
+Q04 [P02] Where do you ship and what does shipping cost?
+A. This practice shop ships physical products to the contiguous United States only. Alaska, Hawaii, US territories and international destinations are not supported in this exercise. Current shipping charges appear at checkout; the assistant has no live rate calculator and cannot quote a rate from a destination alone.
+
+Q05 [P03] Can I return an unused desk pad?
+A. For a change-of-mind return, contact support within 30 calendar days after delivery. The desk pad must be unused and in its original packaging. Ask for return instructions before sending it. The customer pays return shipping for a change-of-mind return. The team reviews the request and item; this assistant cannot authorize a return, approve a refund or decide an exception. Damage and incorrect-item reports follow a separate review.
+
+Q06 [P03] My item arrived damaged or the wrong item arrived. What should I do?
+A. Contact support through this chat or support@papermeadow.example. Briefly describe the problem. The team will verify the purchase privately and explain the next step. Do not send payment-card details or passwords. Do not mail the item back until the team gives instructions. This assistant cannot promise a refund, replacement or response outcome.
+
+Q07 [P04] Where is my printable download?
+A. After successful payment, the download link appears on the checkout completion page and is sent to the checkout email address. Check that inbox and the spam folder. If the link is absent or fails, contact support so the team can verify the purchase privately. This assistant cannot retrieve your order, regenerate a link or inspect your email account.
+
+Q08 [P04] Can you refund a printable or confirm it works in my software?
+A. Please ask support to review digital-product refund requests, access problems or an unlisted software requirement. The assistant has no rule that approves or rejects these cases and cannot confirm compatibility that is missing from the product description. Do not assume that a physical-product return rule covers a digital purchase.
+
+Q09 [P05] Can you check, cancel or change my order?
+A. This assistant can explain public policies but has no order-system connection. It cannot see a shipment, confirm a payment, change an address, cancel an order or issue a refund. Ask for a person in this chat, or contact support@papermeadow.example. The team must verify the purchase and confirm whether the requested action is possible.
+
+Q10 [P06] What is the current price, stock level or discount?
+A. Check the current product page and checkout for price and availability. This assistant has no live stock or pricing connection and no approved discount codes. It cannot promise a restock date, reserve stock or accept a visitor-supplied discount claim as an approved offer.
+
+Q11 [P07] How can I reach a person and when will you reply?
+A. Ask for a person in this chat. During staffed online hours, the conversation can transfer to the support team. Outside those hours, the configured route creates a ticket using the reply email you choose to provide. Practice support hours are Monday to Friday, 9 a.m. to 4 p.m. America/New_York, excluding November 26 and 27, 2026. The practice target is a reply within two business days, not an instant response or a guaranteed resolution. The fallback contact is support@papermeadow.example.
+
+Q12 [P05] What can this AI assistant help with?
+A. This is Paper Meadow's AI assistant. It answers documented product and policy questions. It cannot access private orders or take payment, shipping, refund or account actions. It can help you contact the team when information is missing or a person is needed. Never share passwords, complete card numbers or identity documents in this chat.

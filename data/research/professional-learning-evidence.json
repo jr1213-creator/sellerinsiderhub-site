@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-01",
+  "title": "Professional AI implementation learning: evidence and design decisions",
+  "purpose": "Define an honest competitive benchmark and an implementable self-study path for small-business owners.",
+  "method": {
+    "sourcePriority": "Current primary provider pages for course features; public lesson text when available; official measurement documentation for search-demand interpretation.",
+    "access": "Public pages were opened and read. No paid enrollment, authenticated course completion, instructor interview, learner study, or vendor workflow benchmark was performed.",
+    "comparisonRule": "An advertised feature is recorded as a provider claim. A visible syllabus or sample is distinguished from a complete review. Unseen features are unknown, not absent.",
+    "searchRule": "General web retrieval is not a logged Google ranking study. Keyword candidates are not search-volume measurements. Site-specific impressions, adoption surveys, course enrollments, and the existence of tutorials do not measure total keyword demand.",
+    "localFilesRead": [
+      "data/editorial.json",
+      "data/research/market-research.json",
+      "data/research/tutorial-research.json",
+      "data/research/search-quality-evidence.json",
+      "scripts/build_site.py"
+    ]
+  },
+  "sources": [
+    {
+      "id": "google-ai-essentials",
+      "provider": "Google",
+      "title": "Google AI Essentials",
+      "url": "https://grow.google/ai-essentials/",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_syllabus_and_provider_claims",
+      "observed": "Five modules cover foundations, productivity, prompting, responsible use, and continued learning. The page describes videos, readings, interactive activities, a completion certificate, and an under-five-hour estimate. It lists US/Canada subscription pricing and links enrollment to Coursera.",
+      "notEstablished": "Paid activities, scoring quality, feedback, completion experience, and learner outcomes were not independently reviewed."
+    },
+    {
+      "id": "google-ai-professional",
+      "provider": "Google",
+      "title": "Google AI Professional Certificate",
+      "url": "https://grow.google/ai-professional/",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_syllabus_and_provider_claims",
+      "observed": "The current page lists eight courses, including analysis, app building, and deployment; it advertises more than twenty practical activities and a portfolio. Source verification and workflow application appear in the published objectives.",
+      "notEstablished": "The complete enrolled course, assessment rubrics, portfolio quality, and stated employment benefits were not audited."
+    },
+    {
+      "id": "google-smb",
+      "provider": "Google",
+      "title": "AI training and tools for small businesses",
+      "url": "https://grow.google/ai-for-small-businesses/",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_resource_catalog_and_provider_claims",
+      "observed": "A business-focused video series covers finance, support, marketing, and operations. The page also offers coaching/workshop routes and a conditional no-cost certificate offer for eligible US businesses. This landing page still describes seven courses, conflicting with the dedicated certificate page's eight.",
+      "notEstablished": "The complete playlist and coaching experience were not reviewed; current offer eligibility must be checked before enrollment."
+    },
+    {
+      "id": "google-cloud-smb-path",
+      "provider": "Google Cloud",
+      "title": "SMB Learning Path",
+      "url": "https://www.skills.google/paths/4020",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_overview_only",
+      "observed": "The public overview lists thirteen activities and describes a progression from generative-AI foundations toward Gemini automation and agent development.",
+      "notEstablished": "The activity list and complete lessons were not exposed in the retrieved public page."
+    },
+    {
+      "id": "microsoft-business-path",
+      "provider": "Microsoft Learn",
+      "title": "Transform your business with AI",
+      "url": "https://learn.microsoft.com/en-us/training/paths/transform-your-business-with-microsoft-ai/",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_syllabus",
+      "observed": "A beginner path for business leaders and owners has four modules covering available resources, business value, responsible practice, and organizational adoption. Basic IT and business knowledge are stated prerequisites.",
+      "notEstablished": "This is the sampled business path, not an audit of all Microsoft small-business training."
+    },
+    {
+      "id": "microsoft-value-module",
+      "provider": "Microsoft Learn",
+      "title": "Create business value with AI",
+      "url": "https://learn.microsoft.com/en-us/training/modules/create-business-value/",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_module_structure",
+      "observed": "The module publishes learning objectives, eight units, and a profile pass condition for its assessment.",
+      "notEstablished": "A module pass designation is not evidence of independent business implementation."
+    },
+    {
+      "id": "microsoft-strategy-lesson",
+      "provider": "Microsoft Learn",
+      "title": "Business strategy",
+      "url": "https://learn.microsoft.com/en-us/training/modules/create-business-value/2-business-strategy",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_lesson_text_read",
+      "observed": "The visible lesson includes use-case prioritization, baseline metrics, and staged pilots. It addresses measurement and ownership rather than only tool definitions.",
+      "notEstablished": "Its linked research claims were not audited or used as measured results for this project."
+    },
+    {
+      "id": "microsoft-module-assessment",
+      "provider": "Microsoft Learn",
+      "title": "Module assessment",
+      "url": "https://learn.microsoft.com/en-us/training/modules/create-business-value/7-knowledge-check",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_assessment_questions_read",
+      "observed": "Three multiple-choice questions were visible, addressing organizational adoption, buying versus building, and focused pilots.",
+      "notEstablished": "The signed-in submission, scoring feedback, and profile behavior were not tested. Questions were not copied into Seller Insider Hub."
+    },
+    {
+      "id": "hubspot-marketing",
+      "provider": "HubSpot Academy",
+      "title": "AI for Marketing Course",
+      "url": "https://academy.hubspot.com/courses/AI-for-Marketers?content_language=English",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_syllabus_and_provider_claims",
+      "observed": "The free course page lists six lessons, fifteen videos, four quizzes, and named instructors. Objectives include evaluating prompts and outputs, campaign work, personalization, and reporting. The page labels this offering a course.",
+      "notEstablished": "The authenticated videos and quizzes were not completed. General Academy certification marketing is not proof that this particular course awards a certificate."
+    },
+    {
+      "id": "zapier-academy",
+      "provider": "Zapier",
+      "title": "Zapier Academy",
+      "url": "https://learn.zapier.com/",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_path_and_provider_claims",
+      "observed": "Four successive stages lead from AI chat to delegation, automation, and systems engineering, with additional administrator and leadership routes. The provider says training is free with an account and includes saved progress and completion certificates.",
+      "notEstablished": "Account-level progress, certificates, complete lesson delivery, and learner outcomes were not tested."
+    },
+    {
+      "id": "zapier-chat",
+      "provider": "Zapier",
+      "title": "01 Chat",
+      "url": "https://learn.zapier.com/bd7f8455-82a3-4c16-963b-7d6d7d5363aa",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_syllabus_and_welcome_transcript_read",
+      "observed": "A visible introductory transcript follows a support-reply example. The syllabus includes context, model choice, accountability, a pre-send check, and four end questions.",
+      "notEstablished": "Only the public transcript and outline were read; the whole course and its questions were not taken."
+    },
+    {
+      "id": "zapier-engineer",
+      "provider": "Zapier",
+      "title": "04 Engineer",
+      "url": "https://learn.zapier.com/66c55860-1a4d-4845-b2b4-5c38e5343a6d",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_syllabus_and_welcome_transcript_read",
+      "observed": "The outline includes named business case studies, deciding between AI and fixed steps, cost per task, ownership of business rules, and four end questions. The welcome transcript explicitly addresses reliability and scale.",
+      "notEstablished": "Case-study claims and results were not independently verified; the enclosed lessons were not fully reviewed."
+    },
+    {
+      "id": "futurepedia-learning",
+      "provider": "Futurepedia / Skill Leap",
+      "title": "Learn AI",
+      "url": "https://www.futurepedia.io/learn",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_catalog_and_provider_claims",
+      "observed": "The catalog advertises a broad video library, assessment-based recommendations, downloadable workbooks, community access, certificates, and two free entry courses alongside paid access. Library-size figures vary within the page, so no single exact catalog count is asserted here.",
+      "notEstablished": "Personalization, private community quality, paid materials, and certificate delivery were not audited."
+    },
+    {
+      "id": "futurepedia-agents-course",
+      "provider": "Futurepedia / Skill Leap",
+      "title": "Introduction to AI Agents",
+      "url": "https://www.futurepedia.io/courses/introduction-to-ai-agents",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_syllabus_and_provider_claims",
+      "observed": "The published n8n course outline includes guardrails, APIs, tool connections, prompts, testing, and troubleshooting. It advertises downloadable resources and a completion certificate. Lesson counts differ between the header and outline; they were not used as a benchmark.",
+      "notEstablished": "Paid resources, video demonstrations, and complete implementation quality were not inspected."
+    },
+    {
+      "id": "futurepedia-agents-sample",
+      "provider": "Futurepedia / Skill Leap",
+      "title": "Introduction to AI Agents — first lesson",
+      "url": "https://www.futurepedia.io/courses/introduction-to-ai-agents/lessons/introduction-to-ai-agents",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "public_lesson_text_read",
+      "observed": "The public sample has objectives, a three-task identification exercise, a reflection prompt, and navigation showing section progress. This is direct evidence that the competitor includes practice, not only a tools catalog.",
+      "notEstablished": "Embedded video playback and persistence of the displayed progress were not tested."
+    },
+    {
+      "id": "cmu-alignment",
+      "provider": "Carnegie Mellon University Eberly Center",
+      "title": "Align assessments, objectives, and instructional strategies",
+      "url": "https://www.cmu.edu/teaching/assessment/basics/alignment.html",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "primary_teaching_guidance",
+      "observed": "The teaching guidance argues that practice and assessment must match the skill being taught; implementing and evaluating work call for applied tasks, not factual recall alone.",
+      "notEstablished": "This informs the path's design. It is not an endorsement, accreditation, or validation of Seller Insider Hub."
+    },
+    {
+      "id": "google-ai-search-interest",
+      "provider": "Google / Think with Google",
+      "title": "What the breakout Search trends of 2025 mean for 2026",
+      "url": "https://business.google.com/us/think/search-and-video/search-trends-marketing-takeaways/",
+      "accessedAt": "2026-11-01",
+      "publicationPeriod": "December 2025",
+      "evidenceType": "first_party_directional_search_observation",
+      "observed": "Google reports growth in questions framed around what AI can do and how to use it, including an agentic-AI example.",
+      "notEstablished": "The article does not supply current monthly volumes for this path's tutorial keywords, a business-owner segment, or a forecast of obtainable clicks."
+    },
+    {
+      "id": "google-trends-method",
+      "provider": "Google",
+      "title": "FAQ about Google Trends data",
+      "url": "https://support.google.com/trends/answer/4365533?hl=en",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "official_measurement_documentation",
+      "observed": "Trends uses sampled, normalized search interest, scaled from zero to one hundred. Small terms may appear as zero, and autocomplete is not a reliable ranking of the most popular terms.",
+      "notEstablished": "No topic-level Trends export was obtained in this sub-audit. A normalized index must not be reported as monthly searches."
+    },
+    {
+      "id": "google-keyword-planner-method",
+      "provider": "Google",
+      "title": "About Keyword Planner forecasts",
+      "url": "https://support.google.com/google-ads/answer/3022575?hl=en",
+      "accessedAt": "2026-11-01",
+      "evidenceType": "official_measurement_documentation",
+      "observed": "Historical average searches depend on location, period, network, and close variants; values are rounded. Advertising competition measures advertisers, not organic ranking difficulty.",
+      "notEstablished": "No authenticated historical-keyword dataset or verified supplier export for the proposed tutorial queries was available to this sub-audit."
+    }
+  ],
+  "competitorAssessment": {
+    "judgment": "Structured learning, hands-on practice, assessment, and low-cost access already exist in the market. A long guide or a new checklist is not enough to claim superiority.",
+    "strongExistingFeatures": [
+      {"feature": "Ordered curriculum and stated objectives", "sourceIds": ["google-ai-essentials", "google-ai-professional", "microsoft-business-path", "zapier-academy"]},
+      {"feature": "Visible quizzes or published assessment structure", "sourceIds": ["microsoft-module-assessment", "hubspot-marketing", "zapier-chat", "zapier-engineer"]},
+      {"feature": "Practical exercises and reusable work", "sourceIds": ["google-ai-professional", "futurepedia-agents-sample"]},
+      {"feature": "Operational reliability, business measurement, and ownership", "sourceIds": ["microsoft-strategy-lesson", "zapier-engineer", "futurepedia-agents-course"]},
+      {"feature": "Progress and completion recognition", "sourceIds": ["zapier-academy", "futurepedia-learning", "google-ai-essentials"]}
+    ],
+    "proposedPosition": "An accessible implementation workbook for specific small-business jobs: cross-vendor setup, original practice data, independently reproducible answer keys, exact failure cases, and an owner-readable launch decision.",
+    "positionIsInference": true,
+    "notClaimed": [
+      "No competitor supplies similar artifacts elsewhere.",
+      "Seller Insider Hub is academically equivalent to a university program or an established professional certificate.",
+      "Public syllabi establish the quality of all paid lessons.",
+      "The new materials prove learning effectiveness, demand, ranking, or revenue."
+    ]
+  },
+  "minimumCredibleStandard": [
+    {"requirement": "Objectives, practice, and evidence agree", "implementation": "Each module specifies actions a learner can demonstrate, the files or results to keep, and pass criteria.", "basis": "cmu-alignment"},
+    {"requirement": "Progressive practice", "implementation": "Six modules move from grounded drafts through numerical checks and connected workflows to a pilot decision.", "basis": "editorial_design"},
+    {"requirement": "Feedback with reasons", "implementation": "Twelve original scenario questions have answer explanations; lab reference answers identify why a response passes or fails.", "basis": "editorial_design"},
+    {"requirement": "A reproducible applied assessment", "implementation": "The sales exercise checks exact totals independently; support cases check required and forbidden behavior; the capstone collects evidence.", "basis": "editorial_design"},
+    {"requirement": "A result beyond page completion", "implementation": "The portfolio includes sources, outputs, tests, corrections, cost assumptions, ownership, and a go/revise/stop decision.", "basis": "editorial_design"},
+    {"requirement": "Honest scope", "implementation": "Local progress is self-reported; connected tests and live results are separate; no certificate or external validation is implied.", "basis": "editorial_design"}
+  ],
+  "implementation": {
+    "pathFile": "data/learning-paths.json",
+    "intendedRoute": "/learn/ai-for-small-business/",
+    "status": "Path data authored for integration; renderer, browser behavior, route checks, and publication are verified by the integrating release, not this research file.",
+    "moduleCount": 6,
+    "knowledgeCheckCount": 12,
+    "alternativeTrackCount": 2,
+    "capstone": {"criteria": 6, "maximumPoints": 12, "minimumPoints": 10, "minimumPerCriterion": 1, "criticalFailuresMustBeZero": true, "ratingType": "self_review", "validationStatus": "original_editorial_rubric_not_empirically_validated"},
+    "dependencies": [
+      "/playbooks/chatgpt-project-business-brief/",
+      "/playbooks/chatgpt-sales-analysis/",
+      "/playbooks/email-welcome-sequence/",
+      "/playbooks/service-lead-follow-up/",
+      "/playbooks/first-reliable-automation/",
+      "/playbooks/customer-support-knowledge-base/"
+    ],
+    "remainingEvidenceGaps": [
+      "No independent learner review or measured learning gains.",
+      "No published observed live-account benchmark for these combined workflows.",
+      "No instructor service or external credential.",
+      "No evidence yet that readers finish the path, implement it correctly, or gain measurable business value."
+    ]
+  },
+  "searchDemand": {
+    "scope": "Public evidence found during the professional-learning audit; the integrating research workstream handles actual Google result observations.",
+    "confirmed": "A first-party Google article supports broad interest in practical AI questions. This does not identify which narrow tutorial has the largest current market.",
+    "unavailable": ["Verified current monthly keyword volumes for the proposed tutorial families", "A comparable topic-level Google Trends export in this sub-audit", "Search difficulty and attainable click forecasts"],
+    "sourceIds": ["google-ai-search-interest", "google-trends-method", "google-keyword-planner-method"],
+    "families": [
+      {"id": "sales-analysis", "candidateQueries": ["chatgpt data analysis csv", "chatgpt sales analysis", "chatgpt excel data analysis"], "readerOutcome": "A checked sales decision from a messy file.", "priorityBasis": "Reusable business task, visible instruction from major providers, and an independently checkable exercise.", "priorityType": "editorial_judgment", "monthlySearchVolume": null, "volumeStatus": "not_measured"},
+      {"id": "support", "candidateQueries": ["ai customer service chatbot small business", "tidio lyro knowledge base", "how to train chatbot with website data"], "readerOutcome": "Approved answers with tested escalation and rollback.", "priorityBasis": "Concrete recurring business task and an opportunity to make failure behavior inspectable.", "priorityType": "editorial_judgment", "monthlySearchVolume": null, "volumeStatus": "not_measured"},
+      {"id": "business-assistant", "candidateQueries": ["ai assistant for small business", "chatgpt projects business"], "readerOutcome": "A reusable source brief and verified business drafts.", "priorityBasis": "Foundational skill that feeds every later workflow.", "priorityType": "editorial_judgment", "monthlySearchVolume": null, "volumeStatus": "not_measured"},
+      {"id": "customer-follow-up", "candidateQueries": ["mailerlite welcome email automation", "canva lead magnet mailerlite", "zapier lead follow up gmail draft", "make webhook duplicate data store"], "readerOutcome": "A connected handoff that can be tested from input to delivery.", "priorityBasis": "Direct fit with existing detailed site tutorials and a tractable learner portfolio.", "priorityType": "editorial_judgment", "monthlySearchVolume": null, "volumeStatus": "not_measured"}
+    ],
+    "measurementProtocol": [
+      "For a future volume comparison, record source, exact keywords and close variants, target country, language setting, network, date window, extraction date, and rounded versus exact display.",
+      "For Trends, compare relevant terms in one request with the same geography, dates, category, and search type; retain the export and report the normalized index honestly.",
+      "Record actual Google result observations separately: query, locale, date, visible sources and formats, and concrete missing steps. A result count, autocomplete suggestion, or snippet is not demand volume.",
+      "Evaluate site outcomes separately from market size: eligible indexation, query visibility, clicks, useful engagement, artifact use, and later implementation evidence. Do not relabel the site's impressions as all searches."
+    ]
+  }
+}

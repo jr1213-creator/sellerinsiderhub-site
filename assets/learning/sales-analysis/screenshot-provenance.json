@@ -1,0 +1,26 @@
+[
+  {
+    "file": "openai-data-table.webp",
+    "width": 1156,
+    "height": 1076,
+    "sourcePage": "https://help.openai.com/en/articles/9213685-extracting-insights-with-chatgpt-data-analysis",
+    "sourceImage": "https://images.ctfassets.net/j22is2dtoxu1/intercom-img-5da0767ef872b32508a5e85a/3ad1939e2dca003c248fc4a2e453e40b/ZzJVwdB5QJu-lDylZtr0-N6TtZW23f1i8Vhy5dx7QK0mVA5HtEOjYHWd0nix2ecjQx-3jLY5Ts5dDQuMpnRK5tO9X2YkuFh9VHoit_KAKusajT1DaQcHyTZu-fuD1DPG?fm=webp&q=80&w=1156",
+    "description": "Official vendor example of weekday and weekend sales in a ChatGPT analysis table.",
+    "retrievedAt": "2026-11-01",
+    "credit": "OpenAI Help Center",
+    "presentation": "Unmodified vendor illustration, not a screenshot from our own account.",
+    "sha256": "6ffac787da82b6cd07186a96a2d3eff9fa7a265f00303b0ca554a598b5b9160d"
+  },
+  {
+    "file": "openai-download-table.webp",
+    "width": 286,
+    "height": 178,
+    "sourcePage": "https://help.openai.com/en/articles/9213685-extracting-insights-with-chatgpt-data-analysis",
+    "sourceImage": "https://images.ctfassets.net/j22is2dtoxu1/intercom-img-738ea1809e4f7e4c034cfa4b/b046de52a19d854a0e39782b9b9ed22d/UZV7JaeACd3_esCQYJxJD6mE46sZl6Hm-Uq7pLH5Y2ejz3x035zBEpQZZ2EsiurNDCJJ5mH4jirF-qyVj6clSNrL9vQtCJbUm059GCumu9645q_syo4gSe0ZkDqOsczr?fm=webp&q=80&w=286",
+    "description": "Official vendor illustration of the Download table control.",
+    "retrievedAt": "2026-11-01",
+    "credit": "OpenAI Help Center",
+    "presentation": "Unmodified vendor illustration, not a screenshot from our own account.",
+    "sha256": "7bf9ec30f950fea0a7d0057f12569f92d2c956041ddd2228b505235d0eae4b87"
+  }
+]

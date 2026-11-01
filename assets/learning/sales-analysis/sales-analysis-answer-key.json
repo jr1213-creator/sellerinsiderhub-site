@@ -1,0 +1,153 @@
+{
+  "title": "Synthetic September 2026 sales-analysis answer key",
+  "synthetic": true,
+  "currency": "USD",
+  "eventPeriod": [
+    "2026-09-01",
+    "2026-09-30"
+  ],
+  "raw_rows": 27,
+  "unique_event_ids": 25,
+  "exact_duplicates_removed": 2,
+  "cancelled_events_removed": 2,
+  "retained_events": 23,
+  "sale_events": 20,
+  "refund_events": 3,
+  "unresolved_costs_before_confirmation": 1,
+  "unresolved_costs_after_confirmation": 0,
+  "missing_cost_event_id": "S015",
+  "confirmed_cost_usd": "12.00",
+  "totals": {
+    "gross_sales_usd": "804.00",
+    "discounts_usd": "34.00",
+    "refunds_usd": "68.00",
+    "cogs_usd": "306.00",
+    "payment_fees_usd": "63.10",
+    "shipping_cost_usd": "92.00",
+    "net_sales_usd": "702.00",
+    "contribution_usd": "240.90",
+    "completed_orders": 20,
+    "units_sold_before_returns": 33,
+    "retained_events": 23,
+    "contribution_rate": "0.343162"
+  },
+  "by_channel": {
+    "website": {
+      "gross_sales_usd": "418.00",
+      "discounts_usd": "18.00",
+      "refunds_usd": "18.00",
+      "cogs_usd": "159.00",
+      "payment_fees_usd": "15.00",
+      "shipping_cost_usd": "44.00",
+      "net_sales_usd": "382.00",
+      "contribution_usd": "164.00",
+      "completed_orders": 10,
+      "units_sold_before_returns": 17,
+      "retained_events": 11,
+      "contribution_rate": "0.429319"
+    },
+    "marketplace": {
+      "gross_sales_usd": "386.00",
+      "discounts_usd": "16.00",
+      "refunds_usd": "50.00",
+      "cogs_usd": "147.00",
+      "payment_fees_usd": "48.10",
+      "shipping_cost_usd": "48.00",
+      "net_sales_usd": "320.00",
+      "contribution_usd": "76.90",
+      "completed_orders": 10,
+      "units_sold_before_returns": 16,
+      "retained_events": 12,
+      "contribution_rate": "0.240312"
+    }
+  },
+  "by_product": {
+    "PAD": {
+      "gross_sales_usd": "480.00",
+      "discounts_usd": "22.00",
+      "refunds_usd": "32.00",
+      "cogs_usd": "180.00",
+      "payment_fees_usd": "36.84",
+      "shipping_cost_usd": "47.50",
+      "net_sales_usd": "426.00",
+      "contribution_usd": "161.66",
+      "completed_orders": 10,
+      "units_sold_before_returns": 15,
+      "retained_events": 11,
+      "contribution_rate": "0.379484"
+    },
+    "POUCH": {
+      "gross_sales_usd": "324.00",
+      "discounts_usd": "12.00",
+      "refunds_usd": "36.00",
+      "cogs_usd": "126.00",
+      "payment_fees_usd": "26.26",
+      "shipping_cost_usd": "44.50",
+      "net_sales_usd": "276.00",
+      "contribution_usd": "79.24",
+      "completed_orders": 10,
+      "units_sold_before_returns": 18,
+      "retained_events": 12,
+      "contribution_rate": "0.287101"
+    }
+  },
+  "by_channel_product": {
+    "website / PAD": {
+      "gross_sales_usd": "256.00",
+      "discounts_usd": "14.00",
+      "refunds_usd": "0.00",
+      "cogs_usd": "96.00",
+      "payment_fees_usd": "8.76",
+      "shipping_cost_usd": "23.00",
+      "net_sales_usd": "242.00",
+      "contribution_usd": "114.24",
+      "completed_orders": 5,
+      "units_sold_before_returns": 8,
+      "retained_events": 5,
+      "contribution_rate": "0.472066"
+    },
+    "website / POUCH": {
+      "gross_sales_usd": "162.00",
+      "discounts_usd": "4.00",
+      "refunds_usd": "18.00",
+      "cogs_usd": "63.00",
+      "payment_fees_usd": "6.24",
+      "shipping_cost_usd": "21.00",
+      "net_sales_usd": "140.00",
+      "contribution_usd": "49.76",
+      "completed_orders": 5,
+      "units_sold_before_returns": 9,
+      "retained_events": 6,
+      "contribution_rate": "0.355429"
+    },
+    "marketplace / PAD": {
+      "gross_sales_usd": "224.00",
+      "discounts_usd": "8.00",
+      "refunds_usd": "32.00",
+      "cogs_usd": "84.00",
+      "payment_fees_usd": "28.08",
+      "shipping_cost_usd": "24.50",
+      "net_sales_usd": "184.00",
+      "contribution_usd": "47.42",
+      "completed_orders": 5,
+      "units_sold_before_returns": 7,
+      "retained_events": 6,
+      "contribution_rate": "0.257717"
+    },
+    "marketplace / POUCH": {
+      "gross_sales_usd": "162.00",
+      "discounts_usd": "8.00",
+      "refunds_usd": "18.00",
+      "cogs_usd": "63.00",
+      "payment_fees_usd": "20.02",
+      "shipping_cost_usd": "23.50",
+      "net_sales_usd": "136.00",
+      "contribution_usd": "29.48",
+      "completed_orders": 5,
+      "units_sold_before_returns": 9,
+      "retained_events": 6,
+      "contribution_rate": "0.216765"
+    }
+  },
+  "scope": "Operational contribution after item cost, transaction fees and seller-paid shipping only. Excludes advertising, overhead, owner labor and taxes. Refunds do not reverse costs in this synthetic scenario."
+}

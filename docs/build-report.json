@@ -1,11 +1,11 @@
 {
   "built": "2026-11-01",
-  "pages": 123,
-  "indexed": 119,
+  "pages": 125,
+  "indexed": 121,
   "tools": 47,
   "categories": 14,
   "comparisons": 9,
-  "playbooks": 12,
+  "playbooks": 13,
   "investorRoom": {
     "route": "/partners/investors/",
     "assets": 6,
@@ -13,6 +13,11 @@
     "indexed": false
   },
   "routes": [
+    {
+      "route": "/learn/ai-for-small-business/",
+      "title": "AI for small business: a practical implementation path",
+      "kind": "Learning path"
+    },
     {
       "route": "/",
       "title": "AI for small business: practical tutorials and tool guides",
@@ -394,6 +399,11 @@
       "kind": "Playbook"
     },
     {
+      "route": "/playbooks/chatgpt-sales-analysis/",
+      "title": "How to use ChatGPT to analyze sales data: an Excel and Sheets practice lab",
+      "kind": "Playbook"
+    },
+    {
       "route": "/playbooks/email-welcome-sequence/",
       "title": "Send a Canva lead magnet with MailerLite: the complete welcome sequence",
       "kind": "Playbook"
@@ -430,7 +440,7 @@
     },
     {
       "route": "/playbooks/customer-support-knowledge-base/",
-      "title": "Build a useful support knowledge base for Tidio Lyro",
+      "title": "Train an AI support chatbot: a complete Tidio Lyro implementation lab",
       "kind": "Playbook"
     },
     {

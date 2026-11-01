@@ -1,0 +1,348 @@
+{
+  "id": "chatgpt-sales-analysis",
+  "route": "/playbooks/chatgpt-sales-analysis/",
+  "checkedAt": "2026-11-01",
+  "title": "How to use ChatGPT to analyze sales data: an Excel and Sheets practice lab",
+  "summary": "Clean a messy sales CSV with ChatGPT, preserve refunds, resolve a missing cost, verify the figures in Excel or Google Sheets, and write a checked business memo. Includes original data, a formula workbook, chart and answer key.",
+  "label": "AI sales-analysis lab",
+  "intro": "A complete hands-on project with a dirty sales export, four staged prompts, independent calculations and an observable completion rubric.",
+  "bodyFile": "content/chatgpt-sales-analysis-lab.html",
+  "toolIds": [
+    "chatgpt"
+  ],
+  "downloadUrl": "/assets/learning/sales-analysis/sales-analysis-prompts.txt",
+  "audience": [
+    "Small business owners",
+    "Online sellers",
+    "Small teams responsible for sales reporting"
+  ],
+  "level": "Beginner with basic spreadsheet skills",
+  "estimatedMinutes": {
+    "minimum": 60,
+    "maximum": 90,
+    "basis": "Editorial planning estimate, not measured learner completion time."
+  },
+  "prerequisites": [
+    "Open a CSV in Excel or Google Sheets.",
+    "Enter and copy a basic formula.",
+    "Use an account with the required ChatGPT analysis/file tools, or follow the spreadsheet-only verification route."
+  ],
+  "learningOutcomes": [
+    "Distinguish an event key from an order key.",
+    "Write and apply explicit cleaning rules without deleting legitimate refunds.",
+    "Preserve unknown costs until a documented correction resolves them.",
+    "Independently reconcile totals and test a missing-cost formula guard.",
+    "Produce a chart and business memo whose claims remain within the supplied evidence."
+  ],
+  "sourceUrls": [
+    "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt",
+    "https://help.openai.com/en/articles/9213685-extracting-insights-with-chatgpt-data-analysis",
+    "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+    "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt",
+    "https://help.openai.com/en/articles/20001063-chatgpt-for-excel-and-google-sheets",
+    "https://support.microsoft.com/en-us/excel/get-started/import-or-export-text-txt-or-csv-files",
+    "https://support.microsoft.com/en-us/excel/functions/sumifs-function",
+    "https://support.google.com/docs/answer/40608?hl=en",
+    "https://support.google.com/docs/answer/3238496?hl=en",
+    "https://support.google.com/docs/answer/1272900?hl=en",
+    "https://openai.com/academy/data-analysis/"
+  ],
+  "contents": [
+    {
+      "id": "lab-outcomes",
+      "title": "Your assignment: explain what September sales actually contributed."
+    },
+    {
+      "id": "access",
+      "title": "Start with file upload. A paid AI plan is not a prerequisite."
+    },
+    {
+      "id": "data-dictionary",
+      "title": "One row is an event, not necessarily a new order."
+    },
+    {
+      "id": "inspect-data",
+      "title": "Ask for a profile and an exception list."
+    },
+    {
+      "id": "clean-data",
+      "title": "Remove duplicate events. Keep the refund history."
+    },
+    {
+      "id": "verify-spreadsheet",
+      "title": "Rebuild the totals in Excel or Google Sheets."
+    },
+    {
+      "id": "answer-key",
+      "title": "The checked answer is $702 in net sales and $240.90 in contribution."
+    },
+    {
+      "id": "chart-and-memo",
+      "title": "Build one useful chart, then write a memo that respects the evidence."
+    },
+    {
+      "id": "troubleshooting",
+      "title": "If your result differs, trace the difference to a rule."
+    },
+    {
+      "id": "assessment",
+      "title": "Assess the finished work against observable requirements."
+    },
+    {
+      "id": "downloads",
+      "title": "Download the full working set."
+    },
+    {
+      "id": "common-questions",
+      "title": "Common ChatGPT and Excel questions"
+    },
+    {
+      "id": "evidence-notes",
+      "title": "Evidence and teaching scope"
+    }
+  ],
+  "releaseChecks": [
+    "The 27-row starter CSV and every referenced exercise file download successfully.",
+    "The dictionary distinguishes event-level amounts, refunds, missing costs and genuine zeros.",
+    "All four staged prompts are complete and their copy buttons target unique preformatted blocks.",
+    "The documented cleaning path retains 23 events and all three refunds.",
+    "Net sales reconcile to 702.00 USD and operational contribution to 240.90 USD.",
+    "The XLSX formula model recalculates when the confirmed cost is blank, zero or changed.",
+    "The chart matches the four checked channel/product values and uses a zero baseline.",
+    "The memo identifies omitted costs, sample size and the data required before changing channel strategy.",
+    "Vendor screenshots carry local assets, source links and explicit vendor-example captions.",
+    "No live-account test, accreditation, verified keyword volume or learner outcome is invented."
+  ],
+  "readinessItems": [
+    "Original synthetic data and a field dictionary are available.",
+    "An unresolved input must be handled before contribution is complete.",
+    "The answer key can be independently reproduced.",
+    "The exercise includes a completed chart and evidence-limited memo.",
+    "Failure diagnosis maps wrong results to specific data or formula issues.",
+    "A completion rubric assesses both arithmetic and business judgment.",
+    "Current vendor access instructions distinguish uploads from optional add-ins."
+  ],
+  "readiness": {
+    "classification": "Complete self-guided practice lab",
+    "accredited": false,
+    "liveVendorAccountExecution": false,
+    "humanLearnerValidation": false,
+    "limitations": [
+      "No accredited course or third-party assessment is claimed.",
+      "No controlled learner outcomes have been measured.",
+      "Workbook verification used the authoring calculation engine, not a native Excel or Google Sheets UI session."
+    ]
+  },
+  "exerciseFiles": [
+    {
+      "filename": "sales-analysis-exercise.zip",
+      "url": "/assets/learning/sales-analysis/sales-analysis-exercise.zip",
+      "role": "Complete exercise bundle",
+      "description": "All original exercise files, worked answers, chart and README in one ZIP."
+    },
+    {
+      "filename": "sales-events-dirty.csv",
+      "url": "/assets/learning/sales-analysis/sales-events-dirty.csv",
+      "role": "Starter data",
+      "description": "27 original fictional records, including deliberate quality problems."
+    },
+    {
+      "filename": "owner-confirmation.csv",
+      "url": "/assets/learning/sales-analysis/owner-confirmation.csv",
+      "role": "Correction record",
+      "description": "Synthetic owner confirmation for S015 item cost and refund policy."
+    },
+    {
+      "filename": "sales-analysis-prompts.txt",
+      "url": "/assets/learning/sales-analysis/sales-analysis-prompts.txt",
+      "role": "Prompt and formula kit",
+      "description": "Four staged prompts and spreadsheet checks."
+    },
+    {
+      "filename": "sales-events-clean.csv",
+      "url": "/assets/learning/sales-analysis/sales-events-clean.csv",
+      "role": "Worked answer",
+      "description": "23 retained events with calculated net sales and contribution."
+    },
+    {
+      "filename": "cleaning-log.csv",
+      "url": "/assets/learning/sales-analysis/cleaning-log.csv",
+      "role": "Worked answer",
+      "description": "Exclusions, normalized labels and the documented cost correction."
+    },
+    {
+      "filename": "sales-analysis-checks.xlsx",
+      "url": "/assets/learning/sales-analysis/sales-analysis-checks.xlsx",
+      "role": "Formula workbook",
+      "description": "Review, Clean and untouched Raw sheets; dynamic missing-cost checks."
+    },
+    {
+      "filename": "sales-analysis-answer-key.json",
+      "url": "/assets/learning/sales-analysis/sales-analysis-answer-key.json",
+      "role": "Answer key",
+      "description": "Control totals and summaries by channel/product."
+    },
+    {
+      "filename": "verify_sales_analysis.py",
+      "url": "/assets/learning/sales-analysis/verify_sales_analysis.py",
+      "role": "Optional verification",
+      "description": "Standard-library Python decimal calculation and fixed assertions."
+    },
+    {
+      "filename": "sales-contribution-chart.png",
+      "url": "/assets/learning/sales-analysis/sales-contribution-chart.png",
+      "role": "Worked chart",
+      "description": "Original chart of the four contribution groups."
+    },
+    {
+      "filename": "sales-contribution-chart.svg",
+      "url": "/assets/learning/sales-analysis/sales-contribution-chart.svg",
+      "role": "Vector chart",
+      "description": "Scalable version of the worked chart."
+    }
+  ],
+  "exercise": {
+    "synthetic": true,
+    "period": "2026-09",
+    "currency": "USD",
+    "rawRows": 27,
+    "uniqueEventIds": 25,
+    "retainedEvents": 23,
+    "completedOrders": 20,
+    "refundEvents": 3,
+    "grossSalesUsd": "804.00",
+    "discountsUsd": "34.00",
+    "refundsUsd": "68.00",
+    "netSalesUsd": "702.00",
+    "itemCostUsd": "306.00",
+    "transactionFeesUsd": "63.10",
+    "sellerShippingCostUsd": "92.00",
+    "contributionUsd": "240.90",
+    "missingCostEvent": "S015",
+    "confirmedCostUsd": "12.00",
+    "answerKeyAnchor": "answer-key"
+  },
+  "competitorGapEvidence": [
+    {
+      "publisher": "Querio",
+      "url": "https://querio.ai/articles/how-to-use-chatgpt-for-excel-data-analysis",
+      "publishedDateShown": "2025-05-30",
+      "observedCoverage": "Broad formula, cleaning, chart, automation and forecasting overview. Setup centers on an API key and the third-party GPT for Excel add-in.",
+      "specificGapAddressed": "Distinguish current ChatGPT file upload, the official OpenAI add-in and third-party/API routes. The lab does not require API setup and supplies a reconciled event-level exercise with fixed expected results.",
+      "discovery": "Included in parent agent actual Google SERP observation."
+    },
+    {
+      "publisher": "Recalc Academy",
+      "url": "https://recalcacademy.com/blog-guide/using-chatgpt-to-summarize-data/",
+      "publishedDateShown": null,
+      "observedCoverage": "Worked summarization and staged cohort-analysis guidance, with instructions to compare totals against the original. Its setup states Plus is required and describes the old Beta Features / Advanced Data Analysis interface.",
+      "specificGapAddressed": "Current Free access boundaries and vendor instructions; an accessible original dataset, explicit refund/cancellation/missing-cost decisions, independent verifier and observable assessment criteria.",
+      "discovery": "Included in parent agent actual Google SERP observation."
+    },
+    {
+      "publisher": "Wharton AI & Analytics Initiative",
+      "url": "https://ai-analytics.wharton.upenn.edu/uncategorized/exploring-data-with-chatgpt-a-step-by-step-guide/",
+      "publishedDateShown": "2026-01-13",
+      "observedCoverage": "Retail CSV exercise, column profiling, date conversion, joins, row-count checks and exportable Python/notebook work.",
+      "specificGapAddressed": "A narrower small-business report with an explicit event-level refund policy, a deliberate unresolved cost, a documented correction, fixed monetary controls and a graded business memo. Wharton already offers downloadable data and should not be described as lacking exercises.",
+      "discovery": "Research search result; sampled guide, not an exhaustive course audit."
+    },
+    {
+      "publisher": "iTechGuides",
+      "url": "https://www.itechguides.com/how-to-analyze-excel-and-csv-data-with-chatgpt-and-check-every-result/",
+      "publishedDateShown": "2026-10-20",
+      "observedCoverage": "Preparation, upload, defined prompts, tables before charts, cancellation/refund checks, privacy, troubleshooting and auditable exports.",
+      "specificGapAddressed": "One complete supplied dirty dataset and correction record with exact expected amounts, workbook formulas and an executed independent verifier. Verification is already present in this competing guide.",
+      "discovery": "Research search result; sampled public article."
+    },
+    {
+      "publisher": "ExcelDemy",
+      "url": "https://www.exceldemy.com/visualizing-excel-data-with-chatgpt/",
+      "publishedDateShown": "2026-07-14",
+      "observedCoverage": "Detailed chart choices, spreadsheet summaries, exact SUMIF/SUMIFS formulas, VBA examples, screenshots and an add-in route.",
+      "specificGapAddressed": "End-to-end event reconciliation before charting; distinction between unknown and zero costs; a specific synthetic answer key and evidence-limited owner memo. Exact spreadsheet formulas and screenshots are already competitive requirements.",
+      "discovery": "Research search result; sampled public article."
+    }
+  ],
+  "demandEvidence": {
+    "queries": [
+      "how to use ChatGPT to analyze Excel data",
+      "ChatGPT sales analysis"
+    ],
+    "measuredMonthlyVolume": null,
+    "monthlyVolumeSource": null,
+    "countriesForVolume": [],
+    "dateRangeForVolume": null,
+    "note": "No keyword-volume estimate was obtained. Query intent and sampled search results support lesson relevance, not a high-volume claim.",
+    "googleObservation": {
+      "observedAt": "2026-11-01",
+      "country": "US",
+      "language": "English",
+      "personalization": "Results reported not personalized",
+      "observer": "Parent research agent, direct Google UI",
+      "query": "how to use ChatGPT to analyze Excel data",
+      "observedCompetitors": [
+        "Querio",
+        "Recalc Academy",
+        "OpenAI"
+      ],
+      "aiOverviewCoverage": [
+        "Upload",
+        "Clear prompt",
+        "Follow-up questions",
+        "Verification"
+      ],
+      "peopleAlsoAsk": [
+        "Which ChatGPT model is best for Excel?",
+        "What are some good ChatGPT prompts for Excel?",
+        "Can AI analyze my Excel spreadsheet?",
+        "What prompts can I use with ChatGPT to analyze data?"
+      ]
+    }
+  },
+  "screenshots": [
+    {
+      "file": "openai-data-table.webp",
+      "width": 1156,
+      "height": 1076,
+      "sourcePage": "https://help.openai.com/en/articles/9213685-extracting-insights-with-chatgpt-data-analysis",
+      "sourceImage": "https://images.ctfassets.net/j22is2dtoxu1/intercom-img-5da0767ef872b32508a5e85a/3ad1939e2dca003c248fc4a2e453e40b/ZzJVwdB5QJu-lDylZtr0-N6TtZW23f1i8Vhy5dx7QK0mVA5HtEOjYHWd0nix2ecjQx-3jLY5Ts5dDQuMpnRK5tO9X2YkuFh9VHoit_KAKusajT1DaQcHyTZu-fuD1DPG?fm=webp&q=80&w=1156",
+      "description": "Official vendor example of weekday and weekend sales in a ChatGPT analysis table.",
+      "retrievedAt": "2026-11-01",
+      "credit": "OpenAI Help Center",
+      "presentation": "Unmodified vendor illustration, not a screenshot from our own account.",
+      "sha256": "6ffac787da82b6cd07186a96a2d3eff9fa7a265f00303b0ca554a598b5b9160d"
+    },
+    {
+      "file": "openai-download-table.webp",
+      "width": 286,
+      "height": 178,
+      "sourcePage": "https://help.openai.com/en/articles/9213685-extracting-insights-with-chatgpt-data-analysis",
+      "sourceImage": "https://images.ctfassets.net/j22is2dtoxu1/intercom-img-738ea1809e4f7e4c034cfa4b/b046de52a19d854a0e39782b9b9ed22d/UZV7JaeACd3_esCQYJxJD6mE46sZl6Hm-Uq7pLH5Y2ejz3x035zBEpQZZ2EsiurNDCJJ5mH4jirF-qyVj6clSNrL9vQtCJbUm059GCumu9645q_syo4gSe0ZkDqOsczr?fm=webp&q=80&w=286",
+      "description": "Official vendor illustration of the Download table control.",
+      "retrievedAt": "2026-11-01",
+      "credit": "OpenAI Help Center",
+      "presentation": "Unmodified vendor illustration, not a screenshot from our own account.",
+      "sha256": "7bf9ec30f950fea0a7d0057f12569f92d2c956041ddd2228b505235d0eae4b87"
+    }
+  ],
+  "verification": {
+    "verifiedAt": "2026-11-01",
+    "python": "Standard-library Decimal recomputation from the dirty CSV; fixed control totals, order/refund check, exact clean-file comparison.",
+    "workbook": "Artifact Tool recalculation; key totals and four groups inspected; zero reported formula errors; missing/zero/changed cost mutations checked and restored.",
+    "visualReview": [
+      "Review sheet rendered and inspected",
+      "Clean sheet rendered and inspected",
+      "Raw sheet rendered and inspected",
+      "Original chart rendered and inspected",
+      "Both unmodified vendor screenshots inspected"
+    ],
+    "nativeExcelOrSheetsUiTest": false,
+    "promptExecutionInVendorAccount": false
+  },
+  "passCriteria": [
+    "Retain 23 events, including three refunds, after removing only two exact duplicate rows and two cancelled drafts.",
+    "Match 702.00 USD net sales and 240.90 USD contribution to the cent after the documented cost correction.",
+    "Demonstrate unknown/zero/changed-cost behavior and write a memo that identifies missing evidence without causal, forecast or final-profit claims."
+  ]
+}

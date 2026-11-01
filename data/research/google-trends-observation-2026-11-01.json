@@ -1,0 +1,368 @@
+{
+  "observedAt": "2026-11-01",
+  "source": "Direct Google Trends public UI",
+  "url": "https://trends.google.com/trends/explore?geo=US&q=ChatGPT%20for%20Excel,AI%20chatbot,ChatGPT%20for%20business&hl=en",
+  "country": "US",
+  "period": "Past 12 months",
+  "searchType": "Web Search",
+  "category": "All categories",
+  "termType": "Search terms",
+  "terms": [
+    "ChatGPT for Excel",
+    "AI chatbot",
+    "ChatGPT for business"
+  ],
+  "metric": "Relative search interest normalized 0–100; not searches or percentage of users",
+  "averageTable": [
+    [
+      "x1",
+      "ChatGPT for Excel",
+      "AI chatbot",
+      "ChatGPT for business"
+    ],
+    [
+      "Average",
+      "4",
+      "64",
+      "26"
+    ]
+  ],
+  "weeklyTable": [
+    [
+      "x",
+      "y1",
+      "y2",
+      "y3"
+    ],
+    [
+      "Oct 26, 2025",
+      "4",
+      "53",
+      "23"
+    ],
+    [
+      "Nov 2, 2025",
+      "4",
+      "59",
+      "28"
+    ],
+    [
+      "Nov 9, 2025",
+      "4",
+      "57",
+      "25"
+    ],
+    [
+      "Nov 16, 2025",
+      "4",
+      "62",
+      "27"
+    ],
+    [
+      "Nov 23, 2025",
+      "4",
+      "52",
+      "27"
+    ],
+    [
+      "Nov 30, 2025",
+      "6",
+      "64",
+      "46"
+    ],
+    [
+      "Dec 7, 2025",
+      "5",
+      "70",
+      "46"
+    ],
+    [
+      "Dec 14, 2025",
+      "4",
+      "64",
+      "34"
+    ],
+    [
+      "Dec 21, 2025",
+      "2",
+      "55",
+      "32"
+    ],
+    [
+      "Dec 28, 2025",
+      "2",
+      "59",
+      "30"
+    ],
+    [
+      "Jan 4, 2026",
+      "4",
+      "65",
+      "35"
+    ],
+    [
+      "Jan 11, 2026",
+      "3",
+      "73",
+      "37"
+    ],
+    [
+      "Jan 18, 2026",
+      "4",
+      "70",
+      "43"
+    ],
+    [
+      "Jan 25, 2026",
+      "5",
+      "69",
+      "40"
+    ],
+    [
+      "Feb 1, 2026",
+      "5",
+      "79",
+      "36"
+    ],
+    [
+      "Feb 8, 2026",
+      "5",
+      "74",
+      "33"
+    ],
+    [
+      "Feb 15, 2026",
+      "4",
+      "77",
+      "34"
+    ],
+    [
+      "Feb 22, 2026",
+      "5",
+      "74",
+      "39"
+    ],
+    [
+      "Mar 1, 2026",
+      "8",
+      "100",
+      "45"
+    ],
+    [
+      "Mar 8, 2026",
+      "7",
+      "89",
+      "36"
+    ],
+    [
+      "Mar 15, 2026",
+      "5",
+      "94",
+      "31"
+    ],
+    [
+      "Mar 22, 2026",
+      "4",
+      "77",
+      "30"
+    ],
+    [
+      "Mar 29, 2026",
+      "4",
+      "81",
+      "30"
+    ],
+    [
+      "Apr 5, 2026",
+      "3",
+      "76",
+      "28"
+    ],
+    [
+      "Apr 12, 2026",
+      "4",
+      "84",
+      "28"
+    ],
+    [
+      "Apr 19, 2026",
+      "4",
+      "83",
+      "31"
+    ],
+    [
+      "Apr 26, 2026",
+      "4",
+      "76",
+      "29"
+    ],
+    [
+      "May 3, 2026",
+      "5",
+      "79",
+      "27"
+    ],
+    [
+      "May 10, 2026",
+      "5",
+      "80",
+      "30"
+    ],
+    [
+      "May 17, 2026",
+      "4",
+      "77",
+      "31"
+    ],
+    [
+      "May 24, 2026",
+      "5",
+      "90",
+      "32"
+    ],
+    [
+      "May 31, 2026",
+      "6",
+      "87",
+      "36"
+    ],
+    [
+      "Jun 7, 2026",
+      "6",
+      "86",
+      "35"
+    ],
+    [
+      "Jun 14, 2026",
+      "5",
+      "83",
+      "30"
+    ],
+    [
+      "Jun 21, 2026",
+      "4",
+      "79",
+      "25"
+    ],
+    [
+      "Jun 28, 2026",
+      "4",
+      "81",
+      "24"
+    ],
+    [
+      "Jul 5, 2026",
+      "3",
+      "84",
+      "25"
+    ],
+    [
+      "Jul 12, 2026",
+      "3",
+      "55",
+      "14"
+    ],
+    [
+      "Jul 19, 2026",
+      "2",
+      "45",
+      "12"
+    ],
+    [
+      "Jul 26, 2026",
+      "2",
+      "42",
+      "9"
+    ],
+    [
+      "Aug 2, 2026",
+      "2",
+      "39",
+      "9"
+    ],
+    [
+      "Aug 9, 2026",
+      "2",
+      "37",
+      "11"
+    ],
+    [
+      "Aug 16, 2026",
+      "1",
+      "32",
+      "13"
+    ],
+    [
+      "Aug 23, 2026",
+      "2",
+      "32",
+      "20"
+    ],
+    [
+      "Aug 30, 2026",
+      "2",
+      "36",
+      "17"
+    ],
+    [
+      "Sep 6, 2026",
+      "2",
+      "35",
+      "11"
+    ],
+    [
+      "Sep 13, 2026",
+      "3",
+      "41",
+      "12"
+    ],
+    [
+      "Sep 20, 2026",
+      "2",
+      "40",
+      "11"
+    ],
+    [
+      "Sep 27, 2026",
+      "1",
+      "45",
+      "11"
+    ],
+    [
+      "Oct 4, 2026",
+      "2",
+      "40",
+      "11"
+    ],
+    [
+      "Oct 11, 2026",
+      "2",
+      "41",
+      "11"
+    ],
+    [
+      "Oct 18, 2026",
+      "2",
+      "36",
+      "9"
+    ],
+    [
+      "Oct 25, 2026",
+      "2",
+      "36",
+      "9"
+    ],
+    [
+      "Nov 1, 2026",
+      "1",
+      "34",
+      "6"
+    ]
+  ],
+  "limitations": [
+    "Rounded, sampled relative interest; comparisons change with the selected terms, place and period.",
+    "Broad AI chatbot includes consumer and non-business intent.",
+    "Last observation week begins November 1 and is incomplete; do not infer a decline or forecast from it.",
+    "The exact long tutorial phrases were not measured for monthly search volume."
+  ]
+}

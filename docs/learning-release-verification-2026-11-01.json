@@ -1,0 +1,60 @@
+{
+  "releaseDate": "2026-11-01",
+  "scope": "Pre-publication verification for the six-module AI implementation path and two worked labs",
+  "parentCommit": "4f626f313e7cdb3581a8814ad9dface4047ae7dc",
+  "curriculum": {
+    "modules": 6,
+    "knowledgeChecks": 12,
+    "assessment": "Self-assessed evidence plus scored knowledge checks; not an accredited or independently assessed qualification"
+  },
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "pageRecords": 125,
+    "htmlFiles": 126,
+    "sitemapUrls": 121,
+    "tools": 47,
+    "comparisons": 9,
+    "playbooks": 13,
+    "note": "Sitemap inclusion is not evidence of search-engine indexing."
+  },
+  "checks": {
+    "command": "npm run check",
+    "exitCode": 0,
+    "learningLogicCases": 13,
+    "editorialReleaseCases": 4,
+    "diffCheck": "passed",
+    "salesVerifier": {
+      "rawRows": 27,
+      "uniqueRows": 25,
+      "retainedEvents": 23,
+      "completedOrders": 20,
+      "netSalesUsd": "702.00",
+      "operationalContributionUsd": "240.90",
+      "refundOrderContributionUsd": "-20.66"
+    }
+  },
+  "browserChecks": [
+    "Desktop learning path: layout, lesson navigation, quiz responses and evidence-dependent completion.",
+    "Incorrect or unchecked answers do not complete a module; correct checked answers and evidence can complete one.",
+    "Progress persists after reload in the same browser.",
+    "A perfect capstone point total with a critical failure displays stop rather than a pilot recommendation.",
+    "Narrow layout: 390px iframe, 375px content viewport, 375px document scroll width; no horizontal document overflow.",
+    "Sales lab title, byline, module link and numerical answer-key table inspected in rendered page.",
+    "Support lab import steps and genuine Tidio source screenshot inspected; image natural width 747px.",
+    "All source-level copy targets, internal links and anchors validated; HTTPS clipboard behavior is a post-publication check."
+  ],
+  "reviewCorrections": [
+    "Blocked a connected-pilot assertion when operational evidence is rated as pending.",
+    "Included assessment controls and selected rubric descriptions in printable output.",
+    "Replaced ambiguous Fail if labels with Required boundary in all 20 support test rows; rebuilt output contains the correction."
+  ],
+  "preserved": "Existing approved affiliate actions, consent-controlled analytics, private investor-room controls and unrelated site routes.",
+  "limits": [
+    "No authenticated ChatGPT, Excel, Google Sheets or Tidio end-to-end workflow was performed for this release; vendor instructions and screenshots are attributed to current official documentation.",
+    "Workbook formulas and independent decimal-arithmetic verification were checked locally; this is not a claim of a native Excel or Sheets account test.",
+    "Support expected answers and policies are fictional teaching material. Observed-results logs start blank.",
+    "Search observations and normalized Google Trends interest do not establish exact monthly keyword volume, attainable rankings, learner outcomes or competitive parity.",
+    "Live deployment and public-file integrity checks occur after the source commit."
+  ]
+}

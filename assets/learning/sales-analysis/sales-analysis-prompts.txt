@@ -1,0 +1,69 @@
+SELLER INSIDER HUB — SALES ANALYSIS LAB
+Original synthetic exercise. Documentation checked November 1, 2026.
+Guide: https://sellerinsiderhub.com/playbooks/chatgpt-sales-analysis/
+Inspect the attached sales-events-dirty.csv without modifying it.
+
+This is fictional September 2026 event-level sales data in USD. A row is a sale or refund event. event_id is the event key; order_id may legitimately repeat. Amounts are totals for each event, not unit prices. Refund amounts are positive deductions. Refund events do not reverse item costs, fees or shipping in this exercise.
+
+Report:
+1. Filename, number of data rows, columns and date range.
+2. Counts by event_type and order_status.
+3. Repeated event IDs, including whether every field matches.
+4. Missing costs and channel labels before normalization.
+5. Questions that must be resolved before calculating contribution.
+
+Do not fill blanks, delete records or recommend business changes yet. Show the relevant event IDs and source row numbers. If code execution is unavailable, say so rather than claiming the calculations ran.
+
+Create a separate working dataset and a cleaning log. Apply these rules in order:
+
+1. Remove only later exact duplicates of event_id, after confirming all fields match. Stop and report any conflicting duplicate.
+2. Exclude cancelled orders. In this exercise they are uncompleted drafts, with no actual costs.
+3. Trim channel whitespace and lowercase the supplied labels. Valid results are website and marketplace. Report any other value.
+4. Retain every legitimate sale and refund event. Never deduplicate by order_id.
+5. Keep the missing cogs_usd value unknown. Do not infer it from another sale or fill it with zero.
+6. Compute net_sales_usd = gross_sales_usd - discounts_usd - refunds_usd.
+7. Contribution requires known item cost, fees and shipping. Mark affected contribution results unavailable until the missing cost is confirmed. Do not sum partial contributions and label them complete.
+
+Return row counts at each stage, the excluded event IDs, changes to channel labels, remaining missing values and net sales. Export a cleaning log and the working file. Show the calculation method or code.
+
+Use owner-confirmation.csv to resolve the missing cost by event_id and field_name. Confirm that the key matches exactly one retained event. Record the old blank, the confirmed value, confirmation date and source in the cleaning log. Do not change any other cost.
+
+Now calculate contribution_usd = net_sales_usd - cogs_usd - payment_fees_usd - shipping_cost_usd. Return totals by channel and by channel plus product_sku, with net sales and contribution. Calculate each contribution rate as grouped contribution divided by grouped net sales; do not average row percentages.
+
+Count distinct completed sale order IDs separately from retained event rows. State the refund policy and the omitted costs. Export the cleaned CSV, summary table and calculation code.
+
+Clean!P2 — net sales
+=J2-K2-L2
+
+Clean!Q2 — contribution, preserving an unknown cost
+=IF(ISNUMBER(M2),P2-M2-N2-O2,"")
+
+Clean!R2 — cost status
+=IF(ISNUMBER(M2),"Complete","Cost missing")
+
+Summary: net sales
+=SUM(Clean!P2:P24)
+
+Summary: complete contribution only
+=IF(COUNT(Clean!M2:M24)<ROWS(Clean!M2:M24),"Cost missing",SUM(Clean!Q2:Q24))
+
+Website net sales
+=SUMIFS(Clean!P2:P24,Clean!H2:H24,"website")
+
+Website desk-pad contribution, after all costs are confirmed
+=SUMIFS(Clean!Q2:Q24,Clean!H2:H24,"website",Clean!F2:F24,"PAD")
+
+Raw event-ID occurrence counter: put in a spare column, fill rows 2–28
+=COUNTIFS($A$2:A2,A2)
+
+Use the reconciled channel-and-product summary only.
+
+Create a horizontal bar chart of operational contribution in USD for all four groups. Start the value axis at zero and label each amount. Title it September contribution by channel and product. Mark the data as fictional and list the costs excluded from the metric. Export the chart and its underlying table.
+
+Write a 150–200-word owner memo with:
+- Two observations tied to exact checked figures.
+- One plausible explanation clearly labeled as a hypothesis.
+- One specific next investigation, including the missing data needed.
+- A decision we should not make from this sample alone.
+
+Do not claim causation, forecast growth, calculate conversion without visitor data, or describe contribution as final business profit. There is only one small synthetic month and no advertising, overhead, labor or tax data.

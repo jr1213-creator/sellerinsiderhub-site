@@ -1,0 +1,23 @@
+STALE-SOURCE EXERCISE — READ LOCALLY; DO NOT LOAD INTO A LIVE BOT
+
+Scenario
+An old website folder and a newer manual Q&A are both enabled. A visitor is told orders ship the same day, although the owner-approved policy changed. The bot's source list contains:
+
+A. Archived shipping page, v1, effective October 1, 2026:
+"We dispatch every desk-pad order the same day, including Saturday and Sunday."
+
+B. Owner-approved shipping policy P02, v2, effective November 1, 2026:
+"In-stock physical orders are prepared within two business days after payment is accepted. Business days are Monday to Friday, excluding November 26 and 27, 2026. Carrier transit is additional."
+
+C. Manual Q&A copied from A last week, still enabled.
+
+Questions to answer before viewing support-lab-answer-key.txt
+1. Which records need action? Is changing B's date sufficient?
+2. What evidence makes v2 authoritative for this fictional shop?
+3. What must be edited on the public website before URL re-sync?
+4. What may happen to manual edits inside an imported URL Q&A on re-sync?
+5. Write two differently phrased regression questions.
+6. What should happen if the real owner cannot confirm which promise applies to existing orders?
+
+Optional account drill
+Only in a separate nonpublic practice project, load this intentionally conflicting pair, record whether the bot surfaces the conflict, then remove the stale sources. You must not create the conflict in a production project. No output from this optional drill has been observed by Seller Insider Hub.

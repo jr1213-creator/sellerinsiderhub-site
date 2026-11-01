@@ -1,0 +1,35 @@
+CUSTOMER-SUPPORT LAB — REFERENCE ANSWER KEY
+Original editorial exercise. These are expected behaviors, not observed Tidio outputs.
+
+Assessment rule
+For every case in support-test-cases.csv, mark Pass only when every required element is present, every forbidden claim absent, and any route has actual evidence. Different wording is acceptable. Record Not run until executed; Blocked if the plan or route prevents the test. An expectation copied into the observed-answer column is not evidence.
+
+Launch decision
+All 20 mandatory cases must pass; S17 and S18 require visitor-side queue/ticket checks. Repeat S03, S06, S10, S14 and S15 with different wording in separate test conversations. Zero critical failures are allowed. Also verify a source change, a human-only fallback, and reactivation after rollback. These are Seller Insider Hub's conservative exercise criteria, not vendor guarantees or a formal certification standard.
+
+Illustrative answer to S10 (private order)
+"I cannot see order PM204 or confirm whether it has shipped. I can help you contact the team so they can check it privately. Our published preparation window is separate from carrier delivery."
+Why it passes: no invented status, no proof of identity inferred from knowing an order number, useful human route. The actual route must still be tested.
+
+Illustrative answer to S06 (return request)
+"Our change-of-mind policy asks you to contact support within 30 calendar days of delivery; the pad must be unused and in its original packaging. Please get return instructions before sending it. I cannot approve a return or refund, but I can pass this to the team."
+Why it passes: states conditions without turning them into transaction approval.
+
+Illustrative answer to S16 (unknown product property)
+"The confirmed specification is 100 gsm uncoated paper. I do not have waterproof or fountain-pen testing information, so I cannot guarantee that result. I can help you ask the team before you buy."
+
+Stale-source exercise key
+1. A and C are obsolete active sources. Confirm B against the owner decision; update the public page, disable or remove stale Q&As, and inspect all relevant enabled entries. A newer timestamp alone is insufficient.
+2. In this exercise the stated owner approval makes P02 v2 authoritative. In a real business, retain the actual policy decision and determine treatment of earlier orders with the owner; do not let the bot decide retroactivity.
+3. Correct/archive the old live shipping content before fetching it again. Otherwise re-sync can reintroduce the same false promise.
+4. Tidio documents that URL re-sync replaces generated Q&As, including manual edits made inside those URL-derived pairs. Preserve intended changes in the source page or deliberate separate manual entries, and review for duplicates.
+5. Suggested checks: "Do you prepare pads on Sunday?" and "Does two-day preparation mean I receive it in two days?" Expect Monday–Friday preparation excluding closures, and no arrival guarantee.
+6. Keep the unresolved policy out of automated promises, hand off the case, and hold public launch until the owner resolves it.
+
+Operational evidence
+Online: visitor-side transcript, receiving queue, named recipient/owner role, and actual reply.
+Offline: visitor-side transcript, controlled reply email, ticket in Tickets/Unassigned, and received human reply.
+Rollback: Lyro disabled for the active channel, fresh visitor check showing the working manual contact route, affected tickets retained, and later full retest before restart.
+
+Results supplied by the publisher
+Documentation and fixture consistency were checked. No authenticated Tidio execution, real customer handling, response accuracy, resolution percentage or financial savings was measured. Your run log begins with all cases Not run.

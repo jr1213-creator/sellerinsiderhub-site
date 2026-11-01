@@ -1,0 +1,665 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-01",
+  "id": "small-business-ai-implementation",
+  "route": "/learn/ai-for-small-business/",
+  "title": "AI for small business: a practical implementation path",
+  "description": "Build a grounded assistant, check a sales analysis, connect one customer workflow, and decide whether it is ready for a controlled pilot. Six modules combine worked tutorials, original practice files, knowledge checks, and an evidence-based capstone.",
+  "audience": "Owners and small teams in services, retail, ecommerce, and creative businesses who can use a browser and a basic spreadsheet.",
+  "level": "Beginner to practical implementation",
+  "timeEstimate": "Plan for roughly 7–13 hours of active practice, plus vendor setup and any real email delays. These are editorial planning estimates, not measured completion times.",
+  "credentialStatement": "This is a self-study implementation path. It does not award an accredited qualification or independently assessed certificate.",
+  "progressStatement": "Progress marks and knowledge-check answers are saved in this browser. They are your own record, not proof that a vendor workflow has passed its tests. Keep the underlying evidence in your own project folder.",
+  "prerequisites": [
+    "Choose one small, repeatable business task and identify the person responsible for its output.",
+    "Be able to save a text file, open a CSV in a spreadsheet, and distinguish a draft from a sent message.",
+    "Use the supplied fictional records for practice. For a real pilot, have permission to use the information and remove unnecessary personal or confidential data.",
+    "Reading and downloading the materials requires no course account. Connected exercises need the vendor accounts and capabilities listed in each tutorial; check current limits before paying."
+  ],
+  "outcomes": [
+    "Create a business facts file that separates approved facts, assumptions, and questions requiring a human answer.",
+    "Reconcile an AI-assisted sales analysis to an independent calculation, including duplicates, refunds, cancellations, and a missing cost.",
+    "Build either a confirmed lead-magnet delivery sequence or a service-inquiry workflow that prepares a reviewed draft.",
+    "Explain and test input validation, duplicate handling, failure recovery, source updates, and human escalation.",
+    "Assemble a portfolio that supports a specific go, revise, or stop decision for one controlled business pilot."
+  ],
+  "limitations": [
+    "A knowledge-check score shows how you answered these questions; it does not verify your live accounts or business results.",
+    "The supplied examples are synthetic exercises. Vendor interface documentation and reference answers are distinguished from an observed run in your account.",
+    "Instructor feedback, external qualification, measured learner outcomes, and guaranteed time savings or traffic are not included."
+  ],
+  "howToUse": [
+    "Work through the modules in order. In module 3, choose the track that matches your business; you do not need to build both.",
+    "Keep a project folder with a dated brief, source files, outputs, calculations, test log, and final decision. Store your own work there, not in a public comment or this site's progress controls.",
+    "Try each knowledge check before opening its explanation. A wrong answer points to the part to revisit; you can retry.",
+    "Mark a module complete only after its submission and pass criteria are satisfied. Label simulated practice separately from connected account tests.",
+    "Complete the capstone on one workflow. A decision to revise or stop is a useful result when the evidence does not justify launch."
+  ],
+  "modules": [
+    {
+      "id": "business-brief",
+      "number": 1,
+      "title": "Choose one task and ground your assistant",
+      "summary": "Give the assistant reliable business facts and define what success would mean before asking it to produce work.",
+      "timeEstimate": "35–60 minutes of active practice; editorial estimate.",
+      "objectives": [
+        "Define one task, its owner, its input, and the output a person will approve.",
+        "Separate source-backed business facts from assumptions and missing information.",
+        "Check a generated FAQ and reply against the approved facts."
+      ],
+      "lessons": [
+        {
+          "label": "Choose the first task to automate",
+          "href": "/decision-funnels/what-should-i-automate-first/"
+        },
+        {
+          "label": "Build a ChatGPT Project business brief",
+          "href": "/playbooks/chatgpt-project-business-brief/"
+        },
+        {
+          "label": "Compare assistant fit and account requirements",
+          "href": "/tools/ai-assistant/"
+        }
+      ],
+      "submission": [
+        "A one-page task brief: customer or colleague served, trigger, approved output, owner, excluded actions, and one quality measure.",
+        "A dated business facts file with a source or owner for each policy, price, turnaround, and contact detail used in the exercise.",
+        "One FAQ and one inquiry reply with a claim-check table: claim, source, supported or unsupported, and correction. Include one question that the sources cannot answer."
+      ],
+      "passCriteria": [
+        "Every price, policy, timing, and availability claim in the final outputs is traceable to an approved source; unsupported claims have been removed or escalated.",
+        "The deliberately unanswered question produces an honest request for information or a human handoff, not an invented policy.",
+        "The task brief records a baseline method and a quality measure. If no baseline has been observed yet, it says 'not measured' instead of estimating a saving."
+      ],
+      "knowledgeChecks": [
+        {
+          "id": "brief-unsupported-claim",
+          "prompt": "Your facts file says replies usually arrive within one business day. The assistant writes, 'We guarantee a reply in one hour.' What should you do?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Keep it if another AI assistant agrees."
+            },
+            {
+              "id": "b",
+              "text": "Replace it with the supported timing and record the unsupported claim in the check log."
+            },
+            {
+              "id": "c",
+              "text": "Ask for a more confident tone and publish the result."
+            }
+          ],
+          "answerId": "b",
+          "explanation": "A second model is not a source for your policy. The approved business fact controls the wording. Recording the failure also gives you a useful case to test after the instructions change."
+        },
+        {
+          "id": "brief-measurement",
+          "prompt": "You want to know whether an AI-assisted reply process helps. Which comparison is most useful?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Count how many words the assistant generates."
+            },
+            {
+              "id": "b",
+              "text": "Ask the assistant how many hours it probably saved."
+            },
+            {
+              "id": "c",
+              "text": "Record comparable tasks before and during the pilot, including drafting, review, corrections, and final accuracy."
+            }
+          ],
+          "answerId": "c",
+          "explanation": "A faster first draft may create extra review work. Count the whole task and a quality measure, state the sample size, and avoid claiming a general improvement from a small or mismatched sample."
+        }
+      ]
+    },
+    {
+      "id": "sales-analysis",
+      "number": 2,
+      "title": "Check AI analysis against the numbers",
+      "summary": "Use an intentionally messy fictional sales file to learn when a persuasive answer is numerically wrong.",
+      "timeEstimate": "60–90 minutes of active practice; editorial estimate.",
+      "objectives": [
+        "Distinguish a duplicate event from a legitimate refund on the same order.",
+        "Keep an unknown cost unresolved until the supplied owner confirmation supports a value.",
+        "Reproduce the answer key and write a decision memo that stays within the data."
+      ],
+      "lessons": [
+        {
+          "label": "Analyze a sales CSV with ChatGPT and verify the result",
+          "href": "/playbooks/chatgpt-sales-analysis/"
+        },
+        {
+          "label": "Compare your work with the independent answer key",
+          "href": "/playbooks/chatgpt-sales-analysis/#answer-key"
+        }
+      ],
+      "resources": [
+        {
+          "label": "Dirty sales events",
+          "href": "/assets/learning/sales-analysis/sales-events-dirty.csv"
+        },
+        {
+          "label": "Owner confirmation",
+          "href": "/assets/learning/sales-analysis/owner-confirmation.csv"
+        },
+        {
+          "label": "Calculation workbook",
+          "href": "/assets/learning/sales-analysis/sales-analysis-checks.xlsx"
+        },
+        {
+          "label": "Machine-readable answer key",
+          "href": "/assets/learning/sales-analysis/sales-analysis-answer-key.json"
+        }
+      ],
+      "submission": [
+        "A cleaning log listing which rows were removed, excluded, retained, or corrected, with the reason for each decision.",
+        "A reconciled table of net sales and contribution using the tutorial's definitions, with spreadsheet formulas or the supplied independent verifier.",
+        "A short owner memo with one supported finding, one proposed next action, and at least two limits on what the sample can establish."
+      ],
+      "passCriteria": [
+        "Remove only exact duplicate event IDs as instructed, retain legitimate refund events, and exclude cancelled orders under the exercise rules.",
+        "Do not replace a missing cost with zero or an AI guess. Record the supplied owner confirmation before completing that calculation.",
+        "Match the exercise answer key: 27 raw rows, 25 unique events, 23 retained events, $702.00 net sales, and $240.90 contribution after the confirmed missing cost. Explain any discrepancy before moving on.",
+        "The memo distinguishes contribution from full business profit, names omitted overhead, advertising, labor, and taxes, and does not infer causal marketing effects or forecasts from this small synthetic sample."
+      ],
+      "knowledgeChecks": [
+        {
+          "id": "analysis-refund",
+          "prompt": "A paid order and its later refund share an order ID but have different event IDs. What is the correct starting treatment?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Keep both events and apply the exercise's signed sale and refund rules."
+            },
+            {
+              "id": "b",
+              "text": "Delete the refund because order IDs must be unique."
+            },
+            {
+              "id": "c",
+              "text": "Keep only the larger amount."
+            }
+          ],
+          "answerId": "a",
+          "explanation": "The file records events, not one row per order. Deduplicating on order ID would erase a real refund and overstate the result. Use the stable event ID and the documented event rules."
+        },
+        {
+          "id": "analysis-missing-cost",
+          "prompt": "One fulfilled sale has no cost value. ChatGPT suggests using the average cost of other products. What belongs in your checked result?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Use the average without a note because it is statistically reasonable."
+            },
+            {
+              "id": "b",
+              "text": "Treat the missing cost as zero to finish the table."
+            },
+            {
+              "id": "c",
+              "text": "Keep it unknown until the owner confirmation supplies the exercise value, and record the correction."
+            }
+          ],
+          "answerId": "c",
+          "explanation": "An estimate is not an observed cost. This exercise provides a separate confirmation specifically so you can resolve the missing value with evidence. If a real business cannot resolve it, disclose the uncertainty instead of presenting a precise profit figure."
+        }
+      ]
+    },
+    {
+      "id": "customer-workflow",
+      "number": 3,
+      "title": "Build one customer workflow",
+      "summary": "Choose email resource delivery or service-inquiry follow-up. Both tracks join several tools and require evidence that the customer receives the intended result.",
+      "timeEstimate": "60–120 minutes of active practice for one track; editorial estimate. The email track also requires waiting through the configured delivery intervals.",
+      "objectives": [
+        "Map a customer action through the connected tools to one useful output.",
+        "Identify what can run automatically and what needs a person's approval.",
+        "Test both the expected path and a meaningful exception with controlled records."
+      ],
+      "lessons": [
+        {
+          "label": "Track A: Canva resource and MailerLite welcome sequence",
+          "href": "/playbooks/email-welcome-sequence/"
+        },
+        {
+          "label": "Track B: Tally inquiry, Google Sheets record, and Gmail draft",
+          "href": "/playbooks/service-lead-follow-up/"
+        }
+      ],
+      "tracks": [
+        {
+          "id": "email-delivery",
+          "title": "Track A — Deliver a useful resource by email",
+          "bestFor": "Stores, creators, and service businesses that already have a useful resource and a permission-based signup offer.",
+          "href": "/playbooks/email-welcome-sequence/",
+          "submission": [
+            "The finished resource, signup page, three messages, and a simple field-and-trigger map.",
+            "A dated test log using controlled addresses: confirmation, correct resource access while signed out, real delay timing, unsubscribe, and repeat signup."
+          ],
+          "passCriteria": [
+            "The correct resource reaches a fresh confirmed subscriber and opens without the creator's signed-in access.",
+            "Unsubscribing after the first message prevents later sequence messages; a repeat signup behaves as the configured repeat-entry setting specifies.",
+            "The actual delay intervals are recorded, and the workflow fits the account's ongoing plan after any trial ends."
+          ]
+        },
+        {
+          "id": "service-inquiry",
+          "title": "Track B — Prepare a service inquiry for review",
+          "bestFor": "Consultants, local services, and small teams that receive inquiries and want a reviewable reply with a reliable intake record.",
+          "href": "/playbooks/service-lead-follow-up/",
+          "submission": [
+            "A form, intake-sheet field map, approved reply template, and an identified review owner.",
+            "A dated log for a complete submission, an optional blank field, a repeated submission, and a paused or failed handoff."
+          ],
+          "passCriteria": [
+            "A controlled inquiry produces the matching source record and a Gmail draft with the correct recipient and business facts.",
+            "The action creates a draft without sending a message; the owner can find it and review it.",
+            "Duplicate drafts and failed handoffs are reconciled against the source before replay or reply."
+          ]
+        }
+      ],
+      "submission": [
+        "Identify the chosen track and complete its submission requirements.",
+        "Save the trigger-to-output map, dated results, and corrections in your portfolio. Mark any unperformed account test as pending."
+      ],
+      "passCriteria": [
+        "All pass criteria for the chosen track are met with observed results, not a screenshot of configuration alone.",
+        "No pending delay, unsubscribe, draft-versus-send, or delivery test is marked passed.",
+        "The workflow has a named owner and a documented manual route if an integration stops."
+      ],
+      "knowledgeChecks": [
+        {
+          "id": "workflow-private-link",
+          "prompt": "A lead-magnet PDF opens for you but the subscriber gets a permission error. Which test would have caught this?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Previewing the email in the editor."
+            },
+            {
+              "id": "b",
+              "text": "Opening the delivered link as a controlled recipient while signed out of the creator account."
+            },
+            {
+              "id": "c",
+              "text": "Asking an assistant whether the link looks correct."
+            }
+          ],
+          "answerId": "b",
+          "explanation": "The creator's access does not establish the recipient's access. Verify the whole delivery path with a controlled recipient and the same permissions a real subscriber will have."
+        },
+        {
+          "id": "workflow-draft",
+          "prompt": "The service-inquiry workflow is intended to prepare replies for review. Which action satisfies that requirement?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Send the message immediately and notify the owner afterward."
+            },
+            {
+              "id": "b",
+              "text": "Send it only when the AI calls its answer confident."
+            },
+            {
+              "id": "c",
+              "text": "Create a draft, verify that no message was sent, and give the owner a way to find it."
+            }
+          ],
+          "answerId": "c",
+          "explanation": "Review must happen before the external action. A draft action and an observed no-send check make that boundary testable. Confidence wording is not permission to contact a customer."
+        }
+      ]
+    },
+    {
+      "id": "reliable-automation",
+      "number": 4,
+      "title": "Make the workflow recoverable",
+      "summary": "Practice the parts that a successful first run does not prove: bad input, duplicate events, retries, and recovery.",
+      "timeEstimate": "45–90 minutes of active practice; editorial estimate. Connected setup depends on a trusted source that can send the required private header.",
+      "objectives": [
+        "Validate the fields required to produce a useful queue record.",
+        "Use a stable submission ID to recognize a retried event.",
+        "Reconcile source records before retrying a paused or failed run."
+      ],
+      "lessons": [
+        {
+          "label": "Build a protected lead-review queue in Make",
+          "href": "/playbooks/first-reliable-automation/"
+        },
+        {
+          "label": "Check whether Zapier or Make fits the workflow",
+          "href": "/comparisons/zapier-vs-make/"
+        }
+      ],
+      "submission": [
+        "A field map with required fields, the source's stable submission ID, and the human review owner.",
+        "A test log for a valid event, wrong authentication key, missing or blank required data, an identical retry, a conflicting retry with the same ID, and a second distinct event.",
+        "A recovery note explaining how to find missing or duplicate records, pause safely, and replay only what is missing."
+      ],
+      "passCriteria": [
+        "Invalid required data does not become an apparently complete approved record.",
+        "The guide's no-overwrite configuration rejects a repeated key while preserving the original record. A conflicting retry is flagged for review; a different valid ID is treated as a separate event.",
+        "The recovery note compares the source with the destination before replay. Private endpoint credentials are kept out of public pages, screenshots, and browser-side code."
+      ],
+      "practiceMode": "If the trusted source or required account capability is unavailable, work through the sample payloads and write the expected record after each event. Label that as a simulation; connected recovery tests remain pending for the capstone.",
+      "knowledgeChecks": [
+        {
+          "id": "automation-stable-id",
+          "prompt": "A form provider retries the same submission after a timeout. Which identifier supports reliable duplicate detection?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "The original submission ID, preserved across retries."
+            },
+            {
+              "id": "b",
+              "text": "A new random ID generated on every retry."
+            },
+            {
+              "id": "c",
+              "text": "The customer's first name."
+            }
+          ],
+          "answerId": "a",
+          "explanation": "The destination needs a stable identity for the event. A new ID makes a retry appear new, while a first name can merge unrelated people. The ID rule must match the source and the guide's storage behavior."
+        },
+        {
+          "id": "automation-replay",
+          "prompt": "The integration stopped for an hour, and some source submissions may already be in the queue. What should happen before replay?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Replay every event with a fresh ID."
+            },
+            {
+              "id": "b",
+              "text": "Compare source IDs with destination records, identify missing events, and retry with their original IDs."
+            },
+            {
+              "id": "c",
+              "text": "Delete the queue and ask the assistant to reconstruct it."
+            }
+          ],
+          "answerId": "b",
+          "explanation": "Reconciliation tells you what actually failed. Preserving identities and replaying missing records avoids creating duplicates or losing evidence of work that already succeeded."
+        }
+      ]
+    },
+    {
+      "id": "support-lab",
+      "number": 5,
+      "title": "Test support answers and human handoff",
+      "summary": "Build an approved support source, challenge the assistant with known and unknown questions, and prove that a person receives the handoff.",
+      "timeEstimate": "3–5 focused hours of active practice; editorial estimate. Live inbox and availability tests require the relevant Tidio account capabilities.",
+      "objectives": [
+        "Resolve conflicting policy sources before loading a knowledge base.",
+        "Score support answers for required facts, forbidden claims, and escalation behavior.",
+        "Prove online handoff, offline contact, and a usable rollback route."
+      ],
+      "lessons": [
+        {
+          "label": "Build and test a Tidio Lyro support knowledge base",
+          "href": "/playbooks/customer-support-knowledge-base/"
+        }
+      ],
+      "resources": [
+        {
+          "label": "Approved fictional FAQ source",
+          "href": "/assets/learning/customer-support/paper-meadow-approved-faq.csv"
+        },
+        {
+          "label": "Support test cases",
+          "href": "/assets/learning/customer-support/support-test-cases.csv"
+        },
+        {
+          "label": "Reference scoring and answer key",
+          "href": "/assets/learning/customer-support/support-lab-answer-key.txt"
+        },
+        {
+          "label": "Blank observed-results log",
+          "href": "/assets/learning/customer-support/support-run-log.csv"
+        }
+      ],
+      "submission": [
+        "A source register with owner, effective date, active source, and the resolution of any stale or conflicting policy.",
+        "The supplied test log with observed responses, source support, pass or fail, and a corrective action for every mandatory case.",
+        "Evidence that a controlled handoff reaches the real destination, including offline handling and the manual contact path after rollback."
+      ],
+      "passCriteria": [
+        "All 20 mandatory cases and five high-risk paraphrase retests meet their expected behavior, with zero critical failures. Blocked or unrun cases remain pending.",
+        "A connected online handoff and offline ticket reach the actual destination with usable context, and a human reply is verified on the visitor side.",
+        "No unresolved conflicting active source remains, and disabling the bot leaves a usable human contact route."
+      ],
+      "practiceMode": "You can score the fictional cases and diagnose the stale-policy problem without a live bot. These reference answers are not evidence of Lyro's observed behavior. Mark live response, inbox, and rollback tests pending until you perform them.",
+      "knowledgeChecks": [
+        {
+          "id": "support-conflicting-policy",
+          "prompt": "An old returns page and an approved new FAQ contain different deadlines. What should you do before enabling support answers?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Load both and let the assistant pick the more generous deadline."
+            },
+            {
+              "id": "b",
+              "text": "Confirm the current policy with its owner, remove or correct the stale active source, and rerun the affected tests."
+            },
+            {
+              "id": "c",
+              "text": "Use whichever deadline appeared in the first test response."
+            }
+          ],
+          "answerId": "b",
+          "explanation": "The business owns the policy decision. Prompt wording cannot reliably repair conflicting source material. Resolve the source conflict, record the decision, then test the answers that depend on it."
+        },
+        {
+          "id": "support-handoff-proof",
+          "prompt": "The chat widget says 'A person will follow up,' but no one has checked the support inbox. Has the handoff passed?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Yes, because the visitor saw the right sentence."
+            },
+            {
+              "id": "b",
+              "text": "Yes, if the bot answered the previous question correctly."
+            },
+            {
+              "id": "c",
+              "text": "No. Confirm the request and necessary context arrived at the actual destination, including the offline route."
+            }
+          ],
+          "answerId": "c",
+          "explanation": "A handoff is an operational event, not a reassuring phrase. The test is whether the responsible person can find the request and act on it under the availability conditions you promise."
+        }
+      ]
+    },
+    {
+      "id": "capstone",
+      "number": 6,
+      "title": "Present a pilot with evidence",
+      "summary": "Choose one workflow from your portfolio and produce a decision another person can inspect: what it does, what passed, what remains uncertain, and when it must stop.",
+      "timeEstimate": "45–90 minutes to assemble the evidence and decision; editorial estimate. Collecting a real business baseline and running a pilot takes additional time.",
+      "objectives": [
+        "Separate completed practice, connected tests, and live business outcomes.",
+        "Evaluate a pilot against explicit quality, cost, and recovery criteria.",
+        "Give an owner a repeatable procedure for using, reviewing, updating, and stopping the workflow."
+      ],
+      "lessons": [
+        {
+          "label": "Use the capstone rubric and evidence template below",
+          "href": "/learn/ai-for-small-business/#capstone-rubric"
+        },
+        {
+          "label": "Review the site's evidence and editorial standards",
+          "href": "/editorial-standards/"
+        }
+      ],
+      "submission": [
+        "An evidence pack containing the task brief, current sources, input and output examples, independent checks, dated test log, and owner procedure.",
+        "A measured baseline and pilot comparison for comparable tasks, or an explicit 'outcomes not yet measured' entry with the next measurement step.",
+        "A one-page decision: controlled pilot, revise, or stop; the reasons; unresolved limitations; operating cost assumptions; and the next review date."
+      ],
+      "passCriteria": [
+        "The self-review rubric reaches at least 10 of 12 points, with no criterion scoring zero and no unresolved critical failure.",
+        "A proposed live pilot has completed the relevant connected delivery, approval, recovery, and escalation tests. Simulations alone support a practice-complete or revise decision.",
+        "Claims of improvement cite the observed sample and include review, correction, and tool costs. Missing business outcome evidence is clearly marked rather than replaced with a promise.",
+        "A named person accepts the operating procedure, stop conditions, source-update responsibility, and review date."
+      ],
+      "knowledgeChecks": [
+        {
+          "id": "capstone-critical-failure",
+          "prompt": "Nineteen support tests pass, but one invents a refund entitlement. Which decision follows the launch criteria?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Launch because the average score is high."
+            },
+            {
+              "id": "b",
+              "text": "Fix the critical failure and repeat the affected and regression tests before a live pilot."
+            },
+            {
+              "id": "c",
+              "text": "Hide that test from the report because it is unusual."
+            }
+          ],
+          "answerId": "b",
+          "explanation": "A serious failure is not cancelled out by unrelated successful answers. The pilot needs a defined stop rule, a correction, and evidence that the change fixed the problem without breaking previously correct behavior."
+        },
+        {
+          "id": "capstone-small-sample",
+          "prompt": "Five practice replies were faster with AI, but they used fictional messages and no customer follow-up. What is a defensible conclusion?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "The exercise supports a limited next test; it does not establish business-wide savings or better customer outcomes."
+            },
+            {
+              "id": "b",
+              "text": "The business will save the same percentage on every future message."
+            },
+            {
+              "id": "c",
+              "text": "The workflow is proven to increase revenue."
+            }
+          ],
+          "answerId": "a",
+          "explanation": "State what the sample actually measured. Synthetic practice can expose mistakes and justify a controlled trial, but it does not measure customer response, long-term costs, or revenue effects."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "id": "capstone-rubric",
+    "title": "Capstone: one workflow another person can inspect",
+    "reviewMethod": "Score your evidence, not your intention. This is a self-review rubric created for this path, not an independently validated assessment. A colleague or owner can use the same rubric to challenge the decision.",
+    "maximumScore": 12,
+    "minimumScore": 10,
+    "minimumPerCriterion": 1,
+    "passRule": "At least 10/12, no zero, and no unresolved critical failure. A connected pilot also requires observed account tests. Record 'revise' if evidence is missing; do not convert a simulation into a live pass.",
+    "rubric": [
+      {
+        "id": "scope",
+        "title": "Business scope and baseline",
+        "scores": {
+          "0": "Task or owner is undefined.",
+          "1": "Task, owner, output, and baseline method are defined; actual outcome measurement is explicitly pending.",
+          "2": "Comparable baseline observations and quality measures are recorded with sample size and limitations."
+        }
+      },
+      {
+        "id": "sources",
+        "title": "Approved sources and data",
+        "scores": {
+          "0": "Material facts are invented, untraceable, or in unresolved conflict.",
+          "1": "Sources and permission are recorded, with remaining noncritical gaps clearly excluded from the workflow.",
+          "2": "Every material fact is traceable to a current approved source with an owner and update rule."
+        }
+      },
+      {
+        "id": "correctness",
+        "title": "Independent output checks",
+        "scores": {
+          "0": "The evidence relies only on an AI's confidence or another model agreeing.",
+          "1": "Required outputs were checked against the tutorial's reference or an approved source, and discrepancies are logged.",
+          "2": "Checks reproduce the result independently and include meaningful boundary or exception cases."
+        }
+      },
+      {
+        "id": "operation",
+        "title": "Delivery and recovery",
+        "scores": {
+          "0": "Critical delivery, duplicate, approval, or handoff behavior is untested or fails.",
+          "1": "Practice tests and an executable connected-test plan exist, with unperformed tests explicitly marked pending.",
+          "2": "Relevant connected normal, exception, retry, and human-handoff tests have dated observed evidence."
+        }
+      },
+      {
+        "id": "measurement",
+        "title": "Cost and decision quality",
+        "scores": {
+          "0": "Savings, profit, or reliability claims exceed the evidence.",
+          "1": "Plan constraints, review work, and uncertainties are explicit; no unsupported business result is claimed.",
+          "2": "Observed time, correction effort, and applicable tool costs support a bounded comparison and a specific next decision."
+        }
+      },
+      {
+        "id": "ownership",
+        "title": "Owner procedure and revision",
+        "scores": {
+          "0": "No person owns review, updates, or stopping the workflow.",
+          "1": "An owner, operating procedure, stop rule, and review date are written down.",
+          "2": "The owner can follow the procedure, explain a recovery, and document a completed correction and retest."
+        }
+      }
+    ],
+    "criticalFailures": [
+      "An output invents a material price, policy, entitlement, availability, or account-specific fact.",
+      "The workflow performs an external action before a required human approval.",
+      "The process exposes private information or publicizes an integration secret.",
+      "A required delivery, unsubscribe, duplicate-control, recovery, or support-handoff test fails.",
+      "A result marked as observed was only simulated, predicted, or copied from the reference answer."
+    ],
+    "portfolioSections": [
+      "01 — Task, owner, customer need, and excluded actions",
+      "02 — Approved sources, effective dates, permissions, and unresolved questions",
+      "03 — Input and output examples with the chosen tools and configuration",
+      "04 — Independent calculation or claim checks and corrections",
+      "05 — Dated test cases: expected result, observed result, evidence, status, and retest",
+      "06 — Baseline, pilot sample, active work, review effort, tool costs, and limitations",
+      "07 — Operating procedure, fallback, stop conditions, and source-update owner",
+      "08 — Rubric scores, controlled-pilot/revise/stop decision, and next review date"
+    ],
+    "portfolioTemplate": "PROJECT TITLE:\nOWNER:\nDATE / VERSION:\nSTATUS: practice only / connected tests / controlled pilot\n\nTASK AND OUTPUT\nWho needs this?\nWhat starts the task?\nWhat output is approved?\nWhat must the system never do?\n\nSOURCES\nSource | Owner | Effective date | Permitted use | Update rule\n\nBASELINE AND PILOT\nMeasure | Comparable task definition | Baseline sample | Pilot sample | Review/correction effort | Limitations\nWrite 'not measured' for an unobserved value.\n\nTEST LOG\nCase | Expected behavior | Observed behavior | Date | Evidence location | Pass/fail/pending | Correction and retest\n\nOPERATING COST\nPlan/capability | Usage assumption | Cost or allowance | Verification date\n\nOWNER PROCEDURE\nReview step:\nFailure notification:\nReconciliation/recovery:\nHuman contact route:\nStop conditions:\nSource update responsibility:\n\nDECISION\nRubric scores and evidence:\nCritical failures outstanding:\nDecision: controlled pilot / revise / stop\nWhy:\nWhat remains uncertain:\nNext measurement or correction:\nNext review date:\nOwner acknowledgment:\n",
+    "workedDecision": {
+      "label": "Illustrative decision, not a measured business result",
+      "scenario": "A service-inquiry exercise creates the correct draft from a controlled form submission, but the paused-integration recovery test has not been run.",
+      "decision": "Revise before a live pilot.",
+      "reason": "The normal path has evidence, but missing-inquiry recovery is still pending. Run the pause, reconciliation, and replay test; record whether the correct draft appears without duplicates; then reassess the operating criterion. Do not claim time savings before measuring review and correction work."
+    }
+  },
+  "sources": [
+    {
+      "label": "Editorial standards and evidence labels",
+      "href": "/editorial-standards/"
+    },
+    {
+      "label": "Google AI Professional Certificate — public curriculum",
+      "href": "https://grow.google/ai-professional/",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "label": "Microsoft Learn — business AI objectives and assessment",
+      "href": "https://learn.microsoft.com/en-us/training/modules/create-business-value/",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "label": "Zapier Academy — public learning-path structure",
+      "href": "https://learn.zapier.com/",
+      "accessedAt": "2026-11-01"
+    }
+  ]
+}

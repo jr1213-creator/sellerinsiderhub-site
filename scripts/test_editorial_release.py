@@ -29,9 +29,9 @@ class EditorialReleaseTests(unittest.TestCase):
                 self.assertNotIn('Live vendor execution\n', kit)
 
     def test_copy_buttons_and_ids_are_unambiguous(self):
-        for source in (ROOT/'content').glob('*expanded.html'):
+        for source in (ROOT/'content').glob('*.html'):
             text = source.read_text()
-            ids = re.findall(r'\bid="([^"]+)"', text)
+            ids = re.findall(r'\sid="([^"]+)"', text)
             with self.subTest(article=source.name):
                 self.assertEqual(len(ids), len(set(ids)), 'Duplicate IDs can copy the wrong example.')
                 for target in re.findall(r'data-copy-target="([^"]+)"', text):
