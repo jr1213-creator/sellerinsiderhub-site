@@ -1183,7 +1183,7 @@
       "icon": "ML",
       "color": "#387C80",
       "freeWorkflowEligible": true,
-      "freePlanNote": "Free supports 250 active subscribers, 2,500 monthly email sends, three active automations, three forms, one landing page, and one website up to five pages.",
+      "freePlanNote": "Free supports 250 active subscribers, 2,500 monthly email sends, three active automations with up to five steps each, three forms, one landing page, and one website up to five pages.",
       "pricingDetails": {
         "currency": "USD",
         "checkedAt": "2026-11-01",
@@ -1198,7 +1198,8 @@
             "included": [
               "250 active subscribers",
               "2,500 emails/month",
-              "3 active automations"
+              "3 active automations",
+              "Up to five steps per automation; email and delay steps use this allowance."
             ],
             "sourceUrl": "https://www.mailerlite.com/pricing"
           },
@@ -3906,7 +3907,7 @@
       "name": "Smith.ai",
       "category": "phone-systems",
       "tagline": "Handle calls with defined qualification and routing.",
-      "description": "Smith.ai AI Receptionist is worth evaluating when useful calls are missed while a service owner is working. Its first job should be narrow: collect the caller’s details, answer approved administrative questions, and route or schedule within real rules. The Free allowance can generate overage charges, and the separately priced human receptionist service should not be assumed to be included. Test ambiguous calls before forwarding the business number.",
+      "description": "Smith.ai AI Receptionist can handle a narrow intake task while a service owner is working: collect callback details, answer approved questions, and route calls. Free includes 25 real calls per month; with Extra Calls off by default, later callers follow your redirect settings. Appointment booking and qualifying live-agent help are paid features. Check the destination, billing controls, and booking result before forwarding your business number.",
       "bestFor": [
         "A service business missing calls during appointments or field work",
         "A bounded administrative intake and routing task",
@@ -3917,17 +3918,18 @@
         "Treating the Free tier as a zero-risk unlimited call plan"
       ],
       "features": [
-        "Inbound answering and call summaries",
-        "Qualification and routing",
-        "Appointment-scheduling integrations"
+        "Inbound answering, transcripts, and call summaries",
+        "Qualification and routing to configured destinations",
+        "Appointment-scheduling integrations with plan and connected-account requirements"
       ],
       "limitations": [
-        "Call allowances and overages must be monitored; AI and human service plans differ.",
-        "A summary can mishear names or numbers, and escalation depends on an available destination."
+        "Free redirects after 25 real calls unless Extra Calls is enabled and funded; depleted credits also trigger the configured redirect.",
+        "Free appointment booking and enabled live-agent features incur usage charges. Native Calendly integration requires a paid Calendly plan.",
+        "A summary can mishear names or numbers. Confirm the callback record, calendar result, and staffed destination in your own tests."
       ],
       "website": "https://smith.ai/",
       "pricingUrl": "https://smith.ai/pricing/ai-receptionist",
-      "pricingSummary": "AI Receptionist Free includes 25 calls/month, then $3/call. Pro starts at $150/month for 75 calls; this differs from the human receptionist service.",
+      "pricingSummary": "AI Free: 25 real calls/month; default redirect after that. Enable funded Extra Calls for $3/additional call. Free booking and live-agent features cost extra. Pro starts at $150/month for 75 real calls, with $2.50 overage per call.",
       "freePlan": true,
       "setup": "Moderate",
       "audiences": [
@@ -3936,6 +3938,12 @@
       ],
       "sourceUrls": [
         "https://smith.ai/pricing/ai-receptionist",
+        "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232723-your-free-plan-how-it-works",
+        "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232725-understanding-your-25-free-calls",
+        "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232726-what-happens-when-you-reach-your-call-limit",
+        "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232730-extra-calls-billing-credits-explained",
+        "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221010-how-to-connect-your-calendly-account-to-ai-receptionist",
+        "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222817-live-agent-add-on-billing-overview",
         "https://smith.ai/pricing/receptionists"
       ],
       "checkedAt": "2026-11-01",
@@ -3945,34 +3953,35 @@
       "icon": "SM",
       "color": "#5379B9",
       "freeWorkflowEligible": null,
-      "freePlanNote": "The AI Free plan includes 25 calls per month. Further calls are listed at $3 each; confirm billing and limits before forwarding a live business number.",
+      "freePlanNote": "Free has separate monthly pools of 25 real calls, 25 browser test calls, and 50 simulations. Extra Calls is OFF by default: after 25 real calls, your redirect applies. Enabled extras require prepaid credits; appointment booking and live-agent features are paid. Native Calendly needs a paid Calendly plan.",
       "pricingDetails": {
         "currency": "USD",
         "checkedAt": "2026-11-01",
         "plans": [
           {
-            "name": "AI Free",
+            "name": "AI Free (base fee)",
             "amount": 0,
             "period": "month",
-            "billingBasis": "Then $3 per additional call",
+            "billingBasis": "Extra Calls OFF: redirect after the real-call allowance. If enabled with credits: $3 per additional real call; paid features extra.",
             "unit": "per account",
             "currency": "USD",
             "included": [
-              "25 calls/month",
-              "AI answering and routing"
+              "25 real calls/month",
+              "Separate 25 browser test calls and 50 simulations/month",
+              "AI intake and routing; paid booking is not included at no charge"
             ],
-            "sourceUrl": "https://smith.ai/pricing/ai-receptionist"
+            "sourceUrl": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232723-your-free-plan-how-it-works"
           },
           {
-            "name": "AI Pro",
+            "name": "AI Pro entry",
             "amount": 150,
             "period": "month",
-            "billingBasis": "Monthly billing",
+            "billingBasis": "Monthly billing; additional real calls $2.50 each at this tier.",
             "unit": "per account",
             "currency": "USD",
             "included": [
-              "75 calls/month",
-              "Dedicated setup and support"
+              "75 real calls/month",
+              "Dedicated onboarding and live support"
             ],
             "sourceUrl": "https://smith.ai/pricing/ai-receptionist"
           },
@@ -3980,22 +3989,24 @@
             "name": "AI Enterprise entry",
             "amount": 500,
             "period": "month",
-            "billingBasis": "Monthly billing",
+            "billingBasis": "Monthly billing; additional real calls $2.17 each at this tier.",
             "unit": "per account",
             "currency": "USD",
             "included": [
-              "300 calls/month",
-              "Custom setup"
+              "300 real calls/month",
+              "Full-service setup and ongoing optimization"
             ],
             "sourceUrl": "https://smith.ai/pricing/ai-receptionist"
           }
         ],
         "costDrivers": [
-          "At 60 calls, the published Free overage arithmetic is 35 × $3 = $105. At 75 calls it reaches $150; Pro also changes support, so compare both capacity and service.",
-          "Ask which calls are billable, how overages work, which destinations can receive transfers, and whether a human escalation service is included in the chosen contract.",
-          "The current Pro offer lists additional calls at $2.50 each; its $150/75 = $2 included-call average is not the overage rate."
+          "Illustrative Free-plan month: with Extra Calls enabled and funded, 40 billable real calls using intake only cost (40 − 25) × $3 = $45. If 10 of those calls also use appointment booking at $3/call, the subtotal becomes $75. This excludes connected phone/calendar fees, taxes, and staff review time.",
+          "Free paid features must be enabled and funded. The documented combined charge is capped at $6 per call, not per month; do not treat the cap as a monthly spending limit.",
+          "Qualifying Smith.ai live-agent involvement adds $3 once per call, even with multiple live-agent interactions. A transfer to your own business is not this add-on; internal AI-system and technical-fallback escalations are also listed as exceptions.",
+          "Native Calendly integration requires a paid Calendly plan, charged separately. Confirm the booking feature charge on the selected Smith.ai plan rather than assuming every plan includes it.",
+          "At the Pro entry tier, $150 ÷ 75 = $2 is the included-call average; the additional-call rate is $2.50. The separate human-first receptionist service has its own plans and add-ons."
         ],
-        "verificationNote": "The AI and human receptionist products are priced separately. A no-base-fee AI account can still incur overage charges; it is not an unlimited free phone service."
+        "verificationNote": "Pricing page feature availability does not establish zero-cost usage. The Free-plan help identifies paid booking and live-agent features; the call-limit help explains default redirects. Review both, fund only the features you intend to use, and verify the fallback destination."
       },
       "sources": [
         {
@@ -4003,7 +4014,61 @@
           "url": "https://smith.ai/pricing/ai-receptionist",
           "checkedAt": "2026-11-01",
           "supports": [
-            "Free 25 calls; $3 overage; Pro 75 for $150"
+            "Pro entry $150/75 calls and $2.50 additional-call rate",
+            "Enterprise entry $500/300 calls and $2.17 additional-call rate"
+          ]
+        },
+        {
+          "title": "Smith.ai — Your Free Plan: How It Works",
+          "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232723-your-free-plan-how-it-works",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Free feature scope; booking and live-agent features are paid",
+            "Extra Calls and paid features are off by default"
+          ]
+        },
+        {
+          "title": "Smith.ai — Understanding Your 25 Free Calls",
+          "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232725-understanding-your-25-free-calls",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Separate monthly allowances: 25 real, 25 browser test, 50 simulated calls",
+            "No extra test or simulated calls on Free after the allowance"
+          ]
+        },
+        {
+          "title": "Smith.ai — What Happens When You Reach Your Call Limit",
+          "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232726-what-happens-when-you-reach-your-call-limit",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Default redirect after the real-call allowance",
+            "Extra Calls requires credits; exhausted credits restore the redirect"
+          ]
+        },
+        {
+          "title": "Smith.ai — Extra Calls & Billing Credits Explained",
+          "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232730-extra-calls-billing-credits-explained",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Extra real calls, appointment booking, and live-agent features listed at $3/call",
+            "Free combined charges capped at $6 per call; no monthly usage cap"
+          ]
+        },
+        {
+          "title": "Smith.ai — Connect Calendly to AI Receptionist",
+          "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221010-how-to-connect-your-calendly-account-to-ai-receptionist",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Native integration requires a paid Calendly plan"
+          ]
+        },
+        {
+          "title": "Smith.ai — Live Agent Add-on Billing Overview",
+          "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222817-live-agent-add-on-billing-overview",
+          "checkedAt": "2026-11-01",
+          "supports": [
+            "Qualifying live-agent involvement billed $3 once per call",
+            "Own-business transfers and internal/technical escalations excluded from this add-on"
           ]
         },
         {
@@ -4011,26 +4076,28 @@
           "url": "https://smith.ai/pricing/receptionists",
           "checkedAt": "2026-11-01",
           "supports": [
-            "Separate human service and pricing"
+            "Human-first receptionist service uses separate plans and add-ons"
           ]
         }
       ],
-      "reviewNote": "The AI and human receptionist products are priced separately. A no-base-fee AI account can still incur overage charges; it is not an unlimited free phone service.",
+      "reviewNote": "Documentation reviewed; no live account or call test performed. Apply the detailed Free-plan billing and redirect rules alongside the pricing page. Test a controlled call, its destination, and any calendar entry before relying on the workflow.",
       "workedExample": {
-        "title": "Capture an after-hours service inquiry accurately",
+        "title": "Capture an after-hours inquiry with a defined fallback and budget",
         "inputs": [
-          "Approved opening hours, service area, and scheduling rules",
-          "A rule forbidding estimates or promises outside the script"
+          "Approved hours, service area, callback fields, and a rule against inventing estimates or guarantees",
+          "A staffed redirect destination and a deliberate choice about Extra Calls and paid features",
+          "Illustrative budget: 40 billable real calls, with 10 using booking; a paid Calendly account if using the native integration"
         ],
         "workflow": [
-          "Test a routine caller, an out-of-area caller, and someone asking for a guarantee.",
-          "Check the summary for name, callback details, requested service, and uncertainty.",
-          "Verify the destination that receives a handoff and what happens if nobody answers."
+          "Configure narrow intake and the redirect that applies when the Free allowance or billing credits run out.",
+          "For the illustrative 40-call budget, enable funded Extra Calls; enable booking only if needed. Intake-only usage is $45; adding booking on 10 calls makes a $75 usage subtotal before connected services and taxes.",
+          "Run controlled routine, out-of-area, ambiguous, and unavailable-appointment calls in your own account. Check the callback summary and actual calendar result.",
+          "Verify the handoff destination and what happens when nobody answers. Restore the previous routing if the checks fail."
         ],
-        "expectedOutput": "A usable callback record and a known route for calls the system should not resolve.",
-        "check": "Ask for an unavailable appointment and confirm the system does not invent a booking or price.",
-        "limits": "Call allowances and overages must be monitored; AI and human service plans differ.",
-        "exampleType": "Original illustrative workflow; documentation reviewed, not a hands-on performance test"
+        "expectedOutput": "A usable callback record, a verified booking or follow-up action, and a known fallback within the chosen usage budget.",
+        "check": "Confirm the actual destination and calendar record; a simulated conversation alone is not proof of a completed booking or transfer.",
+        "limits": "The dollar example assumes the specified enabled features and billable volume; it is not an all-in quote. Free testing pools are separate from real calls, and appointment booking needs the required connected plan.",
+        "exampleType": "Original illustrative workflow and synthetic cost example; documentation reviewed, not a hands-on performance test"
       },
       "alternatives": [
         {

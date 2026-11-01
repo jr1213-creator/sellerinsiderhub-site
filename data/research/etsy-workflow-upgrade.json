@@ -1,0 +1,139 @@
+{
+  "id": "etsy-listing-workflow",
+  "checkedAt": "2026-11-01",
+  "title": "Build an Etsy listing with AI, real photos, and a search check",
+  "summary": "Use ChatGPT or Claude to draft from verified facts, annotate real photos in Canva, configure Etsy accurately, and check search terms with eRank or Etsy Stats. Includes a complete pouch example and a downloadable working kit.",
+  "toolIds": [
+    "etsy",
+    "chatgpt",
+    "claude",
+    "canva",
+    "erank"
+  ],
+  "contentFile": "content/etsy-listing-workflow-expanded.html",
+  "downloadUrl": "/resources/kits/etsy-listing-workflow.txt",
+  "sourceUrls": [
+    "https://www.etsy.com/seller-handbook/article/1399426136697",
+    "https://help.etsy.com/hc/en-us/articles/115015628707-How-to-Create-a-Listing",
+    "https://help.etsy.com/hc/en-us/articles/360000336307-How-to-Use-Tags-to-Get-Found-in-Search",
+    "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+    "https://help.etsy.com/hc/en-us/articles/44297885802647-How-Do-Etsy-s-Listing-Image-Requirements-Apply-to-My-Listings",
+    "https://www.etsy.com/legal/creativity/",
+    "https://www.etsy.com/seller-handbook/article/1275449912004",
+    "https://www.canva.com/features/add-text-to-photo/",
+    "https://www.canva.com/help/download-or-purchase/",
+    "https://help.etsy.com/hc/en-us/articles/360000344528-How-to-Offer-Personalized-Listings",
+    "https://help.etsy.com/hc/en-us/articles/115015664047-How-to-Add-Variations-to-Your-Listings",
+    "https://help.etsy.com/hc/en-us/articles/115015588087-How-to-Set-Processing-Times-Processing-Profiles-and-Ship-By-Dates",
+    "https://help.etsy.com/hc/en-us/articles/4406604492823-How-to-Add-a-Text-Alternative-to-Your-Listing-Images",
+    "https://help.etsy.com/hc/en-us/articles/115015774268-How-to-Use-Etsy-Stats-for-Your-Shop",
+    "https://help.erank.com/blog/use-erank-to-find-tags-for-your-etsy-listings/",
+    "https://help.etsy.com/hc/en-us/articles/360035902374-Etsy-Fee-Basics/",
+    "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy"
+  ],
+  "contents": [
+    {
+      "id": "start-here",
+      "title": "The complete workflow"
+    },
+    {
+      "id": "product-record",
+      "title": "Build the product record"
+    },
+    {
+      "id": "draft-and-audit",
+      "title": "Draft and audit with AI"
+    },
+    {
+      "id": "worked-example",
+      "title": "Complete pouch example"
+    },
+    {
+      "id": "real-photos",
+      "title": "Current photo requirements"
+    },
+    {
+      "id": "canva-annotations",
+      "title": "Annotate copies in Canva"
+    },
+    {
+      "id": "etsy-controls",
+      "title": "Set the Etsy controls"
+    },
+    {
+      "id": "search-check",
+      "title": "Check the search terms"
+    },
+    {
+      "id": "release-and-measure",
+      "title": "Release and measure"
+    },
+    {
+      "id": "troubleshooting",
+      "title": "Troubleshoot the weak point"
+    },
+    {
+      "id": "downloads",
+      "title": "Download the working kit"
+    },
+    {
+      "id": "source-notes",
+      "title": "Evidence and maintenance"
+    }
+  ],
+  "releaseChecks": [
+    "All measurements, material and care claims have evidence.",
+    "The required original real-background photo remains unedited.",
+    "First image shows the finished customized sample.",
+    "The actual item, labels, alt text and ordering controls agree.",
+    "Personalization, stock, price and fulfillment are checked in Etsy.",
+    "No invented keyword demand, testing claims or sales results.",
+    "Post-publication display checked and changes logged."
+  ],
+  "policyFindings": [
+    {
+      "claim": "Most products require an unedited actual-item photograph against a real background. Keep it separate from Canva edits.",
+      "url": "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+      "policyUpdatedAt": "2026-10-22"
+    },
+    {
+      "claim": "For seller-made customized items, first-image guidance requires a finished customized item rather than placeholder text.",
+      "url": "https://www.etsy.com/legal/creativity/"
+    },
+    {
+      "claim": "Current title guidance suggests fewer than 15 words; technical title limit remains 140 characters.",
+      "url": "https://www.etsy.com/seller-handbook/article/1399426136697"
+    },
+    {
+      "claim": "Tags allow 13 slots and 20 characters each.",
+      "url": "https://help.etsy.com/hc/en-us/articles/360000336307-How-to-Use-Tags-to-Get-Found-in-Search"
+    },
+    {
+      "claim": "Current variation guidance supports up to 3 attribute variations; price is the full variant price.",
+      "url": "https://help.etsy.com/hc/en-us/articles/115015664047-How-to-Add-Variations-to-Your-Listings"
+    }
+  ],
+  "documentationConflicts": [
+    {
+      "topic": "Image capacity",
+      "observed": "The create-a-listing guide states 20 photos and 2 videos; the variation article retains 10 photos in its photo-linking steps.",
+      "editorialDecision": "The guide uses seven purposeful images and does not hardcode maximum upload capacity."
+    }
+  ],
+  "assets": [
+    {
+      "path": "site-assets/vendor-guides/canva-text-pane.jpg",
+      "sourcePage": "https://www.canva.com/features/add-text-to-photo/",
+      "originalAssetUrl": "https://content-management-files.canva.com/b8c2e261-e02e-480a-80e1-a4ca7492c4c3/tools-feature_add-text-to-photo_promo-showcase_01.jpg?resize-format=auto&resize-quality=60&resize-width=3600",
+      "captionBasis": "Vendor-published instructional illustration; no claimed live account test."
+    },
+    {
+      "path": "site-assets/vendor-guides/etsy-erank-keyword-country.png",
+      "sourcePage": "https://help.erank.com/blog/use-erank-to-find-tags-for-your-etsy-listings/",
+      "originalAssetUrl": "https://d3p0ctlqg0dpqn.cloudfront.net/wp-content/uploads/2025/04/image-54.png",
+      "captionBasis": "Genuine vendor documentation screenshot of country selector; contains no pouch metrics."
+    }
+  ],
+  "preservation": "Original synthetic POUCH-01 input and full example output copied without modification.",
+  "instructionBasis": "Vendor documentation verified; worked example, prompts and trial checks are editorial illustrations. No firsthand seller-account testing or keyword-demand research is claimed."
+}

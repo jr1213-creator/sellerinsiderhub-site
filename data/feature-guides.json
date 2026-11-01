@@ -94,6 +94,71 @@
         ]
       },
       {
+        "id": "try-spreadsheet",
+        "title": "Build a usable follow-up sheet before paying for a CRM",
+        "paragraphs": [
+          "For the fictional design business, start with one row per opportunity rather than one row per person. The same client can have a brochure and a separate website request. Give each opportunity a stable ID, one owner, an agreed stage, and a next action. This is a proposed working design; the example records are synthetic.",
+          "In Google Sheets, put the headers below in row 1 and add the example rows. Use a real date cell for Next action due, displayed consistently, rather than text such as “next Tuesday.” Do not store contact details in a public sheet. Keep any automated raw intake tab separate from this editable review sheet."
+        ],
+        "example": {
+          "title": "Copy this nine-column review sheet",
+          "content": "Opportunity ID\tContact ID\tCustomer\tWork\tStage\tOwner\tNext action\tNext action due\tOutcome\nO-208\tC-104\tAlex Morgan (fictional)\t8-page brochure\tProposal sent\tOwner\tAsk whether scope meets brief\t2026-11-04\tOpen\nO-209\tC-104\tAlex Morgan (fictional)\tWebsite refresh\tNew inquiry\tOwner\tConfirm the requested scope\t2026-11-02\tOpen\nO-210\tC-105\tSam Lee (fictional)\tBusiness cards\tClosed\tOwner\tNo follow-up\t\tLost"
+        },
+        "steps": [
+          "Select the complete header and record range. Choose Data → Create filter view, then filter Outcome to Open and sort Next action due from earliest to latest. Save the view as Follow-ups. A filter view lets another person keep a different view of the same records.",
+          "With the example rows, O-209 should appear before O-208 and O-210 should be hidden. Check that the entire row moves together: a name must never become attached to another opportunity’s due date.",
+          "Create a second review for missing owners or missing next-action dates. Keep these records visible for repair instead of treating blank dates as evidence that no follow-up is needed.",
+          "At the end of each conversation, update the next action and its date. If this small routine solves the problem, keep the sheet. Move to a CRM when ownership, relationship history, permissions, or repeated follow-up still break down."
+        ],
+        "sourceUrls": [
+          "https://support.google.com/docs/answer/3540681?hl=en"
+        ]
+      },
+      {
+        "id": "hubspot-import-example",
+        "title": "If you choose HubSpot, migrate a small sample first",
+        "paragraphs": [
+          "Keep your original export untouched. Your sheet’s C-104 is an internal example ID, not a HubSpot Record ID. Do not map it to that field. A record ID exported by the CRM is the identifier for that CRM record; mixing the two can update the wrong record or fail the import.",
+          "Prepare three synthetic contacts in a test workspace or a clearly marked test segment. Check whether contact creation can enroll records in existing workflows before importing. Keep marketing status separate from storing an inquiry; the import is not a reason to subscribe someone to marketing."
+        ],
+        "example": {
+          "title": "A minimum contact import to rehearse",
+          "content": "First name\tLast name\tEmail\nAlex\tMorgan\talex@example.com\nSam\tLee\tsam@example.com\nTaylor\tReed\ttaylor@example.com\n\nDo not send email to these example addresses.\nSource IDs such as C-104 belong in a separately mapped property if needed.\nDo not label them HubSpot Record ID."
+        },
+        "steps": [
+          "Open Data Management → Data Integration (under More when present), choose Import data → Advanced imports, and select Contacts. Pick the create/update mode deliberately; it changes what existing records can receive.",
+          "Upload the rehearsal file or paste from the spreadsheet. Map Email to the contact email identifier, and map the two name columns. Review unmapped columns rather than accepting every automatic guess.",
+          "For existing HubSpot records, use IDs exported from HubSpot and inspect the overwrite options. For this new-contact rehearsal, do not invent CRM record IDs. Read the account’s consent and data-use confirmations truthfully before finishing.",
+          "After the import, inspect the actual contacts and error report. Check names, identifiers, ownership, and a deliberately changed sample before migrating the live set."
+        ],
+        "sourceUrls": [
+          "https://knowledge.hubspot.com/import-and-export/import-records-for-a-single-object"
+        ]
+      },
+      {
+        "id": "handoff-and-recovery",
+        "title": "Carry the customer into delivery without copying the whole CRM",
+        "paragraphs": [
+          "For the brochure example, create the delivery project only when the acceptance condition is met. Store the opportunity reference and a link to the contact record on the project. Keep the CRM responsible for relationship details and the project tool responsible for deliverables. This avoids two independently editable email addresses that drift apart.",
+          "If you import contacts and deals together in HubSpot, use the correct unique identifiers for each object and check the resulting association. Contact emails and CRM record IDs serve different purposes. Custom association labels require an eligible plan; an ordinary customer-to-deal connection does not justify buying advanced labels by itself.",
+          "A completed import is not an exact backup. Notes, tasks, files, and relationship history have their own behavior. Export the records you changed, keep the original source, and record a small migration batch so you can identify its effects."
+        ],
+        "example": {
+          "title": "The handoff record and release test",
+          "content": "DELIVERY HANDOFF — SYNTHETIC EXAMPLE\nProject: P-051 / 8-page brochure\nOpportunity reference: O-208\nContact reference: C-104\nAccepted scope: 8 pages, approved copy supplied by client\nAcceptance evidence: link to the actual approved agreement\nDelivery owner: named person\nNext task: request approved copy\nDue: an agreed date, not an AI estimate\n\nCHECKS BEFORE SWITCHING THE LIVE INTAKE\n[ ] Alex has one contact and two distinct opportunities.\n[ ] Brochure project points to O-208, not O-209.\n[ ] Closed opportunity is absent from open follow-ups.\n[ ] Missing owner/date appears in the repair view.\n[ ] No test contact was enrolled in marketing.\n[ ] An unauthorized account cannot read the records.\n[ ] Original export and a record of the import are retained."
+        },
+        "sourceUrls": [
+          "https://knowledge.hubspot.com/import-and-export/import-objects"
+        ],
+        "links": [
+          {
+            "title": "Build Tally intake, a Google Sheets register, and a Gmail draft",
+            "url": "/playbooks/service-lead-follow-up/",
+            "label": "Connect the next step"
+          }
+        ]
+      },
+      {
         "id": "migrate",
         "title": "Move the records without breaking the business",
         "paragraphs": [],
@@ -142,18 +207,52 @@
         "claims": [
           "How linked records connect related information across tables. Product-specific plan details are sourced in the linked tool guides."
         ]
+      },
+      {
+        "title": "Google Sheets: sort and filter data",
+        "url": "https://support.google.com/docs/answer/3540681?hl=en",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Filter view controls; the worked review-sheet design is original."
+        ]
+      },
+      {
+        "title": "HubSpot: single-object import",
+        "url": "https://knowledge.hubspot.com/import-and-export/import-records-for-a-single-object",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Import controls, identifiers, update modes and permission prerequisites."
+        ]
+      },
+      {
+        "title": "HubSpot: multiple-object import",
+        "url": "https://knowledge.hubspot.com/import-and-export/import-objects",
+        "checkedAt": "2026-11-01",
+        "claims": [
+          "Associations, unique identifiers, and plan restrictions on association labels."
+        ]
       }
     ],
     "publishedAt": "2026-10-31",
     "lastReviewed": "2026-11-01",
     "reviewNotes": [
       "This guide combines official product documentation with original workflow analysis. The sample business records and calculations are illustrative; they are not customer results or a hands-on product benchmark."
+    ],
+    "kitId": "crm-spreadsheet",
+    "modifiedAt": "2026-11-01",
+    "updateNote": "Added a filled follow-up sheet, a HubSpot rehearsal import, and a customer-to-project handoff with duplicate, ownership, and permission checks.",
+    "releaseChecks": [
+      "Each open opportunity has a stable ID, owner, next action, and date.",
+      "The same contact can have two opportunities without duplicate identity records.",
+      "The import maps actual CRM identifiers correctly.",
+      "Rehearsal contacts do not trigger customer emails or marketing.",
+      "The original export, migration batch record, and recovery plan are retained."
     ]
   },
   {
     "route": "/guides/ai-receptionist-vs-answering-service-vs-voicemail/",
-    "title": "AI receptionist, answering service, or voicemail: what fits your calls?",
-    "summary": "Compare call handling by urgency, intake quality, billing units, and a worked cost example. Includes a ready-to-adapt script and a complete test plan.",
+    "title": "Auto-attendant vs AI receptionist: compare all four call options",
+    "summary": "Compare voicemail, auto-attendants, AI receptionists, and human answering services. Build intake, Calendly booking, and human handoff with vendor screenshots, billing limits, and a complete test script.",
     "label": "Phone systems",
     "intro": "A missed call can be a new customer, an existing customer asking for an update, or someone who needs an immediate human response. Treating every call as a sales lead produces bad routing. Choosing a receptionist begins with deciding what should happen to each type of call—and who owns the next action.",
     "answer": "Voicemail works when a message and a reliable callback are enough. An AI receptionist fits repeatable questions and structured intake. A live answering service is a stronger option when callers need a human conversation. A hybrid only works when the handoff reaches an available person or creates an explicitly owned callback.",
@@ -302,23 +401,228 @@
       }
     ],
     "toolIds": [
-      "smith-ai"
+      "smith-ai",
+      "calendly"
     ],
     "namedSources": [
       {
-        "title": "Smith.ai: AI receptionist plans",
-        "url": "https://smith.ai/pricing/ai-receptionist",
+        "id": "ringcentral-auto-attendant",
+        "publisher": "RingCentral",
+        "title": "RingCentral auto-attendants",
+        "url": "https://www.ringcentral.com/features/auto-attendant",
         "checkedAt": "2026-11-01",
-        "claims": [
-          "Free includes 25 real calls per month with $3 additional calls; features and packages differ."
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Traditional routing and overlap in AI auto-attendant product terminology."
         ]
       },
       {
-        "title": "Ruby: virtual receptionist plans and pricing",
+        "id": "microsoft-auto-attendant",
+        "publisher": "Microsoft",
+        "title": "Microsoft auto-attendant configuration",
+        "url": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-auto-attendant",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Voice > Auto attendants > Add; time zone, operator and after-hours routing, linked licensing requirements."
+        ]
+      },
+      {
+        "id": "panasonic-voicemail",
+        "publisher": "Panasonic",
+        "title": "Panasonic’s voicemail explanation",
+        "url": "https://help.na.panasonic.com/answers/what-is-voicemail-service-and-how-to-use-with-a-telephone-with-an-answering-machine/",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Provider-hosted voice message recording and retrieval."
+        ]
+      },
+      {
+        "id": "smith-pricing",
+        "publisher": "Smith.ai",
+        "title": "Smith.ai pricing",
+        "url": "https://smith.ai/pricing/ai-receptionist",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Free25 real calls/$3 extra; Pro75calls/$150 and$2.50 extra. Included-call average differs from overage rate."
+        ]
+      },
+      {
+        "id": "smith-free-details",
+        "publisher": "Smith.ai",
+        "title": "Free-plan billing and limit behavior",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232723-your-free-plan-how-it-works",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Separate25real/25test/50simulated call pools. Extra Calls off by default redirects call26. Booking/human options $3/call; combined Freecall cap$6."
+        ]
+      },
+      {
+        "id": "ruby-pricing",
+        "publisher": "Ruby",
+        "title": "Ruby’s human service",
         "url": "https://www.ruby.com/plans-and-pricing/",
         "checkedAt": "2026-11-01",
-        "claims": [
-          "Listed live receptionist tiers are priced by included receptionist minutes."
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Human receptionist pricing $250/50minutes and$395/100minutes. Not a service-quality comparison."
+        ]
+      },
+      {
+        "id": "smith-business-info",
+        "publisher": "Smith.ai",
+        "title": "Business information",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199595-how-to-set-up-your-business-information",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Business name, website, address, hours; saved changes apply immediately; older Business Info label."
+        ]
+      },
+      {
+        "id": "smith-faq",
+        "publisher": "Smith.ai",
+        "title": "FAQ editing and limits",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199592-how-to-set-up-and-manage-frequently-asked-questions-faqs-",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Profile FAQ editor,50-question total including accepted suggestions; suggestion approval."
+        ]
+      },
+      {
+        "id": "smith-caller-types",
+        "publisher": "Smith.ai",
+        "title": "Caller-type settings",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199596-who-is-calling-you-and-what-are-caller-types-",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "New/existing/default caller configuration includes intake and next action."
+        ]
+      },
+      {
+        "id": "calendly-events",
+        "publisher": "Calendly",
+        "title": "Calendly’s event controls",
+        "url": "https://calendly.com/help/how-to-customize-your-event-types",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Scheduling event editor; duration, host, availability, notice, buffers, form and notifications."
+        ]
+      },
+      {
+        "id": "calendly-buffers",
+        "publisher": "Calendly",
+        "title": "buffer behavior",
+        "url": "https://calendly.com/help/how-to-use-buffers",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Buffer time affects available bookings."
+        ]
+      },
+      {
+        "id": "smith-calendly-connect",
+        "publisher": "Smith.ai",
+        "title": "Calendly connection requirement",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221010-how-to-connect-your-calendly-account-to-ai-receptionist",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Paid Calendly required; native connection and authorization; connected state."
+        ]
+      },
+      {
+        "id": "smith-calendly-schedule",
+        "publisher": "Smith.ai",
+        "title": "enable scheduling for the caller type",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221015-how-to-enable-scheduling-with-calendly",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Separate caller-type scheduling activation; one direct event link, no landing/single-use links; event controls duration/availability."
+        ]
+      },
+      {
+        "id": "smith-public-calendar",
+        "publisher": "Smith.ai",
+        "title": "Public booking-page scheduling with live agents",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000207089-how-to-enable-scheduling-with-ai-receptionist-live-agents",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Human scheduling needs public booking page; $3/call add-on."
+        ]
+      },
+      {
+        "id": "smith-handoff-settings",
+        "publisher": "Smith.ai",
+        "title": "Original settings guide and image credit",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222814",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Caller escalation can route to own team or live-agent network."
+        ]
+      },
+      {
+        "id": "smith-human-billing",
+        "publisher": "Smith.ai",
+        "title": "Which human interactions are billable",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222817-live-agent-add-on-billing-overview",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "$3 qualifying live-agent call charged once per call; transfer to business is not that add-on."
+        ]
+      },
+      {
+        "id": "smith-goals",
+        "publisher": "Smith.ai",
+        "title": "Creating goals and scenarios",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232640-how-to-set-up-goals-and-scenarios-in-quality-studio",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Goal/scenario creation; caller behavior and expected receptionist result."
+        ]
+      },
+      {
+        "id": "smith-test-boundaries",
+        "publisher": "Smith.ai",
+        "title": "What each call type can actually test",
+        "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232641-simulated-calls-vs-test-calls-in-quality-studio-or-understanding-call-types-in-quality-studio",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Simulation ends at booking/transfer and cannot check live availability; browser test calls exercise handoffs; use own account control."
+        ]
+      },
+      {
+        "id": "calendly-troubleshooting",
+        "publisher": "Calendly",
+        "title": "Calendly availability codes",
+        "url": "https://calendly.com/help/how-to-troubleshoot-unavailable-times-that-should-be-available",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Event preview troubleshooting; NOCAL calendar access and CALENDAR busy conflict; duration/notice/buffers."
+        ]
+      },
+      {
+        "id": "webex-combined-routing",
+        "publisher": "Cisco",
+        "title": "Cisco’s combined auto-attendant / AI routing instructions",
+        "url": "https://help.webex.com/en-us/article/4chov0/AI-Receptionist-v-Webex-Calling",
+        "checkedAt": "2026-11-01",
+        "evidenceType": "official-documentation",
+        "supports": [
+          "Schedule-based Auto Attendant treatment before AI; test components and combined flow; avoid loops."
         ]
       }
     ],
@@ -326,7 +630,110 @@
     "lastReviewed": "2026-11-01",
     "reviewNotes": [
       "This guide combines official product documentation with original workflow analysis. The sample business records and calculations are illustrative; they are not customer results or a hands-on product benchmark."
-    ]
+    ],
+    "bodyFile": "content/ai-receptionist-expanded.html",
+    "contents": [
+      {
+        "id": "choose",
+        "title": "Auto-attendant vs AI receptionist: routing a call and handling a request are different jobs.",
+        "label": "Choose among four options"
+      },
+      {
+        "id": "cost",
+        "title": "The “free” answering plan can still have paid booking and overages.",
+        "label": "Plans and call costs"
+      },
+      {
+        "id": "route",
+        "title": "Write one call map before configuring any tool.",
+        "label": "Write the call map"
+      },
+      {
+        "id": "voicemail",
+        "title": "Keep voicemail when a dependable callback is enough; keep a menu when it saves a transfer.",
+        "label": "Voicemail and menus"
+      },
+      {
+        "id": "setup",
+        "title": "Configure a narrow intake before connecting the calendar.",
+        "label": "Configure intake"
+      },
+      {
+        "id": "connect",
+        "title": "Prepare Calendly, then connect and activate the correct event.",
+        "label": "Connect the calendar"
+      },
+      {
+        "id": "handoff",
+        "title": "“Your team” and a paid receptionist are different destinations.",
+        "label": "Transfers and fallback"
+      },
+      {
+        "id": "test",
+        "title": "A simulated conversation does not prove that booking or transfer works.",
+        "label": "Test the complete call"
+      },
+      {
+        "id": "fixes",
+        "title": "When a caller is answered but the work is missing, check the destination.",
+        "label": "Troubleshoot missing outcomes"
+      },
+      {
+        "id": "measure",
+        "title": "Measure correct outcomes and interruptions.",
+        "label": "Measure the outcome"
+      },
+      {
+        "id": "faq",
+        "title": "Common questions",
+        "label": "Common questions"
+      },
+      {
+        "id": "downloads",
+        "title": "Take the complete setup kit.",
+        "label": "Download the kit"
+      },
+      {
+        "id": "sources",
+        "title": "What we checked, and what still needs your test",
+        "label": "Sources and method"
+      }
+    ],
+    "releaseChecks": [
+      "Each caller type has an allowed action and a clear stopping point.",
+      "The fallback number or voicemail works when paid calls are disabled or a limit is reached.",
+      "Booking finds the correct event, timezone, availability, and confirmation in a controlled test.",
+      "A request for a person reaches the intended staffed destination; the unavailable case has a fallback.",
+      "The assistant does not invent price, availability, safety advice, or an appointment it cannot confirm.",
+      "Call, booking, live-agent, and telephony charges are understood before live routing.",
+      "The original phone routing is recorded and can be restored.",
+      "The real-call test passed; a simulation alone is not treated as a booking or transfer test."
+    ],
+    "sourceUrls": [
+      "https://www.ringcentral.com/features/auto-attendant",
+      "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-auto-attendant",
+      "https://help.na.panasonic.com/answers/what-is-voicemail-service-and-how-to-use-with-a-telephone-with-an-answering-machine/",
+      "https://smith.ai/pricing/ai-receptionist",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232723-your-free-plan-how-it-works",
+      "https://www.ruby.com/plans-and-pricing/",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199595-how-to-set-up-your-business-information",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199592-how-to-set-up-and-manage-frequently-asked-questions-faqs-",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199596-who-is-calling-you-and-what-are-caller-types-",
+      "https://calendly.com/help/how-to-customize-your-event-types",
+      "https://calendly.com/help/how-to-use-buffers",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221010-how-to-connect-your-calendly-account-to-ai-receptionist",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221015-how-to-enable-scheduling-with-calendly",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000207089-how-to-enable-scheduling-with-ai-receptionist-live-agents",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222814",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222817-live-agent-add-on-billing-overview",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232640-how-to-set-up-goals-and-scenarios-in-quality-studio",
+      "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232641-simulated-calls-vs-test-calls-in-quality-studio-or-understanding-call-types-in-quality-studio",
+      "https://calendly.com/help/how-to-troubleshoot-unavailable-times-that-should-be-available",
+      "https://help.webex.com/en-us/article/4chov0/AI-Receptionist-v-Webex-Calling"
+    ],
+    "modifiedAt": "2026-11-01",
+    "kitId": "ai-receptionist",
+    "updateNote": "Expanded to distinguish voicemail, auto-attendants, AI receptionists, and human answering services. Added source-based setup steps, genuine vendor screenshots, worked call costs, booking and transfer limits, and an eight-case test plan."
   },
   {
     "route": "/guides/how-i-made-this-ai-avatar-video-with-heygen/",
@@ -1249,5 +1656,104 @@
     "reviewNotes": [
       "The recommendations are editorial judgments based on the workflow described. Examples and calculations are original illustrations, not measured customer outcomes. Current product details are documented in the linked comparisons and tool profiles."
     ]
+  },
+  {
+    "route": "/tools/ai-assistant/",
+    "title": "AI assistants for small business: choose a tool and finish your first task",
+    "summary": "Compare ChatGPT, Claude, Gemini and Perplexity by the work you need. See free and paid plan boundaries, complete seller/service/creator examples, and a five-task trial that measures factual errors and correction time.",
+    "label": "AI assistant buying guide",
+    "intro": "Choose an assistant by the job, verify the plan and run the same tasks before committing. Includes complete business outputs and a reusable trial kit.",
+    "bodyFile": "content/ai-assistant-expanded.html",
+    "toolIds": [
+      "chatgpt",
+      "claude",
+      "gemini",
+      "perplexity"
+    ],
+    "sourceUrls": [
+      "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview",
+      "https://support.claude.com/en/articles/9517075-what-are-projects",
+      "https://support.google.com/a/users/answer/15146419?hl=en",
+      "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+      "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+      "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects",
+      "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "https://claude.com/pricing",
+      "https://help.openai.com/en/articles/8792828-chatgpt-business-overview",
+      "https://support.google.com/drive/answer/13952129?hl=en-en",
+      "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt",
+      "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+      "https://support.google.com/a/users/answer/17010577?hl=en"
+    ],
+    "contents": [
+      {
+        "id": "quick-choice",
+        "title": "Choose the assistant by the job"
+      },
+      {
+        "id": "what-an-assistant-does",
+        "title": "Answers, actions and background work"
+      },
+      {
+        "id": "plan-costs",
+        "title": "Free, paid, workspace or API"
+      },
+      {
+        "id": "first-task",
+        "title": "Create a useful first output"
+      },
+      {
+        "id": "business-examples",
+        "title": "Seller, service and creator examples"
+      },
+      {
+        "id": "save-workflow",
+        "title": "Save the approved workflow"
+      },
+      {
+        "id": "five-task-trial",
+        "title": "Run the five-task comparison"
+      },
+      {
+        "id": "stop-and-fix",
+        "title": "Fix unsupported promises"
+      },
+      {
+        "id": "next-workflow",
+        "title": "Continue to the implementation"
+      },
+      {
+        "id": "downloads",
+        "title": "Download the working kit"
+      },
+      {
+        "id": "common-questions",
+        "title": "Common buying questions"
+      },
+      {
+        "id": "evidence-notes",
+        "title": "Evidence and scope"
+      }
+    ],
+    "releaseChecks": [
+      "The reader can choose a job and identify a plausible assistant route.",
+      "Free, individual paid, workspace and API access are clearly distinguished.",
+      "Quoted rates specify payment frequency, seat minimums and exclusions.",
+      "All three fictional examples contain complete inputs and outputs.",
+      "The five-task scorecard has no fabricated observations or quality ratings.",
+      "UI instructions are scoped to documented current account interfaces.",
+      "Copied data and business promises require an actual factual check.",
+      "Internal links lead to the relevant implementation and comparison pages."
+    ],
+    "kitId": "ai-assistant",
+    "publishedAt": "2026-10-31",
+    "modifiedAt": "2026-11-01",
+    "lastReviewed": "2026-11-01",
+    "sections": [],
+    "namedSources": [],
+    "reviewNotes": [
+      "Official documentation reviewed. Examples and proposed tests are original editorial material. No firsthand comparative assistant testing, private analytics or business results are published."
+    ],
+    "updateNote": "Replaced the short category introduction with a complete buyer guide: four assistant routes, current plan boundaries, three finished business examples, and a five-task trial with a portable working kit."
   }
 ]

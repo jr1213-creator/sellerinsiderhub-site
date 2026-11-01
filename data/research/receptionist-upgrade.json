@@ -1,0 +1,515 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-01",
+  "existingRoute": "/guides/ai-receptionist-vs-answering-service-vs-voicemail/",
+  "route": "/guides/ai-receptionist-vs-answering-service-vs-voicemail/",
+  "bodyFile": "content/ai-receptionist-expanded.html",
+  "title": "Auto-attendant vs AI receptionist: compare all four call options",
+  "summary": "Compare voicemail, auto-attendants, AI receptionists, and human answering services. Build intake, Calendly booking, and human handoff with vendor screenshots, billing limits, and a complete test script.",
+  "toolIds": [
+    "smith-ai",
+    "calendly"
+  ],
+  "contents": [
+    {
+      "id": "choose",
+      "title": "Auto-attendant vs AI receptionist: routing a call and handling a request are different jobs."
+    },
+    {
+      "id": "cost",
+      "title": "The “free” answering plan can still have paid booking and overages."
+    },
+    {
+      "id": "route",
+      "title": "Write one call map before configuring any tool."
+    },
+    {
+      "id": "voicemail",
+      "title": "Keep voicemail when a dependable callback is enough; keep a menu when it saves a transfer."
+    },
+    {
+      "id": "setup",
+      "title": "Configure a narrow intake before connecting the calendar."
+    },
+    {
+      "id": "connect",
+      "title": "Prepare Calendly, then connect and activate the correct event."
+    },
+    {
+      "id": "handoff",
+      "title": "“Your team” and a paid receptionist are different destinations."
+    },
+    {
+      "id": "test",
+      "title": "A simulated conversation does not prove that booking or transfer works."
+    },
+    {
+      "id": "fixes",
+      "title": "When a caller is answered but the work is missing, check the destination."
+    },
+    {
+      "id": "measure",
+      "title": "Measure correct outcomes and interruptions."
+    },
+    {
+      "id": "faq",
+      "title": "Common questions"
+    },
+    {
+      "id": "downloads",
+      "title": "Take the complete setup kit."
+    },
+    {
+      "id": "sources",
+      "title": "What we checked, and what still needs your test"
+    }
+  ],
+  "sourceURLs": [
+    "https://www.ringcentral.com/features/auto-attendant",
+    "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-auto-attendant",
+    "https://help.na.panasonic.com/answers/what-is-voicemail-service-and-how-to-use-with-a-telephone-with-an-answering-machine/",
+    "https://smith.ai/pricing/ai-receptionist",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232723-your-free-plan-how-it-works",
+    "https://www.ruby.com/plans-and-pricing/",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199595-how-to-set-up-your-business-information",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199592-how-to-set-up-and-manage-frequently-asked-questions-faqs-",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199596-who-is-calling-you-and-what-are-caller-types-",
+    "https://calendly.com/help/how-to-customize-your-event-types",
+    "https://calendly.com/help/how-to-use-buffers",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221010-how-to-connect-your-calendly-account-to-ai-receptionist",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221015-how-to-enable-scheduling-with-calendly",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000207089-how-to-enable-scheduling-with-ai-receptionist-live-agents",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222814",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222817-live-agent-add-on-billing-overview",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232640-how-to-set-up-goals-and-scenarios-in-quality-studio",
+    "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232641-simulated-calls-vs-test-calls-in-quality-studio-or-understanding-call-types-in-quality-studio",
+    "https://calendly.com/help/how-to-troubleshoot-unavailable-times-that-should-be-available",
+    "https://help.webex.com/en-us/article/4chov0/AI-Receptionist-v-Webex-Calling"
+  ],
+  "namedSources": [
+    {
+      "id": "ringcentral-auto-attendant",
+      "publisher": "RingCentral",
+      "title": "RingCentral auto-attendants",
+      "url": "https://www.ringcentral.com/features/auto-attendant",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Traditional routing and overlap in AI auto-attendant product terminology."
+      ]
+    },
+    {
+      "id": "microsoft-auto-attendant",
+      "publisher": "Microsoft",
+      "title": "Microsoft auto-attendant configuration",
+      "url": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-auto-attendant",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Voice > Auto attendants > Add; time zone, operator and after-hours routing, linked licensing requirements."
+      ]
+    },
+    {
+      "id": "panasonic-voicemail",
+      "publisher": "Panasonic",
+      "title": "Panasonic’s voicemail explanation",
+      "url": "https://help.na.panasonic.com/answers/what-is-voicemail-service-and-how-to-use-with-a-telephone-with-an-answering-machine/",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Provider-hosted voice message recording and retrieval."
+      ]
+    },
+    {
+      "id": "smith-pricing",
+      "publisher": "Smith.ai",
+      "title": "Smith.ai pricing",
+      "url": "https://smith.ai/pricing/ai-receptionist",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Free25 real calls/$3 extra; Pro75calls/$150 and$2.50 extra. Included-call average differs from overage rate."
+      ]
+    },
+    {
+      "id": "smith-free-details",
+      "publisher": "Smith.ai",
+      "title": "Free-plan billing and limit behavior",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232723-your-free-plan-how-it-works",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Separate25real/25test/50simulated call pools. Extra Calls off by default redirects call26. Booking/human options $3/call; combined Freecall cap$6."
+      ]
+    },
+    {
+      "id": "ruby-pricing",
+      "publisher": "Ruby",
+      "title": "Ruby’s human service",
+      "url": "https://www.ruby.com/plans-and-pricing/",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Human receptionist pricing $250/50minutes and$395/100minutes. Not a service-quality comparison."
+      ]
+    },
+    {
+      "id": "smith-business-info",
+      "publisher": "Smith.ai",
+      "title": "Business information",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199595-how-to-set-up-your-business-information",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Business name, website, address, hours; saved changes apply immediately; older Business Info label."
+      ]
+    },
+    {
+      "id": "smith-faq",
+      "publisher": "Smith.ai",
+      "title": "FAQ editing and limits",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199592-how-to-set-up-and-manage-frequently-asked-questions-faqs-",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Profile FAQ editor,50-question total including accepted suggestions; suggestion approval."
+      ]
+    },
+    {
+      "id": "smith-caller-types",
+      "publisher": "Smith.ai",
+      "title": "Caller-type settings",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199596-who-is-calling-you-and-what-are-caller-types-",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "New/existing/default caller configuration includes intake and next action."
+      ]
+    },
+    {
+      "id": "calendly-events",
+      "publisher": "Calendly",
+      "title": "Calendly’s event controls",
+      "url": "https://calendly.com/help/how-to-customize-your-event-types",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Scheduling event editor; duration, host, availability, notice, buffers, form and notifications."
+      ]
+    },
+    {
+      "id": "calendly-buffers",
+      "publisher": "Calendly",
+      "title": "buffer behavior",
+      "url": "https://calendly.com/help/how-to-use-buffers",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Buffer time affects available bookings."
+      ]
+    },
+    {
+      "id": "smith-calendly-connect",
+      "publisher": "Smith.ai",
+      "title": "Calendly connection requirement",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221010-how-to-connect-your-calendly-account-to-ai-receptionist",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Paid Calendly required; native connection and authorization; connected state."
+      ]
+    },
+    {
+      "id": "smith-calendly-schedule",
+      "publisher": "Smith.ai",
+      "title": "enable scheduling for the caller type",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221015-how-to-enable-scheduling-with-calendly",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Separate caller-type scheduling activation; one direct event link, no landing/single-use links; event controls duration/availability."
+      ]
+    },
+    {
+      "id": "smith-public-calendar",
+      "publisher": "Smith.ai",
+      "title": "Public booking-page scheduling with live agents",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000207089-how-to-enable-scheduling-with-ai-receptionist-live-agents",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Human scheduling needs public booking page; $3/call add-on."
+      ]
+    },
+    {
+      "id": "smith-handoff-settings",
+      "publisher": "Smith.ai",
+      "title": "Original settings guide and image credit",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222814",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Caller escalation can route to own team or live-agent network."
+      ]
+    },
+    {
+      "id": "smith-human-billing",
+      "publisher": "Smith.ai",
+      "title": "Which human interactions are billable",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222817-live-agent-add-on-billing-overview",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "$3 qualifying live-agent call charged once per call; transfer to business is not that add-on."
+      ]
+    },
+    {
+      "id": "smith-goals",
+      "publisher": "Smith.ai",
+      "title": "Creating goals and scenarios",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232640-how-to-set-up-goals-and-scenarios-in-quality-studio",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Goal/scenario creation; caller behavior and expected receptionist result."
+      ]
+    },
+    {
+      "id": "smith-test-boundaries",
+      "publisher": "Smith.ai",
+      "title": "What each call type can actually test",
+      "url": "https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232641-simulated-calls-vs-test-calls-in-quality-studio-or-understanding-call-types-in-quality-studio",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Simulation ends at booking/transfer and cannot check live availability; browser test calls exercise handoffs; use own account control."
+      ]
+    },
+    {
+      "id": "calendly-troubleshooting",
+      "publisher": "Calendly",
+      "title": "Calendly availability codes",
+      "url": "https://calendly.com/help/how-to-troubleshoot-unavailable-times-that-should-be-available",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Event preview troubleshooting; NOCAL calendar access and CALENDAR busy conflict; duration/notice/buffers."
+      ]
+    },
+    {
+      "id": "webex-combined-routing",
+      "publisher": "Cisco",
+      "title": "Cisco’s combined auto-attendant / AI routing instructions",
+      "url": "https://help.webex.com/en-us/article/4chov0/AI-Receptionist-v-Webex-Calling",
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "supports": [
+        "Schedule-based Auto Attendant treatment before AI; test components and combined flow; avoid loops."
+      ]
+    }
+  ],
+  "download": {
+    "url": "/resources/kits/ai-receptionist.txt",
+    "sourceBlocks": [
+      "receptionist-brief",
+      "receptionist-voicemail",
+      "receptionist-transcript"
+    ],
+    "include": "Complete examples, acceptance checklist, source links and checked date"
+  },
+  "methodology": {
+    "basis": "Official pricing and implementation documents plus original workflow analysis",
+    "handsOnVendorTest": false,
+    "accountsCreated": false,
+    "callsPlaced": false,
+    "numbersPurchasedOrPorted": false,
+    "limits": "No claim of measured call quality, successful vendor execution, customer result or revenue gain. Synthetic transcript labeled."
+  },
+  "searchEvidence": {
+    "publicSearchReview": {
+      "method": "Public web-search retrieval of these phrases on November1; not a live Google-ranking audit or keyword-volume estimate.",
+      "observedUrls": [
+        "https://useline.io/resources/auto-attendant-vs-ai-receptionist",
+        "https://www.nextiva.com/blog/ai-receptionist-vs-auto-attendant.html",
+        "https://www.leadfriendly.com/guides/ai-receptionist-vs-ivr-vs-answering-service-vs-voicemail",
+        "https://plainscout.com/guides/ai-receptionist-vs-answering-service/",
+        "https://www.quo.com/blog/voicemail-vs-answering-service/"
+      ],
+      "findings": [
+        "Comparison intent: routing versus handling, human destination, existing number, after-hours coverage, booking, complete cost.",
+        "Guide adds a complete cross-tool implementation, verification cases, explicit unknown costs and a synthetic completed record."
+      ],
+      "excluded": "No competitor ROI averages or unverified quality rankings adopted."
+    }
+  },
+  "factualFindings": [
+    {
+      "id": "missing-auto-attendant",
+      "finding": "The previous page omitted auto-attendant from the title and comparison table. The expanded guide explains all four options supported by the public search review.",
+      "sourceIds": [
+        "ringcentral-auto-attendant",
+        "microsoft-auto-attendant"
+      ]
+    },
+    {
+      "id": "free-booking-is-not-free",
+      "finding": "Marketing lists capability; detailed Free help states $3 booking feature, and native Calendly requires paid account.",
+      "sourceIds": [
+        "smith-pricing",
+        "smith-free-details",
+        "smith-calendly-connect"
+      ],
+      "requiresCatalogReview": true
+    },
+    {
+      "id": "free-limit-fallback",
+      "finding": "Extra Calls OFF default redirects call26; infinite answering not implied.",
+      "sourceIds": [
+        "smith-free-details"
+      ],
+      "requiresCatalogReview": true
+    },
+    {
+      "id": "calendar-link-gate",
+      "finding": "Connection and caller-type activation are separate; direct single event link needed.",
+      "sourceIds": [
+        "smith-calendly-connect",
+        "smith-calendly-schedule"
+      ]
+    },
+    {
+      "id": "simulation-boundary",
+      "finding": "Simulation cannot validate real calendar availability or complete handoff; controlled testcall needed.",
+      "sourceIds": [
+        "smith-test-boundaries"
+      ]
+    },
+    {
+      "id": "human-billing",
+      "finding": "Own-team and paid human destinations differ. Qualifying live-agent call $3once, external business transfer not classified as this add-on.",
+      "sourceIds": [
+        "smith-handoff-settings",
+        "smith-human-billing"
+      ]
+    }
+  ],
+  "workedCosts": {
+    "currency": "USD",
+    "status": "illustrative within verified scope",
+    "calls": 40,
+    "smithFreeIntakeOnly": {
+      "includedCalls": 25,
+      "extraCallRate": 3,
+      "extraCalls": 15,
+      "subtotal": 45
+    },
+    "smithFreeWithTenPaidFeatureCalls": {
+      "paidFeatureCalls": 10,
+      "paidFeatureRate": 3,
+      "additionalFeatures": 30,
+      "subtotal": 75
+    },
+    "rubySelectedTier": {
+      "assumedMinutesPerCall": 2,
+      "assumedBillableMinutes": 80,
+      "tierMinutes": 100,
+      "monthlyPrice": 395,
+      "limitation": "Lower tier plus overages not priced; no equal-quality claim."
+    },
+    "excluded": [
+      "Tax",
+      "Existing phone/forwarding",
+      "Paid Calendly",
+      "Unquoted features",
+      "Review labor"
+    ],
+    "incrementalJobExample": {
+      "contributionPerJob": 80,
+      "jobsToCover75Subtotal": 1,
+      "jobsToCover395": 5,
+      "notClaimed": "Forecast or causal result; answered calls are not all additional sales."
+    }
+  },
+  "screenshots": [
+    {
+      "path": "assets/tutorials/receptionist/smith-ai-calendly-scheduling.png",
+      "publicUrl": "/assets/tutorials/receptionist/smith-ai-calendly-scheduling.png",
+      "sourceId": "smith-calendly-schedule",
+      "originalUrl": "https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151166284645/original/vjfsj-u8MpBYzbwU2facmNNe14eamGebwA.png?1760629201=",
+      "checkedAt": "2026-11-01",
+      "sha256": "5b8b116f98084832dc8623c187090c2b5de77a5fc05d432d33b27765d814b21a",
+      "width": 778,
+      "height": 351,
+      "bytes": 36083,
+      "purpose": "Scheduling action, Calendly selector and direct booking URL",
+      "kind": "unchanged vendor documentation screenshot",
+      "visuallyInspected": true,
+      "annotations": "HTML caption only; no image editing",
+      "limitations": "Vendor example; no claim of account operation"
+    },
+    {
+      "path": "assets/tutorials/receptionist/smith-ai-human-routing.png",
+      "publicUrl": "/assets/tutorials/receptionist/smith-ai-human-routing.png",
+      "sourceId": "smith-handoff-settings",
+      "originalUrl": "https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151171751503/original/AvFIjs0rV5tlRlvd9FjeUDLyxHGZRkVlLg.png?1763650983=",
+      "checkedAt": "2026-11-01",
+      "sha256": "5ee602988c45730e0124d6a1e961978fb5689b1750bbacb6a52d7ea74fe3c558",
+      "width": 709,
+      "height": 225,
+      "bytes": 25835,
+      "purpose": "Live-agent versus own-team choice",
+      "kind": "unchanged vendor documentation screenshot",
+      "visuallyInspected": true,
+      "annotations": "HTML caption only; no image editing",
+      "limitations": "Vendor example; no claim of account operation"
+    },
+    {
+      "path": "assets/tutorials/receptionist/smith-ai-quality-studio-test-call.png",
+      "publicUrl": "/assets/tutorials/receptionist/smith-ai-quality-studio-test-call.png",
+      "sourceId": "smith-test-boundaries",
+      "originalUrl": "https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151205849746/original/qf2LjgKTqm8hJq5BJCgK0RL_BAofV1qO4A.png?1782308764=",
+      "checkedAt": "2026-11-01",
+      "sha256": "a42a88fe52a9290743258d0c1dee2c411af41ea1254b8aed5eb86323b33b7783",
+      "width": 2048,
+      "height": 1300,
+      "bytes": 269042,
+      "purpose": "Quality Studio and test call; vendor metrics and phone number explicitly labeled",
+      "kind": "unchanged vendor documentation screenshot",
+      "visuallyInspected": true,
+      "annotations": "HTML caption only; no image editing",
+      "limitations": "Vendor example; no claim of account operation"
+    }
+  ],
+  "releaseChecks": [
+    {
+      "check": "Primary-source facts",
+      "status": "passed",
+      "evidence": "20official sources; billing detail conflict disclosed."
+    },
+    {
+      "check": "Screenshot authenticity",
+      "status": "passed",
+      "evidence": "3original public vendor images downloaded, visually checked, attributed and unedited."
+    },
+    {
+      "check": "Synthetic examples",
+      "status": "passed",
+      "evidence": "Brief/greeting/transcript labeled and limited to controlled destinations."
+    },
+    {
+      "check": "Source anchors and images",
+      "status": "passed",
+      "evidence": "Unique IDs, valid section links, local images and exactdimensions checked."
+    },
+    {
+      "check": "Live vendor execution",
+      "status": "not-performed",
+      "evidence": "No account, call, purchase or settingschange; explicitly disclosed."
+    },
+    {
+      "check": "Responsive page and kit",
+      "status": "root-integration-needed",
+      "evidence": "Root owns shared build/style and downloadable kit generation."
+    }
+  ]
+}

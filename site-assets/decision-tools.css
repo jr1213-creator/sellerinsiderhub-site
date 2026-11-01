@@ -1,0 +1,76 @@
+/* Article companion: plan economics and capacity, without a dashboard takeover. */
+.decision-tool{--decision-line:#cbd8c5;border:1px solid var(--decision-line);border-radius:16px;background:#f0f4eb;padding:clamp(20px,3vw,32px);margin:42px 0;min-width:0}
+.article-body .decision-tool h2{font-size:clamp(28px,3vw,38px);margin:.45rem 0 1rem}
+.article-body .decision-tool h3{font-family:'DM Sans',system-ui,sans-serif;font-size:18px;line-height:1.4;margin:0 0 .75rem;letter-spacing:-.01em}
+.decision-tool .decision-intro{font-size:1rem;line-height:1.65}
+.decision-tool .decision-evidence-date,.decision-tool .decision-privacy{font-size:12px;line-height:1.65;margin:12px 0;color:#4d624e}
+.decision-tool fieldset{border:0;margin:24px 0 0;padding:0;min-width:0}
+.decision-tool legend{font-weight:700;font-size:16px;padding:0;margin-bottom:16px}
+.decision-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+.decision-field{min-width:0}
+.decision-field>label{display:block;font-size:13px;font-weight:650;line-height:1.5;margin-bottom:7px;color:#223f30}
+.decision-field input[type=number]{width:100%;min-width:0;min-height:46px;border:1px solid #aebfaa;border-radius:7px;padding:10px 12px;background:#fff;color:#1d332d;font-size:16px;font-variant-numeric:tabular-nums}
+.decision-field input[aria-invalid=true]{border:2px solid #943d2b;background:#fff8f3}
+.decision-field .decision-help,.decision-tool .decision-help{display:block;color:#52654e;font-size:12px;font-weight:400;line-height:1.6;margin-top:6px}
+.decision-check{align-self:center}
+.decision-check label{display:flex;align-items:flex-start;gap:10px;margin:0;cursor:pointer;font-weight:600;line-height:1.6;min-height:30px}
+.decision-check input{width:18px;height:18px;margin:2px 0 0;flex:0 0 18px;accent-color:#234d3b}
+.decision-check .decision-help{padding-left:28px}
+.decision-form-actions,.decision-export-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:22px}
+.decision-tool .decision-status{font-size:12px;color:#3c5b39;line-height:1.6;min-height:0;margin:14px 0}
+.decision-tool .decision-status:empty{display:none}
+.decision-math{padding:18px 20px;background:#e2ebd7;border-left:3px solid #597b42;border-radius:0 9px 9px 0;margin-top:20px}
+.article-body .decision-math h3{font-size:15px;margin-bottom:7px}
+.decision-tool .decision-math p{font-size:13px;line-height:1.75;margin:.5rem 0;color:#344e31}
+.decision-tool .decision-result-intro{font-size:13px;line-height:1.7;margin:18px 0}
+.decision-plan-results{display:grid;gap:16px}
+.decision-plan{background:#fff;border:1px solid #cad6c4;border-radius:10px;padding:20px;min-width:0;break-inside:avoid}
+.decision-plan-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.decision-plan h4{font-size:17px;line-height:1.45;margin:0;color:#1e3c2b;letter-spacing:-.02em}
+.decision-plan h4 span{display:block;font-size:13px;font-weight:500;color:#52664e;letter-spacing:0;margin-top:3px}
+.decision-fit{display:inline-block;font-size:11px;font-weight:650;line-height:1.5;padding:5px 9px;border-radius:5px;background:#e7f0de;color:#2a5528}
+.decision-ineligible .decision-fit{background:#f5e8de;color:#6a3929}
+.decision-unverified .decision-fit{background:#f5eedb;color:#675016}
+.decision-costs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;border-top:1px solid #e1e6dd;border-bottom:1px solid #e1e6dd;margin:17px 0 12px;padding:15px 0}
+.decision-costs div{min-width:0}
+.decision-costs dt{font-size:11px;color:#52664e;font-weight:600;line-height:1.5;margin-bottom:6px}
+.decision-costs dd{margin:0;font-size:23px;line-height:1.3;font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:#1d332d}
+.decision-costs dd small{display:block;font-size:11px;font-weight:400;letter-spacing:0;color:#52664e;line-height:1.6;margin-top:5px}
+.decision-costs .decision-unknown{font-size:15px;font-weight:500;letter-spacing:0;color:#705621}
+.decision-tool .decision-price-units,.decision-tool .decision-scope{font-size:12px;line-height:1.6;margin:9px 0}
+.decision-reasons,.decision-plan-notes,.decision-tool-constraints{font-size:12px;line-height:1.75}
+.article-body .decision-tool ul{padding-left:20px;margin:10px 0}
+.article-body .decision-tool li{margin:6px 0}
+.decision-reasons li{color:#633f2e}
+.decision-plan-notes li{color:#53644d}
+.decision-plan-detail{font-size:12px;line-height:1.75;margin-top:12px}
+.decision-plan-detail summary{font-weight:600;cursor:pointer;color:#325334;padding:5px 0}
+.decision-plan-detail ul{color:#52664e}
+.decision-plan-sources{display:flex;gap:7px 14px;flex-wrap:wrap;margin-top:12px}
+.decision-plan-sources a{font-size:11px;text-decoration:underline;text-underline-offset:3px;color:#2b5b42;overflow-wrap:anywhere;line-height:1.6}
+.decision-plan-sources a:hover{text-decoration-thickness:2px}
+.decision-method{border-top:1px solid var(--decision-line);padding-top:20px;margin-top:25px}
+.decision-tool .decision-method p,.decision-method li,.decision-trial li{font-size:12px;line-height:1.75}
+.article-body .decision-method h3,.article-body .decision-trial h3{font-size:16px}
+.decision-reference{border-top:1px solid var(--decision-line);border-bottom:1px solid var(--decision-line);margin:23px 0 0;padding:17px 0}
+.decision-reference>summary{font-size:14px;font-weight:650;line-height:1.6;cursor:pointer;color:#234d3b;min-height:25px}
+.decision-tool .decision-static-note{font-size:12px;line-height:1.7;margin:15px 0}
+.decision-reference-tool{margin-top:22px}
+.decision-reference-tool .table-scroll{background:#fff;border:1px solid #d8e0d3;border-radius:7px;overflow:auto}
+.decision-reference-table{width:100%;border-collapse:collapse}
+.decision-reference-table caption{text-align:left;font-size:11px;font-weight:600;padding:12px;color:#4c624b;background:#edf3e7}
+.article-body .decision-reference-table th,.article-body .decision-reference-table td{font-size:11px;padding:12px;vertical-align:top;min-width:110px}
+.decision-reference-table th small{display:block;font-size:10px;font-weight:400;line-height:1.6;margin-top:4px}
+.decision-reference-table ul{padding-left:14px!important;margin:0!important;min-width:150px}
+.decision-reference-table .decision-plan-sources{min-width:150px}
+.decision-reference-table .decision-plan-sources a{font-size:10px}
+.decision-trial{margin-top:22px}
+.decision-error{background:#fff4eb;border:1px solid #d9af98;padding:18px;border-radius:8px;font-size:13px;color:#773c2c}
+.decision-tool .decision-error h3{color:#773c2c}
+.decision-tool .decision-pending{font-size:13px;background:#fff;border:1px dashed #aebdaa;border-radius:8px;padding:20px}
+.decision-copy-text{width:100%;min-height:240px;margin-top:15px;border:1px solid #aebfaa;border-radius:8px;padding:14px;background:#fff;font-family:ui-monospace,monospace;font-size:12px;line-height:1.7;resize:vertical;color:#1d332d}
+.decision-tool :focus-visible{outline:3px solid #52752d;outline-offset:4px}
+.decision-tool [data-decision-results]:focus{outline:0}
+@media(max-width:620px){.decision-tool{padding:20px 16px;margin:32px 0}.decision-fields{grid-template-columns:minmax(0,1fr);gap:17px}.decision-plan{padding:16px}.decision-costs{gap:13px}.decision-costs dd{font-size:21px}.decision-plan-heading{gap:9px}.decision-fit{font-size:10px}.decision-form-actions .button{flex:1 1 200px}.decision-export-actions .button{flex:1 1 150px}.decision-reference-table caption{font-size:10px}.decision-math{padding:15px}.article-body .decision-tool h2{font-size:28px}.decision-tool .decision-evidence-date{font-size:11px}}
+@media(max-width:360px){.decision-costs{grid-template-columns:1fr;gap:14px}}
+@media print{.decision-tool{border:1px solid #aaa;background:#fff!important;padding:18px;color:#111;break-inside:auto}.decision-tool form,.decision-export-actions,.decision-status,.decision-privacy,.decision-copy-text{display:none!important}.decision-tool .decision-plan{break-inside:avoid;box-shadow:none;border-color:#aaa}.decision-tool .decision-math{background:#fff;border-color:#777}.decision-ready .decision-reference{display:none}.decision-tool .decision-method{margin-top:18px}.decision-tool .decision-fit{border:1px solid #aaa;background:#fff!important;color:#111!important}.decision-plan-detail>ul{display:block!important}.decision-plan-sources a:after{content:' (' attr(href) ')';font-size:8pt;word-break:break-all}.decision-tool .decision-plan-sources{display:block}.decision-tool .decision-plan-sources a{display:block}.decision-tool .decision-trial{break-inside:avoid}.decision-tool .decision-costs{grid-template-columns:1fr 1fr}}

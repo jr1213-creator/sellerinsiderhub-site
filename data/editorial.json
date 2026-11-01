@@ -498,14 +498,14 @@
     },
     {
       "id": "email-welcome-sequence",
-      "title": "Build a three-email welcome sequence in MailerLite",
-      "summary": "Create the signup form, deliver a useful guide, and send two thoughtful follow-ups. Includes all three emails, the exact delay settings, and an unsubscribe check.",
+      "title": "Send a Canva lead magnet with MailerLite: the complete welcome sequence",
+      "summary": "Build the PDF, signup page, confirmed delivery, and three-email sequence. Includes a completed worksheet, every email, genuine vendor screenshots, free-plan limits, and failure checks.",
       "category": "Email",
       "audience": "Product sellers, creators, and service businesses building an email audience",
       "effort": "Allow about two hours to prepare and configure it, plus a five-day timing check; sender approval or domain changes can take longer.",
       "toolIds": [
-        "mailerlite",
-        "chatgpt"
+        "canva",
+        "mailerlite"
       ],
       "intro": "A welcome sequence works best when the first email does the thing the form promised. This example gives a small stationery shop a complete path from signup to delivery: a printable weekly planning sheet arrives immediately, a practical planning tip follows two days later, and a relevant product appears on day five. MailerLite runs the form and delivery. AI can adapt the supplied copy to your own facts, but it cannot verify the download, approve your sending domain, or decide who consented to receive email.",
       "steps": [
@@ -558,32 +558,39 @@
         }
       ],
       "pitfalls": [
-        "Adding purchasers or scraped addresses to the group does not establish permission for this sequence.",
-        "A preview email is a design check, not an enrollment or unsubscribe test.",
-        "A tag or group named “interested” cannot prove consent; retain the actual signup source and wording."
+        "A group label does not create marketing permission.",
+        "A preview message bypasses real signup and enrollment.",
+        "A copied active workflow can send duplicate welcome messages.",
+        "Free-plan limits can block delivery while a form still appears to work."
       ],
       "success": [
-        "New unconfirmed signup: confirmation arrives; the promised welcome email waits for confirmation.",
-        "Confirmed signup: exactly one email 1 arrives and its PDF opens while signed out.",
-        "Timing: record the date and time of all three deliveries; verify the two-day and three-day intervals using the live workflow.",
-        "Suppression: the second test address unsubscribes after email 1 and receives neither email 2 nor email 3.",
-        "Existing address: retry the form with a previously confirmed address and record what actually happens; do not promise automatic re-entry without configuring it.",
-        "Mobile: the download, buttons, sender identity, business details, and unsubscribe link remain legible.",
-        "Promise check: no message adds an ongoing newsletter subscription the form did not describe."
+        "One confirmed resource request starts the intended sequence once.",
+        "The delivered PDF opens without Canva access.",
+        "Messages arrive with the configured gaps.",
+        "Unsubscribe prevents subsequent sequence messages."
       ],
       "sourceUrls": [
-        "https://www.mailerlite.com/help/how-to-create-an-embedded-form",
-        "https://www.mailerlite.com/help/how-to-create-an-automation-workflow",
-        "https://www.mailerlite.com/help/how-to-use-double-opt-in-when-collecting-subscribers",
-        "https://www.mailerlite.com/help/how-to-add-a-form-to-your-website",
+        "https://www.mailerlite.com/help/how-to-send-a-freebie-lead-magnet-to-new-subscribers",
+        "https://www.mailerlite.com/pricing",
         "https://www.mailerlite.com/help/free-plan-update-faq",
-        "https://www.mailerlite.com/help/how-to-create-and-use-groups"
+        "https://www.canva.com/create/pdf-maker/",
+        "https://www.canva.com/help/download-file-types/",
+        "https://www.mailerlite.com/help/importing-pdf-files-in-mailerlite",
+        "https://www.mailerlite.com/help/how-to-verify-and-authenticate-your-domain",
+        "https://www.mailerlite.com/help/troubleshooting-domain-authentication",
+        "https://www.mailerlite.com/help/how-to-create-and-use-groups",
+        "https://www.mailerlite.com/help/new-landing-page-builder",
+        "https://www.mailerlite.com/help/how-to-use-double-opt-in-when-collecting-subscribers",
+        "https://www.mailerlite.com/help/how-to-create-an-automation-workflow",
+        "https://www.mailerlite.com/help/how-to-use-automation-steps",
+        "https://www.mailerlite.com/help/how-to-set-up-automation-triggers",
+        "https://www.mailerlite.com/help/automations-faq"
       ],
       "prerequisites": [
-        "A MailerLite account allowed to send, an approved sender address, and access to any domain authentication settings MailerLite requests. Finish account approval before announcing the form.",
-        "A finished, readable PDF hosted at a public URL you control. Open that URL while signed out; a private cloud-drive preview is not a reliable delivery link.",
-        "Your real business name, postal address, privacy-policy URL, and permission wording. This example promises the download plus two related emails; it does not enroll people in an indefinite newsletter.",
-        "Two fresh email addresses you control for the complete-flow and unsubscribe checks. Do not test by adding unsuspecting customers."
+        "A free Canva account and original or permitted resource content.",
+        "A MailerLite account allowed to send, an approved sender, privacy policy, business details, and access to any required domain-authentication settings.",
+        "Space within the current subscriber, send, landing-page, and automation limits.",
+        "Two fresh controlled email addresses for enrollment and unsubscribe tests."
       ],
       "example": {
         "title": "A stationery shop delivers a printable planning sheet",
@@ -611,7 +618,7 @@
       "expectedOutcome": "One confirmed signup group, one live form, and one three-email workflow with a working download, visible sender details, a functioning unsubscribe link, and a written record of delivery checks.",
       "researchIntent": "How to build a MailerLite welcome sequence with AI-drafted copy, an embedded form, group trigger, delays, and delivery tests.",
       "lastReviewed": "2026-11-01",
-      "maintenanceTrigger": "Recheck plan limits, form controls, consent wording, every destination URL, and the live automation whenever the offer or sending setup changes.",
+      "maintenanceTrigger": "Recheck when MailerLite plan limits or editors change, when the PDF or product changes, or when subscriber delivery begins failing.",
       "verifiedUiSteps": [
         "Create the form and its subscriber group",
         "Keep confirmation clear",
@@ -746,12 +753,68 @@
         "Plan limits reflect MailerLite’s June 2026 change notice. Delivery timing and unsubscribe behavior must be verified in the account running the sequence."
       ],
       "modifiedAt": "2026-11-01",
-      "publishedAt": "2026-10-31"
+      "publishedAt": "2026-10-31",
+      "workflowTools": [
+        "Canva",
+        "MailerLite"
+      ],
+      "contents": [
+        {
+          "id": "welcome-fit",
+          "label": "Choose the route and check limits"
+        },
+        {
+          "id": "welcome-pdf",
+          "label": "1. Build the Canva PDF"
+        },
+        {
+          "id": "welcome-file",
+          "label": "2. Upload and link the file"
+        },
+        {
+          "id": "welcome-sender",
+          "label": "3. Prepare the sender"
+        },
+        {
+          "id": "welcome-signup",
+          "label": "4. Connect signup and confirmation"
+        },
+        {
+          "id": "welcome-build",
+          "label": "5. Build the five steps"
+        },
+        {
+          "id": "welcome-emails",
+          "label": "6. Copy all three emails"
+        },
+        {
+          "id": "welcome-tests",
+          "label": "7. Test the whole journey"
+        },
+        {
+          "id": "welcome-fixes",
+          "label": "8. Troubleshoot and maintain"
+        },
+        {
+          "id": "downloads",
+          "label": "Download the working kit"
+        }
+      ],
+      "releaseChecks": [
+        "Confirm with a fresh address before email 1.",
+        "Open the correct PDF while signed out.",
+        "Record the actual two-day and three-day waits.",
+        "Unsubscribe after email 1 and verify later messages are suppressed.",
+        "Repeat signup with an existing subscriber and verify no restart with repeat entry disabled.",
+        "Confirm the final workflow fits ongoing Free limits after any trial ends."
+      ],
+      "bodyFile": "content/email-welcome-sequence-expanded.html",
+      "updateNote": "Expanded into a complete connected workflow with filled templates, field mappings, genuine vendor screenshots, plan limits, and failure recovery."
     },
     {
       "id": "etsy-listing-workflow",
-      "title": "Draft an accurate Etsy listing with ChatGPT or Claude",
-      "summary": "Turn a measured product record into a usable title, description, photo plan, and listing draft. Includes a finished pouch example and checks for shipping, personalization, and misleading claims.",
+      "title": "Build an Etsy listing with AI, real photos, and a search check",
+      "summary": "Use ChatGPT or Claude to draft from verified facts, annotate real photos in Canva, configure Etsy accurately, and check search terms with eRank or Etsy Stats. Includes a complete pouch example and a downloadable working kit.",
       "category": "Ecommerce",
       "audience": "Handmade, personalized, digital-product, and print-on-demand sellers",
       "effort": "Allow 45–90 minutes for the first complete listing template",
@@ -759,6 +822,7 @@
         "etsy",
         "chatgpt",
         "claude",
+        "canva",
         "erank"
       ],
       "intro": "The useful job for AI is to make a real product easier to understand. It can organize a description and suggest words a buyer might use; it cannot measure the item, confirm fiber content, or decide whether a parcel will arrive by Friday. This walkthrough builds a draft for a personalized cotton pouch. It keeps the creative wording separate from the price, fulfillment, and policy settings that Etsy actually uses.",
@@ -831,9 +895,23 @@
         "A final search finds no bracketed placeholders, competitor names, invented ratings, or contradictory quantities."
       ],
       "sourceUrls": [
+        "https://www.etsy.com/seller-handbook/article/1399426136697",
         "https://help.etsy.com/hc/en-us/articles/115015628707-How-to-Create-a-Listing",
+        "https://help.etsy.com/hc/en-us/articles/360000336307-How-to-Use-Tags-to-Get-Found-in-Search",
         "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
-        "https://www.etsy.com/seller-handbook/article/1402347260856"
+        "https://help.etsy.com/hc/en-us/articles/44297885802647-How-Do-Etsy-s-Listing-Image-Requirements-Apply-to-My-Listings",
+        "https://www.etsy.com/legal/creativity/",
+        "https://www.etsy.com/seller-handbook/article/1275449912004",
+        "https://www.canva.com/features/add-text-to-photo/",
+        "https://www.canva.com/help/download-or-purchase/",
+        "https://help.etsy.com/hc/en-us/articles/360000344528-How-to-Offer-Personalized-Listings",
+        "https://help.etsy.com/hc/en-us/articles/115015664047-How-to-Add-Variations-to-Your-Listings",
+        "https://help.etsy.com/hc/en-us/articles/115015588087-How-to-Set-Processing-Times-Processing-Profiles-and-Ship-By-Dates",
+        "https://help.etsy.com/hc/en-us/articles/4406604492823-How-to-Add-a-Text-Alternative-to-Your-Listing-Images",
+        "https://help.etsy.com/hc/en-us/articles/115015774268-How-to-Use-Etsy-Stats-for-Your-Shop",
+        "https://help.erank.com/blog/use-erank-to-find-tags-for-your-etsy-listings/",
+        "https://help.etsy.com/hc/en-us/articles/360035902374-Etsy-Fee-Basics/",
+        "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy"
       ],
       "prerequisites": [
         "An Etsy shop with listing access and a product that meets Etsy’s applicable creativity and seller policies.",
@@ -956,7 +1034,68 @@
         "Image guidance follows Etsy’s October 2026 policy. Tag suggestions are editorial examples, not measured keyword demand or product-performance evidence."
       ],
       "modifiedAt": "2026-11-01",
-      "publishedAt": "2026-10-31"
+      "publishedAt": "2026-10-31",
+      "releaseChecks": [
+        "All measurements, material and care claims have evidence.",
+        "The required original real-background photo remains unedited.",
+        "First image shows the finished customized sample.",
+        "The actual item, labels, alt text and ordering controls agree.",
+        "Personalization, stock, price and fulfillment are checked in Etsy.",
+        "No invented keyword demand, testing claims or sales results.",
+        "Post-publication display checked and changes logged."
+      ],
+      "bodyFile": "content/etsy-listing-workflow-expanded.html",
+      "contents": [
+        {
+          "id": "start-here",
+          "label": "The complete workflow"
+        },
+        {
+          "id": "product-record",
+          "label": "Build the product record"
+        },
+        {
+          "id": "draft-and-audit",
+          "label": "Draft and audit with AI"
+        },
+        {
+          "id": "worked-example",
+          "label": "Complete pouch example"
+        },
+        {
+          "id": "real-photos",
+          "label": "Current photo requirements"
+        },
+        {
+          "id": "canva-annotations",
+          "label": "Annotate copies in Canva"
+        },
+        {
+          "id": "etsy-controls",
+          "label": "Set the Etsy controls"
+        },
+        {
+          "id": "search-check",
+          "label": "Check the search terms"
+        },
+        {
+          "id": "release-and-measure",
+          "label": "Release and measure"
+        },
+        {
+          "id": "troubleshooting",
+          "label": "Troubleshoot the weak point"
+        },
+        {
+          "id": "downloads",
+          "label": "Download the working kit"
+        },
+        {
+          "id": "source-notes",
+          "label": "Evidence and maintenance"
+        }
+      ],
+      "updateNote": "Expanded the workflow from AI drafting through Canva photo annotations, Etsy listing controls, and a search evidence log. Updated image guidance against Etsy’s October 22, 2026 policy and added genuine vendor illustrations, a claim audit, and a reusable working kit."
     },
     {
       "id": "product-launch-content-system",
@@ -1178,13 +1317,13 @@
     },
     {
       "id": "service-lead-follow-up",
-      "title": "Track service inquiries and follow-up in HubSpot",
-      "summary": "Give each inquiry one owner and a dated next action. Build a contact-and-task process with complete reply templates, internal reminders, and clear stopping rules.",
+      "title": "Turn Tally inquiries into Gmail drafts with Google Sheets and Zapier",
+      "summary": "Capture each service inquiry, save its record, and prepare a reply for review. Exact field mapping, a filled example, vendor screenshots, duplicate tests, and a free two-step Zap.",
       "category": "CRM",
       "audience": "Contractors, local services, consultants, and small sales teams",
       "effort": "Allow half a day for the initial pipeline and test cases",
       "toolIds": [
-        "hubspot"
+        "zapier"
       ],
       "intro": "A small service business can lose an inquiry between “I’ll reply later” and an inbox that keeps moving. This walkthrough uses HubSpot contacts and tasks to make that next action visible. A new painting inquiry becomes one contact, one factual note, and one assigned follow-up task. Replies remain human-approved. HubSpot can remind the owner; this basic setup does not automatically email prospects or qualify them with AI.",
       "steps": [
@@ -1232,30 +1371,38 @@
         }
       ],
       "pitfalls": [
-        "A contact record is not a marketing-consent record.",
-        "Marking every inquiry as a deal can inflate the pipeline before a real opportunity exists.",
-        "An AI draft can sound confident about a price or availability the business has not approved."
+        "Sorting or changing the raw intake tab can disrupt a Zap.",
+        "A successful draft action is not a sent customer response.",
+        "This two-step recipe has no durable cross-system deduplication action.",
+        "A task date does not automatically detect a reply or send a follow-up."
       ],
       "success": [
-        "Search for the controlled email: exactly one intended contact is used.",
-        "Open the contact: the task is visibly associated with it.",
-        "Set a short controlled test task: the assigned owner receives the reminder at the selected time.",
-        "Confirm that the customer receives no automatic message merely because a task was created.",
-        "Simulate a reply before the follow-up is due: update or complete the old task so a stale reminder does not cause a duplicate response.",
-        "Simulate “please do not contact me”: record the refusal and stop follow-up.",
-        "Review the task list with one overdue inquiry: the owner can identify and act on it without a second spreadsheet."
+        "Every completed submission is accounted for.",
+        "Recipient, subject, and body values are correctly mapped.",
+        "The review owner sends an appropriate response and records its time.",
+        "Every active inquiry has a status and dated next action."
       ],
       "sourceUrls": [
+        "https://tally.so/help/google-sheets-integration",
+        "https://zapier.com/apps/gmail/integrations/google-sheets/10563/create-drafts-on-gmail-for-new-rows-on-google-sheets",
+        "https://help.zapier.com/hc/en-us/articles/32337438839565-What-s-included-in-Zapier-s-Free-plan",
+        "https://help.zapier.com/hc/en-us/articles/8495994922509-How-to-get-started-with-Google-Sheets-on-Zapier",
+        "https://tally.so/help/self-email-notifications",
+        "https://tally.so/help/form-settings",
+        "https://help.zapier.com/hc/en-us/articles/39882352154381-How-to-get-started-with-Tally-on-Zapier",
+        "https://tally.so/help/create-a-form",
+        "https://tally.so/help/faq",
+        "https://help.zapier.com/hc/en-us/articles/8496276985101-Work-with-Google-Sheets-in-Zap-workflows",
+        "https://help.zapier.com/hc/en-us/articles/8495933589645-How-to-get-started-with-Gmail-on-Zapier",
+        "https://help.zapier.com/hc/en-us/articles/29384048552205-Google-Sheets-error-Zap-not-triggering",
         "https://knowledge.hubspot.com/records/create-contacts",
-        "https://knowledge.hubspot.com/records/create-records-on-the-updated-index-page",
-        "https://knowledge.hubspot.com/tasks/create-tasks",
-        "https://knowledge.hubspot.com/tasks/task-reminders-and-daily-digest"
+        "https://knowledge.hubspot.com/tasks/create-tasks"
       ],
       "prerequisites": [
-        "A HubSpot account with contact and task access, plus the actual owner who will handle inquiries.",
-        "A business inbox you can use to reply and a written service area, business hours, and quote policy.",
-        "A rule for who may see contact records and how long you retain inactive inquiries. Store only details needed to respond.",
-        "One sample address you control for testing. The name and inquiry below are fictional; do not send them to an unrelated person."
+        "A Tally account and published form.",
+        "A Google account with access to Sheets and Gmail; managed accounts may require administrator approval.",
+        "A Zapier account with enough task capacity for one action per inquiry.",
+        "An approved business-facts sheet, monitored inbox, review owner, privacy policy, and controlled test email."
       ],
       "example": {
         "title": "An exterior-painting inquiry with a visible next action",
@@ -1283,7 +1430,7 @@
       "expectedOutcome": "A working contact-and-task process for new inquiries, with a controlled example, a first response, one respectful follow-up, reminders to the owner, and a daily overdue review.",
       "researchIntent": "Commercial comparison and implementation: HubSpot versus Pipedrive, lead capture, and dependable follow-up.",
       "lastReviewed": "2026-11-01",
-      "maintenanceTrigger": "Review when staffing, business hours, contact-creation screens, data-retention rules, or any email automation changes.",
+      "maintenanceTrigger": "Recheck after form labels, sheet structure, account permissions, Zapier limits, service rules, or queue ownership change.",
       "verifiedUiSteps": [
         "Create or find the contact",
         "Create the associated follow-up task"
@@ -1388,7 +1535,61 @@
         "The sample contact, tasks, and replies are fictional. A next-action reminder is not a promise that an email will send automatically."
       ],
       "modifiedAt": "2026-11-01",
-      "publishedAt": "2026-10-31"
+      "publishedAt": "2026-10-31",
+      "workflowTools": [
+        "Tally",
+        "Google Sheets",
+        "Zapier",
+        "Gmail"
+      ],
+      "contents": [
+        {
+          "id": "inquiry-fit",
+          "label": "Choose the free route"
+        },
+        {
+          "id": "inquiry-contract",
+          "label": "1. Define the fields and facts"
+        },
+        {
+          "id": "inquiry-form",
+          "label": "2. Build the Tally form"
+        },
+        {
+          "id": "inquiry-sheet",
+          "label": "3. Connect Google Sheets"
+        },
+        {
+          "id": "inquiry-zap",
+          "label": "4. Map the Gmail draft"
+        },
+        {
+          "id": "inquiry-review",
+          "label": "5. Review and follow up"
+        },
+        {
+          "id": "inquiry-tests",
+          "label": "6. Test failure cases"
+        },
+        {
+          "id": "inquiry-recovery",
+          "label": "7. Recover and maintain"
+        },
+        {
+          "id": "downloads",
+          "label": "Download the working kit"
+        }
+      ],
+      "releaseChecks": [
+        "A complete controlled form entry produces a matching intake row and draft.",
+        "The draft action creates no sent email.",
+        "Empty required fields are blocked; optional blank fields do not break the draft.",
+        "Two submissions are recognized as distinct IDs and reviewed before replying.",
+        "Repeated action tests are checked for duplicate drafts.",
+        "A paused or failed handoff is reconciled against the source before replay."
+      ],
+      "bodyFile": "content/service-lead-follow-up-expanded.html",
+      "updateNote": "Expanded into a complete connected workflow with filled templates, field mappings, genuine vendor screenshots, plan limits, and failure recovery."
     },
     {
       "id": "self-service-booking",
@@ -3090,7 +3291,8 @@
       ],
       "caveats": [
         "Taxes and product-payment fees are outside the email subscription totals.",
-        "An imported customer address is not proof that the person agreed to marketing; carry the original subscription status across the migration."
+        "An imported customer address is not proof that the person agreed to marketing; carry the original subscription status across the migration.",
+        "MailerLite Free allows up to five steps per automation. Three emails with two delays fills that allowance; extra branches or actions can require a paid plan."
       ],
       "sourceUrls": [
         "https://www.mailerlite.com/pricing",
@@ -3106,7 +3308,7 @@
       "pricingRows": [
         {
           "label": "Free allowance",
-          "first": "250 active subscribers; 2,500 emails per month. Up to 3 active automations.",
+          "first": "250 active subscribers; 2,500 emails/month; up to 3 active automations with 5 steps each.",
           "second": "10,000 subscribers; unlimited broadcasts. No email sequences or visual automations.",
           "firstSource": "https://www.mailerlite.com/help/free-plan-update-faq",
           "secondSource": "https://help.kit.com/en/articles/16627071-the-kit-free-plan"
@@ -3319,7 +3521,8 @@
       ],
       "caveats": [
         "Do not interpret a recovered-order report as proof that every order was caused by the email. Attribution and incremental sales are different questions.",
-        "Store compatibility and message permission are prerequisites for the workflow, not benefits conferred by a higher plan."
+        "Store compatibility and message permission are prerequisites for the workflow, not benefits conferred by a higher plan.",
+        "MailerLite Free allows up to five steps per automation. Three emails with two delays fills that allowance; extra branches or actions can require a paid plan."
       ],
       "sourceUrls": [
         "https://www.mailerlite.com/pricing",
@@ -3337,7 +3540,7 @@
       "pricingRows": [
         {
           "label": "Free plan",
-          "first": "250 active subscribers; 2,500 monthly emails.",
+          "first": "250 active subscribers; 2,500 emails/month; up to 3 active automations with 5 steps each.",
           "second": "250 contacts; 500 monthly emails.",
           "firstSource": "https://www.mailerlite.com/help/free-plan-update-faq",
           "secondSource": "https://www.omnisend.com/pricing/"
@@ -4944,6 +5147,176 @@
       ],
       "modifiedAt": "2026-11-01",
       "publishedAt": "2026-10-31"
+    },
+    {
+      "id": "buffer-vs-metricool",
+      "title": "Buffer vs Metricool: compare the real cost of your publishing plan",
+      "summary": "Compare channels, brands, queue size, monthly publishing, and approval requirements. Use the plan calculator and a practical publishing test before paying.",
+      "toolIds": [
+        "buffer",
+        "metricool"
+      ],
+      "verdict": "For one person with up to three supported social accounts and a queue of ten posts per account, Buffer Free can handle an ongoing publishing routine as slots reopen. Metricool is worth considering when its brand-based organization and reporting fit the job. Count the accounts, features, and actual work before comparing the advertised starting prices.",
+      "dimensions": [
+        {
+          "label": "Free publishing boundary",
+          "first": "Three channels; ten queued posts per channel, refillable",
+          "second": "One brand; twenty posts per month"
+        },
+        {
+          "label": "LinkedIn on Free",
+          "first": "Supported; check profile and post-format requirements",
+          "second": "Not included"
+        },
+        {
+          "label": "Paid billing unit",
+          "first": "Per connected channel; rates quoted for the first ten",
+          "second": "Fixed 5-brand or 15-brand bundle"
+        },
+        {
+          "label": "Approval requirement",
+          "first": "Team plan",
+          "second": "Advanced plan"
+        }
+      ],
+      "caveats": [
+        "A connected social account is a channel in Buffer; a brand in Metricool groups supported profiles. They are different billing units.",
+        "A queue cap limits how far ahead you can prepare; a monthly allowance limits how much you can publish. Neither is a measure of content quality.",
+        "Check profile types, post formats, media restrictions, and permissions with the vendor. The cost calculator does not certify every account connection.",
+        "Tax, unpriced X add-ons, extra AI usage, and other services are excluded. Annual totals are paid upfront, not month by month."
+      ],
+      "pricingRows": [
+        {
+          "label": "Free boundary",
+          "first": "3 channels; 10 queued posts per channel. Published posts free up slots.",
+          "second": "1 brand; 20 posts per month. LinkedIn and X are excluded.",
+          "firstSource": "https://buffer.com/pricing",
+          "secondSource": "https://metricool.com/pricing/"
+        },
+        {
+          "label": "Solo paid setup",
+          "first": "Essentials: $6 per channel/month or $60 per channel/year, for channels 1–10.",
+          "second": "Starter, 5 brands: $25/month or $240/year. This is a fixed bundle.",
+          "firstSource": "https://support.buffer.com/articles/buffer-pricing-and-features-6pJrOPuzIt",
+          "secondSource": "https://metricool.com/pricing/"
+        },
+        {
+          "label": "Approvals",
+          "first": "Team: $12 per channel/month or $120 per channel/year, for channels 1–10.",
+          "second": "Advanced, 15 brands: $67/month or $636/year.",
+          "firstSource": "https://support.buffer.com/articles/buffer-pricing-and-features-6pJrOPuzIt",
+          "secondSource": "https://metricool.com/pricing/"
+        }
+      ],
+      "scenario": {
+        "title": "One business, three channels, twenty-four monthly publications",
+        "assumptions": [
+          "Synthetic planning example: one person, one business, three supported accounts including LinkedIn, 24 total network publications per month, no approvals.",
+          "Prepare at most ten posts per channel at once. No separate X add-on is required in this example."
+        ],
+        "calculationRows": [
+          {
+            "label": "Can the free plan fit?",
+            "first": "Potentially yes: 3 channels and queue size 10. Refill slots after publication; 24 monthly publications do not alone exceed this queue allowance.",
+            "second": "No: 24 is above 20 monthly posts, and LinkedIn is excluded on Free."
+          },
+          {
+            "label": "If paid features are needed",
+            "first": "3 × $6 = $18/month. Annual: 3 × $60 = $180 upfront ($15/month equivalent).",
+            "second": "Starter: $25/month. Annual: $240 upfront ($20/month equivalent)."
+          }
+        ],
+        "conclusion": "I would test the required accounts and post formats on the smallest suitable plan first. Paying for a larger allowance is useful only when the allowance or a specific feature is the actual constraint.",
+        "caution": "This is plan-fit arithmetic, not a measured comparison of reach, engagement, reliability, or time saved."
+      },
+      "sections": [
+        {
+          "title": "Start with your publishing inventory",
+          "paragraphs": [
+            "Write one row for every connected profile: network, account type, business, owner, planned posts, and whether another person must approve them. A single idea posted to several networks can be several publications. Confirm the counting rule before treating a content-calendar row as one unit.",
+            "Then list the formats you actually need: a text post, carousel, video, story, or another format. For each, record whether publication is direct or needs a phone reminder. A plan can fit the price and still fail your workflow if its required publishing method is unsuitable."
+          ]
+        },
+        {
+          "title": "A proposed side-by-side publishing test",
+          "paragraphs": [
+            "Use the same approved asset and copy in both trials, and start with a draft. Verify the intended account, crop, alt text where supported, timezone, and link preview before scheduling. Make one controlled test publication that you are comfortable making public; delete or reschedule through the native service if necessary.",
+            "Record the scheduled time, actual appearance, correct account, link destination, manual steps, and any error. Test approval rejection and revision if that is part of your process. These are suggested reader tests, not experiments the publication claims to have completed."
+          ]
+        },
+        {
+          "title": "What “unlimited” still needs you to check",
+          "paragraphs": [
+            "Buffer’s paid publishing queue is subject to fair use. Metricool also applies a fair-use policy; its 600-post monthly threshold per brand triggers review rather than acting as a guaranteed hard allowance. Neither label removes the social network’s own rules or technical limits.",
+            "Keep a fallback: save the approved copy and asset outside the scheduler, know where a failed post is reported, and record who can publish manually. Additional reach is not a result you can infer from a software subscription."
+          ]
+        }
+      ],
+      "recommendations": {
+        "pickFirst": [
+          "Your priority is a small, predictable publishing queue across a few supported accounts.",
+          "You understand the per-channel bill and need only the features of the plan selected."
+        ],
+        "pickSecond": [
+          "Your profiles fit Metricool’s brand structure and its reporting workflow matters to your business.",
+          "The included bundle and required approvals or networks justify the selected paid tier."
+        ],
+        "skipBoth": [
+          "Native scheduling already covers your accounts and formats.",
+          "You do not have an approved content routine yet; prepare a small reusable content brief first."
+        ]
+      },
+      "selectionChecklist": [
+        "Connect the exact profile types and check required networks before paying.",
+        "Prepare one example of each needed format; distinguish direct publication from reminder-based posting.",
+        "Confirm how cross-posts count and test approval permissions if required.",
+        "Inspect a published test link and the native network result; compare reported metrics with the network’s own report."
+      ],
+      "sourceUrls": [
+        "https://buffer.com/pricing",
+        "https://support.buffer.com/articles/buffer-pricing-and-features-6pJrOPuzIt",
+        "https://metricool.com/pricing/",
+        "https://help.metricool.com/fair-use-policy-for-social-media-scheduling-e3tnm"
+      ],
+      "namedSources": [
+        {
+          "title": "Pricing",
+          "url": "https://buffer.com/pricing",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Channel definition, refillable free queue, annual plan charges, supported-network qualifications and 5,000-post paid queue fair-use cap."
+          ]
+        },
+        {
+          "title": "Buffer pricing and features",
+          "url": "https://support.buffer.com/articles/buffer-pricing-and-features-6pJrOPuzIt",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "Monthly/annual per-channel pricing bands, one-user Essentials and Team approvals. Calculators use only channels 1–10."
+          ]
+        },
+        {
+          "title": "Plans and pricing",
+          "url": "https://metricool.com/pricing/",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "USD monthly and annual 5-brand Starter/15-brand Advanced bundles; Free exclusions, posting quota and approval gates."
+          ]
+        },
+        {
+          "title": "Fair use policy for social media scheduling",
+          "url": "https://help.metricool.com/fair-use-policy-for-social-media-scheduling-e3tnm",
+          "checkedAt": "2026-11-01",
+          "claims": [
+            "600 posts per brand per month triggers review; this is not a fixed maximum or guaranteed allowance."
+          ]
+        }
+      ],
+      "lastReviewed": "2026-11-01",
+      "publishedAt": "2026-11-01",
+      "reviewNotes": [
+        "Official documentation reviewed. Plan calculations and recommendations are original editorial analysis; no comparative vendor-account test or performance score is claimed."
+      ]
     }
   ]
 }

@@ -1,0 +1,141 @@
+{
+  "id": "ai-assistant",
+  "route": "/tools/ai-assistant/",
+  "checkedAt": "2026-11-01",
+  "title": "AI assistants for small business: choose a tool and finish your first task",
+  "summary": "Compare ChatGPT, Claude, Gemini and Perplexity by the work you need. See free and paid plan boundaries, complete seller/service/creator examples, and a five-task trial that measures factual errors and correction time.",
+  "label": "AI assistant buying guide",
+  "intro": "Choose an assistant by the job, verify the plan and run the same tasks before committing. Includes complete business outputs and a reusable trial kit.",
+  "bodyFile": "content/ai-assistant-expanded.html",
+  "toolIds": [
+    "chatgpt",
+    "claude",
+    "gemini",
+    "perplexity"
+  ],
+  "downloadUrl": "/resources/kits/ai-assistant.txt",
+  "sourceUrls": [
+    "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview",
+    "https://support.claude.com/en/articles/9517075-what-are-projects",
+    "https://support.google.com/a/users/answer/15146419?hl=en",
+    "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+    "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+    "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects",
+    "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+    "https://claude.com/pricing",
+    "https://help.openai.com/en/articles/8792828-chatgpt-business-overview",
+    "https://support.google.com/drive/answer/13952129?hl=en-en",
+    "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt",
+    "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+    "https://support.google.com/a/users/answer/17010577?hl=en"
+  ],
+  "contents": [
+    {
+      "id": "quick-choice",
+      "title": "Choose the assistant by the job"
+    },
+    {
+      "id": "what-an-assistant-does",
+      "title": "Answers, actions and background work"
+    },
+    {
+      "id": "plan-costs",
+      "title": "Free, paid, workspace or API"
+    },
+    {
+      "id": "first-task",
+      "title": "Create a useful first output"
+    },
+    {
+      "id": "business-examples",
+      "title": "Seller, service and creator examples"
+    },
+    {
+      "id": "save-workflow",
+      "title": "Save the approved workflow"
+    },
+    {
+      "id": "five-task-trial",
+      "title": "Run the five-task comparison"
+    },
+    {
+      "id": "stop-and-fix",
+      "title": "Fix unsupported promises"
+    },
+    {
+      "id": "next-workflow",
+      "title": "Continue to the implementation"
+    },
+    {
+      "id": "downloads",
+      "title": "Download the working kit"
+    },
+    {
+      "id": "common-questions",
+      "title": "Common buying questions"
+    },
+    {
+      "id": "evidence-notes",
+      "title": "Evidence and scope"
+    }
+  ],
+  "releaseChecks": [
+    "The reader can choose a job and identify a plausible assistant route.",
+    "Free, individual paid, workspace and API access are clearly distinguished.",
+    "Quoted rates specify payment frequency, seat minimums and exclusions.",
+    "All three fictional examples contain complete inputs and outputs.",
+    "The five-task scorecard has no fabricated observations or quality ratings.",
+    "UI instructions are scoped to documented current account interfaces.",
+    "Copied data and business promises require an actual factual check.",
+    "Internal links lead to the relevant implementation and comparison pages."
+  ],
+  "priceFacts": [
+    {
+      "tool": "ChatGPT Plus",
+      "monthlyUsd": 20,
+      "annualTotalUsd": null,
+      "annualAvailable": false,
+      "source": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
+    },
+    {
+      "tool": "Claude Pro",
+      "monthlyUsd": 20,
+      "annualTotalUsd": 200,
+      "source": "https://claude.com/pricing"
+    },
+    {
+      "tool": "ChatGPT Business Standard",
+      "monthlyUsdPerSeat": 25,
+      "annualEquivalentUsdPerSeat": 20,
+      "minimumSeats": 2,
+      "minimumMonthlyUsd": 50,
+      "minimumAnnualTotalUsd": 480,
+      "scope": "Standard seats only; tax, usage credits and other seat types excluded.",
+      "source": "https://help.openai.com/en/articles/8792828-chatgpt-business-overview"
+    }
+  ],
+  "currentCapabilityNotes": [
+    {
+      "fact": "New GPT creation is unavailable on personal Free, Go, Plus and Pro accounts; managed-workspace permissions differ. This tutorial uses Projects.",
+      "source": "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq"
+    },
+    {
+      "fact": "Claude standard Projects are available on Free with a five-project maximum; a new Projects beta is rolling out.",
+      "source": "https://support.claude.com/en/articles/9517075-what-are-projects"
+    },
+    {
+      "fact": "A personal paid chat subscription does not establish workspace administration or a separately billed API allowance.",
+      "source": "https://help.openai.com/en/articles/8792828-chatgpt-business-overview"
+    }
+  ],
+  "assets": [
+    {
+      "path": "site-assets/vendor-guides/assistant-chatgpt-project-settings.webp",
+      "sourcePage": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+      "originalAssetUrl": "https://images.ctfassets.net/j22is2dtoxu1/intercom-img-dfd7518cb9b5ab4588cb814d/6ca9c53aec99d74eda875f16468276a2/Screenshot_2026-02-24_at_11.48.11%C3%A2__AM.png?fm=webp&q=80&w=1344",
+      "captionBasis": "OpenAI-published UI illustration; not a claimed Seller Insider Hub account test."
+    }
+  ],
+  "distinctFromGettingStarted": "Buyer intent and tool/plan selection with three industries and a reproducible five-task trial. Existing getting-started guide retains its single bicycle-assessment confirmation workflow.",
+  "instructionBasis": "Official documentation reviewed. Examples and proposed tests are original editorial material. No firsthand comparative assistant testing, private analytics or business results are published."
+}

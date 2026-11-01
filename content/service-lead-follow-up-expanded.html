@@ -1,0 +1,250 @@
+<p class="guide-deck">An inquiry should become something you can act on: a saved record, a prepared reply, and a next action you can find tomorrow. This walkthrough connects a Tally form to Google Sheets, then uses a two-step Zapier workflow to create a Gmail draft. You review the facts and send it yourself.</p>
+<div class="guide-facts"><span><b>Build</b> Inquiry → register → Gmail draft → reviewed reply</span><span><b>Tools</b> Tally + Google Sheets + Zapier + Gmail</span><span><b>For</b> A business owner managing a modest inquiry queue</span><span><b>Evidence</b> Official documentation reviewed November 1, 2026</span></div>
+<p class="small muted">This is a documentation-based implementation guide, not a report of a live account test. All sample people, businesses, messages, and timestamps are fictional. Vendor screenshots are identified and credited individually. Run the acceptance checks in your own accounts before using real inquiries.</p>
+<nav class="guide-jumps" aria-label="Inquiry workflow tutorial sections"><a href="#inquiry-fit">Choose the route</a><a href="#inquiry-form">Build the form</a><a href="#inquiry-sheet">Connect the register</a><a href="#inquiry-zap">Map the draft</a><a href="#inquiry-tests">Test duplicates and failures</a><a href="#inquiry-recovery">Recover missing inquiries</a></nav>
+
+<section class="guide-answer" id="inquiry-fit">
+<span class="eyebrow">The practical answer</span>
+<h2>Let the form save the record. Let a small automation prepare the reply.</h2>
+<p>Use Tally’s native Google Sheets integration for the first handoff. Then connect <strong>Google Sheets: New Spreadsheet Row → Gmail: Create Draft</strong> in Zapier. That gives Zapier one trigger and one action. The draft stays in Gmail until you inspect it and choose Send.</p>
+<div class="guide-process"><div><span>AUTOMATIC</span><p><b>Completed Tally submission</b> → raw Google Sheets row → Gmail draft</p></div><div><span>YOUR REVIEW</span><p><b>Check request and recipient</b> → send one useful reply → record the next action → close or continue</p></div></div>
+<p>The sheet is a lightweight register. It does not become a full CRM with automatic deal history, ownership routing, reply detection, or follow-up suppression. Use this route when one person can review the queue reliably. If you already operate HubSpot, keep the contact and dated task there rather than creating a second source of truth.</p>
+<p class="source-note">The documented building blocks are <a href="https://tally.so/help/google-sheets-integration" target="_blank" rel="noopener">Tally’s native Sheets integration</a> and <a href="https://zapier.com/apps/gmail/integrations/google-sheets/10563/create-drafts-on-gmail-for-new-rows-on-google-sheets" target="_blank" rel="noopener">Zapier’s Sheets-to-Gmail-draft recipe</a>. The field contract and operating process below are our implementation design.</p>
+<div class="table-scroll"><table class="data-table"><caption>What the free route includes—and what changes its cost</caption><thead><tr><th>Part</th><th>Needed here</th><th>Boundary</th></tr></thead><tbody>
+<tr><th>Tally</th><td>A published form and its free native Google Sheets integration.</td><td>Standard owner notifications are also free. Customizing those notifications or sending Tally respondent notifications has separate plan requirements.</td></tr>
+<tr><th>Google</th><td>A Google account with access to the spreadsheet and Gmail inbox.</td><td>No paid Sheets plan is required. A managed work account may require an administrator to allow the connections.</td></tr>
+<tr><th>Zapier Free</th><td>One trigger + one action; 100 tasks per month across the account.</td><td>Each successful draft action consumes capacity. Extra actions, an AI drafting step, or an automated status update can change the plan requirements.</td></tr>
+<tr><th>Response time</th><td>Inspect the trigger type and actual run history.</td><td>Zapier’s recipe currently labels New Spreadsheet Row as instant. Free polling triggers can check every 15 minutes. Do not promise an immediate reply based on a connector label.</td></tr>
+</tbody></table></div>
+<p class="source-note">Current plan and permissions references: <a href="https://help.zapier.com/hc/en-us/articles/32337438839565-What-s-included-in-Zapier-s-Free-plan" target="_blank" rel="noopener">Zapier Free plan</a>, <a href="https://help.zapier.com/hc/en-us/articles/8495994922509-How-to-get-started-with-Google-Sheets-on-Zapier" target="_blank" rel="noopener">Sheets connection prerequisites</a>, <a href="https://tally.so/help/self-email-notifications" target="_blank" rel="noopener">Tally owner notifications</a>, and <a href="https://tally.so/help/form-settings" target="_blank" rel="noopener">Tally form settings</a>.</p>
+<p><strong>If you only need a draft:</strong> Zapier also documents a direct Tally New Submission trigger. You can connect it to Gmail Create Draft and keep the native Sheets connection as a parallel record. We use the sheet-triggered route here so the draft begins after a record reaches the register. <a href="https://help.zapier.com/hc/en-us/articles/39882352154381-How-to-get-started-with-Tally-on-Zapier" target="_blank" rel="noopener">Tally trigger reference</a>.</p>
+</section>
+
+<section id="inquiry-contract">
+<span class="chapter-label">01 / Decide what a good reply needs</span>
+<h2>Start with six fields and one accountable owner.</h2>
+<p>The fictional business in this example is <strong>North Park Painting</strong>. It accepts inquiries about interior and exterior painting in North Park and Eastfield. It has not inspected the property, confirmed availability, or priced the work. The first reply collects useful details. It does not quote a price or reserve a date.</p>
+<div class="table-scroll"><table class="data-table"><caption>The form contract: labels become recognizable fields downstream</caption><thead><tr><th>Field label</th><th>Tally question type</th><th>Required?</th><th>Filled example</th></tr></thead><tbody>
+<tr><th>Name</th><td>Short answer</td><td>Yes</td><td>Alex Rivera</td></tr>
+<tr><th>Email</th><td>Email</td><td>Yes</td><td>alex.test@example.com</td></tr>
+<tr><th>Service</th><td>Dropdown</td><td>Yes</td><td>Exterior painting</td></tr>
+<tr><th>Area</th><td>Short answer</td><td>Yes</td><td>North Park</td></tr>
+<tr><th>Timeframe</th><td>Short answer</td><td>No</td><td>This month if possible; flexible</td></tr>
+<tr><th>Project details</th><td>Long answer</td><td>Yes</td><td>Two-story home. Looking for an exterior-painting estimate.</td></tr>
+</tbody></table></div>
+<p>Use <strong>Interior painting</strong>, <strong>Exterior painting</strong>, and <strong>Not sure yet</strong> as the Service choices. A dropdown reduces inconsistent labels. Area remains free text because people may use neighborhood names. The reviewer decides whether the project is in the service area.</p>
+<p>The example email uses the reserved <code>example.com</code> domain so it cannot be mistaken for a real customer. Replace it with an inbox you control for delivery tests. Do not collect a full address, payment information, identification documents, or private access instructions just to decide the first response.</p>
+<div class="worked-example"><div class="example-label"><h3>Copy: the approved business facts</h3><button class="button light small" data-copy-target="inquiry-business-facts">Copy facts</button></div><pre id="inquiry-business-facts">FICTIONAL TEACHING EXAMPLE — replace before use
+Business: North Park Painting
+Services: interior and exterior painting
+Service areas: North Park and Eastfield
+Inbox owner: office manager
+First response: ask for missing scope and timing details
+Pricing rule: no quote before the business assesses the scope
+Scheduling rule: do not promise availability or reserve a date
+Information needed: surfaces, visible damage, timing flexibility
+Safety rule: do not ask a customer to climb or inspect unsafe areas
+Marketing rule: an inquiry is not a newsletter subscription
+Follow-up rule: one relevant follow-up if no reply; stop on refusal
+Queue review: each business morning and before the end of the day</pre></div>
+</section>
+
+<section id="inquiry-form">
+<span class="chapter-label">02 / Capture a complete request</span>
+<h2>Build and publish the Tally form.</h2>
+<p>Create a form titled <strong>Painting inquiry</strong>. Type a slash or use the plus control to add the question types from the table. Open each question’s settings with its left-side block handle and mark the required questions. Add the introduction and thank-you message below, review the preview, then publish.</p>
+<p class="source-note">Question controls, required fields, preview, and publishing: <a href="https://tally.so/help/create-a-form" target="_blank" rel="noopener">Tally’s form-building guide</a>. The field selection and customer wording are our example.</p>
+<div class="worked-example"><div class="example-label"><h3>Copy: form introduction and thank-you message</h3><button class="button light small" data-copy-target="inquiry-form-copy">Copy form copy</button></div><pre id="inquiry-form-copy">INTRODUCTION
+Tell us what you would like painted and the area the property is in.
+We will review the request and reply by email with the next useful
+step. Submitting this form does not confirm a price or appointment.
+
+Please do not include payment details, door codes, or documents
+containing private information. We will ask for any additional
+information we need later.
+
+PRIVACY LINK
+How we use your inquiry details: [your real privacy-policy URL]
+
+THANK-YOU MESSAGE
+Your inquiry has been submitted. We will review the details and
+reply using the email address you provided. If you need to correct
+something, contact [your monitored business email address].
+
+Please do not submit the same request again just to check its status.</pre></div>
+<p>In the published form’s <strong>Settings → Email notifications</strong>, turn on <strong>Self email notifications</strong>. The standard free notification gives the form owner another place to notice an incoming inquiry. It does not mean the customer has received a reply. <a href="https://tally.so/help/self-email-notifications" target="_blank" rel="noopener">Official notification instructions</a>.</p>
+<p><strong>Checkpoint:</strong> open the public form in a signed-out browser. Confirm the required fields are visible, the privacy link works, and the thank-you message makes no promise you cannot meet. Keep the form link handy; later tests must use this published version.</p>
+</section>
+
+<section id="inquiry-sheet">
+<span class="chapter-label">03 / Save the request before drafting</span>
+<h2>Connect Tally directly to Google Sheets.</h2>
+<ol class="guide-steps">
+<li>Open the published form’s <strong>Integrations</strong> tab and choose <strong>Connect</strong> beside Google Sheets.</li>
+<li>Sign in to the intended Google account and grant the requested connection access.</li>
+<li>Name the connection <strong>Painting inquiry register</strong>. Create or select the spreadsheet and destination sheet.</li>
+<li>For a new workflow, leave <strong>Export existing submissions</strong> off unless you have deliberately planned a historical import. Complete the connection and save.</li>
+</ol>
+<figure class="guide-screenshot"><a href="/assets/vendor-guides/tally-sheets-settings.png" target="_blank" rel="noopener"><img src="/assets/vendor-guides/tally-sheets-settings.png" loading="lazy" alt="Tally vendor screenshot with Google account, spreadsheet, sheet, and Export existing submissions settings." width="2824" height="2052" decoding="async"></a><figcaption><strong>Vendor documentation screenshot: Tally.</strong> The account, spreadsheet, and sheet must all be correct. This vendor example has historical export enabled; our new-workflow instructions leave it off. The completion button may read “Connect with Google Sheets” or “Save changes.” <a href="https://tally.so/help/google-sheets-integration" target="_blank" rel="noopener">Original guide and image credit</a>.</figcaption></figure>
+<p>Before creating the Zap, give the workbook and intake tab simple names such as <strong>Service Inquiries</strong> and <strong>Intake</strong>. Submit the fictional example using a controlled real email address. Verify that one complete row appears. Keep Tally’s generated metadata columns and the actual header names; match the six answers to the field contract above.</p>
+<p>Tally generates a distinct <strong>Submission ID</strong> for each submission. Its Respondent ID identifies a respondent across submissions and is a different concept. Locate the exported submission identifier and use it as the inquiry reference. If your export does not expose it as expected, inspect the integration output before proceeding; email address alone is not a unique inquiry key. <a href="https://tally.so/help/faq" target="_blank" rel="noopener">Tally’s identifier definitions</a>.</p>
+<h3>Keep the intake tab stable.</h3>
+<p>This is a real compatibility trap: Tally says its integration can tolerate moving or deleting columns, while Zapier warns that structural changes can break a connected sheet workflow. Follow the stricter rule for the combined system. Keep <strong>Intake</strong> as an append-only record. Do not sort it, insert gaps, rename headers, delete old rows, or add formulas down unused rows while the Zap is active.</p>
+<figure class="guide-screenshot"><a href="/assets/vendor-guides/zapier-sheet-headers.png" target="_blank" rel="noopener"><img src="/assets/vendor-guides/zapier-sheet-headers.png" loading="lazy" alt="Zapier documentation screenshot illustrating one header row at the top of a Google Sheet, with data directly below." width="1534" height="466" decoding="async"></a><figcaption><strong>Vendor documentation screenshot: Zapier.</strong> Its inventory example demonstrates the relevant structure: one header row, data underneath, and no inserted blank rows. This is a structural example, not our inquiry sheet. <a href="https://help.zapier.com/hc/en-us/articles/8496276985101-Work-with-Google-Sheets-in-Zap-workflows" target="_blank" rel="noopener">Original guide and image credit</a>.</figcaption></figure>
+<p>Keep your working status list in a separate <strong>Review</strong> tab that the Zap does not watch. For this small workflow, the reviewer adds or updates that record manually using the Submission ID. That extra human action makes ownership and follow-up visible without adding another paid automation action or altering the intake stream.</p>
+<div class="worked-example"><div class="example-label"><h3>Copy: review-register columns</h3><button class="button light small" data-copy-target="inquiry-review-columns">Copy columns</button></div><pre id="inquiry-review-columns">Submission ID	Name	Email	Owner	Status	Last action	Next action	Next action due	Closed reason
+demo-20261102-0001	Alex Rivera	alex.test@example.com	Office manager	Needs review	Draft prepared	Review scope and send first response	2026-11-02 15:00 America/New_York	</pre></div>
+<p>The second line is illustrative data, not an actual Tally-generated ID or an observed draft. Paste only the first line if you want an empty register. Use statuses such as <strong>Needs review</strong>, <strong>Waiting for reply</strong>, <strong>Needs decision</strong>, and <strong>Closed</strong>. Keep dates in one stated time zone; Tally exports submission times in UTC, so do not interpret the raw timestamp as local business time without conversion.</p>
+</section>
+
+<section id="inquiry-zap">
+<span class="chapter-label">04 / Prepare the reply</span>
+<h2>Create a two-step Zap with explicit field mapping.</h2>
+<ol class="guide-steps">
+<li><strong>Create the trigger.</strong> In a new Zap, choose Google Sheets and <strong>New Spreadsheet Row</strong>. Connect the Google account with access to the intake sheet. Select <strong>Service Inquiries</strong> and <strong>Intake</strong>. Do not choose a trigger that also runs when existing rows are updated.</li>
+<li><strong>Load a real test record.</strong> Test the trigger after submitting your controlled form entry. Select the sample containing your test name, service, email, and submission identifier. If those fields are missing or shifted, fix the sheet/connection before adding the next step.</li>
+<li><strong>Create the action.</strong> Choose Gmail and <strong>Create Draft</strong>. Connect the inbox from which the business will reply. Confirm the account address. <strong>Create Draft Reply</strong> is a different action for an existing email thread; this new form request needs a new draft.</li>
+<li><strong>Map the fields below.</strong> Insert Zapier’s field tokens from the trigger rather than typing the example values. Leave CC, BCC, and attachments empty for this first version. Choose the plain-text body option if the action exposes a body-type setting.</li>
+<li><strong>Test once and inspect Gmail.</strong> Testing an action can create a real draft. Open Gmail’s Drafts folder and verify the complete message. Keep the Zap unpublished until the acceptance cases are understood.</li>
+</ol>
+<p class="source-note">Action names: <a href="https://help.zapier.com/hc/en-us/articles/8495933589645-How-to-get-started-with-Gmail-on-Zapier" target="_blank" rel="noopener">Gmail on Zapier</a>. Trigger/action pairing: <a href="https://zapier.com/apps/gmail/integrations/google-sheets/10563/create-drafts-on-gmail-for-new-rows-on-google-sheets" target="_blank" rel="noopener">official draft recipe</a>. Connection requirements: <a href="https://help.zapier.com/hc/en-us/articles/8495994922509-How-to-get-started-with-Google-Sheets-on-Zapier" target="_blank" rel="noopener">Google Sheets on Zapier</a>.</p>
+<div class="table-scroll"><table class="data-table"><caption>Exact mapping from a sheet row into a Gmail draft</caption><thead><tr><th>Destination</th><th>Map from / enter</th><th>Expected example</th></tr></thead><tbody>
+<tr><th>Gmail account</th><td>Your connected business inbox</td><td>The account you intend to send from, checked before testing.</td></tr>
+<tr><th>To</th><td>The row’s Email value</td><td>Your controlled test inbox during testing; the customer’s submitted address in production.</td></tr>
+<tr><th>Subject</th><td>Your + Service + inquiry — reference + Submission ID</td><td>Your Exterior painting inquiry — reference demo-20261102-0001</td></tr>
+<tr><th>Greeting</th><td>Name</td><td>Hello Alex Rivera,</td></tr>
+<tr><th>Request sentence</th><td>Service and Area</td><td>Thanks for your Exterior painting inquiry in North Park.</td></tr>
+<tr><th>Body remainder</th><td>The approved static questions below</td><td>No generated quote, availability claim, or appointment confirmation.</td></tr>
+<tr><th>Reference</th><td>Submission ID</td><td>The same identifier you use in the review register.</td></tr>
+</tbody></table></div>
+<div class="worked-example"><div class="example-label"><h3>Copy: draft template to map in Zapier</h3><button class="button light small" data-copy-target="inquiry-draft-template">Copy template</button></div><pre id="inquiry-draft-template">SUBJECT
+Your {{Service}} inquiry — reference {{Submission ID}}
+
+BODY
+Hello {{Name}},
+
+Thanks for your {{Service}} inquiry in {{Area}}.
+
+To work out the next step, could you reply with:
+1. Which surfaces you want painted, including any trim or doors.
+2. Any peeling, water damage, or repairs you already know about.
+3. Whether your preferred timing is flexible.
+
+Please describe only what you can see safely. There is no need to
+climb, take measurements at height, or send private access details.
+
+We have not yet confirmed a price or date. Once we have the details,
+we will let you know what we need to assess the work.
+
+Thank you,
+North Park Painting
+Reference: {{Submission ID}}</pre></div>
+<p><strong>Mapping notation:</strong> the double braces above are instructions for the builder. Replace each one with the corresponding Zapier field token. Literal <code>{{Name}}</code> appearing in Gmail means the field was not mapped. Put the full <strong>Project details</strong> in the intake record for your review; do not automatically repeat arbitrary customer text as if it were an approved statement from your business.</p>
+<div class="worked-example"><div class="example-label"><h3>Expected draft from the fictional input</h3><button class="button light small" data-copy-target="inquiry-draft-output">Copy worked output</button></div><pre id="inquiry-draft-output">To: alex.test@example.com
+Subject: Your Exterior painting inquiry — reference demo-20261102-0001
+
+Hello Alex Rivera,
+
+Thanks for your Exterior painting inquiry in North Park.
+
+To work out the next step, could you reply with:
+1. Which surfaces you want painted, including any trim or doors.
+2. Any peeling, water damage, or repairs you already know about.
+3. Whether your preferred timing is flexible.
+
+Please describe only what you can see safely. There is no need to
+climb, take measurements at height, or send private access details.
+
+We have not yet confirmed a price or date. Once we have the details,
+we will let you know what we need to assess the work.
+
+Thank you,
+North Park Painting
+Reference: demo-20261102-0001</pre></div>
+<p>This is an illustrative rendering of the mapping, not an email we sent or a screenshot of a live draft. The sample already says timing is flexible, so a thoughtful reviewer would remove or refine question three before sending. That is the point of keeping a review step.</p>
+</section>
+
+<section id="inquiry-review">
+<span class="chapter-label">05 / Finish the response</span>
+<h2>Review the customer’s actual request before sending.</h2>
+<p>Open the intake record and Gmail draft together. Check the recipient character by character, confirm the requested service and area, and remove questions already answered. Search Gmail and the review register for the submission reference and the address. A repeat request might be a correction or a second project; it is not automatically a duplicate to discard.</p>
+<p>Send only when the reply fits the request. Record the actual sent time and set a next action in the Review tab. For the example, a response sent Monday, November 2, could be reviewed on Wednesday, November 4, in the business’s stated time zone. Adjust for your working days and commitments.</p>
+<div class="table-scroll"><table class="data-table"><caption>How the human-maintained state changes</caption><thead><tr><th>What happened</th><th>Status</th><th>Next action</th></tr></thead><tbody>
+<tr><th>A draft is waiting</th><td>Needs review</td><td>Owner checks the request and draft.</td></tr>
+<tr><th>First reply sent</th><td>Waiting for reply</td><td>Owner checks the inbox on the stated date.</td></tr>
+<tr><th>Customer answers</th><td>Needs decision</td><td>Assess scope; reply with the real next step.</td></tr>
+<tr><th>Customer declines or asks to stop</th><td>Closed</td><td>Record the request and stop following up.</td></tr>
+<tr><th>No answer after one relevant follow-up</th><td>Closed</td><td>Record “No reply,” not “Customer declined.”</td></tr>
+</tbody></table></div>
+<div class="worked-example"><div class="example-label"><h3>Copy: one follow-up after checking the inbox</h3><button class="button light small" data-copy-target="inquiry-follow-up">Copy follow-up</button></div><pre id="inquiry-follow-up">Hello Alex,
+
+I'm checking whether you still need help with the exterior-painting
+inquiry for North Park. If so, reply with the surfaces involved and
+any damage or repairs you already know about.
+
+If your plans have changed, no problem. I won't keep following up
+on this request. You can reply to this thread if you need us later.
+
+Thank you,
+North Park Painting</pre></div>
+<p>This workflow does not detect replies or send that follow-up automatically. The owner checks the inbox first. A date in a sheet is a reminder for your process, not a scheduled email. Do not add an automatic chasing sequence until you can reliably stop it on a reply, refusal, or closed request.</p>
+<h3>Optional: use AI to improve a difficult reply.</h3>
+<p>For a request that needs more thought, provide an AI assistant with a de-identified summary and the approved business facts. Ask for a draft, then compare every claim with the original record. This optional writing step is separate from the two-step Zap and does not require an AI API subscription.</p>
+<div class="worked-example"><div class="example-label"><h3>Copy: a constrained drafting prompt</h3><button class="button light small" data-copy-target="inquiry-ai-prompt">Copy prompt</button></div><pre id="inquiry-ai-prompt">Draft a short reply using only these approved business facts and
+this de-identified inquiry summary.
+
+Approved facts: [services, area, pricing rule, scheduling rule]
+Inquiry summary: [omit name, email, full address, and private details]
+Already answered: [facts the customer supplied]
+Missing information that affects the next step: [specific items]
+
+Acknowledge the request, ask only unanswered necessary questions,
+and explain what happens next. Do not invent a quote, availability,
+inspection result, guarantee, credential, or completed action.
+If a fact is missing, mark it NEEDS REVIEW. Return a draft only.</pre></div>
+</section>
+
+<section id="inquiry-tests">
+<span class="chapter-label">06 / Test what can actually go wrong</span>
+<h2>Check the record, draft, and stopping behavior separately.</h2>
+<p>Use controlled addresses throughout. A Zap action test can create a draft even when the workflow is unpublished, so inspect and label test drafts. When the configuration is correct, publish the Zap and submit a fresh form entry to check the live trigger. Record results against the submission reference.</p>
+<div class="table-scroll"><table class="data-table"><caption>Acceptance cases and expected behavior</caption><thead><tr><th>Case</th><th>Input or action</th><th>Expected result</th></tr></thead><tbody>
+<tr><th>Complete request</th><td>Submit the six-field example with a controlled email.</td><td>One Tally submission, one matching intake row, a correctly mapped Gmail draft, and no sent email.</td></tr>
+<tr><th>Required field missing</th><td>Leave Email or Project details empty.</td><td>The form blocks completion; there should be no completed-submission row or new draft from that attempt.</td></tr>
+<tr><th>Optional timeframe empty</th><td>Complete the form without Timeframe.</td><td>The draft remains readable because it does not depend on an optional field.</td></tr>
+<tr><th>Already answered question</th><td>Include “Timing is flexible” in the request.</td><td>The reviewer removes the redundant timing question before sending.</td></tr>
+<tr><th>Out-of-area request</th><td>Enter an area outside the approved list.</td><td>A draft can still be created, but the reviewer changes it to an accurate response; there is no automatic acceptance.</td></tr>
+<tr><th>Same person submits twice</th><td>Send two completed submissions.</td><td>Two distinct submission IDs may produce two drafts. Reviewer compares intent and sends only the appropriate response.</td></tr>
+<tr><th>Repeated action test or replay</th><td>Run a controlled draft action again.</td><td>A duplicate draft may be created. Find it by reference and remove the redundant test draft; do not claim exactly-once delivery.</td></tr>
+<tr><th>Connection disabled</th><td>Pause the Zap briefly, then create one controlled inquiry.</td><td>The Tally record and sheet row remain available. Check history after resuming; recover only after checking whether a draft already exists.</td></tr>
+<tr><th>Wrong token mapping</th><td>Inspect the To, subject, and greeting in Gmail.</td><td>Each contains the intended field; no literal braces, sample addresses, or shifted column values remain.</td></tr>
+<tr><th>Reply or stop request</th><td>Simulate a customer reply in the controlled inbox.</td><td>Reviewer updates status and cancels the old next action. No automated follow-up is running in this recipe.</td></tr>
+</tbody></table></div>
+<p><strong>The duplicate boundary:</strong> this two-step recipe has no separate lookup or durable deduplication action. It prepares drafts for review. If you need automatic sending with strict duplicate prevention, you need a stronger design and additional tests. Our <a href="/playbooks/first-reliable-automation/">protected intake tutorial</a> explains stable IDs and preserving an original record when events are repeated.</p>
+</section>
+
+<section id="inquiry-recovery">
+<span class="chapter-label">07 / Find the broken handoff</span>
+<h2>Recover missing work without creating another round of duplicates.</h2>
+<div class="table-scroll"><table class="data-table"><caption>Investigate from the source toward the draft</caption><thead><tr><th>What is missing?</th><th>Evidence to inspect</th><th>Recovery</th></tr></thead><tbody>
+<tr><th>No Tally submission</th><td>Published form URL, required-field errors, and Tally’s completed submissions.</td><td>Repeat a controlled submission. A visitor opening the form or seeing a browser validation error is not a completed inquiry.</td></tr>
+<tr><th>Tally record exists; no sheet row</th><td>The integration’s sync log, Google authorization, and the whole intake tab.</td><td>Fix the connection. Check for an existing row with the same ID before using Tally’s Resend control.</td></tr>
+<tr><th>Sheet row exists; no Zap run</th><td>Published Zap, selected workbook and tab, trigger type, and sheet structure.</td><td>Verify that the row reached the watched tab. Review whether a gap, deletion, sort, or renamed header disrupted the trigger.</td></tr>
+<tr><th>Zap run failed</th><td>The actual action error, connected Gmail account, recipient field, and available task capacity.</td><td>Correct that cause. Search Gmail Drafts for the reference before retrying an action.</td></tr>
+<tr><th>Zap succeeded; draft seems missing</th><td>The connected Gmail address and Drafts folder, including search by submission reference.</td><td>Inspect the destination account. “Successful action” does not mean you sent an email or that you are looking in the right inbox.</td></tr>
+<tr><th>Many old inquiries produced drafts</th><td>Historical export setting, copied rows, imported data, and activation time.</td><td>Pause the Zap and review the affected batch. Preserve the inquiry records; discard only confirmed redundant drafts.</td></tr>
+<tr><th>Follow-up was missed</th><td>Owner, status, next-action date, and actual inbox thread.</td><td>Update the review register and respond appropriately. A functioning draft automation cannot compensate for an unreviewed queue.</td></tr>
+</tbody></table></div>
+<p class="source-note">Tally’s sync log and Resend control: <a href="https://tally.so/help/google-sheets-integration" target="_blank" rel="noopener">integration troubleshooting</a>. Sheet hazards and the pause → change → retest → publish procedure: <a href="https://help.zapier.com/hc/en-us/articles/8496276985101-Work-with-Google-Sheets-in-Zap-workflows" target="_blank" rel="noopener">Zapier spreadsheet rules</a>. Trigger repair details: <a href="https://help.zapier.com/hc/en-us/articles/29384048552205-Google-Sheets-error-Zap-not-triggering" target="_blank" rel="noopener">Zapier’s trigger troubleshooting</a>.</p>
+<h3>Make changes in a controlled order.</h3>
+<p>Pause the connected Zap before changing the intake structure. Record the last handled submission ID, make the intended change, reload the trigger sample, and inspect every mapping. Create one controlled new submission, verify its destination, then republish. Reconcile anything received while paused; do not assume all historical events will automatically replay.</p>
+<p>At each queue review, compare recent Tally submissions with the register and drafts. A useful daily note is: <strong>received / recorded / draft present / reviewed / reply sent / next action assigned</strong>. Those are separate states. Counting rows alone cannot tell you whether customers received a useful answer.</p>
+<p>Watch monthly task use. With one successful Gmail action per inquiry, 60 inquiries would consume 60 tasks for this Zap. Other automations and replays share the same account allowance. That is capacity arithmetic, not a traffic forecast. If volume outgrows the free allowance, choose a paid plan deliberately or continue reviewing the saved register manually while deciding.</p>
+<p><strong>When to move to a CRM:</strong> you need multiple owners, deal stages, reliable history across channels, or reminders that should not depend on checking a sheet. HubSpot’s <a href="https://knowledge.hubspot.com/records/create-contacts" target="_blank" rel="noopener">contact records</a> and <a href="https://knowledge.hubspot.com/tasks/create-tasks" target="_blank" rel="noopener">associated tasks</a> are one documented path. The same operating rule applies: every active inquiry needs an owner, an accurate state, and a dated next action.</p>
+</section>
+
+<section id="downloads">
+<h2>Download the working kit.</h2>
+<p><a class="button" href="/resources/kits/service-lead-follow-up.txt" download>Download the inquiry workflow kit</a></p>
+<p>The text kit contains the field specification, approved-facts example, form copy, review-register columns, mapped email draft, follow-up, and optional AI prompt. Replace the fictional details and run the tests above before using the workflow.</p>
+</section>

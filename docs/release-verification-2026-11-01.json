@@ -1,0 +1,51 @@
+{
+  "reviewedAt": "2026-11-01",
+  "scope": "Prepublication source, build, and managed-browser review",
+  "release": {
+    "expandedGuides": [
+      "ai-assistant",
+      "ai-receptionist",
+      "email-welcome-sequence",
+      "service-lead-follow-up",
+      "etsy-listing-workflow"
+    ],
+    "additionalGuideExpanded": "crm-vs-spreadsheet",
+    "newComparison": "buffer-vs-metricool",
+    "planCalculators": 4,
+    "downloadableWorkingKits": 15,
+    "embeddedVendorScreenshots": 10
+  },
+  "automated": {
+    "commands": [
+      "npm run build",
+      "npm run check"
+    ],
+    "result": "passed",
+    "coverage": [
+      "Production local links, canonical and metadata validation",
+      "Redirect chains including all three historical assistant URL forms",
+      "Existing calculators, workspace, forms, analytics consent and protected investor routes",
+      "24 decision-tool tests, including independent plan units, capacity boundaries, unknown limits and annual charges",
+      "Complete template and table retention in generated kits",
+      "Author identity, copy-target uniqueness and image dimensions",
+      "Checklist persistence, malformed state and blocked storage"
+    ]
+  },
+  "browser": {
+    "environment": "Managed Chromium preview; desktop and 390-pixel iframe viewports",
+    "passed": [
+      "Tutorial layout and vendor image loading after lazy-load activation",
+      "Checklist change persisted across page reload",
+      "Email comparison updated on form submission",
+      "Six-step automation correctly excludes MailerLite Free; reset restores five-step example",
+      "Tutorial, assistant guide and calculator fit 375-pixel content widths inside 390-pixel frames without document overflow",
+      "Mobile article navigation expands and exposes section links"
+    ],
+    "observedLimits": [
+      "Preview uses HTTP: Clipboard API was blocked and the site displayed its text-download fallback. HTTPS copy and file download are checked separately after publication.",
+      "No new external vendor-account workflow, subscriber delivery, call, booking or comparative AI quality test was performed.",
+      "Local sitemap membership does not establish Google indexing."
+    ]
+  },
+  "publication": "Live deployment and crawler-response checks are a separate final step; this record alone does not assert publication or rankings."
+}

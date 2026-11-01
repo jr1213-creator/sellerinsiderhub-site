@@ -1,10 +1,10 @@
 {
   "built": "2026-11-01",
-  "pages": 120,
-  "indexed": 116,
+  "pages": 123,
+  "indexed": 119,
   "tools": 47,
   "categories": 14,
-  "comparisons": 8,
+  "comparisons": 9,
   "playbooks": 12,
   "investorRoom": {
     "route": "/partners/investors/",
@@ -374,6 +374,11 @@
       "kind": "Comparison"
     },
     {
+      "route": "/comparisons/buffer-vs-metricool/",
+      "title": "Buffer vs Metricool: compare the real cost of your publishing plan",
+      "kind": "Comparison"
+    },
+    {
       "route": "/compare/",
       "title": "Your shortlist, side by side",
       "kind": "Tool"
@@ -390,12 +395,12 @@
     },
     {
       "route": "/playbooks/email-welcome-sequence/",
-      "title": "Build a three-email welcome sequence in MailerLite",
+      "title": "Send a Canva lead magnet with MailerLite: the complete welcome sequence",
       "kind": "Playbook"
     },
     {
       "route": "/playbooks/etsy-listing-workflow/",
-      "title": "Draft an accurate Etsy listing with ChatGPT or Claude",
+      "title": "Build an Etsy listing with AI, real photos, and a search check",
       "kind": "Playbook"
     },
     {
@@ -405,7 +410,7 @@
     },
     {
       "route": "/playbooks/service-lead-follow-up/",
-      "title": "Track service inquiries and follow-up in HubSpot",
+      "title": "Turn Tally inquiries into Gmail drafts with Google Sheets and Zapier",
       "kind": "Playbook"
     },
     {
@@ -490,7 +495,7 @@
     },
     {
       "route": "/guides/ai-receptionist-vs-answering-service-vs-voicemail/",
-      "title": "AI receptionist, answering service, or voicemail: what fits your calls?",
+      "title": "Auto-attendant vs AI receptionist: compare all four call options",
       "kind": "Guide"
     },
     {
@@ -516,6 +521,11 @@
     {
       "route": "/business-systems-map/",
       "title": "Map your business from first inquiry to repeat customer",
+      "kind": "Guide"
+    },
+    {
+      "route": "/tools/ai-assistant/",
+      "title": "AI assistants for small business: choose a tool and finish your first task",
       "kind": "Guide"
     },
     {
@@ -564,11 +574,6 @@
       "kind": "Topics"
     },
     {
-      "route": "/tools/ai-assistant/",
-      "title": "AI Assistant Tools: Your everyday business brain helper",
-      "kind": "Guide"
-    },
-    {
       "route": "/about/",
       "title": "About Jennie and Seller Insider Hub",
       "kind": "About"
@@ -576,6 +581,16 @@
     {
       "route": "/editorial-standards/",
       "title": "Editorial standards",
+      "kind": "Editorial"
+    },
+    {
+      "route": "/authors/jennie-malone/",
+      "title": "Jennie Malone: founder and publisher",
+      "kind": "Author"
+    },
+    {
+      "route": "/corrections/",
+      "title": "Corrections and article updates",
       "kind": "Editorial"
     },
     {

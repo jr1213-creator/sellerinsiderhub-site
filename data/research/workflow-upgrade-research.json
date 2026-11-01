@@ -1,0 +1,717 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-11-01",
+  "purpose": "Source-backed expanded workflow bodies for root integration and publication. No existing builder/editorial files were edited by this agent.",
+  "methodology": {
+    "searchEvidence": "Observed search-result patterns identify instructional intent; no search-volume or ranking-performance claims are made. Google observations are separately identified as parent-agent browser observations.",
+    "vendorEvidence": "Public official documentation plus unmodified vendor screenshots. Workflows have not been executed in authenticated vendor accounts.",
+    "originalContribution": "Original fictional worked inputs and outputs, integrated field mapping, copy-ready templates, acceptance cases, recovery decisions, and cross-vendor compatibility analysis.",
+    "testing": "Local checks validate HTML references, sample field substitution, example tabular data, dates, and arithmetic; they do not establish vendor delivery or account permissions."
+  },
+  "searchQueries": [
+    {
+      "query": "MailerLite welcome email sequence lead magnet Canva PDF automation group trigger",
+      "engine": "search_service system2",
+      "observedOn": "2026-11-01",
+      "resultPatterns": [
+        "Official group-triggered welcome templates and workflow documentation",
+        "Official lead-magnet and confirmation instructions",
+        "Third-party setup tutorials and questions about file delivery"
+      ],
+      "contentDecision": "Connect asset creation, hosting, confirmation, sequence copy, and recovery into one worked example."
+    },
+    {
+      "query": "Tally Google Sheets Gmail draft Zapier lead follow up form",
+      "engine": "search_service system2",
+      "observedOn": "2026-11-01",
+      "resultPatterns": [
+        "Zapier Tally/Sheets/Gmail templates",
+        "Official Sheets-to-Gmail Create Draft recipe",
+        "Questions and templates about overdue follow-up and workflow failures"
+      ],
+      "contentDecision": "Use native free capture plus a two-step draft action; add explicit field mapping and record-preserving recovery."
+    },
+    {
+      "query": "site.tally.so/help Google Sheets integration forms submissions",
+      "engine": "search_service system1",
+      "observedOn": "2026-11-01",
+      "resultPatterns": [
+        "Native integration and form-builder documentation"
+      ],
+      "contentDecision": "Verify free native capture rather than assume a three-action Zap is required."
+    },
+    {
+      "query": "site.zapier.com/apps/google-sheets/integrations/gmail create draft free plan 100 tasks",
+      "engine": "search_service system1",
+      "observedOn": "2026-11-01",
+      "resultPatterns": [
+        "Free-plan limits, official Gmail draft action, Google Sheets prerequisites"
+      ],
+      "contentDecision": "State task limits and manual review boundary."
+    }
+  ],
+  "googleObservationsProvidedByParent": [
+    {
+      "query": "how to send a lead magnet with MailerLite",
+      "observedOn": "2026-11-01",
+      "observer": "Parent agent via actual Google SERP browser inspection",
+      "resultPatterns": [
+        "AI Overview covers basic group → form → automation → PDF steps",
+        "Official MailerLite help and video results; third-party step-by-step and Beacon integration results",
+        "Related searches include MailerLite Attach PDF, MailerLite pricing, MailerLite free plan"
+      ],
+      "noVolumeClaim": true
+    },
+    {
+      "query": "Tally Google Sheets Gmail draft Zapier",
+      "observedOn": "2026-11-01",
+      "observer": "Primary agent via direct Google results inspection; US-English result instance, November 1, 2026.",
+      "resultPatterns": [
+        "Official Zapier connector and draft-template results dominate the observed page"
+      ],
+      "noVolumeClaim": true
+    }
+  ],
+  "editorialUpdates": [
+    {
+      "id": "email-welcome-sequence",
+      "bodyFile": "content/email-welcome-sequence-expanded.html",
+      "title": "Send a Canva lead magnet with MailerLite: the complete welcome sequence",
+      "summary": "Build the PDF, signup page, confirmed delivery, and three-email sequence. Includes a completed worksheet, every email, genuine vendor screenshots, free-plan limits, and failure checks.",
+      "category": "Email",
+      "toolIds": [
+        "canva",
+        "mailerlite"
+      ],
+      "workflowTools": [
+        "Canva",
+        "MailerLite"
+      ],
+      "audience": "Small businesses, shops, creators, and service businesses delivering a useful free resource",
+      "effort": "Allow a few focused hours for the resource and configuration, plus five days to verify the real delays. This is an editorial planning estimate; account approval and DNS changes can take longer.",
+      "intro": "A complete Canva-to-MailerLite path: create a useful PDF, connect a signup page to one group, require confirmation for a new subscriber, deliver the file, and send two helpful follow-ups.",
+      "expectedOutcome": "A two-page planning PDF, a published signup page, and one three-email welcome workflow with explicit confirmation, timing, unsubscribe, and recovery checks.",
+      "prerequisites": [
+        "A free Canva account and original or permitted resource content.",
+        "A MailerLite account allowed to send, an approved sender, privacy policy, business details, and access to any required domain-authentication settings.",
+        "Space within the current subscriber, send, landing-page, and automation limits.",
+        "Two fresh controlled email addresses for enrollment and unsubscribe tests."
+      ],
+      "contents": [
+        {
+          "id": "welcome-fit",
+          "label": "Choose the route and check limits"
+        },
+        {
+          "id": "welcome-pdf",
+          "label": "1. Build the Canva PDF"
+        },
+        {
+          "id": "welcome-file",
+          "label": "2. Upload and link the file"
+        },
+        {
+          "id": "welcome-sender",
+          "label": "3. Prepare the sender"
+        },
+        {
+          "id": "welcome-signup",
+          "label": "4. Connect signup and confirmation"
+        },
+        {
+          "id": "welcome-build",
+          "label": "5. Build the five steps"
+        },
+        {
+          "id": "welcome-emails",
+          "label": "6. Copy all three emails"
+        },
+        {
+          "id": "welcome-tests",
+          "label": "7. Test the whole journey"
+        },
+        {
+          "id": "welcome-fixes",
+          "label": "8. Troubleshoot and maintain"
+        },
+        {
+          "id": "downloads",
+          "label": "Download the working kit"
+        }
+      ],
+      "releaseChecks": [
+        "Confirm with a fresh address before email 1.",
+        "Open the correct PDF while signed out.",
+        "Record the actual two-day and three-day waits.",
+        "Unsubscribe after email 1 and verify later messages are suppressed.",
+        "Repeat signup with an existing subscriber and verify no restart with repeat entry disabled.",
+        "Confirm the final workflow fits ongoing Free limits after any trial ends."
+      ],
+      "success": [
+        "One confirmed resource request starts the intended sequence once.",
+        "The delivered PDF opens without Canva access.",
+        "Messages arrive with the configured gaps.",
+        "Unsubscribe prevents subsequent sequence messages."
+      ],
+      "pitfalls": [
+        "A group label does not create marketing permission.",
+        "A preview message bypasses real signup and enrollment.",
+        "A copied active workflow can send duplicate welcome messages.",
+        "Free-plan limits can block delivery while a form still appears to work."
+      ],
+      "researchIntent": "Lead-magnet delivery, attaching a PDF in MailerLite, welcome automation troubleshooting, free-plan suitability.",
+      "lastReviewed": "2026-11-01",
+      "maintenanceTrigger": "Recheck when MailerLite plan limits or editors change, when the PDF or product changes, or when subscriber delivery begins failing.",
+      "documentationBased": true,
+      "vendorWorkflowExecuted": false,
+      "localChecks": [
+        "Copy targets and section anchors",
+        "Local screenshot file existence",
+        "Three-email plus two-delay capacity arithmetic",
+        "Worksheet and message completeness"
+      ],
+      "sourceUrls": [
+        "https://www.mailerlite.com/help/how-to-send-a-freebie-lead-magnet-to-new-subscribers",
+        "https://www.mailerlite.com/pricing",
+        "https://www.mailerlite.com/help/free-plan-update-faq",
+        "https://www.canva.com/create/pdf-maker/",
+        "https://www.canva.com/help/download-file-types/",
+        "https://www.mailerlite.com/help/importing-pdf-files-in-mailerlite",
+        "https://www.mailerlite.com/help/how-to-verify-and-authenticate-your-domain",
+        "https://www.mailerlite.com/help/troubleshooting-domain-authentication",
+        "https://www.mailerlite.com/help/how-to-create-and-use-groups",
+        "https://www.mailerlite.com/help/new-landing-page-builder",
+        "https://www.mailerlite.com/help/how-to-use-double-opt-in-when-collecting-subscribers",
+        "https://www.mailerlite.com/help/how-to-create-an-automation-workflow",
+        "https://www.mailerlite.com/help/how-to-use-automation-steps",
+        "https://www.mailerlite.com/help/how-to-set-up-automation-triggers",
+        "https://www.mailerlite.com/help/automations-faq"
+      ],
+      "wordCount": 3528,
+      "verifiedUiSteps": [
+        {
+          "step": "Canva Share → Download → PDF Standard",
+          "basis": "Official documentation; not live account execution"
+        },
+        {
+          "step": "MailerLite File manager → Upload; email editor Link → Insert File",
+          "basis": "Official documentation; not live account execution"
+        },
+        {
+          "step": "Subscribers → Groups; Sites → Landing pages → New site",
+          "basis": "Official documentation; not live account execution"
+        },
+        {
+          "step": "Automations → Create workflow; Joins a group; Settings repeat entry unchecked",
+          "basis": "Official documentation; not live account execution"
+        },
+        {
+          "step": "Three Send email actions separated by two Delay rules",
+          "basis": "Official documentation; not live account execution"
+        }
+      ]
+    },
+    {
+      "id": "service-lead-follow-up",
+      "bodyFile": "content/service-lead-follow-up-expanded.html",
+      "title": "Turn Tally inquiries into Gmail drafts with Google Sheets and Zapier",
+      "summary": "Capture each service inquiry, save its record, and prepare a reply for review. Exact field mapping, a filled example, vendor screenshots, duplicate tests, and a free two-step Zap.",
+      "category": "CRM",
+      "toolIds": [
+        "zapier"
+      ],
+      "workflowTools": [
+        "Tally",
+        "Google Sheets",
+        "Zapier",
+        "Gmail"
+      ],
+      "optionalExistingCrm": "HubSpot",
+      "audience": "Small service businesses and owners who can personally review a modest inquiry queue",
+      "effort": "Allow a focused setup session, then run the controlled form, mapping, duplicate, and recovery cases. This is an editorial allowance, not a measured setup time.",
+      "intro": "Connect Tally native capture to a stable Google Sheets intake tab, create a Gmail draft through one Zapier action, and give every active inquiry an owner and a dated next action.",
+      "expectedOutcome": "A published six-field form, matching intake records, correctly mapped Gmail drafts, and a human-maintained follow-up register.",
+      "prerequisites": [
+        "A Tally account and published form.",
+        "A Google account with access to Sheets and Gmail; managed accounts may require administrator approval.",
+        "A Zapier account with enough task capacity for one action per inquiry.",
+        "An approved business-facts sheet, monitored inbox, review owner, privacy policy, and controlled test email."
+      ],
+      "contents": [
+        {
+          "id": "inquiry-fit",
+          "label": "Choose the free route"
+        },
+        {
+          "id": "inquiry-contract",
+          "label": "1. Define the fields and facts"
+        },
+        {
+          "id": "inquiry-form",
+          "label": "2. Build the Tally form"
+        },
+        {
+          "id": "inquiry-sheet",
+          "label": "3. Connect Google Sheets"
+        },
+        {
+          "id": "inquiry-zap",
+          "label": "4. Map the Gmail draft"
+        },
+        {
+          "id": "inquiry-review",
+          "label": "5. Review and follow up"
+        },
+        {
+          "id": "inquiry-tests",
+          "label": "6. Test failure cases"
+        },
+        {
+          "id": "inquiry-recovery",
+          "label": "7. Recover and maintain"
+        },
+        {
+          "id": "downloads",
+          "label": "Download the working kit"
+        }
+      ],
+      "releaseChecks": [
+        "A complete controlled form entry produces a matching intake row and draft.",
+        "The draft action creates no sent email.",
+        "Empty required fields are blocked; optional blank fields do not break the draft.",
+        "Two submissions are recognized as distinct IDs and reviewed before replying.",
+        "Repeated action tests are checked for duplicate drafts.",
+        "A paused or failed handoff is reconciled against the source before replay."
+      ],
+      "success": [
+        "Every completed submission is accounted for.",
+        "Recipient, subject, and body values are correctly mapped.",
+        "The review owner sends an appropriate response and records its time.",
+        "Every active inquiry has a status and dated next action."
+      ],
+      "pitfalls": [
+        "Sorting or changing the raw intake tab can disrupt a Zap.",
+        "A successful draft action is not a sent customer response.",
+        "This two-step recipe has no durable cross-system deduplication action.",
+        "A task date does not automatically detect a reply or send a follow-up."
+      ],
+      "researchIntent": "Tally Google Sheets integration, Google Sheets Gmail drafts, form follow-up without a paid multistep workflow, and duplicate/trigger troubleshooting.",
+      "lastReviewed": "2026-11-01",
+      "maintenanceTrigger": "Recheck after form labels, sheet structure, account permissions, Zapier limits, service rules, or queue ownership change.",
+      "documentationBased": true,
+      "vendorWorkflowExecuted": false,
+      "localChecks": [
+        "Copy targets and section anchors",
+        "Local screenshot file existence",
+        "Fictional sample field substitution",
+        "Review-register tab-separated row shape",
+        "Dates and single-action capacity arithmetic"
+      ],
+      "sourceUrls": [
+        "https://tally.so/help/google-sheets-integration",
+        "https://zapier.com/apps/gmail/integrations/google-sheets/10563/create-drafts-on-gmail-for-new-rows-on-google-sheets",
+        "https://help.zapier.com/hc/en-us/articles/32337438839565-What-s-included-in-Zapier-s-Free-plan",
+        "https://help.zapier.com/hc/en-us/articles/8495994922509-How-to-get-started-with-Google-Sheets-on-Zapier",
+        "https://tally.so/help/self-email-notifications",
+        "https://tally.so/help/form-settings",
+        "https://help.zapier.com/hc/en-us/articles/39882352154381-How-to-get-started-with-Tally-on-Zapier",
+        "https://tally.so/help/create-a-form",
+        "https://tally.so/help/faq",
+        "https://help.zapier.com/hc/en-us/articles/8496276985101-Work-with-Google-Sheets-in-Zap-workflows",
+        "https://help.zapier.com/hc/en-us/articles/8495933589645-How-to-get-started-with-Gmail-on-Zapier",
+        "https://help.zapier.com/hc/en-us/articles/29384048552205-Google-Sheets-error-Zap-not-triggering",
+        "https://knowledge.hubspot.com/records/create-contacts",
+        "https://knowledge.hubspot.com/tasks/create-tasks"
+      ],
+      "wordCount": 3779,
+      "verifiedUiSteps": [
+        {
+          "step": "Tally published form → Integrations → Google Sheets → Connect",
+          "basis": "Official documentation; not live account execution"
+        },
+        {
+          "step": "Tally question block settings → Required; Settings → Self email notifications",
+          "basis": "Official documentation; not live account execution"
+        },
+        {
+          "step": "Zapier Google Sheets New Spreadsheet Row → Gmail Create Draft",
+          "basis": "Official documentation; not live account execution"
+        },
+        {
+          "step": "Gmail Drafts review before Send",
+          "basis": "Official documentation; not live account execution"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "site-assets/vendor-guides/mailerlite-file-link.webp",
+      "publicPath": "/assets/vendor-guides/mailerlite-file-link.webp",
+      "vendor": "MailerLite",
+      "sourcePage": "https://www.mailerlite.com/help/importing-pdf-files-in-mailerlite",
+      "originalImageUrl": "https://www.mailerlite.com/img/containers/assets/kb/rewrite/pdf_02.png/a9af036df7f81f6ccbb2a1930d47b04d.webp",
+      "caption": "Insert File control in the email editor",
+      "articleId": "email-welcome-sequence",
+      "embedded": true,
+      "retrievedOn": "2026-11-01",
+      "mime": "image/webp",
+      "bytes": 106282,
+      "sha256": "3de2a793eb4b1786221b13d5171b6f25cdfb91e0d9257375ee8ab154d8ac323c",
+      "attribution": "Vendor documentation screenshot; not a screenshot from a Seller Insider Hub-operated account.",
+      "modified": false
+    },
+    {
+      "file": "site-assets/vendor-guides/mailerlite-workflow-step.webp",
+      "publicPath": "/assets/vendor-guides/mailerlite-workflow-step.webp",
+      "vendor": "MailerLite",
+      "sourcePage": "https://www.mailerlite.com/help/how-to-create-an-automation-workflow",
+      "originalImageUrl": "https://www.mailerlite.com/img/containers/assets/kb/rewrite/workflow_new_02.png/868ba07eebdc3d46200f74774bd76e66.webp",
+      "caption": "Group trigger and email subject, sender, and design controls",
+      "articleId": "email-welcome-sequence",
+      "embedded": true,
+      "retrievedOn": "2026-11-01",
+      "mime": "image/webp",
+      "bytes": 86256,
+      "sha256": "2f8caa3b3a6db5658b85eeb96abbf24be6366a966fa033b07173a20bd0739639",
+      "attribution": "Vendor documentation screenshot; not a screenshot from a Seller Insider Hub-operated account.",
+      "modified": false
+    },
+    {
+      "file": "site-assets/vendor-guides/zapier-sheet-headers.png",
+      "publicPath": "/assets/vendor-guides/zapier-sheet-headers.png",
+      "vendor": "Zapier",
+      "sourcePage": "https://help.zapier.com/hc/en-us/articles/8496276985101-Work-with-Google-Sheets-in-Zap-workflows",
+      "originalImageUrl": "https://zappy.zapier.com/7FFC8975-A1FA-4A25-84C5-5E3D03F35B79.png",
+      "caption": "Single header row with contiguous data; vendor inventory example",
+      "articleId": "service-lead-follow-up",
+      "embedded": true,
+      "retrievedOn": "2026-11-01",
+      "mime": "image/png",
+      "bytes": 68178,
+      "sha256": "8f4466a46878f772ed3b216bd7c5b2b03915411027878c56158e315b3c004466",
+      "attribution": "Vendor documentation screenshot; not a screenshot from a Seller Insider Hub-operated account.",
+      "modified": false
+    },
+    {
+      "file": "site-assets/vendor-guides/tally-sheets-connect.png",
+      "publicPath": "/assets/vendor-guides/tally-sheets-connect.png",
+      "vendor": "Tally",
+      "sourcePage": "https://tally.so/help/google-sheets-integration",
+      "originalImageUrl": "https://app.notion.com/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fc7def46e-5b1b-431a-b65a-93222e53bf0d%2Ff9a2a54e-61b8-465f-94d0-1ab76fd22585%2FGoogle-Sheets-integration-1.png?table=block&id=c9efb6ef-7c9b-4ca5-9004-e9a0ff6f69cd&cache=v2",
+      "caption": "Tally integrations connection list; downloaded but not embedded",
+      "articleId": "service-lead-follow-up",
+      "embedded": false,
+      "retrievedOn": "2026-11-01",
+      "mime": "image/png",
+      "bytes": 167068,
+      "sha256": "929ceaf4b7a33332943e058d0d9346ff0a55f18a64ea37744917d1555114cef8",
+      "attribution": "Vendor documentation screenshot; not a screenshot from a Seller Insider Hub-operated account.",
+      "modified": false
+    },
+    {
+      "file": "site-assets/vendor-guides/tally-sheets-settings.png",
+      "publicPath": "/assets/vendor-guides/tally-sheets-settings.png",
+      "vendor": "Tally",
+      "sourcePage": "https://tally.so/help/google-sheets-integration",
+      "originalImageUrl": "https://app.notion.com/image/attachment%3A98dd7c88-8764-46d7-8105-93389a5b97e7%3ACleanShot_2025-12-16_at_16.42.362x.png?table=block&id=2cb8a570-dd6a-808a-9dca-c95c6ec698ab&cache=v2",
+      "caption": "Account, spreadsheet, worksheet, and historical-export controls",
+      "articleId": "service-lead-follow-up",
+      "embedded": true,
+      "retrievedOn": "2026-11-01",
+      "mime": "image/png",
+      "bytes": 392276,
+      "sha256": "ca42f63c709477de67eda3e1e183fc993dfb5129d8e25d0488e51ede0ff5607a",
+      "attribution": "Vendor documentation screenshot; not a screenshot from a Seller Insider Hub-operated account.",
+      "modified": false
+    }
+  ],
+  "planSnapshots": [
+    {
+      "vendor": "MailerLite",
+      "plan": "Free",
+      "date": "2026-11-01",
+      "facts": {
+        "activeSubscribers": 250,
+        "monthlyEmails": 2500,
+        "activeAutomations": 3,
+        "automationSteps": 5,
+        "landingPages": 1
+      },
+      "sourceUrls": [
+        "https://www.mailerlite.com/pricing",
+        "https://www.mailerlite.com/help/free-plan-update-faq"
+      ]
+    },
+    {
+      "vendor": "Zapier",
+      "plan": "Free",
+      "date": "2026-11-01",
+      "facts": {
+        "monthlyTasks": 100,
+        "zapStructure": "one trigger and one action",
+        "pollingIntervalMinutes": 15
+      },
+      "sourceUrls": [
+        "https://help.zapier.com/hc/en-us/articles/32337438839565-What-s-included-in-Zapier-s-Free-plan"
+      ]
+    },
+    {
+      "vendor": "Tally",
+      "date": "2026-11-01",
+      "facts": {
+        "nativeGoogleSheetsIntegration": "Free",
+        "standardSelfEmailNotifications": "Free",
+        "respondentNotifications": "Paid requirement; not used"
+      },
+      "sourceUrls": [
+        "https://tally.so/help/google-sheets-integration",
+        "https://tally.so/help/self-email-notifications",
+        "https://tally.so/help/form-settings"
+      ]
+    }
+  ],
+  "criticalFindings": [
+    {
+      "finding": "MailerLite free-capacity failures can coexist with apparently working forms.",
+      "sourceUrl": "https://www.mailerlite.com/help/free-plan-update-faq",
+      "impact": "Check sending limits when signup succeeds but delivery fails."
+    },
+    {
+      "finding": "Tally permits some sheet structure changes that Zapier warns against.",
+      "sourceUrls": [
+        "https://tally.so/help/google-sheets-integration",
+        "https://help.zapier.com/hc/en-us/articles/8496276985101-Work-with-Google-Sheets-in-Zap-workflows"
+      ],
+      "impact": "Keep raw intake stable; review status in a separate tab."
+    },
+    {
+      "finding": "The old MailerLite landing-page guide is a legacy-editor page with historical plan wording.",
+      "sourceUrls": [
+        "https://www.mailerlite.com/help/how-to-create-a-landing-page",
+        "https://www.mailerlite.com/help/new-landing-page-builder"
+      ],
+      "impact": "Use the current new-builder controls and current pricing."
+    },
+    {
+      "finding": "A two-step Gmail draft Zap does not supply durable cross-system deduplication or automatic reply detection.",
+      "basis": "Inference from the deliberately limited trigger/action design.",
+      "impact": "Review before sending, reconcile IDs before replay, and leave follow-up human-controlled."
+    }
+  ],
+  "integrationNotes": [
+    "Root should copy site-assets/vendor-guides into published assets/vendor-guides.",
+    "Root should render the new bodyFile values and update sidebar metadata using editorialUpdates.",
+    "The content uses existing guide classes plus guide-screenshot; add responsive image and caption rules as needed.",
+    "Root supplies resources/kits/<id>.txt by extracting complete pre blocks.",
+    "Catalog currently contains canva, mailerlite, and zapier, but not Tally/Sheets/Gmail; toolIds use only valid catalog IDs and workflowTools records the complete stack.",
+    "Do not imply that live vendor acceptance tests were executed.",
+    "One additional Tally sheet-output image returned HTTP403 and was not used; no authentication bypass was attempted."
+  ],
+  "validation": {
+    "status": "passed local checks",
+    "checkedOn": "2026-11-01",
+    "articles": [
+      {
+        "articleId": "email-welcome-sequence",
+        "htmlStructure": "pass",
+        "uniqueIds": 15,
+        "copyBlocks": 5,
+        "embeddedVendorImages": 2,
+        "localReferences": "pass"
+      },
+      {
+        "articleId": "service-lead-follow-up",
+        "htmlStructure": "pass",
+        "uniqueIds": 16,
+        "copyBlocks": 7,
+        "embeddedVendorImages": 2,
+        "localReferences": "pass"
+      }
+    ],
+    "sampleMapping": "Template substitution exactly matches complete fictional expected draft.",
+    "tabularExample": "Review header and row both contain nine tab-separated fields.",
+    "dateExamples": "November2,2026=Monday; November4,2026=Wednesday.",
+    "arithmetic": "3 email actions+2 delays=5 steps;100×3+200×4=1100 sends.",
+    "liveVendorTestsRun": false,
+    "sourceHttpCheck": {
+      "checkedOn": "2026-11-01",
+      "results": [
+        {
+          "url": "https://help.zapier.com/hc/en-us/articles/29384048552205-Google-Sheets-error-Zap-not-triggering",
+          "status": 200,
+          "finalUrl": "https://help.zapier.com/hc/en-us/articles/29384048552205-Google-Sheets-error-Zap-not-triggering",
+          "bytes": 115869
+        },
+        {
+          "url": "https://help.zapier.com/hc/en-us/articles/32337438839565-What-s-included-in-Zapier-s-Free-plan",
+          "status": 200,
+          "finalUrl": "https://help.zapier.com/hc/en-us/articles/32337438839565-What-s-included-in-Zapier-s-Free-plan",
+          "bytes": 114194
+        },
+        {
+          "url": "https://help.zapier.com/hc/en-us/articles/39882352154381-How-to-get-started-with-Tally-on-Zapier",
+          "status": 200,
+          "finalUrl": "https://help.zapier.com/hc/en-us/articles/39882352154381-How-to-get-started-with-Tally-on-Zapier",
+          "bytes": 112046
+        },
+        {
+          "url": "https://help.zapier.com/hc/en-us/articles/8495933589645-How-to-get-started-with-Gmail-on-Zapier",
+          "status": 200,
+          "finalUrl": "https://help.zapier.com/hc/en-us/articles/8495933589645-How-to-get-started-with-Gmail-on-Zapier",
+          "bytes": 116877
+        },
+        {
+          "url": "https://help.zapier.com/hc/en-us/articles/8495994922509-How-to-get-started-with-Google-Sheets-on-Zapier",
+          "status": 200,
+          "finalUrl": "https://help.zapier.com/hc/en-us/articles/8495994922509-How-to-get-started-with-Google-Sheets-on-Zapier",
+          "bytes": 117411
+        },
+        {
+          "url": "https://help.zapier.com/hc/en-us/articles/8496276985101-Work-with-Google-Sheets-in-Zap-workflows",
+          "status": 200,
+          "finalUrl": "https://help.zapier.com/hc/en-us/articles/8496276985101-Work-with-Google-Sheets-in-Zap-workflows",
+          "bytes": 114228
+        },
+        {
+          "url": "https://knowledge.hubspot.com/records/create-contacts",
+          "status": 200,
+          "finalUrl": "https://knowledge.hubspot.com/records/create-records-on-the-updated-index-page",
+          "bytes": 356625
+        },
+        {
+          "url": "https://knowledge.hubspot.com/tasks/create-tasks",
+          "status": 200,
+          "finalUrl": "https://knowledge.hubspot.com/tasks/create-tasks",
+          "bytes": 362563
+        },
+        {
+          "url": "https://tally.so/help/create-a-form",
+          "status": 200,
+          "finalUrl": "https://tally.so/help/create-a-form",
+          "bytes": 739611
+        },
+        {
+          "url": "https://tally.so/help/faq",
+          "status": 200,
+          "finalUrl": "https://tally.so/help/faq",
+          "bytes": 586475
+        },
+        {
+          "url": "https://tally.so/help/form-settings",
+          "status": 200,
+          "finalUrl": "https://tally.so/help/form-settings",
+          "bytes": 493926
+        },
+        {
+          "url": "https://tally.so/help/google-sheets-integration",
+          "status": 200,
+          "finalUrl": "https://tally.so/help/google-sheets-integration",
+          "bytes": 535184
+        },
+        {
+          "url": "https://tally.so/help/self-email-notifications",
+          "status": 200,
+          "finalUrl": "https://tally.so/help/self-email-notifications",
+          "bytes": 496021
+        },
+        {
+          "url": "https://www.canva.com/create/pdf-maker/",
+          "status": 200,
+          "finalUrl": "https://www.canva.com/create/pdf-maker/",
+          "bytes": 386238
+        },
+        {
+          "url": "https://www.canva.com/help/download-file-types/",
+          "status": 200,
+          "finalUrl": "https://www.canva.com/help/download-file-types/",
+          "bytes": 9446
+        },
+        {
+          "url": "https://www.mailerlite.com/help/automations-faq",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/automations-faq",
+          "bytes": 280197
+        },
+        {
+          "url": "https://www.mailerlite.com/help/free-plan-update-faq",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/free-plan-update-faq",
+          "bytes": 302606
+        },
+        {
+          "url": "https://www.mailerlite.com/help/how-to-create-an-automation-workflow",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/how-to-create-an-automation-workflow",
+          "bytes": 279631
+        },
+        {
+          "url": "https://www.mailerlite.com/help/how-to-create-and-use-groups",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/how-to-create-and-use-groups",
+          "bytes": 279135
+        },
+        {
+          "url": "https://www.mailerlite.com/help/how-to-send-a-freebie-lead-magnet-to-new-subscribers",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/how-to-send-a-freebie-lead-magnet-to-new-subscribers",
+          "bytes": 261641
+        },
+        {
+          "url": "https://www.mailerlite.com/help/how-to-set-up-automation-triggers",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/how-to-set-up-automation-triggers",
+          "bytes": 282414
+        },
+        {
+          "url": "https://www.mailerlite.com/help/how-to-use-automation-steps",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/how-to-use-automation-steps",
+          "bytes": 288436
+        },
+        {
+          "url": "https://www.mailerlite.com/help/how-to-use-double-opt-in-when-collecting-subscribers",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/how-to-use-double-opt-in-when-collecting-subscribers",
+          "bytes": 266859
+        },
+        {
+          "url": "https://www.mailerlite.com/help/how-to-verify-and-authenticate-your-domain",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/how-to-verify-and-authenticate-your-domain",
+          "bytes": 273096
+        },
+        {
+          "url": "https://www.mailerlite.com/help/importing-pdf-files-in-mailerlite",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/importing-pdf-files-in-mailerlite",
+          "bytes": 258924
+        },
+        {
+          "url": "https://www.mailerlite.com/help/new-landing-page-builder",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/new-landing-page-builder",
+          "bytes": 300479
+        },
+        {
+          "url": "https://www.mailerlite.com/help/troubleshooting-domain-authentication",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/help/troubleshooting-domain-authentication",
+          "bytes": 265879
+        },
+        {
+          "url": "https://www.mailerlite.com/pricing",
+          "status": 200,
+          "finalUrl": "https://www.mailerlite.com/pricing",
+          "bytes": 609508
+        },
+        {
+          "url": "https://zapier.com/apps/gmail/integrations/google-sheets/10563/create-drafts-on-gmail-for-new-rows-on-google-sheets",
+          "status": 200,
+          "finalUrl": "https://zapier.com/apps/gmail/integrations/google-sheets/10563/create-drafts-on-gmail-for-new-rows-on-google-sheets",
+          "bytes": 1561492
+        }
+      ]
+    }
+  }
+}

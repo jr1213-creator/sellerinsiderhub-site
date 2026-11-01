@@ -1,0 +1,1954 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-01",
+  "currency": "USD",
+  "methodology": {
+    "label": "Official documentation reviewed",
+    "scope": "Eight tools and four focused decisions. Plan facts were checked against public primary sources; calculators apply disclosed arithmetic within the recorded ranges.",
+    "notClaimed": [
+      "Firsthand comparative vendor testing",
+      "Measured output quality or reliability",
+      "Guaranteed savings, revenue or traffic",
+      "Complete coverage of all plan tiers or negotiated prices"
+    ],
+    "checks": [
+      "Price payment frequency and unit",
+      "Included allowance and feature gates",
+      "Unknown values and quote boundaries",
+      "Official source and checked date"
+    ],
+    "nullMeaning": "Unknown or unavailable; never zero. Consult unlimitedLimits, notMeteredLimits and annualAvailable before interpreting a null.",
+    "recommendationBasis": "Editorial judgment from documented fit. Trial checklists are proposed evaluation procedures, not tests claimed as completed.",
+    "priceExclusions": [
+      "Tax",
+      "Foreign exchange",
+      "Usage overages",
+      "External app/API subscriptions",
+      "Unpriced add-ons",
+      "Temporary promotional discounts"
+    ]
+  },
+  "sources": [
+    {
+      "id": "openai-plus",
+      "publisher": "OpenAI",
+      "title": "What is ChatGPT Plus?",
+      "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "checkedAt": "2026-11-01",
+      "scope": "Plus monthly price, no annual billing, variable usage caps and separate API billing.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "claude-pricing",
+      "publisher": "Anthropic",
+      "title": "Claude pricing",
+      "url": "https://claude.com/pricing",
+      "checkedAt": "2026-11-01",
+      "scope": "Individual Free and Pro plans, monthly versus upfront annual payment and usage qualifications.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "zapier-pricing",
+      "publisher": "Zapier",
+      "title": "Plans and pricing",
+      "url": "https://zapier.com/pricing",
+      "checkedAt": "2026-11-01",
+      "scope": "Free task allowance, two-step restriction, Professional premium apps and multi-step support.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "zapier-pricing-guide",
+      "publisher": "Zapier",
+      "title": "Zapier pricing",
+      "url": "https://zapier.com/blog/zapier-pricing/",
+      "checkedAt": "2026-11-01",
+      "scope": "Professional 750-task tier at $19.99 per month billed annually; other commitments are not inferred.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "zapier-tasks",
+      "publisher": "Zapier",
+      "title": "How is task usage measured in Zapier?",
+      "url": "https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier",
+      "checkedAt": "2026-11-01",
+      "scope": "Successful-action counting, free triggers and logic, replay and nonstandard product meters; updated October 28, 2026.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "make-pricing",
+      "publisher": "Make",
+      "title": "Pricing and subscription packages",
+      "url": "https://www.make.com/pricing",
+      "checkedAt": "2026-11-01",
+      "scope": "Credit metering and allowance behavior; dynamic plan cards were not exposed in the retrieved page.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "make-plan-guide",
+      "publisher": "Make",
+      "title": "Marketing automation tools in 2026",
+      "url": "https://www.make.com/blog/best-marketing-automation-tools",
+      "checkedAt": "2026-11-01",
+      "scope": "Make own Free 1,000-credit and Core $12/10,000-credit plan figures. Vendor comparison claims about competitors are not used.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "make-credits",
+      "publisher": "Make",
+      "title": "Credits",
+      "url": "https://help.make.com/credits",
+      "checkedAt": "2026-11-01",
+      "scope": "Standard module operations versus credit consumption, AI exceptions and separate AI-provider token charges.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "mailerlite-pricing",
+      "publisher": "MailerLite",
+      "title": "Pricing",
+      "url": "https://www.mailerlite.com/pricing",
+      "checkedAt": "2026-11-01",
+      "scope": "Subscriber and sending limits, monthly entry prices, 10% annual discount, active-subscriber upgrades and fair use. Automation-step caps: Free 5; Comfort 100; Power 100.",
+      "evidenceType": "official-documentation",
+      "stepLimitObservation": {
+        "observedOn": "2026-11-01",
+        "section": "Full comparison table → Automate your work → Automation steps",
+        "columnOrder": [
+          "Power",
+          "Comfort",
+          "Free"
+        ],
+        "values": [
+          100,
+          100,
+          5
+        ]
+      }
+    },
+    {
+      "id": "mailerlite-free",
+      "publisher": "MailerLite",
+      "title": "Free plan",
+      "url": "https://www.mailerlite.com/free-plan",
+      "checkedAt": "2026-11-01",
+      "scope": "Free three-automation limit; Comfort 50-automation limit; paid user seats and unlimited Power qualifications.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "mailerlite-tier-guide",
+      "publisher": "MailerLite",
+      "title": "Email marketing with Squarespace",
+      "url": "https://www.mailerlite.com/blog/squarespace-email-marketing",
+      "checkedAt": "2026-11-01",
+      "scope": "MailerLite own 500-subscriber entry tier: Comfort $12/5,000 emails and Power $25/unlimited emails.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "kit-pricing",
+      "publisher": "Kit",
+      "title": "Pricing and plans",
+      "url": "https://kit.com/pricing",
+      "checkedAt": "2026-11-01",
+      "scope": "Creator 1,000-subscriber annual charge of $390, Free list size and tier-dependent billing.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "kit-free",
+      "publisher": "Kit",
+      "title": "The Kit Free plan",
+      "url": "https://help.kit.com/en/articles/16627071-the-kit-free-plan",
+      "checkedAt": "2026-11-01",
+      "scope": "Free broadcasts to 10,000 subscribers; sequences, visual automations and rules require paid plans. Updated September 23, 2026.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "kit-plan-guide",
+      "publisher": "Kit",
+      "title": "Creator vs Pro: choose the right plan",
+      "url": "https://help.kit.com/en/articles/4494683-creator-vs-pro-choose-the-right-plan",
+      "checkedAt": "2026-11-01",
+      "scope": "Creator monthly $39 at up to 1,000 subscribers, two users, unlimited sequences and visual automations.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "buffer-pricing",
+      "publisher": "Buffer",
+      "title": "Pricing",
+      "url": "https://buffer.com/pricing",
+      "checkedAt": "2026-11-01",
+      "scope": "Channel definition, refillable free queue, annual plan charges, supported-network qualifications and 5,000-post paid queue fair-use cap.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "buffer-plan-guide",
+      "publisher": "Buffer",
+      "title": "Buffer pricing and features",
+      "url": "https://support.buffer.com/articles/buffer-pricing-and-features-6pJrOPuzIt",
+      "checkedAt": "2026-11-01",
+      "scope": "Monthly/annual per-channel pricing bands, one-user Essentials and Team approvals. Calculators use only channels 1–10.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "metricool-pricing",
+      "publisher": "Metricool",
+      "title": "Plans and pricing",
+      "url": "https://metricool.com/pricing/",
+      "checkedAt": "2026-11-01",
+      "scope": "USD monthly and annual 5-brand Starter/15-brand Advanced bundles; Free exclusions, posting quota and approval gates.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "metricool-fair-use",
+      "publisher": "Metricool",
+      "title": "Fair use policy for social media scheduling",
+      "url": "https://help.metricool.com/fair-use-policy-for-social-media-scheduling-e3tnm",
+      "checkedAt": "2026-11-01",
+      "scope": "600 posts per brand per month triggers review; this is not a fixed maximum or guaranteed allowance.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "toolfinder-method",
+      "publisher": "Tool Finder",
+      "title": "How we review",
+      "url": "https://toolfinder.com/how-we-review",
+      "checkedAt": "2026-11-01",
+      "scope": "Competitor-reported review standards; not evidence that Seller Insider Hub has performed vendor tests.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "capterra-method",
+      "publisher": "Capterra",
+      "title": "Research methodology",
+      "url": "https://www.capterra.com/resources/proprietary-data-research/",
+      "checkedAt": "2026-11-01",
+      "scope": "Separation of research formats, disclosed scoring inputs and public-price comparison methodology.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "zapier-method",
+      "publisher": "Zapier",
+      "title": "How we select apps to feature on the Zapier blog",
+      "url": "https://zapier.com/blog/selecting-apps/",
+      "checkedAt": "2026-11-01",
+      "scope": "Competitor-reported category criteria, use-based testing, records and editorial independence.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "futurepedia-learn",
+      "publisher": "Futurepedia",
+      "title": "Learn AI",
+      "url": "https://www.futurepedia.io/learn",
+      "checkedAt": "2026-11-01",
+      "scope": "Practical courses and assessment-based learning paths as a competitor product capability.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "zapier-step-limits",
+      "publisher": "Zapier",
+      "title": "Zap limits",
+      "url": "https://help.zapier.com/hc/en-us/articles/8496181445261-Zap-limits",
+      "checkedAt": "2026-11-01",
+      "scope": "100 total steps per Zap including paths; trial execution has separate limits.",
+      "evidenceType": "official-documentation"
+    },
+    {
+      "id": "mailerlite-automation-steps",
+      "publisher": "MailerLite",
+      "title": "How to use automation steps (Rules and Actions)",
+      "url": "https://www.mailerlite.com/help/how-to-use-automation-steps",
+      "checkedAt": "2026-11-01",
+      "scope": "Email actions, delays, conditions, and other rules/actions are workflow steps added after the trigger.",
+      "evidenceType": "official-documentation"
+    }
+  ],
+  "tools": {
+    "chatgpt": {
+      "name": "ChatGPT",
+      "checkedAt": "2026-11-01",
+      "plans": [
+        {
+          "id": "plus",
+          "name": "Plus",
+          "monthlyUsd": 20,
+          "annualTotalUsd": null,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "usersMax": 1
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [],
+          "features": {
+            "teamAdministration": false
+          },
+          "sourceIds": [
+            "openai-plus"
+          ],
+          "scope": "One individual Plus subscription. No business-team quotation.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Plus has no annual billing; 12 monthly payments total $240 before tax if the price remains unchanged.",
+            "Usage caps vary; a paid subscription does not establish a fixed number of completed business tasks."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1
+          },
+          "limitEvidence": {
+            "usersMax": {
+              "sourceIds": [
+                "openai-plus"
+              ],
+              "scope": "One individual Plus subscription. No business-team quotation."
+            }
+          },
+          "annualAvailable": false
+        }
+      ],
+      "constraints": [
+        {
+          "text": "API usage is billed separately from Plus.",
+          "sourceIds": [
+            "openai-plus"
+          ]
+        }
+      ]
+    },
+    "claude": {
+      "name": "Claude",
+      "checkedAt": "2026-11-01",
+      "plans": [
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthlyUsd": 20,
+          "annualTotalUsd": 200,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "usersMax": 1
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [],
+          "features": {
+            "teamAdministration": false
+          },
+          "sourceIds": [
+            "claude-pricing"
+          ],
+          "scope": "One individual Pro subscription. Annual price is paid upfront.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "The exact annual charge is $200; $200/12 is about $16.67. The vendor displays a rounded $17 monthly equivalent.",
+            "Account and model usage limits still apply."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1
+          },
+          "limitEvidence": {
+            "usersMax": {
+              "sourceIds": [
+                "claude-pricing"
+              ],
+              "scope": "One individual Pro subscription. Annual price is paid upfront."
+            }
+          }
+        }
+      ],
+      "constraints": [
+        {
+          "text": "Model/tool access and usage limits can change; this comparison does not establish a quality winner.",
+          "sourceIds": [
+            "claude-pricing"
+          ]
+        }
+      ]
+    },
+    "zapier": {
+      "name": "Zapier",
+      "checkedAt": "2026-11-01",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "monthlyUsd": 0,
+          "annualTotalUsd": 0,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "tasksPerMonthMax": 100,
+            "actionStepsMax": 1
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [],
+          "features": {
+            "premiumApps": false
+          },
+          "sourceIds": [
+            "zapier-pricing"
+          ],
+          "scope": "Free plan: a trigger plus one action. Task limits are not complete-workflow counts.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "100 tasks per month. Only one action after the trigger on Free."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1
+          },
+          "limitEvidence": {
+            "tasksPerMonthMax": {
+              "sourceIds": [
+                "zapier-pricing"
+              ],
+              "scope": "Free plan: a trigger plus one action. Task limits are not complete-workflow counts."
+            },
+            "actionStepsMax": {
+              "sourceIds": [
+                "zapier-pricing"
+              ],
+              "scope": "Free plan: a trigger plus one action. Task limits are not complete-workflow counts."
+            }
+          }
+        },
+        {
+          "id": "professional-750",
+          "name": "Professional · 750 tasks",
+          "monthlyUsd": null,
+          "annualTotalUsd": 239.88,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "tasksPerMonthMax": 750,
+            "actionStepsMax": 99
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [],
+          "features": {
+            "premiumApps": true
+          },
+          "sourceIds": [
+            "zapier-pricing",
+            "zapier-pricing-guide",
+            "zapier-step-limits"
+          ],
+          "scope": "750-task tier only; annual total is $19.99 × 12.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Annual monthly equivalent is $19.99; an exact monthly-pay quote was not verified in this review.",
+            "Higher task tiers and pay-per-task overages are outside this estimate.",
+            "At most 100 total steps per Zap, including the trigger and all paths; the simple calculator allows 99 actions only when no other steps are added."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "tasksPerMonthMax": 750
+          },
+          "limitEvidence": {
+            "tasksPerMonthMax": {
+              "sourceIds": [
+                "zapier-pricing",
+                "zapier-pricing-guide"
+              ],
+              "scope": "750-task tier only; annual total is $19.99 × 12."
+            },
+            "actionStepsMax": {
+              "sourceIds": [
+                "zapier-step-limits"
+              ],
+              "scope": "Simple one-trigger workflow: 100 total steps minus one trigger permits at most 99 action steps; paths and other logic also count toward the total."
+            }
+          }
+        }
+      ],
+      "constraints": [
+        {
+          "text": "Standard successful actions use tasks; triggers and listed built-in logic do not. Replays, error handling, MCP, AI and other products can change the meter.",
+          "sourceIds": [
+            "zapier-tasks"
+          ]
+        }
+      ]
+    },
+    "make": {
+      "name": "Make",
+      "checkedAt": "2026-11-01",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "monthlyUsd": 0,
+          "annualTotalUsd": 0,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "creditsPerMonthMax": 1000,
+            "actionStepsMax": null
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [
+            "actionStepsMax"
+          ],
+          "features": {
+            "premiumApps": true
+          },
+          "sourceIds": [
+            "make-plan-guide",
+            "make-credits"
+          ],
+          "scope": "Standard Make modules only; integration/API subscription costs are separate.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "App/action availability and scheduling requirements still need verification."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1
+          },
+          "limitEvidence": {
+            "creditsPerMonthMax": {
+              "sourceIds": [
+                "make-plan-guide",
+                "make-credits"
+              ],
+              "scope": "Standard Make modules only; integration/API subscription costs are separate."
+            },
+            "actionStepsMax": {
+              "sourceIds": [
+                "make-plan-guide",
+                "make-credits"
+              ],
+              "scope": "Standard Make modules only; integration/API subscription costs are separate."
+            }
+          }
+        },
+        {
+          "id": "core-10000",
+          "name": "Core · 10,000 credits",
+          "monthlyUsd": 12,
+          "annualTotalUsd": null,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "creditsPerMonthMax": 10000,
+            "actionStepsMax": null
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [
+            "actionStepsMax"
+          ],
+          "features": {
+            "premiumApps": true
+          },
+          "sourceIds": [
+            "make-plan-guide",
+            "make-credits"
+          ],
+          "scope": "10,000-credit entry tier. An exact annual charge was not verified.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Credit use can grow through polling, fan-out, bundles, retries and AI.",
+            "The $12 quote comes from Make’s own June 2026 plan guide, retrieved on the checked date; confirm checkout before committing."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "creditsPerMonthMax": 10000
+          },
+          "limitEvidence": {
+            "creditsPerMonthMax": {
+              "sourceIds": [
+                "make-plan-guide",
+                "make-credits"
+              ],
+              "scope": "10,000-credit entry tier. An exact annual charge was not verified."
+            },
+            "actionStepsMax": {
+              "sourceIds": [
+                "make-plan-guide",
+                "make-credits"
+              ],
+              "scope": "10,000-credit entry tier. An exact annual charge was not verified."
+            }
+          }
+        }
+      ],
+      "constraints": [
+        {
+          "text": "Standard non-AI operations use one credit; AI metering can vary. With a custom AI connection, provider token charges can be additional.",
+          "sourceIds": [
+            "make-credits"
+          ]
+        }
+      ]
+    },
+    "mailerlite": {
+      "name": "MailerLite",
+      "checkedAt": "2026-11-01",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "monthlyUsd": 0,
+          "annualTotalUsd": 0,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "subscribersMax": 250,
+            "emailsPerMonthMax": 2500,
+            "activeAutomationsMax": 3,
+            "usersMax": 2,
+            "automationStepsMax": 5
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [],
+          "features": {
+            "sequences": true
+          },
+          "sourceIds": [
+            "mailerlite-pricing",
+            "mailerlite-free"
+          ],
+          "scope": "Active subscribers and all campaign/automation recipient sends counted together.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Each automation is limited to 5 steps; the count of active automations is a separate allowance."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1
+          },
+          "limitEvidence": {
+            "subscribersMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free"
+              ],
+              "scope": "Active subscribers and all campaign/automation recipient sends counted together."
+            },
+            "emailsPerMonthMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free"
+              ],
+              "scope": "Active subscribers and all campaign/automation recipient sends counted together."
+            },
+            "activeAutomationsMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free"
+              ],
+              "scope": "Active subscribers and all campaign/automation recipient sends counted together."
+            },
+            "usersMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free"
+              ],
+              "scope": "Active subscribers and all campaign/automation recipient sends counted together."
+            },
+            "automationStepsMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-automation-steps"
+              ],
+              "scope": "Maximum steps in a single automation; count email actions, delays, conditions and other actions after the trigger.",
+              "checkedAt": "2026-11-01"
+            }
+          }
+        },
+        {
+          "id": "comfort-500",
+          "name": "Comfort · 500 subscribers",
+          "monthlyUsd": 12,
+          "annualTotalUsd": 129.6,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "subscribersMax": 500,
+            "emailsPerMonthMax": 5000,
+            "activeAutomationsMax": 50,
+            "usersMax": 3,
+            "automationStepsMax": 100
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [],
+          "features": {
+            "sequences": true
+          },
+          "sourceIds": [
+            "mailerlite-pricing",
+            "mailerlite-free",
+            "mailerlite-tier-guide"
+          ],
+          "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Annual total applies the advertised 10% annual discount: $12 × 12 × 0.90.",
+            "Do not extrapolate this price to larger subscriber tiers.",
+            "Each automation is limited to 100 steps; the count of active automations is a separate allowance."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "subscriberMax": 500
+          },
+          "limitEvidence": {
+            "subscribersMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free",
+                "mailerlite-tier-guide"
+              ],
+              "scope": "Only the up-to-500 active-subscriber tier is quoted."
+            },
+            "emailsPerMonthMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free",
+                "mailerlite-tier-guide"
+              ],
+              "scope": "Only the up-to-500 active-subscriber tier is quoted."
+            },
+            "activeAutomationsMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free",
+                "mailerlite-tier-guide"
+              ],
+              "scope": "Only the up-to-500 active-subscriber tier is quoted."
+            },
+            "usersMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free",
+                "mailerlite-tier-guide"
+              ],
+              "scope": "Only the up-to-500 active-subscriber tier is quoted."
+            },
+            "automationStepsMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-automation-steps"
+              ],
+              "scope": "Maximum steps in a single automation; count email actions, delays, conditions and other actions after the trigger.",
+              "checkedAt": "2026-11-01"
+            }
+          }
+        },
+        {
+          "id": "power-500",
+          "name": "Power · 500 subscribers",
+          "monthlyUsd": 25,
+          "annualTotalUsd": 270,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "subscribersMax": 500,
+            "emailsPerMonthMax": null,
+            "activeAutomationsMax": null,
+            "usersMax": null,
+            "automationStepsMax": 100
+          },
+          "unlimitedLimits": [
+            "emailsPerMonthMax",
+            "activeAutomationsMax",
+            "usersMax"
+          ],
+          "notMeteredLimits": [],
+          "features": {
+            "sequences": true
+          },
+          "sourceIds": [
+            "mailerlite-pricing",
+            "mailerlite-free",
+            "mailerlite-tier-guide"
+          ],
+          "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Unlimited sending remains subject to fair use.",
+            "Annual total applies the advertised 10% annual discount: $25 × 12 × 0.90.",
+            "Each automation is limited to 100 steps; the count of active automations is a separate allowance."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "subscriberMax": 500
+          },
+          "limitEvidence": {
+            "subscribersMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free",
+                "mailerlite-tier-guide"
+              ],
+              "scope": "Only the up-to-500 active-subscriber tier is quoted."
+            },
+            "emailsPerMonthMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free",
+                "mailerlite-tier-guide"
+              ],
+              "scope": "Only the up-to-500 active-subscriber tier is quoted."
+            },
+            "activeAutomationsMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free",
+                "mailerlite-tier-guide"
+              ],
+              "scope": "Only the up-to-500 active-subscriber tier is quoted."
+            },
+            "usersMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-free",
+                "mailerlite-tier-guide"
+              ],
+              "scope": "Only the up-to-500 active-subscriber tier is quoted."
+            },
+            "automationStepsMax": {
+              "sourceIds": [
+                "mailerlite-pricing",
+                "mailerlite-automation-steps"
+              ],
+              "scope": "Maximum steps in a single automation; count email actions, delays, conditions and other actions after the trigger.",
+              "checkedAt": "2026-11-01"
+            }
+          }
+        }
+      ],
+      "constraints": [
+        {
+          "text": "Passing a paid subscriber tier can increase billing; passing the Free subscriber cap locks sending until corrected or upgraded.",
+          "sourceIds": [
+            "mailerlite-pricing"
+          ]
+        },
+        {
+          "text": "The number of active automations and the number of steps inside each automation are separate limits. Free permits 5 steps per automation; Comfort and Power permit 100.",
+          "sourceIds": [
+            "mailerlite-pricing"
+          ]
+        }
+      ]
+    },
+    "kit": {
+      "name": "Kit",
+      "checkedAt": "2026-11-01",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "monthlyUsd": 0,
+          "annualTotalUsd": 0,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "subscribersMax": 10000,
+            "emailsPerMonthMax": null,
+            "activeAutomationsMax": 0
+          },
+          "unlimitedLimits": [
+            "emailsPerMonthMax"
+          ],
+          "notMeteredLimits": [],
+          "features": {
+            "sequences": false
+          },
+          "sourceIds": [
+            "kit-free"
+          ],
+          "scope": "Broadcast newsletters only; the Free subscriber allowance is not an automation allowance.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Sequences and visual automations require a paid plan."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1
+          },
+          "limitEvidence": {
+            "subscribersMax": {
+              "sourceIds": [
+                "kit-free"
+              ],
+              "scope": "Broadcast newsletters only; the Free subscriber allowance is not an automation allowance."
+            },
+            "emailsPerMonthMax": {
+              "sourceIds": [
+                "kit-free"
+              ],
+              "scope": "Broadcast newsletters only; the Free subscriber allowance is not an automation allowance."
+            },
+            "activeAutomationsMax": {
+              "sourceIds": [
+                "kit-free"
+              ],
+              "scope": "Broadcast newsletters only; the Free subscriber allowance is not an automation allowance."
+            }
+          }
+        },
+        {
+          "id": "creator-1000",
+          "name": "Creator · 1,000 subscribers",
+          "monthlyUsd": 39,
+          "annualTotalUsd": 390,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "subscribersMax": 1000,
+            "emailsPerMonthMax": null,
+            "activeAutomationsMax": null,
+            "usersMax": 2
+          },
+          "unlimitedLimits": [
+            "emailsPerMonthMax",
+            "activeAutomationsMax"
+          ],
+          "notMeteredLimits": [],
+          "features": {
+            "sequences": true
+          },
+          "sourceIds": [
+            "kit-pricing",
+            "kit-plan-guide"
+          ],
+          "scope": "Only the up-to-1,000 active-subscriber tier is quoted.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Larger lists require a separately priced subscriber tier.",
+            "Annual equivalent is $32.50/month, paid as $390 upfront."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "subscriberMax": 1000
+          },
+          "limitEvidence": {
+            "subscribersMax": {
+              "sourceIds": [
+                "kit-pricing",
+                "kit-plan-guide"
+              ],
+              "scope": "Only the up-to-1,000 active-subscriber tier is quoted."
+            },
+            "emailsPerMonthMax": {
+              "sourceIds": [
+                "kit-pricing",
+                "kit-plan-guide"
+              ],
+              "scope": "Only the up-to-1,000 active-subscriber tier is quoted."
+            },
+            "activeAutomationsMax": {
+              "sourceIds": [
+                "kit-pricing",
+                "kit-plan-guide"
+              ],
+              "scope": "Only the up-to-1,000 active-subscriber tier is quoted."
+            },
+            "usersMax": {
+              "sourceIds": [
+                "kit-pricing",
+                "kit-plan-guide"
+              ],
+              "scope": "Only the up-to-1,000 active-subscriber tier is quoted."
+            }
+          }
+        }
+      ],
+      "constraints": [
+        {
+          "text": "Use the required automation features to choose a plan; a larger free list alone does not satisfy a welcome-series workflow.",
+          "sourceIds": [
+            "kit-free"
+          ]
+        }
+      ]
+    },
+    "buffer": {
+      "name": "Buffer",
+      "checkedAt": "2026-11-01",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "monthlyUsd": 0,
+          "annualTotalUsd": 0,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "channelsMax": 3,
+            "queuedPerChannelMax": 10,
+            "usersMax": 1
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [
+            "postsPerMonthMax",
+            "brandsMax"
+          ],
+          "features": {
+            "approvals": false,
+            "linkedIn": true,
+            "x": true
+          },
+          "sourceIds": [
+            "buffer-pricing",
+            "buffer-plan-guide"
+          ],
+          "scope": "Up to three connected social accounts; ten queued posts per account at one time.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Publishing frees a queue slot. Ten queued posts is not ten posts per month.",
+            "The Free plan also has a lifetime connection restriction; verify eligibility after reconnecting accounts."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1
+          },
+          "limitEvidence": {
+            "channelsMax": {
+              "sourceIds": [
+                "buffer-pricing",
+                "buffer-plan-guide"
+              ],
+              "scope": "Up to three connected social accounts; ten queued posts per account at one time."
+            },
+            "queuedPerChannelMax": {
+              "sourceIds": [
+                "buffer-pricing",
+                "buffer-plan-guide"
+              ],
+              "scope": "Up to three connected social accounts; ten queued posts per account at one time."
+            },
+            "usersMax": {
+              "sourceIds": [
+                "buffer-pricing",
+                "buffer-plan-guide"
+              ],
+              "scope": "Up to three connected social accounts; ten queued posts per account at one time."
+            }
+          }
+        },
+        {
+          "id": "essentials",
+          "name": "Essentials",
+          "monthlyUsd": 6,
+          "annualTotalUsd": 60,
+          "currency": "USD",
+          "billingUnit": "channel",
+          "minQuantity": 1,
+          "limits": {
+            "channelsMax": null,
+            "queuedPerChannelMax": 5000,
+            "usersMax": 1
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [
+            "postsPerMonthMax",
+            "brandsMax",
+            "channelsMax"
+          ],
+          "features": {
+            "approvals": false,
+            "linkedIn": true,
+            "x": true
+          },
+          "sourceIds": [
+            "buffer-pricing",
+            "buffer-plan-guide"
+          ],
+          "scope": "Rate for each of the first ten connected channels only.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "All paid channels are billed; the Free plan’s three channels are not added on top.",
+            "More than ten channels uses different price bands and requires a vendor quote in this calculator."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 10
+          },
+          "limitEvidence": {
+            "channelsMax": {
+              "sourceIds": [
+                "buffer-pricing",
+                "buffer-plan-guide"
+              ],
+              "scope": "Rate for each of the first ten connected channels only."
+            },
+            "queuedPerChannelMax": {
+              "sourceIds": [
+                "buffer-pricing",
+                "buffer-plan-guide"
+              ],
+              "scope": "Rate for each of the first ten connected channels only."
+            },
+            "usersMax": {
+              "sourceIds": [
+                "buffer-pricing",
+                "buffer-plan-guide"
+              ],
+              "scope": "Rate for each of the first ten connected channels only."
+            }
+          }
+        },
+        {
+          "id": "team",
+          "name": "Team",
+          "monthlyUsd": 12,
+          "annualTotalUsd": 120,
+          "currency": "USD",
+          "billingUnit": "channel",
+          "minQuantity": 1,
+          "limits": {
+            "channelsMax": null,
+            "queuedPerChannelMax": 5000,
+            "usersMax": null
+          },
+          "unlimitedLimits": [
+            "usersMax"
+          ],
+          "notMeteredLimits": [
+            "postsPerMonthMax",
+            "brandsMax",
+            "channelsMax"
+          ],
+          "features": {
+            "approvals": true,
+            "linkedIn": true,
+            "x": true
+          },
+          "sourceIds": [
+            "buffer-pricing",
+            "buffer-plan-guide"
+          ],
+          "scope": "Rate for each of the first ten connected channels only.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Approval workflows are included. Higher channel-volume bands are outside this calculator."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 10
+          },
+          "limitEvidence": {
+            "channelsMax": {
+              "sourceIds": [
+                "buffer-pricing",
+                "buffer-plan-guide"
+              ],
+              "scope": "Rate for each of the first ten connected channels only."
+            },
+            "queuedPerChannelMax": {
+              "sourceIds": [
+                "buffer-pricing",
+                "buffer-plan-guide"
+              ],
+              "scope": "Rate for each of the first ten connected channels only."
+            },
+            "usersMax": {
+              "sourceIds": [
+                "buffer-pricing",
+                "buffer-plan-guide"
+              ],
+              "scope": "Rate for each of the first ten connected channels only."
+            }
+          }
+        }
+      ],
+      "constraints": [
+        {
+          "text": "Supported posting formats and direct publishing depend on the network and profile type.",
+          "sourceIds": [
+            "buffer-pricing"
+          ]
+        }
+      ]
+    },
+    "metricool": {
+      "name": "Metricool",
+      "checkedAt": "2026-11-01",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "monthlyUsd": 0,
+          "annualTotalUsd": 0,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "queuedPerChannelMax": null,
+            "channelsMax": null,
+            "brandsMax": 1,
+            "postsPerMonthMax": 20
+          },
+          "unlimitedLimits": [],
+          "notMeteredLimits": [
+            "queuedPerChannelMax",
+            "channelsMax"
+          ],
+          "features": {
+            "approvals": false,
+            "linkedIn": false,
+            "x": false
+          },
+          "sourceIds": [
+            "metricool-pricing"
+          ],
+          "scope": "One brand; twenty posts per month across the included connected networks.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Free excludes LinkedIn and X. Profiles must fit Metricool’s brand structure."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1
+          },
+          "limitEvidence": {
+            "queuedPerChannelMax": {
+              "sourceIds": [
+                "metricool-pricing"
+              ],
+              "scope": "One brand; twenty posts per month across the included connected networks."
+            },
+            "channelsMax": {
+              "sourceIds": [
+                "metricool-pricing"
+              ],
+              "scope": "One brand; twenty posts per month across the included connected networks."
+            },
+            "brandsMax": {
+              "sourceIds": [
+                "metricool-pricing"
+              ],
+              "scope": "One brand; twenty posts per month across the included connected networks."
+            },
+            "postsPerMonthMax": {
+              "sourceIds": [
+                "metricool-pricing"
+              ],
+              "scope": "One brand; twenty posts per month across the included connected networks."
+            }
+          }
+        },
+        {
+          "id": "starter-5",
+          "name": "Starter · 5 brands",
+          "monthlyUsd": 25,
+          "annualTotalUsd": 240,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "queuedPerChannelMax": null,
+            "channelsMax": null,
+            "brandsMax": 5,
+            "postsPerMonthMax": null
+          },
+          "unlimitedLimits": [
+            "postsPerMonthMax"
+          ],
+          "notMeteredLimits": [
+            "queuedPerChannelMax",
+            "channelsMax"
+          ],
+          "features": {
+            "approvals": false,
+            "linkedIn": true,
+            "x": null
+          },
+          "sourceIds": [
+            "metricool-pricing",
+            "metricool-fair-use"
+          ],
+          "scope": "Fixed bundle for up to five brands; not a per-brand multiplier.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "X requires an additional paid add-on; its price is outside this estimate.",
+            "Above 600 posts per brand per month, Metricool reviews fair use. This threshold is not a hard publishing cap."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "brandsMax": 5
+          },
+          "limitEvidence": {
+            "queuedPerChannelMax": {
+              "sourceIds": [
+                "metricool-pricing",
+                "metricool-fair-use"
+              ],
+              "scope": "Fixed bundle for up to five brands; not a per-brand multiplier."
+            },
+            "channelsMax": {
+              "sourceIds": [
+                "metricool-pricing",
+                "metricool-fair-use"
+              ],
+              "scope": "Fixed bundle for up to five brands; not a per-brand multiplier."
+            },
+            "brandsMax": {
+              "sourceIds": [
+                "metricool-pricing",
+                "metricool-fair-use"
+              ],
+              "scope": "Fixed bundle for up to five brands; not a per-brand multiplier."
+            },
+            "postsPerMonthMax": {
+              "sourceIds": [
+                "metricool-pricing",
+                "metricool-fair-use"
+              ],
+              "scope": "Fixed bundle for up to five brands; not a per-brand multiplier."
+            }
+          },
+          "fairUseReviewThresholdPostsPerBrandPerMonth": 600
+        },
+        {
+          "id": "advanced-15",
+          "name": "Advanced · 15 brands",
+          "monthlyUsd": 67,
+          "annualTotalUsd": 636,
+          "currency": "USD",
+          "billingUnit": "flat",
+          "minQuantity": 1,
+          "limits": {
+            "queuedPerChannelMax": null,
+            "channelsMax": null,
+            "brandsMax": 15,
+            "postsPerMonthMax": null
+          },
+          "unlimitedLimits": [
+            "postsPerMonthMax"
+          ],
+          "notMeteredLimits": [
+            "queuedPerChannelMax",
+            "channelsMax"
+          ],
+          "features": {
+            "approvals": true,
+            "linkedIn": true,
+            "x": null
+          },
+          "sourceIds": [
+            "metricool-pricing",
+            "metricool-fair-use"
+          ],
+          "scope": "Fixed bundle for up to fifteen brands; not a per-brand multiplier.",
+          "checkedAt": "2026-11-01",
+          "evidenceType": "official-documentation",
+          "notes": [
+            "Team/approval features included. X add-on and other extras are excluded.",
+            "Above 600 posts per brand per month, a fair-use review applies."
+          ],
+          "priceScope": {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "brandsMax": 15
+          },
+          "limitEvidence": {
+            "queuedPerChannelMax": {
+              "sourceIds": [
+                "metricool-pricing",
+                "metricool-fair-use"
+              ],
+              "scope": "Fixed bundle for up to fifteen brands; not a per-brand multiplier."
+            },
+            "channelsMax": {
+              "sourceIds": [
+                "metricool-pricing",
+                "metricool-fair-use"
+              ],
+              "scope": "Fixed bundle for up to fifteen brands; not a per-brand multiplier."
+            },
+            "brandsMax": {
+              "sourceIds": [
+                "metricool-pricing",
+                "metricool-fair-use"
+              ],
+              "scope": "Fixed bundle for up to fifteen brands; not a per-brand multiplier."
+            },
+            "postsPerMonthMax": {
+              "sourceIds": [
+                "metricool-pricing",
+                "metricool-fair-use"
+              ],
+              "scope": "Fixed bundle for up to fifteen brands; not a per-brand multiplier."
+            }
+          },
+          "fairUseReviewThresholdPostsPerBrandPerMonth": 600
+        }
+      ],
+      "constraints": [
+        {
+          "text": "A brand bundles connected profiles; network/profile configuration must be checked before treating a channel count as covered.",
+          "sourceIds": [
+            "metricool-pricing"
+          ]
+        },
+        {
+          "text": "The 600-post monthly per-brand threshold triggers review rather than an automatic hard cap.",
+          "sourceIds": [
+            "metricool-fair-use"
+          ]
+        }
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "id": "chatgpt-vs-claude",
+      "title": "ChatGPT vs Claude",
+      "toolIds": [
+        "chatgpt",
+        "claude"
+      ],
+      "decisionQuestion": "Which individual paid plan fits the work you repeat?",
+      "summary": "Both entry paid plans cost $20 on monthly billing. Choose after running the same real task in each; annual commitment is a separate decision.",
+      "recommendationBasis": "Editorial judgment from documented plan fit; no comparative hands-on quality test.",
+      "rows": [
+        {
+          "label": "Monthly commitment",
+          "values": {
+            "chatgpt": "Plus $20 each month",
+            "claude": "Pro $20 each month"
+          },
+          "sourceIds": [
+            "openai-plus",
+            "claude-pricing"
+          ]
+        },
+        {
+          "label": "Annual option",
+          "values": {
+            "chatgpt": "No annual Plus subscription",
+            "claude": "$200 paid upfront for Pro"
+          },
+          "sourceIds": [
+            "openai-plus",
+            "claude-pricing"
+          ]
+        },
+        {
+          "label": "What this comparison proves",
+          "values": {
+            "chatgpt": "Documented price and scope",
+            "claude": "Documented price and scope"
+          },
+          "sourceIds": [
+            "openai-plus",
+            "claude-pricing"
+          ]
+        }
+      ],
+      "choose": [
+        {
+          "toolId": "chatgpt",
+          "when": "Your recurring task works well in its available tools and the result survives a factual check.",
+          "avoid": "You need a team workspace or guaranteed fixed task volume from this individual plan."
+        },
+        {
+          "toolId": "claude",
+          "when": "Your document or writing trial produces useful output with fewer corrections for your own workload.",
+          "avoid": "An annual discount is the only reason to commit before testing your task."
+        }
+      ],
+      "trialChecklist": [
+        "Use the same non-sensitive brief, source files and output requirements in both tools.",
+        "Include one exception, one missing fact and one instruction to preserve exact numbers.",
+        "Record factual errors, edits required and time to an acceptable output. Repeat on three different tasks.",
+        "Record model, plan and date; do not treat one successful output as a reliability guarantee."
+      ],
+      "sourceIds": [
+        "openai-plus",
+        "claude-pricing"
+      ],
+      "calculator": {
+        "kind": "assistant",
+        "defaults": {
+          "users": 1,
+          "teamAdministration": false
+        },
+        "inputBounds": {
+          "users": {
+            "min": 1,
+            "max": 50
+          }
+        },
+        "eligiblePlanIds": [
+          "chatgpt:plus",
+          "claude:pro"
+        ],
+        "assumptions": [
+          "Individual paid subscriptions only; one person per quoted plan.",
+          "A twelve-month projection is separate from an annual subscription offer."
+        ],
+        "caveats": [
+          "Free plans, team plans, API usage, taxes and usage add-ons are outside these quotes.",
+          "No fixed message allowance or model-quality score is inferred."
+        ]
+      }
+    },
+    {
+      "id": "zapier-vs-make",
+      "title": "Zapier vs Make",
+      "toolIds": [
+        "zapier",
+        "make"
+      ],
+      "decisionQuestion": "What does your workflow consume at the volume you expect?",
+      "summary": "Count billable actions and module executions separately. The same business outcome can use different numbers of tasks and credits.",
+      "recommendationBasis": "Editorial judgment from documented plan fit; no comparative hands-on quality test.",
+      "rows": [
+        {
+          "label": "Usage meter",
+          "values": {
+            "zapier": "Successful billable actions",
+            "make": "Credits used by modules; AI may consume more"
+          },
+          "sourceIds": [
+            "zapier-tasks",
+            "make-credits"
+          ]
+        },
+        {
+          "label": "Free allowance",
+          "values": {
+            "zapier": "100 tasks; one action after a trigger",
+            "make": "1,000 credits; confirm scheduling and integration needs"
+          },
+          "sourceIds": [
+            "zapier-pricing",
+            "make-plan-guide"
+          ]
+        },
+        {
+          "label": "Quoted paid scope",
+          "values": {
+            "zapier": "Professional, 750 tasks, annual billing",
+            "make": "Core, 10,000 credits, monthly billing"
+          },
+          "sourceIds": [
+            "zapier-pricing-guide",
+            "make-plan-guide"
+          ]
+        }
+      ],
+      "choose": [
+        {
+          "toolId": "zapier",
+          "when": "Its exact app actions cover the process and your measured task use fits the tier.",
+          "avoid": "You assume Free permits several action steps or premium apps."
+        },
+        {
+          "toolId": "make",
+          "when": "You can inspect and maintain a scenario and its measured module usage fits the credit allowance.",
+          "avoid": "You treat every completed workflow as one credit or ignore polling and fan-out."
+        }
+      ],
+      "trialChecklist": [
+        "Build the same small sample using test records you control.",
+        "Run a normal record, a duplicate and a missing-field case; inspect the destination after each.",
+        "Read the actual usage logs and record tasks or credits separately.",
+        "Check retry behavior, duplicate prevention and what happens when the allowance is exhausted."
+      ],
+      "sourceIds": [
+        "zapier-pricing",
+        "zapier-pricing-guide",
+        "zapier-tasks",
+        "make-plan-guide",
+        "make-credits"
+      ],
+      "calculator": {
+        "kind": "automation",
+        "defaults": {
+          "workflowRuns": 100,
+          "actionSteps": 2,
+          "triggerModules": 1,
+          "extraCredits": 0,
+          "premiumApps": false
+        },
+        "inputBounds": {
+          "workflowRuns": {
+            "min": 0,
+            "max": 1000000
+          },
+          "actionSteps": {
+            "min": 1,
+            "max": 100
+          },
+          "triggerModules": {
+            "min": 0,
+            "max": 100
+          },
+          "extraCredits": {
+            "min": 0,
+            "max": 10000000
+          }
+        },
+        "eligiblePlanIds": [
+          "zapier:free",
+          "zapier:professional-750",
+          "make:free",
+          "make:core-10000"
+        ],
+        "assumptions": [
+          "Zapier estimate = runs × standard billable action steps.",
+          "Make estimate = runs × (standard action modules + trigger modules) + extra credits.",
+          "These are user-specified simple-run assumptions, not a platform equivalence benchmark."
+        ],
+        "caveats": [
+          "Polling, bundles, loops, retries and AI can change consumption. Enter additional measured Make credits when known.",
+          "MCP, Lead Router, AI and extended code runtimes have different Zapier task rates.",
+          "Overages and larger plan tiers are not extrapolated; outside verified allowances, obtain a quote."
+        ]
+      }
+    },
+    {
+      "id": "mailerlite-vs-kit",
+      "title": "MailerLite vs Kit",
+      "toolIds": [
+        "mailerlite",
+        "kit"
+      ],
+      "decisionQuestion": "Do you need a broadcast newsletter or an automated welcome series?",
+      "summary": "List size, total email sends and automation requirements decide whether a free plan fits. Count welcome emails as well as broadcasts.",
+      "recommendationBasis": "Editorial judgment from documented plan fit; no comparative hands-on quality test.",
+      "rows": [
+        {
+          "label": "Free list and sending",
+          "values": {
+            "mailerlite": "250 active subscribers; 2,500 monthly emails",
+            "kit": "10,000 subscribers; unlimited broadcasts"
+          },
+          "sourceIds": [
+            "mailerlite-pricing",
+            "kit-free"
+          ]
+        },
+        {
+          "label": "Free automated series",
+          "values": {
+            "mailerlite": "Up to 3 active automations, with 5 steps in each; sends share the monthly allowance.",
+            "kit": "Paid plan required for sequences and visual automations"
+          },
+          "sourceIds": [
+            "mailerlite-free",
+            "kit-free",
+            "mailerlite-pricing"
+          ]
+        },
+        {
+          "label": "Paid quote boundary",
+          "values": {
+            "mailerlite": "Comfort/Power quotes cover up to 500 subscribers",
+            "kit": "Creator quote covers up to 1,000 subscribers"
+          },
+          "sourceIds": [
+            "mailerlite-tier-guide",
+            "kit-plan-guide"
+          ]
+        }
+      ],
+      "choose": [
+        {
+          "toolId": "mailerlite",
+          "when": "A small list needs a controlled welcome series and its sends fit the allowance.",
+          "avoid": "You use a 500-subscriber quote to budget for a larger list."
+        },
+        {
+          "toolId": "kit",
+          "when": "A broadcast-focused audience fits the Free scope, or Creator’s paid automation meets your requirements.",
+          "avoid": "You expect the 10,000-subscriber Free plan to run welcome sequences."
+        }
+      ],
+      "trialChecklist": [
+        "Create a test subscriber and verify form consent and the confirmation behavior.",
+        "Send the intended sequence only to controlled test recipients.",
+        "Check tags, timing, unsubscribe behavior and whether a repeat signup restarts the workflow.",
+        "Calculate sends for broadcasts plus new subscribers entering the sequence; check actual billed subscriber count.",
+        "Count the largest automation including its delay and condition blocks; verify the plan cap independently of monthly sends."
+      ],
+      "sourceIds": [
+        "mailerlite-pricing",
+        "mailerlite-free",
+        "mailerlite-tier-guide",
+        "kit-pricing",
+        "kit-free",
+        "kit-plan-guide",
+        "mailerlite-automation-steps"
+      ],
+      "calculator": {
+        "kind": "email",
+        "defaults": {
+          "subscribers": 250,
+          "broadcastsPerMonth": 4,
+          "newSubscribers": 25,
+          "welcomeEmails": 3,
+          "activeAutomations": 1,
+          "automationSteps": 5
+        },
+        "inputBounds": {
+          "subscribers": {
+            "min": 0,
+            "max": 100000
+          },
+          "broadcastsPerMonth": {
+            "min": 0,
+            "max": 100
+          },
+          "newSubscribers": {
+            "min": 0,
+            "max": 100000
+          },
+          "welcomeEmails": {
+            "min": 0,
+            "max": 100
+          },
+          "activeAutomations": {
+            "min": 0,
+            "max": 1000
+          },
+          "automationSteps": {
+            "min": 0,
+            "max": 10000
+          }
+        },
+        "eligiblePlanIds": [
+          "mailerlite:free",
+          "mailerlite:comfort-500",
+          "mailerlite:power-500",
+          "kit:free",
+          "kit:creator-1000"
+        ],
+        "assumptions": [
+          "Estimated sends = active subscribers × full-list broadcasts + new sequence entrants × welcome emails.",
+          "Subscriber input is the expected peak active list including new subscribers; new entrants are a subset, not an extra charge added again.",
+          "All welcome emails are assumed sent within the same billing month.",
+          "The welcome sequence is modeled as one automation. Count all email, delay, condition and other action blocks in the largest automation, excluding the trigger. The default is 3 emails plus 2 delays = 5 steps."
+        ],
+        "caveats": [
+          "Segmented sends, other sequences, tests and resends can change actual volume.",
+          "Above quoted subscriber tiers, no exact paid cost is produced.",
+          "Deliverability and business results were not benchmarked.",
+          "Step capacity is checked only when active automations are requested. The reviewed Kit sources do not establish a per-automation step cap; that capacity stays unverified rather than being treated as unlimited."
+        ]
+      }
+    },
+    {
+      "id": "buffer-vs-metricool",
+      "title": "Buffer vs Metricool",
+      "toolIds": [
+        "buffer",
+        "metricool"
+      ],
+      "decisionQuestion": "Does your publishing setup fit a channel price or a brand bundle?",
+      "summary": "Count connected accounts, brands, monthly publishing and the queue you want to prepare. A queue allowance and a monthly post allowance are different limits.",
+      "recommendationBasis": "Editorial judgment from documented plan fit; no comparative hands-on quality test.",
+      "rows": [
+        {
+          "label": "Free publishing boundary",
+          "values": {
+            "buffer": "Three channels; ten queued posts per channel, refillable",
+            "metricool": "One brand; twenty posts per month"
+          },
+          "sourceIds": [
+            "buffer-pricing",
+            "metricool-pricing"
+          ]
+        },
+        {
+          "label": "LinkedIn on Free",
+          "values": {
+            "buffer": "Supported; check profile and post-format requirements",
+            "metricool": "Not included"
+          },
+          "sourceIds": [
+            "buffer-plan-guide",
+            "metricool-pricing"
+          ]
+        },
+        {
+          "label": "Paid billing unit",
+          "values": {
+            "buffer": "Per connected channel; rates quoted for the first ten",
+            "metricool": "Fixed 5-brand or 15-brand bundle"
+          },
+          "sourceIds": [
+            "buffer-plan-guide",
+            "metricool-pricing"
+          ]
+        },
+        {
+          "label": "Approval requirement",
+          "values": {
+            "buffer": "Team plan",
+            "metricool": "Advanced plan"
+          },
+          "sourceIds": [
+            "buffer-plan-guide",
+            "metricool-pricing"
+          ]
+        }
+      ],
+      "choose": [
+        {
+          "toolId": "buffer",
+          "when": "You manage a small number of social accounts and its refillable queue fits how you prepare posts.",
+          "avoid": "You price paid channels as if three additional free channels are included."
+        },
+        {
+          "toolId": "metricool",
+          "when": "Your accounts fit its brand structure and you need the documented reporting or brand-bundle features.",
+          "avoid": "You require LinkedIn on Free or assume the X add-on is included in the base price."
+        }
+      ],
+      "trialChecklist": [
+        "Connect the exact profile types and check required networks before paying.",
+        "Prepare one example of each needed format; distinguish direct publication from reminder-based posting.",
+        "Confirm how cross-posts count and test approval permissions if required.",
+        "Inspect a published test link and the native network result; compare reported metrics with the network’s own report."
+      ],
+      "sourceIds": [
+        "buffer-pricing",
+        "buffer-plan-guide",
+        "metricool-pricing",
+        "metricool-fair-use"
+      ],
+      "calculator": {
+        "kind": "social",
+        "defaults": {
+          "channels": 3,
+          "brands": 1,
+          "postsPerMonth": 24,
+          "queuedPerChannel": 10,
+          "approvals": false,
+          "linkedIn": true,
+          "x": false
+        },
+        "inputBounds": {
+          "channels": {
+            "min": 1,
+            "max": 1000
+          },
+          "brands": {
+            "min": 1,
+            "max": 1000
+          },
+          "postsPerMonth": {
+            "min": 0,
+            "max": 100000
+          },
+          "queuedPerChannel": {
+            "min": 0,
+            "max": 100000
+          }
+        },
+        "eligiblePlanIds": [
+          "buffer:free",
+          "buffer:essentials",
+          "buffer:team",
+          "metricool:free",
+          "metricool:starter-5",
+          "metricool:advanced-15"
+        ],
+        "assumptions": [
+          "A Buffer channel is one connected social account. Every paid channel is charged.",
+          "Metricool paid prices are fixed brand bundles, not multiplied by the brand count.",
+          "Monthly post input should include each network publication; confirm multi-network counting with the vendor."
+        ],
+        "caveats": [
+          "Buffer estimates stop at ten paid channels; Metricool quotes stop at the included brand tier.",
+          "Required X access needs a separate Metricool add-on quote.",
+          "Metricool’s 600-post per-brand review threshold is not a guaranteed or hard maximum.",
+          "Network, account type and format restrictions still apply."
+        ]
+      }
+    }
+  ],
+  "editorialStandards": [
+    {
+      "id": "evidence-label",
+      "title": "Label the evidence actually collected",
+      "rule": "Separate official-documentation checks, worked examples and hands-on test records. Use a tested label only when the named task was performed and recorded.",
+      "sourceIds": [
+        "toolfinder-method",
+        "zapier-method"
+      ]
+    },
+    {
+      "id": "comparison-scope",
+      "title": "Publish the decision criteria",
+      "rule": "State the job, necessary features, exclusion criteria and price scope before recommending a plan. Recommendations remain editorial judgments.",
+      "sourceIds": [
+        "zapier-method",
+        "capterra-method"
+      ]
+    },
+    {
+      "id": "no-fabricated-score",
+      "title": "Do not manufacture scores",
+      "rule": "A rating needs defined inputs and a reproducible method. Vendor documentation alone does not produce a performance or customer-satisfaction score.",
+      "sourceIds": [
+        "capterra-method"
+      ]
+    },
+    {
+      "id": "price-normalization",
+      "title": "Make prices comparable",
+      "rule": "Show billing unit, capacity, payment frequency, annual cash commitment, exclusions and checked date. Return unknown outside verified tiers.",
+      "sourceIds": [
+        "capterra-method"
+      ]
+    },
+    {
+      "id": "practical-path",
+      "title": "Give the reader a next step",
+      "rule": "Pair a shortlist with a realistic setup example and a small trial checklist that a reader can complete independently.",
+      "sourceIds": [
+        "futurepedia-learn",
+        "zapier-method"
+      ]
+    },
+    {
+      "id": "commercial-independence",
+      "title": "Keep commercial status separate",
+      "rule": "An affiliate relationship does not establish suitability. Show limitations and do not let a commission substitute for evidence.",
+      "sourceIds": [
+        "toolfinder-method",
+        "zapier-method"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,740 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-01",
+  "site": "https://sellerinsiderhub.com",
+  "scope": {
+    "basis": [
+      "Public official documentation",
+      "Read-only inspection of current source and generated output"
+    ],
+    "privateAccountDataIncluded": false,
+    "deploymentPerformedByThisLedger": false,
+    "vendorAccountExecutionPerformed": false,
+    "searchPenaltyDiagnosis": null,
+    "guarantees": []
+  },
+  "summary": "The release adds observable reader value and publication accountability. This evidence does not diagnose an AI penalty or guarantee indexing, rankings, citations, or traffic.",
+  "sources": [
+    {
+      "id": "G1",
+      "publisher": "Google",
+      "title": "Creating helpful, reliable, people-first content",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "accessedOn": "2026-11-01",
+      "retrieval": "direct-document",
+      "scope": "Authorship, method, originality, and trust."
+    },
+    {
+      "id": "G2",
+      "publisher": "Google",
+      "title": "Spam policies for Google web search",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "accessedOn": "2026-11-01",
+      "retrieval": "direct-document",
+      "scope": "Scaled content abuse and manipulation."
+    },
+    {
+      "id": "G3",
+      "publisher": "Google",
+      "title": "Guidance on using generative AI content",
+      "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+      "accessedOn": "2026-11-01",
+      "retrieval": "direct-document",
+      "scope": "Accuracy and usefulness of AI-assisted material."
+    },
+    {
+      "id": "G4",
+      "publisher": "Google",
+      "title": "AI features and your website",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "accessedOn": "2026-11-01",
+      "retrieval": "direct-document",
+      "scope": "Eligibility and absence of special AI markup requirements."
+    },
+    {
+      "id": "G5",
+      "publisher": "Google",
+      "title": "Search technical requirements",
+      "url": "https://developers.google.com/search/docs/essentials/technical",
+      "accessedOn": "2026-11-01",
+      "retrieval": "direct-document",
+      "scope": "Crawler access, successful response, indexable content."
+    },
+    {
+      "id": "G6",
+      "publisher": "Google",
+      "title": "Write high quality reviews",
+      "url": "https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews",
+      "accessedOn": "2026-11-01",
+      "retrieval": "direct-document",
+      "scope": "Decision factors and truthful supporting evidence."
+    },
+    {
+      "id": "G7",
+      "publisher": "Google",
+      "title": "Influence your byline dates",
+      "url": "https://developers.google.com/search/docs/appearance/publication-dates",
+      "accessedOn": "2026-11-01",
+      "retrieval": "direct-document",
+      "scope": "Consistent publication and significant-update dates."
+    },
+    {
+      "id": "G8",
+      "publisher": "Google",
+      "title": "How Search works",
+      "url": "https://developers.google.com/search/docs/fundamentals/how-search-works",
+      "accessedOn": "2026-11-01",
+      "retrieval": "direct-document",
+      "scope": "Discovery, crawling, indexing, and serving distinctions."
+    },
+    {
+      "id": "B1",
+      "publisher": "Microsoft Bing",
+      "title": "Bing Webmaster Guidelines",
+      "url": "https://www.bing.com/webmasters/help/bing-webmaster-guidelines-30fba23a",
+      "accessedOn": "2026-11-01",
+      "retrieval": "official-domain-indexed-text",
+      "scope": "Search and grounding eligibility; abusive or low-value practices.",
+      "retrievalLimit": "Direct open returned a JavaScript shell; official-domain indexed content was readable."
+    },
+    {
+      "id": "B2",
+      "publisher": "Microsoft Bing",
+      "title": "New AI Preferences",
+      "url": "https://www.bing.com/webmasters/help/new-ai-preferences-2t1cc16d",
+      "accessedOn": "2026-11-01",
+      "retrieval": "official-domain-indexed-text",
+      "scope": "Announced 2026-10-30; honoring begins 2027-02-01.",
+      "retrievalLimit": "Direct open returned a JavaScript shell; official-domain indexed content was readable."
+    },
+    {
+      "id": "O1",
+      "publisher": "OpenAI",
+      "title": "Overview of OpenAI crawlers",
+      "url": "https://developers.openai.com/api/docs/bots",
+      "accessedOn": "2026-11-01",
+      "retrieval": "direct-document",
+      "scope": "Independent search and training bots; user-triggered fetching."
+    }
+  ],
+  "claims": [
+    {
+      "id": "no-published-ai-word-blacklist",
+      "kind": "review-conclusion",
+      "statement": "The reviewed sources do not establish an AI-word blacklist or blanket exclusion of AI-assisted writing.",
+      "sourceIds": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "limit": "This review does not reveal every proprietary ranking signal or diagnose this site."
+    },
+    {
+      "id": "scaled-low-value-content",
+      "kind": "documented-policy",
+      "statement": "Scaled unoriginal content primarily made to manipulate rankings may violate spam policy regardless of production method.",
+      "sourceIds": [
+        "G2"
+      ]
+    },
+    {
+      "id": "accurate-authorship",
+      "kind": "documented-guidance",
+      "statement": "Accurate bylines, author background, and an explanation of how content was produced help readers assess the publication.",
+      "sourceIds": [
+        "G1"
+      ],
+      "limit": "The prohibition on fabricated identities, credentials, and experience is stated separately as our editorial application."
+    },
+    {
+      "id": "ai-claim-review",
+      "kind": "documented-guidance",
+      "statement": "Check accuracy and relevance, including titles, descriptions, structured data, and image text.",
+      "sourceIds": [
+        "G3"
+      ]
+    },
+    {
+      "id": "review-evidence",
+      "kind": "documented-guidance",
+      "statement": "Explain decision factors and tradeoffs with original supporting evidence; length alone does not establish review quality.",
+      "sourceIds": [
+        "G6"
+      ]
+    },
+    {
+      "id": "separate-search-stages",
+      "kind": "documented-process",
+      "statement": "Discovery, crawling, indexing, and serving are separate; an indexed page may still fail to appear for a query.",
+      "sourceIds": [
+        "G8"
+      ]
+    },
+    {
+      "id": "technical-eligibility",
+      "kind": "documented-requirement",
+      "statement": "Google eligibility requires crawler access, successful HTTP delivery, and indexable content; robots blocking is distinct from noindex.",
+      "sourceIds": [
+        "G5"
+      ],
+      "limit": "Meeting technical requirements does not guarantee indexing."
+    },
+    {
+      "id": "google-ai-eligibility",
+      "kind": "documented-requirement",
+      "statement": "AI supporting links require indexing and snippet eligibility; no special AI file or structured-data type is required.",
+      "sourceIds": [
+        "G4"
+      ],
+      "limit": "Eligibility does not guarantee selection."
+    },
+    {
+      "id": "dates-match-work",
+      "kind": "documented-guidance",
+      "statement": "Visible and structured dates should agree and describe actual page publication or update, not a future date or the event described.",
+      "sourceIds": [
+        "G7"
+      ]
+    },
+    {
+      "id": "bing-quality-risks",
+      "kind": "documented-policy",
+      "statement": "Bing identifies low-value automation, scraping, thin affiliates, artificial promotion, misleading markup, and prompt manipulation as risks.",
+      "sourceIds": [
+        "B1"
+      ],
+      "limit": "Guidelines do not guarantee rankings or grounding citations."
+    },
+    {
+      "id": "openai-bot-roles",
+      "kind": "documented-control",
+      "statement": "OAI-SearchBot concerns search; GPTBot concerns training. ChatGPT-User is user-triggered and does not control Search inclusion.",
+      "sourceIds": [
+        "O1"
+      ],
+      "limit": "Independent bot preferences are not ranking guarantees."
+    },
+    {
+      "id": "bing-new-control-timing",
+      "kind": "announced-future-change",
+      "statement": "New independent training and grounding preferences were announced October 30, 2026; honoring begins February 1, 2027.",
+      "announcedOn": "2026-10-30",
+      "effectiveFrom": "2027-02-01",
+      "sourceIds": [
+        "B2"
+      ],
+      "limit": "Traditional Bing search eligibility remains separate; do not describe the controls as already effective."
+    }
+  ],
+  "editorialPolicies": [
+    {
+      "id": "ghostwriting-scope",
+      "basis": "editorial-application",
+      "relatedClaimIds": [
+        "accurate-authorship"
+      ],
+      "rule": "Owner-authorized first-person drafting may express approved views and background. It cannot manufacture product use, tests, customers, revenue, or credentials. Require separate factual evidence for such statements."
+    },
+    {
+      "id": "evidence-labels",
+      "basis": "editorial-application",
+      "relatedClaimIds": [
+        "review-evidence",
+        "accurate-authorship"
+      ],
+      "rule": "Keep documentation review, recommendation, synthetic example, proposed trial, and completed demonstration distinct. Site software verification is not vendor product testing."
+    },
+    {
+      "id": "image-provenance",
+      "basis": "editorial-application",
+      "relatedClaimIds": [
+        "review-evidence",
+        "accurate-authorship"
+      ],
+      "rule": "Identify original source and purpose of vendor images. A documentation screenshot is not evidence of operating our own account. Label synthetic illustrations and examples."
+    },
+    {
+      "id": "date-discipline",
+      "basis": "editorial-application",
+      "relatedClaimIds": [
+        "dates-match-work"
+      ],
+      "rule": "Preserve original publication history. Record real source checks and material changes. A routine rebuild does not justify presenting old material as newly researched."
+    },
+    {
+      "id": "source-conflicts",
+      "basis": "editorial-application",
+      "relatedClaimIds": [
+        "ai-claim-review"
+      ],
+      "rule": "Record contradictory documentation, scope the instruction to verified facts, and reconcile dependent catalog and comparison copy. Unknown price is not zero."
+    },
+    {
+      "id": "original-added-value",
+      "basis": "editorial-application",
+      "relatedClaimIds": [
+        "scaled-low-value-content",
+        "review-evidence"
+      ],
+      "rule": "Each substantial guide should let a reader complete a meaningful job through reusable inputs, worked outputs, explicit decisions, checks, or recovery steps."
+    }
+  ],
+  "implementationEvidence": [
+    {
+      "id": "author-and-method",
+      "paths": [
+        "scripts/authority_components.py",
+        "scripts/build_site.py"
+      ],
+      "claimIds": [
+        "accurate-authorship"
+      ],
+      "policyIds": [
+        "ghostwriting-scope",
+        "evidence-labels"
+      ],
+      "observed": "Named author, linked profile, publisher identity, AI-method note, standards, corrections page, and matching Person/Organization/Article presentation.",
+      "limit": "Biography consistency checked; external employment and credentials not independently certified.",
+      "evidenceType": "repository-inspection",
+      "observedOn": "2026-11-01",
+      "fileSnapshots": [
+        {
+          "path": "scripts/authority_components.py",
+          "sha256": "a36a0e05c30157691b42423f37eb7c66177418bc578dcc83cd13a75488d076d4"
+        },
+        {
+          "path": "scripts/build_site.py",
+          "sha256": "3b6b86f99e4514f2ecaed486b36d8201fb0645222b5992b34e3c32b8fd5e029a"
+        }
+      ]
+    },
+    {
+      "id": "scoped-decision-tools",
+      "paths": [
+        "data/decision-evidence.json",
+        "scripts/decision_components.py",
+        "site-assets/decision-tools.js",
+        "scripts/test_decision_tools.cjs"
+      ],
+      "claimIds": [
+        "review-evidence"
+      ],
+      "policyIds": [
+        "source-conflicts",
+        "original-added-value"
+      ],
+      "observed": "Four comparisons use eight tools and 17 plans with source dates, payment frequency, units, feature gates, unknown handling, and verified-range boundaries.",
+      "limit": "Calculators implement disclosed arithmetic, not product-quality benchmarks.",
+      "evidenceType": "repository-inspection",
+      "observedOn": "2026-11-01",
+      "fileSnapshots": [
+        {
+          "path": "data/decision-evidence.json",
+          "sha256": "a2646aa49e9f1467515cdc0525b9d621e4ab6fd73bbcedf6443935b5c1fce82e"
+        },
+        {
+          "path": "scripts/decision_components.py",
+          "sha256": "08b457f84c6bce3eb2bc322190645c309dd55aa7731b1f4df15671bf5dda5ffc"
+        },
+        {
+          "path": "site-assets/decision-tools.js",
+          "sha256": "97172533312a442a5dc9c7e88a54e7030b54afa3dbe2bc5677e4286b4cdeeb6f"
+        },
+        {
+          "path": "scripts/test_decision_tools.cjs",
+          "sha256": "e911be99bdd399b3b4cdc7bc7b8f9c9ac1ec14191c80bb85ea4cdc6a892198ba"
+        }
+      ]
+    },
+    {
+      "id": "assistant-worked-examples",
+      "paths": [
+        "content/ai-assistant-expanded.html",
+        "data/research/assistant-upgrade.json"
+      ],
+      "claimIds": [
+        "review-evidence"
+      ],
+      "policyIds": [
+        "original-added-value",
+        "evidence-labels"
+      ],
+      "observed": "Three fictional business cases, complete inputs and outputs, app/workspace/API distinctions, and a five-task trial with no invented observations.",
+      "limit": "No live vendor-account trial claimed.",
+      "evidenceType": "repository-inspection",
+      "observedOn": "2026-11-01",
+      "fileSnapshots": [
+        {
+          "path": "content/ai-assistant-expanded.html",
+          "sha256": "85e5a863e837cf5d758449d82aced9014b61bfa8332510eade3282970c2ddb7d"
+        },
+        {
+          "path": "data/research/assistant-upgrade.json",
+          "sha256": "e957ea5233040ed9a2d7610e836500725fa1f20e53a620f38d85b1378a887340"
+        }
+      ]
+    },
+    {
+      "id": "complete-workflows",
+      "paths": [
+        "content/etsy-listing-workflow-expanded.html",
+        "content/email-welcome-sequence-expanded.html",
+        "content/service-lead-follow-up-expanded.html",
+        "content/ai-receptionist-expanded.html"
+      ],
+      "claimIds": [
+        "ai-claim-review"
+      ],
+      "policyIds": [
+        "original-added-value",
+        "evidence-labels"
+      ],
+      "observed": "Concrete workflow instructions, filled examples, failure checks, and reusable material.",
+      "limit": "Synthetic or proposed work is labelled; account execution is not inferred from instructions.",
+      "evidenceType": "repository-inspection",
+      "observedOn": "2026-11-01",
+      "fileSnapshots": [
+        {
+          "path": "content/etsy-listing-workflow-expanded.html",
+          "sha256": "e9add49691d18d4fe255b3a14b6adb20b0f4343b9db6e1d7ec420b634f1c2cea"
+        },
+        {
+          "path": "content/email-welcome-sequence-expanded.html",
+          "sha256": "72dfacdc0facf4719b59d77fa16a560dc1f3e46c716db033676efa5ebb518fb3"
+        },
+        {
+          "path": "content/service-lead-follow-up-expanded.html",
+          "sha256": "a9e9c95db0b11d5f0ac81b2d98da89bd9577c900eaafa5db3ebf4af6c0f6983c"
+        },
+        {
+          "path": "content/ai-receptionist-expanded.html",
+          "sha256": "39fd557c976d551af99e670bcfade40921fd7f45150a1ef7b734084e0a9196e6"
+        }
+      ]
+    },
+    {
+      "id": "download-and-copy-contract",
+      "paths": [
+        "scripts/tutorial_tools.py",
+        "site-assets/tutorial-tools.js",
+        "scripts/test_editorial_release.py",
+        "scripts/test_tutorial_tools.cjs"
+      ],
+      "claimIds": [],
+      "policyIds": [
+        "original-added-value"
+      ],
+      "observed": "Kits extract reusable blocks; checks cover preserved output, unique copy targets, article identity, and historical guide redirects.",
+      "limit": "Code inspected; this ledger does not independently rerun the entire release suite.",
+      "evidenceType": "repository-inspection",
+      "observedOn": "2026-11-01",
+      "fileSnapshots": [
+        {
+          "path": "scripts/tutorial_tools.py",
+          "sha256": "488ad456c16f4d7616dedc685365fa9c341d1a4fd9c62b72c7d5fdd15b424b12"
+        },
+        {
+          "path": "site-assets/tutorial-tools.js",
+          "sha256": "e13047c21ba3820e3b8f95f47401fde1b08db75afa491e272206b338217129e5"
+        },
+        {
+          "path": "scripts/test_editorial_release.py",
+          "sha256": "3693c8576720fb806d8832396893fbfbb53a9fd407aa7bace355cea55f93bd4f"
+        },
+        {
+          "path": "scripts/test_tutorial_tools.cjs",
+          "sha256": "a62de71fbb8cc51481d4b57157c3caf7ec0cac9381feabf0035af1d0ddd72c9b"
+        }
+      ]
+    },
+    {
+      "id": "vendor-asset-records",
+      "paths": [
+        "data/research/assistant-upgrade.json",
+        "data/research/etsy-workflow-upgrade.json",
+        "data/research/workflow-upgrade-research.json",
+        "data/research/receptionist-upgrade.json"
+      ],
+      "claimIds": [],
+      "policyIds": [
+        "image-provenance",
+        "evidence-labels"
+      ],
+      "observed": "Image provenance records name vendor pages and original assets; captions distinguish vendor illustrations from Hub account screenshots.",
+      "limit": "Vendor screenshots do not demonstrate our account operation.",
+      "evidenceType": "repository-inspection",
+      "observedOn": "2026-11-01",
+      "fileSnapshots": [
+        {
+          "path": "data/research/assistant-upgrade.json",
+          "sha256": "e957ea5233040ed9a2d7610e836500725fa1f20e53a620f38d85b1378a887340"
+        },
+        {
+          "path": "data/research/etsy-workflow-upgrade.json",
+          "sha256": "3e44779212354b9a7551f7d42a365db2bc492eff3aae1f3fbe8b39617c729659"
+        },
+        {
+          "path": "data/research/workflow-upgrade-research.json",
+          "sha256": "de4114fbce273eb4ad864254fc3a56ffcaff4ae307afcdbe8e202df931b28a4c"
+        },
+        {
+          "path": "data/research/receptionist-upgrade.json",
+          "sha256": "9508376c2edd5786604a534c60a64698d65d3563af5f1a04b5348cbe4be094bb"
+        }
+      ]
+    },
+    {
+      "id": "etsy-documentation-conflict",
+      "paths": [
+        "data/research/etsy-workflow-upgrade.json",
+        "content/etsy-listing-workflow-expanded.html"
+      ],
+      "claimIds": [],
+      "policyIds": [
+        "source-conflicts"
+      ],
+      "observed": "Contradictory vendor image-capacity instructions are logged; the seven-image workflow avoids a disputed maximum.",
+      "limit": "Specific vendor documents can change after the source-check date.",
+      "evidenceType": "repository-inspection",
+      "observedOn": "2026-11-01",
+      "fileSnapshots": [
+        {
+          "path": "data/research/etsy-workflow-upgrade.json",
+          "sha256": "3e44779212354b9a7551f7d42a365db2bc492eff3aae1f3fbe8b39617c729659"
+        },
+        {
+          "path": "content/etsy-listing-workflow-expanded.html",
+          "sha256": "e9add49691d18d4fe255b3a14b6adb20b0f4343b9db6e1d7ec420b634f1c2cea"
+        }
+      ]
+    },
+    {
+      "id": "crawl-and-canonical-output",
+      "paths": [
+        "scripts/build_site.py",
+        "scripts/validate_site.py",
+        "dist/robots.txt",
+        "dist/sitemap.xml",
+        "dist/_headers",
+        "dist/tools/ai-assistant/index.html",
+        "dist/playbooks/etsy-listing-workflow/index.html",
+        "dist/comparisons/chatgpt-vs-claude/index.html"
+      ],
+      "claimIds": [
+        "technical-eligibility",
+        "separate-search-stages",
+        "google-ai-eligibility"
+      ],
+      "policyIds": [],
+      "observed": "Static article text, canonicals, public crawl permission, navigation and sitemap are generated. The three sampled articles contain no noindex tag; inspected headers have no blanket indexing block.",
+      "limit": "Local generated artifacts do not prove deployed HTTP/CDN behavior, Google-selected canonicals, indexing, or rankings.",
+      "evidenceType": "repository-inspection",
+      "observedOn": "2026-11-01",
+      "fileSnapshots": [
+        {
+          "path": "scripts/build_site.py",
+          "sha256": "3b6b86f99e4514f2ecaed486b36d8201fb0645222b5992b34e3c32b8fd5e029a"
+        },
+        {
+          "path": "scripts/validate_site.py",
+          "sha256": "ae6d6c07f71c415a1283cc681c0e02a0054c4c191959e962bb1d64b1688d065f"
+        },
+        {
+          "path": "dist/robots.txt",
+          "sha256": "6d873164f34b6ea3ceec6f35e6e2b9045521a59380f1295a7fa195734509d6b3"
+        },
+        {
+          "path": "dist/sitemap.xml",
+          "sha256": "54e6fa8082676a417a1610b111edf6cb5518cf7b626b99dab933fa1597978626"
+        },
+        {
+          "path": "dist/_headers",
+          "sha256": "fe90ee0ea111b01d994ccbe515675f6b3145356d21e5bbd009e9b6d92ce7b04b"
+        },
+        {
+          "path": "dist/tools/ai-assistant/index.html",
+          "sha256": "421b8b00bcc36792776001f935dc57a9da79461e71165466fc93d255aa477c90"
+        },
+        {
+          "path": "dist/playbooks/etsy-listing-workflow/index.html",
+          "sha256": "a57fdca33a25553e248eb2ad7508965113669df11f1a67db444571e009108e92"
+        },
+        {
+          "path": "dist/comparisons/chatgpt-vs-claude/index.html",
+          "sha256": "ea6ea4bd17e8e36df09ac3fa34d6cebd058a53e4ad08532ae6ad06184eccb2e4"
+        }
+      ]
+    },
+    {
+      "id": "date-records",
+      "paths": [
+        "data/page-dates.json",
+        "scripts/build_site.py",
+        "data/editorial.json",
+        "data/feature-guides.json"
+      ],
+      "claimIds": [
+        "dates-match-work"
+      ],
+      "policyIds": [
+        "date-discipline"
+      ],
+      "observed": "Stored publication, modification, and source-review dates drive content metadata rather than using the current clock for every rebuild.",
+      "limit": "Future edits still require truthful dates.",
+      "evidenceType": "repository-inspection",
+      "observedOn": "2026-11-01",
+      "fileSnapshots": [
+        {
+          "path": "data/page-dates.json",
+          "sha256": "885cc228266daba5491e10362a34f4134c98d6ec1e11346be414975d639346b1"
+        },
+        {
+          "path": "scripts/build_site.py",
+          "sha256": "3b6b86f99e4514f2ecaed486b36d8201fb0645222b5992b34e3c32b8fd5e029a"
+        },
+        {
+          "path": "data/editorial.json",
+          "sha256": "b6794c7a667745336c9fbd35b03b5480d3892e4c1353fa68237c5bcc5e3809b3"
+        },
+        {
+          "path": "data/feature-guides.json",
+          "sha256": "c031dea47b07fd481fec7154f40b55727c4ca57a9ec5ad4b73a827df616cb523"
+        }
+      ]
+    },
+    {
+      "id": "build-report-interpretation",
+      "paths": [
+        "docs/build-report.json",
+        "scripts/build_site.py",
+        "dist/sitemap.xml"
+      ],
+      "claimIds": [],
+      "policyIds": [],
+      "observed": "123 pages generated; the indexed field and generated sitemap both count 119 local search entries.",
+      "limit": "The indexed field is not a Google/Bing indexing measurement.",
+      "evidenceType": "repository-inspection",
+      "observedOn": "2026-11-01",
+      "fileSnapshots": [
+        {
+          "path": "docs/build-report.json",
+          "sha256": "72f95372070f904760b7583ae8d5cbd92baa71c30b61fc51e99595345abb5e01"
+        },
+        {
+          "path": "scripts/build_site.py",
+          "sha256": "3b6b86f99e4514f2ecaed486b36d8201fb0645222b5992b34e3c32b8fd5e029a"
+        },
+        {
+          "path": "dist/sitemap.xml",
+          "sha256": "54e6fa8082676a417a1610b111edf6cb5518cf7b626b99dab933fa1597978626"
+        }
+      ]
+    }
+  ],
+  "buildSnapshot": {
+    "builtOn": "2026-11-01",
+    "generatedPages": 123,
+    "localSearchIndexEntries": 119,
+    "sitemapUrlCount": 119,
+    "googleIndexedPages": null,
+    "bingIndexedPages": null,
+    "sourcePath": "docs/build-report.json",
+    "misleadingFieldName": "indexed",
+    "interpretation": "Local generated search/sitemap entry count only."
+  },
+  "crawlerSnapshot": {
+    "sourcePath": "dist/robots.txt",
+    "userAgent": "*",
+    "allow": [
+      "/"
+    ],
+    "disallow": [
+      "/admin/",
+      "/partners/investors"
+    ],
+    "sitemap": "https://sellerinsiderhub.com/sitemap.xml",
+    "specificOaiSearchBotRule": false,
+    "specificGptBotRule": false,
+    "policyChangedByThisLedger": false,
+    "sourceIds": [
+      "O1"
+    ],
+    "limit": "No live bot fetch or CDN allowlist verified in this ledger."
+  },
+  "publicSearchObservation": {
+    "query": "ai assistant for small business",
+    "observedOn": "2026-11-01",
+    "provenance": "Public Google result observation supplied by the parent research session",
+    "patterns": [
+      "Editorial comparison lists",
+      "Vendor offerings",
+      "Community discussion",
+      "Some titles assert testing"
+    ],
+    "independentCompetitorTestVerification": false,
+    "resultPositionsRecorded": false,
+    "searchVolumeEstimate": null,
+    "editorialDecision": "Offer complete business outputs and a reproducible trial alongside the buying decision.",
+    "limit": "Single-session qualitative context, not a durable rank benchmark."
+  },
+  "unknowns": [
+    {
+      "id": "actual-search-treatment",
+      "unknown": "URL-level exclusion causes, manual actions, selected canonicals, and post-release search treatment.",
+      "nextEvidence": "Authorized URL inspection, indexing reports, crawler logs, and later page-level search outcomes; retain private data outside this public ledger."
+    },
+    {
+      "id": "live-delivery",
+      "unknown": "Production response status, final redirects and headers, CDN bot behavior, and actual recrawl after release.",
+      "nextEvidence": "Post-deployment requests and search-engine inspection of representative article and comparison URLs."
+    },
+    {
+      "id": "vendor-workflow-results",
+      "unknown": "Actual account execution, independent output quality, reliability, and measured correction time.",
+      "nextEvidence": "Run the proposed documented trials and retain dated inputs, outputs, environment, and observations before claiming firsthand tests."
+    },
+    {
+      "id": "independent-authority",
+      "unknown": "External recognition, earned links, and independent verification of biography.",
+      "nextEvidence": "Accurate owner-approved facts and corroborating public records where appropriate; never fabricate credentials or social proof."
+    },
+    {
+      "id": "commercial-impact",
+      "unknown": "Traffic, conversion, revenue, and time-saving effects of the release.",
+      "nextEvidence": "Later measured outcomes compared with recorded changes; do not attribute all movement to one release."
+    }
+  ],
+  "releaseChecks": [
+    {
+      "check": "Only the assigned ledger files were authored for this workstream",
+      "status": "passed"
+    },
+    {
+      "check": "Every policy claim has an official source ID and access date",
+      "status": "passed"
+    },
+    {
+      "check": "Every repository evidence path exists at inspection time",
+      "status": "passed"
+    },
+    {
+      "check": "JSON source and policy references resolve",
+      "status": "passed"
+    },
+    {
+      "check": "No private analytics or account records included",
+      "status": "passed"
+    },
+    {
+      "check": "No publication, live indexing, or vendor execution claimed",
+      "status": "passed"
+    }
+  ],
+  "sourceReviewNotes": [
+    {
+      "sourceId": "G1",
+      "issue": "Two official-document retrievals in this session differed on the presence of an explicit fabricated-profile example.",
+      "decision": "Use the consistently supported accurate-authorship guidance; record the no-fabrication standard as editorial policy rather than quote the disputed passage."
+    }
+  ]
+}

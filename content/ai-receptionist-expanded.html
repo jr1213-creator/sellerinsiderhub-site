@@ -1,0 +1,231 @@
+<p class="guide-deck">A phone menu can send a caller somewhere. A receptionist can ask questions and complete a permitted next step. A voicemail box can hold a message until you return it. Choose the job you need, then build one complete route from the first ring to a confirmed booking or an owned callback.</p>
+<div class="guide-facts"><span><b>Choose</b> Voicemail, auto-attendant, AI, or human answering</span><span><b>Build</b> Phone routing → intake → calendar or handoff</span><span><b>Worked tools</b> Smith.ai + Calendly; existing phone service</span><span><b>Reviewed</b> November 1, 2026</span></div>
+<p class="small muted">Documentation-based implementation guide. We reviewed official vendor instructions and prices; we did not place test calls or benchmark these services. Vendor screenshots are identified below. The business, scripts, transcript, and calculations are original fictional examples.</p>
+<nav class="guide-jumps" aria-label="Call handling guide sections"><a href="#choose">Compare four options</a><a href="#cost">Check the actual bill</a><a href="#route">Design the call route</a><a href="#connect">Connect booking</a><a href="#test">Test the handoff</a><a href="#fixes">Troubleshoot</a><a href="#downloads">Get the setup kit</a></nav>
+
+<section class="guide-answer" id="choose">
+<span class="eyebrow">The difference in plain terms</span>
+<h2>Auto-attendant vs AI receptionist: routing a call and handling a request are different jobs.</h2>
+<p>A traditional <strong>auto-attendant</strong> follows a menu or routing rule: press a key, say a supported choice, reach an extension or mailbox. An <strong>AI receptionist</strong> can interpret a spoken request, ask intake questions, answer from approved information, and use supported actions such as booking. A <strong>human answering service</strong> supplies people to answer under your instructions. <strong>Voicemail</strong> records a message for later review.</p>
+<p>Those labels overlap in marketing. RingCentral, for example, includes conversational AI in its broader auto-attendant family. Ask what the exact plan can do, which systems it can use, and what happens when it cannot finish. A realistic demonstration is more useful than the word “AI.”</p>
+<p class="source-note">Definitions and product scope: <a href="https://www.ringcentral.com/features/auto-attendant" target="_blank" rel="noopener">RingCentral auto-attendants</a>, <a href="https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-auto-attendant" target="_blank" rel="noopener">Microsoft auto-attendant configuration</a>, <a href="https://www.ruby.com/plans-and-pricing/" target="_blank" rel="noopener">Ruby’s human service</a>, and <a href="https://help.na.panasonic.com/answers/what-is-voicemail-service-and-how-to-use-with-a-telephone-with-an-answering-machine/" target="_blank" rel="noopener">Panasonic’s voicemail explanation</a>. The decision criteria below are our analysis.</p>
+<div class="table-scroll"><table class="data-table"><caption>Choose by the next action your callers need</caption><thead><tr><th scope="col">Option</th><th scope="col">A good starting fit</th><th scope="col">Do not choose it alone when…</th><th scope="col">Your operating responsibility</th></tr></thead><tbody>
+<tr><th scope="row">Voicemail</th><td>Calls are infrequent and callers can reasonably wait for a callback.</td><td>A caller needs an immediate answer, a confirmed appointment, or an available person.</td><td>Provide a useful greeting and a real callback owner. Check messages on a schedule you can maintain.</td></tr>
+<tr><th scope="row">Menu-based auto-attendant</th><td>Callers usually know which team or location they need, and those destinations work.</td><td>Nobody answers any branch, or callers need help deciding which option applies.</td><td>Keep the menu short. Test open, closed, holiday, no-selection, and no-answer routes.</td></tr>
+<tr><th scope="row">AI receptionist</th><td>Many calls follow a bounded intake, FAQ, booking, or routing process.</td><td>You cannot maintain the facts, verify the results, or provide a route for requests outside its authority.</td><td>Supply approved answers, correct destinations, integration access, and a review process.</td></tr>
+<tr><th scope="row">Human answering service</th><td>Callers need clarification, a flexible conversation, or a person before your team is available.</td><td>You assume an outside receptionist can make technical, refund, dispatch, or professional decisions without authorization.</td><td>Specify what the service may promise, which people it can reach, and what counts as a completed handoff.</td></tr>
+</tbody></table></div>
+<p><strong>For an owner who wants fewer interruptions:</strong> start with routine intake and one organized callback queue. Add booking only for appointments that need no further qualification. Route exceptions to a staffed person or a clearly owned callback; do not send every routine call to your mobile.</p>
+</section>
+
+<section id="cost">
+<span class="chapter-label">01 / Price the complete job</span>
+<h2>The “free” answering plan can still have paid booking and overages.</h2>
+<div class="table-scroll"><table class="data-table"><caption>Verified examples in USD; checked November 1, 2026</caption><thead><tr><th scope="col">Example</th><th scope="col">Published allowance and price</th><th scope="col">What the headline leaves out</th></tr></thead><tbody>
+<tr><th scope="row">Existing voicemail / phone menu</th><td>Check your current phone contract. No universal incremental price is assumed here.</td><td>The line, seats, forwarding, or particular menu features can have their own charges.</td></tr>
+<tr><th scope="row">Smith.ai AI Free</th><td>$0 base; 25 real calls/month. Extra real calls are $3 each when enabled.</td><td>Booking and human features have separate activation and billing conditions. It is not unlimited answering.</td></tr>
+<tr><th scope="row">Smith.ai AI Pro, 75-call tier</th><td>$150/month for 75 calls; the listed extra-call rate is $2.50.</td><td>The $2 included-call average is not the overage rate. Confirm add-ons for the selected plan.</td></tr>
+<tr><th scope="row">Ruby human receptionists</th><td>$250/month for 50 receptionist minutes; $395/month for 100 minutes.</td><td>Minutes are not calls. Confirm billable time, rounding, transfers, and any extra usage.</td></tr>
+</tbody></table></div>
+<p class="source-note">Plan sources: <a href="https://smith.ai/pricing/ai-receptionist" target="_blank" rel="noopener">Smith.ai pricing</a> and <a href="https://www.ruby.com/plans-and-pricing/" target="_blank" rel="noopener">Ruby pricing</a>. These are selected published tiers, not a quotation or an exhaustive market comparison.</p>
+<div class="guide-note"><h3>Read the billing help, as well as the feature list.</h3><p>Smith.ai’s Free-plan help identifies appointment booking and live-agent features as paid options at $3 per call. Extra Calls is off by default: after the 25-call allowance, a caller follows your configured redirect instead of receiving AI answering. The document caps a Free-plan call using both extra usage and paid features at $6. Native Calendly scheduling also requires a paid Calendly account. Verify your enabled features and credits before forwarding customers.</p><p class="source-note"><a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232723-your-free-plan-how-it-works" target="_blank" rel="noopener">Free-plan billing and limit behavior</a> · <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221010-how-to-connect-your-calendly-account-to-ai-receptionist" target="_blank" rel="noopener">Calendly connection requirement</a></p></div>
+<h3>A worked month: 40 calls, with a clear scope</h3>
+<p>Assume 40 billable calls, no other charges, and a configured Extra Calls allowance. For an <strong>intake-only</strong> Smith.ai Free setup, the arithmetic is <strong>(40 − 25) × $3 = $45</strong>. If 10 of those calls also use a $3 paid feature, the modeled subtotal becomes <strong>$45 + (10 × $3) = $75</strong>. A required paid calendar and the underlying phone service remain additional costs; their prices are not included in that subtotal.</p>
+<p>For a human-service comparison, assume those same 40 calls consume exactly two billable receptionist minutes each: <strong>40 × 2 = 80 minutes</strong>. Ruby’s listed 100-minute tier is $395/month. That tier covers the assumed minutes; we have not priced a smaller tier plus overages. These are different services and billing units, so the difference is not evidence of equivalent results or guaranteed savings.</p>
+<p><strong>Your break-even check:</strong> divide the complete monthly cost by the contribution from one genuinely additional completed job. At an illustrative $80 contribution per job, a $75 subtotal takes one additional job to cover; a $395 cost takes five. Add phone, calendar, review time, and other fees first. An answered call is not automatically an additional sale.</p>
+</section>
+
+<section id="route">
+<span class="chapter-label">02 / Decide what happens after the greeting</span>
+<h2>Write one call map before configuring any tool.</h2>
+<p>Use this fictional example: <strong>Sample Repair Co.</strong> handles planned, non-emergency fixture work. Its owner is often on a job and wants a small, complete callback list. New requests need a name, confirmed callback number, service area, and short description. Existing-customer changes and complaints need a person. A 15-minute estimate discussion can be booked only after the service and location checks pass.</p>
+<div class="table-scroll"><table class="data-table"><caption>Original routing example; replace every destination with your own</caption><thead><tr><th scope="col">Caller needs</th><th scope="col">Allowed action</th><th scope="col">Completion evidence</th><th scope="col">If that fails</th></tr></thead><tbody>
+<tr><th scope="row">Hours or service area</th><td>Read the approved answer; ask one clarification if needed.</td><td>Answer matches the current business facts.</td><td>Record the unresolved question for the office.</td></tr>
+<tr><th scope="row">New, eligible estimate discussion</th><td>Collect the minimum details; offer the single approved event type.</td><td>Actual calendar event, correct person, date, time zone, and confirmation.</td><td>Create one callback request; do not announce a booking.</td></tr>
+<tr><th scope="row">Existing appointment, refund, or complaint</th><td>Route to the named office contact during staffed hours.</td><td>A person accepts, or a visible callback is assigned.</td><td>State the fallback and preserve the request.</td></tr>
+<tr><th scope="row">Request outside the service scope</th><td>Explain the boundary without inventing coverage, a price, or attendance.</td><td>No unauthorized commitment in the transcript.</td><td>Use the business’s approved exception instructions.</td></tr>
+</tbody></table></div>
+<p>Give every route an owner. “Send an email” is incomplete until someone checks that inbox. “Transfer to the team” is incomplete until the number is staffed and the no-answer behavior is known. Keep a manually reviewable call list even when a CRM integration is connected.</p>
+<div class="worked-example"><div class="example-label"><h3>Copy: the operating brief</h3><button class="button light small" data-copy-target="receptionist-brief">Copy brief</button></div><pre id="receptionist-brief">ILLUSTRATIVE OPERATING BRIEF — replace bracketed values
+Business: Sample Repair Co. (fictional)
+Purpose: capture planned service requests with fewer owner interruptions.
+
+Approved services: [specific services]
+Service area: [exact approved areas]
+Hours and time zone: [current schedule, including holidays]
+Price policy: a quote is required; do not invent a price.
+Booking: [one approved estimate-discussion event link]
+Booking meaning: a discussion, not a confirmed repair or dispatch.
+
+Collect: name, callback number, service area, brief request.
+Read back: the callback number and the agreed next action.
+Do not collect: payment-card details or unrelated personal information.
+
+Existing customer / complaint / refund: [staffed destination].
+No answer: [message destination], owned by [role].
+Callback expectation: [a window the owner can actually meet].
+Unsupported or urgent situation: [business-approved instructions].
+
+A completed booking requires an event in the real calendar.
+A completed handoff requires acceptance or an owned callback record.
+No destination should forward back to this same receptionist.</pre></div>
+</section>
+
+<section id="voicemail">
+<span class="chapter-label">03 / Start with the routing you already have</span>
+<h2>Keep voicemail when a dependable callback is enough; keep a menu when it saves a transfer.</h2>
+<p>Check a recent sample of missed calls before adding a subscription. Categorize them as simple questions, new inquiries, existing-customer requests, unwanted calls, and exceptions. Record whether each needed a live conversation or could wait. This is your own operating baseline, not a vendor’s missed-revenue estimate.</p>
+<p>For voicemail, name the business, ask for the minimum useful details, and state a callback expectation you can meet. For a menu, give each choice a distinct destination. An example is “new service requests,” “existing appointments,” and “other questions.” Define what happens when no key is pressed and when the destination does not answer.</p>
+<div class="worked-example"><div class="example-label"><h3>Copy: a concise voicemail greeting</h3><button class="button light small" data-copy-target="receptionist-voicemail">Copy greeting</button></div><pre id="receptionist-voicemail">You've reached [business name]. Please leave your name, callback
+number, service area, and a short description of what you need.
+Our office reviews messages [actual review schedule] and returns
+calls [actual callback expectation]. This message does not book an
+appointment or confirm attendance. [Approved urgent-call instruction,
+only if relevant to the business.]</pre></div>
+<p><strong>If you already administer Microsoft Teams Phone:</strong> its documented starting path is <strong>Voice → Auto attendants → Add</strong>. Set the time zone and language, then choose a redirect destination or menu. Configure the appropriate after-hours route and an operator/fallback. Complete the required licensing and number/resource setup for your account. Test with controlled destinations before changing the main business number.</p>
+<p class="source-note"><a href="https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-auto-attendant" target="_blank" rel="noopener">Microsoft’s setup and licensing references</a>. This is an example for an existing Teams phone deployment, not a recommendation to buy one.</p>
+<p>Hours and AI capability can live in different parts of a phone system. Cisco’s current Webex instructions, for example, put schedule-based treatment in the auto-attendant before AI Receptionist. They also warn against forwarding the fallback back into the same attendant. Apply the same check to your own provider: test business hours, closed hours, holidays, and the return path separately.</p>
+<p class="source-note"><a href="https://help.webex.com/en-us/article/4chov0/AI-Receptionist-v-Webex-Calling" target="_blank" rel="noopener">Cisco’s combined auto-attendant / AI routing instructions</a>.</p>
+</section>
+
+<section id="setup">
+<span class="chapter-label">04 / Give the receptionist approved facts</span>
+<h2>Configure a narrow intake before connecting the calendar.</h2>
+<ol class="guide-steps">
+<li><strong>Check the business profile.</strong> In Smith.ai, review the business name, website, address, and opening hours. Older documentation calls this area Business Info; newer screens use Business profile. Correct the values rather than assuming the website import is complete. The business-information guide says saved changes apply immediately.</li>
+<li><strong>Add a small FAQ set.</strong> Open the profile’s FAQ editor and add precise answers about services, coverage, prices, and preparation. Smith.ai documents a 50-question total, including accepted suggestions. Review new suggested answers before approving them. A suggestion is not an authorized change to your business policy.</li>
+<li><strong>Separate caller types.</strong> Use the caller-instructions configuration for new inquiries, existing customers, and the default route. Specify the details to collect and the permitted next action for each. A new inquiry should not inherit an existing-customer promise or a refund decision.</li>
+<li><strong>Check the notification destination.</strong> Decide where summaries will be reviewed and who owns unresolved requests. In your first version, a consistently reviewed call list is preferable to adding several integrations nobody monitors.</li>
+</ol>
+<p class="source-note">Vendor controls: <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199595-how-to-set-up-your-business-information" target="_blank" rel="noopener">Business information</a> · <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199592-how-to-set-up-and-manage-frequently-asked-questions-faqs-" target="_blank" rel="noopener">FAQ editing and limits</a> · <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000199596-who-is-calling-you-and-what-are-caller-types-" target="_blank" rel="noopener">Caller-type settings</a>. The operating boundaries are our implementation recommendations.</p>
+<p><strong>Expected output:</strong> an intake route that can accurately record a request and identify its next owner without making a booking. Test that simpler route first. It remains your fallback if calendar access later fails.</p>
+</section>
+
+<section id="connect">
+<span class="chapter-label">05 / Connect one booking that the business can honor</span>
+<h2>Prepare Calendly, then connect and activate the correct event.</h2>
+<p>In Calendly, open <strong>Scheduling</strong> and edit the specific event. For our example, set a 15-minute phone discussion, the correct host and time zone, real availability, and enough notice to prepare. Use the editor’s buffer and meeting-limit controls where needed. Keep the form short: do not ask the caller to repeat information without a business reason. These durations and rules are our example, not vendor defaults.</p>
+<p class="source-note"><a href="https://calendly.com/help/how-to-customize-your-event-types" target="_blank" rel="noopener">Calendly’s event controls</a> and <a href="https://calendly.com/help/how-to-use-buffers" target="_blank" rel="noopener">buffer behavior</a>. For a full booking journey, see our <a href="/playbooks/self-service-booking/">self-service booking tutorial</a>.</p>
+<ol class="guide-steps">
+<li><strong>Verify the paid requirements.</strong> Smith.ai’s Calendly integration requires a paid Calendly plan. Confirm Smith.ai’s booking-feature charge and enabled billing settings as well; a supported integration is not proof of a zero-cost workflow.</li>
+<li><strong>Connect the accounts.</strong> In Smith.ai, open <strong>Integrations</strong>, select Calendly from the native options, and use its connection control. Sign in to the intended Calendly account and authorize the connection. Confirm that it appears as connected.</li>
+<li><strong>Choose the eligible caller type.</strong> In the instructions area, open that caller type’s configuration. Select the appointment action, choose Calendly as the scheduling service, and enter the public event link. Save the change only when the intake rules and event are ready.</li>
+<li><strong>Use one event link.</strong> The documented integration supports one event type per caller type. Use the direct event page, not your general Calendly page, a page with several choices, or a single-use link. Duration and availability come from that event’s settings.</li>
+</ol>
+<p class="source-note">Two separate setup tasks: <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221010-how-to-connect-your-calendly-account-to-ai-receptionist" target="_blank" rel="noopener">connect Calendly</a>, then <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221015-how-to-enable-scheduling-with-calendly" target="_blank" rel="noopener">enable scheduling for the caller type</a>.</p>
+<figure class="guide-screenshot"><a href="/assets/tutorials/receptionist/smith-ai-calendly-scheduling.png" target="_blank" rel="noopener"><img src="/assets/tutorials/receptionist/smith-ai-calendly-scheduling.png" width="778" height="351" loading="lazy" alt="Smith.ai documentation screenshot showing the appointment action, Calendly service selector, and booking-page-link field."></a><figcaption><strong>Vendor documentation screenshot: Smith.ai.</strong> Check all three controls: the action, Calendly selection, and direct event URL. This is the vendor’s published interface example, not an account we operated. <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000221015-how-to-enable-scheduling-with-calendly" target="_blank" rel="noopener">Original instructions and image credit</a>. Open the image to enlarge it.</figcaption></figure>
+<p><strong>Expected output:</strong> a controlled test creates a real event in the intended calendar and the caller receives the intended confirmation. A connected badge, a plausible transcript, or an offered time does not establish that the appointment exists.</p>
+<p><strong>Using a different calendar?</strong> Smith.ai also documents a live-agent route using a publicly accessible booking page. Selecting that route involves a human scheduling service at the stated $3-per-call add-on, rather than the native Calendly action. Test that your page loads without a private login and that the selected service matches your budget.</p>
+<p class="source-note"><a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000207089-how-to-enable-scheduling-with-ai-receptionist-live-agents" target="_blank" rel="noopener">Public booking-page scheduling with live agents</a>.</p>
+</section>
+
+<section id="handoff">
+<span class="chapter-label">06 / Make the human route real</span>
+<h2>“Your team” and a paid receptionist are different destinations.</h2>
+<p>Smith.ai’s documented escalation controls let you choose your own team or its live-agent network when a caller asks for a human. Configure that choice in call handling, select the intended destination, and save. Check the availability of your team member and the outcome if the call is unanswered.</p>
+<figure class="guide-screenshot"><a href="/assets/tutorials/receptionist/smith-ai-human-routing.png" target="_blank" rel="noopener"><img src="/assets/tutorials/receptionist/smith-ai-human-routing.png" width="709" height="225" loading="lazy" alt="Smith.ai documentation screenshot showing caller-initiated escalation with separate Live agent and Your team choices."></a><figcaption><strong>Vendor documentation screenshot: Smith.ai.</strong> The two choices reach different people and have different billing implications. <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222814" target="_blank" rel="noopener">Original settings guide and image credit</a>.</figcaption></figure>
+<p>The live-agent billing guide charges $3 for a qualifying call involving its human add-on, once per call even if there are several live-agent interactions. It distinguishes transfers to your business from those add-ons. That distinction does not remove your own phone provider’s fees or make your team available after hours.</p>
+<p class="source-note"><a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000222817-live-agent-add-on-billing-overview" target="_blank" rel="noopener">Which human interactions are billable</a>.</p>
+<p><strong>Our handoff rule:</strong> require either an answered transfer or a callback record with an owner. If neither exists, the request remains unresolved. A friendly closing statement cannot substitute for the missing destination.</p>
+</section>
+
+<section id="test">
+<span class="chapter-label">07 / Prove the route before forwarding customers</span>
+<h2>A simulated conversation does not prove that booking or transfer works.</h2>
+<p>In Smith.ai’s Quality Studio, create a goal and add a scenario describing what the caller says and what the receptionist must achieve. Start with “capture an accurate request,” then add “book an eligible discussion” and “complete the fallback.” These are evaluation scenarios for you to run, not tests we claim to have completed.</p>
+<p class="source-note"><a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232640-how-to-set-up-goals-and-scenarios-in-quality-studio" target="_blank" rel="noopener">Creating goals and scenarios</a>.</p>
+<p>Use <strong>Run Simulation</strong> to inspect the proposed conversation. The vendor says simulations stop at a booking or transfer handoff and cannot check real calendar availability. Then use <strong>Make a Test Call</strong> in your own account to exercise the voice and handoff path with destinations you control. Check the real calendar and receiving device afterward. Free includes separate monthly allowances of 25 test calls and 50 simulations; those are separate from 25 real calls.</p>
+<p class="source-note"><a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232641-simulated-calls-vs-test-calls-in-quality-studio-or-understanding-call-types-in-quality-studio" target="_blank" rel="noopener">What each call type can actually test</a> · <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232723-your-free-plan-how-it-works" target="_blank" rel="noopener">Separate Free allowances</a>.</p>
+<figure class="guide-screenshot"><a href="/assets/tutorials/receptionist/smith-ai-quality-studio-test-call.png" target="_blank" rel="noopener"><img src="/assets/tutorials/receptionist/smith-ai-quality-studio-test-call.png" width="2048" height="1300" loading="lazy" alt="Smith.ai vendor screenshot of Quality Studio with Create goal, scenario controls, and Make a test call panel."></a><figcaption><strong>Vendor documentation screenshot: Smith.ai.</strong> Use the test-call control and assigned number in <em>your</em> account. Do not dial the number pictured here. The scores and call counts are the vendor’s example data, not Seller Insider Hub results. <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232641-simulated-calls-vs-test-calls-in-quality-studio-or-understanding-call-types-in-quality-studio" target="_blank" rel="noopener">Original guide and image credit</a>. Open to enlarge.</figcaption></figure>
+<div class="table-scroll"><table class="data-table"><caption>Acceptance tests to run with your controlled number and calendar</caption><thead><tr><th scope="col">Test</th><th scope="col">Say or do this</th><th scope="col">Pass only when…</th></tr></thead><tbody>
+<tr><th scope="row">Ordinary intake</th><td>Give an eligible service and a controlled callback number.</td><td>The final record contains the correct details and one next action.</td></tr>
+<tr><th scope="row">Correction</th><td>Change your callback number midway through the call.</td><td>The corrected number is read back and stored; the first number is not treated as current.</td></tr>
+<tr><th scope="row">Wrong service area</th><td>Give an area outside your approved list.</td><td>No appointment, coverage promise, or invented exception appears.</td></tr>
+<tr><th scope="row">Real booking</th><td>Choose an eligible time in a controlled test event.</td><td>The event exists once, with the correct host, duration, time zone, and confirmation.</td></tr>
+<tr><th scope="row">No availability</th><td>Make the test calendar unavailable.</td><td>The system offers the approved fallback instead of inventing a slot.</td></tr>
+<tr><th scope="row">Human unavailable</th><td>Send the transfer to your controlled destination and leave it unanswered.</td><td>The caller gets a truthful next step and the callback is visible.</td></tr>
+<tr><th scope="row">Closed hours</th><td>Test the configured after-hours branch.</td><td>It follows the closed-hours policy without promising an immediate response.</td></tr>
+<tr><th scope="row">Limit or disconnected tool</th><td>Review the configured usage-limit redirect and test a disconnected test integration.</td><td>The failure is visible and a usable manual recovery remains.</td></tr>
+</tbody></table></div>
+<div class="worked-example"><div class="example-label"><h3>Copy: sample call and completed intake record</h3><button class="button light small" data-copy-target="receptionist-transcript">Copy example</button></div><pre id="receptionist-transcript">SYNTHETIC EXAMPLE — not a recording or a measured product result
+Use only your own test number, email, and calendar when acting it out.
+
+Receptionist: You've reached Sample Repair Co.'s virtual receptionist.
+I can take a request for planned fixture work or help route a question.
+Caller: I need a bathroom faucet replaced. Can someone come tonight?
+Receptionist: I can record the request. This service does not promise
+same-day attendance. What service area are you in?
+Caller: [An area on the approved test list.]
+Receptionist: What name and callback number should the office use?
+Caller: Jordan. [First controlled test number.] Actually, please use
+[Corrected controlled test number].
+Receptionist: I'll use [corrected number, read back]. Is that right?
+Caller: Yes. Can you guarantee it will cost less than $100?
+Receptionist: A quote is required. I cannot guarantee a price. Would
+you like the office to review your request and call you back?
+Caller: Yes.
+Receptionist: Your request is recorded for the office to review during
+[the approved callback window]. No visit has been booked.
+
+EXPECTED COMPLETED RECORD
+Name: Jordan (fictional test caller)
+Callback: [corrected controlled test number]
+Service: planned bathroom faucet replacement
+Area: [approved test area]
+Requested timing: tonight; no attendance promised
+Price: quote required; no price agreed
+Booking: none
+Next action: office callback
+Owner: [designated role]
+Due: [time inside the real callback policy]
+Status: open until the owner completes or resolves the request
+
+CHECK: there must be no invented appointment, quote, or dispatch.</pre></div>
+<p>Only after the relevant cases pass should you connect the business call route. Begin with a defined slice such as unanswered calls during staffed hours. Keep the previous route documented so you can restore it if summaries, bookings, or transfers fail. Review the actual outcomes before expanding coverage.</p>
+</section>
+
+<section id="fixes">
+<span class="chapter-label">08 / Diagnose the failed step</span>
+<h2>When a caller is answered but the work is missing, check the destination.</h2>
+<div class="table-scroll"><table class="data-table"><caption>Symptoms, checks, and safe recovery</caption><thead><tr><th scope="col">Symptom</th><th scope="col">Check first</th><th scope="col">Recovery</th></tr></thead><tbody>
+<tr><th scope="row">Calls stop reaching AI after the allowance</th><td>Real-call counter, Extra Calls setting, credits, and redirect.</td><td>Confirm the intended billing choice; make the redirect usable before restoring live coverage.</td></tr>
+<tr><th scope="row">Connected Calendly, but no appointment</th><td>Correct caller type, direct event URL, enabled scheduling action, and paid prerequisites.</td><td>Repair the relevant connection or setting, then verify a real test event.</td></tr>
+<tr><th scope="row">Times are unexpectedly unavailable</th><td>Calendly event preview → troubleshooting, then inspect the stated reason.</td><td>NOCAL means reconnect calendar access; CALENDAR identifies a busy conflict. Check duration, notice, and buffers before widening availability.</td></tr>
+<tr><th scope="row">Transfer returns to the original menu</th><td>Whether the destination forwards back to the entry number.</td><td>Use a distinct staffed destination or callback fallback; retest the complete path.</td></tr>
+<tr><th scope="row">The transcript says “booked,” but the calendar is empty</th><td>Whether this was a simulation, a proposal, or a completed live action.</td><td>Treat it as unconfirmed. Check the event record before informing the customer.</td></tr>
+<tr><th scope="row">Too many owner interruptions</th><td>Which caller types reach your mobile and which requests require judgment.</td><td>Move routine intake to the reviewed queue; retain human routing for defined exceptions.</td></tr>
+</tbody></table></div>
+<p class="source-note">Failure behavior: <a href="https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000232723-your-free-plan-how-it-works" target="_blank" rel="noopener">Smith.ai call limits</a> · <a href="https://calendly.com/help/how-to-troubleshoot-unavailable-times-that-should-be-available" target="_blank" rel="noopener">Calendly availability codes</a> · <a href="https://help.webex.com/en-us/article/4chov0/AI-Receptionist-v-Webex-Calling" target="_blank" rel="noopener">Cisco routing-loop warning</a>. The recovery sequence is our operational guidance.</p>
+</section>
+
+<section id="measure">
+<span class="chapter-label">09 / Keep the useful work, remove the waste</span>
+<h2>Measure correct outcomes and interruptions.</h2>
+<p>For each reviewed call, record: reason, correct contact details, authorized answer, booking or handoff result, owner, resolution, and billable usage. Count duplicate records, invented commitments, and unresolved requests as defects even if the system’s answer rate looks good. Review the transcript and destination records when a score disagrees with what actually happened.</p>
+<p>Compare one operating period with your earlier baseline. Did callbacks get completed? Did eligible bookings appear correctly? Did the owner receive fewer routine interruptions? Did the actual invoice fit the budget? Expand only the routes that work. A service that records five useful requests accurately may be more suitable for your business than a more ambitious configuration that creates work to repair.</p>
+<p>Keep the contact history and next action together. Our <a href="/playbooks/service-lead-follow-up/">lead follow-up tutorial</a> explains a simple intake record and callback queue; the <a href="/calculators/roi/">workflow ROI calculator</a> can help model your own costs without treating every answered call as new revenue.</p>
+</section>
+
+<section id="faq">
+<h2>Common questions</h2>
+<h3>What is the difference between an auto-attendant and an AI receptionist?</h3><p>A traditional auto-attendant follows predefined routing choices. An AI receptionist can interpret the caller’s request and perform supported conversational tasks. Some vendors use “AI auto-attendant” for overlapping products; compare the actual permitted actions and integrations.</p>
+<h3>Is an answering service better than voicemail?</h3><p>It fits when a conversation needs to happen before you can respond. Voicemail can be enough when callers can wait and you reliably return messages. The service still needs your instructions and an available escalation destination; it cannot supply your business judgment automatically.</p>
+<h3>Can I keep my current number?</h3><p>Check whether your existing provider supports forwarding the specific calls you want covered, and whether charges or restrictions apply. Forwarding and porting are different changes. Test a reversible forwarding route before considering a number move.</p>
+<h3>Can an AI receptionist book appointments for free?</h3><p>Do not infer that from a feature checklist. The Smith.ai example has paid booking conditions on Free, and native Calendly integration requires a paid Calendly plan. Verify both sides of the connection and the account’s enabled billing settings.</p>
+<h3>Do I need to replace the auto-attendant?</h3><p>No. A schedule or menu can remain in front of the receptionist when it serves a purpose. Keep the route short, test the combined journey, and prevent a fallback from returning to the same starting point.</p>
+<p class="source-note">Supporting references for these answers are the official routing, integration, and billing pages cited above. Suitability and rollout recommendations are our analysis.</p>
+</section>
+
+<section id="downloads" class="guide-note">
+<h2>Take the complete setup kit.</h2>
+<p>Save the operating brief, voicemail greeting, synthetic call, acceptance checklist, and source links. Replace the bracketed fields with your own facts and controlled test destinations before using the instructions.</p>
+<p><a class="button" href="/resources/kits/ai-receptionist.txt" download>Download the call-handling setup kit</a></p>
+</section>
+
+<section class="research-record" id="sources">
+<span class="eyebrow">Evidence and review notes</span>
+<h2>What we checked, and what still needs your test</h2>
+<p>Reviewed November 1, 2026: public pricing, plan-help conditions, setup controls, documented integration limits, and vendor test-method limitations. We synthesized those sources into the call map, budget examples, scripts, and acceptance tests. We did not operate a vendor account, verify call quality, or measure a customer outcome. Menu labels and account eligibility can change; use the linked vendor instructions alongside your dashboard.</p>
+<p>The three screenshots are unchanged images published in Smith.ai’s help center, attributed at their point of use. They show vendor examples. They are not proof that Seller Insider Hub completed the pictured actions.</p>
+<p>Prices are selected USD examples before tax, existing phone service, unquoted features, and any required calendar subscription. Smith.ai’s marketing feature list and detailed Free-plan help describe different levels of billing detail; this guide uses the help document’s explicit paid-feature conditions. Recheck the actual account quotation before enabling live traffic.</p>
+</section>

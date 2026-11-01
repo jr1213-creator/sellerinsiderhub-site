@@ -1,0 +1,275 @@
+<p class="guide-deck">A visitor asks for your free guide. They should receive the right file, understand what comes next, and be able to leave the email sequence easily. This walkthrough connects Canva and MailerLite, with a complete example you can adapt: a printable planning sheet, a signup page, and three useful emails over five days.</p>
+<div class="guide-facts"><span><b>Build</b> PDF → signup → confirmation → welcome sequence</span><span><b>Tools</b> Canva + MailerLite</span><span><b>For</b> Shops, creators, and small businesses</span><span><b>Evidence</b> Official documentation reviewed November 1, 2026</span></div>
+<p class="small muted">This is a documentation-based implementation guide. The business, subscriber, and email examples are fictional. We have not run this journey inside a live subscriber account. Screenshots below come from the vendors’ published documentation; your interface may vary.</p>
+<nav class="guide-jumps" aria-label="Welcome sequence tutorial sections"><a href="#welcome-fit">Check the free plan</a><a href="#welcome-pdf">Make the PDF</a><a href="#welcome-signup">Build signup</a><a href="#welcome-emails">Copy all three emails</a><a href="#welcome-tests">Test delivery</a><a href="#welcome-fixes">Fix missing emails</a></nav>
+
+<section class="guide-answer" id="welcome-fit">
+<span class="eyebrow">The practical answer</span>
+<h2>Use Canva for the resource and MailerLite for the whole delivery journey.</h2>
+<p>Create the PDF in Canva, upload it to MailerLite’s File manager, and link to it from the first automation email. A MailerLite signup page adds the subscriber to one dedicated group. A group trigger starts the welcome sequence after a new subscriber confirms. Two delay blocks space the messages out. This route avoids a third integration service because MailerLite already provides the signup, hosting, and sequence pieces.</p>
+<div class="guide-process"><div><span>THE JOURNEY</span><p><b>Canva PDF</b> → MailerLite file link → signup page → email confirmation → email 1 → wait 2 days → email 2 → wait 3 days → email 3</p></div></div>
+<p class="source-note">Vendor foundation: <a href="https://www.mailerlite.com/help/how-to-send-a-freebie-lead-magnet-to-new-subscribers" target="_blank" rel="noopener">MailerLite’s lead-magnet guide</a>. The resource, copy, schedule, and acceptance checks in this article are our worked example.</p>
+<div class="table-scroll"><table class="data-table"><caption>What you need before building</caption><thead><tr><th>Part</th><th>Use this</th><th>Check before you continue</th></tr></thead><tbody>
+<tr><th>Resource design</th><td>A free Canva account; your own text and free or owned design elements.</td><td>A premium image or template can introduce an export charge. Keep the example simple.</td></tr>
+<tr><th>Email and page</th><td>MailerLite Free, while the account remains within its limits.</td><td>Currently 250 active subscribers, 2,500 emails per month, 3 active automations, 5 automation steps, and 1 landing page. The sequence uses three email actions and two delays.</td></tr>
+<tr><th>Sending identity</th><td>An approved sender you can receive replies at; your business details and privacy-policy URL.</td><td>If sending from a custom domain, have access to its DNS settings and complete authentication.</td></tr>
+<tr><th>Controlled tests</th><td>Two fresh email addresses or aliases whose inboxes you control.</td><td>An existing active subscriber does not behave like a new, unconfirmed subscriber.</td></tr>
+</tbody></table></div>
+<p class="source-note">Limits checked November 1, 2026: <a href="https://www.mailerlite.com/pricing" target="_blank" rel="noopener">MailerLite pricing</a> and <a href="https://www.mailerlite.com/help/free-plan-update-faq" target="_blank" rel="noopener">Free-plan update</a>. A trial can expose features you will lose later; keep the finished workflow inside the ongoing plan limits.</p>
+<p><strong>Choose this when:</strong> you have a useful download and want one clear introduction to your business. A shop could offer a sizing worksheet; a service business could share a preparation checklist; a creator could deliver a short workbook. The download needs to solve a small problem on its own. The emails then help the reader use it.</p>
+</section>
+
+<section id="welcome-pdf">
+<span class="chapter-label">01 / Make something worth receiving</span>
+<h2>Build a two-page planning sheet in Canva.</h2>
+<p>Our fictional shop is <strong>Paper Meadow</strong>. It sells an undated desk pad, but the free resource is useful without buying one. The PDF has a blank worksheet on page one and a completed example on page two. The goal is practical: help someone choose three priorities and identify the first action for each.</p>
+<ol class="guide-steps">
+<li><strong>Create the document.</strong> In Canva, start a blank document or a simple document design. Choose an ordinary page size your audience prints, such as US Letter or A4. Use a clear heading, generous writing space, and a readable body font. A plain worksheet is enough.</li>
+<li><strong>Add the content below.</strong> Keep page one blank where the reader will write. Duplicate the layout for page two and enter the completed example. Put “Illustrative example” on that page so it cannot be mistaken for a customer result.</li>
+<li><strong>Export.</strong> Use <strong>Share → Download → PDF Standard</strong> for the screen download. Canva also offers PDF Print when print quality is the priority. Select only the intended pages. Name the file <code>paper-meadow-weekly-planning-v1.pdf</code>.</li>
+<li><strong>Check the actual export.</strong> Open the downloaded PDF on a phone and desktop. Print a page if you describe it as printable. Check that the title, instructions, writing areas, and second page survived the export.</li>
+</ol>
+<p class="source-note">Export reference: <a href="https://www.canva.com/create/pdf-maker/" target="_blank" rel="noopener">Canva PDF maker</a>; format differences and paid export options: <a href="https://www.canva.com/help/download-file-types/" target="_blank" rel="noopener">Canva file types</a>. The worksheet layout and copy are original examples.</p>
+<div class="worked-example"><div class="example-label"><h3>Copy: the complete worksheet content</h3><button class="button light small" data-copy-target="welcome-worksheet">Copy worksheet</button></div><pre id="welcome-worksheet">PAGE 1 — MY WEEK, WITH ROOM TO BREATHE
+Week beginning: __________________
+
+Choose three priorities. For each one, write a first action small
+enough to start without another planning session.
+
+Priority 1: _______________________
+First action: _____________________
+When I will start: _________________
+
+Priority 2: _______________________
+First action: _____________________
+When I will start: _________________
+
+Priority 3: _______________________
+First action: _____________________
+When I will start: _________________
+
+Appointments I need to work around: __________________________
+One thing I can move or decline: _____________________________
+Friday check: What moved forward? What needs a different plan?
+
+Paper Meadow · Weekly planning sheet · Version 1
+
+PAGE 2 — A COMPLETED EXAMPLE
+Illustrative example, not a customer result.
+Week beginning: November 2, 2026
+
+Priority 1: Finish the product photos for the blue desk pad.
+First action: Clear the table and photograph one sample in daylight.
+When I will start: Monday, 10:00.
+
+Priority 2: Send the November stock order.
+First action: Count the three bestselling pad colors.
+When I will start: Tuesday, 09:30.
+
+Priority 3: Reconcile the shipping receipts.
+First action: Put this week's five receipts in one folder.
+When I will start: Thursday, 14:00.
+
+Appointments: supplier delivery Wednesday morning.
+Move or decline: postpone the new packaging experiment.
+Friday check: record what happened; carry forward only what matters.</pre></div>
+<p><strong>Expected output:</strong> a readable two-page PDF containing one usable blank worksheet and one example. A cover image alone, a Canva editing link, or a private design URL does not satisfy the download promise.</p>
+</section>
+
+<section id="welcome-file">
+<span class="chapter-label">02 / Give the file a dependable home</span>
+<h2>Upload the PDF once and use a file link in the email.</h2>
+<p>In MailerLite, open <strong>File manager → Upload</strong> and choose the PDF. Its documented file limit is 10 MB. Use a versioned filename so you can recognize the correct resource later. When editing email 1, highlight “Download the weekly planning sheet,” open the link control, choose <strong>Insert File</strong>, and select this file. MailerLite supports file links in its Drag &amp; drop and Simple email editors.</p>
+<figure class="guide-screenshot"><a href="/assets/vendor-guides/mailerlite-file-link.webp" target="_blank" rel="noopener"><img src="/assets/vendor-guides/mailerlite-file-link.webp" loading="lazy" alt="MailerLite documentation screenshot showing the link menu and Insert File option in its email editor." width="2560" height="1664" decoding="async"></a><figcaption><strong>Vendor documentation screenshot: MailerLite.</strong> The highlighted link menu is where the PDF belongs. The demo email is MailerLite’s example, not an account we operated. <a href="https://www.mailerlite.com/help/importing-pdf-files-in-mailerlite" target="_blank" rel="noopener">Original guide and image credit</a>. Click the image to enlarge.</figcaption></figure>
+<p><strong>Why a link matters:</strong> the recipient should be able to open the resource from the delivered message without access to your Canva account. Send a preview to yourself, click the link, and try it in a signed-out browser. Keep the file available after sending; replacing an email draft does not repair a link inside a message already delivered.</p>
+<p class="source-note">File upload and editor controls: <a href="https://www.mailerlite.com/help/importing-pdf-files-in-mailerlite" target="_blank" rel="noopener">MailerLite’s PDF guide</a>. The access and version checks are our implementation recommendations.</p>
+</section>
+
+<section id="welcome-sender">
+<span class="chapter-label">03 / Prepare the sender</span>
+<h2>Make the address in the inbox match the business on the page.</h2>
+<p>Use a sender name a subscriber will recognize, such as <strong>Paper Meadow</strong>, and a reply address someone checks. Complete the account’s approval and verification prompts. For a custom sending domain, open <strong>Account settings → Domains → Add sending domain</strong>. Follow automatic authentication if your DNS provider is supported, or enter the exact records MailerLite generates in your DNS host. Return to MailerLite and confirm the domain status is authenticated.</p>
+<p>Do not copy another tutorial’s DNS values: the account supplies the records for your domain. If your domain already has an SPF record, follow the provider’s instructions for merging it rather than adding a competing one. Keep the required sender details and working unsubscribe footer in every email.</p>
+<p class="source-note">Current requirements and controls: <a href="https://www.mailerlite.com/help/how-to-verify-and-authenticate-your-domain" target="_blank" rel="noopener">MailerLite domain authentication</a> and <a href="https://www.mailerlite.com/help/troubleshooting-domain-authentication" target="_blank" rel="noopener">authentication troubleshooting</a>. Domain ownership, account review, and DNS propagation can delay readiness; do not promise delivery until the test passes.</p>
+</section>
+
+<section id="welcome-signup">
+<span class="chapter-label">04 / Connect the promise to the right group</span>
+<h2>Create one group and a focused signup page.</h2>
+<p>In <strong>Subscribers → Groups</strong>, create <strong>Weekly planning sheet</strong>. This group identifies the specific resource request. Avoid a generic “All subscribers” trigger that might enroll unrelated customers. <a href="https://www.mailerlite.com/help/how-to-create-and-use-groups" target="_blank" rel="noopener">MailerLite’s group guide</a> explains the group controls.</p>
+<ol class="guide-steps">
+<li>Open <strong>Sites → Landing pages → New site</strong>. Name the page <strong>Weekly planning sheet signup</strong> and continue.</li>
+<li>Select <strong>Weekly planning sheet</strong> as its subscriber group. Choose <strong>Start from scratch</strong>.</li>
+<li>Add a heading, a preview of the worksheet, short explanatory text, and a signup form. Keep email as the required field. Add a privacy-policy link and accurate business identity.</li>
+<li>Use the copy below. Check the mobile view, save, and publish using the available MailerLite URL. Open the published URL while signed out.</li>
+</ol>
+<p class="source-note">These controls refer to the <a href="https://www.mailerlite.com/help/new-landing-page-builder" target="_blank" rel="noopener">current landing-page builder</a>, not the older legacy-editor tutorial. Page changes must be published before visitors can see them.</p>
+<div class="worked-example"><div class="example-label"><h3>Copy: the signup page</h3><button class="button light small" data-copy-target="welcome-page-copy">Copy page copy</button></div><pre id="welcome-page-copy">HEADING
+A little more room for your week
+
+DESCRIPTION
+Get Paper Meadow's two-page weekly planning PDF: a blank worksheet
+and a completed example. Then receive two short emails about using
+the sheet and choosing a desk pad. Unsubscribe whenever you like.
+
+FORM LABEL
+Email address
+
+BUTTON
+Send me the planning sheet
+
+SUCCESS MESSAGE
+Check your inbox for the confirmation email. Confirm your address
+to receive the planning sheet. Already subscribed? Check for the
+original delivery email, or reply to our usual contact address for help.
+
+BELOW THE FORM
+Your information is handled as described in our Privacy Policy.
+[Link these words to your real policy.]
+
+IMAGE DESCRIPTION
+Preview of a weekly planning worksheet with three priorities,
+first actions, appointment space, and a Friday review.</pre></div>
+<h3>Keep confirmation and delivery separate.</h3>
+<p>In the page or form overview, keep <strong>Double opt-in</strong> enabled. Review its confirmation message and thank-you page. The free plan does not allow editing the confirmation email; you can use its standard message. The confirmation email confirms the address. Your automation email delivers the PDF. Do not also add a second delivery automation for the same signup.</p>
+<p>A new unconfirmed address needs to confirm before receiving this marketing sequence. An already active address does not receive the same confirmation request. That distinction is why tests need fresh addresses. For several signup locations offering the same resource, connect them to this one group rather than building competing form-triggered journeys.</p>
+<p class="source-note">Confirmation behavior and the reason for group triggers: <a href="https://www.mailerlite.com/help/how-to-use-double-opt-in-when-collecting-subscribers" target="_blank" rel="noopener">MailerLite double opt-in documentation</a>.</p>
+</section>
+
+<section id="welcome-build">
+<span class="chapter-label">05 / Build the sequence</span>
+<h2>Map one trigger to five deliberate steps.</h2>
+<p>Open <strong>Automations → Create workflow</strong>, choose a blank workflow, and name it <strong>Weekly planning welcome v1</strong>. Add <strong>Joins a group</strong> and select <strong>Weekly planning sheet</strong>. In the left sidebar’s <strong>Settings</strong> tab, leave <strong>Allow subscribers re-enter automation</strong> unchecked, then save. Add the steps below using the plus control. Complete and save each email’s subject, sender, and design.</p>
+<div class="table-scroll"><table class="data-table"><caption>The exact trigger-to-action map</caption><thead><tr><th>Order</th><th>Block</th><th>Setting</th><th>What the subscriber receives</th></tr></thead><tbody>
+<tr><th>Entry</th><td>Joins a group</td><td>Weekly planning sheet</td><td>Enrollment in this resource’s journey.</td></tr>
+<tr><th>1</th><td>Send email</td><td>Your planning sheet is here</td><td>The PDF and one easy starting instruction.</td></tr>
+<tr><th>2</th><td>Delay</td><td>2 days</td><td>A gap after email 1.</td></tr>
+<tr><th>3</th><td>Send email</td><td>Make one priority easier to start</td><td>A completed example and a useful technique.</td></tr>
+<tr><th>4</th><td>Delay</td><td>3 days</td><td>A second gap; email 3 is about five days after entry.</td></tr>
+<tr><th>5</th><td>Send email</td><td>Would a desk pad fit the way you plan?</td><td>An honest product decision with a clear link.</td></tr>
+</tbody></table></div>
+<p>These are elapsed delays, not a promise to send at 9 a.m. on particular weekdays. Inspect the duration controls and queued timestamps in your account. Without delay blocks, successive emails can be processed together.</p>
+<figure class="guide-screenshot"><a href="/assets/vendor-guides/mailerlite-workflow-step.webp" target="_blank" rel="noopener"><img src="/assets/vendor-guides/mailerlite-workflow-step.webp" loading="lazy" alt="MailerLite vendor screenshot showing a group trigger, email action, subject, sender fields, and Design email button." width="2940" height="1912" decoding="async"></a><figcaption><strong>Vendor documentation screenshot: MailerLite.</strong> Notice the group trigger above the email and the subject, sender, and Design email controls. Replace the vendor’s demo values with yours. <a href="https://www.mailerlite.com/help/how-to-create-an-automation-workflow" target="_blank" rel="noopener">Original guide and image credit</a>.</figcaption></figure>
+<p class="source-note">Builder controls: <a href="https://www.mailerlite.com/help/how-to-create-an-automation-workflow" target="_blank" rel="noopener">create an automation</a>. Delay behavior: <a href="https://www.mailerlite.com/help/how-to-use-automation-steps" target="_blank" rel="noopener">automation rules and actions</a>. Entry settings: <a href="https://www.mailerlite.com/help/how-to-set-up-automation-triggers" target="_blank" rel="noopener">automation triggers</a>.</p>
+</section>
+
+<section id="welcome-emails">
+<span class="chapter-label">06 / Give every email a job</span>
+<h2>Use these three complete messages as your starting point.</h2>
+<p>All product details below belong to the fictional example. Replace them with verified details before using the copy. Set links through the editor; bracketed instructions are not working URLs. Retain MailerLite’s unsubscribe and business-information footer.</p>
+<div class="worked-example"><div class="example-label"><h3>Email 1 · deliver the resource</h3><button class="button light small" data-copy-target="welcome-email-one">Copy email 1</button></div><pre id="welcome-email-one">SUBJECT: Your planning sheet is here
+PREHEADER: A blank worksheet and a completed example to get you started.
+
+Hello,
+
+Thanks for asking for the Paper Meadow planning sheet.
+
+Download the weekly planning sheet
+[Link this text to the PDF in MailerLite's File manager.]
+
+Page one is yours to fill in. Page two shows one way a small shop
+owner could use it. Start with just one priority and write the first
+action you could take. Leave the rest blank until you need it.
+
+In two days, I'll send you a short example of making a priority
+easier to start. A few days after that, I'll explain when a physical
+desk pad may be useful. Those are the two follow-ups promised
+on the signup page.
+
+If the download does not open, reply to this email and tell me
+what you see. I'll help you find the file.
+
+Paper Meadow</pre></div>
+<div class="worked-example"><div class="example-label"><h3>Email 2 · help them use it</h3><button class="button light small" data-copy-target="welcome-email-two">Copy email 2</button></div><pre id="welcome-email-two">SUBJECT: Make one priority easier to start
+PREHEADER: Turn a broad task into one action you can actually begin.
+
+Hello,
+
+If a priority on your planning sheet still feels vague, change the
+first action rather than adding more tasks.
+
+For example:
+Priority: finish the product photos.
+Hard-to-start action: work on photography.
+Clearer action: clear the table and photograph one blue desk pad.
+
+The clearer version tells you what to do first. It also tells you
+when you have started. You can decide on the next photo afterward.
+
+Try that with one item on your own sheet. You do not need to fill
+every box or rescue the whole week at once.
+
+Need the worksheet again? Download the planning sheet here.
+[Link to the same PDF.]
+
+Paper Meadow</pre></div>
+<div class="worked-example"><div class="example-label"><h3>Email 3 · make the product choice useful</h3><button class="button light small" data-copy-target="welcome-email-three">Copy email 3</button></div><pre id="welcome-email-three">SUBJECT: Would a desk pad fit the way you plan?
+PREHEADER: A quick way to decide whether to keep printing or use a pad.
+
+Hello,
+
+You can keep using the free planning sheet for as long as it helps.
+
+A printed sheet is a sensible choice if you plan occasionally or
+want to change your layout often. A desk pad may be more convenient
+if you like starting with a fresh page at the same desk each week.
+
+Paper Meadow's undated desk pad contains 50 tear-off sheets and
+costs $12. Shipping is calculated separately at checkout. It has
+space for priorities, appointments, and notes; it does not replace
+your calendar or reminders.
+
+See the desk pad's size, layout, and current price
+[Link to your real product page after replacing these sample facts.]
+
+This is the last email in this three-message introduction.
+Thanks for making some room for your week with us.
+
+Paper Meadow</pre></div>
+<p><strong>Keep the promise consistent:</strong> if you want to add an ongoing newsletter, say that on the signup page before collecting the address and explain the frequency. This example promises a resource and two follow-ups. It does not silently turn the subscriber into a weekly marketing audience.</p>
+</section>
+
+<section id="welcome-tests">
+<span class="chapter-label">07 / Prove the whole path</span>
+<h2>A preview email proves the design. A fresh signup proves the workflow.</h2>
+<p>Review each email preview first. When ready, activate the workflow and choose <strong>No, only add new subscribers</strong> if the activation dialog offers existing subscribers. Then submit address A through the published page. Keep address B for the unsubscribe case. Record the actual event times and results; the table lists expected behavior, not results we observed in a live account.</p>
+<div class="table-scroll"><table class="data-table"><caption>Acceptance tests before promoting the signup page</caption><thead><tr><th>Test</th><th>Do this</th><th>Pass condition</th></tr></thead><tbody>
+<tr><th>New, unconfirmed</th><td>Submit fresh address A; do not click confirmation yet.</td><td>A confirmation request arrives; the three-message marketing sequence has not started.</td></tr>
+<tr><th>Confirm and deliver</th><td>Confirm A, then inspect subscriber and automation activity.</td><td>A belongs to the intended group; email 1 arrives once; the next step is the first delay.</td></tr>
+<tr><th>File access</th><td>Open the received PDF link on a phone and while signed out.</td><td>The correct two-page file opens without Canva login or edit access.</td></tr>
+<tr><th>Timing</th><td>Leave A in the real two-day and three-day delays.</td><td>Email 2 and email 3 arrive in order with the intended gaps. Record timestamps rather than assuming the diagram is enough.</td></tr>
+<tr><th>Unsubscribe</th><td>Submit and confirm B, then unsubscribe after email 1.</td><td>B is unsubscribed and receives no later sequence messages.</td></tr>
+<tr><th>Repeat request</th><td>Submit A again after confirming; inspect its current membership and activity.</td><td>The repeat signup does not restart the whole sequence with repeat entry disabled. Existing subscribers can retrieve the original file email or request help.</td></tr>
+<tr><th>Wrong link</th><td>Review every button, privacy link, product link, reply address, and footer.</td><td>No bracketed instructions, sample URLs, obsolete prices, or unmonitored reply addresses remain.</td></tr>
+<tr><th>Capacity</th><td>Inspect subscribers, monthly sends, and active-feature usage.</td><td>The account has headroom and is not relying on trial-only features.</td></tr>
+</tbody></table></div>
+<p>If you temporarily shorten delays in a separate test workflow, record that distinction. A successful five-minute test does not verify a five-day journey. Do not leave a second workflow pointing at the production group: it can cause duplicate messages. Keep a small test log containing test address, signup time, confirmation time, each email time, PDF result, and unsubscribe result.</p>
+<h3>What an existing subscriber should expect</h3>
+<p>An active subscriber who is new to this resource group can become eligible for its group-triggered sequence. Someone already in the group has not newly joined it simply by submitting the form again. Do not enable indefinite repeat entry just to repair one missed file. Check the record, supply the requested resource once when appropriate, and keep the original subscription preferences intact.</p>
+</section>
+
+<section id="welcome-fixes">
+<span class="chapter-label">08 / Diagnose before rebuilding</span>
+<h2>If the form works but the email is missing, trace the handoffs.</h2>
+<div class="table-scroll"><table class="data-table"><caption>Failure, evidence, and recovery</caption><thead><tr><th>Symptom</th><th>Check first</th><th>Recovery</th></tr></thead><tbody>
+<tr><th>Success message, no welcome</th><td>Is the address still unconfirmed? Did it already exist? Is it in the correct group?</td><td>Use the confirmation process for a new signup. Fix the page’s group mapping if wrong, then test with a fresh controlled address.</td></tr>
+<tr><th>Form still accepts people, delivery stops</th><td>Active-subscriber count, monthly sends, feature limits, account status.</td><td>Resolve the actual limit and inspect affected subscribers before restarting. MailerLite documents that forms can continue collecting above the subscriber threshold even while sending is blocked.</td></tr>
+<tr><th>PDF asks for Canva access</th><td>Does the email contain the design-sharing URL instead of the uploaded file?</td><td>Link the uploaded PDF from File manager. Retest the received email while signed out.</td></tr>
+<tr><th>Three emails arrive together</th><td>Are both delay blocks present and saved?</td><td>Pause new enrollment while correcting the sequence. Check activity for affected people; do not restart everyone from email 1.</td></tr>
+<tr><th>One signup gets two welcome emails</th><td>Look for a form-triggered workflow, another group workflow, or a copied active workflow.</td><td>Identify which workflow sent each message. Keep one delivery route and retire the duplicate deliberately.</td></tr>
+<tr><th>Preview works; real signups do not</th><td>Published page, active workflow, confirmed status, group, and failed activity.</td><td>Repair the failing boundary. A preview bypasses signup and enrollment, so repeat the real path.</td></tr>
+<tr><th>A paused workflow has stalled people</th><td>Automation activity and each person’s failed or canceled step.</td><td>Review the vendor’s recovery instructions. Re-add only appropriate subscribers at the appropriate step; do not resend the whole series blindly.</td></tr>
+</tbody></table></div>
+<p class="source-note">Limit behavior: <a href="https://www.mailerlite.com/help/free-plan-update-faq" target="_blank" rel="noopener">Free-plan FAQ</a>. Pausing and re-adding at a selected step: <a href="https://www.mailerlite.com/help/how-to-create-an-automation-workflow" target="_blank" rel="noopener">workflow guide</a>. More enrollment diagnostics: <a href="https://www.mailerlite.com/help/automations-faq" target="_blank" rel="noopener">automation FAQ</a>.</p>
+<h3>Keep it working after launch.</h3>
+<p>Once a week, open the file and product links, inspect failed workflow activity, and check the sender inbox. Before changing a price or resource, update the source file and the relevant email together. Give each version a date and keep the old file available for recipients of earlier messages.</p>
+<p>Budget sends across the entire account. For example, 100 new subscribers completing three emails use <strong>300 automation sends</strong>. Four broadcasts to 200 recipients use <strong>800 more</strong>, for a planning total of <strong>1,100</strong> before other messages and tests. This is arithmetic for an illustrative account, not a forecast. The separate 250-active-subscriber limit can be reached before the email allowance.</p>
+<p>Judge usefulness with evidence you can inspect: confirmed requests, successful delivery, meaningful replies, resource access when measurable, and purchases attributable through your actual setup. The workflow creates a reliable response to interest; it does not create visitors by itself. If nobody sees the signup page, changing the delay from two days to one will not solve that problem.</p>
+<p><strong>Next useful step:</strong> connect this resource to a genuinely relevant article or product page. If your immediate problem is responding to service inquiries, use the <a href="/playbooks/service-lead-follow-up/">form-to-Gmail-draft tutorial</a> instead of adding people to a newsletter sequence.</p>
+</section>
+
+<section id="downloads">
+<h2>Download the working kit.</h2>
+<p><a class="button" href="/resources/kits/email-welcome-sequence.txt" download>Download the welcome sequence kit</a></p>
+<p>The text kit contains the complete worksheet, signup-page copy, and all three emails. Use it alongside the mapping and acceptance checks above. The sample business details need to become your verified facts before you publish or send anything.</p>
+</section>
