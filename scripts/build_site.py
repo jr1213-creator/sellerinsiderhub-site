@@ -359,7 +359,10 @@ write('/start-here/','Find your way through the Hub','Choose a task you want to 
 # Redirects retain old entry URLs without publishing duplicate or unsafe legacy widgets.
 redirects=[('https://www.sellerinsiderhub.com/*','https://sellerinsiderhub.com/:splat','301!'),('/tools/ai-solutions-concierge','/stack-builder/','301!'),('/tools/ai-solutions-concierge.html','/stack-builder/','301!'),('/tools/ai-solutions-concierge/','/stack-builder/','301!'),('/affiliate/partners','/partners/','301!'),('/affiliate/partners.html','/partners/','301!'),('/affiliate/partners/','/partners/','301!'),('/affiliate/recommended-tools','/tool-library/','301!'),('/affiliate/recommended-tools.html','/tool-library/','301!'),('/affiliate/recommended-tools/','/tool-library/','301!'),('/admin','/workspace/','302!'),('/admin/*','/workspace/','302!'),('/community','/workspace/','302!'),('/community/*','/workspace/','302!')]
 for old,new in legacy_redirects:
-    if old!=new: redirects.append((old,new,'301!'))
+    # Netlify matches both trailing-slash variants before applying redirects.
+    # A forced /page -> /page/ rule therefore redirects the canonical to itself.
+    # Directory index files already receive Netlify's normal slash handling.
+    if old.rstrip('/')!=new.rstrip('/'): redirects.append((old,new,'301!'))
 for page in PAGES:
     route=page['route']
     if route!='/':

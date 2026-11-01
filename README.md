@@ -43,4 +43,6 @@ Newsletter and contact forms use static Netlify Forms markup with consent and ho
 
 Analytics loads only after consent. Reading lists and saved tool stacks are browser-local and can be exported/imported. There is no claimed cloud account, private analytics dashboard, or live AI assistant behind these browser tools.
 
+See [Traffic and measurement](docs/MEASUREMENT.md) for campaign-link formats, production-host filtering, Google stream settings, and the distinction between local regression checks and actual provider receipt.
+
 Affiliate destinations are centralized in the catalog. Only records with `affiliateStatus: "approved"` and an actual approved `affiliateUrl` use that URL. Other links point to the software provider. Publication quality and reader fit determine the recommendation; commission terms are not used in the matching logic.

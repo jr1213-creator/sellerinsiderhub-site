@@ -31,6 +31,37 @@
   const get = (key, fallback) => {try {return JSON.parse(localStorage.getItem(key)) ?? fallback;} catch {return fallback;}};
   const set = (key, value) => {try {localStorage.setItem(key, JSON.stringify(value)); return true;} catch {toast('Your browser could not save this. Export a backup before leaving.'); return false;}};
   const WS = 'sih.workspace.v1', CMP = 'sih.compare.v1', CONSENT = 'sih.analytics.v1';
+  const ANALYTICS_ID = 'G-164NDV6713';
+  const analyticsProductionHost = ['sellerinsiderhub.com', 'www.sellerinsiderhub.com'].includes(location.hostname);
+  const consentChoice = value => value === 'yes' || value === 'no' ? value : null;
+  let analyticsConsent = consentChoice(get(CONSENT, null));
+  // Keep only non-personal campaign slugs in memory, before filters/search can
+  // replace the entry URL. Nothing is sent or persisted until analytics consent.
+  // Use labels such as linkedin, organic_social, and november-ai-guides; never
+  // put a person's name, email, phone number, or other private data in UTM tags.
+  const entryAnalytics = (() => {
+    const params = new URLSearchParams(location.search || '');
+    const context = {page_location: location.origin + location.pathname, page_referrer: ''};
+    const campaigns = {utm_source:'campaign_source', utm_medium:'campaign_medium', utm_campaign:'campaign_name', utm_id:'campaign_id', utm_term:'campaign_term', utm_content:'campaign_content'};
+    for (const [key, field] of Object.entries(campaigns)) {
+      const value = params.get(key) || '';
+      // A deliberately conservative slug format excludes email addresses,
+      // phone numbers, URLs, whitespace/free text, and double-encoded values.
+      if (/^[A-Za-z][A-Za-z0-9._~-]{0,99}$/.test(value)) context[field] = value;
+    }
+    const clicks = new URLSearchParams();
+    for (const key of ['gclid', 'dclid', 'gbraid', 'wbraid']) {
+      const value = params.get(key) || '';
+      if (/^[A-Za-z0-9_-]{1,200}$/.test(value)) clicks.set(key, value);
+    }
+    if (clicks.size) context.page_location += '?' + clicks.toString();
+    try {
+      const referrer = new URL(document.referrer);
+      if (/^https?:$/.test(referrer.protocol)) context.page_referrer = referrer.origin + (referrer.origin === location.origin ? referrer.pathname : '/');
+    } catch { /* An empty or invalid referrer does not identify a traffic source. */ }
+    return context;
+  })();
+  window['ga-disable-' + ANALYTICS_ID] = analyticsConsent !== 'yes' || !analyticsProductionHost;
   const emptyWorkspace = () => ({version:1, tools:[], guides:[], stacks:[]});
   function readWorkspace() {
     const raw = localStorage.getItem(WS);
@@ -55,17 +86,32 @@
   function download(name, body, type = 'text/plain') {const url = URL.createObjectURL(new Blob([body], {type})); const a = document.createElement('a'); a.href = url; a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(url), 2000);}
   async function copy(text) {try {await navigator.clipboard.writeText(text); toast('Copied to clipboard.');} catch {download('seller-insider-hub-copy.txt', text); toast('Your browser blocked the clipboard. The text has been downloaded.');}}
   function enableAnalytics() {
-    window['ga-disable-G-164NDV6713'] = false;
+    if (analyticsConsent !== 'yes' || !analyticsProductionHost) return;
+    window['ga-disable-' + ANALYTICS_ID] = false;
     if (analyticsLoaded) return;
     analyticsLoaded = true; window.dataLayer = window.dataLayer || [];
     window.gtag = function(){window.dataLayer.push(arguments);};
-    window.gtag('js', new Date()); window.gtag('config', 'G-164NDV6713', {send_page_view:true, allow_google_signals:false, allow_ad_personalization_signals:false, page_location:location.origin + location.pathname});
-    const script = document.createElement('script'); script.async = true; script.src = 'https://www.googletagmanager.com/gtag/js?id=G-164NDV6713'; document.head.appendChild(script);
+    window.gtag('js', new Date()); window.gtag('config', ANALYTICS_ID, {send_page_view:true, allow_google_signals:false, allow_ad_personalization_signals:false, ...entryAnalytics});
+    const script = document.createElement('script'); script.async = true; script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ANALYTICS_ID; document.head.appendChild(script);
   }
-  function track(name, parameters = {}) {if (get(CONSENT, null) === 'yes' && window.gtag) window.gtag('event', name, parameters);}
-  const consent = get(CONSENT, null);
-  if (consent === 'yes') enableAnalytics();
-  if (!consent && $('#cookie-panel')) $('#cookie-panel').hidden = false;
+  function disableAnalytics() {
+    window['ga-disable-' + ANALYTICS_ID] = true;
+    document.cookie.split(';').forEach(pair => {
+      const name = pair.trim().split('=')[0];
+      if (name.startsWith('_ga')) for (const domain of ['', location.hostname, '.sellerinsiderhub.com']) document.cookie = `${name}=; Max-Age=0; path=/;${domain ? ' domain=' + domain + ';' : ''} SameSite=Lax`;
+    });
+  }
+  function track(name, parameters = {}) {if (analyticsProductionHost && analyticsConsent === 'yes' && !window['ga-disable-' + ANALYTICS_ID] && window.gtag) window.gtag('event', name, parameters);}
+  if (analyticsConsent === 'yes') enableAnalytics();
+  if (!analyticsConsent && $('#cookie-panel')) $('#cookie-panel').hidden = false;
+  window.addEventListener?.('storage', event => {
+    if (event.key !== CONSENT && event.key !== null) return;
+    let choice = null;
+    try {choice = consentChoice(JSON.parse(event.newValue));} catch { /* Invalid or removed consent is not permission. */ }
+    analyticsConsent = choice;
+    if (choice === 'yes') enableAnalytics(); else disableAnalytics();
+    if ($('#cookie-panel')) $('#cookie-panel').hidden = !!choice;
+  });
   function toolCard(t) {
     return `<article class="card tool-card" data-tool-card="${esc(t.id)}"><div class="tool-card-head">${monogram(t)}<div><h3><a href="/tool/${esc(t.id)}/">${esc(t.name)}</a></h3><span class="tool-category">${esc(category(t.category))}</span></div><button class="icon-button" data-save-tool="${esc(t.id)}" aria-pressed="${workspace.tools.includes(t.id)}" aria-label="Save ${esc(t.name)}">${bookmark}</button></div><p class="tool-description">${esc(t.tagline)}</p><div class="tool-meta"><span class="chip green">${t.freePlan === true ? 'Free plan' : t.freePlan === false ? 'Paid plans' : 'Check current plans'}</span><span class="chip">${esc(t.setup)} setup</span></div><div class="tool-bottom"><button class="text-button" data-compare-tool="${esc(t.id)}" aria-pressed="${compare.includes(t.id)}">${compare.includes(t.id) ? '✓ Selected' : '⇄ Compare'}</button><a class="text-button" href="/tool/${esc(t.id)}/">Explore tool ↗</a></div></article>`;
   }
@@ -105,7 +151,19 @@
     if (el.matches('[data-close-dialog]')) $('#search-dialog').close();
     if (el.matches('[data-print]')) window.print();
     if (el.matches('[data-cookie-settings]')) $('#cookie-panel').hidden = false;
-    if (el.matches('[data-consent]')) {const choice = el.dataset.consent; set(CONSENT, choice); $('#cookie-panel').hidden = true; if (choice === 'yes') enableAnalytics(); else {window['ga-disable-G-164NDV6713'] = true; document.cookie.split(';').forEach(pair => {const name = pair.trim().split('=')[0]; if (name.startsWith('_ga')) {for (const domain of ['', location.hostname, '.sellerinsiderhub.com']) document.cookie = `${name}=; Max-Age=0; path=/;${domain ? ' domain=' + domain + ';' : ''} SameSite=Lax`;}});}}
+    if (el.matches('[data-consent]')) {
+      const choice = consentChoice(el.dataset.consent); if (!choice) return;
+      analyticsConsent = choice;
+      if (choice === 'yes') enableAnalytics(); else disableAnalytics();
+      try {localStorage.setItem(CONSENT, JSON.stringify(choice));}
+      catch {
+        // Forget an earlier permission if revocation cannot be saved, when the
+        // browser still permits removal (for example a full storage quota).
+        if (choice === 'no') try {localStorage.removeItem(CONSENT);} catch { /* The choice still applies to this page. */ }
+        toast('Your privacy choice applies to this page. Your browser could not save it for future visits.');
+      }
+      $('#cookie-panel').hidden = true;
+    }
     if (el.matches('[data-save-tool]')) {await catalogPromise; const id = el.dataset.saveTool; if (!tool(id)) return; const saved = workspace.tools.includes(id); if (saveWorkspace(() => {workspace.tools = saved ? workspace.tools.filter(x => x !== id) : [...new Set([...workspace.tools, id])];})) toast(saved ? 'Removed from your saved tools.' : 'Saved in this browser.');}
     if (el.matches('[data-save-guide]')) {const url = el.dataset.saveGuide; const saved = workspace.guides.some(g => g.url === url); if (saveWorkspace(() => {if (saved) workspace.guides = workspace.guides.filter(g => g.url !== url); else if (!workspace.guides.some(g => g.url === url)) workspace.guides.push({url, title:el.dataset.title || document.title});})) toast(saved ? 'Removed from your reading list.' : 'Added to your reading list.');}
     if (el.matches('[data-compare-tool]')) {await catalogPromise; const id = el.dataset.compareTool; if (compare.includes(id)) compare = compare.filter(x => x !== id); else if (compare.length < 3) {compare.push(id); track('compare_select', {tool_id:id});} else {toast('Your comparison has three tools. Remove one to add another.'); return;} saveCompare();}

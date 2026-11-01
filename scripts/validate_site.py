@@ -160,6 +160,11 @@ class Redirect:
     def match(self, url: str):
         subject = url if self.source.startswith(("http://", "https://")) else urlsplit(url).path
         match = self.pattern.fullmatch(subject)
+        if not match and subject != "/":
+            # Netlify normalizes a trailing slash before matching redirect rules.
+            # Check both forms so a forced slash-only redirect fails validation.
+            alternate = subject.rstrip("/") if subject.endswith("/") else subject + "/"
+            match = self.pattern.fullmatch(alternate)
         if not match:
             return None
         target = self.target
