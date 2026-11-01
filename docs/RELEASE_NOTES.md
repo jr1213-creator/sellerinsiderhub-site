@@ -1,5 +1,13 @@
 # Complete publication release — November 1, 2026
 
+## Founder mission and live form verification
+
+The homepage, founder story, first-visit routes, editorial standards, partner introduction, and shared publication copy now express the owner's stated mission: practical AI knowledge for small business owners without an IT department, with instructions that build reader confidence and independence. The homepage leads with “Understand AI. Put it to work.” The founder page credits The Local Upgrade for website software development and retains The Local Upgrade LLC as the current legal operator. No entity formation, tax election, or ownership transfer is represented as completed.
+
+Netlify automatic form detection was found disabled, enabled in the existing project, and activated with a successful production redeploy on November 1. Both sih-newsletter and sih-contact are registered. One synthetic submission from each live form reached the public confirmation page and appeared under verified submissions in Netlify. The newsletter consent value and all contact fields were checked in the saved records. No email-sending integration or automated welcome message is implied by form capture.
+
+The revised homepage and founder page were visually reviewed at desktop width and checked in 375-pixel and 768-pixel frames. A founder-video overflow was reproduced at mobile width and corrected with responsive sizing; all four final page/frame combinations have no page-level horizontal overflow.
+
 ## Delivered publication
 
 The release contains 120 published pages plus a custom 404, with 116 indexable URLs. Its substantive coverage includes 47 researched tool guides, 12 implementation tutorials, eight worked comparisons, seven business guides, and seven complete buying or workflow guides. Seventeen thin legacy entry pages now redirect to the corresponding complete resource; existing links remain usable.
@@ -23,7 +31,7 @@ The seven business guides and seven additional features connect the tools to a c
 
 ## Verification performed
 
-The final static validation passes with 121 HTML files, 47 catalog entries, 20 tutorial/comparison records, 6,797 internal references, three static form instances, and 116 sitemap URLs. The temporary responsive-QA page is excluded from the release.
+The final static validation passes with 121 HTML files, 47 catalog entries, 20 tutorial/comparison records, 6,798 internal references, three static form instances, and 116 sitemap URLs. Temporary responsive-QA pages are excluded from the release.
 
 All 14 calculator tests, 11 workspace regression tests, and nine form tests pass. Workspace tests execute the actual production script and cover blocked additions/removals/imports/clears, state rollback, retries, invalid backups, unsafe links, escaped titles, and initially unread saved data. The denied-read defects were reproduced before correction. Form tests cover native validity, encoded consent and honeypot fields, successful acknowledgements, HTTP and network failures, timeouts, preserved values, explicit retries, and duplicate prevention. Failed submissions remain on the form with an accessible status; a successful HTTP acknowledgement never invites a second submission merely because receipt wording changed.
 

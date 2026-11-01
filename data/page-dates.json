@@ -1,7 +1,7 @@
 {
   "/": {
     "modified": "2026-11-01",
-    "reason": "Revised editorial presentation and featured summaries."
+    "reason": "Made the mission of practical AI education and reader independence explicit."
   },
   "/playbooks/": {
     "modified": "2026-11-01",
@@ -21,11 +21,11 @@
   },
   "/start-here/": {
     "modified": "2026-11-01",
-    "reason": "Added complete beginner and workflow-map paths."
+    "reason": "Clarified the learning paths for owners building their own AI knowledge."
   },
   "/editorial-standards/": {
     "modified": "2026-11-01",
-    "reason": "Clarified article evidence and publication responsibility."
+    "reason": "Added an explicit standard for teaching reader independence."
   },
   "/legal/privacy/": {
     "modified": "2026-11-01",
@@ -86,5 +86,13 @@
   "/tool-library/category/video-audio/": {
     "modified": "2026-11-01",
     "reason": "Revised catalog economics and audience fit."
+  },
+  "/about/": {
+    "modified": "2026-11-01",
+    "reason": "Expanded the founder mission and credited website development to The Local Upgrade while preserving the current legal operator."
+  },
+  "/partners/": {
+    "modified": "2026-11-01",
+    "reason": "Clarified the publication mission and audience."
   }
 }
