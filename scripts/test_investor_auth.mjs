@@ -86,7 +86,7 @@ function privateHeaders(response) {
   assert.equal(response.headers.get('cdn-cache-control'), 'no-store');
   assert.equal(response.headers.get('netlify-cdn-cache-control'), 'no-store');
   assert.equal(response.headers.get('x-robots-tag'), 'noindex, nofollow, noarchive');
-  assert.equal(response.headers.get('referrer-policy'), 'no-referrer');
+  assert.equal(response.headers.get('referrer-policy'), 'same-origin');
   assert.equal(response.headers.get('x-content-type-options'), 'nosniff');
   assert.match(response.headers.get('content-security-policy'), /frame-ancestors 'none'/);
   assert.equal(response.headers.get('access-control-allow-origin'), null);
@@ -123,6 +123,37 @@ test('all private assets and direct function aliases require a session before an
     assert.ok(!(await response.text()).includes('PRIVATE_FINANCIAL_FIXTURE'));
   }
   assert.deepEqual(instance.reads, []);
+});
+
+test('native login and logout pages preserve the same-origin metadata required by strict CSRF checks', async () => {
+  const instance = harness();
+  const pageUrl = new URL(ROOM, ORIGIN);
+  const page = await instance.portal(getRequest());
+  const html = await page.text();
+  // Node's Request does not synthesize a browser's Origin header. Assert the
+  // browser-facing policy and native form target, then exercise the strict
+  // handler with the Origin that Fetch §3.2 preserves under this policy.
+  assert.equal(page.headers.get('referrer-policy'), 'same-origin');
+  assert.doesNotMatch(html, /<meta\b[^>]*\bname=["']referrer["']/i,
+    'a document-level override must not silently restore no-referrer');
+  const formAction = html.match(/<form\b[^>]*\baction="([^"]+)"[^>]*\bmethod="post"/i)[1];
+  const target = new URL(formAction, pageUrl);
+  assert.equal(target.origin, pageUrl.origin);
+  assert.equal(target.pathname, `${ROOM}login`);
+  const signedIn = await instance.login(postRequest(target.pathname, {
+    headers: { Origin: pageUrl.origin },
+  }));
+  assert.equal(signedIn.status, 303);
+  const cookie = signedIn.headers.get('set-cookie').split(';')[0];
+  const room = await instance.portal(getRequest(ROOM, cookie));
+  assert.equal(room.status, 200);
+  assert.equal(room.headers.get('referrer-policy'), 'same-origin',
+    'the authenticated document must also preserve the native logout Origin');
+  const signedOut = await instance.portal(postRequest(`${ROOM}logout`, {
+    headers: { Cookie: cookie, Origin: pageUrl.origin }, body: '',
+  }));
+  assert.equal(signedOut.status, 303);
+  assert.match(signedOut.headers.get('set-cookie'), /Max-Age=0/);
 });
 
 test('missing or malformed deployment secrets keep both page and login closed', async () => {

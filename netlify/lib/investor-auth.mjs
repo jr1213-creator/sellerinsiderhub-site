@@ -75,7 +75,9 @@ function securityHeaders(styleNonce) {
     'X-Robots-Tag': 'noindex, nofollow, noarchive',
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
-    'Referrer-Policy': 'no-referrer',
+    // Native form POSTs under no-referrer send Origin:null (Fetch §3.2).
+    // Preserve same-origin CSRF metadata while withholding external referrers.
+    'Referrer-Policy': 'same-origin',
     'Cross-Origin-Opener-Policy': 'same-origin',
     'Cross-Origin-Resource-Policy': 'same-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
