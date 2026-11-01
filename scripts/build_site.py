@@ -358,6 +358,17 @@ write('/start-here/','Find your way through the Hub','Choose a task you want to 
 
 # Redirects retain old entry URLs without publishing duplicate or unsafe legacy widgets.
 redirects=[('https://www.sellerinsiderhub.com/*','https://sellerinsiderhub.com/:splat','301!'),('/tools/ai-solutions-concierge','/stack-builder/','301!'),('/tools/ai-solutions-concierge.html','/stack-builder/','301!'),('/tools/ai-solutions-concierge/','/stack-builder/','301!'),('/affiliate/partners','/partners/','301!'),('/affiliate/partners.html','/partners/','301!'),('/affiliate/partners/','/partners/','301!'),('/affiliate/recommended-tools','/tool-library/','301!'),('/affiliate/recommended-tools.html','/tool-library/','301!'),('/affiliate/recommended-tools/','/tool-library/','301!'),('/admin','/workspace/','302!'),('/admin/*','/workspace/','302!'),('/community','/workspace/','302!'),('/community/*','/workspace/','302!')]
+# Historical public entry URLs reported by Search Console have useful successors.
+# Keep unrelated removed URLs as real 404s; never redirect all missing pages.
+historical_entry_routes={
+ '/tools/voice-tools':'/tool-library/category/video-audio/',
+ '/playbooks/start-using-ai':'/guides/getting-started-with-ai/',
+ '/tools/ai-setup-generator':'/stack-builder/',
+ '/tools':'/tool-library/'
+}
+for old,new in historical_entry_routes.items():
+    for source in [old,old+'.html',old+'/index.html']:
+        redirects.append((source,new,'301!'))
 for old,new in legacy_redirects:
     # Netlify matches both trailing-slash variants before applying redirects.
     # A forced /page -> /page/ rule therefore redirects the canonical to itself.

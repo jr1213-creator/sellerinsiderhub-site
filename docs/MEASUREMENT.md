@@ -70,6 +70,11 @@ redirect from `/page` to `/page/` is a loop on Netlify, even when an exact-strin
 local redirect test would pass. Use the host's ordinary directory-index behavior
 and preserve genuine legacy `.html` redirects.
 
+Historical aliases also preserve the former voice-tools category, start-using-AI
+guide, AI setup generator, and tools-directory URLs. Each points to the relevant
+current resource. An unknown retired URL is not a reason to redirect all 404s
+to the homepage or invent an unrelated replacement.
+
 After publication, verify the repaired URL on the live host and compare the
 deployed script with the checked source. Confirm provider receipt separately.
 Use whole-period user counts; do not sum daily unique users. Keep report dates
