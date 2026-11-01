@@ -1,142 +1,1822 @@
 {
   "checkedAt": "2026-11-01",
   "currency": "USD",
-  "basis": "Official public program pages, provider help documents, and issuer financial disclosures. No private affiliate dashboard, customer data, or Seller Insider Hub affiliate approval is represented.",
+  "basis": "All47catalogtools reviewed. Published program terms are conditional opportunities; no approval is implied. Unmodelable, closed, and credit-only offers are inventoried without cash projections.",
   "defaultPriceNote": "The model's subscription price is an editable assumption about a referred customer's monthly spend. $100, $50, and other scenario prices are not vendor plan-price quotations.",
   "modelNotes": [
-    "Recurring commissions belong to an affiliate agreement. Seller Insider Hub does not own the vendors' subscription revenue or customer contracts.",
-    "Every maturity and sensitivity preset is illustrative. None is a measured result, probability-weighted forecast, investor return, or promise of passive earnings.",
-    "A month-level delay approximates approval, settlement, withdrawal, and bank processing. Day-specific schedules, annual upfront customer billing, and account-specific exceptions can change cash timing.",
-    "Payout thresholds are applied separately to each modeled program. Real Impact account balances may pool multiple brands, so the separate-program treatment can delay modeled withdrawals relative to a shared account.",
-    "payoutMinimumCustomers is a cumulative count of expected unique approved referrals after their modeled delay. It is not an active-customer requirement or a fresh referral count per payout. Exact account-level settlement rules still govern real withdrawals.",
-    "Conversion, eligibility, attribution, churn, reversal, average spend, and traffic assumptions require business evidence. They are not supplied by the public commission rate.",
-    "The eligibility/approval rate should incorporate expected attribution failures and required survival through a provider's lock. The model applies this expected approval at acquisition rather than evaluating each actual cancellation or refund against a vendor contract.",
-    "Model costs should include editorial maintenance, founder compensation, contractors, software, administration, and acquisition. A negative cash balance means additional funding is required; the model does not assume that funding is available.",
-    "Company benchmarks provide context about established businesses. Their revenue, profit, audience, and valuation must not be scaled mechanically into a Seller Insider Hub forecast."
+    "A portfolio divides one common pool of paid referrals; it does not assign the entire site audience to every vendor.",
+    "Portfolio weights and customer plan values are editable assumptions. Equal weights are a neutral starting point, not a forecast of sales mix.",
+    "Starting cohorts are zero; conditional vendor eligibility is assumed for modeled offers and must be maintained. Model output is not verified affiliate revenue."
   ],
   "programs": [
     {
-      "id": "hubspot",
-      "name": "HubSpot",
-      "summary": "The publicly advertised Starter affiliate tier pays 30% recurring commission for up to one year. It is an application-based program with a 180-day cookie window.",
+      "id": "chatgpt",
+      "catalogId": "chatgpt",
+      "name": "ChatGPT",
+      "category": "ai-assistants",
       "checkedAt": "2026-11-01",
+      "status": "no_public_program_verified",
+      "modelEligible": false,
       "sellerInsiderHubApproval": "Not verified",
+      "summary": "No open cash affiliate offer for ChatGPT was verified. Official referral promotions offer trials, usage benefits or credits that cannot be redeemed for cash.",
+      "commissionSummary": "No public cash commission verified",
+      "programUrl": "https://help.openai.com/en/articles/20001271-chatgpt-desktop-referral-promotions",
+      "applicationUrl": "https://help.openai.com/en/articles/20001271-chatgpt-desktop-referral-promotions",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [
+        "A referral invitation is not a commission-paying affiliate agreement. Useful ChatGPT coverage can still lead readers to complementary eligible software."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://help.openai.com/en/articles/20001271-chatgpt-desktop-referral-promotions",
+        "https://help.openai.com/en/articles/8381046-chatgpt-promotional-subscriptionsfree-trial-invites-faq"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/chatgpt/"
+    },
+    {
+      "id": "claude",
+      "catalogId": "claude",
+      "name": "Claude",
+      "category": "ai-assistants",
+      "checkedAt": "2026-11-01",
+      "status": "no_public_program_verified",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "No public consumer affiliate commission was verified. Anthropic offers enterprise partner tracks and a community ambassador program, which are separate arrangements.",
+      "commissionSummary": "No public publisher rate verified",
+      "programUrl": "https://www.anthropic.com/news/services-track-partner-hub",
+      "applicationUrl": "https://www.anthropic.com/news/services-track-partner-hub",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [
+        "Enterprise referral/deal support is not an open self-serve cash affiliate offer. Ambassador benefits do not include direct payment."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://www.anthropic.com/news/services-track-partner-hub",
+        "https://claude.com/community/ambassadors"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/claude/"
+    },
+    {
+      "id": "perplexity",
+      "catalogId": "perplexity",
+      "name": "Perplexity",
+      "category": "ai-assistants",
+      "checkedAt": "2026-11-01",
+      "status": "application_paused",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Perplexity states that its Comet referral program concluded November 6, 2025. New referrals after that date do not earn commissions.",
+      "commissionSummary": "Retired cash referral program",
+      "programUrl": "https://www.perplexity.ai/help-center/en/articles/11385821-partner-promotions-and-referral-programs",
+      "applicationUrl": "https://www.perplexity.ai/help-center/en/articles/11385821-partner-promotions-and-referral-programs",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [
+        "Historical $15 Comet rewards and old working links must not be treated as an active commission opportunity. The earlier free-month program ended October 6, 2025."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://www.perplexity.ai/help-center/en/articles/11385821-partner-promotions-and-referral-programs"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/perplexity/"
+    },
+    {
+      "id": "canva",
+      "catalogId": "canva",
+      "name": "Canva",
+      "category": "design",
+      "checkedAt": "2026-11-01",
+      "status": "application_paused",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Canva affiliate benefits now require acceptance into its Canvassador program; the current help page says applications are closed.",
+      "commissionSummary": "Application route currently closed",
+      "programUrl": "https://www.canva.com/help/canva-affiliate-marketing-program/",
+      "applicationUrl": "https://www.canva.com/help/canva-affiliate-marketing-program/",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [
+        "Historical open-affiliate rates were not used. Creator marketplace royalties are a different business model."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://www.canva.com/help/canva-affiliate-marketing-program/"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/canva/"
+    },
+    {
+      "id": "adobe-express",
+      "catalogId": "adobe-express",
+      "name": "Adobe Express",
+      "category": "design",
+      "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Adobe includes Express in its affiliate program. Monthly and annual-paid-monthly subscriptions pay 85% of the first monthly fee; annual-prepaid subscriptions pay 8.33% of the first annual fee.",
+      "commissionSummary": "85% of first monthly payment; one-time",
+      "programUrl": "https://www.adobe.com/affiliates.html",
+      "applicationUrl": "https://www.adobe.com/affiliates.html",
       "model": {
-        "commissionType": "recurring",
-        "commissionPct": 30,
-        "commissionMonths": 12,
+        "commissionType": "one-time",
+        "oneTimeCommission": 8.49,
+        "commissionPct": 0,
+        "commissionMonths": 0,
+        "monthlyPrice": 0,
         "payoutDelayMonths": 2,
-        "payoutMinimum": 10,
+        "payoutMinimum": 0,
         "payoutMinimumCustomers": 0
       },
       "terms": {
-        "cookieDays": 180,
-        "payoutSummary": "Impact handles payments; the public program page states a $10 withdrawal minimum and EFT or PayPal. The applicable locking period is specified in the affiliate tool rather than as a universal number in the public policies.",
-        "eligibility": "Qualifying new customers must remain active through the lock. Existing customers, active sales opportunities, self-referrals, and serviced-client referrals can be ineligible.",
-        "adjustments": "The public policies exclude extra commission from subsequent upgrades; downgrades reduce the commission. Agreement eligibility and account terms govern payment."
+        "cookieDays": 30,
+        "payoutSummary": "Account-specific payment schedule and withdrawal minimum were not established from the public overview.",
+        "eligibility": "Approved publisher and qualifying eligible product sale within 30 days.",
+        "adjustments": "Trials, cancellations, invalid orders and fraud do not qualify."
       },
       "caveats": [
-        "Two months is an editable planning delay, not a publicly guaranteed HubSpot payout interval.",
-        "A 12-month term ends a cohort's commission even if that customer continues subscribing.",
-        "Higher affiliate tiers and cost-per-signup arrangements are not assumed."
+        "This is a first-payment commission, not an 85% recurring share.",
+        "Annual-prepaid and other Adobe product purchases have different reward amounts."
       ],
+      "planningAssumptions": {
+        "oneTimeCommission": "$8.49 approximates 85% of a $9.99 first monthly Express Premium payment; the actual qualifying purchase price controls.",
+        "payoutDelayMonths": "2 months is a planning placeholder, not a verified payout promise.",
+        "payoutMinimum": "0 means the public minimum was not verified and is omitted; update from the accepted agreement."
+      },
       "sourceUrls": [
-        "https://www.hubspot.com/partners/affiliates",
-        "https://www.hubspot.com/partners/affiliates/program-policies",
-        "https://legal.hubspot.com/affiliate-program-agreement"
-      ]
+        "https://www.adobe.com/affiliates.html",
+        "https://www.adobe.com/express/pricing"
+      ],
+      "defaultMixEligible": true,
+      "catalogUrl": "/tool/adobe-express/"
     },
     {
-      "id": "mailerlite",
-      "name": "MailerLite",
-      "summary": "MailerLite advertises 30% recurring commission on referred customers' paid subscriptions for as long as they remain active, subject to affiliate eligibility. Its tracking cookie lasts 45 days.",
+      "id": "zapier",
+      "catalogId": "zapier",
+      "name": "Zapier",
+      "category": "automation",
       "checkedAt": "2026-11-01",
+      "status": "terms_unpublished",
+      "modelEligible": false,
       "sellerInsiderHubApproval": "Not verified",
+      "summary": "Zapier publishes ambassador and affiliate terms for invited or approved participants, but commission rates and duration are specified in the partner portal.",
+      "commissionSummary": "Cash offer exists; rate and term private",
+      "programUrl": "https://zapier.com/legal/ambassador-affiliate-terms",
+      "applicationUrl": "https://zapier.com/legal/ambassador-affiliate-terms",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Terms describe monthly calculation and payment within 30 days of month-end unless the dashboard specifies otherwise; validation can extend timing.",
+        "eligibility": "Invited or approved participants with qualifying subscriptions attributed through their custom link.",
+        "adjustments": "Canceled or charged-back subscriptions are excluded; exact rate and duration require the portal."
+      },
+      "caveats": [
+        "No dollar projection until an applicable offer is available. Sponsored creator work and implementation services are separate from ordinary affiliate links."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://zapier.com/legal/ambassador-affiliate-terms",
+        "https://zapier.com/l/partners"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/zapier/"
+    },
+    {
+      "id": "make",
+      "catalogId": "make",
+      "name": "Make",
+      "category": "automation",
+      "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Make advertises 35% on subscription payments for a 12-month eligibility window that starts at registration. Extra operations are excluded.",
+      "commissionSummary": "35% for 12 months from registration",
+      "programUrl": "https://help.make.com/affiliate-program",
+      "applicationUrl": "https://help.make.com/affiliate-program",
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 35,
+        "commissionMonths": 11,
+        "monthlyPrice": 30,
+        "oneTimeCommission": 0,
+        "payoutDelayMonths": 1,
+        "payoutMinimum": 100,
+        "payoutMinimumCustomers": 3
+      },
+      "terms": {
+        "cookieDays": 30,
+        "payoutSummary": "At least $100 and three distinct paying users; payouts via Wise on request. Public FAQ states 2–3 weeks after requesting and warns of current processing delays.",
+        "eligibility": "New users must register through the unique affiliate link; retroactive addition is unavailable.",
+        "adjustments": "Extra operation purchases are not commissionable; free-to-paid delay consumes the registration-based term."
+      },
+      "caveats": [
+        "The help center and main offer repeat 12 months; one FAQ paragraph says 24 months. The model follows the explicit help-center rule and does not assume the longer term.",
+        "No-expiry or full-year-from-first-payment assumptions would overstate eligibility when users remain free first."
+      ],
+      "planningAssumptions": {
+        "monthlyPrice": "$30 average eligible monthly subscription spend is illustrative, not a quoted plan.",
+        "commissionMonths": "11 modeled paid months assumes one month elapses between registration and first payment within the 12-month window.",
+        "payoutDelayMonths": "1 month approximates request processing; actual processing delays may be longer."
+      },
+      "sourceUrls": [
+        "https://help.make.com/affiliate-program",
+        "https://www.make.com/affiliate"
+      ],
+      "defaultMixEligible": true,
+      "catalogUrl": "/tool/make/"
+    },
+    {
+      "id": "pabbly",
+      "catalogId": "pabbly",
+      "name": "Pabbly Connect",
+      "category": "automation",
+      "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Pabbly advertises 30% recurring commissions on eligible paid subscriptions while the referred customer remains active.",
+      "commissionSummary": "30% recurring while eligible",
+      "programUrl": "https://www.pabbly.com/affiliates/",
+      "applicationUrl": "https://www.pabbly.com/affiliates/",
       "model": {
         "commissionType": "recurring",
         "commissionPct": 30,
         "commissionMonths": 0,
+        "monthlyPrice": 30,
+        "oneTimeCommission": 0,
+        "payoutDelayMonths": 3,
+        "payoutMinimum": 0,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 365,
+        "payoutSummary": "Referred accounts must remain active at least 60 days. Monthly report on the 15 th, with payment normally 15–20 days later; PayPal and required invoice rules apply.",
+        "eligibility": "Source verification, correct tracking and approved promotion practices are required.",
+        "adjustments": "Refunds reverse commission. Affiliate discount codes or internal sales coupons can supersede cookie attribution."
+      },
+      "caveats": [
+        "Recurring modeling covers subscription purchases; a lifetime purchase produces no continuing renewal stream.",
+        "The current public payout minimum was not established. Payment processor fees are not included."
+      ],
+      "planningAssumptions": {
+        "monthlyPrice": "$30 eligible monthly subscription spend is a planning assumption.",
+        "payoutDelayMonths": "3 months approximates the survival requirement and review/report cycle.",
+        "payoutMinimum": "0 means an unverified floor is omitted; replace with accepted account terms."
+      },
+      "sourceUrls": [
+        "https://www.pabbly.com/affiliates/",
+        "https://www.pabbly.com/terms-conditions/affiliate-program-terms-conditions/"
+      ],
+      "defaultMixEligible": true,
+      "trafficRestrictions": "No Google Ads, Bing Ads, coupon/discount websites, rebates or prohibited brand campaigns; own opted-in email audiences only.",
+      "catalogUrl": "/tool/pabbly/"
+    },
+    {
+      "id": "mailerlite",
+      "catalogId": "mailerlite",
+      "name": "MailerLite",
+      "category": "email",
+      "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "MailerLite pays 30% recurring commission on eligible paid referrals while they remain subscribed.",
+      "commissionSummary": "30% recurring while eligible",
+      "programUrl": "https://www.mailerlite.com/help/guide-to-affiliate-payouts-and-commissions",
+      "applicationUrl": "https://www.mailerlite.com/help/guide-to-affiliate-payouts-and-commissions",
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 30,
+        "commissionMonths": 0,
+        "monthlyPrice": 30,
+        "oneTimeCommission": 0,
         "payoutDelayMonths": 1,
         "payoutMinimum": 100,
         "payoutMinimumCustomers": 2
       },
       "terms": {
         "cookieDays": 45,
-        "payoutSummary": "Each sale has a 30-day refund hold. Settlement requires at least $100 in open balance from at least two separate referrals. Eligible balances settle on Fridays when payment and billing details are complete.",
-        "eligibility": "Applications are reviewed; a free account signup alone is not a paid referral.",
-        "adjustments": "The model applies an expected reversal haircut to commissions. Actual refunded or ineligible sales do not qualify for normal approved settlement."
+        "payoutSummary": "30-day hold; $100 open balance from at least two separate referrals; eligible settlements run Fridays with complete billing details.",
+        "eligibility": "Application approval and a qualifying paid plan are required.",
+        "adjustments": "Refunds and invalid sales do not become normal approved earnings."
       },
       "caveats": [
-        "One modeled month approximates the 30-day hold; Friday settlement, thresholds, and banking can extend cash timing.",
-        "Zero commission-expiry months means ongoing eligibility in the model, not an unconditional lifetime guarantee.",
-        "Expected fractional referrals approximate a threshold that actual accounts meet through whole qualifying referrals."
+        "Zero expiry means ongoing contractual eligibility, not an unconditional lifetime guarantee."
       ],
+      "planningAssumptions": {
+        "monthlyPrice": "$30 average eligible monthly spend is illustrative.",
+        "payoutDelayMonths": "1 month approximates the 30-day hold; Friday settlement and banking can extend timing."
+      },
       "sourceUrls": [
-        "https://www.mailerlite.com/affiliate",
-        "https://www.mailerlite.com/help/guide-to-affiliate-payouts-and-commissions"
-      ]
+        "https://www.mailerlite.com/help/guide-to-affiliate-payouts-and-commissions",
+        "https://www.mailerlite.com/affiliate"
+      ],
+      "defaultMixEligible": true,
+      "catalogUrl": "/tool/mailerlite/"
     },
     {
-      "id": "kit",
-      "name": "Kit",
-      "summary": "Kit's base offer pays 50% of a referred paying customer's first 12 months of payments. Additional 10–20% commission after that first year requires qualifying for, and retaining, an affiliate status tier.",
+      "id": "flodesk",
+      "catalogId": "flodesk",
+      "name": "Flodesk",
+      "category": "email",
       "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
       "sellerInsiderHubApproval": "Not verified",
+      "summary": "Flodesk pays $15 once a qualifying referral becomes a paid member. A Flodesk account and completed payout eligibility are required.",
+      "commissionSummary": "$15 per qualifying paid referral",
+      "programUrl": "https://help.flodesk.com/en/articles/4474753",
+      "applicationUrl": "https://help.flodesk.com/en/articles/4474753",
+      "model": {
+        "commissionType": "one-time",
+        "oneTimeCommission": 15,
+        "commissionPct": 0,
+        "commissionMonths": 0,
+        "monthlyPrice": 0,
+        "payoutDelayMonths": 1,
+        "payoutMinimum": 0,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Automatic rolling PayPal payouts 30 days after commissions are earned, once eligibility and active PayPal information are complete.",
+        "eligibility": "Affiliate must have a free-trial or paid Flodesk account and valid PayPal details. Eligibility must be completed within 180 days of the first qualifying paid transaction; customer paid conversion within 12 months of signup.",
+        "adjustments": "Written special arrangements override the standard rate; account eligibility governs payment."
+      },
+      "caveats": [
+        "The one-year paid-conversion window is not labeled as a browser-cookie lifetime. No recurring payment is assumed.",
+        "Only organic referrals are eligible under the reviewed terms; paid-ad conversions must not be allocated to this program."
+      ],
+      "planningAssumptions": {
+        "payoutDelayMonths": "1 month approximates 30 days.",
+        "payoutMinimum": "No minimum threshold was stated in the reviewed rolling-payout description; model uses 0."
+      },
+      "sourceUrls": [
+        "https://help.flodesk.com/en/articles/4474753",
+        "https://help.flodesk.com/en/articles/7639297-flodesk-discounts-affiliate-partner-links-or-codes",
+        "https://flodesk.com/legal/terms-of-service"
+      ],
+      "defaultMixEligible": false,
+      "trafficRestrictions": "Organic traffic only. Terms exclude paid promotional efforts, including ad placements and AdWords.",
+      "requiredOperatingCostNote": "A free-trial or paid Flodesk account is required. If maintaining paid membership solely for this program, add its actual subscription fee to operating costs.",
+      "defaultExclusionReason": "An eligible Flodesk account must be maintained. Ongoing paid membership may add an operating cost that is not included in the core site stack.",
+      "catalogUrl": "/tool/flodesk/"
+    },
+    {
+      "id": "notion",
+      "catalogId": "notion",
+      "name": "Notion",
+      "category": "productivity",
+      "checkedAt": "2026-11-01",
+      "status": "application_paused",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Notion advertises up to $50 for activated signups plus 20% of first-year revenue, but its current page says new affiliates are not being accepted.",
+      "commissionSummary": "New applications currently closed",
+      "programUrl": "https://www.notion.com/affiliates",
+      "applicationUrl": "https://www.notion.com/affiliates",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [
+        "Historical/current member terms do not establish Seller Insider Hub eligibility. No income included until program access is confirmed."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://www.notion.com/affiliates"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/notion/"
+    },
+    {
+      "id": "trello",
+      "catalogId": "trello",
+      "name": "Trello",
+      "category": "productivity",
+      "checkedAt": "2026-11-01",
+      "status": "no_public_program_verified",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "No current public cash affiliate commission was verified. Atlassian staff previously said Trello had no affiliate program; historical Trello Gold referral rewards are not a current cash offer.",
+      "commissionSummary": "No current public cash offer verified",
+      "programUrl": "https://community.atlassian.com/forums/discussion/1777537/affiliate-program",
+      "applicationUrl": "https://community.atlassian.com/forums/discussion/1777537/affiliate-program",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [
+        "The staff statement is historical, so this is a verification gap rather than a claim that private partnership arrangements cannot exist."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://community.atlassian.com/forums/discussion/1777537/affiliate-program",
+        "https://trello.com/recommend"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/trello/"
+    },
+    {
+      "id": "airtable",
+      "catalogId": "airtable",
+      "name": "Airtable",
+      "category": "crm",
+      "checkedAt": "2026-11-01",
+      "status": "credit_only",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Airtable offers $10 referral credits for eligible new users. Credits offset qualifying workspace bills and are not modeled as affiliate cash revenue.",
+      "commissionSummary": "$10 account credit; not cash",
+      "programUrl": "https://support.airtable.com/articles/3565391278-airtable-credits-overview",
+      "applicationUrl": "https://support.airtable.com/articles/3565391278-airtable-credits-overview",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [
+        "Free and Team plans can earn credits; Business and Enterprise accounts cannot. Expiry and workspace transfer rules apply."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://support.airtable.com/articles/3565391278-airtable-credits-overview"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/airtable/"
+    },
+    {
+      "id": "erank",
+      "catalogId": "erank",
+      "name": "eRank",
+      "category": "seo",
+      "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "eRank pays 30% monthly recurring commission for up to 12 months. Its higher 50% tier requires 100 referrals and applies to the next 100.",
+      "commissionSummary": "30% recurring for 12 months",
+      "programUrl": "https://erank.com/affiliate",
+      "applicationUrl": "https://erank.com/affiliate",
       "model": {
         "commissionType": "recurring",
-        "commissionPct": 50,
+        "commissionPct": 30,
         "commissionMonths": 12,
+        "monthlyPrice": 10,
+        "oneTimeCommission": 0,
+        "payoutDelayMonths": 1,
+        "payoutMinimum": 50,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 60,
+        "payoutSummary": "Monthly payouts after the balance reaches $50; lower balances roll forward.",
+        "eligibility": "Application required; last-click attribution. Both monthly and annual paid subscriptions qualify.",
+        "adjustments": "Annual subscriptions pay the year commission upfront, not as monthly renewals."
+      },
+      "caveats": [
+        "The model uses base 30% and monthly-billed subscriptions; earned higher tiers and annual upfront cash are excluded."
+      ],
+      "planningAssumptions": {
+        "monthlyPrice": "$10 eligible monthly customer spend is illustrative.",
+        "payoutDelayMonths": "1 month is an approximation of monthly settlement; exact locking date not verified."
+      },
+      "sourceUrls": [
+        "https://erank.com/affiliate",
+        "https://help.erank.com/faq/does-erank-have-an-affiliate-program/"
+      ],
+      "defaultMixEligible": true,
+      "catalogUrl": "/tool/erank/"
+    },
+    {
+      "id": "marmalead",
+      "catalogId": "marmalead",
+      "name": "Marmalead",
+      "category": "seo",
+      "checkedAt": "2026-11-01",
+      "status": "credit_only",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "The official referral explanation offers subscription discounts: two referrals earn 50% off and four earn free Marmalead. No current public cash commission was verified.",
+      "commissionSummary": "Subscription discount; no verified cash offer",
+      "programUrl": "https://blog.marmalead.com/heres-how-you-can-get-free-marmalead/",
+      "applicationUrl": "https://blog.marmalead.com/heres-how-you-can-get-free-marmalead/",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [
+        "The detailed public explanation is historical; verify current account eligibility before relying on a discount. No cash forecast is assigned."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://blog.marmalead.com/heres-how-you-can-get-free-marmalead/",
+        "https://marmalead.com/refer"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/marmalead/"
+    },
+    {
+      "id": "hubspot",
+      "catalogId": "hubspot",
+      "name": "HubSpot",
+      "category": "crm",
+      "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "HubSpot Starter affiliates receive 30% recurring commission for up to one year. Higher tiers and custom arrangements are separate.",
+      "commissionSummary": "30% recurring for 12 months",
+      "programUrl": "https://www.hubspot.com/partners/affiliates",
+      "applicationUrl": "https://www.hubspot.com/partners/affiliates",
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 30,
+        "commissionMonths": 12,
+        "monthlyPrice": 100,
+        "oneTimeCommission": 0,
+        "payoutDelayMonths": 2,
+        "payoutMinimum": 10,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 180,
+        "payoutSummary": "Impact payments with a $10 withdrawal minimum; the account offer specifies the lock period.",
+        "eligibility": "Qualifying new customers active through the lock; existing opportunities, self-referrals and serviced clients may be excluded.",
+        "adjustments": "Downgrades reduce earnings; later upgrades do not automatically earn added commission."
+      },
+      "caveats": [
+        "Twelve-month eligibility expires even if the referred customer keeps subscribing."
+      ],
+      "planningAssumptions": {
+        "monthlyPrice": "$100 average eligible monthly subscription spend is illustrative.",
+        "payoutDelayMonths": "2 months is a planning delay; public policies do not guarantee this interval."
+      },
+      "sourceUrls": [
+        "https://www.hubspot.com/partners/affiliates",
+        "https://www.hubspot.com/partners/affiliates/program-policies",
+        "https://legal.hubspot.com/affiliate-program-agreement"
+      ],
+      "defaultMixEligible": true,
+      "catalogUrl": "/tool/hubspot/"
+    },
+    {
+      "id": "pipedrive",
+      "catalogId": "pipedrive",
+      "name": "Pipedrive",
+      "category": "crm",
+      "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "The base Rising Affiliate tier pays 20% of eligible first-year customer revenue, including add-ons. Growth tier 30% requires 2–5 sales monthly for six consecutive months.",
+      "commissionSummary": "20% recurring for 12 months",
+      "programUrl": "https://www.pipedrive.com/en/affiliate-partnership",
+      "applicationUrl": "https://www.pipedrive.com/en/affiliate-partnership",
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 20,
+        "commissionMonths": 12,
+        "monthlyPrice": 75,
+        "oneTimeCommission": 0,
         "payoutDelayMonths": 2,
         "payoutMinimum": 5,
         "payoutMinimumCustomers": 0
       },
       "terms": {
-        "cookieDays": null,
-        "payoutSummary": "Kit's getting-started guide describes a 31-day refund period, subsequent monthly review, and withdrawal availability around the 13th through PartnerStack. A $5 minimum applies.",
-        "eligibility": "Base first-year commissions apply to paying referrals. The ongoing Bronze, Silver, and Gold rates are conditional. Paid-promotion referrals do not count toward status qualification.",
-        "adjustments": "Refund review precedes payout. A customer continuing after month 12 does not automatically extend the base 50% commission."
+        "cookieDays": 90,
+        "payoutSummary": "Transactions lock on the 7 th two months after their transaction month and pay on the 13 th; PartnerStack withdrawal after earning over $5.",
+        "eligibility": "Application and accepted terms; professional B 2 B publishing presence.",
+        "adjustments": "Higher tiers and custom Power Affiliate rates are not assumed."
       },
       "caveats": [
-        "The model uses only the base offer; conditional post-year-one status commissions are excluded.",
-        "The getting-started guide's example has a July 4 transaction available around September 13 after the hold and review. The FAQ describes review of commissions earned in the previous month without fully repeating that hold. Two months is a planning approximation, not a bank-date guarantee.",
-        "No numeric cookie window was established from the current official pages reviewed."
+        "The model uses the base rate; sales-driven tier upgrades can improve rates if actually earned."
       ],
+      "planningAssumptions": {
+        "monthlyPrice": "$75 average eligible account spend is illustrative and can include multiple seats.",
+        "payoutDelayMonths": "2 months approximates the published monthly schedule.",
+        "payoutMinimum": "Engine threshold $5 approximates the public requirement to earn over $5."
+      },
       "sourceUrls": [
-        "https://kit.com/affiliate",
-        "https://help.kit.com/en/articles/2502522-getting-started-as-a-kit-affiliate",
-        "https://help.kit.com/en/articles/2502473-kit-affiliate-commissions-faq"
-      ]
+        "https://www.pipedrive.com/en/affiliate-partnership",
+        "https://www.pipedrive.com/en/affiliate-program-terms"
+      ],
+      "defaultMixEligible": true,
+      "catalogUrl": "/tool/pipedrive/"
     },
     {
-      "id": "semrush-seo",
-      "name": "Semrush SEO Toolkit",
-      "summary": "The published base table lists a $200 commission for a new SEO Toolkit sale. This is a one-time referral payment, not recurring subscription revenue.",
+      "id": "semrush",
+      "catalogId": "semrush",
+      "name": "Semrush",
+      "category": "seo",
       "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
       "sellerInsiderHubApproval": "Not verified",
+      "summary": "Semrush offers product-specific one-time sale commissions. The modeled SEO Toolkit base reward is $200; Semrush One base is $300.",
+      "commissionSummary": "$200 SEO Toolkit sale; one-time",
+      "programUrl": "https://www.semrush.com/lp/affiliate-program/en/",
+      "applicationUrl": "https://www.semrush.com/lp/affiliate-program/en/",
       "model": {
         "commissionType": "one-time",
         "oneTimeCommission": 200,
         "commissionPct": 0,
         "commissionMonths": 0,
+        "monthlyPrice": 0,
         "payoutDelayMonths": 2,
         "payoutMinimum": 10,
         "payoutMinimumCustomers": 0
       },
       "terms": {
         "cookieDays": 120,
-        "payoutSummary": "Semrush states that transactions lock 27 days after the transaction month's end and are paid 21 days after the end of the lock month. Impact withdrawals require at least $10 and completed payment requirements.",
-        "eligibility": "Last-click attribution and a new qualifying account are required. Existing accounts and missing tracking consent can prevent attribution. Applications are reviewed; the public content-publisher criterion includes 1,000 monthly unique visitors.",
-        "adjustments": "Invalid or unattributed actions do not generate normal commissions. Trial and higher-tier rewards are not included."
+        "payoutSummary": "Transactions lock 27 days after transaction-month end; payment 21 days after lock-month end; Impact withdrawal rules apply.",
+        "eligibility": "Application review; publisher website criterion includes 1,000 monthly unique visitors. Qualifying new accounts under last-click attribution.",
+        "adjustments": "Existing accounts, missing tracking consent and invalid actions may not qualify."
       },
       "caveats": [
-        "Two modeled months approximate transaction locking and payment; withdrawal settings and banking can add time.",
-        "The separate $10 qualifying-trial reward is excluded to avoid double-counting a paid conversion. Semrush One and other toolkits have different base payments.",
-        "An advertised maximum such as $450 is not the SEO Toolkit base commission used here."
+        "Trial rewards and loyalty bonuses are excluded to avoid assuming unearned tiers or double-counting.",
+        "Different Semrush products are choices within one vendor relationship, not 47 extra copies of the same website audience."
       ],
+      "planningAssumptions": {
+        "payoutDelayMonths": "2 months approximates the lock/payment calendar."
+      },
       "sourceUrls": [
         "https://www.semrush.com/lp/affiliate-program/en/",
         "https://help.impact.com/partner/what-would-you-like-to-learn-about/platform-features/finance/payments-withdrawals-and-balance/how-do-partners-get-paid"
-      ]
+      ],
+      "offerVariants": [
+        {
+          "name": "Semrush One",
+          "oneTimeCommission": 300
+        },
+        {
+          "name": "SEO Toolkit",
+          "oneTimeCommission": 200
+        },
+        {
+          "name": "AI Visibility Toolkit",
+          "oneTimeCommission": 100
+        },
+        {
+          "name": "Content Toolkit",
+          "oneTimeCommission": 100
+        },
+        {
+          "name": "Social Toolkit",
+          "oneTimeCommission": 50
+        },
+        {
+          "name": "Local Toolkit",
+          "oneTimeCommission": 50
+        },
+        {
+          "name": "Traffic & Market Toolkit",
+          "oneTimeCommission": 200
+        },
+        {
+          "name": "Advertising Toolkit",
+          "oneTimeCommission": 100
+        }
+      ],
+      "defaultMixEligible": true,
+      "catalogUrl": "/tool/semrush/"
+    },
+    {
+      "id": "ubersuggest",
+      "catalogId": "ubersuggest",
+      "name": "Ubersuggest",
+      "category": "seo",
+      "checkedAt": "2026-11-01",
+      "status": "application_paused",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Ubersuggest’s current official support page states its affiliate program is not active.",
+      "commissionSummary": "Program currently inactive",
+      "programUrl": "https://help.ubersuggest.com/hc/en-us/articles/4616221472795-Ubersuggest-Affiliate-Program",
+      "applicationUrl": "https://help.ubersuggest.com/hc/en-us/articles/4616221472795-Ubersuggest-Affiliate-Program",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [
+        "No historical commission rate is used in forecasts."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://help.ubersuggest.com/hc/en-us/articles/4616221472795-Ubersuggest-Affiliate-Program"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/ubersuggest/"
+    },
+    {
+      "id": "calendly",
+      "catalogId": "calendly",
+      "name": "Calendly",
+      "category": "scheduling",
+      "checkedAt": "2026-11-01",
+      "status": "no_public_program_verified",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Calendly’s partner inquiry page explicitly states it currently has no affiliate, referral or reseller program.",
+      "commissionSummary": "No current affiliate program",
+      "programUrl": "https://calendly.com/partners/contact",
+      "applicationUrl": "https://calendly.com/partners/contact",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://calendly.com/partners/contact",
+        "https://calendly.com/partners"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/calendly/"
+    },
+    {
+      "id": "acuity",
+      "catalogId": "acuity",
+      "name": "Acuity Scheduling",
+      "category": "scheduling",
+      "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Acuity subscriptions can qualify through the Squarespace affiliate program. Official help lists $45 for a new paid Acuity subscription within 45 days.",
+      "commissionSummary": "$45 per new paid subscription",
+      "programUrl": "https://support.squarespace.com/hc/en-us/articles/4424080134413-Squarespace-Affiliate-Program-vs-Squarespace-Circle-referral-payments",
+      "applicationUrl": "https://support.squarespace.com/hc/en-us/articles/4424080134413-Squarespace-Affiliate-Program-vs-Squarespace-Circle-referral-payments",
+      "model": {
+        "commissionType": "one-time",
+        "oneTimeCommission": 45,
+        "commissionPct": 0,
+        "commissionMonths": 0,
+        "monthlyPrice": 0,
+        "payoutDelayMonths": 2,
+        "payoutMinimum": 0,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 45,
+        "payoutSummary": "Current publisher-account payout schedule and minimum were not established from the public help article.",
+        "eligibility": "Squarespace affiliate approval and live Acuity content evidence; new paid subscription within 45 days.",
+        "adjustments": "Circle implementation/referral payments are a separate program; a Circle partner may take precedence for qualifying client setups."
+      },
+      "caveats": [
+        "This model uses publisher affiliate links, not Circle implementation commissions or older $30 program listings."
+      ],
+      "planningAssumptions": {
+        "payoutDelayMonths": "2 months is a placeholder until the accepted affiliate schedule is available.",
+        "payoutMinimum": "0 means an unverified withdrawal floor is omitted; update from account terms."
+      },
+      "sourceUrls": [
+        "https://support.squarespace.com/hc/en-us/articles/4424080134413-Squarespace-Affiliate-Program-vs-Squarespace-Circle-referral-payments",
+        "https://www.squarespace.com/affiliates"
+      ],
+      "defaultMixEligible": true,
+      "catalogUrl": "/tool/acuity/"
+    },
+    {
+      "id": "tidio",
+      "catalogId": "tidio",
+      "name": "Tidio",
+      "category": "customer-service",
+      "checkedAt": "2026-11-01",
+      "status": "verified_cash",
+      "modelEligible": true,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Tidio’s current PartnerStack program listing specifies 20% base recurring commission for two years, with higher tiers up to 25%.",
+      "commissionSummary": "20% recurring for 24 months",
+      "programUrl": "https://market.partnerstack.com/shopify-integrated-apps/tidiollc",
+      "applicationUrl": "https://market.partnerstack.com/shopify-integrated-apps/tidiollc",
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 20,
+        "commissionMonths": 24,
+        "monthlyPrice": 50,
+        "oneTimeCommission": 0,
+        "payoutDelayMonths": 2,
+        "payoutMinimum": 5,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "PartnerStack handles commission payments; the applicable offer governs timing and payment terms.",
+        "eligibility": "Application, onboarding and approved qualified actions; existing/recent customers and duplicate leads may be excluded.",
+        "adjustments": "Refunds, chargebacks and disqualified actions can reverse earnings."
+      },
+      "caveats": [
+        "Current live pages say up to 25%; stale search extracts saying 30% were not used.",
+        "The conditional first-sale $50 bonus and higher tiers are excluded."
+      ],
+      "planningAssumptions": {
+        "monthlyPrice": "$50 average eligible monthly spend is illustrative.",
+        "payoutDelayMonths": "2 months is a placeholder; confirm the approved offer.",
+        "payoutMinimum": "$5 is an editable planning threshold, not a verified Tidio-specific minimum."
+      },
+      "sourceUrls": [
+        "https://market.partnerstack.com/shopify-integrated-apps/tidiollc",
+        "https://www.tidio.com/partners/affiliate/",
+        "https://www.tidio.com/partners/affiliate/terms-and-conditions/"
+      ],
+      "defaultMixEligible": true,
+      "trafficRestrictions": "No trademark keyword bidding or automated comment promotion; email campaigns have specific approval requirements.",
+      "catalogUrl": "/tool/tidio/"
+    },
+    {
+      "id": "intercom",
+      "catalogId": "intercom",
+      "name": "Intercom",
+      "category": "customer-service",
+      "checkedAt": "2026-11-01",
+      "status": "credit_only",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Intercom’s customer referral program offers $250 account credit per qualifying referral, capped at $1,250 unless separately approved. Credits are not redeemable for cash.",
+      "commissionSummary": "$250 account credit; not cash",
+      "programUrl": "https://www.intercom.com/legal/terms-and-policies/referral-program",
+      "applicationUrl": "https://www.intercom.com/legal/terms-and-policies/referral-program",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Account credit after qualifying conditions; no cash payout.",
+        "eligibility": "Existing paid customer and new paid referral retained for two consecutive months.",
+        "adjustments": "Commercial-site publication and other distribution restrictions apply."
+      },
+      "caveats": [
+        "This customer credit program is not a publisher revenue channel. Any separate negotiated partner arrangement needs its own written terms."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://www.intercom.com/legal/terms-and-policies/referral-program"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/intercom/"
+    },
+    {
+      "id": "birdeye",
+      "catalogId": "birdeye",
+      "name": "Birdeye",
+      "category": "reviews",
+      "checkedAt": "2026-11-01",
+      "status": "terms_unpublished",
+      "modelEligible": false,
+      "sellerInsiderHubApproval": "Not verified",
+      "summary": "Birdeye offers strategic alliances including affiliate/referral relationships, but publishes no universal cash commission. Its separate refer-a-business campaign offers $250 Amazon gift cards.",
+      "commissionSummary": "Private partnership terms; gift cards separate",
+      "programUrl": "https://birdeye.com/partners/",
+      "applicationUrl": "https://birdeye.com/partners/",
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current cash payout terms verified.",
+        "eligibility": "No approved Seller Insider Hub participation is represented.",
+        "adjustments": "Not included in cash forecasts."
+      },
+      "caveats": [
+        "No bank-cash projection for a gift card or unpublished strategic-alliance rate.",
+        "Birdeye Data at birdeye.so is a different company and its rates do not apply."
+      ],
+      "planningAssumptions": {},
+      "sourceUrls": [
+        "https://birdeye.com/partners/",
+        "https://birdeye.com/partners/strategic-alliances/",
+        "https://birdeye.com/refer-a-business/"
+      ],
+      "defaultMixEligible": false,
+      "catalogUrl": "/tool/birdeye/"
+    },
+    {
+      "id": "nicejob",
+      "catalogId": "nicejob",
+      "name": "NiceJob",
+      "status": "terms_unpublished",
+      "commissionLabel": "Published offers require clarification",
+      "summary": "A publisher affiliate program exists. Its main partner page advertises up to 25%; the provider-managed PartnerStack listing shows 15% starting commission, while its help article describes a $150 reward after 90 days. The applicable offer and recurrence need confirmation before a revenue scenario.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://get.nicejob.com/partners",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": 90,
+        "payoutSummary": "PartnerStack listing says available by the following month’s 7th; the main partner page says monthly with no minimum.",
+        "eligibility": "Application-based publisher affiliate offer; separate referral and reseller options exist.",
+        "adjustments": "Do not combine the percentage and $150 offers."
+      },
+      "caveats": [
+        "Public offer descriptions conflict. A negotiated or dashboard-confirmed schedule is needed."
+      ],
+      "sourceUrls": [
+        "https://get.nicejob.com/partners",
+        "https://market.partnerstack.com/program/nicejob",
+        "https://help.nicejob.com/en/articles/3124113-referral-and-partner-sales-program"
+      ],
+      "category": "reviews",
+      "catalogUrl": "/tool/nicejob/",
+      "commissionSummary": "Published offers require clarification"
+    },
+    {
+      "id": "buffer",
+      "catalogId": "buffer",
+      "name": "Buffer",
+      "status": "verified_cash",
+      "commissionLabel": "25% for 12 months",
+      "summary": "Earn 25% of qualifying net subscription fees for each new customer’s first 12 months. Paid advertising is prohibited by the reviewed partner terms.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://buffer.com/partners",
+      "modelEligible": true,
+      "defaultMixEligible": true,
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 25,
+        "commissionMonths": 12,
+        "monthlyPrice": 24,
+        "payoutDelayMonths": 2,
+        "payoutMinimum": 0,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Dub / Stripe Express; monthly accrual, payment within 30 days after month-end, with an initial 30-day month-end hold. Public numeric minimum not established.",
+        "eligibility": "Approved application, new qualifying customer; no self-referrals or automated/incentivized traffic.",
+        "adjustments": "Refunded, cancelled or ineligible fees may be reversed."
+      },
+      "caveats": [
+        "A zero model payout floor is a placeholder where a public numeric threshold was not established; replace with account terms.",
+        "The legal terms prohibit paid search, display and social ads, broader than the marketing FAQ wording."
+      ],
+      "sourceUrls": [
+        "https://buffer.com/partners",
+        "https://buffer.com/legal/terms-of-use/year/2025",
+        "https://support.buffer.com/en-us/articles/buffers-partner-program-2gCns2NGPB"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "paidTrafficAllowed": false,
+      "category": "social-media",
+      "catalogUrl": "/tool/buffer/",
+      "commissionSummary": "25% for 12 months"
+    },
+    {
+      "id": "metricool",
+      "catalogId": "metricool",
+      "name": "Metricool",
+      "status": "verified_cash",
+      "commissionLabel": "25%, capped at $100 per customer",
+      "summary": "Base Associate tier earns 25% of referred customer spending up to $100 total commission per customer. Conditional Partner tier pays 50% up to $300 after 200 conversions and ongoing performance requirements.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://help.metricool.com/metricool-affiliate-program-hzemr",
+      "modelEligible": true,
+      "defaultMixEligible": true,
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 25,
+        "commissionMonths": 0,
+        "monthlyPrice": 30,
+        "payoutDelayMonths": 1,
+        "payoutMinimum": 200,
+        "payoutMinimumCustomers": 0,
+        "commissionCapPerCustomer": 100
+      },
+      "terms": {
+        "cookieDays": null,
+        "cookieDescription": "Provider says affiliate cookies do not expire.",
+        "payoutSummary": "Monthly through Zexel; minimum $200 earned balance.",
+        "eligibility": "New users must register through the link and purchase a paid plan.",
+        "adjustments": "Commission is capped per customer, not an unlimited subscription annuity."
+      },
+      "caveats": [
+        "A simulator must enforce the $100 per-customer cap; zero term months here is governed by that dollar cap.",
+        "Tier 2 is not the base rate and requires continued performance."
+      ],
+      "sourceUrls": [
+        "https://help.metricool.com/metricool-affiliate-program-hzemr",
+        "https://metricool.com/legal-terms/"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "requiredModelFeatures": [
+        "commissionCapPerCustomer"
+      ],
+      "category": "social-media",
+      "catalogUrl": "/tool/metricool/",
+      "commissionSummary": "25%, capped at $100 per customer"
+    },
+    {
+      "id": "smith-ai",
+      "catalogId": "smith-ai",
+      "name": "Smith.ai",
+      "status": "terms_unpublished",
+      "commissionLabel": "Customer referrals: $200 / $1,000; publisher terms unconfirmed",
+      "summary": "Smith.ai offers publisher partnerships, but its referral-affiliate page describes recurring discounts. A separate customer referral help article lists $200 for a Voice Assistant customer or $1,000 for a Virtual Receptionist customer. These are distinct product and eligibility terms, not a verified publisher cash schedule.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://smith.ai/partners",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Customer referral help says payment in the third month after first payment while the customer remains active. Publisher payout terms not established.",
+        "eligibility": "The cited cash referral route requires an existing Smith.ai plan and product-specific qualification.",
+        "adjustments": "Do not substitute the Virtual Receptionist bounty for every AI-receptionist signup."
+      },
+      "caveats": [
+        "A publisher agreement is required before modeling cash from ordinary website referrals."
+      ],
+      "sourceUrls": [
+        "https://smith.ai/partners",
+        "https://smith.ai/partners/referral-affiliate-program",
+        "https://docs.smith.ai/article/sputxicbdv-what-is-the-smith-ai-referral-program"
+      ],
+      "category": "phone-systems",
+      "catalogUrl": "/tool/smith-ai/",
+      "commissionSummary": "Customer referrals: $200 / $1,000; publisher terms unconfirmed"
+    },
+    {
+      "id": "dialpad",
+      "catalogId": "dialpad",
+      "name": "Dialpad",
+      "status": "credit_only",
+      "commissionLabel": "Gift cards; not recurring cash commission",
+      "summary": "The customer referral offer awards a $100 gift card after an eligible demo and $500–$5,000 in gift cards for a qualifying deal. A separate channel partnership exists, with negotiated terms.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.dialpad.com/customer-referral/",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Gift-card choices are delivered through Tango.",
+        "eligibility": "Customers or partners aged 18+ referring known contacts; a sale requires a 12-month contract and at least 11 seats.",
+        "adjustments": "Gift cards are excluded from cash commission projections."
+      },
+      "caveats": [
+        "Not an unrestricted subscription affiliate program; channel-partner cash economics are not publicly established."
+      ],
+      "sourceUrls": [
+        "https://www.dialpad.com/customer-referral/",
+        "https://www.dialpad.com/partners/"
+      ],
+      "category": "phone-systems",
+      "catalogUrl": "/tool/dialpad/",
+      "commissionSummary": "Gift cards; not recurring cash commission"
+    },
+    {
+      "id": "ifttt",
+      "catalogId": "ifttt",
+      "name": "IFTTT",
+      "status": "no_public_program_verified",
+      "commissionLabel": "Public cash terms not verified",
+      "summary": "The reviewed official product and partner documentation did not establish a current public publisher commission schedule. A reported account-only referral route could not be verified from public documentation.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://ifttt.com/",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Not established.",
+        "eligibility": "No current public cash terms verified.",
+        "adjustments": "Excluded from revenue calculations until terms and access are verified."
+      },
+      "caveats": [
+        "This is an evidence gap, not a claim that no private program exists."
+      ],
+      "sourceUrls": [
+        "https://ifttt.com/plans",
+        "https://ifttt.com/docs"
+      ],
+      "category": "automation",
+      "catalogUrl": "/tool/ifttt/",
+      "commissionSummary": "Public cash terms not verified"
+    },
+    {
+      "id": "n8n",
+      "catalogId": "n8n",
+      "name": "n8n Cloud",
+      "status": "verified_cash",
+      "commissionLabel": "30% for 12 months",
+      "summary": "The n8n Cloud affiliate offer pays 30% of eligible net subscription revenue for 12 months. Starter and Pro cloud plans qualify; free self-hosting and enterprise contracts are not assumed.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://n8n.io/affiliates/",
+      "modelEligible": true,
+      "defaultMixEligible": false,
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 30,
+        "commissionMonths": 12,
+        "monthlyPrice": 50,
+        "payoutDelayMonths": 1,
+        "payoutMinimum": 110,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Monthly PayPal payouts after at least EUR 100; currency conversion is set by PayPal.",
+        "eligibility": "Application approval; Cloud Starter and Pro. All paid affiliate advertising is prohibited.",
+        "adjustments": "Taxes reduce the net commission base; the customer-spend input should reflect eligible net revenue.",
+        "payoutMinimumNative": 100,
+        "payoutCurrency": "EUR"
+      },
+      "caveats": [
+        "USD model threshold of $110 uses an explicit planning FX assumption of $1.10 per EUR, not a live exchange quote; replace with expected settlement FX.",
+        "No commission is modeled for community self-hosting or enterprise."
+      ],
+      "sourceUrls": [
+        "https://n8n.io/affiliates/",
+        "https://n8n.io/partners/"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "paidTrafficAllowed": false,
+      "planningFxUsdPerNative": 1.1,
+      "category": "automation",
+      "catalogUrl": "/tool/n8n/",
+      "commissionSummary": "30% for 12 months"
+    },
+    {
+      "id": "kit",
+      "catalogId": "kit",
+      "name": "Kit",
+      "status": "verified_cash",
+      "commissionLabel": "50% for 12 months",
+      "summary": "Base commission is 50% of a referred customer’s first 12 months of payments. Additional 10–20% after year one requires maintaining Bronze, Silver or Gold status.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://kit.com/affiliate",
+      "modelEligible": true,
+      "defaultMixEligible": true,
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 50,
+        "commissionMonths": 12,
+        "monthlyPrice": 50,
+        "payoutDelayMonths": 2,
+        "payoutMinimum": 5,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "PartnerStack; $5 minimum, refund hold and monthly review before withdrawal.",
+        "eligibility": "Approved paid referrals. Tier qualification excludes paid-ad referrals.",
+        "adjustments": "Post-year-one commissions excluded from base model."
+      },
+      "caveats": [
+        "The 31-day hold and subsequent review can extend payout into a later month; two modeled months approximate timing."
+      ],
+      "sourceUrls": [
+        "https://kit.com/affiliate",
+        "https://help.kit.com/en/articles/2502522-getting-started-as-a-kit-affiliate",
+        "https://help.kit.com/en/articles/2502473-kit-affiliate-commissions-faq"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "category": "email",
+      "catalogUrl": "/tool/kit/",
+      "commissionSummary": "50% for 12 months"
+    },
+    {
+      "id": "beehiiv",
+      "catalogId": "beehiiv",
+      "name": "beehiiv",
+      "status": "verified_cash",
+      "commissionLabel": "50% for 12 months; higher tiers conditional",
+      "summary": "The starting earning tier pays 50% for a year. Higher Silver and Gold tiers can reach 55% and 60%; no automatic maximum tier is assumed.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.beehiiv.com/partners",
+      "modelEligible": true,
+      "defaultMixEligible": true,
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 50,
+        "commissionMonths": 12,
+        "monthlyPrice": 100,
+        "payoutDelayMonths": 1,
+        "payoutMinimum": 0,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 60,
+        "payoutSummary": "Current main partner page says the 15th for the preceding month through Dub. Public numeric minimum not established.",
+        "eligibility": "New paying referrals, application/account approval and tracking.",
+        "adjustments": "Referred users receive a 20% initial three-month discount; model average spend should reflect eligible revenue."
+      },
+      "caveats": [
+        "The zero payout floor is an editable placeholder, not a verified absence of a minimum.",
+        "The main program page now specifies Dub; older help and affiliate pages still describe PayPal.",
+        "Tier maximums and merchandise bonuses are not included."
+      ],
+      "sourceUrls": [
+        "https://www.beehiiv.com/partners",
+        "https://www.beehiiv.com/support/article/23352219299095-getting-started-with-the-beehiiv-partner-program"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "category": "email",
+      "catalogUrl": "/tool/beehiiv/",
+      "commissionSummary": "50% for 12 months; higher tiers conditional"
+    },
+    {
+      "id": "activecampaign",
+      "catalogId": "activecampaign",
+      "name": "ActiveCampaign",
+      "status": "verified_cash",
+      "commissionLabel": "30% for 12 months",
+      "summary": "Public terms pay 30% of eligible monthly recurring revenue for a referred account’s first 12 months, including monthly allocation when customers pay annually.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.activecampaign.com/partners/affiliate",
+      "modelEligible": true,
+      "defaultMixEligible": false,
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 30,
+        "commissionMonths": 12,
+        "monthlyPrice": 100,
+        "payoutDelayMonths": 3,
+        "payoutMinimum": 5,
+        "payoutMinimumCustomers": 2
+      },
+      "terms": {
+        "cookieDays": 90,
+        "payoutSummary": "60-day paid-retention requirement; approved commissions within 30 days after month-end. PartnerStack minimum applies.",
+        "eligibility": "At least two referrals within prior 12 months, including one in prior six months; help also references two active accounts.",
+        "adjustments": "Refunded or credit-paid subscriptions do not qualify."
+      },
+      "caveats": [
+        "The model assumes ongoing affiliate eligibility; its cumulative two-referral gate does not enforce rolling 12-/6-month or active-account conditions.",
+        "The $5 payout floor is a planning placeholder until the applicable PartnerStack minimum is confirmed."
+      ],
+      "sourceUrls": [
+        "https://www.activecampaign.com/partners/affiliate",
+        "https://www.activecampaign.com/legal/affiliate-partner-terms",
+        "https://help.activecampaign.com/hc/en-us/articles/115000065864-Affiliate-program"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "conditionAssumed": "Rolling referral and active-account eligibility are assumed maintained, not simulated.",
+      "category": "email",
+      "catalogUrl": "/tool/activecampaign/",
+      "commissionSummary": "30% for 12 months",
+      "defaultExclusionReason": "Opt in when ongoing referral-activity eligibility can be maintained. That rolling condition is not enforced by the scenario engine."
+    },
+    {
+      "id": "podium",
+      "catalogId": "podium",
+      "name": "Podium",
+      "status": "terms_unpublished",
+      "commissionLabel": "Contract-specific referral payments",
+      "summary": "Podium’s current partner agreement defers rates to a signed partner agreement or referral bonus sheet. It expressly excludes Podium AI and Phones incentives unless agreed in writing.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.podium.com/",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "The agreement describes payment within 45 days after the month of accrual, subject to the applicable partner contract.",
+        "eligibility": "Qualified referral and signed program-specific terms; no universal publisher rate established.",
+        "adjustments": "AI and Phones are not automatically commissionable."
+      },
+      "caveats": [
+        "The separate podcast product at podium.page is not the Podium business in this catalog. Its advertised 30% offer must not be used here."
+      ],
+      "sourceUrls": [
+        "https://partner-terms.podium.com/",
+        "https://www.podium.com/"
+      ],
+      "category": "reviews",
+      "catalogUrl": "/tool/podium/",
+      "commissionSummary": "Contract-specific referral payments"
+    },
+    {
+      "id": "gatherup",
+      "catalogId": "gatherup",
+      "name": "GatherUp",
+      "status": "no_public_program_verified",
+      "commissionLabel": "Reseller opportunity; cash affiliate terms unverified",
+      "summary": "Official documentation describes white-label agency/reseller access. It does not establish a current public publisher cash affiliate schedule.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://gatherup.com/",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No publisher commission schedule verified.",
+        "eligibility": "Agency/reseller arrangements are separate from link referrals.",
+        "adjustments": "Reseller revenue entails serving and billing customers and is not modeled as passive commission."
+      },
+      "caveats": [
+        "Private negotiated arrangements may exist; none is assumed."
+      ],
+      "sourceUrls": [
+        "https://gatherup.com/faq/",
+        "https://gatherup.com/solutions/integrations/"
+      ],
+      "category": "reviews",
+      "catalogUrl": "/tool/gatherup/",
+      "commissionSummary": "Reseller opportunity; cash affiliate terms unverified"
+    },
+    {
+      "id": "gradeus",
+      "catalogId": "gradeus",
+      "name": "Grade.us",
+      "status": "no_public_program_verified",
+      "commissionLabel": "Historical affiliate program terminated",
+      "summary": "The official terms history records removal of affiliate terms because the program had been terminated. Current agency and white-label offerings do not establish a new publisher affiliate commission schedule.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.grade.us/",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "No current publisher payout schedule verified.",
+        "eligibility": "Agency and reseller plans are not affiliate-link commissions.",
+        "adjustments": "Excluded from commission calculations."
+      },
+      "caveats": [
+        "The termination appears in the official historical change log; no current replacement publisher offer was verified."
+      ],
+      "sourceUrls": [
+        "https://www.grade.us/home/tos/",
+        "https://www.grade.us/static/terms-of-service.html"
+      ],
+      "category": "reviews",
+      "catalogUrl": "/tool/gradeus/",
+      "commissionSummary": "Historical affiliate program terminated"
+    },
+    {
+      "id": "zoho-crm",
+      "catalogId": "zoho-crm",
+      "name": "Zoho CRM",
+      "status": "verified_cash",
+      "commissionLabel": "15% for 12 months; 18–20% tier potential",
+      "summary": "Zoho’s Standard tier pays 15% on qualified purchases for one year. Super and Elite tiers offer 18% and 20%, reviewed semiannually; the base model uses 15%.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.zoho.com/affiliate/",
+      "modelEligible": true,
+      "defaultMixEligible": true,
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 15,
+        "commissionMonths": 12,
+        "monthlyPrice": 100,
+        "payoutDelayMonths": 3,
+        "payoutMinimum": 100,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 90,
+        "payoutSummary": "Commission accrues after 60 days. Minimum $100 in each billing region before requesting payment.",
+        "eligibility": "Zoho must designate eligible services; customer signs up within 90 days of click and initially pays within 90 days of signup.",
+        "adjustments": "Existing paid Zoho customers and disallowed overlapping partner roles are ineligible."
+      },
+      "caveats": [
+        "The model treats all referrals as one billing region; splitting regions can delay payouts.",
+        "Average spend represents eligible commissionable value. Higher tiers, upgrades and deal bonuses are excluded."
+      ],
+      "sourceUrls": [
+        "https://www.zoho.com/affiliate/",
+        "https://www.zoho.com/affiliate/program-agreement.html"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "category": "crm",
+      "catalogUrl": "/tool/zoho-crm/",
+      "commissionSummary": "15% for 12 months; 18–20% tier potential"
+    },
+    {
+      "id": "monday-crm",
+      "catalogId": "monday-crm",
+      "name": "monday CRM",
+      "status": "terms_unpublished",
+      "commissionLabel": "Up to 100% of first-year sales; base unpublished",
+      "summary": "monday.com advertises a tiered affiliate offer up to 100% of first-year sales. The reviewed public page does not establish the starting commission rate or full payout schedule.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://monday.com/affiliate-program",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Applicable affiliate dashboard/contract required.",
+        "eligibility": "Affiliate application review. Authorized partners have a separate 10–20% schedule and service-oriented qualification.",
+        "adjustments": "Do not treat the advertised maximum as the base affiliate rate."
+      },
+      "caveats": [
+        "The separate Authorized Partner program cannot silently substitute for the publisher affiliate contract."
+      ],
+      "sourceUrls": [
+        "https://monday.com/affiliate-program",
+        "https://partners.monday.com/authorized-partners/program-information/"
+      ],
+      "category": "crm",
+      "catalogUrl": "/tool/monday-crm/",
+      "commissionSummary": "Up to 100% of first-year sales; base unpublished"
+    },
+    {
+      "id": "gemini",
+      "catalogId": "gemini",
+      "name": "Google Gemini",
+      "status": "no_public_program_verified",
+      "commissionLabel": "No public cash affiliate offer verified",
+      "summary": "No public cash publisher commission schedule for Google Gemini was established in the official sources reviewed. Google AI subscription invitations are not evidence of an affiliate income offer.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://gemini.google.com/",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Not established.",
+        "eligibility": "No verified public cash terms for this product.",
+        "adjustments": "Excluded from modeled commissions."
+      },
+      "caveats": [
+        "Gemini cryptocurrency-exchange affiliate programs belong to a different business and are not relevant."
+      ],
+      "sourceUrls": [
+        "https://one.google.com/about/google-ai-plans/"
+      ],
+      "category": "ai-assistants",
+      "catalogUrl": "/tool/gemini/",
+      "commissionSummary": "No public cash affiliate offer verified"
+    },
+    {
+      "id": "omnisend",
+      "catalogId": "omnisend",
+      "name": "Omnisend",
+      "status": "verified_cash",
+      "commissionLabel": "20% for up to 24 months",
+      "summary": "Affiliate partners earn 20% of qualifying referred subscription revenue for up to 24 months while the customer pays and the affiliate remains active.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.omnisend.com/affiliates/",
+      "modelEligible": true,
+      "defaultMixEligible": false,
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 20,
+        "commissionMonths": 24,
+        "monthlyPrice": 100,
+        "payoutDelayMonths": 2,
+        "payoutMinimum": 100,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 60,
+        "payoutSummary": "Fees within 45 days after month-end. Agreement references a $100 aggregate Net Revenue rollover threshold; account settlement should be confirmed.",
+        "eligibility": "Active Affiliate status requires at least one new paying referral in the preceding calendar quarter.",
+        "adjustments": "Eligible net revenue excludes refunds, discounts and specified non-subscription fees."
+      },
+      "caveats": [
+        "The $100 commission floor is a conservative planning assumption, not a quotation of the agreement’s Net Revenue threshold.",
+        "The scenario assumes quarterly activity is maintained; this is not an unconditional two-year annuity."
+      ],
+      "sourceUrls": [
+        "https://www.omnisend.com/affiliates/",
+        "https://www.omnisend.com/partner-terms/"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "conditionAssumed": "At least one new paying referred merchant in each applicable preceding calendar quarter.",
+      "category": "email",
+      "catalogUrl": "/tool/omnisend/",
+      "commissionSummary": "20% for up to 24 months",
+      "defaultExclusionReason": "Opt in when ongoing referral-activity eligibility can be maintained. That rolling condition is not enforced by the scenario engine."
+    },
+    {
+      "id": "getresponse",
+      "catalogId": "getresponse",
+      "name": "GetResponse",
+      "status": "verified_cash",
+      "commissionLabel": "40% for 12 months; 50–60% tier potential",
+      "summary": "New-program Bronze affiliates earn 40% recurring commission for 12 months. Higher rates require sales milestones. This replaces the old new-affiliate 33% recurring/bounty structure.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.getresponse.com/affiliate-programs",
+      "modelEligible": true,
+      "defaultMixEligible": true,
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 40,
+        "commissionMonths": 12,
+        "monthlyPrice": 75,
+        "payoutDelayMonths": 3,
+        "payoutMinimum": 5,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 90,
+        "payoutSummary": "PartnerStack; up to 60-day verification plus monthly approval/withdrawal cycle. Contract example pays a February 10 sale by May 15.",
+        "eligibility": "New attributable paid subscriptions; not refunded, cancelled or charged back.",
+        "adjustments": "50% and 60% tiers apply to later qualifying sales after the required milestones."
+      },
+      "caveats": [
+        "The $5 floor is a planning placeholder until account-specific PartnerStack threshold is confirmed.",
+        "Old $50 payout and 33% lifetime terms belong to the legacy program; they are not combined with this offer."
+      ],
+      "sourceUrls": [
+        "https://www.getresponse.com/affiliate-programs",
+        "https://www.getresponse.com/legal/affiliate-terms-of-service",
+        "https://www.getresponse.com/blog/getresponse-affiliate-program",
+        "https://market.partnerstack.com/program/getresponse"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "category": "email",
+      "catalogUrl": "/tool/getresponse/",
+      "commissionSummary": "40% for 12 months; 50–60% tier potential"
+    },
+    {
+      "id": "shopify",
+      "catalogId": "shopify",
+      "name": "Shopify",
+      "status": "verified_cash",
+      "commissionLabel": "$150 US-qualified sale; $25 in other regions",
+      "summary": "Affiliates receive a one-time payment for eligible new merchants who pay full price for Basic, Grow or Advanced. US referrals and listed regions pay $150; other listed regions pay $25.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://help.shopify.com/en/affiliates/earnings",
+      "modelEligible": true,
+      "defaultMixEligible": true,
+      "model": {
+        "commissionType": "one-time",
+        "oneTimeCommission": 150,
+        "commissionPct": 0,
+        "commissionMonths": 0,
+        "monthlyPrice": 0,
+        "payoutDelayMonths": 1,
+        "payoutMinimum": 10,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 30,
+        "payoutSummary": "Previous month’s qualifying full-price sales lock on the 21st and reach Impact balance on the 22nd; $10 withdrawal minimum.",
+        "eligibility": "Full-price eligible store plan; free or discounted paid trials alone earn no commission. Plus, Enterprise and Retail excluded.",
+        "adjustments": "Refunded or fraudulent stores may be reversed; geography determines bounty."
+      },
+      "caveats": [
+        "The $150 model assumes qualifying US/listed-region merchants; use $25 or a weighted amount for other traffic.",
+        "The purchase funnel must mean full-price conversion, not initial trial signup.",
+        "Main affiliate page mentions 400-day post-trial tracking while Growth Center says 125 days; confirm the Impact contract rather than promising either maximum."
+      ],
+      "sourceUrls": [
+        "https://help.shopify.com/en/affiliates/earnings",
+        "https://www.shopify.com/affiliates",
+        "https://growthcenter.shopify.com/blogs/getting-started/understanding-the-shopify-affiliate-program-referral-window"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "category": "ecommerce",
+      "catalogUrl": "/tool/shopify/",
+      "commissionSummary": "$150 US-qualified sale; $25 in other regions"
+    },
+    {
+      "id": "etsy",
+      "catalogId": "etsy",
+      "name": "Etsy",
+      "status": "terms_unpublished",
+      "commissionLabel": "Qualifying marketplace purchases; rate varies",
+      "summary": "Etsy pays commission on attributed shopper purchases, excluding shipping, taxes, refunds and cancellations. Public policy says rates vary by affiliate and channel; no fixed rate is assumed.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.etsy.com/affiliates",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": 30,
+        "payoutSummary": "Current help identifies Rakuten and payment after order validation; marketplace return windows affect timing.",
+        "eligibility": "Approved channels and last-referrer attribution; website 30 days, creator/app 7 days.",
+        "adjustments": "This does not pay recurring SaaS commission or a bounty for merely opening an Etsy seller shop."
+      },
+      "caveats": [
+        "A marketplace purchase model and actual accepted rate are needed; this is excluded from SaaS subscription forecasts."
+      ],
+      "sourceUrls": [
+        "https://www.etsy.com/legal/affiliates/",
+        "https://help.etsy.com/hc/en-us/articles/360000335987-The-Etsy-Affiliates-Program-and-Creator-Collective?segment=selling"
+      ],
+      "category": "ecommerce",
+      "catalogUrl": "/tool/etsy/",
+      "commissionSummary": "Qualifying marketplace purchases; rate varies"
+    },
+    {
+      "id": "heygen",
+      "catalogId": "heygen",
+      "name": "HeyGen",
+      "status": "verified_cash",
+      "commissionLabel": "20% for 6 months; video channels only",
+      "summary": "From November 1, the current base creator tier pays 20% for six months. Higher 25% and 30% tiers depend on conversions. The program explicitly excludes SEO/blog-only promotion.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.heygen.com/geniverse/affiliate-program",
+      "modelEligible": false,
+      "defaultMixEligible": false,
+      "model": null,
+      "terms": {
+        "cookieDays": 30,
+        "payoutSummary": "$100 minimum; 60-day verification; monthly PayPal payouts in the first three days.",
+        "eligibility": "Original video on social/course platforms; generally 5,000+ followers. Site-only publisher traffic does not meet the advertised channel rules.",
+        "adjustments": "The former 35% / three-month offer and expired 50% promotion are not current base terms."
+      },
+      "caveats": [
+        "Retained in the opportunity inventory, excluded from website-only revenue scenarios.",
+        "A separately approved video channel could be modeled using 20% / 6 months after eligibility confirmation."
+      ],
+      "sourceUrls": [
+        "https://www.heygen.com/geniverse/affiliate-program",
+        "https://heygen.getrewardful.com/terms"
+      ],
+      "conditionalModel": {
+        "commissionType": "recurring",
+        "commissionPct": 20,
+        "commissionMonths": 6,
+        "monthlyPrice": 29,
+        "payoutDelayMonths": 3,
+        "payoutMinimum": 100,
+        "payoutMinimumCustomers": 0
+      },
+      "category": "video-audio",
+      "catalogUrl": "/tool/heygen/",
+      "commissionSummary": "20% for 6 months; video channels only"
+    },
+    {
+      "id": "descript",
+      "catalogId": "descript",
+      "name": "Descript",
+      "status": "verified_cash",
+      "commissionLabel": "$25 one-time; $100,000 annual cap",
+      "summary": "New qualifying subscriptions earn a flat $25 once. Current terms cap annual affiliate commissions at $100,000 unless written consent permits more.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://www.descript.com/affiliate",
+      "modelEligible": true,
+      "defaultMixEligible": true,
+      "model": {
+        "commissionType": "one-time",
+        "oneTimeCommission": 25,
+        "commissionPct": 0,
+        "commissionMonths": 0,
+        "monthlyPrice": 0,
+        "payoutDelayMonths": 2,
+        "payoutMinimum": 5,
+        "payoutMinimumCustomers": 0,
+        "annualCommissionCap": 100000
+      },
+      "terms": {
+        "cookieDays": 30,
+        "payoutSummary": "Monthly through PartnerStack; the main page says no minimum sales. Platform withdrawal requirements may still apply.",
+        "eligibility": "New customer and qualifying self-service subscription; current legal page still names legacy Creator/Pro plans.",
+        "adjustments": "No recurring commission for new referrals; annual cap applies without written consent."
+      },
+      "caveats": [
+        "The $100,000 annual commission ceiling is enforced in scenarios; model years default to a January start unless changed. Written consent could change the real ceiling.",
+        "Confirm eligible current plan names; legacy recurring referrals do not establish terms for new ones.",
+        "Two payout months and the $5 platform floor are explicit planning assumptions pending account-specific settlement terms."
+      ],
+      "sourceUrls": [
+        "https://www.descript.com/affiliate",
+        "https://www.descript.com/affiliate-terms"
+      ],
+      "requiredModelFeatures": [
+        "annualCommissionCap"
+      ],
+      "modelAssumptions": [
+        "This is a one-time $25 bounty; no renewals are earned for new referrals.",
+        "An annual $100,000 cap applies after modeled reversals; actual provider accounting governs.",
+        "Payout delay and floor are editable planning assumptions, not a guaranteed bank date."
+      ],
+      "category": "video-audio",
+      "catalogUrl": "/tool/descript/",
+      "commissionSummary": "$25 one-time; $100,000 annual cap"
+    },
+    {
+      "id": "elevenlabs",
+      "catalogId": "elevenlabs",
+      "name": "ElevenLabs",
+      "status": "verified_cash",
+      "commissionLabel": "22% for 12 months; Business tier 11%",
+      "summary": "Starter, Creator, Pro and Scale referrals earn 22% of pre-tax payments for 12 months. Business-plan referrals earn 11%; enterprise purchases are excluded.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "applicationUrl": "https://elevenlabs.io/affiliates",
+      "modelEligible": true,
+      "defaultMixEligible": true,
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 22,
+        "commissionMonths": 12,
+        "monthlyPrice": 22,
+        "payoutDelayMonths": 4,
+        "payoutMinimum": 5,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "PartnerStack; legal terms say end of third month after earning, while guide describes 90-day validity followed by the next payment cycle.",
+        "eligibility": "Tracked qualifying new paid subscriptions; no enterprise commission.",
+        "adjustments": "Choose 11% when modeling Business-plan referrals."
+      },
+      "caveats": [
+        "Four modeled months reflect the guide’s example of a February 10 payment becoming eligible May 10 and paid in June; exact account schedule governs.",
+        "The $5 floor is a planning placeholder, not a verified product-specific threshold."
+      ],
+      "sourceUrls": [
+        "https://elevenlabs.io/affiliates",
+        "https://elevenlabs.io/affiliates-terms",
+        "https://elevenlabs.io/affiliate-partner-guide"
+      ],
+      "modelAssumptions": [
+        "Average monthly customer spend is an editable scenario assumption, not a quoted vendor plan or observed Seller Insider Hub referral.",
+        "Monthly payout timing approximates the applicable settlement process; account approval and tracking remain required."
+      ],
+      "category": "video-audio",
+      "catalogUrl": "/tool/elevenlabs/",
+      "commissionSummary": "22% for 12 months; Business tier 11%"
     }
   ],
   "benchmarks": [
@@ -182,10 +1862,35 @@
     }
   ],
   "evidenceNotes": [
-    {"topic": "HubSpot commission duration and withdrawal minimum", "sourceUrl": "https://www.hubspot.com/partners/affiliates", "checkedAt": "2026-11-01", "finding": "30% recurring for up to one year; 180-day cookie; $10 withdrawal minimum. Public policies defer the lock duration and exact applicable offer to the affiliate tool."},
-    {"topic": "MailerLite payout gating", "sourceUrl": "https://www.mailerlite.com/help/guide-to-affiliate-payouts-and-commissions", "checkedAt": "2026-11-01", "finding": "30-day hold, $100 open balance, at least two different referrals, Friday settlement. These gates materially delay early cash compared with earned commissions."},
-    {"topic": "Kit timing ambiguity", "sourceUrl": "https://help.kit.com/en/articles/2502522-getting-started-as-a-kit-affiliate", "checkedAt": "2026-11-01", "finding": "The worked example includes the 31-day hold before the following review cycle. The separate FAQ compresses that explanation. The model uses an explicit approximation, rather than promising a precise payout date."},
-    {"topic": "Semrush base product selection", "sourceUrl": "https://www.semrush.com/lp/affiliate-program/en/", "checkedAt": "2026-11-01", "finding": "The selected model is SEO Toolkit's base $200 sale payment. Higher-tier maxima, other toolkit prices, and paid trial actions are separate."},
-    {"topic": "Future source presentation", "sourceUrl": "https://futureplc.com/investor-relations/", "checkedAt": "2026-11-01", "finding": "Official search retrieval exposed the HY2026 highlights, while one open-page extraction showed the older FY2025 highlights. The separate official results page identifies HY2026 and its 24% adjusted margin. No FY2026 full-year forecast is presented as a realized result."}
+    {
+      "topic": "HubSpot commission duration and withdrawal minimum",
+      "sourceUrl": "https://www.hubspot.com/partners/affiliates",
+      "checkedAt": "2026-11-01",
+      "finding": "30% recurring for up to one year; 180-day cookie; $10 withdrawal minimum. Public policies defer the lock duration and exact applicable offer to the affiliate tool."
+    },
+    {
+      "topic": "MailerLite payout gating",
+      "sourceUrl": "https://www.mailerlite.com/help/guide-to-affiliate-payouts-and-commissions",
+      "checkedAt": "2026-11-01",
+      "finding": "30-day hold, $100 open balance, at least two different referrals, Friday settlement. These gates materially delay early cash compared with earned commissions."
+    },
+    {
+      "topic": "Kit timing ambiguity",
+      "sourceUrl": "https://help.kit.com/en/articles/2502522-getting-started-as-a-kit-affiliate",
+      "checkedAt": "2026-11-01",
+      "finding": "The worked example includes the 31-day hold before the following review cycle. The separate FAQ compresses that explanation. The model uses an explicit approximation, rather than promising a precise payout date."
+    },
+    {
+      "topic": "Semrush base product selection",
+      "sourceUrl": "https://www.semrush.com/lp/affiliate-program/en/",
+      "checkedAt": "2026-11-01",
+      "finding": "The selected model is SEO Toolkit's base $200 sale payment. Higher-tier maxima, other toolkit prices, and paid trial actions are separate."
+    },
+    {
+      "topic": "Future source presentation",
+      "sourceUrl": "https://futureplc.com/investor-relations/",
+      "checkedAt": "2026-11-01",
+      "finding": "Official search retrieval exposed the HY2026 highlights, while one open-page extraction showed the older FY2025 highlights. The separate official results page identifies HY2026 and its 24% adjusted margin. No FY2026 full-year forecast is presented as a realized result."
+    }
   ]
 }

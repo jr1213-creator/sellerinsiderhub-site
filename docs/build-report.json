@@ -8,7 +8,7 @@
   "playbooks": 12,
   "investorRoom": {
     "route": "/partners/investors/",
-    "assets": 4,
+    "assets": 5,
     "access": "server-session",
     "indexed": false
   },

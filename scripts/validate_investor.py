@@ -27,7 +27,7 @@ class Page(HTMLParser):
         for key in a:
             if key.startswith('on') or key == 'style': self.inline_handlers.append(key)
 
-for name in ['index.html','investor.css','investor.js','investor-model.js']:
+for name in ['index.html','investor.css','investor.js','investor-model.js','investor-costs.js']:
     if not (PRIVATE / name).is_file():
         errors.append('Missing function-bundled file: ' + name)
 if not errors:
@@ -50,6 +50,17 @@ dist = ROOT / 'dist'
 for file in dist.rglob('*'):
     if file.is_file() and (file.name.startswith('investor') or 'private' in file.relative_to(dist).parts):
         errors.append('Private room artifact exposed in static publish directory: '+str(file.relative_to(dist)))
+research = json.loads((ROOT / 'data/investor-program-research.json').read_text())
+catalog = json.loads((ROOT / 'data/catalog.json').read_text())['tools']
+if set(p['id'] for p in research['programs']) != set(t['id'] for t in catalog):
+    errors.append('Affiliate research does not cover the complete catalog exactly.')
+for program in research['programs']:
+    url = program.get('catalogUrl', '')
+    if not url.startswith('/tool/') or not (dist / url.strip('/') / 'index.html').is_file():
+        errors.append('Broken investor catalog link: ' + url)
+    if program.get('modelEligible') and not program.get('model'):
+        errors.append('Modelable program missing terms: ' + program['id'])
+
 if '/partners/investors/' in (dist / 'sitemap.xml').read_text():
     errors.append('Private room is in the public sitemap.')
 if '/partners/investors/' in (dist / 'data/search-index.json').read_text():
@@ -59,5 +70,5 @@ if 'href="/partners/investors/"' not in (dist / 'partners/index.html').read_text
 if 'private/investor/**' not in (ROOT / 'netlify.toml').read_text():
     errors.append('Function bundle configuration is missing private files.')
 
-print(json.dumps({'investor_bundle':'PASS' if not errors else 'FAIL','private_assets':4,'errors':errors},indent=2))
+print(json.dumps({'investor_bundle':'PASS' if not errors else 'FAIL','private_assets':5,'errors':errors},indent=2))
 sys.exit(1 if errors else 0)

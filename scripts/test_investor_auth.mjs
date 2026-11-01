@@ -25,6 +25,7 @@ const FIXTURES = new Map([
   ['investor.css', ':root{--private-fixture:1}'],
   ['investor.js', 'const PRIVATE_INVESTOR_FIXTURE = true;'],
   ['investor-model.js', 'export const PRIVATE_MODEL_FIXTURE = 101;'],
+  ['investor-costs.js', 'const PRIVATE_COST_FIXTURE = 102;'],
 ]);
 
 function harness(overrides = {}) {
@@ -112,7 +113,7 @@ test('an anonymous visitor receives a usable login, with no private bytes or cre
 test('all private assets and direct function aliases require a session before any file read', async () => {
   const instance = harness();
   for (const prefix of ['/partners/investors', '/.netlify/functions/investor-portal']) {
-    for (const filename of ['investor.css', 'investor.js', 'investor-model.js']) {
+    for (const filename of ['investor.css', 'investor.js', 'investor-model.js', 'investor-costs.js']) {
       const response = await instance.portal(getRequest(`${prefix}/${filename}`));
       assert.equal(response.status, 401);
       privateHeaders(response);

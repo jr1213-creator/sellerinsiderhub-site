@@ -60,3 +60,15 @@ Research includes six primary market evidence sources, twelve observed query set
 Normal builds require no paid API, AI call, framework download, or new service. The existing GitHub main branch remains the source for the existing Netlify project. Deployment now runs the complete build/check gate. Public browser data is reduced to the fields used by interactive tools; versioned data requests and revalidation prevent returning readers from relying on a stale price catalog after an update.
 
 Netlify handles native form capture. The source checks prove form markup and user-facing controls, not an email-provider sending integration. Newsletter collection does not claim an automatic welcome email or a publishing schedule. Approved affiliate URLs remain gated by the actual catalog status; this release does not invent approvals, conversions, traffic, payouts, or a funding decision. No recurring work was scheduled.
+
+
+## November 1, 2026 — Technical solo-founder economics and AI-stack scenarios
+
+- Rebuilt the private investor room around an AI-enabled technical solo founder, zero employee payroll, verified $9/month Netlify Personal plan, separately editable AI/tool budgets and founder compensation.
+- Added traffic-derived hosting costs with current Netlify credit meters, purchased-credit carryover, optional AI support usage, and clear Free-plan capacity limits. No hosting plan or billing settings changed.
+- Reviewed every one of the47catalog tools:24published cash offers,23 with modelable terms,19 selected in the default portfolio. Unapproved, closed, credit-only and unpublished offers remain explicitly identified. No tracking links or vendor approvals fabricated.
+- Added multi-tool business cohorts: three paid tools per business and two-month expansion delay are default UI assumptions. Additional purchases start their own retention and payout schedules; no duplicate purchase of the same vendor per business.
+- Added per-customer and annual commission caps, program-level contribution tables, a full portfolio editor, fixed-audience scale scenarios, and annual commission-goal calculations. All outputs remain hypothetical and distinguish businesses from subscription referrals.
+- Reworked NerdWallet context around its reported expense structure and this publication’s explicit cost base, with GAAP-versus-planning differences visible. Added Chamber2026 multi-platform adoption evidence with its population and limitations.
+- Kept the existing server-side login, same-origin protections, private bundle, noindex rules, and chosen credentials unchanged. Added the cost engine to the private asset allowlist and verified no private files enter the public site.
+- Validation: public page/link checks, complete47-tool private catalog route checks,45 cost/model tests and18 auth tests, plus existing34 public calculator/workspace/form tests. Desktop interactive calculations and large targets reviewed; final production login remains a separate verification limit if this browser is not signed in.

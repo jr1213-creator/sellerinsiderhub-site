@@ -25,6 +25,7 @@ const ASSETS = new Map([
   ['/investor.css', { file: 'investor.css', type: 'text/css; charset=utf-8' }],
   ['/investor.js', { file: 'investor.js', type: 'text/javascript; charset=utf-8' }],
   ['/investor-model.js', { file: 'investor-model.js', type: 'text/javascript; charset=utf-8' }],
+  ['/investor-costs.js', { file: 'investor-costs.js', type: 'text/javascript; charset=utf-8' }],
 ]);
 
 function decodeBase64url(value, minimum, maximum) {
