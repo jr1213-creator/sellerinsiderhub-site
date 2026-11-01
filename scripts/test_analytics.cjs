@@ -74,7 +74,11 @@ async function page({url = ORIGIN + '/', consent = null, referrer = '', library 
   const commands = () => (context.window.dataLayer || []).map(command => [...command]);
   const configurations = () => commands().filter(command => command[0] === 'config');
   const events = () => commands().filter(command => command[0] === 'event');
-  async function click(dataset) { await listeners.get('click')({target: new Element('', dataset)}); }
+  async function click(dataset, {rel = ''} = {}) {
+    const element = new Element('', dataset);
+    element.rel = rel;
+    await listeners.get('click')({target: element});
+  }
   const storageEvent = event => windowListeners.get('storage')(event);
   return {context, controls, storage, writes, scripts, nodes, cookieWrites, cookies, commands, configurations, events, click, storageEvent};
 }
@@ -91,10 +95,32 @@ test('no Google tag or event before a visitor makes a choice', async () => {
 
 test('remembered denial still loads no tag and collects no custom event', async () => {
   const p = await page({consent: 'no'});
-  await p.click({outbound: 'sample-tool'});
+  await p.click({outbound: 'sample-tool', outboundPlacement: 'tutorial_tools'}, {rel: 'sponsored nofollow noopener'});
   assert.equal(p.scripts.length, 0);
   assert.equal(p.events().length, 0);
   assert.equal(p.nodes.get('cookie-panel').hidden, true);
+});
+
+test('one outbound event distinguishes an affiliate action from an ordinary vendor visit', async () => {
+  const p = await page({consent: 'yes'});
+  await p.click({outbound: 'sample-tool', outboundPlacement: 'tutorial_tools'}, {rel: 'sponsored nofollow noopener'});
+  assert.equal(p.events().length, 1);
+  assert.equal(p.events()[0][1], 'outbound_tool_click');
+  assert.deepEqual(JSON.parse(JSON.stringify(p.events()[0][2])), {
+    tool_id: 'sample-tool', link_type: 'affiliate', placement: 'tutorial_tools'
+  });
+  await p.click({outbound: 'sample-tool', outboundPlacement: 'tool_profile'}, {rel: 'noopener'});
+  assert.equal(p.events().length, 2);
+  assert.deepEqual(JSON.parse(JSON.stringify(p.events()[1][2])), {
+    tool_id: 'sample-tool', link_type: 'vendor', placement: 'tool_profile'
+  });
+});
+
+test('outbound placements are enumerated and contain no arbitrary attribute text', async () => {
+  const p = await page({consent: 'yes'});
+  await p.click({outbound: 'sample-tool', outboundPlacement: 'reader@example.test'}, {rel: 'sponsored'});
+  assert.equal(p.events()[0][2].placement, 'other');
+  assert.doesNotMatch(JSON.stringify(p.events()), /reader@example/);
 });
 
 test('invalid stored consent requires a new explicit choice', async () => {

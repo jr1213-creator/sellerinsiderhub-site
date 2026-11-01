@@ -12,6 +12,15 @@ the browser-based report. Search Console clicks and impressions are a separate
 measurement and do not depend on a visitor accepting this site's analytics.
 Do not describe Analytics users as every person who visited the website.
 
+The existing `outbound_tool_click` event records `tool_id`, `link_type`
+(`affiliate` or `vendor`), and an enumerated `placement` (`tool_profile`,
+`tutorial_tools`, `comparison_tools`, `legacy_content`, or `other`). Approved
+affiliate actions use the catalog's exact destination and a sponsored link
+relationship. These events measure outbound visits; only the vendor's reports
+can establish attributed signups, approved commissions, or payouts. No
+destination URL, account identifier, or arbitrary placement text is added to
+this event.
+
 Consent is effective immediately on the current page even when browser storage
 cannot save it. Revocation disables collection and clears GA cookies; storage
 events propagate a changed or cleared choice to other open tabs. A failed save

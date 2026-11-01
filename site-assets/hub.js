@@ -168,7 +168,14 @@
     if (el.matches('[data-save-guide]')) {const url = el.dataset.saveGuide; const saved = workspace.guides.some(g => g.url === url); if (saveWorkspace(() => {if (saved) workspace.guides = workspace.guides.filter(g => g.url !== url); else if (!workspace.guides.some(g => g.url === url)) workspace.guides.push({url, title:el.dataset.title || document.title});})) toast(saved ? 'Removed from your reading list.' : 'Added to your reading list.');}
     if (el.matches('[data-compare-tool]')) {await catalogPromise; const id = el.dataset.compareTool; if (compare.includes(id)) compare = compare.filter(x => x !== id); else if (compare.length < 3) {compare.push(id); track('compare_select', {tool_id:id});} else {toast('Your comparison has three tools. Remove one to add another.'); return;} saveCompare();}
     if (el.id === 'clear-compare') {compare = []; saveCompare();}
-    if (el.matches('[data-outbound]')) track('outbound_tool_click', {tool_id:el.dataset.outbound});
+    if (el.matches('[data-outbound]')) {
+      const placements = ['tool_profile', 'tutorial_tools', 'comparison_tools', 'legacy_content'];
+      track('outbound_tool_click', {
+        tool_id: el.dataset.outbound,
+        link_type: (el.rel || '').split(/\s+/).includes('sponsored') ? 'affiliate' : 'vendor',
+        placement: placements.includes(el.dataset.outboundPlacement) ? el.dataset.outboundPlacement : 'other'
+      });
+    }
     if (el.matches('a[download]')) track('resource_download', {resource:el.getAttribute('download') || el.pathname.split('/').pop()});
     if (el.matches('[data-copy-target]')) {const target = document.getElementById(el.dataset.copyTarget); if (target) copy(target.textContent);}
     if (el.id === 'save-stack' && currentStack) {if (saveWorkspace(() => {workspace.stacks.unshift({...currentStack, id:Date.now().toString(36), created:new Date().toISOString()}); workspace.stacks = workspace.stacks.slice(0,50);})) toast('Your stack is saved in this browser.');}
@@ -288,7 +295,7 @@
   });
   catalogPromise.then(()=>{
     compare=compare.filter(id=>tool(id)).slice(0,3);updateButtons();library();comparison();stackBuilder();renderWorkspace();
-    $$('a[data-tool-id]').forEach(a=>{const t=tool(a.dataset.toolId);if(t){a.href=official(t);a.rel=rel(t);a.target='_blank';a.dataset.outbound=t.id;}});
+    $$('a[data-tool-id]').forEach(a=>{const t=tool(a.dataset.toolId);if(t){a.href=official(t);a.rel=rel(t);a.target='_blank';a.dataset.outbound=t.id;a.dataset.outboundPlacement ||= 'legacy_content';}});
   }).catch(()=>{});
   function enhanceNativeForms() {
     // Netlify's documented AJAX format; detection must still be enabled at deploy.
