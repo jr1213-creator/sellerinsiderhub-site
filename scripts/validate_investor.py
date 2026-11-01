@@ -27,7 +27,7 @@ class Page(HTMLParser):
         for key in a:
             if key.startswith('on') or key == 'style': self.inline_handlers.append(key)
 
-for name in ['index.html','investor.css','investor.js','investor-model.js','investor-costs.js']:
+for name in ['index.html','investor.css','investor.js','investor-model.js','investor-costs.js','investor-market.js']:
     if not (PRIVATE / name).is_file():
         errors.append('Missing function-bundled file: ' + name)
 if not errors:
@@ -70,5 +70,5 @@ if 'href="/partners/investors/"' not in (dist / 'partners/index.html').read_text
 if 'private/investor/**' not in (ROOT / 'netlify.toml').read_text():
     errors.append('Function bundle configuration is missing private files.')
 
-print(json.dumps({'investor_bundle':'PASS' if not errors else 'FAIL','private_assets':5,'errors':errors},indent=2))
+print(json.dumps({'investor_bundle':'PASS' if not errors else 'FAIL','private_assets':6,'errors':errors},indent=2))
 sys.exit(1 if errors else 0)

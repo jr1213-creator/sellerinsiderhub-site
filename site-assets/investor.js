@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  const M=window.SIHInvestorModel, C=window.SIHInvestorCosts;
+  const M=window.SIHInvestorModel, C=window.SIHInvestorCosts, K=window.SIHInvestorMarket;
   const data=JSON.parse(document.getElementById('investor-data').textContent), research=data.research, costResearch=data.costs;
   const $=id=>document.getElementById(id);
   const esc=value=>String(value==null?'':value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -15,6 +15,7 @@
   const costKeys=['domainAnnual','aiToolsMonthly','aiToolsAllocationPct','aiIncrementalMonthly','aiApiMonthly','emailMonthly','analyticsMonthly','automationMonthly','otherFixedMonthly','founderPayMonthly','pageviewsPerVisit','megabytesPerPage','requestsPerPage','nonVisitorUsagePct','supportContactsPer1000Visits','supportCostPerContact'];
   const audienceKeys=['monthlyVisits','trafficGrowthPct','maxMonthlyVisits','merchantClickPct','clickToPaidPct','approvalPct','reversalPct','churnPct'];
   let preset='growing_publication',result=null,inputState=null,timer=null;
+  let marketOutcome=null,marketRows=[],marketTargets=[],marketYieldRows=[],marketTimer=null,financialInputsValid=false;
   const portfolio=Object.fromEntries(modelPrograms.map(p=>[p.id,{included:!!p.defaultMixEligible,weight:1,price:p.model.monthlyPrice||0}]));
   const categoryLabel=s=>String(s||'Software').replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
   const termLabel=p=>p.commissionSummary||p.commissionLabel||p.summary;
@@ -114,16 +115,17 @@
   }
   function update(){
     try{
-      const input=readInputs(),next=M.simulate(input);inputState=input;result=next;
+      const input=readInputs(),next=M.simulate(input);inputState=input;result=next;financialInputsValid=true;
       $('model-error').hidden=true;document.querySelector('.results-panel').classList.remove('output-stale');
       document.querySelectorAll('.cost-workbench,.scale-opportunity,.comparison-panel,.goal-section').forEach(e=>e.classList.remove('output-stale'));
       ['export-csv','export-json','print-model'].forEach(id=>$(id).disabled=false);
       $('selected-month').max=input.months;if(Number($('selected-month').value)>input.months)$('selected-month').value=input.months;
       $('result-period').textContent=input.months+' MONTHS';document.querySelectorAll('.horizon-label').forEach(e=>e.textContent='At month '+input.months);
-      drawSelected();drawCohorts();drawSensitivity();drawLedger();drawScale();drawEligibility();drawGoal();
+      drawSelected();drawCohorts();drawSensitivity();drawLedger();drawScale();drawEligibility();drawMarket();drawGoal();
     }catch(error){
       $('model-error').textContent=error.message+' Outputs are paused until the inputs are valid.';$('model-error').hidden=false;
       document.querySelector('.results-panel').classList.add('output-stale');document.querySelectorAll('.cost-workbench,.scale-opportunity,.comparison-panel,.goal-section').forEach(e=>e.classList.add('output-stale'));
+      financialInputsValid=false;invalidateMarket('The financial inputs need correction before market-share results can be calculated.');drawGoal();
       ['export-csv','export-json','print-model'].forEach(id=>$(id).disabled=true);
     }
   }
@@ -217,18 +219,69 @@
   }
 
 
-  function drawGoal(){
+  function invalidateMarket(message){
+    marketOutcome=null;marketRows=[];marketTargets=[];marketYieldRows=[];
+    $('market-error').textContent=message;$('market-error').hidden=false;$('export-market').disabled=true;
+    document.querySelector('.share-output').classList.remove('output-stale');
+    ['market-results','market-profit-bridge','market-pool','market-ladder','market-targets','market-yield-sensitivity'].forEach(id=>$(id).innerHTML='');
+    $('market-cash').textContent='';$('market-period').textContent='';$('market-equation').textContent='Complete valid assumptions to calculate this market-share scenario.';
+  }
+  function readMarketInputs(){
+    return {broadBusinesses:numberInput('market-business-base'),addressablePct:numberInput('market-addressable'),annualBuyerPct:numberInput('market-annual-buyers'),annualCapturePct:numberInput('market-capture'),acquisitionCostPerNewBusiness:numberInput('market-acquisition-cost'),founderPayAnnual:numberInput('market-founder-pay'),otherOperatingAllowanceAnnual:numberInput('market-other-cost')};
+  }
+  const shareLabel=value=>value==null?'—':num(value,6)+'%';
+  function drawMarketEvidence(){
+    const evidence=data.market.marketShare;
+    $('market-source-note').innerHTML='<strong>Business-base source:</strong> <a href="'+esc(evidence.sourceUrl)+'" target="_blank" rel="noopener noreferrer">SBA, '+esc(evidence.referencePeriod)+' ↗</a>. '+esc(evidence.definition)+' Changing this input creates a custom denominator.';
+    $('market-share-evidence').innerHTML=evidence.evidence.map(e=>'<article><p class="evidence-value">'+esc(e.value)+'</p><h3>'+esc(e.title)+'</h3><p>'+esc(e.body)+'</p><a href="'+esc(e.url)+'" target="_blank" rel="noopener noreferrer">Primary source ↗</a></article>').join('');
+  }
+  function drawMarket(){
+    if(!financialInputsValid){invalidateMarket('Correct the detailed financial inputs before calculating or exporting market-share results.');return;}
     if(!inputState)return;
-    const target=Number($('annual-goal').value),windowMonths=Math.min(12,inputState.months);
+    $('market-tools').value=inputState.paidToolsPerBusiness;$('market-horizon').value=inputState.months;
+    try{
+      const config=readMarketInputs(),out=K.evaluate(config,inputState),annual=out.final12Months;
+      marketOutcome=out;marketRows=K.shareLadder(config,inputState);marketTargets=K.solveTargets(config,inputState);
+      $('market-error').hidden=true;document.querySelector('.share-output').classList.remove('output-stale');$('export-market').disabled=false;
+      $('market-output-label').textContent='ILLUSTRATIVE SCALE · '+shareLabel(out.broadBaseAnnualSharePct)+' OF THE BROAD BASE / YEAR';
+      $('market-equation').textContent=shareLabel(config.annualCapturePct)+' × '+num(out.market.annualBuyerBusinesses,0)+' businesses in the selected pool = '+num(out.annualNewBusinesses,0)+' first purchasing businesses each year.';
+      const boxes=[[money(annual.afterFounderResult),'Annual operating profit','After selected founder pay · before tax','profit'],[money(annual.earnedCommission),'Annual commission revenue','Earned in the final 12 modeled months','revenue'],[num(out.annualNewBusinesses,0),'New purchasing businesses / year','Each can generate several qualifying purchases','buyers'],[num(out.monthlyVisitsRequired,0),'Required monthly visits','Derived from your click and purchase assumptions','visits']];
+      $('market-results').innerHTML=boxes.map(([v,l,n,kind])=>'<article class="share-metric share-metric-'+kind+'"><span>'+l+'</span><strong class="'+(kind==='profit'&&annual.afterFounderResult<0?'negative':'')+'">'+v+'</strong><small>'+n+'</small></article>').join('');
+      $('market-period').textContent='Annual period: model months '+out.annualPeriod.startMonth+'–'+out.annualPeriod.endMonth+'. '+inputState.paidToolsPerBusiness+' paid tools per business; '+inputState.stackExpansionDelayMonths+'-month expansion delay; '+num(inputState.merchantClickPct)+'% vendor click × '+num(inputState.clickToPaidPct)+'% first-purchase conversion; '+num(inputState.approvalPct)+'% approval; '+(Number.isFinite(inputState.churnPct)?num(inputState.churnPct)+'% monthly churn on recurring offers':'one-time offer; no renewal churn')+'; '+num(inputState.reversalPct)+'% reversals.';
+      const bridge=[['Earned affiliate commissions',annual.earnedCommission],['Customer acquisition allowance',-annual.marketAcquisitionAllowance],['Other entered marketing / paid traffic',-(annual.marketingCost-annual.marketAcquisitionAllowance)],['Infrastructure, AI & entered operating costs',-(annual.coreOperatingCosts-annual.otherOperatingAllowance)],['Additional operating allowance',-annual.otherOperatingAllowance],['Founder compensation',-annual.founderPay],['Setup costs within this annual period',-annual.setupCost],['Operating profit before tax',annual.afterFounderResult]];
+      $('market-profit-bridge').innerHTML='<dl>'+bridge.map(([label,value],i)=>'<div class="'+(i===bridge.length-1?'bridge-total':'')+'"><dt>'+label+'</dt><dd>'+money(value)+'</dd></div>').join('')+'</dl><p>'+(annual.operatingMarginAfterFounderPct==null?'—':num(annual.operatingMarginAfterFounderPct,1)+'%')+' modeled operating margin after founder pay. Employee payroll remains $0.</p>';
+      $('market-cash').textContent='Cash timing: '+money(annual.cashReceived)+' of commission payments in this annual period; '+money(annual.cashFlow)+' cash surplus after selected costs. Peak funding gap across the complete scenario: '+money(out.fundingRequired)+', before starting capital. Acquisition spending can precede payouts. No contingency or tax reserve is included.';
+      $('market-pool').innerHTML='<div><span>Broad business base</span><strong>'+num(config.broadBusinesses,0)+'</strong></div><div><span>Selected audience</span><strong>'+num(out.market.addressableBusinesses,0)+'</strong></div><div><span>Selected annual buyer pool</span><strong>'+num(out.market.annualBuyerBusinesses,0)+'</strong></div><p>'+num(out.cumulativeUniqueBusinesses,0)+' distinct businesses acquired across '+inputState.months+' months = '+shareLabel(out.stockUtilizationPct)+' of the selected audience. These are acquisitions from the existing business population, not newly formed businesses.</p>';
+      $('market-ladder-note').textContent='Same '+inputState.paidToolsPerBusiness+'-tool portfolio and '+inputState.months+'-month horizon. Acquisition allowance: '+precise(config.acquisitionCostPerNewBusiness)+' per first purchasing business; annual founder pay: '+money(config.founderPayAnnual)+'; extra operating allowance: '+money(config.otherOperatingAllowanceAnnual)+'. Shares below apply to the selected annual buyer pool; the last column relates them to the broad base.';
+      $('market-ladder').innerHTML=marketRows.map(r=>r.feasible?'<tr class="'+(Math.abs(r.requestedAnnualCapturePct-config.annualCapturePct)<1e-10?'selected-share':'')+'"><th scope="row"><button type="button" data-capture-share="'+r.requestedAnnualCapturePct+'">'+shareLabel(r.requestedAnnualCapturePct)+'</button></th><td>'+num(r.annualNewBusinesses,0)+'</td><td>'+num(r.monthlyVisitsRequired,0)+'</td><td>'+money(r.final12Months.earnedCommission)+'</td><td class="'+(r.final12Months.afterFounderResult<0?'negative':'')+'">'+money(r.final12Months.afterFounderResult)+(r.hostingCapacityExceeded?' · hosting capacity exceeded':'')+'</td><td>'+shareLabel(r.broadBaseAnnualSharePct)+'</td></tr>':'<tr><th>'+shareLabel(r.requestedAnnualCapturePct)+'</th><td colspan="5" class="share-unavailable">'+esc(r.reason)+'</td></tr>').join('');
+      $('market-targets').innerHTML=marketTargets.map(r=>r.feasible?'<tr><th scope="row"><button type="button" data-capture-share="'+r.requiredAnnualCapturePct+'">'+money(r.targetAnnualCommission)+'</button></th><td>'+num(r.annualNewBusinesses,0)+'</td><td>'+shareLabel(r.broadBaseAnnualSharePct)+'</td><td>'+shareLabel(r.buyerPoolAnnualSharePct)+'</td><td>'+num(r.monthlyVisitsRequired,0)+'</td><td class="'+(r.final12Months.afterFounderResult<0?'negative':'')+'">'+money(r.final12Months.afterFounderResult)+(r.hostingCapacityExceeded?' · hosting capacity exceeded':'')+'</td></tr>':'<tr><th>'+money(r.targetAnnualCommission)+'</th><td colspan="5" class="share-unavailable">'+esc(r.reason)+'</td></tr>').join('');
+      const variants=[{tools:1,priceScale:.5},{tools:1,priceScale:1}];if(inputState.paidToolsPerBusiness!==1)variants.push({tools:inputState.paidToolsPerBusiness,priceScale:.5},{tools:inputState.paidToolsPerBusiness,priceScale:1});
+      marketYieldRows=variants.map(v=>{const alternative={...inputState,paidToolsPerBusiness:v.tools};if(alternative.programs)alternative.programs=alternative.programs.map(p=>({...p,monthlyPrice:p.commissionType==='recurring'?p.monthlyPrice*v.priceScale:p.monthlyPrice}));else if(alternative.commissionType==='recurring')alternative.monthlyPrice*=v.priceScale;return {label:v.tools+' tool'+(v.tools===1?'':'s')+' · '+(v.priceScale===1?'current recurring spend':'50% recurring spend'),...K.evaluate(config,alternative)};});
+      $('market-yield-sensitivity').innerHTML=marketYieldRows.map(r=>'<tr><th scope="row">'+esc(r.label)+'</th><td>'+money(r.final12Months.earnedCommission)+'</td><td class="'+(r.final12Months.afterFounderResult<0?'negative':'')+'">'+money(r.final12Months.afterFounderResult)+'</td></tr>').join('');
+      if(out.hostingCapacityExceeded){$('market-error').textContent='The selected Free hosting plan cannot support this traffic. Revenue math is shown, but the cost and profit scenario is not operationally feasible until sufficient hosting capacity is selected.';$('market-error').hidden=false;}
+      document.querySelectorAll('[data-market-share]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.marketShare)===config.annualCapturePct)));
+    }catch(error){invalidateMarket(error.message);}
+  }
+  function exportMarket(){
+    if(!marketOutcome)return;
+    const rows=[['Seller Insider Hub — hypothetical market-share and annual-profit analysis'],['Research checked',data.asOf],['Currency','USD'],['Business base source',data.market.marketShare.sourceUrl],['Business base reference period',data.market.marketShare.referencePeriod],['Market assumptions',JSON.stringify(readMarketInputs())],['Financial assumptions',JSON.stringify(inputState)],['Annual reporting window','Months '+marketOutcome.annualPeriod.startMonth+'–'+marketOutcome.annualPeriod.endMonth],['Hosting capacity',marketOutcome.hostingCapacityExceeded?'INFEASIBLE for selected hosting plan':'Modeled additional credits included'],['Meaning','Annual acquisition from the business base; distinct businesses are not recycled. Results are hypothetical, after selected founder pay and before tax.'],[],['SHARE LADDER'],['Annual capture %','New purchasing businesses/year','Visits/month','Annual earned commission','Annual operating profit','Annual cash received','Annual total costs','Broad-base annual share %','Hosting capacity feasible'],...marketRows.map(r=>r.feasible?[r.requestedAnnualCapturePct,r.annualNewBusinesses,r.monthlyVisitsRequired,r.final12Months.earnedCommission,r.final12Months.afterFounderResult,r.final12Months.cashReceived,r.final12Months.totalCosts,r.broadBaseAnnualSharePct,!r.hostingCapacityExceeded]:[r.requestedAnnualCapturePct,'INFEASIBLE',r.reason]),[],['REVENUE TARGETS'],['Annual revenue target','Annual new businesses','Broad-base share %','Selected-pool share %','Visits/month','Annual operating profit'],...marketTargets.map(r=>r.feasible?[r.targetAnnualCommission,r.annualNewBusinesses,r.broadBaseAnnualSharePct,r.buyerPoolAnnualSharePct,r.monthlyVisitsRequired,r.final12Months.afterFounderResult]:[r.targetAnnualCommission,'INFEASIBLE',r.reason]),[],['CUSTOMER ECONOMICS SENSITIVITY'],['Scenario','Annual earned commission','Annual operating profit'],...marketYieldRows.map(r=>[r.label,r.final12Months.earnedCommission,r.final12Months.afterFounderResult]),[],['MODEL NOTES'],...marketOutcome.notes.map(n=>[n])];
+    const quote=v=>'"'+String(v).replace(/"/g,'""')+'"';download('seller-insider-hub-market-share-'+inputState.months+'-months.csv','\uFEFF'+rows.map(r=>r.map(quote).join(',')).join('\r\n'),'text/csv;charset=utf-8');
+  }
+  function setMarketBudget(mode){
+    $('market-acquisition-cost').value=mode==='growth'?100:0;$('market-founder-pay').value=mode==='growth'?120000:(inputState?.costConfig.founderPayMonthly||0)*12;$('market-other-cost').value=mode==='growth'?24000:0;document.querySelectorAll('[data-market-budget]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.marketBudget===mode)));drawMarket();drawGoal();
+  }
+  function drawGoal(){
+    if(!financialInputsValid||!inputState||!marketOutcome){$('goal-results').textContent='Complete the market-share and financial inputs to use this target.';$('goal-note').textContent='';return;}
+    const target=Number($('annual-goal').value);
     if(!Number.isFinite(target)||target<=0){$('goal-results').textContent='Enter a positive annual commission target.';$('goal-note').textContent='';return;}
-    const evaluate=visits=>{const scenario=M.simulate({...inputState,monthlyVisits:visits,trafficGrowthPct:0,maxMonthlyVisits:visits});const window=scenario.months.slice(-windowMonths);return {scenario,window,earned:window.reduce((sum,r)=>sum+r.earnedCommission,0)};};
-    let low=0,high=100000000,atHigh=evaluate(high);
-    if(atHigh.earned<target){$('goal-results').textContent='This goal is not attainable within 100 million monthly visits under the selected program limits and assumptions.';$('goal-note').textContent='Try a different program mix, goal, or validated acquisition assumption. Some programs cap annual commissions.';return;}
-    for(let i=0;i<27;i++){const mid=(low+high)/2,at=evaluate(mid);if(at.earned>=target)high=mid;else low=mid;}
-    const visits=Math.ceil(high),found=evaluate(visits),last=found.scenario.months[found.scenario.months.length-1],core=found.window.reduce((sum,r)=>sum+r.coreOperatingCosts,0),before=found.window.reduce((sum,r)=>sum+r.beforeFounderResult,0),after=found.window.reduce((sum,r)=>sum+r.afterFounderResult,0);
-    const boxes=[[num(visits,0),'Visits each month'],[num(last.newBuyerBusinesses,1),'New purchasing businesses / month'],[num(last.newApprovedSubscriptions,1),'Approved tool referrals / month'],[money(found.earned),'Commission in the final 12 months'],[money(core),'Core costs in that 12-month window'],[money(after),'Surplus after chosen founder pay']];
-    $('goal-results').innerHTML=boxes.map(([v,l])=>'<article><strong>'+v+'</strong><span>'+l+'</span></article>').join('');
-    $('goal-note').textContent='Model months '+(inputState.months-windowMonths+1)+'–'+inputState.months+' · '+inputState.paidToolsPerBusiness+' paid tools / business · '+inputState.stackExpansionDelayMonths+'-month expansion delay · '+num(inputState.merchantClickPct)+'% vendor click rate · '+num(inputState.clickToPaidPct)+'% first-buyer conversion. Before-founder surplus: '+money(before)+'.'+(found.scenario.hostingCapacityExceeded?' This hosting plan cannot serve the required traffic; select Personal or Pro.':'');
+    try{
+      const found=marketTargets.find(r=>r.targetAnnualCommission===target)||K.solveTargets(readMarketInputs(),inputState,[target])[0];
+      if(!found.feasible){$('goal-results').textContent=found.reason;$('goal-note').textContent='The limit comes from the selected buyer pool, unique-business stock, program terms, and horizon; it is not a fixed traffic ceiling.';return;}
+      const annual=found.final12Months;
+      const boxes=[[num(found.monthlyVisitsRequired,0),'Required visits each month'],[num(found.annualNewBusinesses,0),'New purchasing businesses per year'],[shareLabel(found.broadBaseAnnualSharePct),'Annual share of the broad business base'],[money(annual.earnedCommission),'Earned commission in the final 12 months'],[money(annual.totalCosts),'Selected costs in that 12-month window'],[money(annual.afterFounderResult),'Operating profit after founder pay · pre-tax']];
+      $('goal-results').innerHTML=boxes.map(([v,l])=>'<article><strong>'+v+'</strong><span>'+l+'</span></article>').join('');
+      $('goal-note').textContent='Model months '+found.annualPeriod.startMonth+'–'+found.annualPeriod.endMonth+' · '+inputState.paidToolsPerBusiness+' tools per business · '+inputState.stackExpansionDelayMonths+'-month expansion delay. Uses the buyer-pool and growth-budget settings in Market share. The detailed monthly scenario retains its separately entered operating budget.'+(found.hostingCapacityExceeded?' Selected hosting capacity is insufficient; change the hosting plan before relying on the cost result.':'');
+    }catch(error){$('goal-results').textContent=error.message;$('goal-note').textContent='';}
   }
   function drawEligibility(){
     const selected=(inputState.programs||[]).map(p=>programById[p.id]).filter(Boolean);
@@ -259,10 +312,10 @@
     const rows=[['Seller Insider Hub — hypothetical solo-founder operating scenario'],['Currency','USD'],['Hosting capacity',result.hostingCapacityExceeded?'INFEASIBLE: selected hosting plan cannot serve all modeled traffic':'Sufficient modeled credit capacity; additional purchases may be required'],['Research checked',data.asOf],['Selected program',$('program').value],['Assumptions',JSON.stringify(inputState)],['Note','Commission rates are researched; plan spend and some payout inputs are assumptions. Approval and continuing eligibility are not verified.'],[],columns,...result.months.map(r=>columns.map(k=>Number(r[k]).toFixed(k==='month'?0:4))),[],['PROGRAM TOTALS'],['Program','Share %','Earned','Cash received','Unpaid','Cap-limited commission'],...result.programTotals.map(p=>[p.label,p.sharePct,p.earnedCommission,p.cashReceived,p.unpaidCommission,p.capLimitedCommission]),[],['PROGRAM CONDITIONS'],...((inputState.programs||[]).map(p=>{const research=programById[p.id];return[p.name||p.id,research?textCondition(research):'Custom assumptions',research?.sourceUrls?.[0]||''];}))];
     const quote=v=>'"'+String(v).replace(/"/g,'""')+'"';download('seller-insider-hub-lean-scenario-'+inputState.months+'-months.csv','\uFEFF'+rows.map(r=>r.map(quote).join(',')).join('\r\n'),'text/csv;charset=utf-8');
   }
-  function scheduleUpdate(){clearTimeout(timer);['export-csv','export-json','print-model'].forEach(id=>$(id).disabled=true);timer=setTimeout(update,120);}
-  configureEvidence();
+  function scheduleUpdate(){financialInputsValid=false;$('export-market').disabled=true;clearTimeout(timer);['export-csv','export-json','print-model'].forEach(id=>$(id).disabled=true);timer=setTimeout(update,120);}
+  configureEvidence();drawMarketEvidence();
   document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>applyPreset(b.dataset.preset)));
-  document.querySelectorAll('[data-stack-size]').forEach(b=>b.addEventListener('click',()=>{$('paidToolsPerBusiness').value=b.dataset.stackSize;document.querySelectorAll('[data-stack-size]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));update();}));
+  document.querySelectorAll('[data-stack-size]').forEach(b=>b.addEventListener('click',()=>{$('paidToolsPerBusiness').value=b.dataset.stackSize;document.querySelectorAll('[data-stack-size]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.stackSize===b.dataset.stackSize)));update();}));
   document.querySelectorAll('[data-cost-preset]').forEach(b=>b.addEventListener('click',()=>applyCostPreset(b.dataset.costPreset)));
   $('reset-model').addEventListener('click',()=>applyPreset(preset));
   $('program').addEventListener('change',applyProgram);
@@ -283,8 +336,26 @@
   $('program-search').addEventListener('input',drawInventory);$('program-filter').addEventListener('change',drawInventory);
   $('program-cards').addEventListener('click',e=>{const b=e.target.closest('[data-use-program]');if(!b)return;$('program').value=b.dataset.useProgram;applyProgram();$('model').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
   $('export-csv').addEventListener('click',exportCsv);
-  $('export-json').addEventListener('click',()=>download('seller-insider-hub-assumptions.json',JSON.stringify({title:'Seller Insider Hub — solo-founder operating scenario',asOf:data.asOf,currency:'USD',program:$('program').value,annualCommissionGoal:Number($('annual-goal').value),modelFeasible:!result.hostingCapacityExceeded,inputs:inputState,programEvidence:(inputState.programs||[]).map(p=>programById[p.id]).filter(Boolean),costEvidence:costResearch,notes:result.notes},null,2),'application/json'));
+  $('export-json').addEventListener('click',()=>download('seller-insider-hub-assumptions.json',JSON.stringify({title:'Seller Insider Hub — solo-founder operating scenario',asOf:data.asOf,currency:'USD',program:$('program').value,annualCommissionGoal:Number($('annual-goal').value),marketShare:marketOutcome?{inputs:readMarketInputs(),outcome:marketOutcome,shareLadder:marketRows,revenueTargets:marketTargets}:null,modelFeasible:!result.hostingCapacityExceeded,inputs:inputState,programEvidence:(inputState.programs||[]).map(p=>programById[p.id]).filter(Boolean),costEvidence:costResearch,notes:result.notes},null,2),'application/json'));
   $('goal-form').addEventListener('submit',e=>e.preventDefault());$('annual-goal').addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(drawGoal,180);});document.querySelectorAll('[data-goal]').forEach(b=>b.addEventListener('click',()=>{$('annual-goal').value=b.dataset.goal;document.querySelectorAll('[data-goal]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));drawGoal();}));
+  $('market-assumptions').addEventListener('submit',e=>e.preventDefault());
+  $('market-assumptions').addEventListener('input',e=>{
+    clearTimeout(marketTimer);$('export-market').disabled=true;
+    document.querySelectorAll('[data-market-budget]').forEach(b=>b.setAttribute('aria-pressed','false'));
+    marketTimer=setTimeout(()=>{
+      if(e.target.id==='market-tools'){
+        if($('program').value!=='mix'){$('program').value='mix';showStructure();}
+        $('paidToolsPerBusiness').value=$('market-tools').value;
+        document.querySelectorAll('[data-stack-size]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.stackSize)===Number($('market-tools').value))));update();
+      }else if(e.target.id==='market-horizon'){$('months').value=$('market-horizon').value;$('selected-month').value=$('market-horizon').value;update();}
+      else{drawMarket();drawGoal();}
+    },180);
+  });
+  document.querySelectorAll('[data-market-share]').forEach(b=>b.addEventListener('click',()=>{$('market-capture').value=b.dataset.marketShare;drawMarket();drawGoal();}));
+  document.querySelectorAll('[data-market-budget]').forEach(b=>b.addEventListener('click',()=>setMarketBudget(b.dataset.marketBudget)));
+  ['market-ladder','market-targets'].forEach(id=>$(id).addEventListener('click',e=>{const button=e.target.closest('[data-capture-share]');if(!button)return;$('market-capture').value=button.dataset.captureShare;drawMarket();drawGoal();$('market-share').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}));
+  $('export-market').addEventListener('click',exportMarket);
+  $('reset-market').addEventListener('click',()=>{$('market-business-base').value=data.market.marketShare.broadBusinesses;$('market-addressable').value=100;$('market-annual-buyers').value=100;$('market-capture').value=.1;setMarketBudget('growth');});
   $('print-model').addEventListener('click',()=>window.print());
   applyProgram();applyPreset(preset);
 })();

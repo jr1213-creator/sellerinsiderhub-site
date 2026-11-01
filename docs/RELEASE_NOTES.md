@@ -1,5 +1,14 @@
 # Complete publication release — November 1, 2026
 
+## November 1, 2026 — Market share, annual profit, and high-end scale
+
+- Added an interactive market-share section linking the sourced broad U.S. business base to distinct new purchasing businesses, multiple paid-tool referrals, required monthly visits, final-12-month earned commission, pre-tax operating profit, and cash timing.
+- Added an editable addressable audience and annual buying pool, capture ladder from 0.001% through 1%, and reverse calculations for $1 million, $10 million, $25 million, and $100 million annual commission targets. Custom targets use the engine's numerical range and the selected pool's feasibility constraints, without a small artificial traffic ceiling.
+- Added separate acquisition, founder compensation, and additional operating allowances, with clear planning-input labels and zero employee payroll. The profit bridge reconciles all costs. It distinguishes annual earnings from an annualized exit run rate and rejects repeated acquisition beyond the selected business population.
+- Added one-tool and three-tool spending sensitivities, exportable market-analysis CSV, synchronized stack/horizon controls, and primary research on actual multi-service AI payments and distinct spending datasets. Updated market statistics identify publication and observation periods; newer nonemployer data remain separate from the older consolidated national count.
+- Preserved the server-protected investor room and existing authentication configuration. Six private assets are allowlisted and excluded from public output, search, and the sitemap.
+- Verification: all 108 functional checks and both static validators pass. Browser review verified 0.1% and 1% capture, the $100 million reverse target, cost-basis switching, one-time commissions, blocked stale exports after invalid financial input, downloaded CSV, and 375-/768-pixel layouts with no page-level horizontal overflow. Temporary QA routes are removed by the final build.
+
 ## Investor room — November 1, 2026
 
 The public Partners page now links to `/partners/investors/`, a server-protected research and scenario room. Its market statistics precede the simulator and identify each source's population, reference period, and survey limitations. The national business count is not multiplied by a differently defined survey's non-adoption share. Official program examples cover HubSpot, MailerLite, Kit, and Semrush, with company-reported NerdWallet and Future results presented only as established-business context.

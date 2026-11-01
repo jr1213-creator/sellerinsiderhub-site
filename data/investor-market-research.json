@@ -17,7 +17,7 @@
         "sba-2026-faq"
       ],
       "calculation": null,
-      "footnote": "Includes 29,811,495 businesses with no paid employees (82.3%)."
+      "footnote": "The 2022 total includes 29,811,495 nonemployer firms (82.3%) and 6,395,635 employer firms."
     },
     {
       "id": "chamber-ai-use",
@@ -55,20 +55,22 @@
       "footnote": "Not multiplied by SBA’s business count."
     },
     {
-      "id": "chamber-workforce-preparation",
-      "value": "95%",
-      "numericValue": 95,
+      "id": "jpm-multiple-paid-ai-services",
+      "value": "27.5%",
+      "numericValue": 27.5,
       "unit": "percent",
-      "label": "AI users preparing their workforce",
-      "body": "Includes independent learning; 47% reported on-the-job training.",
-      "population": "AI-using respondents only",
-      "period": "July 23–August 6, 2026",
+      "label": "Paid for multiple AI services",
+      "body": "Among firms paying for AI in JPMorganChase Institute’s 2025 transaction data.",
+      "population": "AI-paying small businesses in the Chase Business Banking transaction dataset during 2025",
+      "period": "2025 payments; report published April 14, 2026",
       "sourceIds": [
-        "chamber-2026-summary",
-        "chamber-2026-report"
+        "jpm-ai-payments-2026"
       ],
-      "calculation": null,
-      "footnote": "A broad readiness measure, not 95% receiving formal training."
+      "calculation": {
+        "expression": "18.06 + 9.44 = 27.50",
+        "basis": "Share paying for two distinct AI services plus share paying for three or more during 2025; Figure 4’s published table."
+      },
+      "footnote": "Actual payments during the year; not an average of three tools or purchases attributed to this site."
     }
   ],
   "implementationNeeds": [
@@ -135,10 +137,28 @@
           "nfib-2025-report"
         ],
         "summary": "NFIB’s June 25, 2025 release concerns small employers from its membership survey. Fieldwork ran March 6–31, 2025: 20,000 owners invited, 521 completed. The AI item has 514 employer responses: 24% yes and 76% no. These older, differently sampled results are context, not a second estimate of the Chamber’s 2026 population."
+      },
+      {
+        "id": "jpm-ai-payments",
+        "sourceIds": [
+          "jpm-ai-payments-2026"
+        ],
+        "summary": "Observed transactions for 4.6 million Chase Business Banking firms over 2019–2025. The 27.5% statistic is conditional on paying for AI during 2025 and counts distinct services paid for during that year. It is not a share of all U.S. businesses or a measure of newly attributed affiliate purchases."
+      },
+      {
+        "id": "census-nes-2024",
+        "sourceIds": [
+          "census-nes-2024-release",
+          "census-nes-2024-quickfacts"
+        ],
+        "summary": "The 2024 nonemployer-establishment count is newer than SBA’s combined 2022 benchmark. It describes a segment with a defined receipts threshold and is presented separately, without mixing years into a new national total."
       }
     ],
     "selectionNote": "Headline cards use the latest consolidated SBA FAQ located and the current Chamber original report. Census and NFIB are retained to make the population differences explicit. No all-business nonuser count is supplied.",
-    "maintenanceTrigger": "Review when SBA issues a new national count or the Chamber releases a new edition. Any replacement adoption estimate must retain its own definition, reference period, and denominator."
+    "maintenanceTrigger": "Review when SBA issues a new national count or the Chamber releases a new edition. Any replacement adoption estimate must retain its own definition, reference period, and denominator.",
+    "marketShareNote": "Market-share percentages are chosen scenario assumptions applied to a dated business-count benchmark. They are not survey-estimated conversion probabilities. National penetration counts unique U.S. businesses, while qualifying vendor purchases and commission payments are separate measures.",
+    "spendingComparability": "The Chamber’s $250 median concerns self-reported AI spending among its 2026 paying respondents. JPMorganChase Institute’s approximately $28–$30 median concerns identifiable AI payments in its 2025 business banking data. Neither is an average across all U.S. businesses, and the measures should not be pooled.",
+    "nonemployerUpdate": "Census’s September 29, 2026 release reports 31,985,874 nonemployer establishments for 2024. SBA’s consolidated 36,207,130 total remains a 2022 benchmark. The newer component is kept separate rather than combined with an older employer count."
   },
   "sources": [
     {
@@ -230,6 +250,10 @@
           "location": "Printed pages 5, 18, 23, 28",
           "excerpt": "Wave 5: July 23–August 6, 2026",
           "supportedFact": "Methods, adoption, readiness, and nonuser barriers; chart labels visually verified."
+        },
+        {
+          "location": "Printed page 22, AI Costs Remain Accessible",
+          "supportedFact": "Median monthly AI spending is $250 among businesses paying for AI. The separate 41% using free tools is not explicitly a free-only group."
         }
       ]
     },
@@ -355,11 +379,114 @@
           "supportedFact": "The AI item shows 24% yes and 76% no, with 514 employer responses."
         }
       ]
+    },
+    {
+      "id": "jpm-ai-payments-2026",
+      "publisher": "JPMorganChase Institute",
+      "sourceType": "Original analysis of de-identified business banking transactions",
+      "title": "Understanding the use of AI among small businesses",
+      "url": "https://www.jpmorganchase.com/institute/all-topics/business-growth-and-entrepreneurship/understanding-ai-use-by-small-businesses",
+      "publishedAt": "2026-04-14",
+      "fieldwork": null,
+      "population": "Small businesses with Chase Business Banking deposit accounts; the multi-service distribution is conditional on paying for AI in the stated year.",
+      "sample": {
+        "firms": 4600000,
+        "period": "2019–2025",
+        "note": "Overall research sample across seven years, not the number of AI payers or respondents in 2025."
+      },
+      "referencePeriod": "2019–2025 transactions; 2025 figures used here",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Box 1: Classification of AI adopters",
+          "supportedFact": "Study identifies more than 500 AI tools. Free use, custom development and AI embedded in other applications are outside the payment measure."
+        },
+        {
+          "location": "Figure 4, accessible table for left panel",
+          "supportedFact": "2025 shares: one service 72.50%; two services 18.06%; three or more services 9.44%. Two or more totals 27.50%."
+        },
+        {
+          "location": "Figure 6 and its accessible description",
+          "supportedFact": "The 2025 median monthly AI payment is approximately $28–$30; the text rounds to roughly $30. This is a different measure from the Chamber’s self-reported 2026 spending."
+        }
+      ]
+    },
+    {
+      "id": "census-nes-2024-release",
+      "publisher": "U.S. Census Bureau",
+      "sourceType": "Government statistical release",
+      "title": "Census Bureau Releases 2024 Nonemployer Statistics",
+      "url": "https://www.census.gov/newsroom/press-releases/2026/2024-nonemployer-statistics.html",
+      "publishedAt": "2026-09-29",
+      "fieldwork": null,
+      "population": "Nonemployer establishments in covered U.S. sectors, with no paid employees, subject to federal income tax, and generally at least $1,000 in receipts ($1 for construction).",
+      "sample": null,
+      "referencePeriod": "2024 business activity",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Release date and dataset description",
+          "supportedFact": "2024 NES was released September 29, 2026 and is based on business income tax records. Nonemployers include sole proprietorships, partnerships and corporations."
+        }
+      ]
+    },
+    {
+      "id": "census-nes-2024-quickfacts",
+      "publisher": "U.S. Census Bureau",
+      "sourceType": "Government statistical table",
+      "title": "QuickFacts: United States — total nonemployer establishments, 2024",
+      "url": "https://www.census.gov/quickfacts/fact/table/US/NES010224",
+      "publishedAt": null,
+      "fieldwork": null,
+      "population": "U.S. nonemployer establishments",
+      "sample": null,
+      "referencePeriod": "2024; underlying NES release September 29, 2026",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Total nonemployer establishments, 2024",
+          "supportedFact": "31,985,874 nonemployer establishments. This newer segment count is kept separate from SBA’s consolidated 2022 business total."
+        }
+      ]
     }
   ],
   "editorialInterpretation": {
     "label": "Interpretation, not a survey finding",
     "text": "The case for this publication is helping owners understand a task, choose a suitable tool, and implement it with confidence. Adoption gaps and learning needs help shape that work. They do not establish how many owners will visit this site or buy through its links.",
-    "modelBoundary": "Use the interactive builder to explore explicit traffic, purchase, commission, refund, retention, and payout assumptions. National business counts should not automatically populate a customer or conversion field."
+    "modelBoundary": "Use explicit market-share, traffic, purchase, commission, refund, retention and payout assumptions. A target share can be translated into required business acquisitions and traffic; national business counts are not evidence that those customers have been acquired."
+  },
+  "marketShare": {
+    "broadBusinesses": 36207130,
+    "referencePeriod": "2022 business counts; published February 2026",
+    "sourceUrl": "https://advocacy.sba.gov/wp-content/uploads/2026/02/FINAL_FAQsAboutSmallBusiness_2026_012826.pdf",
+    "definition": "Independent U.S. businesses with fewer than 500 employees, including employer and nonemployer firms. This is a broad reference population, not a verified pool of paying customers.",
+    "countingRule": "Count each acquired business once for market penetration. Several qualifying vendor purchases by that business can generate separate commissions without becoming additional businesses.",
+    "interpretation": "The opportunity includes first-time adopters and businesses adding or replacing tools. AI use does not mean a business has finished choosing software; eligibility for commission depends on each vendor’s new-customer and attribution rules.",
+    "evidence": [
+      {
+        "title": "Businesses already pay for several AI services",
+        "value": "27.5%",
+        "body": "Among AI-paying firms in JPMorganChase Institute’s 2025 transaction data, 18.06% paid for two services and 9.44% for three or more. The sum supports exploring multiple purchases; it does not establish three purchases per business or attribution to one publisher.",
+        "url": "https://www.jpmorganchase.com/institute/all-topics/business-growth-and-entrepreneurship/understanding-ai-use-by-small-businesses"
+      },
+      {
+        "title": "Observed AI payments in a banking dataset",
+        "value": "$28–$30 / month",
+        "body": "Approximate 2025 median in JPMorganChase Institute’s payment analysis. It covers identifiable paid AI services, excluding free use, custom development and AI embedded in other software. It is not the median software budget of every U.S. business.",
+        "url": "https://www.jpmorganchase.com/institute/all-topics/business-growth-and-entrepreneurship/understanding-ai-use-by-small-businesses"
+      },
+      {
+        "title": "Self-reported AI spending among paying users",
+        "value": "$250 / month",
+        "body": "Median reported by businesses paying for AI in the Chamber’s 2026 survey. This differs from the banking study in year, sample and measurement. The two figures are separate reference points, not a blended market average or fully commissionable spending.",
+        "url": "https://www.uschamber.com/assets/documents/Empowering-Small-Business-The-Impact-of-Technology-on-U.S.-Small-Business-Small-Business-Report-2026.pdf"
+      },
+      {
+        "title": "A newer count of businesses without employees",
+        "value": "31,985,874",
+        "body": "Census counted these nonemployer establishments in 2024; the data were released September 29, 2026. This newer segment count is shown separately. It is not added to the older employer count to create an unsupported national total.",
+        "url": "https://www.census.gov/quickfacts/fact/table/US/NES010224"
+      }
+    ]
   }
 }
