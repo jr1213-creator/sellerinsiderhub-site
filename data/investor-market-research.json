@@ -1,0 +1,365 @@
+{
+  "asOf": "2026-11-01",
+  "title": "The small-business audience and AI adoption",
+  "introduction": "A large business base, uneven adoption, and a continuing need for practical guidance. These figures provide context for the scenarios below; they do not forecast readership, conversions, or revenue.",
+  "cards": [
+    {
+      "id": "us-small-businesses",
+      "value": "36.2M",
+      "numericValue": 36207130,
+      "unit": "businesses",
+      "label": "U.S. small businesses",
+      "body": "SBA’s February 2026 report counts 36,207,130 businesses with fewer than 500 employees.",
+      "population": "Independent employer and nonemployer businesses",
+      "period": "2022 business counts; published February 2026",
+      "sourceIds": [
+        "sba-2026-release",
+        "sba-2026-faq"
+      ],
+      "calculation": null,
+      "footnote": "Includes 29,811,495 businesses with no paid employees (82.3%)."
+    },
+    {
+      "id": "chamber-ai-use",
+      "value": "66%",
+      "numericValue": 66,
+      "unit": "percent",
+      "label": "Reported using AI",
+      "body": "Share in the Chamber’s 2026 survey.",
+      "population": "Surveyed businesses with fewer than 250 employees",
+      "period": "July 23–August 6, 2026",
+      "sourceIds": [
+        "chamber-2026-summary",
+        "chamber-2026-report"
+      ],
+      "calculation": null,
+      "footnote": "Survey estimate; not a nationwide business count."
+    },
+    {
+      "id": "chamber-ai-nonuse",
+      "value": "34%",
+      "numericValue": 34,
+      "unit": "percent",
+      "label": "Did not report AI use",
+      "body": "The complement of 66% within the same survey.",
+      "population": "Same respondents and measure as the AI-use card",
+      "period": "July 23–August 6, 2026",
+      "sourceIds": [
+        "chamber-2026-summary",
+        "chamber-2026-report"
+      ],
+      "calculation": {
+        "expression": "100 − 66 = 34",
+        "basis": "Same-survey complement of a rounded percentage."
+      },
+      "footnote": "Not multiplied by SBA’s business count."
+    },
+    {
+      "id": "chamber-workforce-preparation",
+      "value": "95%",
+      "numericValue": 95,
+      "unit": "percent",
+      "label": "AI users preparing their workforce",
+      "body": "Includes independent learning; 47% reported on-the-job training.",
+      "population": "AI-using respondents only",
+      "period": "July 23–August 6, 2026",
+      "sourceIds": [
+        "chamber-2026-summary",
+        "chamber-2026-report"
+      ],
+      "calculation": null,
+      "footnote": "A broad readiness measure, not 95% receiving formal training."
+    }
+  ],
+  "implementationNeeds": [
+    {
+      "id": "knowledge",
+      "title": "Explain where to start",
+      "body": "16% of surveyed nonusers cited insufficient AI knowledge.",
+      "population": "Chamber non-AI users",
+      "sourceIds": [
+        "chamber-2026-report"
+      ],
+      "interpretation": "Editorial implication: teach one concrete task with a worked example, prerequisites, and a way to check the result. This is a topic-selection rationale, not measured demand for this website."
+    },
+    {
+      "id": "data-confidence",
+      "title": "Make data choices understandable",
+      "body": "27% of surveyed nonusers worried about exposing sensitive data.",
+      "population": "Chamber non-AI users",
+      "sourceIds": [
+        "chamber-2026-report"
+      ],
+      "interpretation": "Editorial implication: explain which information a workflow needs, offer fictional examples, and show where owners should review permissions and vendor data settings. Concern alone does not establish purchase intent."
+    }
+  ],
+  "methodology": {
+    "shortNote": "These sources use different populations, questions, and dates. Survey percentages are estimates, not counts of potential customers.",
+    "nonUserCountNote": "There is no directly comparable nationwide count of small businesses not using AI in these sources. SBA includes businesses without employees; Census’s AI survey covers employers; the Chamber uses a different business-size definition. Multiplying an AI nonuse percentage by 36.2 million would produce an unsupported estimate.",
+    "rules": [
+      "Keep the population and fieldwork date visible with every adoption percentage.",
+      "Show 34% as a calculated complement within one survey, not as a separate survey finding or count.",
+      "Do not treat the two complementary adoption cards as two independent pieces of evidence.",
+      "Do not interpret nonuse as unmet demand, readiness to buy, or an inevitable future conversion.",
+      "Keep observed statistics separate from editorial implications and the visitor’s economic scenario inputs.",
+      "Do not infer a causal effect on growth or a guaranteed educational or financial result from descriptive survey evidence."
+    ],
+    "surveyComparability": [
+      {
+        "id": "sba",
+        "sourceIds": [
+          "sba-2026-faq"
+        ],
+        "summary": "The research definition is an independent business with fewer than 500 employees. The February 2026 publication combines 2022 Statistics of U.S. Businesses and Nonemployer Statistics; publication year is not the count’s reference year."
+      },
+      {
+        "id": "chamber",
+        "sourceIds": [
+          "chamber-2026-report"
+        ],
+        "summary": "Online survey: 3,732 U.S. businesses, fewer than 250 employees; July 23–August 6, 2026. Published October 2. Readiness includes self-directed learning; the chart records 5% doing nothing."
+      },
+      {
+        "id": "census-btos",
+        "sourceIds": [
+          "census-btos-overview",
+          "census-ai-story",
+          "census-btos-latest-index"
+        ],
+        "summary": "BTOS represents nonfarm employer businesses, including firms larger than the small-business thresholds. It asks about AI use during the previous two weeks. Wording broadened from producing goods/services to any business function in late 2025; the old and revised questions should not be plotted as an unchanged measure. The October 22, 2026 release covers the period ending October 18. Its latest numeric AI estimate was not extracted, so no October adoption rate is displayed."
+      },
+      {
+        "id": "nfib",
+        "sourceIds": [
+          "nfib-2025-release",
+          "nfib-2025-report"
+        ],
+        "summary": "NFIB’s June 25, 2025 release concerns small employers from its membership survey. Fieldwork ran March 6–31, 2025: 20,000 owners invited, 521 completed. The AI item has 514 employer responses: 24% yes and 76% no. These older, differently sampled results are context, not a second estimate of the Chamber’s 2026 population."
+      }
+    ],
+    "selectionNote": "Headline cards use the latest consolidated SBA FAQ located and the current Chamber original report. Census and NFIB are retained to make the population differences explicit. No all-business nonuser count is supplied.",
+    "maintenanceTrigger": "Review when SBA issues a new national count or the Chamber releases a new edition. Any replacement adoption estimate must retain its own definition, reference period, and denominator."
+  },
+  "sources": [
+    {
+      "id": "sba-2026-release",
+      "publisher": "U.S. Small Business Administration, Office of Advocacy",
+      "sourceType": "government statistical publication",
+      "title": "Advocacy Releases Frequently Asked Questions About Small Businesses 2026",
+      "url": "https://advocacy.sba.gov/2026/02/03/advocacy-releases-frequently-asked-questions-about-small-businesses-2026/",
+      "publishedAt": "2026-02-03",
+      "fieldwork": null,
+      "population": "U.S. small businesses",
+      "sample": null,
+      "referencePeriod": "2022 counts, published in 2026",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Opening statistical bullets",
+          "excerpt": "There are 36,207,130 small businesses in the United States.",
+          "supportedFact": "Exact national count in the February 2026 release."
+        }
+      ]
+    },
+    {
+      "id": "sba-2026-faq",
+      "publisher": "U.S. Small Business Administration, Office of Advocacy",
+      "sourceType": "government statistical publication",
+      "title": "Frequently Asked Questions About Small Business, February 2026",
+      "url": "https://advocacy.sba.gov/wp-content/uploads/2026/02/FINAL_FAQsAboutSmallBusiness_2026_012826.pdf",
+      "publishedAt": "2026-02-03",
+      "fieldwork": null,
+      "population": "Independent businesses with fewer than 500 employees, including nonemployers",
+      "sample": null,
+      "referencePeriod": "2022 SUSB and 2022 NES",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Questions 1–2 and final data-source note",
+          "excerpt": "82.3 percent, or 29,811,495 firms, have no employees",
+          "supportedFact": "Small-business definition, employer/nonemployer split, and reference year."
+        }
+      ]
+    },
+    {
+      "id": "chamber-2026-summary",
+      "publisher": "U.S. Chamber of Commerce, Technology Engagement Center",
+      "sourceType": "original industry-association survey",
+      "title": "2026 Empowering Small Business Report: key findings",
+      "url": "https://www.uschamber.com/technology/2026-empowering-small-business-report",
+      "publishedAt": "2026-10-02",
+      "fieldwork": {
+        "start": "2026-07-23",
+        "end": "2026-08-06"
+      },
+      "population": "U.S. businesses with fewer than 250 employees",
+      "sample": {
+        "respondents": 3732,
+        "mode": "online"
+      },
+      "referencePeriod": "2026 survey",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Key findings",
+          "excerpt": "2/3 of small businesses now use AI. (66%)",
+          "supportedFact": "66% adoption and 95% workforce readiness; 34% is calculated."
+        }
+      ]
+    },
+    {
+      "id": "chamber-2026-report",
+      "publisher": "U.S. Chamber of Commerce C_TEC / Teneo Research",
+      "sourceType": "original industry-association survey",
+      "title": "Empowering Small Business, fifth edition",
+      "url": "https://www.uschamber.com/assets/documents/Empowering-Small-Business-The-Impact-of-Technology-on-U.S.-Small-Business-Small-Business-Report-2026.pdf",
+      "publishedAt": "2026-10-02",
+      "fieldwork": {
+        "start": "2026-07-23",
+        "end": "2026-08-06"
+      },
+      "population": "Fewer than 250 employees",
+      "sample": {
+        "respondents": 3732,
+        "mode": "online"
+      },
+      "referencePeriod": "2026 survey",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Printed pages 5, 18, 23, 28",
+          "excerpt": "Wave 5: July 23–August 6, 2026",
+          "supportedFact": "Methods, adoption, readiness, and nonuser barriers; chart labels visually verified."
+        }
+      ]
+    },
+    {
+      "id": "census-btos-overview",
+      "publisher": "U.S. Census Bureau",
+      "sourceType": "government survey documentation",
+      "title": "Business Trends and Outlook Survey (BTOS) Data",
+      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "publishedAt": "2026-07-13",
+      "lastRevisedAt": "2026-10-21",
+      "fieldwork": null,
+      "population": "Nonfarm employer businesses; single and multiple locations",
+      "sample": {
+        "selectedBusinessesApproximate": 1200000,
+        "panels": 6,
+        "casesPerPanelApproximate": 200000,
+        "note": "Sample-frame counts, not completed responses per wave."
+      },
+      "referencePeriod": "Biweekly collections; each panel reports every 12 weeks",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Survey scope and design",
+          "excerpt": "include all employer businesses (single location and multi-location) in the U.S. economy, excluding farms.",
+          "supportedFact": "The target population excludes nonemployers and is not limited to SBA-small businesses."
+        }
+      ]
+    },
+    {
+      "id": "census-ai-story",
+      "publisher": "U.S. Census Bureau",
+      "sourceType": "government statistical analysis",
+      "title": "Large Firms With at Least 20 Employees Biggest AI Users",
+      "url": "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html",
+      "publishedAt": "2026-05-26",
+      "fieldwork": null,
+      "population": "BTOS employer-business population",
+      "sample": null,
+      "referencePeriod": "Biweekly waves ending December 14, 2025 through May 3, 2026; current use refers to the previous two weeks of each wave.",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Question wording discussion",
+          "excerpt": "in any business function",
+          "supportedFact": "Broader AI question introduced in November 2025; current-use question uses a two-week reference period."
+        }
+      ]
+    },
+    {
+      "id": "census-btos-latest-index",
+      "publisher": "U.S. Census Bureau",
+      "sourceType": "government survey release index",
+      "title": "BTOS Downloads and Documentation, October 22, 2026 release",
+      "url": "https://www.census.gov/hfp/btos/data_downloads?so=1",
+      "publishedAt": "2026-10-22",
+      "fieldwork": {
+        "start": null,
+        "end": "2026-10-18",
+        "note": "The official release index verifies the period-ending date. A collection start date was not independently verified."
+      },
+      "population": "BTOS employer-business population",
+      "sample": null,
+      "referencePeriod": "Period ending 2026-10-18",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Current-data date range",
+          "excerpt": "09/11/2023 to 10/18/2026",
+          "supportedFact": "A newer release exists; no numeric AI estimate from it was used."
+        }
+      ],
+      "verificationLimitation": "Release date and range verified in the official indexed page. Direct text rendering requires JavaScript; the latest numeric series was not retrieved."
+    },
+    {
+      "id": "nfib-2025-release",
+      "publisher": "NFIB Research Center",
+      "sourceType": "original membership survey",
+      "title": "How Small Businesses Incorporate Tech and AI Advancements",
+      "url": "https://www.nfib.com/news/press-release/new-nfib-report-how-small-businesses-incorporate-tech-and-ai-advancements/",
+      "publishedAt": "2025-06-25",
+      "fieldwork": {
+        "start": "2025-03-06",
+        "end": "2025-03-31"
+      },
+      "population": "Small employers drawn from NFIB membership",
+      "sample": {
+        "invited": 20000,
+        "completed": 521,
+        "mode": "email invitation"
+      },
+      "referencePeriod": "Current use at the time of response",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "AI findings and methodology",
+          "excerpt": "24%",
+          "supportedFact": "Reported AI use was 24%; reported nonuse was 76%. The release supplies dates and sample details."
+        }
+      ]
+    },
+    {
+      "id": "nfib-2025-report",
+      "publisher": "NFIB Research Center",
+      "sourceType": "original membership survey",
+      "title": "Small Business and Technology, 2025",
+      "url": "https://www.nfib.com/wp-content/uploads/2025/06/2025-NFIB-Technology-Survey.pdf",
+      "publishedAt": "2025-06-25",
+      "fieldwork": {
+        "start": "2025-03-06",
+        "end": "2025-03-31"
+      },
+      "population": "Employer results; report also tabulates nonemployers separately",
+      "sample": {
+        "aiItemEmployerResponses": 514
+      },
+      "referencePeriod": "Current use at response",
+      "verifiedAt": "2026-11-01",
+      "evidence": [
+        {
+          "location": "Printed page 13, All employers column",
+          "excerpt": "Do you currently use any AI technologies for any business activities",
+          "supportedFact": "The AI item shows 24% yes and 76% no, with 514 employer responses."
+        }
+      ]
+    }
+  ],
+  "editorialInterpretation": {
+    "label": "Interpretation, not a survey finding",
+    "text": "The case for this publication is helping owners understand a task, choose a suitable tool, and implement it with confidence. Adoption gaps and learning needs help shape that work. They do not establish how many owners will visit this site or buy through its links.",
+    "modelBoundary": "Use the interactive builder to explore explicit traffic, purchase, commission, refund, retention, and payout assumptions. National business counts should not automatically populate a customer or conversion field."
+  }
+}

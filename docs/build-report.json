@@ -6,6 +6,12 @@
   "categories": 14,
   "comparisons": 8,
   "playbooks": 12,
+  "investorRoom": {
+    "route": "/partners/investors/",
+    "assets": 4,
+    "access": "server-session",
+    "indexed": false
+  },
   "routes": [
     {
       "route": "/",

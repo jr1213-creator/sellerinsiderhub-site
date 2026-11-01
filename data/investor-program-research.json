@@ -1,0 +1,191 @@
+{
+  "checkedAt": "2026-11-01",
+  "currency": "USD",
+  "basis": "Official public program pages, provider help documents, and issuer financial disclosures. No private affiliate dashboard, customer data, or Seller Insider Hub affiliate approval is represented.",
+  "defaultPriceNote": "The model's subscription price is an editable assumption about a referred customer's monthly spend. $100, $50, and other scenario prices are not vendor plan-price quotations.",
+  "modelNotes": [
+    "Recurring commissions belong to an affiliate agreement. Seller Insider Hub does not own the vendors' subscription revenue or customer contracts.",
+    "Every maturity and sensitivity preset is illustrative. None is a measured result, probability-weighted forecast, investor return, or promise of passive earnings.",
+    "A month-level delay approximates approval, settlement, withdrawal, and bank processing. Day-specific schedules, annual upfront customer billing, and account-specific exceptions can change cash timing.",
+    "Payout thresholds are applied separately to each modeled program. Real Impact account balances may pool multiple brands, so the separate-program treatment can delay modeled withdrawals relative to a shared account.",
+    "payoutMinimumCustomers is a cumulative count of expected unique approved referrals after their modeled delay. It is not an active-customer requirement or a fresh referral count per payout. Exact account-level settlement rules still govern real withdrawals.",
+    "Conversion, eligibility, attribution, churn, reversal, average spend, and traffic assumptions require business evidence. They are not supplied by the public commission rate.",
+    "The eligibility/approval rate should incorporate expected attribution failures and required survival through a provider's lock. The model applies this expected approval at acquisition rather than evaluating each actual cancellation or refund against a vendor contract.",
+    "Model costs should include editorial maintenance, founder compensation, contractors, software, administration, and acquisition. A negative cash balance means additional funding is required; the model does not assume that funding is available.",
+    "Company benchmarks provide context about established businesses. Their revenue, profit, audience, and valuation must not be scaled mechanically into a Seller Insider Hub forecast."
+  ],
+  "programs": [
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "summary": "The publicly advertised Starter affiliate tier pays 30% recurring commission for up to one year. It is an application-based program with a 180-day cookie window.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 30,
+        "commissionMonths": 12,
+        "payoutDelayMonths": 2,
+        "payoutMinimum": 10,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 180,
+        "payoutSummary": "Impact handles payments; the public program page states a $10 withdrawal minimum and EFT or PayPal. The applicable locking period is specified in the affiliate tool rather than as a universal number in the public policies.",
+        "eligibility": "Qualifying new customers must remain active through the lock. Existing customers, active sales opportunities, self-referrals, and serviced-client referrals can be ineligible.",
+        "adjustments": "The public policies exclude extra commission from subsequent upgrades; downgrades reduce the commission. Agreement eligibility and account terms govern payment."
+      },
+      "caveats": [
+        "Two months is an editable planning delay, not a publicly guaranteed HubSpot payout interval.",
+        "A 12-month term ends a cohort's commission even if that customer continues subscribing.",
+        "Higher affiliate tiers and cost-per-signup arrangements are not assumed."
+      ],
+      "sourceUrls": [
+        "https://www.hubspot.com/partners/affiliates",
+        "https://www.hubspot.com/partners/affiliates/program-policies",
+        "https://legal.hubspot.com/affiliate-program-agreement"
+      ]
+    },
+    {
+      "id": "mailerlite",
+      "name": "MailerLite",
+      "summary": "MailerLite advertises 30% recurring commission on referred customers' paid subscriptions for as long as they remain active, subject to affiliate eligibility. Its tracking cookie lasts 45 days.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 30,
+        "commissionMonths": 0,
+        "payoutDelayMonths": 1,
+        "payoutMinimum": 100,
+        "payoutMinimumCustomers": 2
+      },
+      "terms": {
+        "cookieDays": 45,
+        "payoutSummary": "Each sale has a 30-day refund hold. Settlement requires at least $100 in open balance from at least two separate referrals. Eligible balances settle on Fridays when payment and billing details are complete.",
+        "eligibility": "Applications are reviewed; a free account signup alone is not a paid referral.",
+        "adjustments": "The model applies an expected reversal haircut to commissions. Actual refunded or ineligible sales do not qualify for normal approved settlement."
+      },
+      "caveats": [
+        "One modeled month approximates the 30-day hold; Friday settlement, thresholds, and banking can extend cash timing.",
+        "Zero commission-expiry months means ongoing eligibility in the model, not an unconditional lifetime guarantee.",
+        "Expected fractional referrals approximate a threshold that actual accounts meet through whole qualifying referrals."
+      ],
+      "sourceUrls": [
+        "https://www.mailerlite.com/affiliate",
+        "https://www.mailerlite.com/help/guide-to-affiliate-payouts-and-commissions"
+      ]
+    },
+    {
+      "id": "kit",
+      "name": "Kit",
+      "summary": "Kit's base offer pays 50% of a referred paying customer's first 12 months of payments. Additional 10–20% commission after that first year requires qualifying for, and retaining, an affiliate status tier.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "model": {
+        "commissionType": "recurring",
+        "commissionPct": 50,
+        "commissionMonths": 12,
+        "payoutDelayMonths": 2,
+        "payoutMinimum": 5,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": null,
+        "payoutSummary": "Kit's getting-started guide describes a 31-day refund period, subsequent monthly review, and withdrawal availability around the 13th through PartnerStack. A $5 minimum applies.",
+        "eligibility": "Base first-year commissions apply to paying referrals. The ongoing Bronze, Silver, and Gold rates are conditional. Paid-promotion referrals do not count toward status qualification.",
+        "adjustments": "Refund review precedes payout. A customer continuing after month 12 does not automatically extend the base 50% commission."
+      },
+      "caveats": [
+        "The model uses only the base offer; conditional post-year-one status commissions are excluded.",
+        "The getting-started guide's example has a July 4 transaction available around September 13 after the hold and review. The FAQ describes review of commissions earned in the previous month without fully repeating that hold. Two months is a planning approximation, not a bank-date guarantee.",
+        "No numeric cookie window was established from the current official pages reviewed."
+      ],
+      "sourceUrls": [
+        "https://kit.com/affiliate",
+        "https://help.kit.com/en/articles/2502522-getting-started-as-a-kit-affiliate",
+        "https://help.kit.com/en/articles/2502473-kit-affiliate-commissions-faq"
+      ]
+    },
+    {
+      "id": "semrush-seo",
+      "name": "Semrush SEO Toolkit",
+      "summary": "The published base table lists a $200 commission for a new SEO Toolkit sale. This is a one-time referral payment, not recurring subscription revenue.",
+      "checkedAt": "2026-11-01",
+      "sellerInsiderHubApproval": "Not verified",
+      "model": {
+        "commissionType": "one-time",
+        "oneTimeCommission": 200,
+        "commissionPct": 0,
+        "commissionMonths": 0,
+        "payoutDelayMonths": 2,
+        "payoutMinimum": 10,
+        "payoutMinimumCustomers": 0
+      },
+      "terms": {
+        "cookieDays": 120,
+        "payoutSummary": "Semrush states that transactions lock 27 days after the transaction month's end and are paid 21 days after the end of the lock month. Impact withdrawals require at least $10 and completed payment requirements.",
+        "eligibility": "Last-click attribution and a new qualifying account are required. Existing accounts and missing tracking consent can prevent attribution. Applications are reviewed; the public content-publisher criterion includes 1,000 monthly unique visitors.",
+        "adjustments": "Invalid or unattributed actions do not generate normal commissions. Trial and higher-tier rewards are not included."
+      },
+      "caveats": [
+        "Two modeled months approximate transaction locking and payment; withdrawal settings and banking can add time.",
+        "The separate $10 qualifying-trial reward is excluded to avoid double-counting a paid conversion. Semrush One and other toolkits have different base payments.",
+        "An advertised maximum such as $450 is not the SEO Toolkit base commission used here."
+      ],
+      "sourceUrls": [
+        "https://www.semrush.com/lp/affiliate-program/en/",
+        "https://help.impact.com/partner/what-would-you-like-to-learn-about/platform-features/finance/payments-withdrawals-and-balance/how-do-partners-get-paid"
+      ]
+    }
+  ],
+  "benchmarks": [
+    {
+      "company": "NerdWallet",
+      "period": "Quarter ended June 30, 2026",
+      "publishedAt": "2026-08-06",
+      "checkedAt": "2026-11-01",
+      "revenue": 197300000,
+      "netIncome": 4300000,
+      "currency": "USD",
+      "otherMetrics": {
+        "operatingIncome": 7000000,
+        "smbRevenue": 22100000,
+        "smbRevenueYearOverYearPct": -11
+      },
+      "summary": "Reported $197.3 million of quarterly revenue and $4.3 million of GAAP net income. Its SMB revenue declined 11% year over year, primarily because of continued organic-search pressure.",
+      "caveat": "A mature financial marketplace and guidance business with several financial-product categories, operations, and distribution channels. These are company results, not a software-affiliate conversion benchmark or a Seller Insider Hub earnings target.",
+      "sourceUrls": [
+        "https://investors.nerdwallet.com/news-releases/news-release-details/nerdwallet-reports-second-quarter-results"
+      ]
+    },
+    {
+      "company": "Future plc",
+      "period": "Half year ended March 31, 2026",
+      "publishedAt": "2026-05-14",
+      "checkedAt": "2026-11-01",
+      "revenue": 349100000,
+      "netIncome": null,
+      "currency": "GBP",
+      "otherMetrics": {
+        "adjustedEbitda": 83300000,
+        "adjustedEbitdaMarginPct": 24,
+        "revenueYearOverYearPct": -8
+      },
+      "summary": "Its official investor highlights report £349.1 million of half-year revenue and £83.3 million of adjusted EBITDA, a 24% adjusted EBITDA margin. Revenue declined 8% year over year.",
+      "caveat": "A diversified specialist-media group with advertising, subscriptions, ecommerce, and comparison businesses. Adjusted EBITDA is not net income; netIncome is intentionally null in this record. Different currencies and reporting periods must remain labeled. These figures do not establish a margin or growth forecast for a new publication.",
+      "sourceUrls": [
+        "https://futureplc.com/investor-relations/",
+        "https://futureplc.com/investor-results-events/",
+        "https://futureplc.com/investor-news/future-announces-half-year-results/"
+      ]
+    }
+  ],
+  "evidenceNotes": [
+    {"topic": "HubSpot commission duration and withdrawal minimum", "sourceUrl": "https://www.hubspot.com/partners/affiliates", "checkedAt": "2026-11-01", "finding": "30% recurring for up to one year; 180-day cookie; $10 withdrawal minimum. Public policies defer the lock duration and exact applicable offer to the affiliate tool."},
+    {"topic": "MailerLite payout gating", "sourceUrl": "https://www.mailerlite.com/help/guide-to-affiliate-payouts-and-commissions", "checkedAt": "2026-11-01", "finding": "30-day hold, $100 open balance, at least two different referrals, Friday settlement. These gates materially delay early cash compared with earned commissions."},
+    {"topic": "Kit timing ambiguity", "sourceUrl": "https://help.kit.com/en/articles/2502522-getting-started-as-a-kit-affiliate", "checkedAt": "2026-11-01", "finding": "The worked example includes the 31-day hold before the following review cycle. The separate FAQ compresses that explanation. The model uses an explicit approximation, rather than promising a precise payout date."},
+    {"topic": "Semrush base product selection", "sourceUrl": "https://www.semrush.com/lp/affiliate-program/en/", "checkedAt": "2026-11-01", "finding": "The selected model is SEO Toolkit's base $200 sale payment. Higher-tier maxima, other toolkit prices, and paid trial actions are separate."},
+    {"topic": "Future source presentation", "sourceUrl": "https://futureplc.com/investor-relations/", "checkedAt": "2026-11-01", "finding": "Official search retrieval exposed the HY2026 highlights, while one open-page extraction showed the older FY2025 highlights. The separate official results page identifies HY2026 and its 24% adjusted margin. No FY2026 full-year forecast is presented as a realized result."}
+  ]
+}

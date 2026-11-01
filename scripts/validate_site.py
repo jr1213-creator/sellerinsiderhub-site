@@ -244,6 +244,13 @@ class Validator:
                 return None, url, "unsupported scheme"
             if parts.hostname not in LOCAL_HOSTS:
                 return None, url, "external"
+            if parts.path in {"/partners/investors", "/partners/investors/"}:
+                # A Netlify function, not a public static page, owns this route.
+                gateway = self.dist.parent / "netlify/functions/investor-portal.mjs"
+                private_page = self.dist.parent / "private/investor/index.html"
+                if gateway.is_file() and private_page.is_file():
+                    return private_page, url, None
+                return None, url, "investor function bundle missing"
             if url in seen:
                 return None, url, "redirect loop"
             seen.add(url)
