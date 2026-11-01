@@ -88,3 +88,6 @@
 @media(max-width:820px){.mobile-article-nav{display:block;border:1px solid var(--line);border-radius:10px;margin:0 0 25px;background:#fff;padding:14px 17px}.mobile-article-nav>summary{font-weight:600;cursor:pointer}.mobile-article-nav .toc{margin-top:10px}.detail-sidebar nav.toc{display:none}.detail-sidebar h3:has(+nav.toc){display:none}}
 @media print{.mobile-article-nav,.example-label .button{display:none!important}.table-scroll{overflow:visible;border:0}.data-table th,.data-table td{min-width:0!important;padding:8px!important;font-size:9pt!important}.research-record a:after{display:none}.research-record li{break-inside:avoid}.story-art{break-inside:avoid}}
 @media(max-width:520px){.field input,.field select,.field textarea,.filter-group select,#library-query,.dialog-search,.newsletter-form input[type=email]{font-size:16px}}
+
+/* Recoverable newsletter and contact submissions. */
+.form-retry{margin-top:10px}.form-retry[hidden]{display:none}form[aria-busy="true"] button[type="submit"]{opacity:.65;cursor:wait}.form-status:focus{outline:2px solid currentColor;outline-offset:4px}

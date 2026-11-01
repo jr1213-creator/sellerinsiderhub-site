@@ -232,6 +232,67 @@
     compare=compare.filter(id=>tool(id)).slice(0,3);updateButtons();library();comparison();stackBuilder();renderWorkspace();
     $$('a[data-tool-id]').forEach(a=>{const t=tool(a.dataset.toolId);if(t){a.href=official(t);a.rel=rel(t);a.target='_blank';a.dataset.outbound=t.id;}});
   }).catch(()=>{});
+  function enhanceNativeForms() {
+    // Netlify's documented AJAX format; detection must still be enabled at deploy.
+    // https://docs.netlify.com/manage/forms/setup/#submit-html-forms-with-ajax
+    $$('form[name="sih-newsletter"], form[name="sih-contact"]').forEach(form => {
+      const status = $('.form-status', form) || document.createElement('p');
+      status.className = 'form-status'; status.setAttribute('role', 'status');
+      status.setAttribute('aria-live', 'polite'); status.setAttribute('aria-atomic', 'true');
+      status.tabIndex = -1;
+      if (!status.parentNode) form.appendChild(status);
+      const retry = document.createElement('button');
+      retry.type = 'submit'; retry.className = 'button light small form-retry';
+      retry.textContent = 'Retry'; retry.hidden = true; form.appendChild(retry);
+      let pending = false, submitted = false;
+      form.addEventListener('submit', async event => {
+        event.preventDefault();
+        if (pending || submitted || !form.reportValidity()) return;
+        const buttons = $$('button[type="submit"], input[type="submit"]', form);
+        const disabled = buttons.map(button => button.disabled);
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 20000);
+        pending = true; retry.hidden = true; form.setAttribute('aria-busy', 'true');
+        status.className = 'form-status'; status.textContent = 'Sending…';
+        buttons.forEach(button => {button.disabled = true;});
+        try {
+          const destination = new URL(form.getAttribute('action') || '/thank-you/', location.origin);
+          if (destination.origin !== location.origin) throw new Error('Unexpected form destination');
+          const data = new FormData(form);
+          data.set('form-name', form.getAttribute('name'));
+          const response = await fetch('/', {
+            method: 'POST', credentials: 'same-origin', mode: 'same-origin', redirect: 'follow',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: new URLSearchParams(data).toString(), signal: controller.signal
+          });
+          if (!response.ok || response.status < 200 || response.status >= 300) throw new Error('Submission was not accepted');
+          const responseURL = new URL(response.url || '/', location.origin);
+          if (responseURL.origin !== location.origin) throw new Error('Unexpected response destination');
+          // Netlify does not specify a receipt-body contract. A successful empty
+          // response, changed receipt wording, or interrupted optional body must
+          // not invite a duplicate POST. Still reject a recognizable error page.
+          const html = await response.text().catch(() => '');
+          if (html.trim() && (/text\/html/i.test(response.headers.get('Content-Type') || '') || /<(?:!doctype|html|head|body|h1|title)(?:\s|>)/i.test(html))) {
+            const receipt = new DOMParser().parseFromString(html, 'text/html');
+            const heading = receipt.querySelector('h1')?.textContent || '';
+            const title = receipt.querySelector('title')?.textContent || '';
+            if (/\b404\b|not found|different turn/i.test(title + ' ' + heading)) throw new Error('Submission returned an error page');
+          }
+          status.textContent = 'Thank you. Opening the confirmation page…';
+          location.assign(destination.pathname + destination.search + destination.hash);
+          submitted = true;
+        } catch {
+          status.className = 'form-status error';
+          status.textContent = 'We could not confirm your submission; it may already have reached us. Your details are still here. Retry only if needed, or email partners@sellerinsiderhub.com.';
+          retry.hidden = false; status.focus();
+        } finally {
+          clearTimeout(timeout); pending = false; form.setAttribute('aria-busy', 'false');
+          buttons.forEach((button, index) => {button.disabled = submitted || disabled[index];});
+        }
+      });
+    });
+  }
+  enhanceNativeForms();
   calculators();
   const progressBar=$('.reading-progress span');
   const readingArticle=$('article.article-body');
