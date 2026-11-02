@@ -14,7 +14,7 @@ from affiliate_components import outbound, approved_tool_actions, expand_approve
 from learning_components import render_learning_path
 from brand_components import brand_link, brand_head
 from editorial_images import article_figure, cover_credit, page_image, image_url
-from feed_components import write_feeds
+from feed_components import write_feeds, write_pinterest_feed
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
 ASSET_VERSION = sha256(b''.join((ROOT/path).read_bytes() for path in ['site-assets/hub.css','site-assets/hub.js','site-assets/social-guide.js','site-assets/tutorial-tools.js','site-assets/tutorial-tools.css','site-assets/decision-tools.js','site-assets/decision-tools.css','data/decision-evidence.json','data/catalog.json','data/vendor-icons.json','data/editorial.json','data/editorial-images.json','data/business-guides.json','data/feature-guides.json','data/learning-paths.json','site-assets/learning-tools.js','site-assets/learning-tools.css'])).hexdigest()[:12]
@@ -479,9 +479,10 @@ for page in PAGES:
         redirects.append((route+'index.html',route,'301!'))
 redirects.append(('/index.html','/','301!'))
 (OUT/'_redirects').write_text('\n'.join(' '.join(row) for row in dict.fromkeys(redirects))+'\n')
-(OUT/'_headers').write_text('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: SAMEORIGIN\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n/assets/*\n  Cache-Control: public, max-age=86400\n/data/*\n  Cache-Control: public, max-age=0, must-revalidate\n/feed.xml\n  Content-Type: application/rss+xml; charset=utf-8\n  Cache-Control: public, max-age=300, must-revalidate\n/atom.xml\n  Content-Type: application/atom+xml; charset=utf-8\n  Cache-Control: public, max-age=300, must-revalidate\n')
+(OUT/'_headers').write_text('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: SAMEORIGIN\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n/assets/*\n  Cache-Control: public, max-age=86400\n/data/*\n  Cache-Control: public, max-age=0, must-revalidate\n/feed.xml\n  Content-Type: application/rss+xml; charset=utf-8\n  Cache-Control: public, max-age=300, must-revalidate\n/atom.xml\n  Content-Type: application/atom+xml; charset=utf-8\n  Cache-Control: public, max-age=300, must-revalidate\n/feeds/pinterest.xml\n  Content-Type: application/rss+xml; charset=utf-8\n  Cache-Control: public, max-age=300, must-revalidate\n')
 (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /partners/investors\nSitemap: '+ORIGIN+'/sitemap.xml\nSitemap: '+ORIGIN+'/atom.xml\n')
 feed_entries = write_feeds(OUT, ORIGIN, FEED)
+write_pinterest_feed(OUT, ORIGIN, FEED, load('editorial-images.json')['images'])
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+ORIGIN+e(s['url'])+'</loc><lastmod>'+s['modified']+'</lastmod></url>' for s in SEARCH)+'</urlset>')
 (OUT/'llms.txt').write_text('# Seller Insider Hub\n\n> Independent practical AI and software guidance for small businesses.\n\n## Tutorials\n'+''.join('- ['+p['title']+']('+ORIGIN+'/playbooks/'+p['id']+'/)\n' for p in PLAYS)+'\n## Comparisons\n'+''.join('- ['+c['title']+']('+ORIGIN+'/comparisons/'+c['id']+'/)\n' for c in COMPARISONS)+'\n## Publication\n- [Editorial standards]('+ORIGIN+'/editorial-standards/)\n- [Founder and operator]('+ORIGIN+'/about/)\n- [Tool guides]('+ORIGIN+'/tool-library/)\n',encoding='utf-8')
 (OUT/'data/search-index.json').write_text(j(SEARCH),encoding='utf-8')

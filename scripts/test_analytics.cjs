@@ -74,10 +74,14 @@ async function page({url = ORIGIN + '/', consent = null, referrer = '', library 
   const commands = () => (context.window.dataLayer || []).map(command => [...command]);
   const configurations = () => commands().filter(command => command[0] === 'config');
   const events = () => commands().filter(command => command[0] === 'event');
-  async function click(dataset, {rel = ''} = {}) {
-    const element = new Element('', dataset);
+  async function click(dataset = {}, {rel = '', href = null, tagName = href ? 'A' : 'BUTTON', defaultPrevented = false} = {}) {
+    const element = new Element('', dataset, tagName);
     element.rel = rel;
-    await listeners.get('click')({target: element});
+    if (href !== null) {
+      const url = new URL(href, location);
+      element.origin = url.origin; element.pathname = url.pathname;
+    }
+    await listeners.get('click')({target: element, defaultPrevented});
   }
   const storageEvent = event => windowListeners.get('storage')(event);
   return {context, controls, storage, writes, scripts, nodes, cookieWrites, cookies, commands, configurations, events, click, storageEvent};
@@ -121,6 +125,34 @@ test('outbound placements are enumerated and contain no arbitrary attribute text
   await p.click({outbound: 'sample-tool', outboundPlacement: 'reader@example.test'}, {rel: 'sponsored'});
   assert.equal(p.events()[0][2].placement, 'other');
   assert.doesNotMatch(JSON.stringify(p.events()), /reader@example/);
+});
+
+test('feed clicks record only an enumerated format for actual same-origin RSS and Atom links', async () => {
+  const p = await page({consent: 'yes'});
+  await p.click({}, {href: '/feed.xml?email=reader%40example.test#private'});
+  await p.click({}, {href: ORIGIN + '/atom.xml'});
+  for (const href of ['https://elsewhere.example/feed.xml', '/feed.xml.backup', '/tools/feed.xml', '/']) await p.click({}, {href});
+  await p.click({}, {href: '/feed.xml', tagName: 'BUTTON'});
+  await p.click({}, {href: '/feed.xml', defaultPrevented: true});
+  assert.deepEqual(JSON.parse(JSON.stringify(p.events())), [
+    ['event', 'feed_open', {feed_format: 'rss'}],
+    ['event', 'feed_open', {feed_format: 'atom'}],
+  ]);
+  assert.doesNotMatch(JSON.stringify(p.events()), /example|private|email|https/);
+});
+
+test('feed measurement obeys live consent and excludes preview hosts', async () => {
+  for (const options of [{}, {consent: 'no'}, {consent: 'yes', url: 'https://sample-preview.netlify.app/'}]) {
+    const p = await page(options);
+    await p.click({}, {href: '/feed.xml'});
+    assert.equal(p.events().length, 0);
+    assert.equal(p.scripts.length, 0);
+  }
+  const p = await page({consent: 'yes'});
+  await p.click({}, {href: '/feed.xml'});
+  await p.click({consent: 'no'});
+  await p.click({}, {href: '/atom.xml'});
+  assert.equal(p.events().length, 1);
 });
 
 test('invalid stored consent requires a new explicit choice', async () => {

@@ -101,7 +101,11 @@
       if (name.startsWith('_ga')) for (const domain of ['', location.hostname, '.sellerinsiderhub.com']) document.cookie = `${name}=; Max-Age=0; path=/;${domain ? ' domain=' + domain + ';' : ''} SameSite=Lax`;
     });
   }
-  function track(name, parameters = {}) {if (analyticsProductionHost && analyticsConsent === 'yes' && !window['ga-disable-' + ANALYTICS_ID] && window.gtag) window.gtag('event', name, parameters);}
+  function track(name, parameters = {}) {
+    if (!analyticsProductionHost || analyticsConsent !== 'yes' || window['ga-disable-' + ANALYTICS_ID] || typeof window.gtag !== 'function') return false;
+    try {window.gtag('event', name, parameters); return true;}
+    catch {return false;} // Optional measurement must not interrupt the visitor's action.
+  }
   if (analyticsConsent === 'yes') enableAnalytics();
   if (!analyticsConsent && $('#cookie-panel')) $('#cookie-panel').hidden = false;
   window.addEventListener?.('storage', event => {
@@ -187,6 +191,10 @@
       });
     }
     if (el.matches('a[download]')) track('resource_download', {resource:el.getAttribute('download') || el.pathname.split('/').pop()});
+    if (!event.defaultPrevented && el.tagName === 'A' && el.origin === location.origin) {
+      const format = el.pathname === '/feed.xml' ? 'rss' : el.pathname === '/atom.xml' ? 'atom' : null;
+      if (format) track('feed_open', {feed_format:format});
+    }
     if (el.matches('[data-copy-target]')) {const target = document.getElementById(el.dataset.copyTarget); if (target) copy(target.textContent);}
     if (el.id === 'save-stack' && currentStack) {if (saveWorkspace(() => {workspace.stacks.unshift({...currentStack, id:Date.now().toString(36), created:new Date().toISOString()}); workspace.stacks = workspace.stacks.slice(0,50);})) toast('Your stack is saved in this browser.');}
     if (el.id === 'export-stack' && currentStack) download('my-business-tool-stack.txt', stackText(currentStack));
@@ -343,16 +351,18 @@
         if (pending || submitted || !form.reportValidity()) return;
         const buttons = $$('button[type="submit"], input[type="submit"]', form);
         const disabled = buttons.map(button => button.disabled);
+        const formName = form.getAttribute('name');
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 20000);
+        let destination;
         pending = true; retry.hidden = true; form.setAttribute('aria-busy', 'true');
         status.className = 'form-status'; status.textContent = 'Sending…';
         buttons.forEach(button => {button.disabled = true;});
         try {
-          const destination = new URL(form.getAttribute('action') || '/thank-you/', location.origin);
+          destination = new URL(form.getAttribute('action') || '/thank-you/', location.origin);
           if (destination.origin !== location.origin) throw new Error('Unexpected form destination');
           const data = new FormData(form);
-          data.set('form-name', form.getAttribute('name'));
+          data.set('form-name', formName);
           const response = await fetch('/', {
             method: 'POST', credentials: 'same-origin', mode: 'same-origin', redirect: 'follow',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -372,7 +382,6 @@
             if (/\b404\b|not found|different turn/i.test(title + ' ' + heading)) throw new Error('Submission returned an error page');
           }
           status.textContent = 'Thank you. Opening the confirmation page…';
-          location.assign(destination.pathname + destination.search + destination.hash);
           submitted = true;
         } catch {
           status.className = 'form-status error';
@@ -382,6 +391,19 @@
           clearTimeout(timeout); pending = false; form.setAttribute('aria-busy', 'false');
           buttons.forEach((button, index) => {button.disabled = submitted || disabled[index];});
         }
+        if (!submitted) return;
+        // This records the accepted HTTP response, not a confirmed subscriber.
+        // A blocked Google tag must never hold up the confirmation page.
+        let navigated = false;
+        const navigate = () => {
+          if (navigated) return;
+          navigated = true; clearTimeout(navigationTimeout);
+          location.assign(destination.pathname + destination.search + destination.hash);
+        };
+        const navigationTimeout = setTimeout(navigate, 800);
+        if (!['sih-newsletter', 'sih-contact'].includes(formName) || !track('form_submission_accepted', {
+          form_name:formName, event_callback:navigate, event_timeout:800
+        })) navigate();
       });
     });
   }

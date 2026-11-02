@@ -16,8 +16,8 @@ function response({status = 200, html = receipt, type = 'text/html; charset=UTF-
   return {ok: status >= 200 && status < 300, status, url, headers: {get: () => type}, text: async () => html};
 }
 
-function page(replies = []) {
-  const calls = [], navigations = [], timers = new Map(); let timerID = 0;
+function page(replies = [], {consent = 'no', url = origin + '/'} = {}) {
+  const calls = [], navigations = [], scripts = [], timers = new Map(), timerDelays = new Map(), windowListeners = new Map(); let timerID = 0;
   class Element {
     constructor(tag = 'div') {
       this.tagName = tag.toUpperCase(); this.children = []; this.attributes = new Map();
@@ -45,15 +45,20 @@ function page(replies = []) {
   const contact = form('sih-contact', {name: 'Sample Person', email: 'reader@example.test', topic: 'Editorial correction', message: 'Please check A&B <details>.'}, false);
   const forms = [newsletter, contact];
   const document = {
+    cookie: '',
     querySelector: () => null,
     querySelectorAll: selector => selector === 'form[name="sih-newsletter"], form[name="sih-contact"]' ? forms : [],
     createElement: tag => new Element(tag), addEventListener() {},
+    head: {appendChild: element => scripts.push(element)},
   };
+  const location = new URL(url);
+  location.assign = destination => navigations.push(destination);
   const context = {
-    document, window: {}, URL, URLSearchParams, AbortController, Intl, console,
-    location: {origin, pathname: '/', search: '', assign: url => navigations.push(url)},
-    localStorage: {getItem: key => key === 'sih.analytics.v1' ? '"no"' : null},
-    setTimeout(callback) { const id = ++timerID; timers.set(id, callback); return id; }, clearTimeout(id) { timers.delete(id); },
+    document, window: {addEventListener: (type, callback) => windowListeners.set(type, callback)}, URL, URLSearchParams, AbortController, Intl, console,
+    location,
+    localStorage: {getItem: key => key === 'sih.analytics.v1' ? JSON.stringify(consent) : null},
+    setTimeout(callback, delay) { const id = ++timerID; timers.set(id, callback); timerDelays.set(id, delay); return id; },
+    clearTimeout(id) { timers.delete(id); timerDelays.delete(id); },
     FormData: class extends Map { constructor(el) { super(Object.entries(el.fields)); } },
     DOMParser: class {
       parseFromString(html, type) {
@@ -90,7 +95,9 @@ function page(replies = []) {
     await el.listeners.get('submit')({preventDefault() { prevented = true; }});
     assert.equal(prevented, true, 'enhancement must prevent failure navigation');
   }
-  return {newsletter, contact, calls, navigations, status, retry, submit, timers};
+  const events = () => (context.window.dataLayer || []).map(command => [...command]).filter(command => command[0] === 'event');
+  const storageEvent = event => windowListeners.get('storage')(event);
+  return {newsletter, contact, calls, navigations, status, retry, submit, timers, timerDelays, scripts, events, context, storageEvent};
 }
 
 function retained(p, form, fields) {
@@ -217,5 +224,101 @@ test('a timed-out request releases the form and retains its values for retry', a
   for (const expire of [...p.timers.values()]) expire();
   await pending;
   retained(p, p.contact, before);
+  assert.equal(p.timers.size, 0);
+});
+
+test('accepted requests record only the allowlisted form name and navigate once after the callback', async () => {
+  for (const name of ['newsletter', 'contact']) {
+    const p = page([response()], {consent: 'yes'});
+    await p.submit(p[name]);
+    assert.equal(p.events().length, 1);
+    const [command, event, params] = p.events()[0];
+    assert.equal(command, 'event'); assert.equal(event, 'form_submission_accepted');
+    assert.deepEqual(Object.keys(params).sort(), ['event_callback', 'event_timeout', 'form_name']);
+    assert.equal(params.form_name, 'sih-' + name);
+    assert.equal(typeof params.event_callback, 'function');
+    assert.doesNotMatch(JSON.stringify(params), /reader|example|Sample|message|topic|consent|details/);
+    assert.equal(p.navigations.length, 0);
+    assert.deepEqual([...p.timerDelays.values()], [800]);
+    assert.equal(params.event_timeout, 800);
+    const fallback = [...p.timers.values()][0];
+    await p.submit(p[name]);
+    assert.equal(p.calls.length, 1); assert.equal(p.events().length, 1);
+    assert.ok(p[name].querySelectorAll('[type="submit"]').every(button => button.disabled));
+    params.event_callback(); params.event_callback(); fallback();
+    assert.deepEqual(p.navigations, ['/thank-you/']);
+    assert.equal(p.timers.size, 0);
+  }
+});
+
+test('a blocked tag falls back to confirmation without duplicate navigation or another POST', async () => {
+  const p = page([response()], {consent: 'yes'});
+  await p.submit(p.newsletter);
+  const params = p.events()[0][2];
+  assert.equal(p.navigations.length, 0);
+  assert.equal(p.timers.size, 1);
+  [...p.timers.values()][0]();
+  params.event_callback();
+  await p.submit(p.newsletter);
+  assert.deepEqual(p.navigations, ['/thank-you/']);
+  assert.equal(p.calls.length, 1); assert.equal(p.events().length, 1);
+  assert.equal(p.timers.size, 0);
+});
+
+test('unavailable or failing analytics cannot turn an accepted request into a retry', async () => {
+  for (const gtag of [undefined, () => {throw new Error('Tag unavailable');}]) {
+    const p = page([response()], {consent: 'yes'});
+    p.context.window.gtag = gtag;
+    await p.submit(p.newsletter);
+    assert.deepEqual(p.navigations, ['/thank-you/']);
+    assert.equal(p.events().length, 0); assert.equal(p.timers.size, 0);
+    assert.equal(p.retry(p.newsletter).hidden, true);
+    assert.match(p.status(p.newsletter).textContent, /Opening the confirmation/);
+    await p.submit(p.newsletter);
+    assert.equal(p.calls.length, 1);
+  }
+});
+
+test('invalid or unconfirmed submissions never produce accepted-request events', async () => {
+  for (const result of [response({status: 503}), response({html: soft404}), response({url: 'https://elsewhere.example/'}), new TypeError('Network offline')]) {
+    const p = page([result], {consent: 'yes'});
+    const before = {...p.newsletter.fields};
+    await p.submit(p.newsletter);
+    retained(p, p.newsletter, before);
+    assert.equal(p.events().length, 0); assert.equal(p.timers.size, 0);
+  }
+  const p = page([], {consent: 'yes'});
+  p.newsletter.valid = false;
+  await p.submit(p.newsletter);
+  assert.equal(p.calls.length, 0); assert.equal(p.events().length, 0);
+});
+
+test('accepted requests navigate immediately without analytics consent or on preview hosts', async () => {
+  for (const options of [{consent: null}, {consent: 'no'}, {consent: 'yes', url: 'https://sample-preview.netlify.app/'}]) {
+    const p = page([response({url: options.url || origin + '/'})], options);
+    await p.submit(p.newsletter);
+    assert.deepEqual(p.navigations, ['/thank-you/']);
+    assert.equal(p.events().length, 0); assert.equal(p.scripts.length, 0); assert.equal(p.timers.size, 0);
+  }
+});
+
+test('revoking consent while the request is pending suppresses its event without delaying confirmation', async () => {
+  let release;
+  const pendingResponse = new Promise(resolve => {release = resolve;});
+  const p = page([() => pendingResponse], {consent: 'yes'});
+  const pending = p.submit(p.newsletter);
+  assert.equal(p.events().length, 0);
+  p.storageEvent({key: 'sih.analytics.v1', newValue: '"no"'});
+  release(response()); await pending;
+  assert.deepEqual(p.navigations, ['/thank-you/']);
+  assert.equal(p.events().length, 0); assert.equal(p.timers.size, 0);
+});
+
+test('unexpected form names never become analytics parameters', async () => {
+  const p = page([response()], {consent: 'yes'});
+  p.newsletter.setAttribute('name', 'reader@example.test');
+  await p.submit(p.newsletter);
+  assert.equal(p.events().length, 0);
+  assert.deepEqual(p.navigations, ['/thank-you/']);
   assert.equal(p.timers.size, 0);
 });

@@ -26,6 +26,37 @@ cannot save it. Revocation disables collection and clears GA cookies; storage
 events propagate a changed or cleared choice to other open tabs. A failed save
 displays an explanation instead of claiming the preference was persisted.
 
+## Form and feed events
+
+`form_submission_accepted` records one validated, successful HTTP response per
+form on the current page. Its only business parameter is the allowlisted
+`form_name`: `sih-newsletter` or `sih-contact`. It does not include email addresses,
+names, messages, topics, consent fields, or other submitted values. Invalid inputs,
+HTTP failures, unconfirmed requests, and recognizable error pages produce no event.
+Repeated submits while a request or confirmation navigation is pending do not
+produce another POST or event.
+
+For the newsletter, this means an **accepted signup request**, not a confirmed
+subscriber, successful email-provider sync, or delivered message. Check Netlify
+submission records and the authorized email provider separately. Contact forms
+also receive corrections and privacy requests, so do not classify every contact
+submission as a sales lead. The shared, directly accessible `/thank-you/` URL is
+not evidence of a completed signup. Any GA4 key-event configuration and receipt
+of this custom event still require account-level verification.
+
+After a successful submission, confirmation navigation waits for the Google tag's
+event-processing callback, with an independent 800-millisecond timeout fallback.
+It navigates immediately when tracking is not allowed or the event cannot be
+queued. The callback and fallback can navigate only once. A callback is not proof
+that Google received or attributed the event.
+
+`feed_open` records a click on a same-origin link to `/feed.xml` or `/atom.xml`,
+with only `feed_format: rss` or `feed_format: atom`. It measures feed-link interest,
+not a subscription, a successful feed fetch, reader-app article visits, crawler
+activity, or AI citations. Feed URLs and canonical item links remain unchanged;
+the Atom feed continues to serve as a discovery sitemap. Both new events use the
+same live analytics consent and exact production-host restrictions as page views.
+
 ## Campaign links
 
 Use non-personal campaign labels. The script reads the landing URL before
@@ -73,6 +104,10 @@ the production script with a simulated browser boundary; they never execute a
 Google tag or send test visits. They cover entry attribution after the actual
 directory URL rewrite, consent and revocation, unavailable storage, excluded
 preview hosts, sanitization, and duplicate initialization.
+Focused form tests also cover response validation, accepted-request measurement,
+consent changes during a request, duplicate prevention, and confirmation
+navigation when the Google tag is blocked or fails. Feed tests verify the exact
+same-origin paths, bounded format labels, consent, and excluded preview hosts.
 
 The redirect validator models Netlify's trailing-slash equivalence. A forced
 redirect from `/page` to `/page/` is a loop on Netlify, even when an exact-string
@@ -97,6 +132,7 @@ Do not commit them to this public repository.
 ## Primary references
 
 - [Google Analytics configuration fields](https://developers.google.com/analytics/devguides/collection/ga4/reference/config)
+- [Google tag event callback and timeout parameters](https://developers.google.com/tag-platform/gtagjs/reference/parameters)
 - [Google Enhanced Measurement](https://support.google.com/analytics/answer/9216061)
 - [Netlify trailing-slash redirect behavior](https://docs.netlify.com/manage/routing/redirects/redirect-options/#trailing-slash)
 - [Requesting Google recrawling](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)
