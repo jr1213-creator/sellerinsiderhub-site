@@ -26,6 +26,37 @@ cannot save it. Revocation disables collection and clears GA cookies; storage
 events propagate a changed or cleared choice to other open tabs. A failed save
 displays an explanation instead of claiming the preference was persisted.
 
+## Related-service links
+
+The local-business guide, contractor guide, and Resources page include optional,
+clearly identified links to the related service business The Local Upgrade. The
+official report page was reviewed on **2026-11-02**: its **$149 AI Readiness &
+Visibility Report is offered via waitlist while payment setup completes**. The
+links say “Explore the report”; they do not promise immediate purchase or delivery.
+Review this availability wording when the official offer changes.
+
+`service_cta_click` records a click on the exact HTTPS report destination,
+`https://thelocalupgrade.com/ai-readiness-report`. It uses the same live consent
+and production-host restrictions as other custom events. Its only parameters are:
+
+- `service_id`: `ai_readiness_report`
+- `placement`: `local_business_guide`, `contractor_guide`, or `resources`
+- `destination`: `the_local_upgrade_report`
+
+Unrecognized services, placements, or destinations are ignored. The event never
+includes a destination URL, query, fragment, visitor form values, or arbitrary
+attribute text. These links do not carry `data-outbound` and are separate from
+`outbound_tool_click`. Normal navigation is not delayed for analytics.
+
+The generated report links use fixed campaign labels: `utm_source=sellerinsiderhub`,
+`utm_medium=referral`, `utm_campaign=ai-readiness-report`, and `utm_content` equal
+to the enumerated placement. They never forward a visitor's existing URL
+parameters. These labels identify the link placement, not a person.
+
+This event measures report-link interest, not a waitlist request, qualified lead,
+completed report, purchase, or revenue. Verify receipt in GA4 and reconcile actual
+inquiries or payments in The Local Upgrade's authorized systems separately.
+
 ## Form and feed events
 
 `form_submission_accepted` records one validated, successful HTTP response per
@@ -108,6 +139,9 @@ Focused form tests also cover response validation, accepted-request measurement,
 consent changes during a request, duplicate prevention, and confirmation
 navigation when the Google tag is blocked or fails. Feed tests verify the exact
 same-origin paths, bounded format labels, consent, and excluded preview hosts.
+Service-link tests cover the fixed event payload, approved destinations and
+placements, consent changes, excluded preview hosts, and separation from tool
+recommendations.
 
 The redirect validator models Netlify's trailing-slash equivalence. A forced
 redirect from `/page` to `/page/` is a loop on Netlify, even when an exact-string
@@ -131,6 +165,7 @@ Do not commit them to this public repository.
 
 ## Primary references
 
+- [The Local Upgrade AI Readiness & Visibility Report](https://thelocalupgrade.com/ai-readiness-report)
 - [Google Analytics configuration fields](https://developers.google.com/analytics/devguides/collection/ga4/reference/config)
 - [Google tag event callback and timeout parameters](https://developers.google.com/tag-platform/gtagjs/reference/parameters)
 - [Google Enhanced Measurement](https://support.google.com/analytics/answer/9216061)

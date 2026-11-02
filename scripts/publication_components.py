@@ -154,7 +154,7 @@ def related_guides(tool_id, plays, comparisons):
     return '<section class="article-related"><h2>Put this decision into practice</h2>' + ''.join(f'<a class="related-story" href="{h(url)}"><span>{h(kind)}</span><strong>{h(title)}</strong><b>↗</b></a>' for title, url, kind in matches[:5]) + '</section>'
 
 
-def business_article(g, by_id, plays):
+def business_article(g, by_id, plays, support_cta=''):
     play_map = {p['id']: p for p in plays}
     html = '<p class="article-lede">' + h(g['intro']) + '</p><div class="answer-box"><span class="eyebrow">Our starting recommendation</span><p>' + h(g['recommendation']) + '</p></div>'
     html += '<div class="journey-strip" aria-label="The customer journey">' + ''.join(f'<div><b>{i+1:02}</b><strong>{h(label)}</strong></div>' for i, label in enumerate(g['journey'])) + '</div>'
@@ -177,7 +177,7 @@ def business_article(g, by_id, plays):
         t = by_id[tid]
         rows.append([f'<a href="/tool/{h(tid)}/">{h(t["name"])}</a>', h(t['pricingSummary']), source_link(t['pricingUrl'], 'Official plans') + '<span class="source-date">Reviewed ' + h(t['checkedAt']) + '</span>'])
     html += table(['Tool', 'Reviewed plan economics', 'Source'], rows) + '<p>Include seats, contacts, usage, tax, and annual commitments in your own calculation. The <a class="link" href="/calculators/stack-cost/">software cost planner</a> converts those inputs into a monthly equivalent.</p></section>'
-    html += '<section id="measure"><h2>Measure the result that matters</h2>' + ul(g['metrics']) + '</section><section class="article-related" id="next"><h2>Build the complete workflow</h2>'
+    html += '<section id="measure"><h2>Measure the result that matters</h2>' + ul(g['metrics']) + support_cta + '</section><section class="article-related" id="next"><h2>Build the complete workflow</h2>'
     for pid in g['related']:
         if pid in play_map:
             html += f'<a class="related-story" href="/playbooks/{h(pid)}/"><span>Tutorial</span><strong>{h(play_map[pid]["title"])}</strong><b>↗</b></a>'

@@ -173,6 +173,51 @@ test('outbound placements are enumerated and contain no arbitrary attribute text
   assert.doesNotMatch(JSON.stringify(p.events()), /reader@example/);
 });
 
+test('service links emit one separate event with only fixed service, placement, and destination labels', async () => {
+  const p = await page({consent: 'yes'});
+  const placements = ['local_business_guide', 'contractor_guide', 'resources'];
+  for (const placement of placements) {
+    await p.click({serviceCta: 'ai_readiness_report', servicePlacement: placement, email: 'reader@example.test'},
+      {href: 'https://thelocalupgrade.com/ai-readiness-report?email=reader%40example.test&utm_content=private-note#private'});
+  }
+  assert.deepEqual(JSON.parse(JSON.stringify(p.events())), placements.map(placement => [
+    'event', 'service_cta_click', {service_id: 'ai_readiness_report', placement, destination: 'the_local_upgrade_report'}
+  ]));
+  assert.doesNotMatch(JSON.stringify(p.events()), /reader|private|email|https|utm_|outbound_tool_click/);
+});
+
+test('service measurement rejects unapproved labels, destinations, and non-navigation actions', async () => {
+  const p = await page({consent: 'yes'});
+  const data = {serviceCta: 'ai_readiness_report', servicePlacement: 'resources'};
+  const href = 'https://thelocalupgrade.com/ai-readiness-report';
+  for (const value of ['', 'reader@example.test', 'different_service']) await p.click({...data, serviceCta: value}, {href});
+  for (const value of ['', 'reader@example.test', 'tool_profile']) await p.click({...data, servicePlacement: value}, {href});
+  for (const destination of ['http://thelocalupgrade.com/ai-readiness-report', 'https://thelocalupgrade.com.example/ai-readiness-report', 'https://elsewhere.example/ai-readiness-report', 'https://thelocalupgrade.com/contact', '/ai-readiness-report']) {
+    await p.click(data, {href: destination});
+  }
+  await p.click(data, {href, tagName: 'BUTTON'});
+  await p.click(data, {href, defaultPrevented: true});
+  assert.equal(p.events().length, 0);
+});
+
+test('service measurement obeys current consent and excludes preview hosts', async () => {
+  const data = {serviceCta: 'ai_readiness_report', servicePlacement: 'local_business_guide'};
+  const href = 'https://thelocalupgrade.com/ai-readiness-report';
+  for (const options of [{}, {consent: 'no'}, {consent: 'yes', url: 'https://preview.netlify.app/'}]) {
+    const p = await page(options);
+    await p.click(data, {href});
+    assert.equal(p.events().length, 0);
+    assert.equal(p.scripts.length, 0);
+  }
+  const p = await page();
+  await p.click({consent: 'yes'});
+  await p.click(data, {href});
+  await p.click({consent: 'no'});
+  await p.click(data, {href});
+  assert.equal(p.events().length, 1);
+  assert.equal(p.events()[0][1], 'service_cta_click');
+});
+
 test('feed clicks record only an enumerated format for actual same-origin RSS and Atom links', async () => {
   const p = await page({consent: 'yes'});
   await p.click({}, {href: '/feed.xml?email=reader%40example.test#private'});
