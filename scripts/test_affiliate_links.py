@@ -68,7 +68,7 @@ class AffiliateLinkTests(unittest.TestCase):
         unrelated = {**self.tool, 'id': 'unrelated-tool'}
         pending = {**self.tool, 'id': 'pending-tool', 'affiliateStatus': 'pending'}
         catalog = {t['id']: t for t in [self.tool, unrelated, pending]}
-        for marker in ['approved-tool', 'approved-tool-inline']:
+        for marker in ['approved-tool', 'tool-link']:
             with self.subTest(marker=marker):
                 article = '<p>Start here.</p>' + ''.join(
                     '<!-- ' + marker + ':' + identifier + ' -->'
@@ -79,7 +79,11 @@ class AffiliateLinkTests(unittest.TestCase):
                 self.assertEqual(actions[0]['href'], self.tool['affiliateUrl'])
                 self.assertEqual(actions[0]['data-outbound-placement'], 'tutorial_tools')
                 self.assertEqual(actions[0]['rel'], 'sponsored nofollow noopener')
-                self.assertLess(html.index('We may earn a commission'), html.index('data-outbound='))
+                if marker == 'approved-tool':
+                    self.assertLess(html.index('We may earn a commission'), html.index('data-outbound='))
+                else:
+                    self.assertNotIn('affiliate-actions', html)
+                    self.assertNotIn('Visit ', html)
                 self.assertIn('<p>Start here.</p>', html)
                 self.assertNotIn('<!-- ' + marker + ':', html)
 

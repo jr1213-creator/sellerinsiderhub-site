@@ -72,11 +72,11 @@ The canonical approved record is GetResponse in `data/catalog.json`:
 
 `https://try.getresponsetoday.com/dlvfs5m3zh7n`
 
-Each new article contains two contextual compact link markers. The renderer reads the approved catalog URL and displays this disclosure in the same visible block, before the link:
+Each new article uses one contextual product-name link in its opening prose. The renderer resolves it from the approved catalog. One plain, readable funding note appears at the beginning of the article, close to that link:
 
-> We may earn a commission if you buy through this link.
+> Reader-supported: we may earn a commission from purchases through links in this guide.
 
-The existing sidebar also contains its own clear disclosure and approved link. Links retain `rel="sponsored nofollow noopener"` and the existing outbound analytics attributes. Approval and article relevance gate both the original and compact markers. The article text, comparison recommendations, and alternatives are not conditional on paying a higher commission.
+There are no repeated affiliate callout boxes, Visit buttons, external-link arrows, or vendor promotion cards in these three articles. Navigation, working-kit downloads, and primary-source citations remain. The referral links retain `rel="sponsored nofollow noopener"` and the existing outbound analytics attributes. Approval and article relevance gate the contextual marker; an unapproved tool renders as plain product text. The November 2 presentation correction follows the owner's explicit preference for natural editorial links and a single clear funding disclosure.
 
 Disclosure references:
 

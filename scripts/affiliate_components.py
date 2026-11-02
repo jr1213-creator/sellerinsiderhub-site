@@ -14,7 +14,7 @@ def outbound(tool):
     return tool['website'], 'noopener'
 
 
-def approved_tool_actions(tool_ids, catalog, placement, compact=False):
+def approved_tool_actions(tool_ids, catalog, placement):
     """Offer direct actions only for approved tools already used by this guide."""
     tools = [catalog[identifier] for identifier in dict.fromkeys(tool_ids)
              if identifier in catalog and is_approved_affiliate(catalog[identifier])]
@@ -26,16 +26,9 @@ def approved_tool_actions(tool_ids, catalog, placement, compact=False):
     for tool in tools:
         url, relationship = outbound(tool)
         links.append(
-            f'<a class="{"link" if compact else "button"}" href="{escape(url, quote=True)}" target="_blank" '
+            f'<a class="button" href="{escape(url, quote=True)}" target="_blank" '
             f'rel="{relationship}" data-outbound="{escape(tool["id"], quote=True)}" '
             f'data-outbound-placement="{placement}">Visit {escape(tool["name"])} ↗</a>'
-        )
-    if compact:
-        reference = 'this link' if len(tools) == 1 else 'these links'
-        return (
-            '<aside class="affiliate-inline" aria-label="Affiliate disclosure"><p>'
-            f'We may earn a commission if you buy through {reference}. '
-            + ' '.join(links) + '</p></aside>'
         )
     return (
         f'<div class="card affiliate-actions"><h3>{heading}</h3>'
@@ -51,6 +44,18 @@ def expand_approved_tool_markers(article_html, tool_ids, catalog):
 
     def render(match):
         identifier = match.group(2)
-        return approved_tool_actions([identifier], catalog, 'tutorial_tools', compact=bool(match.group(1))) if identifier in allowed else ''
+        if identifier not in allowed or identifier not in catalog:
+            return ''
+        if match.group(1) == 'tool-link':
+            tool = catalog[identifier]
+            if not is_approved_affiliate(tool):
+                return escape(tool['name'])
+            url, relationship = outbound(tool)
+            return (
+                f'<a class="link" href="{escape(url, quote=True)}" target="_blank" '
+                f'rel="{relationship}" data-outbound="{escape(identifier, quote=True)}" '
+                f'data-outbound-placement="tutorial_tools">{escape(tool["name"])}</a>'
+            )
+        return approved_tool_actions([identifier], catalog, 'tutorial_tools')
 
-    return re.sub(r'<!--\s*approved-tool(-inline)?:([a-z0-9-]+)\s*-->', render, article_html)
+    return re.sub(r'<!--\s*(approved-tool|tool-link):([a-z0-9-]+)\s*-->', render, article_html)
