@@ -68,16 +68,20 @@ class AffiliateLinkTests(unittest.TestCase):
         unrelated = {**self.tool, 'id': 'unrelated-tool'}
         pending = {**self.tool, 'id': 'pending-tool', 'affiliateStatus': 'pending'}
         catalog = {t['id']: t for t in [self.tool, unrelated, pending]}
-        article = '<p>Start here.</p>' + ''.join(
-            '<!-- approved-tool:' + identifier + ' -->'
-            for identifier in [self.tool['id'], unrelated['id'], pending['id'], 'missing'])
-        html = expand_approved_tool_markers(article, [self.tool['id'], pending['id'], 'missing'], catalog)
-        actions = [a for a in Links(html).links if 'data-outbound' in a]
-        self.assertEqual([a['data-outbound'] for a in actions], [self.tool['id']])
-        self.assertEqual(actions[0]['href'], self.tool['affiliateUrl'])
-        self.assertEqual(actions[0]['data-outbound-placement'], 'tutorial_tools')
-        self.assertIn('<p>Start here.</p>', html)
-        self.assertNotIn('<!-- approved-tool:', html)
+        for marker in ['approved-tool', 'approved-tool-inline']:
+            with self.subTest(marker=marker):
+                article = '<p>Start here.</p>' + ''.join(
+                    '<!-- ' + marker + ':' + identifier + ' -->'
+                    for identifier in [self.tool['id'], unrelated['id'], pending['id'], 'missing'])
+                html = expand_approved_tool_markers(article, [self.tool['id'], pending['id'], 'missing'], catalog)
+                actions = [a for a in Links(html).links if 'data-outbound' in a]
+                self.assertEqual([a['data-outbound'] for a in actions], [self.tool['id']])
+                self.assertEqual(actions[0]['href'], self.tool['affiliateUrl'])
+                self.assertEqual(actions[0]['data-outbound-placement'], 'tutorial_tools')
+                self.assertEqual(actions[0]['rel'], 'sponsored nofollow noopener')
+                self.assertLess(html.index('We may earn a commission'), html.index('data-outbound='))
+                self.assertIn('<p>Start here.</p>', html)
+                self.assertNotIn('<!-- ' + marker + ':', html)
 
 
 if __name__ == '__main__':

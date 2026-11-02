@@ -1,0 +1,174 @@
+<section id="choose-your-route">
+  <span class="chapter-label">Start here</span>
+  <h2>Use GetResponse Marketer when you need more than a basic reminder</h2>
+  <p><strong>For a GetResponse Shopify abandoned cart email setup, start with the native Shopify integration and a custom Marketing Automation workflow on Marketer or above.</strong> Connect ecommerce events, restrict this promotional sequence to marketing subscribers, and validate one reminder before adding follow-ups. Starter can connect a store, but it does not include the abandoned-cart tools used here. <a href="https://www.getresponse.com/help/getresponse-pricing-plans.html">GetResponse’s current plan guide</a> separates those capabilities.</p>
+  <p>If you only need a straightforward recovery email, first inspect Shopify’s own automation. Shopify Messaging includes cart and checkout recovery, and its abandoned-checkout emails do not consume the email-sending allowance. That can be sufficient for a small store that has no wider email program to consolidate. <a href="https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/marketing-automations/create">Shopify documents the native options here.</a></p>
+  <p>GetResponse becomes a practical choice when you also want newsletters, segmentation, and connected customer journeys in the same account. This guide provides a first-reminder setup, three original email templates, and a release checklist. The two follow-up drafts are for a separately verified purchase-aware route; adding waits alone does not make the first workflow suitable for a series.</p>
+  <!-- approved-tool-inline:getresponse -->
+  <p>For the current plan costs and annual payment totals, read <a href="/playbooks/getresponse-starter-vs-marketer/">GetResponse Starter versus Marketer for small business</a>.</p>
+  <p><strong>Plan detail:</strong> build the workflow from scratch on Marketer. GetResponse’s current template list places the named abandoned-cart templates under Creator, even though Marketer supports custom ecommerce workflows. A missing template is not proof you need Creator. <a href="https://www.getresponse.com/help/which-workflow-templates-are-available-in-my-plan.html">Check the template and custom-workflow rules.</a></p>
+</section>
+
+<section id="cart-versus-checkout">
+  <span class="chapter-label">Define the event</span>
+  <h2>An abandoned cart is not always an abandoned checkout</h2>
+  <p>Shopify distinguishes a shopper who adds a product but never starts checkout from one who starts checkout and leaves without ordering. Its recovery automations treat those as separate events. <a href="https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/marketing-automations/create">See Shopify’s automation definitions.</a> GetResponse uses an Abandoned cart condition; test which identified Shopify activity reaches your connected store rather than assuming every abandoned basket becomes an email recipient.</p>
+  <p>Your sendable audience needs a usable email address, the required marketing permission, and the relevant synced event. A browser visitor who leaves without an identifiable email is not an email recovery opportunity. Count those visitors separately when evaluating results.</p>
+</section>
+
+<section id="connect-shopify">
+  <span class="chapter-label">Step 1</span>
+  <h2>Connect the store and preserve marketing consent</h2>
+  <p>For a new connection, use <strong>Integrations and API → Shopify → Details → Install plugin</strong> in GetResponse, then review the requested access in Shopify. If a connection already exists, inspect it before reinstalling anything. Follow <a href="https://www.getresponse.com/help/how-can-i-integrate-shopify-and-getresponse.html">GetResponse’s Shopify integration instructions</a> for these settings:</p>
+  <ol>
+    <li>Choose a dedicated contact list for this store.</li>
+    <li>Select <strong>Send full ecommerce data</strong>, so the connection carries product and shopping events, not just contact records.</li>
+    <li>Use immediate synchronization after the initial import rather than a daily batch.</li>
+    <li>Import customers who granted marketing permission in Shopify and allow existing contact information to update.</li>
+  </ol>
+  <p>The integration’s email permission is separate from GetResponse’s general Consent field. Under the recommended consent-based import, withdrawal in Shopify removes the contact from GetResponse; unsubscribing in GetResponse removes Shopify marketing permission. Verify both directions with your test contacts.</p>
+  <p>Use an identifiable store sender and a monitored reply address. Before sending, check the domain status and configure DKIM and DMARC as directed in <a href="https://www.getresponse.com/help/what-does-my-sending-domain-status-mean.html">GetResponse’s sender-domain guidance</a>. A working workflow cannot compensate for an unauthenticated sending setup.</p>
+</section>
+
+<section id="first-reminder">
+  <span class="chapter-label">Step 2</span>
+  <h2>Create the first automated reminder</h2>
+  <p>Open <strong>Automation → Automation messages</strong> and create a message. In its design editor, add the <strong>Abandoned cart</strong> block from the ecommerce controls. It populates product details from the event and belongs in an automation message, not an ordinary newsletter. Product images link to product pages by default. <a href="https://www.getresponse.com/help/how-can-i-include-abandoned-cart-items-in-a-message.html">The official block guide explains the message requirements.</a></p>
+  <p>Next, create a custom workflow with the cart-abandonment condition at its entrance. Choose the <strong>API</strong> integration method, your connected Shopify store, and an inactivity threshold. Connect it to the action that sends your new message. If the message is still a draft, select that draft and confirm its conversion to an automation message. Save the workflow as a draft while you check it.</p>
+  <p>Our fictional store, <strong>Juniper Desk</strong>, sells desk organizers. Its illustrative starting schedule is one reminder after an hour of inactivity, followed by optional messages approximately 24 and 48 hours after the original abandonment. These are editorial starting points, not proven optimal timings. With API tracking, returning to the cart can reset GetResponse’s abandonment timer. <a href="https://www.getresponse.com/help/how-do-i-set-properties-for-the-abandoned-cart-condition.html">Check the condition’s timing behavior.</a></p>
+  <p>Test the actual automated email, including product variants, prices, and every link. A normal editor preview cannot prove that a real Shopify event will supply the correct customer’s cart data. Do not paste an invented checkout merge tag into the button.</p>
+</section>
+
+<section id="stop-after-purchase">
+  <span class="chapter-label">Step 3</span>
+  <h2>Add follow-ups only after purchase suppression works</h2>
+  <p><strong>A shopper returning to the website is not the same as a shopper placing an order.</strong> GetResponse’s documented Abandoned cart series uses website-return branches. It also says the original cart products are available only in that workflow’s first message. Use plain follow-ups with verified store links, rather than promising the same dynamic cart block in all three emails. <a href="https://www.getresponse.com/help/abandoned-cart-series.html">Read the series template’s limitations.</a></p>
+  <p>For the custom workflow above, <strong>launch only the first reminder after proving that a purchase before the send prevents it</strong>. Leave repeat entry disabled during the initial pilot. GetResponse supports repeat-frequency settings, but repeatedly entering a workflow can create another message opportunity; decide that policy deliberately. <a href="https://www.getresponse.com/help/can-i-run-specific-actions-and-conditions-multiple-times.html">Review repeat behavior.</a></p>
+  <p>Do not extend it by simply adding a wait and another email. Nor should you wait and only then start listening for purchases: an order could occur during the wait. GetResponse warns about missed events with that construction in its <a href="https://www.getresponse.com/help/how-do-i-use-the-wait-action.html">Wait documentation</a>.</p>
+  <p>To use all three drafts, choose a route that verifies current eligibility immediately before each send, stops the journey after an order or unsubscribe, and prevents competing journeys for the same cart. The <a href="#ecommerce-campaigns-option">newer Ecommerce campaigns feature</a> documents automatic purchase exit, but availability is conditional. If it is unavailable and you cannot validate these requirements, keep the single reminder or use Shopify’s native recovery option. Do not pay for another plan merely to expose a template.</p>
+  <p>The three-message schedule below is an example communication design, <strong>not a sequence executed on a live store</strong>. Keep the first reminder as your complete launch scope until a separate route passes all follow-up tests.</p>
+</section>
+
+<section id="three-email-templates">
+  <span class="chapter-label">Copy and adapt</span>
+  <h2>Three emails for the fictional Juniper Desk store</h2>
+  <p>These are original examples for opted-in shoppers. Replace the fictional brand, connect the buttons in the editor, and retain the platform’s unsubscribe footer. The bracketed instructions describe editing work; they are not GetResponse personalization syntax. Do not send them literally.</p>
+  <h3>Email 1: a helpful reminder</h3>
+  <div class="worked-example">
+    <div class="example-label"><span>About one hour after abandonment</span><button class="button light small" data-copy-target="jd-cart-email-1">Copy email</button></div>
+    <pre id="jd-cart-email-1">Subject: Still thinking it over?
+Preview: Your Juniper Desk picks, plus a little help if you need it.
+
+Hi there,
+
+You were looking at a few ways to make your workspace work better. If you would like another look, the items from your visit are below.
+
+[INSERT THE GETRESPONSE ABANDONED CART BLOCK]
+
+Before you decide, check the product dimensions against the space on your desk. If anything is unclear, reply to this email and tell us what you need to fit.
+
+No rush to choose something that is not right for you.
+
+The Juniper Desk team</pre>
+  </div>
+  <h3>Email 2: answer the practical question</h3>
+  <div class="worked-example">
+    <div class="example-label"><span>About 24 hours after abandonment, if still eligible</span><button class="button light small" data-copy-target="jd-cart-email-2">Copy email</button></div>
+    <pre id="jd-cart-email-2">Subject: Will it fit your desk?
+Preview: Three quick checks before you choose an organizer.
+
+Hi there,
+
+If you are still comparing options, try this quick check:
+
+1. Measure the space you want to use.
+2. Compare it with the dimensions on the product page.
+3. Check the delivery information for your address before ordering.
+
+You can browse the range again below. If a detail is missing, reply and we will help you find it.
+
+[BUTTON: BROWSE DESK ORGANIZERS — LINK TO YOUR REAL COLLECTION]
+
+Choose the piece that works for your setup.
+
+The Juniper Desk team</pre>
+  </div>
+  <h3>Email 3: close the sequence without manufactured urgency</h3>
+  <div class="worked-example">
+    <div class="example-label"><span>About 48 hours after abandonment, if still eligible</span><button class="button light small" data-copy-target="jd-cart-email-3">Copy email</button></div>
+    <pre id="jd-cart-email-3">Subject: One last note from Juniper Desk
+Preview: A final reminder, and an open invitation to ask a question.
+
+Hi there,
+
+This is our last reminder about your recent visit. If a desk organizer is still on your list, you can take another look at the range below.
+
+[BUTTON: EXPLORE THE COLLECTION — LINK TO YOUR REAL COLLECTION]
+
+If you have decided to wait, that is completely fine. If a product question is holding you up, reply and tell us what you would like to know.
+
+Thanks for considering our small shop.
+
+The Juniper Desk team</pre>
+  </div>
+  <p><strong>Optional incentive:</strong> use no more than one offer in this sequence. Add it only if your margin supports it, and use the same terms wherever it appears. Create and test the actual code, eligibility, expiry, and combination rules first. An illustrative 10% offer is a business decision, not a recovery benchmark. Do not escalate discounts with every email or invent a countdown.</p>
+</section>
+
+<section id="test-and-launch">
+  <span class="chapter-label">Step 4</span>
+  <h2>Test the whole journey before switching customers over</h2>
+  <p>Use your own controlled addresses and a test-only segment at the recovery entrance. A design test checks rendering; an end-to-end test checks event delivery, consent, branching, and suppression. Record timestamps for the Shopify event, GetResponse state, and actual email.</p>
+  <div class="table-scroll">
+    <table class="data-table">
+      <thead><tr><th>Test case</th><th>Expected result before release</th></tr></thead>
+      <tbody>
+        <tr><td>Known subscriber abandons and does not buy</td><td>One first reminder with correct items. If using the separate purchase-aware route, later emails occur only at the intended intervals.</td></tr>
+        <tr><td>Customer purchases before the first threshold</td><td>No recovery email for that completed checkout.</td></tr>
+        <tr><td>Customer buys during the first follow-up wait</td><td>The purchase-aware route records the order and prevents emails 2 and 3.</td></tr>
+        <tr><td>Customer buys after email 2</td><td>The purchase-aware route prevents email 3.</td></tr>
+        <tr><td>Unsubscribe after email 1, or withdraw Shopify permission</td><td>No promotional follow-up; confirm the corresponding consent change.</td></tr>
+        <tr><td>No email, or email without marketing permission</td><td>No email from this promotional workflow. Do not broaden permission to force a pass.</td></tr>
+        <tr><td>Second cart during the same recovery period</td><td>No competing sequence sends duplicate reminders or resets purchase suppression.</td></tr>
+        <tr><td>Mobile link, changed variant, or unavailable item</td><td>The destination is usable and truthful; correct the message if the tested experience is misleading.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Example lifecycle for a purchase-aware series: Maya abandons at 10 a.m., receives the first reminder around 11 a.m., and buys at 3 p.m. Her order ends the recovery journey, so she receives no next-day reminder. Leo never gives an email address, so he never becomes a recipient. These are fictional acceptance scenarios; test them in your selected route.</p>
+  <p>Before launch, inventory existing reminders in Shopify Messaging, Shopify Flow, other apps, and GetResponse. Assign one system responsibility for this audience and event; switch off the overlapping recovery flow when the tested replacement goes live. Keep order confirmations separate. Shopify’s current native automation controls are under <strong>Apps → Messaging → Automations</strong>. <a href="https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/marketing-automations/create">Shopify’s management guide</a> includes deactivation instructions.</p>
+  <p>Start with email 1. Release requires both an actual abandonment that sends and a purchase before the threshold that suppresses the send. Enable the other two only in the separately verified route after its purchase, permission, and repeat-entry cases pass. If a buyer receives a reminder, pause recovery and investigate the event record. Keep Shopify’s native recovery as the fallback if you cannot establish reliable suppression.</p>
+  <!-- approved-tool-inline:getresponse -->
+</section>
+
+<section id="measure-results">
+  <span class="chapter-label">Measure carefully</span>
+  <h2>Use eligible carts and real orders as your denominators</h2>
+  <p>Keep one reporting period and one attribution window. Separate all abandoned baskets from identified, permissioned recovery opportunities; then separate opportunities from delivered emails. Otherwise a consent problem can look like weak copy, and three messages to one shopper can look like three independent prospects.</p>
+  <p><strong>Illustrative arithmetic only:</strong> suppose a week contains 100 eligible recovery opportunities, 90 shoppers receive the first message, nine of those shoppers click, and four of the eligible opportunities end in an attributed order. First-message delivery is 90/100 = 90%; its unique click rate is 9/90 = 10%; opportunity recovery is 4/100 = 4%. Do not use four orders divided by total website visitors as this recovery rate.</p>
+  <p>If those four hypothetical orders total $160, that is attributed order value—not $160 of incremental profit. Deduct discounts, product and fulfillment costs, refunds, payment costs, and the relevant software expense when evaluating contribution. Record which attribution rules produced the number.</p>
+  <p>Some shoppers would return without a reminder. A sufficiently sized randomized holdout can help estimate the difference caused by the sequence. Until you have enough volume, review individual journeys, unsubscribes, and delivery failures; do not treat a few orders as a reliable forecast. Change one variable at a time so the next result is interpretable.</p>
+</section>
+
+<section id="ecommerce-campaigns-option">
+  <span class="chapter-label">If your account has it</span>
+  <h2>The newer Ecommerce campaigns route is different</h2>
+  <p>GetResponse’s current help page still describes Ecommerce campaigns as a pilot for selected customers. Do not upgrade assuming this menu will appear. <a href="https://www.getresponse.com/help/how-to-manage-and-edit-ecommerce-campaigns.html">Verify access and management behavior.</a></p>
+  <p>If enabled, the separate campaign builder supports an abandonment trigger followed by email and wait actions, a maximum total duration of 21 days, automatic ending after purchase, and cart reconstruction from its email links. Those automatic behaviors belong to this feature; they are not a promise about every custom Automation workflow. <a href="https://www.getresponse.com/help/how-to-create-an-ecommerce-campaign-for-abandoned-cart.html">Use the dedicated campaign instructions.</a></p>
+  <p>In that available builder, an illustrative sequence is a one-hour abandonment threshold, email 1, a 23-hour wait, email 2, a 24-hour wait, and email 3. Create and select each message in its sending action, then run the same purchase and permission tests before publishing. This conditional route is the place to evaluate all three drafts together.</p>
+  <p>The optional non-subscriber mode uses a transactional version. Do not paste the promotional examples above into that route. Keep this tutorial’s audience restricted to marketing subscribers, and do not run both recovery systems for the same audience. <a href="https://www.getresponse.com/help/what-is-the-difference-between-abandoned-cart-in-automation-and-ecommerce-campaign.html">Compare the two message types.</a></p>
+</section>
+
+<section id="faq">
+  <span class="chapter-label">Frequently asked questions</span>
+  <h2>GetResponse and Shopify abandoned cart FAQ</h2>
+  <h3>Does GetResponse Starter include Shopify abandoned cart emails?</h3>
+  <p>No. The documented ecommerce recovery tools require Marketer or above. A store connection and a limited automation allowance on Starter do not unlock them. <a href="https://www.getresponse.com/help/getresponse-pricing-plans.html">Check current plan capabilities.</a></p>
+  <h3>Why is my abandoned-cart email not sending?</h3>
+  <p>Check the contact’s permission, connected list, full ecommerce synchronization, selected store, inactivity threshold, and workflow status before changing the email. Then inspect whether the customer already purchased or the repeat-entry rule deliberately excluded another attempt. A successful design preview does not establish eligibility.</p>
+  <h3>Can I put the shopper’s cart in all three Automation messages?</h3>
+  <p>Do not assume so. The documented series retains abandoned-cart product data for its first message only. The follow-ups here use ordinary collection links. <a href="https://www.getresponse.com/help/abandoned-cart-series.html">See the vendor’s series note.</a></p>
+  <h3>Do I need a discount?</h3>
+  <p>No. Begin with a useful reminder and a clear route back to the store. Introduce an offer only when your economics support it and you can compare its contribution with a no-discount approach.</p>
+  <p><strong>Research note:</strong> product documentation checked November 2, 2026. Juniper Desk, its messages, timing choices, and numerical examples are editorial illustrations. This is a researched setup guide, not a report of a live sales experiment.</p>
+</section>
+
+<section class="article-related" id="next-steps"><h2>Continue with GetResponse</h2><a class="related-story" href="/playbooks/getresponse-starter-vs-marketer/"><span>Practical guide</span><strong>GetResponse Starter vs Marketer for Small Business</strong><b>↗</b></a><a class="related-story" href="/playbooks/how-to-send-a-lead-magnet-with-getresponse/"><span>Practical guide</span><strong>How to Send a Lead Magnet with GetResponse: PDF + 3 Emails</strong><b>↗</b></a><p>Compare the broader fit, alternatives and verified sources in our <a href="/tool/getresponse/">GetResponse tool guide</a>.</p></section>

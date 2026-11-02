@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+<title id="title">GetResponse and Shopify cart recovery launch checklist</title>
+<desc id="desc">Planning checklist: connect the store, test a purchase, and send one reminder in a controlled test. This does not depict automated stop logic.</desc>
+<rect x="0" y="0" width="1440" height="960" rx="0" fill="#f5f3e8"/>
+<text x="76" y="81" font-family="DejaVu Sans" font-size="26" font-weight="400" fill="#11402d" text-anchor="start" letter-spacing="3">GETRESPONSE + SHOPIFY</text>
+<text x="72" y="186" font-family="DejaVu Serif" font-size="65" font-weight="400" fill="#11402d" text-anchor="start">Before cart recovery goes live</text>
+<text x="76" y="247" font-family="DejaVu Sans" font-size="34" font-weight="400" fill="#11402d" text-anchor="start">Three checks for a careful launch.</text>
+<circle cx="137" cy="371" r="46" fill="#f0cad1"/>
+<text x="137" y="385" font-family="DejaVu Sans" font-size="42" font-weight="600" fill="#11402d" text-anchor="middle">1</text>
+<text x="224" y="372" font-family="DejaVu Sans" font-size="55" font-weight="600" fill="#11402d" text-anchor="start">Connect store</text>
+<text x="226" y="424" font-family="DejaVu Sans" font-size="30" font-weight="400" fill="#11402d" text-anchor="start">Confirm the connection is working.</text>
+<line x1="224" y1="470" x2="1364" y2="470" stroke="#11402d" stroke-width="1" stroke-linecap="round" opacity="0.24"/>
+<circle cx="137" cy="540" r="46" fill="#f0cad1"/>
+<text x="137" y="554" font-family="DejaVu Sans" font-size="42" font-weight="600" fill="#11402d" text-anchor="middle">2</text>
+<text x="224" y="541" font-family="DejaVu Sans" font-size="55" font-weight="600" fill="#11402d" text-anchor="start">Test a purchase</text>
+<text x="226" y="593" font-family="DejaVu Sans" font-size="30" font-weight="400" fill="#11402d" text-anchor="start">Check that the order data arrives.</text>
+<line x1="224" y1="639" x2="1364" y2="639" stroke="#11402d" stroke-width="1" stroke-linecap="round" opacity="0.24"/>
+<circle cx="137" cy="709" r="46" fill="#f0cad1"/>
+<text x="137" y="723" font-family="DejaVu Sans" font-size="42" font-weight="600" fill="#11402d" text-anchor="middle">3</text>
+<text x="224" y="710" font-family="DejaVu Sans" font-size="55" font-weight="600" fill="#11402d" text-anchor="start">Send one reminder</text>
+<text x="226" y="762" font-family="DejaVu Sans" font-size="30" font-weight="400" fill="#11402d" text-anchor="start">Review a controlled test before launch.</text>
+<text x="76" y="843" font-family="DejaVu Sans" font-size="27" font-weight="400" fill="#11402d" text-anchor="start">Planning checklist · not a workflow diagram</text>
+<line x1="76" y1="872" x2="1364" y2="872" stroke="#11402d" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+<text x="76" y="922" font-family="DejaVu Sans" font-size="21" font-weight="400" fill="#11402d" text-anchor="start">Original editorial diagram · Seller Insider Hub</text>
+</svg>

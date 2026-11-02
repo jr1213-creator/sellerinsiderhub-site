@@ -14,7 +14,7 @@ def outbound(tool):
     return tool['website'], 'noopener'
 
 
-def approved_tool_actions(tool_ids, catalog, placement):
+def approved_tool_actions(tool_ids, catalog, placement, compact=False):
     """Offer direct actions only for approved tools already used by this guide."""
     tools = [catalog[identifier] for identifier in dict.fromkeys(tool_ids)
              if identifier in catalog and is_approved_affiliate(catalog[identifier])]
@@ -26,9 +26,16 @@ def approved_tool_actions(tool_ids, catalog, placement):
     for tool in tools:
         url, relationship = outbound(tool)
         links.append(
-            f'<a class="button" href="{escape(url, quote=True)}" target="_blank" '
+            f'<a class="{"link" if compact else "button"}" href="{escape(url, quote=True)}" target="_blank" '
             f'rel="{relationship}" data-outbound="{escape(tool["id"], quote=True)}" '
             f'data-outbound-placement="{placement}">Visit {escape(tool["name"])} ↗</a>'
+        )
+    if compact:
+        reference = 'this link' if len(tools) == 1 else 'these links'
+        return (
+            '<aside class="affiliate-inline" aria-label="Affiliate disclosure"><p>'
+            f'We may earn a commission if you buy through {reference}. '
+            + ' '.join(links) + '</p></aside>'
         )
     return (
         f'<div class="card affiliate-actions"><h3>{heading}</h3>'
@@ -43,7 +50,7 @@ def expand_approved_tool_markers(article_html, tool_ids, catalog):
     allowed = set(tool_ids)
 
     def render(match):
-        identifier = match.group(1)
-        return approved_tool_actions([identifier], catalog, 'tutorial_tools') if identifier in allowed else ''
+        identifier = match.group(2)
+        return approved_tool_actions([identifier], catalog, 'tutorial_tools', compact=bool(match.group(1))) if identifier in allowed else ''
 
-    return re.sub(r'<!--\s*approved-tool:([a-z0-9-]+)\s*-->', render, article_html)
+    return re.sub(r'<!--\s*approved-tool(-inline)?:([a-z0-9-]+)\s*-->', render, article_html)

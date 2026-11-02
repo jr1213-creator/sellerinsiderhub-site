@@ -1,0 +1,149 @@
+{
+  "method": "Original editorial SVG diagrams with raster derivatives",
+  "assets": [
+    {
+      "slug": "getresponse-starter-vs-marketer",
+      "method": "Original code-native SVG diagram; no vendor logo, screenshot, generated raster art, or private data.",
+      "sourceFile": "getresponse-starter-vs-marketer.svg",
+      "originalSha256": "23b39e9798e5f23f7607eeaef1451217438e1ef8268c57391c917625ecf4d637",
+      "renderer": "Inkscape SVG renderer (CairoSVG fallback)",
+      "originalRasterFile": "getresponse-starter-vs-marketer-original.png",
+      "palette": [
+        "#11402d",
+        "#f5f3e8",
+        "#f0cad1"
+      ],
+      "fontFamilies": [
+        "DejaVu Sans",
+        "DejaVu Serif"
+      ],
+      "credit": "Original editorial diagram · Seller Insider Hub",
+      "variants": [
+        {
+          "file": "getresponse-starter-vs-marketer-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 12828,
+          "sha256": "79dc66a2db7b9e052d208971657f3edb8ab75f20ee49278c9c687d1e826f3b9e"
+        },
+        {
+          "file": "getresponse-starter-vs-marketer-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 28612,
+          "sha256": "f9b7a1559356f3926b457c8b2bb8573e1c40407d408ff9cff408b0b6ca758c91"
+        },
+        {
+          "file": "getresponse-starter-vs-marketer-1440.webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 43334,
+          "sha256": "0dcc71ba9b91e2204cc5c8dc22c53f04e0732a3c90abee5d4ceda75209501e22"
+        },
+        {
+          "file": "getresponse-starter-vs-marketer-social.jpg",
+          "width": 1200,
+          "height": 800,
+          "bytes": 73330,
+          "sha256": "4abde91a2d3b836faecb06228def075a9e29c68d9280da3e516be8942138e354"
+        }
+      ]
+    },
+    {
+      "slug": "how-to-send-a-lead-magnet-with-getresponse",
+      "method": "Original code-native SVG diagram; no vendor logo, screenshot, generated raster art, or private data.",
+      "sourceFile": "how-to-send-a-lead-magnet-with-getresponse.svg",
+      "originalSha256": "007f37fe8343cd2e8952592d3b43e1300587a877a01db0df98871963bc9d5bd6",
+      "renderer": "Inkscape SVG renderer (CairoSVG fallback)",
+      "originalRasterFile": "how-to-send-a-lead-magnet-with-getresponse-original.png",
+      "palette": [
+        "#11402d",
+        "#f5f3e8",
+        "#f0cad1"
+      ],
+      "fontFamilies": [
+        "DejaVu Sans",
+        "DejaVu Serif"
+      ],
+      "credit": "Original editorial diagram · Seller Insider Hub",
+      "variants": [
+        {
+          "file": "how-to-send-a-lead-magnet-with-getresponse-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 12924,
+          "sha256": "bd2e9b28882bc790cd6003f01d3e5b530cf84847719089260b32771c083847a6"
+        },
+        {
+          "file": "how-to-send-a-lead-magnet-with-getresponse-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 29652,
+          "sha256": "25a6f2ea0fafbb4460d7ef8db9d8bfbf0af48490cc539b00d7ad5a844c3957e1"
+        },
+        {
+          "file": "how-to-send-a-lead-magnet-with-getresponse-1440.webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 43680,
+          "sha256": "7433de77f9e1d8e671ab7e5127b5393ff24ef8187a87939c1c8232a65c945eb5"
+        },
+        {
+          "file": "how-to-send-a-lead-magnet-with-getresponse-social.jpg",
+          "width": 1200,
+          "height": 800,
+          "bytes": 67995,
+          "sha256": "2ab5bd2a43272ae73e005b7df2e0af1fa56a6462f1ebd8b60094a57f650301d2"
+        }
+      ]
+    },
+    {
+      "slug": "getresponse-shopify-abandoned-cart",
+      "method": "Original code-native SVG diagram; no vendor logo, screenshot, generated raster art, or private data.",
+      "sourceFile": "getresponse-shopify-abandoned-cart.svg",
+      "originalSha256": "a912d6be4be1c57dde6e1f16c6ceca18467697af7381f0b6c3dd28120cbd535b",
+      "renderer": "Inkscape SVG renderer (CairoSVG fallback)",
+      "originalRasterFile": "getresponse-shopify-abandoned-cart-original.png",
+      "palette": [
+        "#11402d",
+        "#f5f3e8",
+        "#f0cad1"
+      ],
+      "fontFamilies": [
+        "DejaVu Sans",
+        "DejaVu Serif"
+      ],
+      "credit": "Original editorial diagram · Seller Insider Hub",
+      "variants": [
+        {
+          "file": "getresponse-shopify-abandoned-cart-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 14004,
+          "sha256": "bc2ef06a710bf3a4b43cd6c3679b14875688e00d82a95486bd1beaf3b3492691"
+        },
+        {
+          "file": "getresponse-shopify-abandoned-cart-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 32068,
+          "sha256": "6fbd229a56929719ed52f9c7e37491bbb4f4333146388e3793895014960bb614"
+        },
+        {
+          "file": "getresponse-shopify-abandoned-cart-1440.webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 49730,
+          "sha256": "4ea3276fe513783616f8740fe6adb6bb50a87007e066e9c75f202da615d3a3ce"
+        },
+        {
+          "file": "getresponse-shopify-abandoned-cart-social.jpg",
+          "width": 1200,
+          "height": 800,
+          "bytes": 77213,
+          "sha256": "ed694ec016447c1f99c5cfbae5b812ce659d6f1078cde5c5ef43d46882d85b81"
+        }
+      ]
+    }
+  ]
+}

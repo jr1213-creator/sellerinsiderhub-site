@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+<title id="title">A GetResponse lead magnet welcome sequence</title>
+<desc id="desc">Example timeline: Day 0 delivers the PDF, Day 2 shares a useful tip, and Day 5 offers a service invitation. Timing is illustrative and can be adjusted.</desc>
+<rect x="0" y="0" width="1440" height="960" rx="0" fill="#11402d"/>
+<text x="76" y="81" font-family="DejaVu Sans" font-size="26" font-weight="400" fill="#f0cad1" text-anchor="start" letter-spacing="3">GETRESPONSE</text>
+<text x="72" y="186" font-family="DejaVu Serif" font-size="68" font-weight="400" fill="#f5f3e8" text-anchor="start">A useful welcome sequence</text>
+<text x="76" y="247" font-family="DejaVu Sans" font-size="34" font-weight="400" fill="#f5f3e8" text-anchor="start">Deliver the promise. Help. Invite.</text>
+<line x1="256" y1="447" x2="1184" y2="447" stroke="#f5f3e8" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+<text x="256" y="354" font-family="DejaVu Sans" font-size="43" font-weight="600" fill="#f5f3e8" text-anchor="middle">Day 0</text>
+<circle cx="256" cy="447" r="57" fill="#f0cad1"/>
+<text x="256" y="463" font-family="DejaVu Sans" font-size="47" font-weight="600" fill="#11402d" text-anchor="middle">1</text>
+<text x="256" y="585" font-family="DejaVu Sans" font-size="43" font-weight="600" fill="#f5f3e8" text-anchor="middle">PDF delivery</text>
+<text x="256" y="643" font-family="DejaVu Sans" font-size="26" font-weight="400" fill="#f5f3e8" text-anchor="middle">Fulfill the promise.</text>
+<text x="720" y="354" font-family="DejaVu Sans" font-size="43" font-weight="600" fill="#f5f3e8" text-anchor="middle">Day 2</text>
+<circle cx="720" cy="447" r="57" fill="#f0cad1"/>
+<text x="720" y="463" font-family="DejaVu Sans" font-size="47" font-weight="600" fill="#11402d" text-anchor="middle">2</text>
+<text x="720" y="585" font-family="DejaVu Sans" font-size="43" font-weight="600" fill="#f5f3e8" text-anchor="middle">Useful tip</text>
+<text x="720" y="643" font-family="DejaVu Sans" font-size="26" font-weight="400" fill="#f5f3e8" text-anchor="middle">Make one thing easier.</text>
+<text x="1184" y="354" font-family="DejaVu Sans" font-size="43" font-weight="600" fill="#f5f3e8" text-anchor="middle">Day 5</text>
+<circle cx="1184" cy="447" r="57" fill="#f0cad1"/>
+<text x="1184" y="463" font-family="DejaVu Sans" font-size="47" font-weight="600" fill="#11402d" text-anchor="middle">3</text>
+<text x="1184" y="585" font-family="DejaVu Sans" font-size="39" font-weight="600" fill="#f5f3e8" text-anchor="middle">Service invitation</text>
+<text x="1184" y="643" font-family="DejaVu Sans" font-size="26" font-weight="400" fill="#f5f3e8" text-anchor="middle">Offer a clear next step.</text>
+<text x="76" y="784" font-family="DejaVu Sans" font-size="23" font-weight="400" fill="#f0cad1" text-anchor="start" letter-spacing="2">EXAMPLE SCHEDULE</text>
+<text x="76" y="832" font-family="DejaVu Sans" font-size="31" font-weight="400" fill="#f5f3e8" text-anchor="start">Adjust the timing to your offer.</text>
+<line x1="76" y1="864" x2="1364" y2="864" stroke="#f5f3e8" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+<text x="76" y="916" font-family="DejaVu Sans" font-size="21" font-weight="400" fill="#f5f3e8" text-anchor="start">Original editorial diagram · Seller Insider Hub</text>
+</svg>

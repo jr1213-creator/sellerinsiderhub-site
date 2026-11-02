@@ -223,6 +223,54 @@
       "socialHeight": 800,
       "version": "d2b1d8754d1e",
       "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "getresponse-starter-vs-marketer": {
+      "slug": "getresponse-starter-vs-marketer",
+      "alt": "Two plan panels compare GetResponse Starter, with one workflow of up to six elements, and Marketer, with multiple workflows and ecommerce follow-up.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "23b39e9798e5",
+      "credit": "Original editorial diagram · Seller Insider Hub"
+    },
+    "how-to-send-a-lead-magnet-with-getresponse": {
+      "slug": "how-to-send-a-lead-magnet-with-getresponse",
+      "alt": "Example welcome sequence: deliver a PDF on day 0, send a useful tip on day 2, and offer a service invitation on day 5.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "007f37fe8343",
+      "credit": "Original editorial diagram · Seller Insider Hub"
+    },
+    "getresponse-shopify-abandoned-cart": {
+      "slug": "getresponse-shopify-abandoned-cart",
+      "alt": "Cart recovery launch checklist for GetResponse and Shopify: connect the store, test a purchase, and send one reminder in a controlled test.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "a912d6be4be1",
+      "credit": "Original editorial diagram · Seller Insider Hub"
     }
   }
 }

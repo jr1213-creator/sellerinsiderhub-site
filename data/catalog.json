@@ -5971,7 +5971,7 @@
       "name": "GetResponse",
       "category": "email",
       "tagline": "Bring campaigns, landing pages, and automation together.",
-      "description": "GetResponse is a candidate when a business wants email and automation together with selected landing-page, webinar, or course features. The decision is which of those jobs will actually be used. Starter includes one custom workflow; Marketer is the relevant tier for a broader automation program, while Creator adds teaching and content-product capabilities. Price the intended contact tier and complete route before moving an existing list.",
+      "description": "GetResponse is a candidate when a business wants email and automation together with selected landing-page, webinar, or course features. The decision is which of those jobs will actually be used. Starter includes one custom workflow with up to six elements; Marketer is the relevant tier for a broader automation program, while Creator adds teaching and content-product capabilities. Price the intended contact tier and complete route before moving an existing list.",
       "bestFor": [
         "A business combining email with one or more of its publishing tools",
         "A course or workshop creator evaluating a combined platform",
@@ -5992,7 +5992,7 @@
       ],
       "website": "https://www.getresponse.com/",
       "pricingUrl": "https://www.getresponse.com/pricing",
-      "pricingSummary": "At the entry list size, Starter is $19/month or $15.58 annually; Marketer $59 or $48.38 annually; Creator $69 or $56.58 annually.",
+      "pricingSummary": "For 1,000 contacts, Starter is $19/month or $15.58/month billed annually; Marketer is $59/month or $48.38/month billed annually; Creator is $69/month or $56.58/month billed annually. USD before tax.",
       "freePlan": true,
       "setup": "Moderate",
       "audiences": [
@@ -6002,9 +6002,10 @@
       ],
       "sourceUrls": [
         "https://www.getresponse.com/features",
-        "https://www.getresponse.com/pricing"
+        "https://www.getresponse.com/pricing",
+        "https://www.getresponse.com/help/which-workflow-templates-are-available-in-my-plan.html"
       ],
-      "checkedAt": "2026-11-01",
+      "checkedAt": "2026-11-02",
       "evidence": "Official documentation reviewed; original illustrative example",
       "affiliateUrl": "https://try.getresponsetoday.com/dlvfs5m3zh7n",
       "affiliateStatus": "approved",
@@ -6014,7 +6015,7 @@
       "freePlanNote": "",
       "pricingDetails": {
         "currency": "USD",
-        "checkedAt": "2026-11-01",
+        "checkedAt": "2026-11-02",
         "plans": [
           {
             "name": "Starter",
@@ -6025,7 +6026,7 @@
             "currency": "USD",
             "included": [
               "Unlimited email sends",
-              "1 custom automation workflow",
+              "1 custom automation workflow, up to 6 elements",
               "Welcome series"
             ],
             "sourceUrl": "https://www.getresponse.com/pricing"
@@ -6067,7 +6068,7 @@
         {
           "title": "GetResponse — pricing",
           "url": "https://www.getresponse.com/pricing",
-          "checkedAt": "2026-11-01",
+          "checkedAt": "2026-11-02",
           "supports": [
             "Monthly and annual starting rates; automation and Creator gates"
           ]
@@ -6078,6 +6079,14 @@
           "checkedAt": "2026-11-01",
           "supports": [
             "Email, automation and content-product capabilities"
+          ]
+        },
+        {
+          "title": "GetResponse — workflow limits by plan",
+          "url": "https://www.getresponse.com/help/which-workflow-templates-are-available-in-my-plan.html",
+          "checkedAt": "2026-11-02",
+          "supports": [
+            "Starter custom workflow limit of six elements; plan-specific automation elements"
           ]
         }
       ],

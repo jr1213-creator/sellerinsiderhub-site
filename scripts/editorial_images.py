@@ -45,12 +45,12 @@ def article_figure(slug):
     return (
         '<figure class="editorial-figure">'
         + cover(slug, priority=True, placement='article', informative=True)
-        + f'<figcaption>{CREDIT}</figcaption></figure>'
+        + f'<figcaption>{h(IMAGES[slug].get("credit", CREDIT))}</figcaption></figure>'
     )
 
 
 def cover_credit():
-    return '<p class="cover-credit">Cover illustrations created with AI for Seller Insider Hub. <a href="/editorial-standards/#ai">Our image standards</a></p>'
+    return '<p class="cover-credit">Original diagrams and AI-created editorial illustrations by Seller Insider Hub. <a href="/editorial-standards/#ai">Our image standards</a></p>'
 
 
 def page_image(route):

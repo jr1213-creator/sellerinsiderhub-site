@@ -1,12 +1,12 @@
 {
   "built": "2026-11-01",
-  "pages": 126,
-  "indexed": 122,
+  "pages": 129,
+  "indexed": 125,
   "tools": 47,
   "categories": 14,
   "comparisons": 9,
-  "playbooks": 14,
-  "feedEntries": 39,
+  "playbooks": 17,
+  "feedEntries": 42,
   "investorRoom": {
     "route": "/partners/investors/",
     "assets": 6,
@@ -462,6 +462,21 @@
     {
       "route": "/playbooks/chatgpt-project-business-brief/",
       "title": "Create a ChatGPT Project that stays grounded in your business facts",
+      "kind": "Playbook"
+    },
+    {
+      "route": "/playbooks/getresponse-starter-vs-marketer/",
+      "title": "GetResponse Starter vs Marketer for Small Business",
+      "kind": "Playbook"
+    },
+    {
+      "route": "/playbooks/how-to-send-a-lead-magnet-with-getresponse/",
+      "title": "How to Send a Lead Magnet with GetResponse: PDF + 3 Emails",
+      "kind": "Playbook"
+    },
+    {
+      "route": "/playbooks/getresponse-shopify-abandoned-cart/",
+      "title": "GetResponse Shopify Abandoned Cart Email Setup",
       "kind": "Playbook"
     },
     {

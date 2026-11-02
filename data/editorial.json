@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "playbooks": [
     {
       "id": "ai-social-media-agents",
@@ -841,7 +841,7 @@
         "The form and three finished emails use one fictional stationery offer. Replace the business facts, links, and required sender details before use.",
         "Plan limits reflect MailerLite’s June 2026 change notice. Delivery timing and unsubscribe behavior must be verified in the account running the sequence."
       ],
-      "modifiedAt": "2026-11-01",
+      "modifiedAt": "2026-11-02",
       "publishedAt": "2026-10-31",
       "workflowTools": [
         "Canva",
@@ -3261,6 +3261,273 @@
       ],
       "modifiedAt": "2026-11-01",
       "publishedAt": "2026-10-31"
+    },
+    {
+      "id": "getresponse-starter-vs-marketer",
+      "title": "GetResponse Starter vs Marketer for Small Business",
+      "summary": "Compare GetResponse Starter and Marketer costs, the six-element workflow limit, and practical upgrade triggers. Choose the plan your small business needs.",
+      "bodyFile": "content/getresponse-starter-vs-marketer.html",
+      "intro": "Compare GetResponse Starter and Marketer costs, the six-element workflow limit, and practical upgrade triggers. Choose the plan your small business needs.",
+      "toolIds": [
+        "getresponse"
+      ],
+      "sourceUrls": [
+        "https://www.getresponse.com/pricing",
+        "https://www.getresponse.com/help/which-workflow-templates-are-available-in-my-plan.html",
+        "https://www.getresponse.com/blog/free-or-paid-getresponse-plan",
+        "https://www.getresponse.com/help/getresponse-pricing-plans.html",
+        "https://www.getresponse.com/help/how-does-getresponse-pricing-work.html",
+        "https://www.getresponse.com/help/what-is-the-getresponse-refund-policy.html",
+        "https://www.getresponse.com/help/how-do-i-change-the-number-of-people-with-access-to-my-account.html",
+        "https://www.getresponse.com/help/simple-welcome-message.html",
+        "https://www.getresponse.com/help/how-do-i-use-the-wait-action.html",
+        "https://www.getresponse.com/help/how-much-does-marketing-automation-cost.html",
+        "https://www.getresponse.com/help/what-is-an-autoresponder.html",
+        "https://www.getresponse.com/help/why-aren-t-my-autoresponders-going-out.html",
+        "https://www.getresponse.com/help/what-happens-when-i-go-over-my-list-size-limit.html",
+        "https://www.getresponse.com/help/can-i-try-getresponse-before-i-buy.html",
+        "https://www.getresponse.com/help/how-can-i-change-my-subscription-plan.html",
+        "https://www.getresponse.com/help/what-are-getresponse-webinars.html"
+      ],
+      "releaseChecks": [
+        "I priced both plans at the same contact tier, currency and billing period, including annual prepayment and applicable tax.",
+        "I counted every required custom workflow and element, and checked tags, ecommerce tools and other feature gates.",
+        "I considered autoresponders for a fixed-day sequence before assuming a longer series requires Marketer.",
+        "I verified the finished route against my intended paid plan rather than assuming every trial feature will remain available."
+      ],
+      "category": "Email marketing",
+      "publishedAt": "2026-11-02",
+      "lastReviewed": "2026-11-02",
+      "modifiedAt": "2026-11-02",
+      "contents": [
+        {
+          "id": "quick-answer",
+          "label": "Choose Starter until a specific campaign needs Marketer."
+        },
+        {
+          "id": "price",
+          "label": "Starter vs Marketer pricing: monthly rates and annual commitments."
+        },
+        {
+          "id": "feature-differences",
+          "label": "Which differences matter to a small business?"
+        },
+        {
+          "id": "six-element-workflow",
+          "label": "A complete welcome sequence that fits Starter’s six-element budget."
+        },
+        {
+          "id": "autoresponders",
+          "label": "A longer scheduled email series may not need Marketer."
+        },
+        {
+          "id": "business-examples",
+          "label": "Three small-business decisions, with the costs made explicit."
+        },
+        {
+          "id": "trial-check",
+          "label": "Do not mistake a successful trial workflow for Starter compatibility."
+        },
+        {
+          "id": "upgrade-or-stay",
+          "label": "Upgrade for a named constraint, and stay put when it disappears."
+        },
+        {
+          "id": "plan-worksheet",
+          "label": "Copy this plan-choice worksheet"
+        },
+        {
+          "id": "faq",
+          "label": "GetResponse Starter vs Marketer FAQ"
+        },
+        {
+          "id": "next-steps",
+          "label": "Continue with GetResponse"
+        }
+      ],
+      "updateNote": "New guide with current official documentation, original worked examples, copyable materials and a practical launch checklist."
+    },
+    {
+      "id": "how-to-send-a-lead-magnet-with-getresponse",
+      "title": "How to Send a Lead Magnet with GetResponse: PDF + 3 Emails",
+      "summary": "Send a PDF lead magnet with GetResponse’s current landing pages and autoresponders. Includes three emails, signup copy, plan limits, and a test checklist.",
+      "bodyFile": "content/how-to-send-a-lead-magnet-with-getresponse.html",
+      "intro": "Send a PDF lead magnet with GetResponse’s current landing pages and autoresponders. Includes three emails, signup copy, plan limits, and a test checklist.",
+      "toolIds": [
+        "getresponse"
+      ],
+      "sourceUrls": [
+        "https://www.getresponse.com/help/getresponse-pricing-plans.html",
+        "https://www.getresponse.com/help/can-i-try-getresponse-before-i-buy.html",
+        "https://www.getresponse.com/help/how-many-messages-can-i-send-using-my-free-account.html",
+        "https://www.getresponse.com/help/how-do-i-create-a-new-contact-list.html",
+        "https://www.getresponse.com/help/how-to-automatically-authenticate-your-domain-in-getresponse.html",
+        "https://www.getresponse.com/help/what-does-my-sending-domain-status-mean.html",
+        "https://www.getresponse.com/help/what-are-the-footer-requirements.html",
+        "https://www.getresponse.com/help/what-is-files-and-images-and-how-do-i-use-it.html",
+        "https://www.getresponse.com/help/how-do-i-create-an-autoresponder.html",
+        "https://www.getresponse.com/help/how-can-i-send-an-instant-message-after-someone-signs-up-via-the-landing-page.html",
+        "https://www.getresponse.com/help/how-to-create-a-landing-page-using-templates.html",
+        "https://www.getresponse.com/help/what-tools-are-available-inside-the-landing-page-editor.html",
+        "https://www.getresponse.com/help/how-to-edit-landing-page-settings.html",
+        "https://www.getresponse.com/help/how-can-i-edit-opt-in-settings.html",
+        "https://www.getresponse.com/help/how-to-collect-consent-from-new-and-existing-contacts.html",
+        "https://www.getresponse.com/help/why-aren-t-my-autoresponders-going-out.html",
+        "https://www.getresponse.com/features/email-marketing/email-analytics",
+        "https://www.getresponse.com/blog/segmenting-your-list"
+      ],
+      "releaseChecks": [
+        "The hosted PDF opens without a login, contains accurate business information and is readable on a phone.",
+        "My sender is verified, domain authentication is configured, and replies reach a monitored inbox.",
+        "The page and all three autoresponders use the same list and the subscription starts at Day 0.",
+        "The signup promise, confirmation message and sequence accurately describe the communication subscribers will receive.",
+        "I replaced every placeholder, retained the required footer, and tested delivery, follow-ups, links and unsubscribe with addresses I control.",
+        "My ongoing paid plan supports active autoresponders after the trial ends."
+      ],
+      "category": "Email marketing",
+      "publishedAt": "2026-11-02",
+      "lastReviewed": "2026-11-02",
+      "modifiedAt": "2026-11-02",
+      "contents": [
+        {
+          "id": "start-here",
+          "label": "Send the promised PDF, then two useful follow-ups."
+        },
+        {
+          "id": "lead-magnet-example",
+          "label": "Start with a small PDF that solves one problem."
+        },
+        {
+          "id": "sender-and-list",
+          "label": "Create one list and authenticate your sender."
+        },
+        {
+          "id": "host-the-pdf",
+          "label": "Upload the PDF and test its public URL."
+        },
+        {
+          "id": "delivery-email",
+          "label": "Create the Day 0 autoresponder before publishing the page."
+        },
+        {
+          "id": "signup-page",
+          "label": "Make the page’s promise match the email sequence."
+        },
+        {
+          "id": "follow-up-emails",
+          "label": "Add the two follow-ups to the same list."
+        },
+        {
+          "id": "test-the-sequence",
+          "label": "Test the whole signup journey with a new address."
+        },
+        {
+          "id": "troubleshooting",
+          "label": "If the PDF email does not arrive"
+        },
+        {
+          "id": "measure-results",
+          "label": "Measure signups, download clicks, and enquiries."
+        },
+        {
+          "id": "chatgpt-prompt",
+          "label": "A ChatGPT prompt for adapting the examples"
+        },
+        {
+          "id": "faq",
+          "label": "Frequently asked questions"
+        },
+        {
+          "id": "next-steps",
+          "label": "Continue with GetResponse"
+        }
+      ],
+      "updateNote": "New guide with current official documentation, original worked examples, copyable materials and a practical launch checklist."
+    },
+    {
+      "id": "getresponse-shopify-abandoned-cart",
+      "title": "GetResponse Shopify Abandoned Cart Email Setup",
+      "summary": "Set up GetResponse cart recovery for Shopify with plan checks, consent settings, a tested first reminder, three email templates, and purchase-suppression checks.",
+      "bodyFile": "content/getresponse-shopify-abandoned-cart.html",
+      "intro": "Set up GetResponse cart recovery for Shopify with plan checks, consent settings, a tested first reminder, three email templates, and purchase-suppression checks.",
+      "toolIds": [
+        "getresponse"
+      ],
+      "sourceUrls": [
+        "https://www.getresponse.com/help/getresponse-pricing-plans.html",
+        "https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/marketing-automations/create",
+        "https://www.getresponse.com/help/which-workflow-templates-are-available-in-my-plan.html",
+        "https://www.getresponse.com/help/how-can-i-integrate-shopify-and-getresponse.html",
+        "https://www.getresponse.com/help/what-does-my-sending-domain-status-mean.html",
+        "https://www.getresponse.com/help/how-can-i-include-abandoned-cart-items-in-a-message.html",
+        "https://www.getresponse.com/help/how-do-i-set-properties-for-the-abandoned-cart-condition.html",
+        "https://www.getresponse.com/help/abandoned-cart-series.html",
+        "https://www.getresponse.com/help/can-i-run-specific-actions-and-conditions-multiple-times.html",
+        "https://www.getresponse.com/help/how-do-i-use-the-wait-action.html",
+        "https://www.getresponse.com/help/how-to-manage-and-edit-ecommerce-campaigns.html",
+        "https://www.getresponse.com/help/how-to-create-an-ecommerce-campaign-for-abandoned-cart.html",
+        "https://www.getresponse.com/help/what-is-the-difference-between-abandoned-cart-in-automation-and-ecommerce-campaign.html"
+      ],
+      "releaseChecks": [
+        "My intended plan supports ecommerce automation, and I confirmed which builder and templates my account actually provides.",
+        "The Shopify integration sends full ecommerce data promptly to the intended list with marketing permission preserved.",
+        "A controlled abandoned-cart test sends the correct first reminder, and a purchase before the threshold prevents that reminder.",
+        "I verified unsubscribe behavior and left repeat entry disabled during the initial pilot.",
+        "Follow-ups remain disabled until a purchase-aware route passes purchase-during-wait and repeat-entry tests.",
+        "I assigned one system to this audience and event, preventing overlapping reminders from Shopify and other apps.",
+        "Every email contains real links, accurate product details, required footer information and no example placeholders."
+      ],
+      "category": "Ecommerce & email",
+      "publishedAt": "2026-11-02",
+      "lastReviewed": "2026-11-02",
+      "modifiedAt": "2026-11-02",
+      "contents": [
+        {
+          "id": "choose-your-route",
+          "label": "Use GetResponse Marketer when you need more than a basic reminder"
+        },
+        {
+          "id": "cart-versus-checkout",
+          "label": "An abandoned cart is not always an abandoned checkout"
+        },
+        {
+          "id": "connect-shopify",
+          "label": "Connect the store and preserve marketing consent"
+        },
+        {
+          "id": "first-reminder",
+          "label": "Create the first automated reminder"
+        },
+        {
+          "id": "stop-after-purchase",
+          "label": "Add follow-ups only after purchase suppression works"
+        },
+        {
+          "id": "three-email-templates",
+          "label": "Three emails for the fictional Juniper Desk store"
+        },
+        {
+          "id": "test-and-launch",
+          "label": "Test the whole journey before switching customers over"
+        },
+        {
+          "id": "measure-results",
+          "label": "Use eligible carts and real orders as your denominators"
+        },
+        {
+          "id": "ecommerce-campaigns-option",
+          "label": "The newer Ecommerce campaigns route is different"
+        },
+        {
+          "id": "faq",
+          "label": "GetResponse and Shopify abandoned cart FAQ"
+        },
+        {
+          "id": "next-steps",
+          "label": "Continue with GetResponse"
+        }
+      ],
+      "updateNote": "New guide with current official documentation, original worked examples, copyable materials and a practical launch checklist."
     }
   ],
   "comparisons": [
