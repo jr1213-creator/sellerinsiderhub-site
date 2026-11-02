@@ -145,9 +145,19 @@
     return true;
   }
   function saveCompare() {set(CMP, compare); updateButtons();}
+  const menuToggle = $('#menu-toggle'), mobileNav = $('#mobile-nav');
+  function setMenuOpen(open, restoreFocus = false) {
+    if (!menuToggle || !mobileNav) return;
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    mobileNav.hidden = !open;
+    if (restoreFocus) menuToggle.focus();
+  }
   document.addEventListener('click', async event => {
+    if (mobileNav && !mobileNav.hidden && !menuToggle.contains(event.target) &&
+        (!mobileNav.contains(event.target) || event.target.closest('a'))) setMenuOpen(false);
     const el = event.target.closest('button, a'); if (!el) return;
-    if (el.matches('[data-open-search]')) {$('#search-dialog').showModal(); $('#global-search-input').focus(); doSearch('', $('#global-search-results'));}
+    if (el.matches('[data-open-search]')) {setMenuOpen(false); $('#search-dialog').showModal(); $('#global-search-input').focus(); doSearch('', $('#global-search-results'));}
     if (el.matches('[data-close-dialog]')) $('#search-dialog').close();
     if (el.matches('[data-print]')) window.print();
     if (el.matches('[data-cookie-settings]')) $('#cookie-panel').hidden = false;
@@ -184,8 +194,26 @@
     if (el.id === 'export-calculation' && calculationExport) download('seller-insider-hub-calculation.csv', calculationExport, 'text/csv');
     if (el.matches('[data-remove-cost]')) el.closest('.cost-row').remove();
   });
-  $('#menu-toggle')?.addEventListener('click', event => {const open = event.currentTarget.getAttribute('aria-expanded') !== 'true'; event.currentTarget.setAttribute('aria-expanded', open); event.currentTarget.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation'); $('#mobile-nav').hidden = !open;});
-  document.addEventListener('keydown', event => {if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {event.preventDefault(); $('#search-dialog').showModal(); $('#global-search-input').focus(); doSearch($('#global-search-input').value, $('#global-search-results'));}});
+  menuToggle?.addEventListener('click', () => setMenuOpen(mobileNav?.hidden === true));
+  if (menuToggle && mobileNav) {
+    const mobileMenuQuery = window.matchMedia('(max-width: 980px)');
+    mobileMenuQuery.addEventListener('change', event => {if (!event.matches) setMenuOpen(false);});
+    document.addEventListener('focusin', event => {
+      if (!mobileNav.hidden && !mobileNav.contains(event.target) && !menuToggle.contains(event.target)) setMenuOpen(false);
+    });
+  }
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && mobileNav && !mobileNav.hidden) {
+      event.preventDefault();
+      setMenuOpen(false, true);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+      event.preventDefault();
+      setMenuOpen(false);
+      $('#search-dialog').showModal(); $('#global-search-input').focus();
+      doSearch($('#global-search-input').value, $('#global-search-results'));
+    }
+  });
   $('#search-dialog')?.addEventListener('click', event => {if (event.target === event.currentTarget) {const r = event.currentTarget.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) event.currentTarget.close();}});
   let searchSequence = 0;
   async function doSearch(query, output) {

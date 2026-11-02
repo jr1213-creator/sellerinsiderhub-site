@@ -30,7 +30,7 @@ def byline(checked_at, minutes=None, published_at=None):
 
 
 def author_note():
-    return '''<aside class="author-note" aria-label="About the author and research method"><div class="author-note-heading"><span class="author-mark" aria-hidden="true">JM</span><div><strong><a rel="author" href="/authors/jennie-malone/">Jennie Malone</a></strong><span>Founder &amp; publisher, Seller Insider Hub</span></div></div><p>I built this publication to make useful technology understandable to small business owners. My background combines enterprise software engineering and ecommerce; the aim here is a decision you can explain and a workflow you can check.</p><p class="small">Research and drafting use AI assistance. Product instructions are based on the cited documentation unless the article identifies a hands-on demonstration. Worked examples and suggested tests are labelled; they are not customer results.</p><div class="actions"><a class="link" href="/editorial-standards/">How the research works →</a><a class="link" href="/corrections/">Report a correction →</a></div></aside>'''
+    return '''<aside class="author-note" aria-label="About the author"><div class="author-note-heading"><span class="author-mark" aria-hidden="true">JM</span><div><strong><a rel="author" href="/authors/jennie-malone/">Jennie Malone</a></strong><span>Founder &amp; publisher, Seller Insider Hub</span></div></div><p>I draw on my background in enterprise software engineering and ecommerce to help small business owners choose useful tools and put them to work.</p><div class="actions"><a class="link" href="/corrections/">Report a correction →</a></div></aside>'''
 
 
 def author_profile(plays, comparisons):
