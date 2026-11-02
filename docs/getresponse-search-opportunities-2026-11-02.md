@@ -72,15 +72,22 @@ The canonical approved record is GetResponse in `data/catalog.json`:
 
 `https://try.getresponsetoday.com/dlvfs5m3zh7n`
 
-Each new article uses one contextual product-name link in its opening prose. The renderer resolves it from the approved catalog. One plain, readable funding note appears at the beginning of the article, close to that link:
+Each new article uses one contextual product-name link in its opening prose. The renderer resolves it from the approved catalog. The owner requested the minimum necessary disclosure and an end-only placement where permitted. GetResponse’s current PartnerStack terms, section 12.1, explicitly require disclosure close to claims and above the fold without scrolling. An end-only notice therefore does not meet this program’s published placement standard.
 
-> Reader-supported: we may earn a commission from purchases through links in this guide.
+For these three articles only, the article metadata now contains one concise sentence:
 
-There are no repeated affiliate callout boxes, Visit buttons, external-link arrows, or vendor promotion cards in these three articles. Navigation, working-kit downloads, and primary-source citations remain. The referral links retain `rel="sponsored nofollow noopener"` and the existing outbound analytics attributes. Approval and article relevance gate the contextual marker; an unapproved tool renders as plain product text. The November 2 presentation correction follows the owner's explicit preference for natural editorial links and a single clear funding disclosure.
+> We may earn commissions from GetResponse.
+
+This replaces the longer opening funding paragraph. It is unboxed, readable text in the heading’s metadata row, before the title and body, not a separate banner or promotional CTA. The affiliate link remains an ordinary product-name link. The shared footer disclosure page remains supplementary. The sentence is generated only while a relevant approved affiliate is present.
+
+There are no repeated affiliate callout boxes, Visit buttons, external-link arrows, or vendor promotion cards in these three articles. Navigation, working-kit downloads, and primary-source citations remain. Referral links retain `rel="sponsored nofollow noopener"` and the existing outbound analytics attributes. Approval and article relevance gate the contextual marker; an unapproved tool renders as plain product text.
+
+Removed reader-facing production boilerplate: the new-guide update notes, redundant statements about original teaching material or unpublished examples, and a duplicated Shopify research note. Fictional-example labels, specific plan limitations, current source dates, and the practical campaign tests remain because they help readers make accurate decisions.
 
 Disclosure references:
 
 - https://consumer.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking
+- https://www.getresponse.com/legal/affiliate-terms-of-service (section 12.1; reviewed November 2, 2026)
 - https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links
 
 This is concise disclosure placement, not a guarantee about every jurisdiction's legal minimum. No footer-only, hidden, or ambiguous disclosure is used.

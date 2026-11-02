@@ -10,4 +10,6 @@
 @media(max-width:650px){.author-story-list{columns:1}.author-note,.workflow-workbench{padding:20px}.article-body figure{padding:10px;margin:24px 0}.kit-download{display:block}.article-byline{gap:10px!important}.article-byline span{line-height:1.5}}
 @media print{.workflow-workbench button,.author-note .actions{display:none}.workflow-workbench{break-inside:avoid;background:white;border:1px solid #aaa}.article-body figure{break-inside:avoid}.author-note{font-size:10pt}.workflow-checks input{appearance:auto}}
 
-.article-body .funding-note{margin:0 0 24px;font-size:1rem;line-height:1.6;color:#46594e}
+.page-hero .article-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;margin-bottom:14px}
+.page-hero .article-meta .eyebrow{margin-bottom:0}
+.page-hero .article-disclosure{font-size:.875rem;line-height:1.5;color:#46594e}

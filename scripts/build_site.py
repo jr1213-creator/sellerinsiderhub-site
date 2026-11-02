@@ -10,7 +10,7 @@ from investor_components import build_investor_room
 from authority_components import author_schema, byline as render_byline, author_note, author_profile, editorial_standards, corrections_page
 from tutorial_tools import render_launch_checks, make_working_kit
 from decision_components import render_decision_tool
-from affiliate_components import outbound, approved_tool_actions, expand_approved_tool_markers
+from affiliate_components import outbound, approved_tool_actions, expand_approved_tool_markers, is_approved_affiliate
 from learning_components import render_learning_path
 from brand_components import brand_link, brand_head
 from editorial_images import article_figure, cover_credit, page_image, image_url
@@ -74,8 +74,11 @@ def sources(urls):
 def evidence(urls, record=None): return named_sources(record or {}, urls)
 def breadcrumb(title,parent=None):
     return '<div class="breadcrumbs"><a href="/">Home</a><span>/</span>'+ (f'<a href="{e(parent[1])}">{e(parent[0])}</a><span>/</span>' if parent else '')+f'<span>{e(title)}</span></div>'
-def hero(title,desc,label='The insider guide',parent=None):
-    return f'<section class="page-hero"><div class="wrap">{breadcrumb(title,parent)}<span class="eyebrow">{e(label)}</span><h1>{e(title)}</h1><p>{e(desc)}</p></div></section>'
+def hero(title,desc,label='The insider guide',parent=None,disclosure=''):
+    metadata = f'<span class="eyebrow">{e(label)}</span>'
+    if disclosure:
+        metadata = f'<div class="article-meta">{metadata}<span class="article-disclosure">{e(disclosure)}</span></div>'
+    return f'<section class="page-hero"><div class="wrap">{breadcrumb(title,parent)}{metadata}<h1>{e(title)}</h1><p>{e(desc)}</p></div></section>'
 def newsletter():
     return '''<section class="section"><div class="wrap"><div class="newsletter-panel"><div><span class="eyebrow">The Insider Edit</span><h2>Keep up with tools worth understanding.</h2><p>Get new tutorials and meaningful updates on software for selling, marketing, and running a small business.</p></div><form class="newsletter-form" name="sih-newsletter" method="POST" data-netlify="true" netlify-honeypot="website" action="/thank-you/" data-newsletter-form><input type="hidden" name="form-name" value="sih-newsletter"><p hidden><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p><label for="newsletter-email">Your email address</label><div class="email-input-row"><input id="newsletter-email" type="email" name="email" autocomplete="email" required placeholder="you@yourbusiness.com"><button class="button lime" type="submit">Join the list ↗</button></div><label class="consent-label"><input type="checkbox" name="consent" value="yes" required><span>I agree to receive Seller Insider Hub emails and have read the <a href="/legal/privacy/">privacy policy</a>. I can unsubscribe from any email.</span></label><p class="form-status" role="status"></p></form></div></div></section>'''
 def layout(title,desc,content,route,section='',legacy=False,noindex=False,extrahead='',article=None):
@@ -228,7 +231,8 @@ for p in PLAYS:
             article_html += render_launch_checks(p)
         if p.get('updateNote'):
             article_html += f'<p class="update-note"><strong>Updated {e(p.get("modifiedAt", reviewed))}:</strong> {e(p["updateNote"])}</p>'
-        body=hero(p['title'],p['summary'],p['category'],('Tutorials','/playbooks/'))+f'<div class="wrap detail-layout social-guide-layout"><article class="article-body social-guide">{byline}{article_figure(p["id"])}{article_html}</article>{sidebar}</div>'
+        disclosure = p.get('affiliateDisclosure', '') if any(is_approved_affiliate(BY_ID.get(tid, {})) for tid in p['toolIds']) else ''
+        body=hero(p['title'],p['summary'],p['category'],('Tutorials','/playbooks/'),disclosure=disclosure)+f'<div class="wrap detail-layout social-guide-layout"><article class="article-body social-guide">{byline}{article_figure(p["id"])}{article_html}</article>{sidebar}</div>'
         write('/playbooks/'+p['id']+'/',p['title'],p['summary'],body,'Playbook',section='playbooks',extrahead=f'<script defer src="/assets/js/social-guide.js?v={ASSET_VERSION}"></script>',article={'published':p.get('publishedAt',DATE),'modified':p.get('modifiedAt',reviewed),'sources':p['sourceUrls']})
         continue
     reading_text=[p['intro'],p.get('expectedOutcome','')]+p.get('prerequisites',[])+p.get('planTradeoffs',[])+[str(v) for step in p['steps'] for k,v in step.items() if k in ['title','body','check']]+p['pitfalls']+p['success']+[p.get('example',{}).get(k,'') for k in ['input','output']]+[t['content'] for t in p.get('copyableTemplates',[])]+[t['fix'] for t in p.get('troubleshooting',[])]
