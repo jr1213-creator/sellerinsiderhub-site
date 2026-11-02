@@ -212,7 +212,7 @@ def learning_note(route):
 # Research-led tutorials and useful decisions lead the publication.
 home=render_home(PLAYS, COMPARISONS, comparecard, newsletter)
 home=home.replace('<section class="front-page">', learning_banner+'<section class="front-page">',1)
-write('/','AI for small business: practical tutorials and tool guides','Learn to use AI for your small business, even without an IT department. Follow practical tutorials, worked examples, clear cost comparisons, and checks you can use yourself.',home,'Home')
+write('/','AI for Small Business: Tools & Tutorials','Learn practical AI workflows for your small business. Use step-by-step tutorials, free calculators, and sourced software comparisons.',home,'Home')
 
 def library(route='/tool-library/',category=None):
     selected=[t for t in TOOLS if not category or t['category']==category]
