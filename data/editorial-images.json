@@ -1,0 +1,228 @@
+{
+  "images": {
+    "ai-social-media-agents": {
+      "slug": "ai-social-media-agents",
+      "alt": "A smartphone on a small tripod photographs ceramic products in a maker’s studio.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "0d6f80bc412d",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "business-operations-hub": {
+      "slug": "business-operations-hub",
+      "alt": "A stationery packing bench with a kraft mailer, green-bound paper pads, and paper tape.",
+      "position": "46% 54%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "ccd41b6ca26a",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "chatgpt-project-business-brief": {
+      "slug": "chatgpt-project-business-brief",
+      "alt": "A green document folio with a reference sheet and portrait-studio contact print beside a camera.",
+      "position": "59% 52%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "c68862bff450",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "chatgpt-sales-analysis": {
+      "slug": "chatgpt-sales-analysis",
+      "alt": "A paper desk pad and cotton pouch beside a laptop with an indistinct spreadsheet, illustrating a small shop’s sales-analysis workflow.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "c156df74bb66",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "customer-support-knowledge-base": {
+      "slug": "customer-support-knowledge-base",
+      "alt": "An organized reference binder and customer-service headset, illustrating a support knowledge base and human handoff.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "1f81530d51b7",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "email-welcome-sequence": {
+      "slug": "email-welcome-sequence",
+      "alt": "A printable planning sheet beside three envelopes, illustrating a lead magnet and welcome sequence.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "89b7784b7dc5",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "etsy-keyword-data-chatgpt": {
+      "slug": "etsy-keyword-data-chatgpt",
+      "alt": "Blank product tags beside a woven fabric sample inspected through a metal loupe.",
+      "position": "62% 53%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "6fbbbf9a4951",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "etsy-listing-workflow": {
+      "slug": "etsy-listing-workflow",
+      "alt": "A cotton drawstring pouch with a black initial A, fabric swatch, measuring tape and camera, illustrating accurate product-detail photography.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "c3aeef874b50",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "first-reliable-automation": {
+      "slug": "first-reliable-automation",
+      "alt": "Two green intake trays and a record card under a magnifying glass illustrate a submission-review queue.",
+      "position": "50% 54%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "3af8b2023829",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "honest-review-request-system": {
+      "slug": "honest-review-request-system",
+      "alt": "A repaired green desk lamp with a blank service tag beside a phone and work-order folder at a repair-shop counter.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "c56fb8082ba3",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "product-launch-content-system": {
+      "slug": "product-launch-content-system",
+      "alt": "A checklist and coordinated campaign-layout cards arranged on a dark green work surface.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "d7e9b6405293",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "product-profit-check": {
+      "slug": "product-profit-check",
+      "alt": "A canvas tote beside raw fabric, thread, packaging, and a background calculator illustrates the components of an order's cost.",
+      "position": "52% 55%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "fc83204582b0",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "self-service-booking": {
+      "slug": "self-service-booking",
+      "alt": "A camera, an open appointment planner and a simple desk clock in a photography studio.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "52f92bad9308",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    },
+    "service-lead-follow-up": {
+      "slug": "service-lead-follow-up",
+      "alt": "Paint color samples, a brush and a blank intake clipboard on a painting contractor’s desk.",
+      "position": "50% 50%",
+      "width": 1440,
+      "height": 960,
+      "widths": [
+        480,
+        960,
+        1440
+      ],
+      "socialWidth": 1200,
+      "socialHeight": 800,
+      "version": "d2b1d8754d1e",
+      "credit": "AI-generated editorial illustration · Seller Insider Hub"
+    }
+  }
+}

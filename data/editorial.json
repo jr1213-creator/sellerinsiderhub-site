@@ -1208,6 +1208,7 @@
         "https://help.etsy.com/hc/en-us/articles/115015628207-Shop-Stats-Glossary",
         "https://www.etsy.com/seller-handbook/article/1404564905677",
         "https://help.etsy.com/hc/en-us/articles/35122361353239-How-Do-I-Use-Etsy-s-Marketplace-Insights-Tool",
+        "https://help.etsy.com/hc/en-us/articles/10603291042967-Newly-Crafted-Etsy-Updates-for-Your-Shop",
         "https://help.etsy.com/hc/en-us/articles/360000343508-How-to-Download-Your-Listing-Information",
         "https://chatgpt.com/use-cases/chat-with-spreadsheets/",
         "https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt",
@@ -1229,9 +1230,9 @@
         "I reviewed the actual Etsy draft, images, category, attributes, personalization, price, processing, shipping and return settings before choosing whether to publish."
       ],
       "category": "Etsy & ecommerce",
-      "publishedAt": "2026-11-02",
-      "lastReviewed": "2026-11-02",
-      "modifiedAt": "2026-11-02",
+      "publishedAt": "2026-11-01",
+      "lastReviewed": "2026-11-01",
+      "modifiedAt": "2026-11-01",
       "contents": [
         {
           "id": "product-brief",

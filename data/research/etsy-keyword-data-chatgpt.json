@@ -1,6 +1,13 @@
 {
-  "reviewedOn": "2026-11-02",
+  "reviewedOn": "2026-11-01",
+  "reviewedTimezone": "America/New_York",
   "editorialBasis": "Current official product documentation. Vendor UI examples are illustrative, not fresh keyword research or private shop data. No product-account testing claimed.",
+  "reportingPeriodCheck": {
+    "sourceUrl": "https://help.etsy.com/hc/en-us/articles/10603291042967-Newly-Crafted-Etsy-Updates-for-Your-Shop",
+    "reviewedOn": "2026-11-01",
+    "finding": "Etsy is testing 30-day, 90-day and 12-month Marketplace Insights views, search conversion rates and listing price ranges; availability varies by seller.",
+    "implementation": "The guide and Marketplace CSV preserve the actual displayed reporting period separately from the capture date; longer-period totals must not be labeled as 30-day searches."
+  },
   "assets": [
     {
       "publisher": "Etsy",
@@ -55,7 +62,7 @@
       "requested_shop_specific_search_terms_screenshot_found": false,
       "sourcing_note": "No reliable public screenshot of the actual current shop-specific search-terms drilldown was located. The official Shop Stats image shows the navigation entry (How shoppers found you > Etsy search), not the resulting search-terms table. Marketplace Insights is a separate Etsy-wide keyword research interface.",
       "private_account_accessed": false,
-      "reviewed_on": "2026-11-02"
+      "reviewed_on": "2026-11-01"
     },
     {
       "purpose": "Intermediate screenshot handoff for the Seller Insider Hub Etsy keyword-data/ChatGPT tutorial. Assets remain in task scratch; no repository files changed.",

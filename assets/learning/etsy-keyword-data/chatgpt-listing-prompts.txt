@@ -1,7 +1,7 @@
 ETSY KEYWORD DATA: FIVE CHATGPT PROMPTS
 Seller Insider Hub
 Guide: https://sellerinsiderhub.com/playbooks/etsy-keyword-data-chatgpt/
-Reviewed: 2026-11-02
+Reviewed: 2026-11-01
 
 Start with your own keyword files and verified product brief. Run the prompts in order. Verify source data and every product claim before publishing. These prompts do not promise rankings, sales or policy compliance.
 

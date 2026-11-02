@@ -8,8 +8,11 @@ reported keywords and available metrics into etsy-stats-template.csv. Use one
 metric per row and preserve the metric label exactly as displayed.
 
 Open Shop Manager > Stats > Marketplace Insights. Copy each researched term,
-its displayed last-30-day searches and listing count into
-etsy-marketplace-template.csv. Record the capture date. These templates do not
+its displayed search total into searches_in_period, and its listing count into
+listings_count in etsy-marketplace-template.csv. Set period to the exact
+displayed reporting window and record captured_on separately. Etsy's standard
+view covers 30 days; some accounts are testing 90-day or 12-month views. Do not
+label those longer-period totals as 30-day searches. These templates do not
 depend on a native Etsy search-data CSV export button.
 
 2. Preserve meaning and provenance
@@ -24,7 +27,9 @@ depend on a native Etsy search-data CSV export button.
 - Enter date_start and date_end as the exact selected Stats dates, preferably
   YYYY-MM-DD. In Marketplace and combined evidence rows, captured_on is the
   date the source observation was collected. Keep it separate from the period
-  the metric describes. Use blank or Unknown when capture is unknown; never
+  the metric describes. Copy the displayed period label and any supplied start
+  and end dates into period; do not infer a range the source does not show.
+  Use blank or Unknown when capture is unknown; never
   invent it or assume it from today or the file modification date. Do not turn
   a rolling 30-day window into a calendar month.
 - For Stats, set scope to shop or listing as the report actually shows. Fill
@@ -54,3 +59,4 @@ export handles commas and quotation marks within fields.
 Official Etsy references
 Stats: https://help.etsy.com/hc/en-us/articles/115015774268-How-to-Use-Etsy-Stats-for-Your-Shop
 Marketplace Insights: https://help.etsy.com/hc/en-us/articles/35122361353239-How-Do-I-Use-Etsy-s-Marketplace-Insights-Tool
+Marketplace Insights updates: https://help.etsy.com/hc/en-us/articles/10603291042967-Newly-Crafted-Etsy-Updates-for-Your-Shop

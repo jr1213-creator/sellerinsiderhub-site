@@ -1,1 +1,1 @@
-record_id,keyword,searches_last_30_days,listings_count,captured_on,market,source_file,notes
+record_id,keyword,searches_in_period,listings_count,period,captured_on,market,source_file,notes
