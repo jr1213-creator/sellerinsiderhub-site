@@ -1,12 +1,12 @@
 {
   "built": "2026-11-01",
-  "pages": 129,
-  "indexed": 125,
+  "pages": 130,
+  "indexed": 126,
   "tools": 47,
   "categories": 14,
   "comparisons": 9,
   "playbooks": 17,
-  "feedEntries": 42,
+  "feedEntries": 43,
   "investorRoom": {
     "route": "/partners/investors/",
     "assets": 6,
@@ -14,6 +14,11 @@
     "indexed": false
   },
   "routes": [
+    {
+      "route": "/research/software-plan-costs/",
+      "title": "Small-business software plan cost and capacity data",
+      "kind": "Research"
+    },
     {
       "route": "/learn/ai-for-small-business/",
       "title": "AI for small business: a practical implementation path",

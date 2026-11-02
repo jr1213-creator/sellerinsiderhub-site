@@ -60,8 +60,11 @@ class EditorialReleaseTests(unittest.TestCase):
                 self.assertGreater(text.index('<aside class="author-note"'), text.find('id="research-record"'))
                 graph = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)[1])['@graph']
                 article = next(x for x in graph if x.get('@type') == 'Article')
-                self.assertEqual(article['author']['name'], 'Jennie Malone')
-                self.assertEqual(article['author']['url'], ORIGIN+'/authors/jennie-malone/')
+                author = article['author']
+                if '@id' in author and 'name' not in author:
+                    author = next(node for node in graph if node.get('@id') == author['@id'])
+                self.assertEqual(author['name'], 'Jennie Malone')
+                self.assertEqual(author['url'], ORIGIN+'/authors/jennie-malone/')
 
 
 if __name__ == '__main__':

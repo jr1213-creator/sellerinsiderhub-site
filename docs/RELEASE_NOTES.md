@@ -1,3 +1,13 @@
+# Comparison routing, software entities and reproducible research — November 2, 2026
+
+- Added a validated registry for the nine reviewed comparison pairs and 36 reverse-order aliases. Browser selections retain their order and connect to an existing researched article when the exact pair is available. The interactive workspace remains noindex; unreviewed pairs do not create indexable articles.
+- Connected Article and WebPage subjects to stable SoftwareApplication identities across 47 tool profiles. Author, publisher, website and breadcrumb references resolve within the graph. No unsupported offers, ratings or reviews are added.
+- Published `/research/software-plan-costs/` with 17 scoped plan observations across eight tools, four comparison contexts and 18 recorded primary sources. Downloadable CSV/JSON snapshot `13fba5ce86ba8c0f` preserves the original November 1 source-check dates, payment periods, billing units, capacity states and derivations. Page/feed publication is November 2.
+- Research releases are reviewed source archives: builds reject an unarchived current snapshot and publish all archived releases byte-for-byte. The public output validator allows only the exact research landing page and reviewed download filenames; raw research notes and internal source files remain blocked.
+- Linked the dataset from the resource shelf, relevant comparisons, footer, sitemap, RSS/Atom and machine-readable publication index. The sitemap contains 126 indexable candidates; feed/Atom contains 43 entries. These counts do not represent confirmed search-engine indexing.
+- Added a documented Next.js App Router equivalent with preserved URL contracts, curated static parameters, canonical metadata, route rejection, and static-export versus ISR migration gates. It is a reference design; production remains the existing Python/static Netlify stack.
+- Verification: the complete build/check gate passes, including seven comparison routing checks, eleven schema checks, ten dataset checks and the existing forms, consent, workspace, feeds, redirect, editorial, calculator and private investor-route gates. No traffic uplift or AI citation is claimed from deployment.
+
 # Complete publication release — November 1, 2026
 
 ## Approved boxed-S identity — November 1, 2026

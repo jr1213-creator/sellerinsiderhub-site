@@ -388,12 +388,22 @@ class Validator:
         # This reviewed, stdlib-only teaching download recomputes the supplied
         # fictional CSV. Site build scripts and every other source file stay blocked.
         public_teaching_code = {"assets/learning/sales-analysis/verify_sales_analysis.py"}
+        # Public research is an explicit page and reviewed archive exports only.
+        # Raw research notes, configuration and other internal paths stay blocked.
+        public_research = {"research/software-plan-costs/index.html"}
+        archive = ROOT / "research-data/software-plan-costs"
+        for reviewed in archive.glob("software-plan-costs-*"):
+            if re.fullmatch(r"software-plan-costs-[a-f0-9]{16}\.(csv|json)", reviewed.name):
+                public_research.add("downloads/research/" + reviewed.name)
         for path in self.dist.rglob("*"):
             if not path.is_file():
                 continue
             relative = path.relative_to(self.dist)
-            if set(relative.parts[:-1]) & forbidden_dirs or path.name in forbidden_names:
+            if (set(relative.parts[:-1]) & forbidden_dirs or path.name in forbidden_names) and relative.as_posix() not in public_research:
                 self.error("internal-file-exposed", relative.as_posix(), "Internal/legacy file is in public output.")
+            if relative.as_posix().startswith("downloads/research/") and relative.as_posix() in public_research:
+                if path.read_bytes() != (archive / path.name).read_bytes():
+                    self.error("research-release-mismatch", relative.as_posix(), "Public research differs from its reviewed archive.")
             if path.name.startswith(".env") or (path.suffix in {".py", ".pyc", ".sql", ".cjs"} and relative.as_posix() not in public_teaching_code):
                 self.error("source-file-exposed", relative.as_posix(), "Source/configuration file is in public output.")
 

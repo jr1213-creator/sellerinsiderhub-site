@@ -1,0 +1,2102 @@
+{
+  "canonical_url": "https://sellerinsiderhub.com/research/software-plan-costs/",
+  "contexts": [
+    {
+      "assumptions": [
+        "A Buffer channel is one connected social account. Every paid channel is charged.",
+        "Metricool paid prices are fixed brand bundles, not multiplied by the brand count.",
+        "Monthly post input should include each network publication; confirm multi-network counting with the vendor."
+      ],
+      "caveats": [
+        "Buffer estimates stop at ten paid channels; Metricool quotes stop at the included brand tier.",
+        "Required X access needs a separate Metricool add-on quote.",
+        "Metricool’s 600-post per-brand review threshold is not a guaranteed or hard maximum.",
+        "Network, account type and format restrictions still apply."
+      ],
+      "defaults": {
+        "approvals": false,
+        "brands": 1,
+        "channels": 3,
+        "linkedIn": true,
+        "postsPerMonth": 24,
+        "queuedPerChannel": 10,
+        "x": false
+      },
+      "id": "buffer-vs-metricool",
+      "kind": "social",
+      "title": "Buffer vs Metricool",
+      "url": "https://sellerinsiderhub.com/comparisons/buffer-vs-metricool/"
+    },
+    {
+      "assumptions": [
+        "Individual paid subscriptions only; one person per quoted plan.",
+        "A twelve-month projection is separate from an annual subscription offer."
+      ],
+      "caveats": [
+        "Free plans, team plans, API usage, taxes and usage add-ons are outside these quotes.",
+        "No fixed message allowance or model-quality score is inferred."
+      ],
+      "defaults": {
+        "teamAdministration": false,
+        "users": 1
+      },
+      "id": "chatgpt-vs-claude",
+      "kind": "assistant",
+      "title": "ChatGPT vs Claude",
+      "url": "https://sellerinsiderhub.com/comparisons/chatgpt-vs-claude/"
+    },
+    {
+      "assumptions": [
+        "Estimated sends = active subscribers × full-list broadcasts + new sequence entrants × welcome emails.",
+        "Subscriber input is the expected peak active list including new subscribers; new entrants are a subset, not an extra charge added again.",
+        "All welcome emails are assumed sent within the same billing month.",
+        "The welcome sequence is modeled as one automation. Count all email, delay, condition and other action blocks in the largest automation, excluding the trigger. The default is 3 emails plus 2 delays = 5 steps."
+      ],
+      "caveats": [
+        "Segmented sends, other sequences, tests and resends can change actual volume.",
+        "Above quoted subscriber tiers, no exact paid cost is produced.",
+        "Deliverability and business results were not benchmarked.",
+        "Step capacity is checked only when active automations are requested. The reviewed Kit sources do not establish a per-automation step cap; that capacity stays unverified rather than being treated as unlimited."
+      ],
+      "defaults": {
+        "activeAutomations": 1,
+        "automationSteps": 5,
+        "broadcastsPerMonth": 4,
+        "newSubscribers": 25,
+        "subscribers": 250,
+        "welcomeEmails": 3
+      },
+      "id": "mailerlite-vs-kit",
+      "kind": "email",
+      "title": "MailerLite vs Kit",
+      "url": "https://sellerinsiderhub.com/comparisons/mailerlite-vs-kit/"
+    },
+    {
+      "assumptions": [
+        "Zapier estimate = runs × standard billable action steps.",
+        "Make estimate = runs × (standard action modules + trigger modules) + extra credits.",
+        "These are user-specified simple-run assumptions, not a platform equivalence benchmark."
+      ],
+      "caveats": [
+        "Polling, bundles, loops, retries and AI can change consumption. Enter additional measured Make credits when known.",
+        "MCP, Lead Router, AI and extended code runtimes have different Zapier task rates.",
+        "Overages and larger plan tiers are not extrapolated; outside verified allowances, obtain a quote."
+      ],
+      "defaults": {
+        "actionSteps": 2,
+        "extraCredits": 0,
+        "premiumApps": false,
+        "triggerModules": 1,
+        "workflowRuns": 100
+      },
+      "id": "zapier-vs-make",
+      "kind": "automation",
+      "title": "Zapier vs Make",
+      "url": "https://sellerinsiderhub.com/comparisons/zapier-vs-make/"
+    }
+  ],
+  "counts": {
+    "contexts": 4,
+    "observations": 17,
+    "sources": 18,
+    "tools": 8
+  },
+  "description": "Compare documented software prices, billing terms, usage limits, and feature requirements. Download a versioned data snapshot and see the calculations.",
+  "format_version": 1,
+  "methodology": {
+    "exclusions": [
+      "Tax",
+      "Foreign exchange",
+      "Usage overages",
+      "External app/API subscriptions",
+      "Unpriced add-ons",
+      "Temporary promotional discounts"
+    ],
+    "measurement_technique": "A curated compilation of official plan documentation, with billing units and recorded capacity limits preserved. Arithmetic examples use disclosed inputs; no vendor performance or business outcomes were measured.",
+    "null_meaning": "Unknown or unavailable, never zero. Each price and capacity includes an explicit state; free plans have numeric zero.",
+    "scope_notes": "No live price feed, historical price-change claim, industry spending average, vendor-quality score, or measured ROI.",
+    "selection": "Plans already eligible for the four documented comparison calculators; a curated sample, not a representative market survey.",
+    "url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology"
+  },
+  "observations": [
+    {
+      "annual_amount_basis": "recorded_annual_total",
+      "annual_monthly_equivalent_usd": 5.0,
+      "annual_period_months": 12,
+      "annual_price_status": "recorded",
+      "annual_total_usd": 60,
+      "billing_unit": "channel",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "buffer-vs-metricool"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/buffer-vs-metricool/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "approvals": {
+          "state": "not_included",
+          "value": false
+        },
+        "linkedIn": {
+          "state": "included",
+          "value": true
+        },
+        "x": {
+          "state": "included",
+          "value": true
+        }
+      },
+      "limits": {
+        "brandsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Rate for each of the first ten connected channels only.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "channelsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Rate for each of the first ten connected channels only.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "postsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Rate for each of the first ten connected channels only.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "queuedPerChannelMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Rate for each of the first ten connected channels only.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "finite",
+          "value": 5000
+        },
+        "usersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Rate for each of the first ten connected channels only.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "finite",
+          "value": 1
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 6,
+      "monthly_period_months": 1,
+      "monthly_price_status": "recorded",
+      "notes": [
+        "All paid channels are billed; the Free plan’s three channels are not added on top.",
+        "More than ten channels uses different price bands and requires a vendor quote in this calculator."
+      ],
+      "observation_id": "buffer:essentials",
+      "plan_id": "essentials",
+      "plan_name": "Essentials",
+      "price_scope": {
+        "maxQuantity": 10,
+        "minQuantity": 1
+      },
+      "scope": "Rate for each of the first ten connected channels only.",
+      "source_ids": [
+        "buffer-plan-guide",
+        "buffer-pricing"
+      ],
+      "source_urls": [
+        "https://support.buffer.com/articles/buffer-pricing-and-features-6pJrOPuzIt",
+        "https://buffer.com/pricing"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "buffer-pricing"
+          ],
+          "text": "Supported posting formats and direct publishing depend on the network and profile type."
+        }
+      ],
+      "tool_id": "buffer",
+      "tool_name": "Buffer"
+    },
+    {
+      "annual_amount_basis": "no_charge",
+      "annual_monthly_equivalent_usd": 0.0,
+      "annual_period_months": 12,
+      "annual_price_status": "no_charge",
+      "annual_total_usd": 0,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "buffer-vs-metricool"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/buffer-vs-metricool/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "approvals": {
+          "state": "not_included",
+          "value": false
+        },
+        "linkedIn": {
+          "state": "included",
+          "value": true
+        },
+        "x": {
+          "state": "included",
+          "value": true
+        }
+      },
+      "limits": {
+        "brandsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Up to three connected social accounts; ten queued posts per account at one time.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "channelsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Up to three connected social accounts; ten queued posts per account at one time.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "finite",
+          "value": 3
+        },
+        "postsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Up to three connected social accounts; ten queued posts per account at one time.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "queuedPerChannelMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Up to three connected social accounts; ten queued posts per account at one time.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "finite",
+          "value": 10
+        },
+        "usersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Up to three connected social accounts; ten queued posts per account at one time.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "finite",
+          "value": 1
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 0,
+      "monthly_period_months": 1,
+      "monthly_price_status": "no_charge",
+      "notes": [
+        "Publishing frees a queue slot. Ten queued posts is not ten posts per month.",
+        "The Free plan also has a lifetime connection restriction; verify eligibility after reconnecting accounts."
+      ],
+      "observation_id": "buffer:free",
+      "plan_id": "free",
+      "plan_name": "Free",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "Up to three connected social accounts; ten queued posts per account at one time.",
+      "source_ids": [
+        "buffer-plan-guide",
+        "buffer-pricing"
+      ],
+      "source_urls": [
+        "https://support.buffer.com/articles/buffer-pricing-and-features-6pJrOPuzIt",
+        "https://buffer.com/pricing"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "buffer-pricing"
+          ],
+          "text": "Supported posting formats and direct publishing depend on the network and profile type."
+        }
+      ],
+      "tool_id": "buffer",
+      "tool_name": "Buffer"
+    },
+    {
+      "annual_amount_basis": "recorded_annual_total",
+      "annual_monthly_equivalent_usd": 10.0,
+      "annual_period_months": 12,
+      "annual_price_status": "recorded",
+      "annual_total_usd": 120,
+      "billing_unit": "channel",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "buffer-vs-metricool"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/buffer-vs-metricool/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "approvals": {
+          "state": "included",
+          "value": true
+        },
+        "linkedIn": {
+          "state": "included",
+          "value": true
+        },
+        "x": {
+          "state": "included",
+          "value": true
+        }
+      },
+      "limits": {
+        "brandsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Rate for each of the first ten connected channels only.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "channelsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Rate for each of the first ten connected channels only.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "postsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Rate for each of the first ten connected channels only.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "queuedPerChannelMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Rate for each of the first ten connected channels only.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "finite",
+          "value": 5000
+        },
+        "usersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Rate for each of the first ten connected channels only.",
+          "source_ids": [
+            "buffer-plan-guide",
+            "buffer-pricing"
+          ],
+          "state": "unlimited",
+          "value": null
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 12,
+      "monthly_period_months": 1,
+      "monthly_price_status": "recorded",
+      "notes": [
+        "Approval workflows are included. Higher channel-volume bands are outside this calculator."
+      ],
+      "observation_id": "buffer:team",
+      "plan_id": "team",
+      "plan_name": "Team",
+      "price_scope": {
+        "maxQuantity": 10,
+        "minQuantity": 1
+      },
+      "scope": "Rate for each of the first ten connected channels only.",
+      "source_ids": [
+        "buffer-plan-guide",
+        "buffer-pricing"
+      ],
+      "source_urls": [
+        "https://support.buffer.com/articles/buffer-pricing-and-features-6pJrOPuzIt",
+        "https://buffer.com/pricing"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "buffer-pricing"
+          ],
+          "text": "Supported posting formats and direct publishing depend on the network and profile type."
+        }
+      ],
+      "tool_id": "buffer",
+      "tool_name": "Buffer"
+    },
+    {
+      "annual_amount_basis": "not_offered",
+      "annual_monthly_equivalent_usd": null,
+      "annual_period_months": 12,
+      "annual_price_status": "not_offered",
+      "annual_total_usd": null,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "chatgpt-vs-claude"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/chatgpt-vs-claude/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "teamAdministration": {
+          "state": "not_included",
+          "value": false
+        }
+      },
+      "limits": {
+        "usersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "One individual Plus subscription. No business-team quotation.",
+          "source_ids": [
+            "openai-plus"
+          ],
+          "state": "finite",
+          "value": 1
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 20,
+      "monthly_period_months": 1,
+      "monthly_price_status": "recorded",
+      "notes": [
+        "Plus has no annual billing; 12 monthly payments total $240 before tax if the price remains unchanged.",
+        "Usage caps vary; a paid subscription does not establish a fixed number of completed business tasks."
+      ],
+      "observation_id": "chatgpt:plus",
+      "plan_id": "plus",
+      "plan_name": "Plus",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "One individual Plus subscription. No business-team quotation.",
+      "source_ids": [
+        "openai-plus"
+      ],
+      "source_urls": [
+        "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "openai-plus"
+          ],
+          "text": "API usage is billed separately from Plus."
+        }
+      ],
+      "tool_id": "chatgpt",
+      "tool_name": "ChatGPT"
+    },
+    {
+      "annual_amount_basis": "recorded_annual_total",
+      "annual_monthly_equivalent_usd": 16.67,
+      "annual_period_months": 12,
+      "annual_price_status": "recorded",
+      "annual_total_usd": 200,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "chatgpt-vs-claude"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/chatgpt-vs-claude/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "teamAdministration": {
+          "state": "not_included",
+          "value": false
+        }
+      },
+      "limits": {
+        "usersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "One individual Pro subscription. Annual price is paid upfront.",
+          "source_ids": [
+            "claude-pricing"
+          ],
+          "state": "finite",
+          "value": 1
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 20,
+      "monthly_period_months": 1,
+      "monthly_price_status": "recorded",
+      "notes": [
+        "The exact annual charge is $200; $200/12 is about $16.67. The vendor displays a rounded $17 monthly equivalent.",
+        "Account and model usage limits still apply."
+      ],
+      "observation_id": "claude:pro",
+      "plan_id": "pro",
+      "plan_name": "Pro",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "One individual Pro subscription. Annual price is paid upfront.",
+      "source_ids": [
+        "claude-pricing"
+      ],
+      "source_urls": [
+        "https://claude.com/pricing"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "claude-pricing"
+          ],
+          "text": "Model/tool access and usage limits can change; this comparison does not establish a quality winner."
+        }
+      ],
+      "tool_id": "claude",
+      "tool_name": "Claude"
+    },
+    {
+      "annual_amount_basis": "recorded_annual_total",
+      "annual_monthly_equivalent_usd": 32.5,
+      "annual_period_months": 12,
+      "annual_price_status": "recorded",
+      "annual_total_usd": 390,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "mailerlite-vs-kit"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/mailerlite-vs-kit/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "sequences": {
+          "state": "included",
+          "value": true
+        }
+      },
+      "limits": {
+        "activeAutomationsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-1,000 active-subscriber tier is quoted.",
+          "source_ids": [
+            "kit-plan-guide",
+            "kit-pricing"
+          ],
+          "state": "unlimited",
+          "value": null
+        },
+        "emailsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-1,000 active-subscriber tier is quoted.",
+          "source_ids": [
+            "kit-plan-guide",
+            "kit-pricing"
+          ],
+          "state": "unlimited",
+          "value": null
+        },
+        "subscribersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-1,000 active-subscriber tier is quoted.",
+          "source_ids": [
+            "kit-plan-guide",
+            "kit-pricing"
+          ],
+          "state": "finite",
+          "value": 1000
+        },
+        "usersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-1,000 active-subscriber tier is quoted.",
+          "source_ids": [
+            "kit-plan-guide",
+            "kit-pricing"
+          ],
+          "state": "finite",
+          "value": 2
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 39,
+      "monthly_period_months": 1,
+      "monthly_price_status": "recorded",
+      "notes": [
+        "Larger lists require a separately priced subscriber tier.",
+        "Annual equivalent is $32.50/month, paid as $390 upfront."
+      ],
+      "observation_id": "kit:creator-1000",
+      "plan_id": "creator-1000",
+      "plan_name": "Creator · 1,000 subscribers",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1,
+        "subscriberMax": 1000
+      },
+      "scope": "Only the up-to-1,000 active-subscriber tier is quoted.",
+      "source_ids": [
+        "kit-plan-guide",
+        "kit-pricing"
+      ],
+      "source_urls": [
+        "https://help.kit.com/en/articles/4494683-creator-vs-pro-choose-the-right-plan",
+        "https://kit.com/pricing"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "kit-free"
+          ],
+          "text": "Use the required automation features to choose a plan; a larger free list alone does not satisfy a welcome-series workflow."
+        }
+      ],
+      "tool_id": "kit",
+      "tool_name": "Kit"
+    },
+    {
+      "annual_amount_basis": "no_charge",
+      "annual_monthly_equivalent_usd": 0.0,
+      "annual_period_months": 12,
+      "annual_price_status": "no_charge",
+      "annual_total_usd": 0,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "mailerlite-vs-kit"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/mailerlite-vs-kit/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "sequences": {
+          "state": "not_included",
+          "value": false
+        }
+      },
+      "limits": {
+        "activeAutomationsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Broadcast newsletters only; the Free subscriber allowance is not an automation allowance.",
+          "source_ids": [
+            "kit-free"
+          ],
+          "state": "finite",
+          "value": 0
+        },
+        "emailsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Broadcast newsletters only; the Free subscriber allowance is not an automation allowance.",
+          "source_ids": [
+            "kit-free"
+          ],
+          "state": "unlimited",
+          "value": null
+        },
+        "subscribersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Broadcast newsletters only; the Free subscriber allowance is not an automation allowance.",
+          "source_ids": [
+            "kit-free"
+          ],
+          "state": "finite",
+          "value": 10000
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 0,
+      "monthly_period_months": 1,
+      "monthly_price_status": "no_charge",
+      "notes": [
+        "Sequences and visual automations require a paid plan."
+      ],
+      "observation_id": "kit:free",
+      "plan_id": "free",
+      "plan_name": "Free",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "Broadcast newsletters only; the Free subscriber allowance is not an automation allowance.",
+      "source_ids": [
+        "kit-free"
+      ],
+      "source_urls": [
+        "https://help.kit.com/en/articles/16627071-the-kit-free-plan"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "kit-free"
+          ],
+          "text": "Use the required automation features to choose a plan; a larger free list alone does not satisfy a welcome-series workflow."
+        }
+      ],
+      "tool_id": "kit",
+      "tool_name": "Kit"
+    },
+    {
+      "annual_amount_basis": "derived_from_recorded_monthly_price_and_annual_discount",
+      "annual_monthly_equivalent_usd": 10.8,
+      "annual_period_months": 12,
+      "annual_price_status": "recorded",
+      "annual_total_usd": 129.6,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "mailerlite-vs-kit"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/mailerlite-vs-kit/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "sequences": {
+          "state": "included",
+          "value": true
+        }
+      },
+      "limits": {
+        "activeAutomationsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing",
+            "mailerlite-tier-guide"
+          ],
+          "state": "finite",
+          "value": 50
+        },
+        "automationStepsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Maximum steps in a single automation; count email actions, delays, conditions and other actions after the trigger.",
+          "source_ids": [
+            "mailerlite-automation-steps",
+            "mailerlite-pricing"
+          ],
+          "state": "finite",
+          "value": 100
+        },
+        "emailsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing",
+            "mailerlite-tier-guide"
+          ],
+          "state": "finite",
+          "value": 5000
+        },
+        "subscribersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing",
+            "mailerlite-tier-guide"
+          ],
+          "state": "finite",
+          "value": 500
+        },
+        "usersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing",
+            "mailerlite-tier-guide"
+          ],
+          "state": "finite",
+          "value": 3
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 12,
+      "monthly_period_months": 1,
+      "monthly_price_status": "recorded",
+      "notes": [
+        "Annual total applies the advertised 10% annual discount: $12 × 12 × 0.90.",
+        "Do not extrapolate this price to larger subscriber tiers.",
+        "Each automation is limited to 100 steps; the count of active automations is a separate allowance."
+      ],
+      "observation_id": "mailerlite:comfort-500",
+      "plan_id": "comfort-500",
+      "plan_name": "Comfort · 500 subscribers",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1,
+        "subscriberMax": 500
+      },
+      "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+      "source_ids": [
+        "mailerlite-automation-steps",
+        "mailerlite-free",
+        "mailerlite-pricing",
+        "mailerlite-tier-guide"
+      ],
+      "source_urls": [
+        "https://www.mailerlite.com/help/how-to-use-automation-steps",
+        "https://www.mailerlite.com/free-plan",
+        "https://www.mailerlite.com/pricing",
+        "https://www.mailerlite.com/blog/squarespace-email-marketing"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "mailerlite-pricing"
+          ],
+          "text": "Passing a paid subscriber tier can increase billing; passing the Free subscriber cap locks sending until corrected or upgraded."
+        },
+        {
+          "sourceIds": [
+            "mailerlite-pricing"
+          ],
+          "text": "The number of active automations and the number of steps inside each automation are separate limits. Free permits 5 steps per automation; Comfort and Power permit 100."
+        }
+      ],
+      "tool_id": "mailerlite",
+      "tool_name": "MailerLite"
+    },
+    {
+      "annual_amount_basis": "no_charge",
+      "annual_monthly_equivalent_usd": 0.0,
+      "annual_period_months": 12,
+      "annual_price_status": "no_charge",
+      "annual_total_usd": 0,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "mailerlite-vs-kit"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/mailerlite-vs-kit/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "sequences": {
+          "state": "included",
+          "value": true
+        }
+      },
+      "limits": {
+        "activeAutomationsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Active subscribers and all campaign/automation recipient sends counted together.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing"
+          ],
+          "state": "finite",
+          "value": 3
+        },
+        "automationStepsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Maximum steps in a single automation; count email actions, delays, conditions and other actions after the trigger.",
+          "source_ids": [
+            "mailerlite-automation-steps",
+            "mailerlite-pricing"
+          ],
+          "state": "finite",
+          "value": 5
+        },
+        "emailsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Active subscribers and all campaign/automation recipient sends counted together.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing"
+          ],
+          "state": "finite",
+          "value": 2500
+        },
+        "subscribersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Active subscribers and all campaign/automation recipient sends counted together.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing"
+          ],
+          "state": "finite",
+          "value": 250
+        },
+        "usersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Active subscribers and all campaign/automation recipient sends counted together.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing"
+          ],
+          "state": "finite",
+          "value": 2
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 0,
+      "monthly_period_months": 1,
+      "monthly_price_status": "no_charge",
+      "notes": [
+        "Each automation is limited to 5 steps; the count of active automations is a separate allowance."
+      ],
+      "observation_id": "mailerlite:free",
+      "plan_id": "free",
+      "plan_name": "Free",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "Active subscribers and all campaign/automation recipient sends counted together.",
+      "source_ids": [
+        "mailerlite-automation-steps",
+        "mailerlite-free",
+        "mailerlite-pricing"
+      ],
+      "source_urls": [
+        "https://www.mailerlite.com/help/how-to-use-automation-steps",
+        "https://www.mailerlite.com/free-plan",
+        "https://www.mailerlite.com/pricing"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "mailerlite-pricing"
+          ],
+          "text": "Passing a paid subscriber tier can increase billing; passing the Free subscriber cap locks sending until corrected or upgraded."
+        },
+        {
+          "sourceIds": [
+            "mailerlite-pricing"
+          ],
+          "text": "The number of active automations and the number of steps inside each automation are separate limits. Free permits 5 steps per automation; Comfort and Power permit 100."
+        }
+      ],
+      "tool_id": "mailerlite",
+      "tool_name": "MailerLite"
+    },
+    {
+      "annual_amount_basis": "derived_from_recorded_monthly_price_and_annual_discount",
+      "annual_monthly_equivalent_usd": 22.5,
+      "annual_period_months": 12,
+      "annual_price_status": "recorded",
+      "annual_total_usd": 270,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "mailerlite-vs-kit"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/mailerlite-vs-kit/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "sequences": {
+          "state": "included",
+          "value": true
+        }
+      },
+      "limits": {
+        "activeAutomationsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing",
+            "mailerlite-tier-guide"
+          ],
+          "state": "unlimited",
+          "value": null
+        },
+        "automationStepsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Maximum steps in a single automation; count email actions, delays, conditions and other actions after the trigger.",
+          "source_ids": [
+            "mailerlite-automation-steps",
+            "mailerlite-pricing"
+          ],
+          "state": "finite",
+          "value": 100
+        },
+        "emailsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing",
+            "mailerlite-tier-guide"
+          ],
+          "state": "unlimited",
+          "value": null
+        },
+        "subscribersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing",
+            "mailerlite-tier-guide"
+          ],
+          "state": "finite",
+          "value": 500
+        },
+        "usersMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+          "source_ids": [
+            "mailerlite-free",
+            "mailerlite-pricing",
+            "mailerlite-tier-guide"
+          ],
+          "state": "unlimited",
+          "value": null
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 25,
+      "monthly_period_months": 1,
+      "monthly_price_status": "recorded",
+      "notes": [
+        "Unlimited sending remains subject to fair use.",
+        "Annual total applies the advertised 10% annual discount: $25 × 12 × 0.90.",
+        "Each automation is limited to 100 steps; the count of active automations is a separate allowance."
+      ],
+      "observation_id": "mailerlite:power-500",
+      "plan_id": "power-500",
+      "plan_name": "Power · 500 subscribers",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1,
+        "subscriberMax": 500
+      },
+      "scope": "Only the up-to-500 active-subscriber tier is quoted.",
+      "source_ids": [
+        "mailerlite-automation-steps",
+        "mailerlite-free",
+        "mailerlite-pricing",
+        "mailerlite-tier-guide"
+      ],
+      "source_urls": [
+        "https://www.mailerlite.com/help/how-to-use-automation-steps",
+        "https://www.mailerlite.com/free-plan",
+        "https://www.mailerlite.com/pricing",
+        "https://www.mailerlite.com/blog/squarespace-email-marketing"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "mailerlite-pricing"
+          ],
+          "text": "Passing a paid subscriber tier can increase billing; passing the Free subscriber cap locks sending until corrected or upgraded."
+        },
+        {
+          "sourceIds": [
+            "mailerlite-pricing"
+          ],
+          "text": "The number of active automations and the number of steps inside each automation are separate limits. Free permits 5 steps per automation; Comfort and Power permit 100."
+        }
+      ],
+      "tool_id": "mailerlite",
+      "tool_name": "MailerLite"
+    },
+    {
+      "annual_amount_basis": "unknown",
+      "annual_monthly_equivalent_usd": null,
+      "annual_period_months": 12,
+      "annual_price_status": "unknown",
+      "annual_total_usd": null,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "zapier-vs-make"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/zapier-vs-make/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "premiumApps": {
+          "state": "included",
+          "value": true
+        }
+      },
+      "limits": {
+        "actionStepsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "10,000-credit entry tier. An exact annual charge was not verified.",
+          "source_ids": [
+            "make-credits",
+            "make-plan-guide"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "creditsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "10,000-credit entry tier. An exact annual charge was not verified.",
+          "source_ids": [
+            "make-credits",
+            "make-plan-guide"
+          ],
+          "state": "finite",
+          "value": 10000
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 12,
+      "monthly_period_months": 1,
+      "monthly_price_status": "recorded",
+      "notes": [
+        "Credit use can grow through polling, fan-out, bundles, retries and AI.",
+        "The $12 quote comes from Make’s own June 2026 plan guide, retrieved on the checked date; confirm checkout before committing."
+      ],
+      "observation_id": "make:core-10000",
+      "plan_id": "core-10000",
+      "plan_name": "Core · 10,000 credits",
+      "price_scope": {
+        "creditsPerMonthMax": 10000,
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "10,000-credit entry tier. An exact annual charge was not verified.",
+      "source_ids": [
+        "make-credits",
+        "make-plan-guide"
+      ],
+      "source_urls": [
+        "https://help.make.com/credits",
+        "https://www.make.com/blog/best-marketing-automation-tools"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "make-credits"
+          ],
+          "text": "Standard non-AI operations use one credit; AI metering can vary. With a custom AI connection, provider token charges can be additional."
+        }
+      ],
+      "tool_id": "make",
+      "tool_name": "Make"
+    },
+    {
+      "annual_amount_basis": "no_charge",
+      "annual_monthly_equivalent_usd": 0.0,
+      "annual_period_months": 12,
+      "annual_price_status": "no_charge",
+      "annual_total_usd": 0,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "zapier-vs-make"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/zapier-vs-make/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "premiumApps": {
+          "state": "included",
+          "value": true
+        }
+      },
+      "limits": {
+        "actionStepsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Standard Make modules only; integration/API subscription costs are separate.",
+          "source_ids": [
+            "make-credits",
+            "make-plan-guide"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "creditsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Standard Make modules only; integration/API subscription costs are separate.",
+          "source_ids": [
+            "make-credits",
+            "make-plan-guide"
+          ],
+          "state": "finite",
+          "value": 1000
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 0,
+      "monthly_period_months": 1,
+      "monthly_price_status": "no_charge",
+      "notes": [
+        "App/action availability and scheduling requirements still need verification."
+      ],
+      "observation_id": "make:free",
+      "plan_id": "free",
+      "plan_name": "Free",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "Standard Make modules only; integration/API subscription costs are separate.",
+      "source_ids": [
+        "make-credits",
+        "make-plan-guide"
+      ],
+      "source_urls": [
+        "https://help.make.com/credits",
+        "https://www.make.com/blog/best-marketing-automation-tools"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "make-credits"
+          ],
+          "text": "Standard non-AI operations use one credit; AI metering can vary. With a custom AI connection, provider token charges can be additional."
+        }
+      ],
+      "tool_id": "make",
+      "tool_name": "Make"
+    },
+    {
+      "annual_amount_basis": "recorded_annual_total",
+      "annual_monthly_equivalent_usd": 53.0,
+      "annual_period_months": 12,
+      "annual_price_status": "recorded",
+      "annual_total_usd": 636,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "buffer-vs-metricool"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/buffer-vs-metricool/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": {
+        "is_hard_cap": false,
+        "posts_per_brand_per_month": 600
+      },
+      "features": {
+        "approvals": {
+          "state": "included",
+          "value": true
+        },
+        "linkedIn": {
+          "state": "included",
+          "value": true
+        },
+        "x": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "limits": {
+        "brandsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Fixed bundle for up to fifteen brands; not a per-brand multiplier.",
+          "source_ids": [
+            "metricool-fair-use",
+            "metricool-pricing"
+          ],
+          "state": "finite",
+          "value": 15
+        },
+        "channelsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Fixed bundle for up to fifteen brands; not a per-brand multiplier.",
+          "source_ids": [
+            "metricool-fair-use",
+            "metricool-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "postsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Fixed bundle for up to fifteen brands; not a per-brand multiplier.",
+          "source_ids": [
+            "metricool-fair-use",
+            "metricool-pricing"
+          ],
+          "state": "unlimited",
+          "value": null
+        },
+        "queuedPerChannelMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Fixed bundle for up to fifteen brands; not a per-brand multiplier.",
+          "source_ids": [
+            "metricool-fair-use",
+            "metricool-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 67,
+      "monthly_period_months": 1,
+      "monthly_price_status": "recorded",
+      "notes": [
+        "Team/approval features included. X add-on and other extras are excluded.",
+        "Above 600 posts per brand per month, a fair-use review applies."
+      ],
+      "observation_id": "metricool:advanced-15",
+      "plan_id": "advanced-15",
+      "plan_name": "Advanced · 15 brands",
+      "price_scope": {
+        "brandsMax": 15,
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "Fixed bundle for up to fifteen brands; not a per-brand multiplier.",
+      "source_ids": [
+        "metricool-fair-use",
+        "metricool-pricing"
+      ],
+      "source_urls": [
+        "https://help.metricool.com/fair-use-policy-for-social-media-scheduling-e3tnm",
+        "https://metricool.com/pricing/"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "metricool-pricing"
+          ],
+          "text": "A brand bundles connected profiles; network/profile configuration must be checked before treating a channel count as covered."
+        },
+        {
+          "sourceIds": [
+            "metricool-fair-use"
+          ],
+          "text": "The 600-post monthly per-brand threshold triggers review rather than an automatic hard cap."
+        }
+      ],
+      "tool_id": "metricool",
+      "tool_name": "Metricool"
+    },
+    {
+      "annual_amount_basis": "no_charge",
+      "annual_monthly_equivalent_usd": 0.0,
+      "annual_period_months": 12,
+      "annual_price_status": "no_charge",
+      "annual_total_usd": 0,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "buffer-vs-metricool"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/buffer-vs-metricool/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "approvals": {
+          "state": "not_included",
+          "value": false
+        },
+        "linkedIn": {
+          "state": "not_included",
+          "value": false
+        },
+        "x": {
+          "state": "not_included",
+          "value": false
+        }
+      },
+      "limits": {
+        "brandsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "One brand; twenty posts per month across the included connected networks.",
+          "source_ids": [
+            "metricool-pricing"
+          ],
+          "state": "finite",
+          "value": 1
+        },
+        "channelsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "One brand; twenty posts per month across the included connected networks.",
+          "source_ids": [
+            "metricool-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "postsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "One brand; twenty posts per month across the included connected networks.",
+          "source_ids": [
+            "metricool-pricing"
+          ],
+          "state": "finite",
+          "value": 20
+        },
+        "queuedPerChannelMax": {
+          "checked_at": "2026-11-01",
+          "scope": "One brand; twenty posts per month across the included connected networks.",
+          "source_ids": [
+            "metricool-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 0,
+      "monthly_period_months": 1,
+      "monthly_price_status": "no_charge",
+      "notes": [
+        "Free excludes LinkedIn and X. Profiles must fit Metricool’s brand structure."
+      ],
+      "observation_id": "metricool:free",
+      "plan_id": "free",
+      "plan_name": "Free",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "One brand; twenty posts per month across the included connected networks.",
+      "source_ids": [
+        "metricool-pricing"
+      ],
+      "source_urls": [
+        "https://metricool.com/pricing/"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "metricool-pricing"
+          ],
+          "text": "A brand bundles connected profiles; network/profile configuration must be checked before treating a channel count as covered."
+        },
+        {
+          "sourceIds": [
+            "metricool-fair-use"
+          ],
+          "text": "The 600-post monthly per-brand threshold triggers review rather than an automatic hard cap."
+        }
+      ],
+      "tool_id": "metricool",
+      "tool_name": "Metricool"
+    },
+    {
+      "annual_amount_basis": "recorded_annual_total",
+      "annual_monthly_equivalent_usd": 20.0,
+      "annual_period_months": 12,
+      "annual_price_status": "recorded",
+      "annual_total_usd": 240,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "buffer-vs-metricool"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/buffer-vs-metricool/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": {
+        "is_hard_cap": false,
+        "posts_per_brand_per_month": 600
+      },
+      "features": {
+        "approvals": {
+          "state": "not_included",
+          "value": false
+        },
+        "linkedIn": {
+          "state": "included",
+          "value": true
+        },
+        "x": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "limits": {
+        "brandsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Fixed bundle for up to five brands; not a per-brand multiplier.",
+          "source_ids": [
+            "metricool-fair-use",
+            "metricool-pricing"
+          ],
+          "state": "finite",
+          "value": 5
+        },
+        "channelsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Fixed bundle for up to five brands; not a per-brand multiplier.",
+          "source_ids": [
+            "metricool-fair-use",
+            "metricool-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        },
+        "postsPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Fixed bundle for up to five brands; not a per-brand multiplier.",
+          "source_ids": [
+            "metricool-fair-use",
+            "metricool-pricing"
+          ],
+          "state": "unlimited",
+          "value": null
+        },
+        "queuedPerChannelMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Fixed bundle for up to five brands; not a per-brand multiplier.",
+          "source_ids": [
+            "metricool-fair-use",
+            "metricool-pricing"
+          ],
+          "state": "not_metered",
+          "value": null
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 25,
+      "monthly_period_months": 1,
+      "monthly_price_status": "recorded",
+      "notes": [
+        "X requires an additional paid add-on; its price is outside this estimate.",
+        "Above 600 posts per brand per month, Metricool reviews fair use. This threshold is not a hard publishing cap."
+      ],
+      "observation_id": "metricool:starter-5",
+      "plan_id": "starter-5",
+      "plan_name": "Starter · 5 brands",
+      "price_scope": {
+        "brandsMax": 5,
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "Fixed bundle for up to five brands; not a per-brand multiplier.",
+      "source_ids": [
+        "metricool-fair-use",
+        "metricool-pricing"
+      ],
+      "source_urls": [
+        "https://help.metricool.com/fair-use-policy-for-social-media-scheduling-e3tnm",
+        "https://metricool.com/pricing/"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "metricool-pricing"
+          ],
+          "text": "A brand bundles connected profiles; network/profile configuration must be checked before treating a channel count as covered."
+        },
+        {
+          "sourceIds": [
+            "metricool-fair-use"
+          ],
+          "text": "The 600-post monthly per-brand threshold triggers review rather than an automatic hard cap."
+        }
+      ],
+      "tool_id": "metricool",
+      "tool_name": "Metricool"
+    },
+    {
+      "annual_amount_basis": "no_charge",
+      "annual_monthly_equivalent_usd": 0.0,
+      "annual_period_months": 12,
+      "annual_price_status": "no_charge",
+      "annual_total_usd": 0,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "zapier-vs-make"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/zapier-vs-make/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "premiumApps": {
+          "state": "not_included",
+          "value": false
+        }
+      },
+      "limits": {
+        "actionStepsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Free plan: a trigger plus one action. Task limits are not complete-workflow counts.",
+          "source_ids": [
+            "zapier-pricing"
+          ],
+          "state": "finite",
+          "value": 1
+        },
+        "tasksPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Free plan: a trigger plus one action. Task limits are not complete-workflow counts.",
+          "source_ids": [
+            "zapier-pricing"
+          ],
+          "state": "finite",
+          "value": 100
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": 0,
+      "monthly_period_months": 1,
+      "monthly_price_status": "no_charge",
+      "notes": [
+        "100 tasks per month. Only one action after the trigger on Free."
+      ],
+      "observation_id": "zapier:free",
+      "plan_id": "free",
+      "plan_name": "Free",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1
+      },
+      "scope": "Free plan: a trigger plus one action. Task limits are not complete-workflow counts.",
+      "source_ids": [
+        "zapier-pricing"
+      ],
+      "source_urls": [
+        "https://zapier.com/pricing"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "zapier-tasks"
+          ],
+          "text": "Standard successful actions use tasks; triggers and listed built-in logic do not. Replays, error handling, MCP, AI and other products can change the meter."
+        }
+      ],
+      "tool_id": "zapier",
+      "tool_name": "Zapier"
+    },
+    {
+      "annual_amount_basis": "derived_from_recorded_annual_monthly_equivalent",
+      "annual_monthly_equivalent_usd": 19.99,
+      "annual_period_months": 12,
+      "annual_price_status": "recorded",
+      "annual_total_usd": 239.88,
+      "billing_unit": "flat",
+      "checked_at": "2026-11-01",
+      "comparison_ids": [
+        "zapier-vs-make"
+      ],
+      "comparison_urls": [
+        "https://sellerinsiderhub.com/comparisons/zapier-vs-make/"
+      ],
+      "currency": "USD",
+      "evidence_type": "official-documentation",
+      "fair_use_review_threshold": null,
+      "features": {
+        "premiumApps": {
+          "state": "included",
+          "value": true
+        }
+      },
+      "limits": {
+        "actionStepsMax": {
+          "checked_at": "2026-11-01",
+          "scope": "Simple one-trigger workflow: 100 total steps minus one trigger permits at most 99 action steps; paths and other logic also count toward the total.",
+          "source_ids": [
+            "zapier-step-limits"
+          ],
+          "state": "finite",
+          "value": 99
+        },
+        "tasksPerMonthMax": {
+          "checked_at": "2026-11-01",
+          "scope": "750-task tier only; annual total is $19.99 × 12.",
+          "source_ids": [
+            "zapier-pricing",
+            "zapier-pricing-guide"
+          ],
+          "state": "finite",
+          "value": 750
+        }
+      },
+      "methodology_url": "https://sellerinsiderhub.com/research/software-plan-costs/#methodology",
+      "min_quantity": 1,
+      "monthly_payment_usd": null,
+      "monthly_period_months": 1,
+      "monthly_price_status": "unknown",
+      "notes": [
+        "Annual monthly equivalent is $19.99; an exact monthly-pay quote was not verified in this review.",
+        "Higher task tiers and pay-per-task overages are outside this estimate.",
+        "At most 100 total steps per Zap, including the trigger and all paths; the simple calculator allows 99 actions only when no other steps are added."
+      ],
+      "observation_id": "zapier:professional-750",
+      "plan_id": "professional-750",
+      "plan_name": "Professional · 750 tasks",
+      "price_scope": {
+        "maxQuantity": 1,
+        "minQuantity": 1,
+        "tasksPerMonthMax": 750
+      },
+      "scope": "750-task tier only; annual total is $19.99 × 12.",
+      "source_ids": [
+        "zapier-pricing",
+        "zapier-pricing-guide",
+        "zapier-step-limits"
+      ],
+      "source_urls": [
+        "https://zapier.com/pricing",
+        "https://zapier.com/blog/zapier-pricing/",
+        "https://help.zapier.com/hc/en-us/articles/8496181445261-Zap-limits"
+      ],
+      "tool_constraints": [
+        {
+          "sourceIds": [
+            "zapier-tasks"
+          ],
+          "text": "Standard successful actions use tasks; triggers and listed built-in logic do not. Replays, error handling, MCP, AI and other products can change the meter."
+        }
+      ],
+      "tool_id": "zapier",
+      "tool_name": "Zapier"
+    }
+  ],
+  "scenarios": [
+    {
+      "comparison_id": "chatgpt-vs-claude",
+      "explanation": "The twelve-payment projection assumes the monthly price stays unchanged. It is not an annual subscription offer or a product-quality comparison.",
+      "formula": "Twelve monthly payments = monthly payment × 12; annual equivalent = recorded annual charge ÷ 12.",
+      "id": "individual-assistant-billing",
+      "inputs": {
+        "projection_months": 12,
+        "users": 1
+      },
+      "observation_ids": [
+        "chatgpt:plus",
+        "claude:pro"
+      ],
+      "results": {
+        "claude_annual_charge_usd": 200,
+        "claude_annual_monthly_equivalent_usd": 16.67,
+        "plus_twelve_monthly_payments_usd": 240.0
+      },
+      "title": "Compare the payment commitment"
+    },
+    {
+      "comparison_id": "mailerlite-vs-kit",
+      "explanation": "New subscribers are already included in the peak list. The example assumes all welcome emails are sent in the same month; other sends and every automation limit still need checking.",
+      "formula": "Estimated sends = peak active subscribers × full-list broadcasts + new sequence entrants × welcome emails.",
+      "id": "email-send-volume",
+      "inputs": {
+        "activeAutomations": 1,
+        "automationSteps": 5,
+        "broadcastsPerMonth": 4,
+        "newSubscribers": 25,
+        "subscribers": 250,
+        "welcomeEmails": 3
+      },
+      "observation_ids": [
+        "kit:creator-1000",
+        "kit:free",
+        "mailerlite:comfort-500",
+        "mailerlite:free",
+        "mailerlite:power-500"
+      ],
+      "results": {
+        "estimated_sends_per_month": 1075
+      },
+      "title": "Count email sends before choosing a tier"
+    },
+    {
+      "comparison_id": "zapier-vs-make",
+      "explanation": "These are different usage meters. Polling, bundles, loops, retries, AI and nonstandard actions can change consumption; this is not an equivalent-work benchmark.",
+      "formula": "Zapier tasks = runs × billable action steps. Make credits = runs × (standard action modules + trigger modules) + extra credits.",
+      "id": "automation-usage",
+      "inputs": {
+        "actionSteps": 2,
+        "extraCredits": 0,
+        "premiumApps": false,
+        "triggerModules": 1,
+        "workflowRuns": 100
+      },
+      "observation_ids": [
+        "make:core-10000",
+        "make:free",
+        "zapier:free",
+        "zapier:professional-750"
+      ],
+      "results": {
+        "estimated_make_credits_per_month": 300,
+        "estimated_zapier_tasks_per_month": 200
+      },
+      "title": "Keep tasks and credits separate"
+    },
+    {
+      "comparison_id": "buffer-vs-metricool",
+      "explanation": "This example assumes you choose Essentials. It does not establish that you need a paid plan. Annual payment and monthly payment are separate options; free channels are not added to a paid allowance.",
+      "formula": "Paid-channel total = per-channel price × number of connected paid channels.",
+      "id": "paid-social-channels",
+      "inputs": {
+        "channels": 3,
+        "plan_id": "buffer:essentials"
+      },
+      "observation_ids": [
+        "buffer:essentials"
+      ],
+      "results": {
+        "annual_charge_usd": 180.0,
+        "monthly_payment_usd": 18.0
+      },
+      "title": "Multiply the paid channel price"
+    }
+  ],
+  "snapshot_id": "13fba5ce86ba8c0f",
+  "source_checked_at": "2026-11-01",
+  "source_dates": [
+    "2026-11-01"
+  ],
+  "source_schema_version": 1,
+  "sources": [
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "buffer-plan-guide",
+      "publisher": "Buffer",
+      "scope": "Monthly/annual per-channel pricing bands, one-user Essentials and Team approvals. Calculators use only channels 1–10.",
+      "title": "Buffer pricing and features",
+      "url": "https://support.buffer.com/articles/buffer-pricing-and-features-6pJrOPuzIt"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "buffer-pricing",
+      "publisher": "Buffer",
+      "scope": "Channel definition, refillable free queue, annual plan charges, supported-network qualifications and 5,000-post paid queue fair-use cap.",
+      "title": "Pricing",
+      "url": "https://buffer.com/pricing"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "claude-pricing",
+      "publisher": "Anthropic",
+      "scope": "Individual Free and Pro plans, monthly versus upfront annual payment and usage qualifications.",
+      "title": "Claude pricing",
+      "url": "https://claude.com/pricing"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "kit-free",
+      "publisher": "Kit",
+      "scope": "Free broadcasts to 10,000 subscribers; sequences, visual automations and rules require paid plans. Updated September 23, 2026.",
+      "title": "The Kit Free plan",
+      "url": "https://help.kit.com/en/articles/16627071-the-kit-free-plan"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "kit-plan-guide",
+      "publisher": "Kit",
+      "scope": "Creator monthly $39 at up to 1,000 subscribers, two users, unlimited sequences and visual automations.",
+      "title": "Creator vs Pro: choose the right plan",
+      "url": "https://help.kit.com/en/articles/4494683-creator-vs-pro-choose-the-right-plan"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "kit-pricing",
+      "publisher": "Kit",
+      "scope": "Creator 1,000-subscriber annual charge of $390, Free list size and tier-dependent billing.",
+      "title": "Pricing and plans",
+      "url": "https://kit.com/pricing"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "mailerlite-automation-steps",
+      "publisher": "MailerLite",
+      "scope": "Email actions, delays, conditions, and other rules/actions are workflow steps added after the trigger.",
+      "title": "How to use automation steps (Rules and Actions)",
+      "url": "https://www.mailerlite.com/help/how-to-use-automation-steps"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "mailerlite-free",
+      "publisher": "MailerLite",
+      "scope": "Free three-automation limit; Comfort 50-automation limit; paid user seats and unlimited Power qualifications.",
+      "title": "Free plan",
+      "url": "https://www.mailerlite.com/free-plan"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "mailerlite-pricing",
+      "publisher": "MailerLite",
+      "scope": "Subscriber and sending limits, monthly entry prices, 10% annual discount, active-subscriber upgrades and fair use. Automation-step caps: Free 5; Comfort 100; Power 100.",
+      "title": "Pricing",
+      "url": "https://www.mailerlite.com/pricing"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "mailerlite-tier-guide",
+      "publisher": "MailerLite",
+      "scope": "MailerLite own 500-subscriber entry tier: Comfort $12/5,000 emails and Power $25/unlimited emails.",
+      "title": "Email marketing with Squarespace",
+      "url": "https://www.mailerlite.com/blog/squarespace-email-marketing"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "make-credits",
+      "publisher": "Make",
+      "scope": "Standard module operations versus credit consumption, AI exceptions and separate AI-provider token charges.",
+      "title": "Credits",
+      "url": "https://help.make.com/credits"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "make-plan-guide",
+      "publisher": "Make",
+      "scope": "Make own Free 1,000-credit and Core $12/10,000-credit plan figures. Vendor comparison claims about competitors are not used.",
+      "title": "Marketing automation tools in 2026",
+      "url": "https://www.make.com/blog/best-marketing-automation-tools"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "metricool-fair-use",
+      "publisher": "Metricool",
+      "scope": "600 posts per brand per month triggers review; this is not a fixed maximum or guaranteed allowance.",
+      "title": "Fair use policy for social media scheduling",
+      "url": "https://help.metricool.com/fair-use-policy-for-social-media-scheduling-e3tnm"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "metricool-pricing",
+      "publisher": "Metricool",
+      "scope": "USD monthly and annual 5-brand Starter/15-brand Advanced bundles; Free exclusions, posting quota and approval gates.",
+      "title": "Plans and pricing",
+      "url": "https://metricool.com/pricing/"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "openai-plus",
+      "publisher": "OpenAI",
+      "scope": "Plus monthly price, no annual billing, variable usage caps and separate API billing.",
+      "title": "What is ChatGPT Plus?",
+      "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "zapier-pricing",
+      "publisher": "Zapier",
+      "scope": "Free task allowance, two-step restriction, Professional premium apps and multi-step support.",
+      "title": "Plans and pricing",
+      "url": "https://zapier.com/pricing"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "zapier-pricing-guide",
+      "publisher": "Zapier",
+      "scope": "Professional 750-task tier at $19.99 per month billed annually; other commitments are not inferred.",
+      "title": "Zapier pricing",
+      "url": "https://zapier.com/blog/zapier-pricing/"
+    },
+    {
+      "checkedAt": "2026-11-01",
+      "evidenceType": "official-documentation",
+      "id": "zapier-step-limits",
+      "publisher": "Zapier",
+      "scope": "100 total steps per Zap including paths; trial execution has separate limits.",
+      "title": "Zap limits",
+      "url": "https://help.zapier.com/hc/en-us/articles/8496181445261-Zap-limits"
+    }
+  ],
+  "title": "Small-business software plan cost and capacity data"
+}

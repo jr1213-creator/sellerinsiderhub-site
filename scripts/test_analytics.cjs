@@ -12,7 +12,7 @@ const ORIGIN = 'https://sellerinsiderhub.com';
 const CONSENT = 'sih.analytics.v1';
 const ID = 'G-164NDV6713';
 
-async function page({url = ORIGIN + '/', consent = null, referrer = '', library = false, storageDenied = false} = {}) {
+async function page({url = ORIGIN + '/', consent = null, referrer = '', library = false, comparison = false, catalog = {tools: [], categories: [], comparisons: []}, storageDenied = false} = {}) {
   const storage = new Map(consent === null ? [] : [[CONSENT, JSON.stringify(consent)]]);
   const controls = {storageDenied, writeDenied: false};
   const listeners = new Map(), windowListeners = new Map(), nodes = new Map(), scripts = [], writes = [], cookieWrites = [];
@@ -37,6 +37,9 @@ async function page({url = ORIGIN + '/', consent = null, referrer = '', library 
     for (const id of ['tool-results', 'library-query', 'filter-category', 'filter-audience', 'filter-setup', 'filter-free', 'sort-tools', 'results-count', 'reset-filters']) nodes.set(id, new Element(id));
     nodes.get('sort-tools').value = 'curated';
     nodes.get('library-query').type = 'search';
+  }
+  if (comparison) {
+    for (const id of ['compare-output', 'compare-select-0', 'compare-select-1', 'compare-select-2', 'share-comparison']) nodes.set(id, new Element(id));
   }
   const location = new URL(url);
   const document = {
@@ -65,7 +68,7 @@ async function page({url = ORIGIN + '/', consent = null, referrer = '', library 
     history: {replaceState(_state, _title, next) { location.href = new URL(next, location).href; }},
     fetch: async resource => {
       assert.equal(resource, '/data/catalog.json', 'Tests must not make analytics/network requests');
-      return {ok: true, json: async () => ({tools: [], categories: []})};
+      return {ok: true, json: async () => catalog};
     },
     setTimeout() { return 1; }, clearTimeout() {},
   };
@@ -95,6 +98,49 @@ test('no Google tag or event before a visitor makes a choice', async () => {
   assert.equal(p.writes.length, 0, 'Entry attribution must not be persisted before consent');
   assert.equal(p.nodes.get('cookie-panel').hidden, false);
   assert.equal(p.context.window['ga-disable-' + ID], true);
+});
+
+const comparisonCatalog = {
+  categories: [],
+  tools: ['chatgpt', 'claude', 'notion'].map(id => ({
+    id, name: id, tagline: 'Example task', bestFor: ['Example workflow'],
+    notFor: ['Example limitation'], features: ['Example capability'], limitations: ['Check limits'],
+    setup: 'Easy', freePlan: true, pricingSummary: 'Check current plans',
+    pricingUrl: 'https://example.test/pricing/', checkedAt: '2026-11-01',
+  })),
+  comparisons: [{title: 'ChatGPT vs Claude', url: '/comparisons/chatgpt-vs-claude/', toolIds: ['chatgpt', 'claude']}],
+};
+
+test('both selection orders link to the same published comparison without changing column order', async () => {
+  for (const ids of [['chatgpt', 'claude'], ['claude', 'chatgpt']]) {
+    const p = await page({comparison: true, catalog: comparisonCatalog, url: ORIGIN + '/compare/?tools=' + ids.join(',')});
+    const output = p.nodes.get('compare-output').innerHTML;
+    assert.match(output, /href="\/comparisons\/chatgpt-vs-claude\/"/);
+    assert.match(output, /Read ChatGPT vs Claude/);
+    assert.ok(output.indexOf('<h3>' + ids[0] + '</h3>') < output.indexOf('<h3>' + ids[1] + '</h3>'));
+    assert.equal(new URLSearchParams(p.context.location.search).get('tools'), ids.join(','));
+    assert.equal(p.context.location.pathname, '/compare/', 'A guide link must not redirect the interactive workspace');
+  }
+});
+
+test('unreviewed pairs, unknown tools, and selections outside two tools show no invented guide', async () => {
+  for (const selection of ['', 'chatgpt', 'chatgpt,notion', 'chatgpt,missing', 'chatgpt,claude,notion']) {
+    const p = await page({comparison: true, catalog: comparisonCatalog, url: ORIGIN + '/compare/?tools=' + selection});
+    const output = p.nodes.get('compare-output').innerHTML;
+    assert.doesNotMatch(output, /Published comparison guide|href="\/comparisons\//);
+    assert.match(output, selection ? /<table/ : /Start with two tools/);
+  }
+});
+
+test('changing the selected pair removes and restores its published guide link', async () => {
+  const p = await page({comparison: true, catalog: comparisonCatalog, url: ORIGIN + '/compare/?tools=chatgpt,claude'});
+  const second = p.nodes.get('compare-select-1');
+  second.value = 'notion';
+  second.listeners.get('change')();
+  assert.doesNotMatch(p.nodes.get('compare-output').innerHTML, /Published comparison guide/);
+  second.value = 'claude';
+  second.listeners.get('change')();
+  assert.match(p.nodes.get('compare-output').innerHTML, /href="\/comparisons\/chatgpt-vs-claude\/"/);
 });
 
 test('remembered denial still loads no tag and collects no custom event', async () => {
