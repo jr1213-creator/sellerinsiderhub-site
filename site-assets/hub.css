@@ -212,8 +212,8 @@
  .author-note .actions{margin-top:12px}
 }
 
-/* A small pink signature: punctuation, editorial markers, and reading-link arrows. */
-.signature-period{color:var(--pink)}
-.editorial-kicker>span:first-child::before,.page-hero .eyebrow::before{content:"";display:inline-block;width:6px;height:6px;margin-right:8px;border-radius:50%;background:var(--pink);vertical-align:middle}
-.editorial-card .read-link>span{color:var(--pink)}
-@media print{.signature-period,.editorial-card .read-link>span{color:inherit}.editorial-kicker>span:first-child::before,.page-hero .eyebrow::before{display:none}}
+/* A small pink signature, reserved for a few deliberate details. */
+.signature-punctuation{color:var(--pink)}
+.signature-word{position:relative;display:inline-block}
+.signature-word::after{content:"";position:absolute;left:.03em;right:-.02em;bottom:-.045em;height:2px;background:var(--pink);border-radius:50%;transform:rotate(-3deg);transform-origin:left center;pointer-events:none}
+@media print{.signature-punctuation{color:inherit}.signature-word::after{display:none}}
