@@ -190,17 +190,6 @@
         placement: placements.includes(el.dataset.outboundPlacement) ? el.dataset.outboundPlacement : 'other'
       });
     }
-    if (!event.defaultPrevented && el.tagName === 'A' && el.matches('[data-service-cta]')) {
-      const placements = ['local_business_guide', 'contractor_guide', 'resources'];
-      if (el.dataset.serviceCta === 'ai_readiness_report' && placements.includes(el.dataset.servicePlacement) &&
-          el.origin === 'https://thelocalupgrade.com' && el.pathname === '/ai-readiness-report') {
-        track('service_cta_click', {
-          service_id: 'ai_readiness_report',
-          placement: el.dataset.servicePlacement,
-          destination: 'the_local_upgrade_report'
-        });
-      }
-    }
     if (el.matches('a[download]')) track('resource_download', {resource:el.getAttribute('download') || el.pathname.split('/').pop()});
     if (!event.defaultPrevented && el.tagName === 'A' && el.origin === location.origin) {
       const format = el.pathname === '/feed.xml' ? 'rss' : el.pathname === '/atom.xml' ? 'atom' : null;

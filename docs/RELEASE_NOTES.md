@@ -1,9 +1,3 @@
-# Contextual professional-help links — November 2, 2026
-
-- Connected the local-business guide, contractor guide and Resources page to the related service business The Local Upgrade's $149 AI Readiness & Visibility Report. The optional cards reflect the report's current waitlist status and link to its explanation rather than promising immediate purchase or delivery.
-- Added fixed, non-personal campaign attribution and a separate `service_cta_click` event with allowlisted service, placement and destination labels. Existing live consent and production-host restrictions apply; tool/vendor click measurement remains separate.
-- Preserved original publication and documentation-review dates while recording the two guides' actual November 2 modification date. The full build/check gate and 25 analytics tests pass; the shared card was visually checked in the browser. A link click does not establish an inquiry, payment or revenue.
-
 # Automation landing-page decision support — November 2, 2026
 
 - Expanded the existing `/tool-library/category/automation/` destination with a source-linked Zapier/Make plan table, distinct task and credit accounting, a disclosed workload example, and recovery checks. The five-tool discovery grid and existing historical redirect remain in place.
