@@ -2,12 +2,14 @@
 
 A research-led publication that helps small businesses put AI and software to useful work. Tutorials lead the experience; independent comparisons, tool profiles, business guides, worksheets, and decision tools support the reader.
 
-## Read the publication
+## Research and practical resources
 
-- [Seller Insider Hub](https://sellerinsiderhub.com/) — practical AI guidance for small business owners.
+- [Software plan cost and capacity data](research-data/software-plan-costs/README.md) — 17 documented plan observations across eight tools, with billing units, capacity limits, and 18 source records. Source documentation checked November 1, 2026; snapshot `13fba5ce86ba8c0f` published November 2. Download the archived [CSV](https://raw.githubusercontent.com/jr1213-creator/sellerinsiderhub-site/main/research-data/software-plan-costs/software-plan-costs-13fba5ce86ba8c0f.csv) or [JSON](https://raw.githubusercontent.com/jr1213-creator/sellerinsiderhub-site/main/research-data/software-plan-costs/software-plan-costs-13fba5ce86ba8c0f.json), or read the [methodology and worked examples](https://sellerinsiderhub.com/research/software-plan-costs/). This is a dated planning reference, not a live price feed or an industry average.
+- **Use the data in a decision:** [ChatGPT vs Claude](https://sellerinsiderhub.com/comparisons/chatgpt-vs-claude/), [Zapier vs Make](https://sellerinsiderhub.com/comparisons/zapier-vs-make/), [MailerLite vs Kit](https://sellerinsiderhub.com/comparisons/mailerlite-vs-kit/), and [Buffer vs Metricool](https://sellerinsiderhub.com/comparisons/buffer-vs-metricool/) include calculators with explicit assumptions. The [software cost planner](https://sellerinsiderhub.com/calculators/stack-cost/) uses your own subscription prices and quantities.
 - [Free AI learning path](https://sellerinsiderhub.com/learn/ai-for-small-business/) — six modules with original practice files, knowledge checks, and a business-workflow capstone.
 - [Sales-analysis practice lab](https://sellerinsiderhub.com/playbooks/chatgpt-sales-analysis/) — a fictional sales dataset, calculation workbook, and independent answer key for checking AI-assisted analysis.
 - [Free worksheets and working kits](https://sellerinsiderhub.com/resources/) — editable resources that accompany the tutorials.
+- [Seller Insider Hub](https://sellerinsiderhub.com/) — browse the publication's practical AI tutorials and business guides.
 
 ## Build and verify
 
