@@ -1,5 +1,13 @@
 # Complete publication release — November 1, 2026
 
+## Approved boxed-S identity — November 1, 2026
+
+- Applied the owner's selected bold SELLER / Insider Hub logo as outlined SVG artwork in the shared public header and footer, homepage publication note, investor room, and investor sign-in page.
+- Added the standalone boxed-S browser favicon in SVG, 16/32/48-pixel PNG and multi-resolution ICO formats, plus Apple/device icons. Shared heads use versioned URLs; conventional and legacy icon endpoints receive the new artwork.
+- Coordinated the forest-green accent, social-sharing card, and organization logo metadata with the approved identity. Responsive header dimensions preserve the available navigation controls.
+- Preserved the current affiliate catalog, editorial content, analytics consent behavior, and investor authentication logic.
+
+
 ## November 1, 2026 — Market share, annual profit, and high-end scale
 
 - Added an interactive market-share section linking the sourced broad U.S. business base to distinct new purchasing businesses, multiple paid-tool referrals, required monthly visits, final-12-month earned commission, pre-tax operating profit, and cash timing.

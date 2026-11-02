@@ -13,7 +13,7 @@ const salt=randomBytes(18);
 process.env.SIH_VIP_USERNAME='preview-reviewer';
 process.env.SIH_VIP_PASSWORD_HASH='pbkdf2-sha256$600000$'+salt.toString('base64url')+'$'+pbkdf2Sync('preview-only-test',salt,600000,32,'sha256').toString('base64url');
 process.env.SIH_VIP_SESSION_SECRET=randomBytes(32).toString('base64url');
-const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.txt':'text/plain','.xml':'application/xml'};
+const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.svg':'image/svg+xml','.ico':'image/x-icon','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.txt':'text/plain','.xml':'application/xml'};
 const server=http.createServer(async(req,res)=>{
   try {
     const origin='https://'+req.headers.host, url=new URL(req.url,origin);
