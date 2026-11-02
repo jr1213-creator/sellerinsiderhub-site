@@ -388,7 +388,8 @@ def _h(value):
 
 
 def _list(values):
-    return '<ul>' + ''.join('<li>' + _h(value) + '</li>' for value in values) + '</ul>'
+    return '<ul>' + ''.join('<li>' + _h(value.get('text', '') if isinstance(value, dict) else value)
+                            + '</li>' for value in values) + '</ul>'
 
 
 def _label(key, labels):

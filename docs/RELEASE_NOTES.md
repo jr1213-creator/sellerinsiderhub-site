@@ -1,3 +1,9 @@
+# Automation landing-page decision support — November 2, 2026
+
+- Expanded the existing `/tool-library/category/automation/` destination with a source-linked Zapier/Make plan table, distinct task and credit accounting, a disclosed workload example, and recovery checks. The five-tool discovery grid and existing historical redirect remain in place.
+- Added contextual links to the detailed comparison, implementation tutorials and downloadable evidence. Updated the title, description and sitemap modification date for this substantive page change.
+- Corrected research-page constraint lists to render the human-readable constraint text. Machine-readable download bytes and the archived snapshot identity remain unchanged.
+
 # Comparison routing, software entities and reproducible research — November 2, 2026
 
 - Added a validated registry for the nine reviewed comparison pairs and 36 reverse-order aliases. Browser selections retain their order and connect to an existing researched article when the exact pair is available. The interactive workspace remains noindex; unreviewed pairs do not create indexable articles.

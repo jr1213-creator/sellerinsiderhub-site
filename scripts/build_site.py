@@ -18,6 +18,7 @@ from feed_components import write_feeds, write_pinterest_feed
 from comparison_routes import build_comparison_registry
 from schema_components import software_subject_graph, dataset_node
 from research_components import build_research_asset
+from automation_hub import render_automation_hub
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
 ASSET_VERSION = sha256(b''.join((ROOT/path).read_bytes() for path in ['site-assets/hub.css','site-assets/hub.js','site-assets/social-guide.js','site-assets/tutorial-tools.js','site-assets/tutorial-tools.css','site-assets/decision-tools.js','site-assets/decision-tools.css','data/decision-evidence.json','data/catalog.json','data/vendor-icons.json','data/editorial.json','data/editorial-images.json','data/business-guides.json','data/feature-guides.json','data/learning-paths.json','site-assets/learning-tools.js','site-assets/learning-tools.css'])).hexdigest()[:12]
@@ -217,6 +218,9 @@ def library(route='/tool-library/',category=None):
     selected=[t for t in TOOLS if not category or t['category']==category]
     name=CATEGORIES[category]['label'] if category else 'The tool library'
     desc=CATEGORIES[category].get('description','Find software that fits your workflow.') if category else 'Explore software by the job you need done. Compare the fit, save a shortlist, and see what to check before you commit.'
+    if category == 'automation':
+        name = 'Automation tools for small business: costs, limits, and workflows'
+        desc = 'Compare automation tools by the workflow you need, payment terms, task and credit limits, and failure recovery. Start with a sourced plan table and a practical test.'
     cats='<option value="">All categories</option>'+''.join(f'<option value="{e(k)}" {"selected" if k==category else ""}>{e(v["label"])}</option>' for k,v in CATEGORIES.items())
     auds='<option value="">All business types</option>'+''.join(f'<option value="{e(k)}">{e(v)}</option>' for k,v in AUDIENCES.items())
     body=hero(name,desc,'Useful tools. Clear tradeoffs.')+f'''<div class="wrap library-layout" data-library><aside class="filter-panel"><h2>Find your fit</h2><div class="filter-group"><label for="filter-category">Category</label><select id="filter-category">{cats}</select></div><div class="filter-group"><label for="filter-audience">Business type</label><select id="filter-audience">{auds}</select></div><div class="filter-group"><label for="filter-setup">Setup effort</label><select id="filter-setup"><option value="">Any setup</option><option>Easy</option><option>Moderate</option><option>Advanced</option></select></div><div class="filter-group"><label class="check-label"><input type="checkbox" id="filter-free">Free plan available</label><button class="text-button" id="reset-filters">Reset filters</button></div></aside><section aria-label="Tools"><div class="filter-search"><input id="library-query" type="search" placeholder="Search tools, jobs, or features…" aria-label="Search tools"></div><div class="results-toolbar"><p id="results-count" role="status">{len(selected)} tools to explore</p><label><span class="sr-only">Sort tools</span><select id="sort-tools" aria-label="Sort tools"><option value="curated">Editorial order</option><option value="name">Name A–Z</option><option value="easy">Easiest setup first</option></select></label></div><div class="library-grid" id="tool-results">{''.join(toolcard(t) for t in selected)}</div></section></div>'''
@@ -225,7 +229,9 @@ def library(route='/tool-library/',category=None):
         body+='<section class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Explore by the work you do</span><h2>Browse tool categories.</h2></div></div><nav class="category-grid" aria-label="Tool categories">'+category_cards+'</nav></div></section>'
     elif category=='ai-assistants':
         body+='<section class="section"><div class="wrap"><a class="card card-link" href="/tools/ai-assistant/"><h2>How AI assistants fit your workflow.</h2><p>Choose a useful first task and learn what to check before relying on the result.</p><span class="read-link">Read the introduction →</span></a></div></section>'
-    write(route,name,desc,body,'Tool category' if category else 'Directory',section='tools')
+    if category == 'automation':
+        body = body.replace('<div class="wrap library-layout"', render_automation_hub(DECISION_EVIDENCE, ORIGIN)+'<div class="wrap library-layout"', 1)
+    write(route,name,desc,body,'Tool category' if category else 'Directory',section='tools',modified='2026-11-02' if category == 'automation' else None)
 library()
 for c in CATEGORIES: library('/tool-library/category/'+c+'/',c)
 

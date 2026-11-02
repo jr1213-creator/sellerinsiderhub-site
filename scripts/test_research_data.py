@@ -191,6 +191,7 @@ process.stdout.write(JSON.stringify({email, automation, social}));
         self.assertIn('Selected plan: Buffer Essentials', result['body'])
         self.assertNotIn('broadcastsPerMonth', result['body'])
         self.assertNotIn('estimated_sends_per_month', result['body'])
+        self.assertNotIn('sourceIds', result['body'], 'Structured source records must not leak into reader-facing notes.')
         self.assertEqual(result['dataset_metadata']['source_dates'], ['2026-11-01'])
         self.assertEqual(len(result['dataset_metadata']['isBasedOn']), 18)
         for download in result['downloads']:
