@@ -1,11 +1,11 @@
 {
   "built": "2026-11-01",
-  "pages": 125,
-  "indexed": 121,
+  "pages": 126,
+  "indexed": 122,
   "tools": 47,
   "categories": 14,
   "comparisons": 9,
-  "playbooks": 13,
+  "playbooks": 14,
   "investorRoom": {
     "route": "/partners/investors/",
     "assets": 6,
@@ -411,6 +411,11 @@
     {
       "route": "/playbooks/etsy-listing-workflow/",
       "title": "Build an Etsy listing with AI, real photos, and a search check",
+      "kind": "Playbook"
+    },
+    {
+      "route": "/playbooks/etsy-keyword-data-chatgpt/",
+      "title": "Use eRank and Etsy search data in ChatGPT: tags, titles, and descriptions",
       "kind": "Playbook"
     },
     {

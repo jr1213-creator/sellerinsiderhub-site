@@ -21,6 +21,7 @@ Netlify runs `npm run build && npm run check` from `netlify.toml` and publishes 
 | --- | --- |
 | `data/editorial.json` | Complete tutorials, examples, configuration tables, copyable templates, troubleshooting, comparisons, and source records |
 | `data/catalog.json` | Tool capabilities, suitability, limitations, official sources, and verified link state |
+| `data/vendor-icons.json` | Official vendor icon paths, source pages, original asset URLs, retrieval dates, and hashes |
 | `data/business-guides.json` and `data/feature-guides.json` | Complete business and buying guides with examples and source records |
 | `data/research/` | Current tool, tutorial, comparison, and market evidence ledgers; not copied into the public build |
 | `data/page-dates.json` | Substantive revision dates for collection and utility pages |
@@ -46,3 +47,5 @@ Analytics loads only after consent. Reading lists and saved tool stacks are brow
 See [Traffic and measurement](docs/MEASUREMENT.md) for campaign-link formats, production-host filtering, Google stream settings, and the distinction between local regression checks and actual provider receipt.
 
 Affiliate destinations are centralized in the catalog. Only records with `affiliateStatus: "approved"` and an actual approved `affiliateUrl` use that URL. Other links point to the software provider. Publication quality and reader fit determine the recommendation; commission terms are not used in the matching logic.
+
+Tool and comparison cards use the vendors' actual published icons, stored under `assets/vendor-icons/`. The registry maps each stable tool ID to an unmodified local asset and its official source; the browser receives only the local icon path. When adding a tool, include a verified icon record rather than invented initials. Keep vendor marks distinct from the publication's own assets in `assets/brand/`.

@@ -1,0 +1,134 @@
+{
+  "reviewedOn": "2026-11-02",
+  "editorialBasis": "Current official product documentation. Vendor UI examples are illustrative, not fresh keyword research or private shop data. No product-account testing claimed.",
+  "assets": [
+    {
+      "publisher": "Etsy",
+      "assets": [
+        {
+          "filename": "etsy-official-shop-stats-traffic.jpg",
+          "url": "https://i.etsystatic.com/inv/2c3e2f/2086019969/inv_fullxfull.2086019969_sqqtyi0q.jpg?version=0",
+          "source_page": "https://www.etsy.com/seller-handbook/article/624088232713",
+          "source_page_title": "How to Get the Most Out of Your Shop Stats and Plan for 2025",
+          "source_page_date": "2024-12-09",
+          "source_image_alt": "Referral Traffic Overview",
+          "resolved_url": "https://i.etsystatic.com/inv/2c3e2f/2086019969/inv_fullxfull.2086019969_sqqtyi0q.jpg?version=0",
+          "content_type": "image/jpeg",
+          "width": 2260,
+          "height": 748,
+          "format": "JPEG",
+          "bytes": 101513,
+          "sha256": "17a99ee439dd201614092d832080f8f0aaee270d4b1235b92525ab86aadc9212",
+          "downloaded_on": "2026-11-02",
+          "untouched_original": true,
+          "visually_inspected": true,
+          "attribution": "Source: Etsy Seller Handbook. Official published example; not this user's shop data.",
+          "depicts": "How shoppers found you traffic sources, including the Etsy search link.",
+          "does_not_show": "The Etsy search drilldown or the actual shop-specific search-terms table.",
+          "recommended_caption": "Etsy's published example of How shoppers found you. Select Etsy search to inspect the terms that brought visitors to your listings. Historical example from Etsy's Seller Handbook; your layout and numbers may differ.",
+          "visual_notes": "Legible source rows include Etsy app & other Etsy pages, Etsy search, Etsy marketing & SEO, Direct & other traffic, Social media, and Advertising. Original published image only; not a live 2026 account capture."
+        },
+        {
+          "filename": "etsy-official-marketplace-keywords.jpg",
+          "url": "https://i.etsystatic.com/inv/23305e/7192316182/inv_fullxfull.7192316182_fv6zuqqt.jpg?version=0",
+          "source_page": "https://www.etsy.com/seller-handbook/article/1404564905677",
+          "source_page_title": "How to Spot Trends and Keywords With Marketplace Insights",
+          "source_page_date": "2025-11-04",
+          "source_image_alt": "Example of similar keywords results",
+          "resolved_url": "https://i.etsystatic.com/inv/23305e/7192316182/inv_fullxfull.7192316182_fv6zuqqt.jpg?version=0",
+          "content_type": "image/jpeg",
+          "width": 1600,
+          "height": 900,
+          "format": "JPEG",
+          "bytes": 60560,
+          "sha256": "a76ab83e3b1e80c9ba02a3c6c3f364598fec95c8c25933bb04df8bdb4e413e38",
+          "downloaded_on": "2026-11-02",
+          "untouched_original": true,
+          "visually_inspected": true,
+          "attribution": "Source: Etsy Seller Handbook. Official published example; not this user's shop data.",
+          "depicts": "Marketplace Insights Discover similar keywords table, with Buyer demand and Marketplace supply columns for map-coaster terms.",
+          "does_not_show": "Shop Stats search terms, an eRank report, or current measured keyword counts.",
+          "recommended_caption": "Etsy's Marketplace Insights example separates buyer searches from marketplace listing counts. These are Etsy-wide example figures, not the visits or keywords from your own shop. Source: Etsy Seller Handbook.",
+          "visual_notes": "Original 1600x900 Etsy graphic includes a rounded black frame and blue background. Table text is readable at full size; example figures should not be reused as current keyword research."
+        }
+      ],
+      "requested_shop_specific_search_terms_screenshot_found": false,
+      "sourcing_note": "No reliable public screenshot of the actual current shop-specific search-terms drilldown was located. The official Shop Stats image shows the navigation entry (How shoppers found you > Etsy search), not the resulting search-terms table. Marketplace Insights is a separate Etsy-wide keyword research interface.",
+      "private_account_accessed": false,
+      "reviewed_on": "2026-11-02"
+    },
+    {
+      "purpose": "Intermediate screenshot handoff for the Seller Insider Hub Etsy keyword-data/ChatGPT tutorial. Assets remain in task scratch; no repository files changed.",
+      "retrieval_date": "2026-11-02",
+      "assets": [
+        {
+          "file": "erank-keyword-search-current-vendor.png",
+          "source_page": "https://hc.erank.com/en/articles/8420556-keyword-tool",
+          "source_asset_url": "https://downloads.intercomcdn.com/i/o/w7z8c9mt/2761783658/7ad2289701831f85c94263b8ec26/Screenshot+2026-10-23+at+2_54_39%E2%80%AFPM+1.png",
+          "source_date_note": "Asset filename references 2026-10-23; page said Updated this week when retrieved. Filename is not independent proof of capture date.",
+          "alt": "eRank Keyword Tool showing the keyword input, Etsy marketplace, USA country selector, and Search button.",
+          "caption": "Choose Etsy and your target country before searching. Vendor documentation example retrieved November 2, 2026; the 500-lookup counter shown is an Expert-plan example, not the Free allowance.",
+          "local_path": "/workspace/scratch/b692ea308c07/erank-tutorial-assets/erank-keyword-search-current-vendor.png",
+          "width": 897,
+          "height": 274,
+          "bytes": 64198,
+          "sha256": "296a2c7d528f34722dc1ae60237488160d4b49260cc67415754e073de7bf2a04",
+          "retrieved_utc_date": "2026-11-02",
+          "provenance": "Unedited official eRank Help Center screenshot asset; downloaded from the exact public image URL observed in the official help page. No generated UI, private account data, or user dataset.",
+          "recommended": true
+        },
+        {
+          "file": "erank-keyword-ideas-current-vendor.png",
+          "source_page": "https://hc.erank.com/en/articles/8420556-keyword-tool",
+          "source_asset_url": "https://downloads.intercomcdn.com/i/o/w7z8c9mt/2370564564/bd1df70ac6105c40c1c5b55b0d88/Group+79.png",
+          "source_date_note": "Image capture date not stated. Vendor example trend label is Apr 26. Page said Updated this week when retrieved.",
+          "alt": "eRank Keyword Ideas table showing slime, pastel slime, and slime bundle, with stars, search trends, average searches, and average clicks.",
+          "caption": "Review related terms under Keyword Ideas and use the star to save a candidate. This vendor example shows paid-plan data for slime; Free accounts see one keyword-data row. Values are example estimates, not fresh November 2026 research.",
+          "local_path": "/workspace/scratch/b692ea308c07/erank-tutorial-assets/erank-keyword-ideas-current-vendor.png",
+          "width": 961,
+          "height": 480,
+          "bytes": 112113,
+          "sha256": "b1fe25af8588956ff46f647a5743f520031388820260ed052e64cb6936418950",
+          "retrieved_utc_date": "2026-11-02",
+          "provenance": "Unedited official eRank Help Center screenshot asset; downloaded from the exact public image URL observed in the official help page. No generated UI, private account data, or user dataset.",
+          "recommended": true
+        },
+        {
+          "file": "erank-keyword-lists-export-menu-vendor.png",
+          "source_page": "https://hc.erank.com/en/articles/6964104-keyword-lists",
+          "source_asset_url": "https://downloads.intercomcdn.com/i/o/w7z8c9mt/2308177117/e957b523f5e68a6619208f6bb978/Group+84.png",
+          "source_date_note": "Image capture date not stated; page said Updated over 2 weeks ago when retrieved.",
+          "alt": "eRank Keyword Lists Export menu showing Copy to clipboard, Download as CSV, Download as Excel, Download as PDF, and Print.",
+          "caption": "In Keyword Lists, Export opens CSV, Excel, PDF, copy, and print options. Full list export requires Basic, Pro, or Expert. Source: eRank Help Center, retrieved November 2, 2026.",
+          "local_path": "/workspace/scratch/b692ea308c07/erank-tutorial-assets/erank-keyword-lists-export-menu-vendor.png",
+          "width": 471,
+          "height": 321,
+          "bytes": 56315,
+          "sha256": "77523309a9870480ba21a6b3c74f65e5beeb78fe43498a84ec12ad5433d6abc5",
+          "retrieved_utc_date": "2026-11-02",
+          "provenance": "Unedited official eRank Help Center screenshot asset; downloaded from the exact public image URL observed in the official help page. No generated UI, private account data, or user dataset.",
+          "recommended": true
+        }
+      ],
+      "reuse_note": "Attribute to eRank Help Center and link each screenshot to its source page. Do not imply screenshots were taken in the user account or that historical displayed metrics are live research. No separate reproduction license was verified.",
+      "workflow_sources": [
+        "https://hc.erank.com/en/articles/8420556-keyword-tool",
+        "https://hc.erank.com/en/articles/6964104-keyword-lists",
+        "https://hc.erank.com/en/articles/11178612-understand-erank-metrics-in-5-minutes",
+        "https://help.erank.com/blog/etsy-marketplace-insights-tool/",
+        "https://erank.com/plans"
+      ]
+    },
+    {
+      "filename": "chatgpt-official-upload-menu.webp",
+      "sourcePage": "https://chatgpt.com/use-cases/chat-with-spreadsheets/",
+      "imageUrl": "https://images.ctfassets.net/8su2tbn87fck/66z5UOahsAVvVlmC51PZem/e7a05703abc75dfc4a0448eb323359c6/Upload__5_.png?fm=webp&q=80&w=1600",
+      "publisher": "OpenAI",
+      "width": 1600,
+      "height": 1600,
+      "sha256": "ea008f2fbb5d3704394f423762f81586ab32b05cb6239aa192a17fe626985730",
+      "untouchedOriginal": true,
+      "visuallyInspected": true
+    }
+  ]
+}

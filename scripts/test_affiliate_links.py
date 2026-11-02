@@ -2,7 +2,7 @@
 import unittest
 from html.parser import HTMLParser
 
-from affiliate_components import approved_tool_actions, outbound
+from affiliate_components import approved_tool_actions, outbound, expand_approved_tool_markers
 
 
 class Links(HTMLParser):
@@ -63,6 +63,21 @@ class AffiliateLinkTests(unittest.TestCase):
         actions = [a for a in Links(html).links if 'data-outbound' in a]
         self.assertEqual([a['data-outbound'] for a in actions], [self.tool['id']])
         self.assertEqual(html.count('We may earn a commission'), 1)
+
+    def test_article_marker_cannot_activate_unapproved_or_unrelated_tools(self):
+        unrelated = {**self.tool, 'id': 'unrelated-tool'}
+        pending = {**self.tool, 'id': 'pending-tool', 'affiliateStatus': 'pending'}
+        catalog = {t['id']: t for t in [self.tool, unrelated, pending]}
+        article = '<p>Start here.</p>' + ''.join(
+            '<!-- approved-tool:' + identifier + ' -->'
+            for identifier in [self.tool['id'], unrelated['id'], pending['id'], 'missing'])
+        html = expand_approved_tool_markers(article, [self.tool['id'], pending['id'], 'missing'], catalog)
+        actions = [a for a in Links(html).links if 'data-outbound' in a]
+        self.assertEqual([a['data-outbound'] for a in actions], [self.tool['id']])
+        self.assertEqual(actions[0]['href'], self.tool['affiliateUrl'])
+        self.assertEqual(actions[0]['data-outbound-placement'], 'tutorial_tools')
+        self.assertIn('<p>Start here.</p>', html)
+        self.assertNotIn('<!-- approved-tool:', html)
 
 
 if __name__ == '__main__':

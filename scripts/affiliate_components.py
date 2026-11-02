@@ -1,5 +1,6 @@
 """Render approved vendor actions from the publication's canonical catalog."""
 from html import escape
+import re
 
 
 def is_approved_affiliate(tool):
@@ -35,3 +36,14 @@ def approved_tool_actions(tool_ids, catalog, placement):
         '<a class="link" href="/legal/affiliate-disclosure/">How we’re funded</a>.</p>'
         + ''.join(links) + '</div>'
     )
+
+
+def expand_approved_tool_markers(article_html, tool_ids, catalog):
+    """Keep in-article actions limited to this guide's approved catalog tools."""
+    allowed = set(tool_ids)
+
+    def render(match):
+        identifier = match.group(1)
+        return approved_tool_actions([identifier], catalog, 'tutorial_tools') if identifier in allowed else ''
+
+    return re.sub(r'<!--\s*approved-tool:([a-z0-9-]+)\s*-->', render, article_html)

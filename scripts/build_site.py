@@ -10,12 +10,12 @@ from investor_components import build_investor_room
 from authority_components import author_schema, byline as render_byline, author_note, author_profile, editorial_standards, corrections_page
 from tutorial_tools import render_launch_checks, make_working_kit
 from decision_components import render_decision_tool
-from affiliate_components import outbound, approved_tool_actions
+from affiliate_components import outbound, approved_tool_actions, expand_approved_tool_markers
 from learning_components import render_learning_path
 from brand_components import brand_link, brand_head
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
-ASSET_VERSION = sha256(b''.join((ROOT/path).read_bytes() for path in ['site-assets/hub.css','site-assets/hub.js','site-assets/social-guide.js','site-assets/tutorial-tools.js','site-assets/tutorial-tools.css','site-assets/decision-tools.js','site-assets/decision-tools.css','data/decision-evidence.json','data/catalog.json','data/editorial.json','data/business-guides.json','data/feature-guides.json','data/learning-paths.json','site-assets/learning-tools.js','site-assets/learning-tools.css'])).hexdigest()[:12]
+ASSET_VERSION = sha256(b''.join((ROOT/path).read_bytes() for path in ['site-assets/hub.css','site-assets/hub.js','site-assets/social-guide.js','site-assets/tutorial-tools.js','site-assets/tutorial-tools.css','site-assets/decision-tools.js','site-assets/decision-tools.css','data/decision-evidence.json','data/catalog.json','data/vendor-icons.json','data/editorial.json','data/business-guides.json','data/feature-guides.json','data/learning-paths.json','site-assets/learning-tools.js','site-assets/learning-tools.css'])).hexdigest()[:12]
 DATE = '2026-10-31'
 REVIEW_DATE = '2026-11-01'
 ORIGIN = 'https://sellerinsiderhub.com'
@@ -27,11 +27,14 @@ def load(name): return json.loads((ROOT / 'data' / name).read_text(encoding='utf
 def plain(value): return unescape(re.sub(r'<[^>]+>', ' ', value)).strip()
 def j(value): return json.dumps(value, ensure_ascii=False).replace('<','\\u003c')
 CATALOG = load('catalog.json')
+VENDOR_ICONS = load('vendor-icons.json')['icons']
 EDITORIAL = load('editorial.json')
 LEARNING_PATH = load('learning-paths.json')
 DECISION_EVIDENCE = load('decision-evidence.json')
 PAGE_DATES = load('page-dates.json') if (ROOT/'data/page-dates.json').exists() else {}
 TOOLS = CATALOG['tools']
+for tool in TOOLS:
+    tool['logo'] = VENDOR_ICONS[tool['id']]['path']
 BY_ID = {t['id']: t for t in TOOLS}
 CATEGORIES = {c['id']: c for c in CATALOG['categories']}
 PLAYS = EDITORIAL['playbooks']
@@ -48,17 +51,17 @@ ICONS = {
  'download':'<path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/>'}
 def icon(name): return '<svg viewBox="0 0 24 24" aria-hidden="true">'+ICONS[name]+'</svg>'
 def btn(label,href,style=''): return f'<a class="button {style}" href="{e(href)}">{label}</a>'
-def mono(t): return f'<span class="tool-monogram" style="background:{e(t.get("color","#eaf0e4"))}">{e(t.get("icon",t["name"][:2]))}</span>'
+def tool_logo(t): return f'<span class="tool-logo" aria-hidden="true"><img src="{e(t["logo"])}" alt="" width="40" height="40" loading="lazy" decoding="async"></span>'
 def category_label(t): return CATEGORIES.get(t['category'],{}).get('label',t['category'])
 def toolcard(t):
     free = 'Free plan' if t.get('freePlan') is True else ('Paid plans' if t.get('freePlan') is False else 'Check current plans')
     return f'''<article class="card tool-card" data-tool-card="{e(t['id'])}" data-category="{e(t['category'])}">
-      <div class="tool-card-head">{mono(t)}<div><h3><a href="/tool/{e(t['id'])}/">{e(t['name'])}</a></h3><span class="tool-category">{e(category_label(t))}</span></div><button class="icon-button" data-save-tool="{e(t['id'])}" aria-pressed="false" aria-label="Save {e(t['name'])}">{icon('bookmark')}</button></div>
+      <div class="tool-card-head">{tool_logo(t)}<div><h3><a href="/tool/{e(t['id'])}/">{e(t['name'])}</a></h3><span class="tool-category">{e(category_label(t))}</span></div><button class="icon-button" data-save-tool="{e(t['id'])}" aria-pressed="false" aria-label="Save {e(t['name'])}">{icon('bookmark')}</button></div>
       <p class="tool-description">{e(t['tagline'])}</p><div class="tool-meta"><span class="chip green">{free}</span><span class="chip">{e(t.get('setup','Moderate'))} setup</span></div>
       <div class="tool-bottom"><button class="text-button" data-compare-tool="{e(t['id'])}" aria-pressed="false">{icon('compare')} Compare</button><a class="text-button" href="/tool/{e(t['id'])}/">Explore tool ↗</a></div></article>'''
 def comparecard(c):
     ts=[BY_ID[x] for x in c['toolIds'] if x in BY_ID]
-    logos='<span>vs</span>'.join(mono(t) for t in ts[:2])
+    logos='<span>vs</span>'.join(tool_logo(t) for t in ts[:2])
     return f'<a class="card comparison-card card-link" href="/comparisons/{e(c["id"])}/"><div class="comparison-icons">{logos}</div><h3>{e(c["title"])}</h3><p>{e(c["summary"])}</p><span class="read-link">Read the comparison →</span></a>'
 def playcard(p,i=0):
     return story_card(p,i)
@@ -119,7 +122,7 @@ for old in OUT.iterdir():
     else: old.unlink()
 shutil.copytree(ROOT/'assets',OUT/'assets')
 (OUT/'data').mkdir()
-browser_keys=['id','name','category','tagline','description','bestFor','notFor','features','limitations','website','pricingUrl','pricingSummary','freePlan','setup','audiences','checkedAt','evidence','affiliateUrl','affiliateStatus','icon','color','freeWorkflowEligible','freePlanNote','sourceUrls']
+browser_keys=['id','name','category','tagline','description','bestFor','notFor','features','limitations','website','pricingUrl','pricingSummary','freePlan','setup','audiences','checkedAt','evidence','affiliateUrl','affiliateStatus','logo','freeWorkflowEligible','freePlanNote','sourceUrls']
 (OUT/'data/catalog.json').write_text(j({'tools':[{k:t[k] for k in browser_keys if k in t} for t in TOOLS],'categories':CATALOG['categories']}),encoding='utf-8')
 shutil.rmtree(OUT/'assets/js')
 (OUT/'assets/js').mkdir()
@@ -178,7 +181,7 @@ for c in CATEGORIES: library('/tool-library/category/'+c+'/',c)
 for t in TOOLS:
     url,rel=outbound(t)
     body=hero(t['name'],t['tagline'],category_label(t),('Tool library','/tool-library/'))
-    detail=f'''<div class="wrap detail-layout"><article class="article-body"><div class="tool-profile-head">{mono(t)}<div><span class="chip green">Documentation reviewed</span><p class="small">Sources checked {e(t.get('checkedAt',DATE))}</p></div></div><p>{e(t['description'])}</p><h2>When it makes sense</h2><ul>{''.join('<li>'+e(x)+'</li>' for x in t['bestFor'])}</ul><h2>What you can do with it</h2><ul>{''.join('<li>'+e(x)+'</li>' for x in t['features'])}</ul><h2>Where to be careful</h2><ul>{''.join('<li>'+e(x)+'</li>' for x in t['limitations'])}</ul><h2>Consider another approach if…</h2><ul>{''.join('<li>'+e(x)+'</li>' for x in t['notFor'])}</ul>{tool_details(t,BY_ID)}{related_guides(t['id'],PLAYS,COMPARISONS)}{evidence(t['sourceUrls'],t)}</article><aside class="detail-sidebar"><div class="card"><h3>In this tool guide</h3><nav class="toc" aria-label="On this page"><a href="#costs">Plans and cost drivers</a><a href="#example">Worked example</a><a href="#alternatives">Alternatives</a><a href="#research-record">Sources</a></nav><h3>Your decision, at a glance</h3><dl><dt>Best starting audience</dt><dd>{e(', '.join(AUDIENCES.get(a,a) for a in t.get('audiences',[])))}</dd><dt>Setup effort</dt><dd>{e(t['setup'])}</dd><dt>Free option</dt><dd>{e(t.get('freePlanNote') or ('Free plan available; check limits' if t.get('freePlan') is True else ('Paid plans or usage fees' if t.get('freePlan') is False else 'Check current plans')))}</dd><dt>Evidence</dt><dd>Official documentation</dd></dl><a class="button" href="{e(url)}" target="_blank" rel="{rel}" data-outbound="{e(t['id'])}" data-outbound-placement="tool_profile">Visit {e(t['name'])} ↗</a><button class="button light" data-save-tool="{e(t['id'])}" aria-pressed="false">Save this tool</button><button class="button light" data-compare-tool="{e(t['id'])}" aria-pressed="false">Add to comparison</button><p class="small" style="margin-top:15px">We may earn a commission from qualifying purchases. <a class="link" href="/legal/affiliate-disclosure/">Disclosure</a>.</p></div><div class="card"><h3>Make a useful shortlist</h3><p>Compare up to three tools, then work through one real task before choosing a paid plan.</p>{btn('Open comparison','/compare/','light')}</div></aside></div>'''
+    detail=f'''<div class="wrap detail-layout"><article class="article-body"><div class="tool-profile-head">{tool_logo(t)}<div><span class="chip green">Documentation reviewed</span><p class="small">Sources checked {e(t.get('checkedAt',DATE))}</p></div></div><p>{e(t['description'])}</p><h2>When it makes sense</h2><ul>{''.join('<li>'+e(x)+'</li>' for x in t['bestFor'])}</ul><h2>What you can do with it</h2><ul>{''.join('<li>'+e(x)+'</li>' for x in t['features'])}</ul><h2>Where to be careful</h2><ul>{''.join('<li>'+e(x)+'</li>' for x in t['limitations'])}</ul><h2>Consider another approach if…</h2><ul>{''.join('<li>'+e(x)+'</li>' for x in t['notFor'])}</ul>{tool_details(t,BY_ID)}{related_guides(t['id'],PLAYS,COMPARISONS)}{evidence(t['sourceUrls'],t)}</article><aside class="detail-sidebar"><div class="card"><h3>In this tool guide</h3><nav class="toc" aria-label="On this page"><a href="#costs">Plans and cost drivers</a><a href="#example">Worked example</a><a href="#alternatives">Alternatives</a><a href="#research-record">Sources</a></nav><h3>Your decision, at a glance</h3><dl><dt>Best starting audience</dt><dd>{e(', '.join(AUDIENCES.get(a,a) for a in t.get('audiences',[])))}</dd><dt>Setup effort</dt><dd>{e(t['setup'])}</dd><dt>Free option</dt><dd>{e(t.get('freePlanNote') or ('Free plan available; check limits' if t.get('freePlan') is True else ('Paid plans or usage fees' if t.get('freePlan') is False else 'Check current plans')))}</dd><dt>Evidence</dt><dd>Official documentation</dd></dl><a class="button" href="{e(url)}" target="_blank" rel="{rel}" data-outbound="{e(t['id'])}" data-outbound-placement="tool_profile">Visit {e(t['name'])} ↗</a><button class="button light" data-save-tool="{e(t['id'])}" aria-pressed="false">Save this tool</button><button class="button light" data-compare-tool="{e(t['id'])}" aria-pressed="false">Add to comparison</button><p class="small" style="margin-top:15px">We may earn a commission from qualifying purchases. <a class="link" href="/legal/affiliate-disclosure/">Disclosure</a>.</p></div><div class="card"><h3>Make a useful shortlist</h3><p>Compare up to three tools, then work through one real task before choosing a paid plan.</p>{btn('Open comparison','/compare/','light')}</div></aside></div>'''
     write('/tool/'+t['id']+'/',t['name']+' guide: fit, costs, and a worked example',t['tagline'],body+detail,'Tool',section='tools',article={'published':t.get('publishedAt',DATE),'modified':t.get('checkedAt',DATE),'sources':t['sourceUrls']})
 
 write('/comparisons/','A clearer choice starts here','Compare software by the work you need to do. Understand the fit, tradeoffs, and questions worth asking before you buy.',hero('A clearer choice starts here','Compare software by the work you need to do. Understand the fit, tradeoffs, and questions worth asking before you buy.','Side by side')+f'<section class="section"><div class="wrap"><div class="actions" style="margin-bottom:30px">{btn("Build my own comparison →","/compare/")}</div><div class="grid three">'+''.join(comparecard(c) for c in COMPARISONS)+'</div></div></section>','Comparisons',section='compare')
@@ -197,6 +200,7 @@ for p in PLAYS:
     reviewed=p.get('lastReviewed',DATE)
     if p.get('bodyFile'):
         article_html=learning_note('/playbooks/'+p['id']+'/')+(ROOT/p['bodyFile']).read_text(encoding='utf-8')
+        article_html=expand_approved_tool_markers(article_html,p['toolIds'],BY_ID)
         read_time=max(1,round(len(plain(article_html).split())/210))
         toc_items=p.get('contents') or [{'id':anchor,'label':plain(label)} for anchor,label in re.findall(r'<h2[^>]*id="([^"]+)"[^>]*>(.*?)</h2>',article_html,re.S)]
         toc=''.join(f'<a href="#{e(item["id"])}">{e(item["label"])}</a>' for item in toc_items)

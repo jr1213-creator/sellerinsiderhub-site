@@ -1187,6 +1187,92 @@
       "updateNote": "Expanded the workflow from AI drafting through Canva photo annotations, Etsy listing controls, and a search evidence log. Updated image guidance against Etsy’s October 22, 2026 policy and added genuine vendor illustrations, a claim audit, and a reusable working kit."
     },
     {
+      "id": "etsy-keyword-data-chatgpt",
+      "title": "Use eRank and Etsy search data in ChatGPT: tags, titles, and descriptions",
+      "summary": "Combine eRank keyword exports, Etsy shop search terms, and Marketplace Insights in ChatGPT. Use five copyable prompts to draft 13 useful tags, a readable title, and an accurate description, then verify the result in Etsy.",
+      "bodyFile": "content/etsy-keyword-data-chatgpt.html",
+      "intro": "A complete workflow for preserving keyword evidence, drafting from verified product facts, and checking the result before editing an Etsy listing.",
+      "toolIds": [
+        "etsy",
+        "erank",
+        "chatgpt"
+      ],
+      "sourceUrls": [
+        "https://www.etsy.com/seller-handbook/article/382774281517",
+        "https://hc.erank.com/en/articles/8420556-keyword-tool",
+        "https://hc.erank.com/en/articles/6964104-keyword-lists",
+        "https://hc.erank.com/en/articles/11178612-understand-erank-metrics-in-5-minutes",
+        "https://help.erank.com/blog/etsy-marketplace-insights-tool/",
+        "https://www.etsy.com/seller-handbook/article/624088232713",
+        "https://help.etsy.com/hc/en-us/articles/115015774268-How-to-Use-Etsy-Stats-for-Your-Shop",
+        "https://help.etsy.com/hc/en-us/articles/115015628207-Shop-Stats-Glossary",
+        "https://www.etsy.com/seller-handbook/article/1404564905677",
+        "https://help.etsy.com/hc/en-us/articles/35122361353239-How-Do-I-Use-Etsy-s-Marketplace-Insights-Tool",
+        "https://help.etsy.com/hc/en-us/articles/360000343508-How-to-Download-Your-Listing-Information",
+        "https://chatgpt.com/use-cases/chat-with-spreadsheets/",
+        "https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt",
+        "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt",
+        "https://help.etsy.com/hc/en-us/articles/360000336307-How-to-Use-Tags-to-Get-Found-in-Search",
+        "https://www.etsy.com/seller-handbook/article/1399426136697",
+        "https://help.etsy.com/hc/en-us/articles/115015628707-How-to-Create-a-Listing",
+        "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+        "https://www.etsy.com/seller-handbook/article/1275449912004",
+        "https://www.etsy.com/seller-handbook/article/1001670906424"
+      ],
+      "releaseChecks": [
+        "My product brief contains verified dimensions, materials, personalization and order details; missing facts stay marked as unknown in the working record.",
+        "Every keyword observation retains its source, market, date, reporting period, metric name and unit; the original source files are preserved.",
+        "I have not added, averaged or treated eRank estimates, Etsy marketplace searches and shop visits as one comparable metric; missing data was not invented.",
+        "The 13 proposed tags are distinct, relevant to the actual item and no longer than 20 characters each; any unsupported or filler phrase has been replaced.",
+        "The title is readable, describes the actual item and is no longer than 140 characters; I checked it against the current Etsy guidance.",
+        "The description agrees with the verified product record and listing controls, with no unresolved unknowns, placeholders, unsupported claims or promised search results published.",
+        "I reviewed the actual Etsy draft, images, category, attributes, personalization, price, processing, shipping and return settings before choosing whether to publish."
+      ],
+      "category": "Etsy & ecommerce",
+      "publishedAt": "2026-11-02",
+      "lastReviewed": "2026-11-02",
+      "modifiedAt": "2026-11-02",
+      "contents": [
+        {
+          "id": "product-brief",
+          "label": "Verify the product facts"
+        },
+        {
+          "id": "erank-download",
+          "label": "Export eRank keywords"
+        },
+        {
+          "id": "etsy-search-terms",
+          "label": "Collect Etsy search terms"
+        },
+        {
+          "id": "combine-upload",
+          "label": "Combine and upload"
+        },
+        {
+          "id": "evidence-prompt",
+          "label": "Check the data"
+        },
+        {
+          "id": "tags-prompt",
+          "label": "Draft tags, title and description"
+        },
+        {
+          "id": "worked-example",
+          "label": "Review the pouch example"
+        },
+        {
+          "id": "verify-publish",
+          "label": "Audit before publishing"
+        },
+        {
+          "id": "downloads",
+          "label": "Download the templates"
+        }
+      ],
+      "updateNote": "New tutorial with source-separated keyword research, five reusable prompts, a fictional listing example, vendor screenshots and an Etsy release checklist."
+    },
+    {
       "id": "product-launch-content-system",
       "title": "Build a coordinated product launch in Adobe Express and Kit",
       "summary": "Prepare a useful five-asset campaign from one verified offer, then schedule the social posts and email. Includes finished copy, a visual brief, recipient checks, and a launch-day routine.",
