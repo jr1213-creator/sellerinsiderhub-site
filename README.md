@@ -2,6 +2,13 @@
 
 A research-led publication that helps small businesses put AI and software to useful work. Tutorials lead the experience; independent comparisons, tool profiles, business guides, worksheets, and decision tools support the reader.
 
+## Read the publication
+
+- [Seller Insider Hub](https://sellerinsiderhub.com/) — practical AI guidance for small business owners.
+- [Free AI learning path](https://sellerinsiderhub.com/learn/ai-for-small-business/) — six modules with original practice files, knowledge checks, and a business-workflow capstone.
+- [Sales-analysis practice lab](https://sellerinsiderhub.com/playbooks/chatgpt-sales-analysis/) — a fictional sales dataset, calculation workbook, and independent answer key for checking AI-assisted analysis.
+- [Free worksheets and working kits](https://sellerinsiderhub.com/resources/) — editable resources that accompany the tutorials.
+
 ## Build and verify
 
 The production build uses the Python standard library. No framework installation, paid AI call, or external API is needed to render the site.
