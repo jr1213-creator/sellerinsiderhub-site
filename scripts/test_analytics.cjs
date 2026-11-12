@@ -90,14 +90,17 @@ async function page({url = ORIGIN + '/', consent = null, referrer = '', library 
   return {context, controls, storage, writes, scripts, nodes, cookieWrites, cookies, commands, configurations, events, click, storageEvent};
 }
 
-test('no Google tag or event before a visitor makes a choice', async () => {
+test('no automatic popup or Google collection; the footer opens optional preferences', async () => {
   const p = await page({url: ORIGIN + '/?utm_source=linkedin&utm_medium=organic_social'});
   await p.click({outbound: 'sample-tool'});
   assert.equal(p.scripts.length, 0);
   assert.equal(p.commands().length, 0);
   assert.equal(p.writes.length, 0, 'Entry attribution must not be persisted before consent');
-  assert.equal(p.nodes.get('cookie-panel').hidden, false);
+  assert.equal(p.nodes.get('cookie-panel').hidden, true);
   assert.equal(p.context.window['ga-disable-' + ID], true);
+  await p.click({cookieSettings: ''});
+  assert.equal(p.nodes.get('cookie-panel').hidden, false);
+  assert.equal(p.scripts.length, 0, 'Opening preferences does not grant analytics permission');
 });
 
 const comparisonCatalog = {
@@ -201,11 +204,11 @@ test('feed measurement obeys live consent and excludes preview hosts', async () 
   assert.equal(p.events().length, 1);
 });
 
-test('invalid stored consent requires a new explicit choice', async () => {
+test('invalid stored consent grants no permission and does not open preferences', async () => {
   for (const consent of [true, 'maybe', {}]) {
     const p = await page({consent});
     assert.equal(p.scripts.length, 0);
-    assert.equal(p.nodes.get('cookie-panel').hidden, false);
+    assert.equal(p.nodes.get('cookie-panel').hidden, true);
   }
 });
 
@@ -348,5 +351,5 @@ test('revocation or clearing consent in another tab updates this page immediatel
   assert.equal(p.context.window['ga-disable-' + ID], false);
   p.storageEvent({key: null, newValue: null});
   assert.equal(p.context.window['ga-disable-' + ID], true);
-  assert.equal(p.nodes.get('cookie-panel').hidden, false);
+  assert.equal(p.nodes.get('cookie-panel').hidden, true, 'Clearing consent in another tab must not interrupt this page');
 });

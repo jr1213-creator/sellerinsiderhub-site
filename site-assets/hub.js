@@ -107,14 +107,15 @@
     catch {return false;} // Optional measurement must not interrupt the visitor's action.
   }
   if (analyticsConsent === 'yes') enableAnalytics();
-  if (!analyticsConsent && $('#cookie-panel')) $('#cookie-panel').hidden = false;
+  // Optional analytics preferences open only from the visitor's footer action.
+  // No saved choice still means no Google Analytics collection.
   window.addEventListener?.('storage', event => {
     if (event.key !== CONSENT && event.key !== null) return;
     let choice = null;
     try {choice = consentChoice(JSON.parse(event.newValue));} catch { /* Invalid or removed consent is not permission. */ }
     analyticsConsent = choice;
     if (choice === 'yes') enableAnalytics(); else disableAnalytics();
-    if ($('#cookie-panel')) $('#cookie-panel').hidden = !!choice;
+    if (choice && $('#cookie-panel')) $('#cookie-panel').hidden = true;
   });
   function toolCard(t) {
     return `<article class="card tool-card" data-tool-card="${esc(t.id)}"><div class="tool-card-head">${toolLogo(t)}<div><h3><a href="/tool/${esc(t.id)}/">${esc(t.name)}</a></h3><span class="tool-category">${esc(category(t.category))}</span></div><button class="icon-button" data-save-tool="${esc(t.id)}" aria-pressed="${workspace.tools.includes(t.id)}" aria-label="Save ${esc(t.name)}">${bookmark}</button></div><p class="tool-description">${esc(t.tagline)}</p><div class="tool-meta"><span class="chip green">${t.freePlan === true ? 'Free plan' : t.freePlan === false ? 'Paid plans' : 'Check current plans'}</span><span class="chip">${esc(t.setup)} setup</span></div><div class="tool-bottom"><button class="text-button" data-compare-tool="${esc(t.id)}" aria-pressed="${compare.includes(t.id)}">${compare.includes(t.id) ? '✓ Selected' : '⇄ Compare'}</button><a class="text-button" href="/tool/${esc(t.id)}/">Explore tool ↗</a></div></article>`;
