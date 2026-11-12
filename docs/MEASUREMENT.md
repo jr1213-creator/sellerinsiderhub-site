@@ -2,13 +2,57 @@
 
 ## Production collection
 
+**Primary audience metric: Umami Visitors for the selected calendar month**, in
+America/New_York time. For daily monitoring select Today or Yesterday in the
+same dashboard. Use the period total, not the sum of daily visitor counts.
+Report the source and dates alongside an audience estimate. The first month
+contains data only from installation on November 11, 2026 onward.
+
+The private dashboard is
+`https://cloud.umami.is/analytics/us/websites/55870533-736a-4919-8db7-0e336c261698?date=0month`.
+The managed Hobby plan is free: one website, 100,000 events per month, six months
+of retention. It has no paid subscription, recordings, or public sharing enabled.
+Export period summaries before retention expires if longer history is needed.
+
+The shared `site-assets/hub.js` integration loads Umami's official tracker once
+on the exact production hosts. It records one pageview per loaded document,
+not directory filtering, search typing, or `history.replaceState` changes.
+Only sanitized page paths, campaign slugs, referring origins (internal paths),
+page titles, language, and screen size are passed to the provider. No form
+contents, search queries, click IDs, distinct user IDs, or replay data are sent.
+Known bots are filtered by Umami; local automation (`navigator.webdriver`),
+preview hosts, and prerenders are excluded in the integration. This is a visitor
+estimate, not a count of verified individuals: IP/browser changes, shared
+connections, blockers, and unidentified bots can affect it. Umami rotates its
+IP/browser-derived identifier monthly; a range spanning that boundary can count
+a returning browser again. Never add Umami, GA4, and Netlify users together.
+
+Umami needs no analytics cookie and does not depend on the Google opt-in. A
+previous or new Disable analytics choice stops both browser counters. Supported
+GPC/DNT signals also stop them. The footer opens preferences on request; there
+is no automatic popup. The privacy policy explains the actual collection.
+
+For owner and QA browsers, set `localStorage.setItem('umami.disabled', '1')` on
+the production origin before browsing. This provider-standard exclusion also
+disables GA4 in the shared integration. Remove that key only to resume counting.
+It is browser-specific, so another device needs its own exclusion. Automated
+tests must block collection or use a separate, clearly identified test fixture.
+
+Netlify Web Analytics and Observability remain the operational sources for raw
+requests, crawlers, and AI-agent activity. Their IP-based totals include bots
+and are **not** the primary audience figure. An AI chatbot fetching an article
+is not a person visiting the site. A reader following a chatbot link is counted
+by the browser tracker, with the referring site or safe UTM labels when present.
+
+## Optional Google Analytics
+
 The existing GA4 measurement ID is `G-164NDV6713`. The website loads its Google
 tag only after a visitor explicitly allows analytics. Only the exact production
 hosts `sellerinsiderhub.com` and `www.sellerinsiderhub.com` may collect events;
 local previews and Netlify aliases do not send traffic to this property.
 
 Visitors who decline, ignore the choice, or block the Google tag are absent from
-the browser-based report. Search Console clicks and impressions are a separate
+the GA4 report. Search Console clicks and impressions are a separate
 measurement and do not depend on a visitor accepting this site's analytics.
 Do not describe Analytics users as every person who visited the website.
 
@@ -131,6 +175,10 @@ Do not commit them to this public repository.
 
 ## Primary references
 
+- [Umami metric definitions and monthly identifier rotation](https://docs.umami.is/docs/metric-definitions)
+- [Umami tracker configuration](https://docs.umami.is/docs/tracker-configuration)
+- [Umami plans and retention](https://umami.is/pricing)
+- [Netlify Web Analytics definitions](https://docs.netlify.com/manage/monitoring/web-analytics/how-web-analytics-works/)
 - [Google Analytics configuration fields](https://developers.google.com/analytics/devguides/collection/ga4/reference/config)
 - [Google tag event callback and timeout parameters](https://developers.google.com/tag-platform/gtagjs/reference/parameters)
 - [Google Enhanced Measurement](https://support.google.com/analytics/answer/9216061)

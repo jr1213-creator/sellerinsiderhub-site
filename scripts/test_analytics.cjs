@@ -12,8 +12,9 @@ const ORIGIN = 'https://sellerinsiderhub.com';
 const CONSENT = 'sih.analytics.v1';
 const ID = 'G-164NDV6713';
 
-async function page({url = ORIGIN + '/', consent = null, referrer = '', library = false, comparison = false, catalog = {tools: [], categories: [], comparisons: []}, storageDenied = false} = {}) {
+async function page({url = ORIGIN + '/', consent = null, referrer = '', library = false, comparison = false, catalog = {tools: [], categories: [], comparisons: []}, storageDenied = false, browser = {}, excluded = false, prerendering = false} = {}) {
   const storage = new Map(consent === null ? [] : [[CONSENT, JSON.stringify(consent)]]);
+  if (excluded) storage.set('umami.disabled', '1');
   const controls = {storageDenied, writeDenied: false};
   const listeners = new Map(), windowListeners = new Map(), nodes = new Map(), scripts = [], writes = [], cookieWrites = [];
   const cookies = new Map([['_ga', 'old-cookie'], ['_ga_164NDV6713', 'old-session'], ['essential', 'keep']]);
@@ -43,7 +44,7 @@ async function page({url = ORIGIN + '/', consent = null, referrer = '', library 
   }
   const location = new URL(url);
   const document = {
-    referrer,
+    referrer, title: 'Seller Insider Hub', prerendering,
     querySelector: selector => selector.startsWith('#') ? nodes.get(selector.slice(1)) || null : null,
     querySelectorAll: () => [],
     createElement: tag => new Element('', {}, tag.toUpperCase()),
@@ -56,7 +57,7 @@ async function page({url = ORIGIN + '/', consent = null, referrer = '', library 
     },
   };
   const context = {
-    document, location, window: {addEventListener: (type, callback) => windowListeners.set(type, callback)}, URL, URLSearchParams, Intl, console,
+    document, location, navigator: browser, window: {addEventListener: (type, callback) => windowListeners.set(type, callback)}, URL, URLSearchParams, Intl, console,
     localStorage: {
       getItem(key) { if (controls.storageDenied) throw new Error('Storage denied'); return storage.get(key) ?? null; },
       setItem(key, value) {
@@ -87,8 +88,84 @@ async function page({url = ORIGIN + '/', consent = null, referrer = '', library 
     await listeners.get('click')({target: element, defaultPrevented});
   }
   const storageEvent = event => windowListeners.get('storage')(event);
-  return {context, controls, storage, writes, scripts, nodes, cookieWrites, cookies, commands, configurations, events, click, storageEvent};
+  return {context, controls, storage, writes, nodes, cookieWrites, cookies, commands, configurations, events, click, storageEvent, listeners,
+    get scripts() {return scripts.filter(s => s.src.startsWith('https://www.googletagmanager.com/'));},
+    get visitorScripts() {return scripts.filter(s => s.src === 'https://cloud.umami.is/script.js');}
+  };
 }
+
+test('cookie-free visits use one pageview per document with only safe entry attribution', async () => {
+  const p = await page({url: ORIGIN + '/tool-library/?utm_source=chatgpt&utm_medium=referral&q=private&email=reader%40example.test&gclid=ad-id#private', referrer: 'https://chatgpt.com/c/private-conversation?q=private'});
+  assert.equal(p.visitorScripts.length, 1);
+  assert.equal(p.visitorScripts[0].dataset.autoTrack, 'false');
+  const received = [];
+  p.context.window.umami = {track() {received.push(p.context.window.sihVisitorPayload('event', {language:'en-US', screen:'1200x800', id:'unwanted-id', data:{email:'private'}}));}};
+  p.context.history.replaceState(null, '', '/tool-library/?q=different-filter');
+  p.visitorScripts[0].onload();
+  p.visitorScripts[0].onload();
+  await p.click({consent:'yes'});
+  assert.equal(received.length, 1, 'Script callbacks and consent changes must not duplicate the visit');
+  assert.equal(received[0].url, '/tool-library/?utm_source=chatgpt&utm_medium=referral');
+  assert.equal(received[0].referrer, 'https://chatgpt.com/');
+  assert.doesNotMatch(JSON.stringify(received), /private|gclid|unwanted|different-filter/);
+  assert.equal(p.context.window.sihVisitorPayload('event', {name:'unapproved-event'}), false);
+  assert.equal(p.context.window.sihVisitorPayload('identify', {}), false);
+});
+
+test('saved denial, owner exclusions, browser privacy signals, automation, and previews load no visitor tracker', async () => {
+  for (const options of [{consent:'no'}, {excluded:true, consent:'yes'}, {browser:{globalPrivacyControl:true}, consent:'yes'}, {browser:{doNotTrack:'1'}, consent:'yes'}, {browser:{webdriver:true}, consent:'yes'}, {url:'https://preview.netlify.app/'}, {url:'http://localhost/'}]) {
+    const p = await page(options);
+    assert.equal(p.visitorScripts.length, 0, JSON.stringify(options));
+    assert.equal(p.scripts.length, 0, JSON.stringify(options));
+    assert.equal(p.context.window.sihVisitorPayload('event', {}), false);
+  }
+});
+
+test('denying analytics while the visitor script is loading prevents its first send', async () => {
+  const p = await page();
+  let calls = 0;
+  p.context.window.umami = {track() {calls++;}};
+  await p.click({consent:'no'});
+  p.visitorScripts[0].onload();
+  assert.equal(calls, 0);
+  assert.equal(p.context.window.sihVisitorPayload('event', {}), false);
+  assert.equal(p.nodes.get('cookie-panel').hidden, true);
+});
+
+test('changing a remembered denial enables one visitor script and later revocation blocks its payload', async () => {
+  const p = await page({consent:'no'});
+  await p.click({consent:'yes'});
+  assert.equal(p.visitorScripts.length, 1);
+  assert.ok(p.context.window.sihVisitorPayload('event', {}));
+  p.storageEvent({key:CONSENT,newValue:'"no"'});
+  assert.equal(p.context.window.sihVisitorPayload('event', {}), false);
+});
+
+test('prerendered documents are counted only after activation', async () => {
+  const p = await page({prerendering:true});
+  assert.equal(p.visitorScripts.length, 0);
+  p.context.document.prerendering = false;
+  p.listeners.get('prerenderingchange')();
+  assert.equal(p.visitorScripts.length, 1);
+});
+
+test('owner exclusion changes block both providers in already-open pages', async () => {
+  const p = await page({consent:'yes'});
+  p.storage.set('umami.disabled','1');
+  p.storageEvent({key:'umami.disabled',newValue:'1'});
+  await p.click({outbound:'sample-tool'});
+  assert.equal(p.events().length, 0);
+  assert.equal(p.context.window.sihVisitorPayload('event', {}), false);
+  assert.equal(p.context.window['ga-disable-' + ID], true);
+});
+
+test('a blocked visitor counter cannot break navigation or privacy preferences', async () => {
+  const p = await page();
+  p.context.window.umami = {track() {throw new Error('Blocked');}};
+  assert.doesNotThrow(() => p.visitorScripts[0].onload());
+  await p.click({cookieSettings:''});
+  assert.equal(p.nodes.get('cookie-panel').hidden, false);
+});
 
 test('no automatic popup or Google collection; the footer opens optional preferences', async () => {
   const p = await page({url: ORIGIN + '/?utm_source=linkedin&utm_medium=organic_social'});

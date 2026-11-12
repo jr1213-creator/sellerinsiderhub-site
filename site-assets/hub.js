@@ -32,17 +32,24 @@
   const set = (key, value) => {try {localStorage.setItem(key, JSON.stringify(value)); return true;} catch {toast('Your browser could not save this. Export a backup before leaving.'); return false;}};
   const WS = 'sih.workspace.v1', CMP = 'sih.compare.v1', CONSENT = 'sih.analytics.v1';
   const ANALYTICS_ID = 'G-164NDV6713';
+  const VISITOR_WEBSITE_ID = '55870533-736a-4919-8db7-0e336c261698';
   const analyticsProductionHost = ['sellerinsiderhub.com', 'www.sellerinsiderhub.com'].includes(location.hostname);
   const consentChoice = value => value === 'yes' || value === 'no' ? value : null;
   let analyticsConsent = consentChoice(get(CONSENT, null));
+  const analyticsExcluded = () => {
+    const browser = typeof navigator === 'undefined' ? {} : navigator;
+    if (browser.globalPrivacyControl === true || browser.doNotTrack === '1' || browser.webdriver === true) return true;
+    // If stored preferences cannot be read, wait for a choice on this page.
+    try {return !!localStorage.getItem('umami.disabled');} catch {return analyticsConsent !== 'yes';}
+  };
+  const campaigns = {utm_source:'campaign_source', utm_medium:'campaign_medium', utm_campaign:'campaign_name', utm_id:'campaign_id', utm_term:'campaign_term', utm_content:'campaign_content'};
   // Keep only non-personal campaign slugs in memory, before filters/search can
-  // replace the entry URL. Nothing is sent or persisted until analytics consent.
+  // replace the entry URL. Google receives them only after explicit consent.
   // Use labels such as linkedin, organic_social, and november-ai-guides; never
   // put a person's name, email, phone number, or other private data in UTM tags.
   const entryAnalytics = (() => {
     const params = new URLSearchParams(location.search || '');
     const context = {page_location: location.origin + location.pathname, page_referrer: ''};
-    const campaigns = {utm_source:'campaign_source', utm_medium:'campaign_medium', utm_campaign:'campaign_name', utm_id:'campaign_id', utm_term:'campaign_term', utm_content:'campaign_content'};
     for (const [key, field] of Object.entries(campaigns)) {
       const value = params.get(key) || '';
       // A deliberately conservative slug format excludes email addresses,
@@ -61,7 +68,12 @@
     } catch { /* An empty or invalid referrer does not identify a traffic source. */ }
     return context;
   })();
-  window['ga-disable-' + ANALYTICS_ID] = analyticsConsent !== 'yes' || !analyticsProductionHost;
+  const visitorEntryUrl = (() => {
+    const params = new URLSearchParams();
+    for (const [key, field] of Object.entries(campaigns)) if (entryAnalytics[field]) params.set(key, entryAnalytics[field]);
+    return location.pathname + (params.size ? '?' + params.toString() : '');
+  })();
+  window['ga-disable-' + ANALYTICS_ID] = analyticsConsent !== 'yes' || !analyticsProductionHost || analyticsExcluded();
   const emptyWorkspace = () => ({version:1, tools:[], guides:[], stacks:[]});
   function readWorkspace() {
     const raw = localStorage.getItem(WS);
@@ -86,7 +98,7 @@
   function download(name, body, type = 'text/plain') {const url = URL.createObjectURL(new Blob([body], {type})); const a = document.createElement('a'); a.href = url; a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(url), 2000);}
   async function copy(text) {try {await navigator.clipboard.writeText(text); toast('Copied to clipboard.');} catch {download('seller-insider-hub-copy.txt', text); toast('Your browser blocked the clipboard. The text has been downloaded.');}}
   function enableAnalytics() {
-    if (analyticsConsent !== 'yes' || !analyticsProductionHost) return;
+    if (analyticsConsent !== 'yes' || !analyticsProductionHost || analyticsExcluded()) return;
     window['ga-disable-' + ANALYTICS_ID] = false;
     if (analyticsLoaded) return;
     analyticsLoaded = true; window.dataLayer = window.dataLayer || [];
@@ -102,18 +114,57 @@
     });
   }
   function track(name, parameters = {}) {
-    if (!analyticsProductionHost || analyticsConsent !== 'yes' || window['ga-disable-' + ANALYTICS_ID] || typeof window.gtag !== 'function') return false;
+    if (!analyticsProductionHost || analyticsConsent !== 'yes' || analyticsExcluded() || window['ga-disable-' + ANALYTICS_ID] || typeof window.gtag !== 'function') return false;
     try {window.gtag('event', name, parameters); return true;}
     catch {return false;} // Optional measurement must not interrupt the visitor's action.
   }
+  // Umami supplies the cookie-free visitor count. One explicit pageview per
+  // document avoids counting this site's filter/history changes as new visits.
+  // No distinct IDs, recordings, automatic events, or ad identifiers are sent.
+  let visitorScriptLoaded = false, visitorPageSent = false;
+  const visitorAnalyticsAllowed = () => analyticsProductionHost && analyticsConsent !== 'no' && !analyticsExcluded() && !document.prerendering;
+  window.sihVisitorPayload = (type, payload) => {
+    if (!visitorAnalyticsAllowed() || type !== 'event' || payload.name) return false;
+    return {
+      website: VISITOR_WEBSITE_ID, hostname: location.hostname,
+      url: visitorEntryUrl, referrer: entryAnalytics.page_referrer,
+      title: document.title, language: payload.language, screen: payload.screen
+    };
+  };
+  function sendVisitorPage() {
+    if (!visitorAnalyticsAllowed() || visitorPageSent || typeof window.umami?.track !== 'function') return;
+    visitorPageSent = true;
+    try {Promise.resolve(window.umami.track()).catch(() => {});} catch { /* Measurement cannot interrupt the page. */ }
+  }
+  function enableVisitorAnalytics() {
+    if (!visitorAnalyticsAllowed()) return;
+    if (visitorScriptLoaded) {sendVisitorPage(); return;}
+    visitorScriptLoaded = true;
+    const script = document.createElement('script');
+    script.async = true; script.src = 'https://cloud.umami.is/script.js';
+    Object.assign(script.dataset, {
+      websiteId: VISITOR_WEBSITE_ID, domains: 'sellerinsiderhub.com,www.sellerinsiderhub.com',
+      autoTrack: 'false', doNotTrack: 'true', excludeSearch: 'true', excludeHash: 'true',
+      beforeSend: 'sihVisitorPayload'
+    });
+    script.onload = sendVisitorPage;
+    document.head.appendChild(script);
+  }
+  enableVisitorAnalytics();
+  document.addEventListener('prerenderingchange', enableVisitorAnalytics, {once:true});
   if (analyticsConsent === 'yes') enableAnalytics();
   // Optional analytics preferences open only from the visitor's footer action.
   // No saved choice still means no Google Analytics collection.
   window.addEventListener?.('storage', event => {
+    if (event.key === 'umami.disabled') {
+      if (analyticsExcluded()) disableAnalytics(); else {enableVisitorAnalytics(); enableAnalytics();}
+      return;
+    }
     if (event.key !== CONSENT && event.key !== null) return;
     let choice = null;
     try {choice = consentChoice(JSON.parse(event.newValue));} catch { /* Invalid or removed consent is not permission. */ }
     analyticsConsent = choice;
+    enableVisitorAnalytics();
     if (choice === 'yes') enableAnalytics(); else disableAnalytics();
     if (choice && $('#cookie-panel')) $('#cookie-panel').hidden = true;
   });
@@ -169,6 +220,7 @@
     if (el.matches('[data-consent]')) {
       const choice = consentChoice(el.dataset.consent); if (!choice) return;
       analyticsConsent = choice;
+      enableVisitorAnalytics();
       if (choice === 'yes') enableAnalytics(); else disableAnalytics();
       try {localStorage.setItem(CONSENT, JSON.stringify(choice));}
       catch {

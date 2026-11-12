@@ -20,7 +20,7 @@ function page(replies = [], {consent = 'no', url = origin + '/'} = {}) {
   const calls = [], navigations = [], scripts = [], timers = new Map(), timerDelays = new Map(), windowListeners = new Map(); let timerID = 0;
   class Element {
     constructor(tag = 'div') {
-      this.tagName = tag.toUpperCase(); this.children = []; this.attributes = new Map();
+      this.tagName = tag.toUpperCase(); this.children = []; this.attributes = new Map(); this.dataset = {};
       this.listeners = new Map(); this.parentNode = null; this.disabled = false;
       this.hidden = false; this.textContent = ''; this.className = ''; this.type = '';
     }
@@ -97,7 +97,9 @@ function page(replies = [], {consent = 'no', url = origin + '/'} = {}) {
   }
   const events = () => (context.window.dataLayer || []).map(command => [...command]).filter(command => command[0] === 'event');
   const storageEvent = event => windowListeners.get('storage')(event);
-  return {newsletter, contact, calls, navigations, status, retry, submit, timers, timerDelays, scripts, events, context, storageEvent};
+  return {newsletter, contact, calls, navigations, status, retry, submit, timers, timerDelays, events, context, storageEvent,
+    get scripts() {return scripts.filter(s => s.src.startsWith('https://www.googletagmanager.com/'));}
+  };
 }
 
 function retained(p, form, fields) {

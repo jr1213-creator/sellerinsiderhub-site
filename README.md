@@ -51,7 +51,7 @@ New tutorials must answer a concrete reader question, cite current primary sourc
 
 Newsletter and contact forms use static Netlify Forms markup with consent and honeypot controls. Form detection and submission handling must be enabled on the actual hosting project; automatic newsletter delivery needs an authorized email-provider connection. A successful static build does not verify either account setting.
 
-Google Analytics loads only after consent. Preferences open from the footer's Cookie preferences button, never automatically; an absent or invalid choice keeps Google Analytics off. Reading lists and saved tool stacks are browser-local and can be exported/imported. There is no claimed cloud account, private analytics dashboard, or live AI assistant behind these browser tools.
+Umami Cloud supplies cookie-free visitor statistics on the production domain. Google Analytics loads only after consent. Preferences open from the footer's Cookie preferences button, never automatically. A saved denial disables both counters; no choice keeps Google Analytics off. Owner exclusions and browser privacy signals apply to both. See [measurement and reporting](docs/MEASUREMENT.md). Reading lists and saved tool stacks are browser-local and can be exported/imported. There is no claimed cloud account, private analytics dashboard, or live AI assistant behind these browser tools.
 
 See [Traffic and measurement](docs/MEASUREMENT.md) for campaign-link formats, production-host filtering, Google stream settings, and the distinction between local regression checks and actual provider receipt.
 
